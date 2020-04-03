@@ -23,4 +23,4 @@ cd -
 
 git add -A
 git commit -a -m 'update'
-git push
+git push -f
