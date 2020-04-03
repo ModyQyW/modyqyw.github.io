@@ -1,0 +1,51 @@
+# 学习路径
+
+- [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
+- [orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
+- 个人学习路径如下，相关库/框架/工具集[参考](./../lib/README.md)
+  - 线性代数
+  - 离散数学
+  - 计算机组成原理
+  - 操作系统原理
+  - 计算机网络原理
+  - 计算机网络安全
+  - 多媒体技术基础
+  - 程序设计入门，即 C/C++/Java 入门
+  - 数据结构与算法
+  - 算法设计
+  - 数据库入门
+  - 网页原生
+    - [前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)
+    - [廖雪峰 js 全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+    - [js 快速入门](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+    - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
+    - [MDN 文档](https://developer.mozilla.org/)
+    - [正则表达式](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+    - [es6 入门](http://es6.ruanyifeng.com/)
+  - canvas
+    - [廖雪峰 - canvas](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143449990549914b596ac1da54a228a6fa9643e88bc0c000)
+    - [MDN - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
+    - [fabric.js](https://github.com/fabricjs/fabric.js)
+  - css 处理器
+    - postcss
+    - less
+    - sass/scss
+    - stylus
+  - 规范工具
+    - eslint
+    - prettier
+    - stylelint
+  - vue 及周边生态
+  - typescript
+  - react 及周边生态
+  - webpack 和 rollup
+  - jest
+  - flutter
+  - Node.js，Koa，Egg
+  - 进阶
+    - [前端进阶 1](https://yuchengkai.cn/home/)
+    - [前端进阶 2](https://muyiy.cn/)
+    - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
+- [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+
+<Vssue />
