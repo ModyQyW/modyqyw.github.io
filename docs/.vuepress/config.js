@@ -296,16 +296,7 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     extendMarkdown: md => {
-      md.use(require('markdown-it-copy'), {
-        btnText: 'copy',
-        failText: 'copy fail',
-        successText: 'copy success',
-        successTextDelay: 1000,
-        extraHtmlBeforeBtn: '',
-        extraHtmlAfterBtn: '',
-        showCodeLanguage: true,
-        attachText: ''
-      })
+      md.use(require('markdown-it-copy'))
     }
   },
   evergreen: true
