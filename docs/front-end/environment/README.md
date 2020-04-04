@@ -388,7 +388,93 @@ npm i -g yarn
   // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
   "commentTranslate.multiLineMerge": true,
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时不会报拼写错误
-  "cSpell.userWords": [],
+  "cSpell.userWords": [
+    "Avenir",
+    "Ducheng",
+    "Fira",
+    "Hiragino",
+    "Idxs",
+    "Jetbrains",
+    "Menlo",
+    "Sarasa",
+    "Unmount",
+    "acss",
+    "addrs",
+    "alipay",
+    "antd",
+    "browserslist",
+    "buefy",
+    "bulma",
+    "bytedance",
+    "caniuse",
+    "combinators",
+    "dcloudio",
+    "designdeck",
+    "devtools",
+    "echarts",
+    "editorconfig",
+    "flaticon",
+    "fontawesome",
+    "gitee",
+    "gitlab",
+    "gratisography",
+    "hbuilderx",
+    "icomoon",
+    "ifdef",
+    "ifndef",
+    "ionicons",
+    "leetcode",
+    "miniprogram",
+    "miniprograms",
+    "mixins",
+    "mobx",
+    "modyqyw",
+    "monospace",
+    "nprogress",
+    "nuxt",
+    "nvue",
+    "octicons",
+    "onsen",
+    "pexels",
+    "pixabay",
+    "preact",
+    "prepend",
+    "qrcode",
+    "quickapp",
+    "readonly",
+    "rgba",
+    "segmentfault",
+    "shineout",
+    "snabbdom",
+    "sorrycc",
+    "stocksnap",
+    "streetwill",
+    "stylelint",
+    "submenu",
+    "swiper",
+    "tailwindcss",
+    "tarojs",
+    "toutiao",
+    "twbs",
+    "uniapp",
+    "vant",
+    "vetur",
+    "viewui",
+    "vssue",
+    "vueperss",
+    "vuepress",
+    "vuetify",
+    "vuex",
+    "weapp",
+    "webstorm",
+    "wechat",
+    "weixin",
+    "wurui",
+    "wxml",
+    "wxss",
+    "zarm",
+    "zent"
+  ],
   // vscode 自带功能，指定是否校验 css，这里设置为是
   "css.validate": true,
   // vscode 自带功能，修改调试控制台的字体族
@@ -490,7 +576,7 @@ npm i -g yarn
   // 插件 LeetCode 使用，指定是否在注释中包含问题的描述，这里设置为是
   "leetcode.showCommentDescription": true,
   // 插件 LeetCode 使用，指定存放问题文件的文件夹
-  "leetcode.workspaceFolder": "/Users/wurui/Documents/projects/leetcode-cn",
+  "leetcode.workspaceFolder": "填你自己的",
   // vscode 自带功能，指定是否校验 less，这里设置为是
   "less.validate": true,
   // 插件 Live Server 使用，指定是否检验标签，这里设置为否
@@ -506,9 +592,35 @@ npm i -g yarn
   // vscode 自带功能，指定是否校验 scss，这里设置为是
   "scss.validate": true,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "50c5984abd61c63c9290fb04124141b5",
+  "sync.gist": "填你自己的",
   // 插件 TODO Highlight 使用，设定高亮的关键字
-  "todohighlight.keywords": ["TODO:", "FIXME:", "OPTIMIZE:", "QUERY:"],
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#d89614",
+    },
+    {
+      "text": "FIXME:",
+      "color": "#fff",
+      "backgroundColor": "#d32029"
+    },
+    {
+      "text": "OPTIMIZE:",
+      "color": "#fff",
+      "backgroundColor": "#2b4acb",
+    },
+    {
+      "text": "QUERY:",
+      "color": "#fff",
+      "backgroundColor": "#d8bd14"
+    },
+    {
+      "text": "INFO:",
+      "color": "#fff",
+      "backgroundColor": "#177ddc"
+    }
+],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具，这里设置为 prettier
