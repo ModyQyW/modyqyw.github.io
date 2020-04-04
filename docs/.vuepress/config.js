@@ -294,7 +294,19 @@ module.exports = {
     ]
   ],
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    extendMarkdown: md => {
+      md.use(require('markdown-it-copy'), {
+        btnText: 'copy',
+        failText: 'copy fail',
+        successText: 'copy success',
+        successTextDelay: 1000,
+        extraHtmlBeforeBtn: '',
+        extraHtmlAfterBtn: '',
+        showCodeLanguage: true,
+        attachText: ''
+      })
+    }
   },
   evergreen: true
 }

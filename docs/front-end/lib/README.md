@@ -128,6 +128,7 @@
 - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
 - [bulma](https://bulma.io/documentation/) - 现代化的 css 框架
 - [es6 入门教程](http://es6.ruanyifeng.com/)
+- [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
 - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
 
 ## typescript

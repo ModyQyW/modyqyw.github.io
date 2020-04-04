@@ -20,6 +20,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "markdown-it-copy": "^1.2.0",
     "vuepress": "^1.4.0",
     "vuepress-plugin-helper-live2d": "^1.0.0",
     "vuepress-plugin-sitemap": "^2.3.1"
