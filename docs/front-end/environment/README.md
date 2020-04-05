@@ -478,7 +478,7 @@ npm i -g yarn
   // vscode 自带功能，指定是否校验 css，这里设置为是
   "css.validate": true,
   // vscode 自带功能，修改调试控制台的字体族
-  "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Variable', 'Dank Mono', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
+  "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
   // vscode 自带功能，修改调试控制台的字体大小
   "debug.console.fontSize": 12,
   // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 tslint 和 eslint 自动修复
@@ -491,7 +491,7 @@ npm i -g yarn
   // vscode 自带功能，控制编辑区是否根据文件本身内容决定缩进，这里设置为否
   "editor.detectIndentation": false,
   // vscode 自带功能，修改编辑区的字体族
-  "editor.fontFamily": "-apple-system, Menlo, 'Source Code Variable', 'Dank Mono', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
   // vscode 自带功能，修改编辑区的字体大小
   "editor.fontSize": 14,
   // vscode 自带功能，修改编辑区的行高
