@@ -53,6 +53,7 @@ Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.i
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端
 - [PDF Expert](https://xclient.info/s/pdf-expert-for-mac.html) - PDF 阅读器，感觉可以转福昕
 - [Postman](https://www.getpostman.com/) - 请求
+- [Postwoman]() - 请求
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
@@ -259,73 +260,54 @@ npm i -g yarn
 
 ### 插件列表
 
-- `Ant Design Snippets`
-- `Ant Design Vue helper`
-- `any-rule` - 常用正则
-- `Auto Import`
-- `Awesome Flutter Snippets`
-- `Bracket Pair Colorizer 2` - 括号匹配
-- `change-case` - 变量名称大小写变换
-- `Code Runner` - 代码运行
-- `Code Spell Checker` - 检查拼写
-- `Codelf` - 变量命名
-- `Comment Translate` - 翻译注释
-- `CSS Peek` - 快速定位 css
-- `Dart` - dart 语言支持
-- `dart-import` - dart 引入修正
-- `Debugger for Chrome`
-- `Debugger for Firefox`
-- `DotENV` - 高亮`.env`键值对
-- `ES7 React/Redux/GraphQL/React-Native snippets`
-- `ESLint` - eslint 支持
-- `filesize` - 显示当前文件的大小
-- `Flutter` - flutter 支持
-- `Flutter Files` - flutter 文件模板
-- `Flutter Widget Snippets`
-- `GitLens` - git 功能增强
-- `Highlight Matching Tag` - 高亮对应标签
-- `Image preview` - 图片预览
-- `Import Cost` - 显示引入包大小
-- `indent-rainbow` - 缩进用彩虹色分级显示
-- `IntelliSense for CSS class names in HTML` - class 名称提示
-- `JavaScript (ES6) code snippets`
-- `jQuery Code Snippets`
-- `language-stylus`
-- `LeetCode`
-- `Less IntelliSense`
-- `Live Server` - 启动一个本地服务器
-- `Lorem ipsum` - 生成乱数假文
-- `Markdown All in One` - Markdown 提示
-- `Markdown Preview Enhanced` - Markdown 预览
-- `markdownlint` - Markdown 语法校验
-- `Material Icon Theme` - Material 图标主题
-- `Material Theme` - Material 主题
-- `minapp` - 微信小程序标签和属性智能补全
-- `Partial Diff` - 代码片段比对
-- `Path Autocomplete` - 路径自动补全
-- `Path Intellisense` - 路径提示
-- `Prettier` - 格式化代码
-- `Project Manager` - 项目管理器
-- `React Hooks Snippets`
-- `React Native Tools`
-- `REST Client` - 在 vscode 里发请求，类似工具有 [postman](https://www.postman.com/)，[postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
-- `Sass`
-- `Sass Lint`
-- `SCSS IntelliSense`
-- `Settings Sync` - 配置同步
-- `Sorting HTML and Jade attributes` - 属性排序
-- `SVG Viewer` - SVG 预览
-- `TODO Highlight` - 高亮特定词，可配置
-- `TypeScript Hero` - 增强 ts
-- `TypeScript Importer` - 自动寻找类型定义
-- `uniapp-snippet` - uni-app 片段提示
-- `Vetur` - vue 官方插件
-- `Visual Studio IntelliCode` - 代码智能提示
-- `vscode-element-helper`
-- `vscode-fileheader` - 快速插入头部注释，标示作者、日期等
-- `Vue Peek` - vue 文件内快速定位
-- `vuetify-vscode`
-- `wpy-beautify` - 为了写 wepy 保留的玩意……
+- [`Ant Design Snippets`](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
+- [`Ant Design Vue helper`](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antdv 提示
+- [`any-rule`](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
+- [`Bracket Pair Colorizer 2`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
+- [`Change Case`](https://marketplace.visualstudio.com/items?itemName=hjdarnel.change-case) - 变换变量名称格式
+- [`Code Runner`](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
+- [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写
+- [`colorize`](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize) - 文件中可视化颜色
+- [`Comment Translate`](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) - 翻译注释
+- [`Debugger for Chrome`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+- [`Debugger for Firefox`](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
+- [`Debugger for Microsoft Edge`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge)
+- [`DotENV`](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 高亮`.env`键值对
+- [`ES7 React/Redux/GraphQL/React-Native snippets`](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
+- [`ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
+- [`GitLens`](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
+- [`Highlight Matching Tag`](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
+- [`Image preview`](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
+- [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
+- [`JavaScript (ES6) code snippets in StandardJS style`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段，跟随 standard 规范
+- [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
+- [`koroFileHeader`](https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader) - 生成文件头部注释和函数注释
+- [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
+- [`LeetCode`](https://marketplace.visualstudio.com/items?itemName=shengchen.vscode-leetcode)
+- [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
+- [`Live Server`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
+- [`Lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
+- [`Markdown All in One`](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
+- [`Markdown Preview Enhanced`](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
+- [`markdownlint`](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
+- [`Material Icon Theme`](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - Material 图标主题
+- [`Material Theme`](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) - Material 主题
+- [`minapp`](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode) - 微信小程序标签和属性智能补全，支持原生小程序，mpvue 和 wepy
+- [`Prettier`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
+- [`React Hooks Snippets`](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
+- [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
+- [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
+- [`Snippets for Material-UI`](https://marketplace.visualstudio.com/items?itemName=vscodeshift.material-ui-snippets) - material-ui 代码块提示
+- [`Sorting HTML and Jade attributes`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-attrs-sorter) - html 和 jade 属性排序
+- [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
+- [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
+- [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
+- [`Vetur`](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
+- [`Visual Studio IntelliCode`](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - element-ui 官方插件
+- [`vscode-element-helper`](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
+- [`Vue Peek`](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
+- [`vuetify-vscode`](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
+- [`wpy-beautify`](https://marketplace.visualstudio.com/items?itemName=doingweb.wpy-beautify) - 美化 wpy 代码，如果不写 wepy 的话可以卸载了
 
 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去。
 
@@ -406,6 +388,7 @@ npm i -g yarn
     "buefy",
     "bulma",
     "bytedance",
+    "camelcase",
     "caniuse",
     "combinators",
     "dcloudio",
@@ -475,6 +458,10 @@ npm i -g yarn
     "zarm",
     "zent"
   ],
+  // 插件 colorize 使用，指定可视化的格式
+  "colorize.colorized_colors": ["ARGB","HEXA","HSL","RGB"],
+  // 插件 colorize 使用，指定可视化变量颜色的语言
+  "colorize.colorized_variables": ["CSS", "LESS", "SASS", "STYLUS"],
   // vscode 自带功能，指定是否校验 css，这里设置为是
   "css.validate": true,
   // vscode 自带功能，修改调试控制台的字体族
@@ -593,34 +580,53 @@ npm i -g yarn
   "scss.validate": true,
   // 插件 Setting Sync 使用，指定使用的 github gist
   "sync.gist": "填你自己的",
-  // 插件 TODO Highlight 使用，设定高亮的关键字
-  "todohighlight.keywords": [
-    {
-      "text": "TODO:",
-      "color": "#fff",
-      "backgroundColor": "#d89614",
+  // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
+  "todo-tree.highlights.enabled": true,
+  // 插件 Todo Tree 使用，指定特定高亮格式
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "background": "#d32029",
+      "foreground": "#fff",
+      "icon": "bug",
+      "iconColour": "#d32029"
     },
-    {
-      "text": "FIXME:",
-      "color": "#fff",
-      "backgroundColor": "#d32029"
+    "FIX": {
+      "background": "#d32029",
+      "foreground": "#fff",
+      "icon": "bug",
+      "iconColour": "#d32029"
     },
-    {
-      "text": "OPTIMIZE:",
-      "color": "#fff",
-      "backgroundColor": "#2b4acb",
+    "INFO": {
+      "background": "#177ddc",
+      "foreground": "#fff",
+      "icon": "info",
+      "iconColour": "#177ddc"
     },
-    {
-      "text": "QUERY:",
-      "color": "#fff",
-      "backgroundColor": "#d8bd14"
+    "OPTIMIZE": {
+      "background": "#2b4acb",
+      "foreground": "#fff",
+      "icon": "flame",
+      "iconColour": "#2b4acb"
     },
-    {
-      "text": "INFO:",
-      "color": "#fff",
-      "backgroundColor": "#177ddc"
+    "TODO": {
+      "background": "#d89614",
+      "foreground": "#fff",
+      "icon": "alert",
+      "iconColour": "#d89614"
     }
-],
+  },
+  // 插件 Todo Tree 使用，指定通用高亮格式
+  "todo-tree.highlights.defaultHighlight": {
+    "gutterIcon": true
+  },
+  // 插件 Todo Tree 使用，指定匹配的文本
+  "todo-tree.general.tags": [
+    "BUG",
+    "FIX",
+    "INFO",
+    "OPTIMIZE",
+    "TODO"
+  ],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具，这里设置为 prettier
@@ -637,7 +643,8 @@ npm i -g yarn
   // vscode 自带功能，指定 vue 文件的默认格式化工具，这里设置为 vetur，需要安装 Vetur 插件
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
-  }
+  },
+  "todo-tree.tree.showScanModeButton": false
 }
 ```
 
