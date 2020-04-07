@@ -295,6 +295,7 @@ npm i -g yarn
 - [`minapp`](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode) - 微信小程序标签和属性智能补全，支持原生小程序，mpvue 和 wepy
 - [`Prettier`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [`React Hooks Snippets`](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
+- [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) - 在 vscode 中发起请求
 - [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
 - [`Snippets for Material-UI`](https://marketplace.visualstudio.com/items?itemName=vscodeshift.material-ui-snippets) - material-ui 代码块提示
@@ -307,6 +308,7 @@ npm i -g yarn
 - [`vscode-element-helper`](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [`Vue Peek`](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [`vuetify-vscode`](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
+- [`WakaTime`](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
 - [`wpy-beautify`](https://marketplace.visualstudio.com/items?itemName=doingweb.wpy-beautify) - 美化 wpy 代码，如果不写 wepy 的话可以卸载了
 
 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去。
@@ -517,6 +519,8 @@ npm i -g yarn
     "vue",
     "vue-html"
   ],
+  // vscode 自带功能，设置文件在什么时候自动保存，这里设置为失焦后自动保存
+  "files.autoSave": "onFocusChange",
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
   // vscode 自带功能，指定特定后缀的文件的解析器
@@ -629,8 +633,13 @@ npm i -g yarn
   ],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具，这里设置为 prettier
-  "vetur.format.defaultFormatter.html": "prettier",
+  // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具的设置
+  "vetur.format.defaultFormatterOptions": {
+    "prettyhtml": {
+      "wrapAttributes": true,
+      "sortAttributes": true
+    }
+  },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // vscode 自带功能，指定缩放
   "window.zoomLevel": -0.24,
@@ -643,8 +652,7 @@ npm i -g yarn
   // vscode 自带功能，指定 vue 文件的默认格式化工具，这里设置为 vetur，需要安装 Vetur 插件
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
-  },
-  "todo-tree.tree.showScanModeButton": false
+  }
 }
 ```
 
