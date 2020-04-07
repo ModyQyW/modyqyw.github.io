@@ -52,19 +52,18 @@ Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.i
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端
 - [PDF Expert](https://xclient.info/s/pdf-expert-for-mac.html) - PDF 阅读器，感觉可以转福昕
-- [Postman](https://www.getpostman.com/) - 请求
-- [Postwoman]() - 请求
+- [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [Steam](https://store.steampowered.com/) - mac 也可以打游戏好吧
+- [Steam](https://store.steampowered.com/)
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Trello](https://trello.com/platforms) - 看板工具
-- [Tencent Lemon](https://lemon.qq.com/)
-- [v2ray](https://store.holytech.tech/aff.php?aff=2849)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [WebStorm](https://www.jetbrains.com/webstorm/)
+- [Tencent Lemon](https://lemon.qq.com/) - 清理工具
+- [v2ray](https://store.holytech.tech/aff.php?aff=2849) - 科学上网新方法
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
+- [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 
 ## [oh-my-zsh](https://ohmyz.sh/)
 
