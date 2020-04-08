@@ -43,6 +43,7 @@ Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.i
 - [Listen1](http://listen1.github.io/listen1/) - 专注于听歌的播放器
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
 - [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的，再完善一点的话取代 google 也不是不可能
 - [Microsoft Office](https://xclient.info/s/office-for-mac.html)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [Mounty](https://mounty.app/) - 让 mac 原生支持移动硬盘/u盘 NTFS 读写
@@ -1749,10 +1750,24 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 ### 题外话
 
-如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得把`node_modules/@dcloudio/vue-cli-plugin-uni/lib/options.js`文件中下面一行注释掉，否则编译不成功。
+如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得把`node_modules/@dcloudio/vue-cli-plugin-uni/lib/options.js`文件中下面一行注释掉，否则编译不成功。这种方法需要你在每次装包后都重新操作。
 
 ```js
 options.css.loaderOptions.sass.sassOptions.outputStyle = 'nested'
+```
+
+你也可以在`vue.config.js`中设置 sass-loader，如下所示。这种方法只需要操作一次。
+
+```js
+module.exports = {
+  css: {
+    loaderOptions: {
+      scss: {
+        sassOptions: {}
+      }
+    }
+  }
+}
 ```
 
 如果 cli 项目使用 [node-sass](https://www.npmjs.com/package/node-sass) ，无需注释，但需要用 node 8 来安装、编译 node-sass。
