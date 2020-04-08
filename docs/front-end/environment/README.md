@@ -1783,7 +1783,7 @@ module.exports = {
   "editor.fontFmyCHS": "Sarasa Mono T SC",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
-  "editor.lineHeight": "22/14",
+  "editor.lineHeight": "1.25",
   "editor.longLineIndicatorColumn": 120,
   "editor.mouseWheelZoom": false,
   "editor.saveFoldStatus.enabled": true,
