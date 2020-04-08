@@ -267,7 +267,6 @@ npm i -g yarn
 - [`Change Case`](https://marketplace.visualstudio.com/items?itemName=hjdarnel.change-case) - 变换变量名称格式
 - [`Code Runner`](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
 - [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写
-- [`colorize`](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize) - 文件中可视化颜色
 - [`Comment Translate`](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) - 翻译注释
 - [`Debugger for Chrome`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [`Debugger for Firefox`](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
@@ -460,10 +459,6 @@ npm i -g yarn
     "zarm",
     "zent"
   ],
-  // 插件 colorize 使用，指定可视化的格式
-  "colorize.colorized_colors": ["ARGB","HEXA","HSL","RGB"],
-  // 插件 colorize 使用，指定可视化变量颜色的语言
-  "colorize.colorized_variables": ["CSS", "LESS", "SASS", "STYLUS"],
   // vscode 自带功能，指定是否校验 css，这里设置为是
   "css.validate": true,
   // vscode 自带功能，修改调试控制台的字体族
@@ -1788,7 +1783,7 @@ module.exports = {
   "editor.fontFmyCHS": "Sarasa Mono T SC",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
-  "editor.lineHeeight": "22/14",
+  "editor.lineHeight": "22/14",
   "editor.longLineIndicatorColumn": 120,
   "editor.mouseWheelZoom": false,
   "editor.saveFoldStatus.enabled": true,
