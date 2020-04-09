@@ -30,7 +30,7 @@
 
 ## 文档
 
-- [vueperss](https://vuepress.vuejs.org/zh/)
+- [vuepress](https://vuepress.vuejs.org/zh/)
 - [hexo](https://hexo.io/)
 
 ## 项目体系
@@ -43,20 +43,24 @@
 - [npm-check](https://github.com/dylang/npm-check) - 检查依赖，建议配合 yarn upgrade-interactive 使用
 - [lerna](https://github.com/lerna/lerna) - monorepo 管理
 - [lerna-changelog](https://github.com/lerna/lerna-changelog) - 为 lerna 项目自动生成 changelog
-- [eslint](https://eslint.org/) - 检查 js 代码的格式与语法
-  - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-  - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
-  - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-  - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
-  - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-  - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard)
-  - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
-  - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
-- [prettier](https://prettier.io/) - 检查代码格式
-- [stylelint](https://stylelint.io/) - 检查样式代码的格式与语法
-  - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
-  - [stylelint-config-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap) - bootstrap 预设的 scss stylelint 配置
-  - [stylelint-formatter-pretty](https://www.npmjs.com/package/stylelint-formatter-pretty)
+- formatter
+  - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
+  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的格式与语法
+    - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+    - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
+    - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+    - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+    - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+    - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard)
+    - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
+    - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
+  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版
+  - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法
+    - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
+    - [stylelint-config-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap) - bootstrap 预设的 scss stylelint 配置
+    - [stylelint-formatter-pretty](https://www.npmjs.com/package/stylelint-formatter-pretty)
+  - stylus 可参考 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)
+  - sass 可参考 [sass-formatter](https://github.com/TheRealSyler/sass-formatter)
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [husky](https://github.com/typicode/husky)
 - [yorkie](https://github.com/yyx990803/yorkie)
