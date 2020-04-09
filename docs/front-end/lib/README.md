@@ -66,7 +66,7 @@
 - [yorkie](https://github.com/yyx990803/yorkie)
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
-- [git](https://atts.w3cschool.cn/attachments/image/20191225/1577243564858376.png)
+- git
   - [pro git](https://git-scm.com/book/en/v2)
 
 ## 编译打包

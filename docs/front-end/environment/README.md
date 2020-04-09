@@ -30,7 +30,6 @@ Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.i
 - [ClashX](https://github.com/yichengchen/clashX) - v2ray 连接工具
 - [Clearview](https://xclient.info/s/clearview.html) - 电子阅读器
 - [eZip](https://ezip.awehunt.com/) - 压缩软件
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
@@ -274,7 +273,6 @@ npm i -g yarn
 - [`DotENV`](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 高亮`.env`键值对
 - [`ES7 React/Redux/GraphQL/React-Native snippets`](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [`ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
-- [`GitLens`](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [`Highlight Matching Tag`](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [`Image preview`](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
@@ -514,8 +512,10 @@ npm i -g yarn
     "vue",
     "vue-html"
   ],
-  // vscode 自带功能，设置文件在什么时候自动保存，这里设置为失焦后自动保存
-  "files.autoSave": "onFocusChange",
+  // 插件 koroFileHeader 使用，设置其行为
+  "fileheader.configObj": {
+    "autoAdd": false
+  },
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
   // vscode 自带功能，指定特定后缀的文件的解析器
@@ -531,10 +531,6 @@ npm i -g yarn
     "*.wpy": "html",
     "*.json": "jsonc"
   },
-  // 插件 GieLens 使用，指定是否显示文件历史，这里设置为是
-  "gitlens.views.fileHistory.enabled": true,
-  // 插件 GitLens 使用，指定是否显示单行历史，这里设置为是
-  "gitlens.views.lineHistory.enabled": true,
   // vscode 自带功能，指定是否校验 js 文件
   "javascript.implicitProjectConfig.checkJs": true,
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
@@ -1801,7 +1797,7 @@ module.exports = {
 
 ### `format`插件
 
-修改 hbuilderx 自带的`format`插件，工具 => 插件配置 => `format` => `jsbeautifyrc.js`。直接用下面的内容覆盖掉`jsbeautifyrc.js`的原有内容。
+修改 hbuilderx 自带的`format`插件，工具 => 插件配置 => `format` => `jsbeautifyrc.js`。直接用下面的内容覆盖掉`jsbeautifyrc.js`的原有内容。使用 prettier 插件的话可以不修改此处。
 
 ```js
 // https://github.com/beautify-web/js-beautify#readme
@@ -1983,7 +1979,7 @@ npm i
 
 重启之后就能使用 hbuilderx 开发项目了。
 
-2020.04.02 注：貌似跟着官方教程设置做了之后还是不能 eslint 一键修复，迷惑行为大赏。
+2020.04.02 注：貌似跟着官方教程设置做了之后还是不能 eslint 一键修复，迷惑。建议还是用 vscode 吧。
 
 ### vue-cli 创建的项目的依赖版本对齐 hbuilderx
 
