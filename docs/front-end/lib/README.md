@@ -27,6 +27,7 @@
 
 - [typescript](https://www.typescriptlang.org/) - 必学，要会用
 - [reason](https://reasonml.github.io/) - 可以观望
+- [elm](https://elm-lang.org/) - 可以观望
 
 ## 文档
 

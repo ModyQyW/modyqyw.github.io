@@ -301,7 +301,7 @@ npm i -g yarn
 - [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
 - [`Vetur`](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
-- [`Visual Studio IntelliCode`](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - element-ui 官方插件
+- [`Visual Studio IntelliCode`](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
 - [`vscode-element-helper`](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [`Vue Peek`](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [`vuetify-vscode`](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
