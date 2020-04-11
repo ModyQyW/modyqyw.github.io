@@ -308,8 +308,6 @@ npm i -g yarn
 - [`WakaTime`](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
 - [`wpy-beautify`](https://marketplace.visualstudio.com/items?itemName=doingweb.wpy-beautify) - 美化 wpy 代码，如果不写 wepy 的话可以卸载了
 
-安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去。
-
 ### `settings.json`
 
 ```json
@@ -646,6 +644,11 @@ npm i -g yarn
   }
 }
 ```
+
+### 基本使用
+
+- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去。如果你使用了我提供的`settings.json`，务必先删除掉`sync.gist`字段，然后 F1 -> `Sync: Update/Upload Settings`，插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
+- 安装`ESLint`，`Prettier`和`Vetur`插件并使用我提供的`settings.json`，可以在大部分文件中 F1 -> `Format Document` 格式化代码样式，并且会使用项目内的 eslint 配置二次格式化代码样式和检查语法。
 
 ### snippets
 
