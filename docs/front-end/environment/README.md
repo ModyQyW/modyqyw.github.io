@@ -280,7 +280,6 @@ npm i -g yarn
 - [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
 - [`koroFileHeader`](https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader) - 生成文件头部注释和函数注释
 - [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
-- [`LeetCode`](https://marketplace.visualstudio.com/items?itemName=shengchen.vscode-leetcode)
 - [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [`Live Server`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
 - [`Lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
@@ -388,6 +387,7 @@ npm i -g yarn
     "camelcase",
     "caniuse",
     "combinators",
+    "commitlint",
     "dcloudio",
     "designdeck",
     "devtools",
@@ -411,6 +411,7 @@ npm i -g yarn
     "modyqyw",
     "monospace",
     "nprogress",
+    "nums",
     "nuxt",
     "nvue",
     "octicons",
@@ -419,6 +420,7 @@ npm i -g yarn
     "pixabay",
     "preact",
     "prepend",
+    "prettyhtml",
     "qrcode",
     "quickapp",
     "readonly",
@@ -537,26 +539,6 @@ npm i -g yarn
   "javascript.updateImportsOnFileMove.enabled": "always",
   // vscode 自带功能，指定是否校验 javascript，这里设置为是
   "javascript.validate.enable": true,
-  // 插件 LeetCode 使用，指定默认语言，这里设置为 javascript
-  "leetcode.defaultLanguage": "javascript",
-  // 插件 LeetCode 使用，指定终端，这里设置为 leetcode-cn
-  "leetcode.endpoint": "leetcode-cn",
-  // 插件 LeetCode 使用，指定保存的文件夹和文件名
-  "leetcode.filePath": {
-    "default": {
-      "folder": "",
-      "filename": "${id}.${difficulty}.${kebab-case-name}.${ext}"
-    }
-  },
-  // 插件 LeetCode 使用，指定是否显示相关提示，这里设置为否
-  "leetcode.hint.commandShortcut": false,
-  "leetcode.hint.commentDescription": false,
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.setDefaultLanguage": false,
-  // 插件 LeetCode 使用，指定是否在注释中包含问题的描述，这里设置为是
-  "leetcode.showCommentDescription": true,
-  // 插件 LeetCode 使用，指定存放问题文件的文件夹
-  "leetcode.workspaceFolder": "填你自己的",
   // vscode 自带功能，指定是否校验 less，这里设置为是
   "less.validate": true,
   // 插件 Live Server 使用，指定是否检验标签，这里设置为否
@@ -572,30 +554,18 @@ npm i -g yarn
   // vscode 自带功能，指定是否校验 scss，这里设置为是
   "scss.validate": true,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "填你自己的",
+  "sync.gist": "",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
   "todo-tree.highlights.customHighlight": {
-    "BUG": {
-      "background": "#d32029",
-      "foreground": "#fff",
-      "icon": "bug",
-      "iconColour": "#d32029"
-    },
     "FIX": {
       "background": "#d32029",
       "foreground": "#fff",
       "icon": "bug",
       "iconColour": "#d32029"
     },
-    "INFO": {
-      "background": "#177ddc",
-      "foreground": "#fff",
-      "icon": "info",
-      "iconColour": "#177ddc"
-    },
-    "OPTIMIZE": {
+    "PERF": {
       "background": "#2b4acb",
       "foreground": "#fff",
       "icon": "flame",
@@ -614,10 +584,8 @@ npm i -g yarn
   },
   // 插件 Todo Tree 使用，指定匹配的文本
   "todo-tree.general.tags": [
-    "BUG",
     "FIX",
-    "INFO",
-    "OPTIMIZE",
+    "PERF",
     "TODO"
   ],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
@@ -625,8 +593,7 @@ npm i -g yarn
   // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具的设置
   "vetur.format.defaultFormatterOptions": {
     "prettyhtml": {
-      "wrapAttributes": true,
-      "sortAttributes": true
+      "wrapAttributes": true
     }
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
