@@ -278,7 +278,6 @@ npm i -g yarn
 - [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [`JavaScript (ES6) code snippets in StandardJS style`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段，跟随 standard 规范
 - [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
-- [`koroFileHeader`](https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader) - 生成文件头部注释和函数注释
 - [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [`Live Server`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
@@ -512,10 +511,6 @@ npm i -g yarn
     "vue",
     "vue-html"
   ],
-  // 插件 koroFileHeader 使用，设置其行为
-  "fileheader.configObj": {
-    "autoAdd": false
-  },
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
   // vscode 自带功能，指定特定后缀的文件的解析器
@@ -614,7 +609,7 @@ npm i -g yarn
 
 ### 基本使用
 
-- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去。如果你使用了我提供的`settings.json`，务必先删除掉`sync.gist`字段，然后 F1 -> `Sync: Update/Upload Settings`，插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
+- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：F1 -> `Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
 - 安装`ESLint`，`Prettier`和`Vetur`插件并使用我提供的`settings.json`，可以在大部分文件中 F1 -> `Format Document` 格式化代码样式，并且会使用项目内的 eslint 配置二次格式化代码样式和检查语法。
 
 ### snippets
