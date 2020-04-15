@@ -26,8 +26,9 @@
 ## 语言
 
 - [typescript](https://www.typescriptlang.org/) - 必学，要会用
-- [reason](https://reasonml.github.io/) - 可以观望
-- [elm](https://elm-lang.org/) - 可以观望
+- [reason](https://reasonml.github.io/) - 观望
+- [elm](https://elm-lang.org/) - 观望
+- [bucklescript](https://bucklescript.github.io/) - 观望
 
 ## 文档
 
@@ -169,9 +170,9 @@
   - [onsen-ui](https://onsen.io/v2/guide/vue/)
   - [prime](https://primefaces.org/primevue/showcase/#/setup)
 - cli
-  - [nuxt](https://zh.nuxtjs.org/guide/installation/) 支持 ssr
-  - [vue-cli](https://cli.vuejs.org/zh/guide/) 配置后支持 ssr
-  - [vapper](https://vapperjs.org/zh/) - 支持 ssr
+  - [nuxt](https://zh.nuxtjs.org/guide/installation/)
+  - [vue-cli](https://cli.vuejs.org/zh/guide/)
+  - [vapper](https://vapperjs.org/zh/)
 - app/小程序
   - uni-app
     - [中文文档](https://uniapp.dcloud.io/)
@@ -220,11 +221,11 @@
   - [chakra](https://chakra-ui.com/)
   - [primer](https://primer.style/components)
 - cli
-  - [next](https://nextjs.org/docs/getting-started) 支持 ssr
-  - [umi](https://umijs.org/zh-CN) 支持 ssr
+  - [next](https://nextjs.org/docs/getting-started)
+  - [umi](https://umijs.org/zh-CN)
     - [@umijs/plugin-qiankun](https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun) - 微前端解决方案
   - [create-react-app](https://create-react-app.dev/) 无 ssr 相关说明
-  - [gatsby](https://www.gatsbyjs.com/) 支持 ssr
+  - [gatsby](https://www.gatsbyjs.com/)
 - app
   - react-native
     - [英文文档](https://facebook.github.io/react-native/)

@@ -2,7 +2,7 @@
 
 基于个人喜好推荐的技术栈。
 
-vue 全家桶 = vue + vue-router + vuex + elementui / antd-vue / viewui / vuetify / cube-ui / vant
+vue 全家桶 = vue + vue-router + vuex + element-ui / antd-vue / viewui / vuetify / cube-ui / vant
 
 umi 全家桶 = umi + dva + antd / material-ui / antd-mobile
 
