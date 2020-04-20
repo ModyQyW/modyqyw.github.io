@@ -2,29 +2,47 @@
 
 所有配置仅供参考，自行替换。
 
-## Windows(待补充)
+## Windows
 
 - windows 10 ltsc - 稳定，更新少
 - [hyper](https://hyper.is/) - 替换命令行，你也可以直接搜索`powershell 美化教程`
 - wsl - 支持 linux
 - [oh-my-zsh](https://ohmyz.sh/) - 替换 wsl 命令行
+- [7-zip](https://www.7-zip.org/) - 压缩/解压缩工具
+- [Android Studio](https://developer.android.com/studio/)
+- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
+- [Clash](https://dwz.pm/lf) - v2ray 连接工具
+- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
+- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
+- [Firefox](https://www.firefox.com.cn/download/#more)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Git](https://git-scm.com/downloads)
+- [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
+- [Google Chrome](https://www.google.cn/chrome/index.html)
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
+- [Motrix](https://motrix.app/zh-CN/) - 下载工具
+- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
+- [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
+- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
+- [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
+- [SourceTree](https://www.sourcetreeapp.com/) - git gui
+- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
+- [wox](https://github.com/Wox-launcher/Wox)
+- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
+- [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.exe)
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
+- [美图看看](http://kankan.meitu.com/)
+- [美图秀秀](https://mt.meipai.com/)
+- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe)
 - [人人影视](http://app.rrys.tv/) - 看剧
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - 迅雷 U 享版
-- [Android Studio](https://developer.android.com/studio/)
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
-- [Firefox](https://www.firefox.com.cn/download/#more)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Git](https://git-scm.com/downloads)
-- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 
 ## macOS
 
@@ -47,8 +65,7 @@
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [ClashX](https://github.com/yichengchen/clashX) - v2ray 连接工具
-- [Clearview](https://xclient.info/s/clearview.html) - 电子阅读器
-- [eZip](https://ezip.awehunt.com/) - 压缩软件
+- [eZip](https://ezip.awehunt.com/) -压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
@@ -62,8 +79,7 @@
 - [Listen1](http://listen1.github.io/listen1/) - 专注于听歌的播放器
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
 - [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的，再完善一点的话取代 google 也不是不可能
-- [Microsoft Office](https://xclient.info/s/office-for-mac.html)
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [Mounty](https://mounty.app/) - 让 mac 原生支持移动硬盘/u盘 NTFS 读写
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
@@ -71,7 +87,6 @@
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端
-- [PDF Expert](https://xclient.info/s/pdf-expert-for-mac.html) - PDF 阅读器，感觉可以转福昕
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
@@ -81,11 +96,11 @@
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Trello](https://trello.com/platforms) - 看板工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
-- [v2ray](https://store.holytech.tech/aff.php?aff=2849) - 科学上网新方法
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
+- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office（重度 office 用户为什么要用 mac 呢）
 
-## [oh-my-zsh](https://ohmyz.sh/)
+## oh-my-zsh 配置
 
 ### `zshrc`
 
@@ -231,12 +246,12 @@ upgrade_oh_my_zsh
 git stash pop
 ```
 
-## DNS
+## DNS 配置
 
-- 国内
+- 国内公共 DNS
   - [百度 DNS](https://dudns.baidu.com/intro/publicdns/)：`180.76.76.76`，`2400:da00::6666`
   - [阿里 DNS](http://alidns.com/)：`223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
-- 国外
+- 国外公共 DNS
   - [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN)
   - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/)
 
@@ -265,10 +280,8 @@ npm i -g @tarojs/cil
 npm i -g @vue/cli
 npm i -g cgr
 npm i -g expo-cli
-npm i -g np # 方便的 publish
 npm i -g npm@lts
 npm i -g npm-check
-npm i -g npm-check-updates # 和 npm-check 差不多，自行选择
 npm i -g sass
 npm i -g ts-node
 npm i -g typescript
