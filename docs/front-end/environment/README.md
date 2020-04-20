@@ -2,9 +2,29 @@
 
 所有配置仅供参考，自行替换。
 
-## Windows
+## Windows(待补充)
 
-Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.is/) + [vscode](https://code.visualstudio.com/) + [nvm-windows](https://github.com/coreybutler/nvm-windows) + [git](https://git-scm.com/) + [SourceTree](https://www.sourcetreeapp.com/) + [tortoisesvn](https://tortoisesvn.net/)
+- windows 10 ltsc - 稳定，更新少
+- [hyper](https://hyper.is/) - 替换命令行，你也可以直接搜索`powershell 美化教程`
+- wsl - 支持 linux
+- [oh-my-zsh](https://ohmyz.sh/) - 替换 wsl 命令行
+- [百度网盘](http://pan.baidu.com/download)
+- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
+- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
+- [人人影视](http://app.rrys.tv/) - 看剧
+- [网易云音乐](https://music.163.com/#/download) - 听歌启动器
+- [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
+- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
+- [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
+- 迅雷 U 享版
+- [Android Studio](https://developer.android.com/studio/)
+- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
+- [Firefox](https://www.firefox.com.cn/download/#more)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Git](https://git-scm.com/downloads)
+- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
+- [SourceTree](https://www.sourcetreeapp.com/) - git gui
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 
 ## macOS
 
@@ -23,13 +43,13 @@ Windows 10 LTSC + WSL + [oh-my-zsh](https://ohmyz.sh/) / [hyper](https://hyper.i
 - [迅雷](http://down.sandai.net/mac/thunder_3.3.9.4280.dmg)
 - [Alfred](https://xclient.info/s/alfred.html)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
-- [Android Studio](https://developer.android.com/studio/) - 各版本的安卓模拟器启动器
-- [BND2](https://github.com/b3log/baidu-netdisk-downloaderx) - 图形界面的百度网盘不限速下载器
+- [Android Studio](https://developer.android.com/studio/)
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [ClashX](https://github.com/yichengchen/clashX) - v2ray 连接工具
 - [Clearview](https://xclient.info/s/clearview.html) - 电子阅读器
 - [eZip](https://ezip.awehunt.com/) - 压缩软件
+- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
@@ -294,7 +314,6 @@ npm i -g yarn
 - [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
 - [`Snippets for Material-UI`](https://marketplace.visualstudio.com/items?itemName=vscodeshift.material-ui-snippets) - material-ui 代码块提示
-- [`Sorting HTML and Jade attributes`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-attrs-sorter) - html 和 jade 属性排序
 - [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
@@ -310,61 +329,11 @@ npm i -g yarn
 
 ```json
 {
-  // 插件 Sorting HTML and Jade attributes 使用，可以自动为标签属性排序
-  // 基于 vue 官方文档的风格指南，另外参考了 quasar 框架的配置和 react 的 DOM 事件
-  "attrsSorter.order": [
-    "is",
-    "v-for",
-    "v-if",
-    "v-else-if",
-    "v-else",
-    "v-show",
-    "v-cloak",
-    "v-pre",
-    "v-once",
-    "id",
-    "ref",
-    "key",
-    "v-slot",
-    "v-slot.+",
-    "#.*",
-    "slot",
-    "v-model",
-    "v-model.+",
-    "class",
-    "className",
-    "name",
-    "data-.+",
-    "src",
-    "for",
-    "htmlFor",
-    "type",
-    "href",
-    "value",
-    "defaultValue",
-    "title",
-    "alt",
-    "role",
-    "aria-.+",
-    "v-bind",
-    "v-bind.+",
-    ":.+",
-    "v-on.+",
-    "@.+",
-    "onChange",
-    "onInput",
-    "v-html",
-    "v-html.+",
-    "dangerouslySetInnerHTML",
-    "v-text",
-    "v-text.+",
-    "$unknown$"
-  ],
   // 插件 Comment Translate 使用，指定翻译的目标语言
   "commentTranslate.targetLanguage": "zh-CN",
   // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
   "commentTranslate.multiLineMerge": true,
-  // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时不会报拼写错误
+  // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
   "cSpell.userWords": [
     "Avenir",
     "Ducheng",
@@ -379,6 +348,8 @@ npm i -g yarn
     "addrs",
     "alipay",
     "antd",
+    "bookset",
+    "booksets",
     "browserslist",
     "buefy",
     "bulma",
@@ -390,10 +361,13 @@ npm i -g yarn
     "dcloudio",
     "designdeck",
     "devtools",
+    "dingtalk",
     "echarts",
     "editorconfig",
+    "elementui",
     "flaticon",
     "fontawesome",
+    "fullhuman",
     "gitee",
     "gitlab",
     "gratisography",
@@ -402,6 +376,7 @@ npm i -g yarn
     "ifdef",
     "ifndef",
     "ionicons",
+    "jsencrypt",
     "leetcode",
     "miniprogram",
     "miniprograms",
@@ -409,6 +384,7 @@ npm i -g yarn
     "mobx",
     "modyqyw",
     "monospace",
+    "msgbox",
     "nprogress",
     "nums",
     "nuxt",
@@ -423,7 +399,9 @@ npm i -g yarn
     "qrcode",
     "quickapp",
     "readonly",
+    "reqs",
     "rgba",
+    "scrollbar",
     "segmentfault",
     "shineout",
     "snabbdom",
@@ -437,7 +415,9 @@ npm i -g yarn
     "tarojs",
     "toutiao",
     "twbs",
+    "umijs",
     "uniapp",
+    "unpackage",
     "vant",
     "vetur",
     "viewui",
@@ -447,9 +427,12 @@ npm i -g yarn
     "vuetify",
     "vuex",
     "weapp",
+    "webm",
+    "webp",
     "webstorm",
     "wechat",
     "weixin",
+    "woff",
     "wurui",
     "wxml",
     "wxss",
@@ -460,8 +443,6 @@ npm i -g yarn
   "css.validate": true,
   // vscode 自带功能，修改调试控制台的字体族
   "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，修改调试控制台的字体大小
-  "debug.console.fontSize": 12,
   // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 tslint 和 eslint 自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll.tslint": true,
@@ -469,14 +450,8 @@ npm i -g yarn
   },
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装 prettier 插件
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // vscode 自带功能，控制编辑区是否根据文件本身内容决定缩进，这里设置为否
-  "editor.detectIndentation": false,
   // vscode 自带功能，修改编辑区的字体族
   "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，修改编辑区的字体大小
-  "editor.fontSize": 14,
-  // vscode 自带功能，修改编辑区的行高
-  "editor.lineHeight": 22,
   // vscode 自带功能，控制编辑区在输入时是否自动提示，这里设置全都提示
   "editor.quickSuggestions": {
     "comments": true,
@@ -542,14 +517,12 @@ npm i -g yarn
   "markdown.preview.fontFamily": "-apple-system, linkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
   // 插件 minapp 使用，指定是否禁用自动配置文件关联，这里设置为是
   "minapp-vscode.disableAutoConfig": true,
-  // 插件 REST CLIENT 使用，指定响应预览的字体族
-  "rest-client.fontFamily": "-apple-system, linkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
   // 插件 REST CLIENT 使用，指定响应预览的字体大小
   "rest-client.fontSize": 14,
   // vscode 自带功能，指定是否校验 scss，这里设置为是
   "scss.validate": true,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "",
+  "sync.gist": "填你自己的",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -592,10 +565,8 @@ npm i -g yarn
     }
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // vscode 自带功能，指定缩放
-  "window.zoomLevel": -0.24,
   // vscode 自带功能，指定工作台颜色主题，需要插件 Material Theme
-  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+  "workbench.colorTheme": "Community Material Theme Darker",
   // vscode 自带功能，指定工作台图标主题，需要插件 Material Icon Theme
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定工作台启动式的显示，这里设置为新的未命名文件

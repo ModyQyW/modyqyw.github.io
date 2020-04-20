@@ -48,11 +48,13 @@
 - formatter
   - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的格式与语法
+    - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
     - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
     - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
     - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
     - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
     - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+    - [@vue/eslint-config-prettier](https://github.com/vuejs/eslint-config-prettier)
     - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard)
     - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
     - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
@@ -65,7 +67,7 @@
   - sass 可参考 [sass-formatter](https://github.com/TheRealSyler/sass-formatter)
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [husky](https://github.com/typicode/husky)
-- [yorkie](https://github.com/yyx990803/yorkie)
+  - [yorkie](https://github.com/yyx990803/yorkie)
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
 - git
@@ -84,7 +86,7 @@
 - [postcss](https://postcss.org/) - css 的 babel
   - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
   - [cssnano](https://cssnano.co/) - 压缩 css
-  - [purgecss](https://purgecss.com/) - 移除不用的 css
+  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合小程序是哟过
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
@@ -186,6 +188,40 @@
       - [grace-ui](https://grace.hcoder.net/) - 收费
 - 衍生
   - 待补充
+- 核心知识点
+  - 初始化流程
+  - 事件机制
+  - virtual dom
+  - diff 算法
+  - 异步更新策略
+  - 双向绑定原理
+  - 响应式原理
+  - 模板编译器原理
+  - 指令原理
+  - 插槽原理
+  - vue-router 原理及实现
+  - vuex 原理及实现
+  - 组件概念，组件化思想和组件化机制
+  - 组件通信策略
+  - 组件配置，构造函数和实例的关系
+  - 渲染函数和挂载方法的本质和应用
+  - 递归组件
+  - 函数式组件
+  - 组件测试
+  - 项目配置和规范
+  - 权限控制
+  - 路由和导航菜单的动态生成
+  - 路由懒加载
+  - 路由配置模块化
+  - 服务、插件封装
+  - 模拟请求和请求代理
+  - 项目测试
+  - SSR 原理
+  - SSR 服务端集成 koa/egg
+  - SSR 数据预取和状态管理
+  - SSR 客户端激活
+  - SSR 打包和部署事项
+  - nuxt 和 vapper 的使用
 
 ## react 及相关生态
 
@@ -260,6 +296,39 @@
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)
   - [fre](https://github.com/yisar/fre) - 原理类似 vue 3 的类 react 库
   - [inferno](https://infernojs.org/)
+- 核心知识点
+  - createElement，render，Component
+  - virtual dom
+  - diff 算法
+  - fiber 架构，任务调度，渲染与更新
+  - suspense
+  - lazy
+  - 生命周期和 hooks
+  - react-router 原理及实现
+  - redux 和 redux-react 原理及实现
+  - mobx 和 mobx-react 原理及实现
+  - 组件概念，组件化思想和组件化机制
+  - 高阶组件 HOC
+  - 类组件
+  - 递归组件
+  - 函数式组件
+  - 组件通信策略
+  - 组件测试
+  - 弹窗组件实现
+  - 项目配置和规范
+  - 权限控制
+  - 路由和导航菜单的动态生成
+  - 路由懒加载
+  - 路由配置模块化
+  - 服务、插件封装
+  - 模拟请求和请求代理
+  - 项目测试
+  - SSR 原理
+  - SSR 服务端集成 koa/egg
+  - SSR 数据预取和状态管理
+  - SSR 客户端激活
+  - SSR 打包和部署事项
+  - umi 和 next 的使用
 
 ## Virtual DOM
 
@@ -269,11 +338,35 @@
 
 - [nginx](https://www.nginx.com/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
-- [koa](https://koajs.com/) - node.js 框架，自由度高
-- [egg](https://eggjs.org/zh-cn/) - 封装 koa，约定大于配置，阿里开源的
-- [nest.js](https://nestjs.com/) - 渐进式 node.js 框架，学过 Angular 和 Spring 的话建议用这个
-- [restful api](https://restfulapi.net/) - 使用最广泛的请求和响应格式
-- [graphql](https://graphql.org/) - 新请求格式，旨在改进 restful api 的弊端
+  - [koa](https://koajs.com/) - node.js 框架，自由度高
+    - [egg](https://eggjs.org/zh-cn/) - 封装 koa，约定大于配置，阿里开源的
+  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架，学过 Angular 和 Spring 的话建议用这个
+  - [restful api](https://restfulapi.net/) - 使用最广泛的请求和响应格式
+  - [graphql](https://graphql.org/) - 新请求格式，旨在改进 restful api 的弊端
+  - 核心知识点
+    - 运行与调试 debug/nodemon/jest
+    - 流程控制 promise/async+await，事件循环机制
+    - 异步 io promisify/buffer/stream
+    - 网络编程 socket/http/websocket
+    - 鉴权 jwt/oauth/单点登录
+    - koa 原理和实现 上下文/getter+setter
+    - MVC
+    - egg 原理
+    - swagger
+    - restful api 实现
+    - 表单校验
+    - 生命周期函数
+    - 插件
+    - 文件上传功能
+    - 代码模板拉取
+    - 命令行界面定制
+    - 依赖自动安装
+    - 服务启动
+    - 路由实现
+    - http 爬虫工具和无头浏览器爬虫 pupteer
+    - mysql，mongodb，sql server
+    - redis 数据结构，数据一致性，分布式锁，订阅发布模式，备份与恢复
+    - graphql 概念与操作
 
 node.js 一般用来做服务器端的中间层。
 
@@ -285,6 +378,14 @@ node.js 一般用来做服务器端的中间层。
 - [兼容性查询 caniuse](https://caniuse.com/)
 - [兼容性查询 css](https://www.campaignmonitor.com/css/)
 - [浏览器支持列表](https://browserl.ist/)
+- [全网音乐免费下载](https://music.sonimei.cn/)
+- [UZER.ME](https://uzer.me/) - 云端超级应用空间
+- [nicetool](https://www.nicetool.net/) - 简单易用的工具集合
+- [tool](https://tool.lu/) - 程序员工具箱
+- [BigJPG](https://bigjpg.com/) - 人工智能图片放大
+- [SmallPDF](https://smallpdf.com/cn/) - 在线 PDF 工具
+- [Convertio](https://convertio.co/zh/) - 在线格式转换
+- [在线格式转换](https://www.alltoall.net/)
 
 ## 图标
 
