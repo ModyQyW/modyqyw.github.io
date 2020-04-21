@@ -52,11 +52,12 @@
     - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
     - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
     - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
-    - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
     - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+    - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
     - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
     - [@vue/eslint-config-prettier](https://github.com/vuejs/eslint-config-prettier)
     - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard)
+    - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb)
     - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
     - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
   - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版
