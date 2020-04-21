@@ -3,25 +3,26 @@
 ## chrome 插件
 
 - [谷歌访问助手](https://github.com/haotian-wang/google-access-helper)
-- Google 翻译
-- LambdaTest Screenshots
-- Library Sniffer
-- Mac迅雷下载支持
-- Octotree
-- React Developer Tools
-- Suspicious Site Reporter
-- The Great Suspender
-- uBlock Origin
-- Video Downloader professional
-- Vue.js devtools
-- 优酷去广告 插件(已支持优酷、土豆、爱奇艺、乐视网、搜狐视频、酷六)
+- [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
+- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
+- [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
+- [Library Sniffer](chrome://extensions/?id=fhhdlnnepfjhlhilgmeepgkhjmhhhjkh)
+- [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
+- [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi)
+- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+- [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
+- [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [优酷去广告 插件(已支持优酷、土豆、爱奇艺、乐视网、搜狐视频、酷六)](https://www.pullywood.com/publish/archive/pullywood_ad_block_plugin_for_youku_tudou_iqiyi_ku6_etc.html)
+- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
 
 ## firefox 插件
 
-- Octotree
-- React Developer Tools
-- uBlock Origin
-- Vue.js devtools
+- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
+- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
+- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
+- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
 
 ## 语言
 

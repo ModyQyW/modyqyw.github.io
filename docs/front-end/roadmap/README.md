@@ -50,5 +50,6 @@
     - [75 个JavaScript面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
     - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
     - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+    - [前端工程化](https://github.com/fouber/blog)
 
 <Vssue />
