@@ -37,10 +37,11 @@
     - eslint
     - prettier
     - stylelint
+    - commitlint
   - vue 及周边生态
   - typescript
   - react 及周边生态
-  - webpack 和 rollup
+  - webpack，rollup 等打包工具及配套
   - jest
   - flutter
   - Node.js，Koa，Egg
