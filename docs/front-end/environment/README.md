@@ -12,6 +12,7 @@
 - [Android Studio](https://developer.android.com/studio/)
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [Clash](https://dwz.pm/lf) - v2ray 连接工具
+- [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
@@ -22,6 +23,7 @@
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
+- [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
@@ -87,6 +89,8 @@
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端
+- [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
+- [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
