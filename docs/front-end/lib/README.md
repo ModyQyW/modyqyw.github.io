@@ -1,5 +1,7 @@
 # 库/框架/工具集
 
+均用于辅助开发。
+
 ## chrome 插件
 
 - [谷歌访问助手](https://github.com/haotian-wang/google-access-helper)

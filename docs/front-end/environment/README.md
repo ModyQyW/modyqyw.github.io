@@ -75,6 +75,7 @@
 - [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [iShowU](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) - 录制桌面音频
@@ -83,7 +84,7 @@
 - [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
-- [Mounty](https://mounty.app/) - 让 mac 原生支持移动硬盘/u盘 NTFS 读写
+- [Mounty](https://mounty.app/) - 让 mac 原生支持移动硬盘/u 盘 NTFS 读写
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [OBS](https://obsproject.com/) - 录制、推流
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
@@ -104,9 +105,41 @@
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office（重度 office 用户为什么要用 mac 呢）
 
-## oh-my-zsh 配置
+## Homebrew
 
-### `zshrc`
+### 安装
+
+按照[官网](https://brew.sh/index_zh-cn)说明安装。
+
+### 配置镜像源
+
+- 使用[阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
+- 使用[清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+- 使用[中科大镜像源](https://mirrors.ustc.edu.cn/)
+
+### 配置 svn
+
+```sh
+brew install svn
+```
+
+### 配置 jdk
+
+```sh
+brew install openjdk
+```
+
+## oh-my-zsh
+
+### 安装
+
+首先按照[说明](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)安装 zsh。
+
+之后按照[官网说明](https://ohmyz.sh/#install)安装。
+
+### 配置
+
+打开`~/.zshrc`进行配置。下面给出我个人的配置内容。
 
 ```sh
 # If you come from bash you might have to change your $PATH.
@@ -209,26 +242,35 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# show user
+export DEFAULT_USER="$(whoami)"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# username
-export DEFAULT_USER="$(whoami)"
+
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # flutter
 export PATH=$PATH:$HOME/flutter/bin
+
+# openjdk
+export PATH=/usr/local/opt/openjdk/bin:$PATH
+
 # homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 
 ```
 
-### `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`
+### 主题配置
+
+打开`~/.oh-my-zsh/themes/robbyrussell.zsh-theme`进行修改。
 
 ```sh
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
@@ -250,14 +292,19 @@ upgrade_oh_my_zsh
 git stash pop
 ```
 
-## DNS 配置
+## DNS
 
-- 国内公共 DNS
-  - [百度 DNS](https://dudns.baidu.com/intro/publicdns/)：`180.76.76.76`，`2400:da00::6666`
-  - [阿里 DNS](http://alidns.com/)：`223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
-- 国外公共 DNS
-  - [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN)
-  - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/)
+### 国内公共 DNS
+
+- [百度 DNS](https://dudns.baidu.com/intro/publicdns/)：`180.76.76.76`，`2400:da00::6666`
+- [阿里 DNS](http://alidns.com/)：`223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+
+### 国外公共 DNS
+
+- [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN)
+- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/)
+
+### 配置
 
 ping 一下看哪个快就优先哪个，我自己用的顺序是百度 -> 阿里 -> google。
 
@@ -272,21 +319,25 @@ ping 一下看哪个快就优先哪个，我自己用的顺序是百度 -> 阿�
 
 ## node 和 npm
 
-### 用 nvm 管理 node
+### nvm
 
-- [nvm](https://github.com/nvm-sh/nvm)
-- [nvm-windows](https://github.com/coreybutler/nvm-windows)
+使用 nvm 来管理 node 版本。
+
+- [nvm for macos and linux](https://github.com/nvm-sh/nvm)
+- [nvm for windows](https://github.com/coreybutler/nvm-windows)
 
 ### npm 全局包
 
 ```sh
 npm i -g @tarojs/cil
 npm i -g @vue/cli
+npm i -g @vue/devtools
 npm i -g cgr
 npm i -g expo-cli
+npm i -g fanyi
 npm i -g npm@lts
 npm i -g npm-check
-npm i -g sass
+npm i -g react-devtools
 npm i -g ts-node
 npm i -g typescript
 npm i -g yarn
@@ -330,7 +381,6 @@ npm i -g yarn
 - [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) - 在 vscode 中发起请求
 - [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
-- [`Snippets for Material-UI`](https://marketplace.visualstudio.com/items?itemName=vscodeshift.material-ui-snippets) - material-ui 代码块提示
 - [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
@@ -346,6 +396,13 @@ npm i -g yarn
 
 ```json
 {
+  {
+  // 插件 Bracket Paire Colorizer 2 适用男，制定括号颜色
+  "bracket-pair-colorizer-2.colors": [
+    "Gold",
+    "Orchid",
+    "LightSkyBlue"
+  ],
   // 插件 Comment Translate 使用，指定翻译的目标语言
   "commentTranslate.targetLanguage": "zh-CN",
   // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
@@ -539,7 +596,7 @@ npm i -g yarn
   // vscode 自带功能，指定是否校验 scss，这里设置为是
   "scss.validate": true,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "填你自己的",
+  "sync.gist": "填你自己的，如果没有上传，就先不填",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -578,6 +635,7 @@ npm i -g yarn
   // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具的设置
   "vetur.format.defaultFormatterOptions": {
     "prettyhtml": {
+      "sortAttributes": true,
       "wrapAttributes": true
     }
   },
@@ -595,10 +653,17 @@ npm i -g yarn
 }
 ```
 
-### 基本使用
+### `Settings Sync`插件
 
 - 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：F1 -> `Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
-- 安装`ESLint`，`Prettier`和`Vetur`插件并使用我提供的`settings.json`，可以在大部分文件中 F1 -> `Format Document` 格式化代码样式，并且会使用项目内的 eslint 配置二次格式化代码样式和检查语法。
+
+### 代码格式化
+
+在文件内按`F1`，然后选择`Format Document`，就会调用特定的 formatter 格式化第一次（`template`标签内的标签的属性会被自动按字母顺序排列，太长时会自动分行），保存时 TSLint 和 ESLint 自动格式化第二次。
+
+我的配置是：对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 格式化第二次。对其他文件，使用`prettier`插件格式化第一次，保存时 TSLint 和 ESLint 自动格式化第二次。
+
+需要注意的是，我并没有安装 TSLint 插件，因为 TSLint 官方已经建议使用 ESLint，所以也不建议再去用 TSLint 了，晚点我会移除掉 TSLint 相关的配置。
 
 ### snippets
 
@@ -626,7 +691,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -666,7 +737,13 @@ npm i -g yarn
     "body": ["/* #ifndef $0 */", "", "/* #endif */"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -718,7 +795,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -754,7 +837,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -806,7 +895,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -842,7 +937,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -894,7 +995,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -938,7 +1045,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -990,7 +1103,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1034,7 +1153,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1086,7 +1211,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1126,7 +1257,13 @@ npm i -g yarn
     "body": ["/* #ifndef $0 */", "", "/* #endif */"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1178,7 +1315,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1218,7 +1361,13 @@ npm i -g yarn
     "body": ["/* #ifndef $0 */", "", "/* #endif */"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1270,7 +1419,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1310,7 +1465,13 @@ npm i -g yarn
     "body": ["/* #ifndef $0 */", "", "/* #endif */"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1362,7 +1523,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1402,7 +1569,13 @@ npm i -g yarn
     "body": ["/* #ifndef $0 */", "", "/* #endif */"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1454,7 +1627,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1490,7 +1669,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1542,7 +1727,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1578,7 +1769,13 @@ npm i -g yarn
     "body": ["process.env.TARO_ENV === '$0'"]
   },
   "taro 微信小程序平台": {
-    "prefix": ["taro-mp-weixin", "taro-mp-wechat", "taro-weapp", "taro-weixin", "taro-wechat"],
+    "prefix": [
+      "taro-mp-weixin",
+      "taro-mp-wechat",
+      "taro-weapp",
+      "taro-weixin",
+      "taro-wechat"
+    ],
     "body": ["weapp"]
   },
   "taro 支付宝小程序平台": {
@@ -1630,7 +1827,13 @@ npm i -g yarn
     "body": ["MP"]
   },
   "uni-app 微信小程序平台": {
-    "prefix": ["uni-mp-weixin", "uni-mp-wechat", "uni-weapp", "uni-weixin", "uni-wechat"],
+    "prefix": [
+      "uni-mp-weixin",
+      "uni-mp-wechat",
+      "uni-weapp",
+      "uni-weixin",
+      "uni-wechat"
+    ],
     "body": ["MP-WEIXIN"]
   },
   "uni-app 支付宝小程序平台": {
@@ -1697,7 +1900,7 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得把`node_modules/@dcloudio/vue-cli-plugin-uni/lib/options.js`文件中下面一行注释掉，否则编译不成功。这种方法需要你在每次装包后都重新操作。
 
 ```js
-options.css.loaderOptions.sass.sassOptions.outputStyle = 'nested'
+options.css.loaderOptions.sass.sassOptions.outputStyle = "nested";
 ```
 
 你也可以在`vue.config.js`中设置 sass-loader，如下所示。这种方法只需要操作一次。
@@ -1707,11 +1910,11 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        sassOptions: {}
-      }
-    }
-  }
-}
+        sassOptions: {},
+      },
+    },
+  },
+};
 ```
 
 如果 cli 项目使用 [node-sass](https://www.npmjs.com/package/node-sass) ，无需注释，但需要用 node 8 来安装、编译 node-sass。
@@ -1745,7 +1948,6 @@ module.exports = {
   "terminal.maxcount": "5",
   "terminal.type": "内置终端"
 }
-
 ```
 
 ### `format`插件
@@ -1756,71 +1958,71 @@ module.exports = {
 // https://github.com/beautify-web/js-beautify#readme
 module.exports = {
   parsers: {
-    '.js': 'js',
-    '.json': 'js',
-    '.njs': 'js',
-    '.sjs': 'js',
-    '.wxs': 'js',
-    '.css': 'css',
-    '.nss': 'css',
-    '.wxss': 'css',
-    '.acss': 'css',
-    '.ttss': 'css',
-    '.qss': 'css',
-    '.html': 'html',
-    '.ux': 'html',
-    '.wxml': 'html',
-    '.nml': 'html',
-    '.vue': 'html',
-    '.nvue': 'html',
-    '.axml': 'html',
-    '.swan': 'html',
-    '.ttml': 'html',
-    '.qml': 'html'
+    ".js": "js",
+    ".json": "js",
+    ".njs": "js",
+    ".sjs": "js",
+    ".wxs": "js",
+    ".css": "css",
+    ".nss": "css",
+    ".wxss": "css",
+    ".acss": "css",
+    ".ttss": "css",
+    ".qss": "css",
+    ".html": "html",
+    ".ux": "html",
+    ".wxml": "html",
+    ".nml": "html",
+    ".vue": "html",
+    ".nvue": "html",
+    ".axml": "html",
+    ".swan": "html",
+    ".ttml": "html",
+    ".qml": "html",
   },
   options: {
-    'indent_size': '2', // indentation size
-    'indent_char': ' ', // indentation character
-    'indent_with_tabs': false, // Indent with tabs or not, if yes, ignore indent_size and indent_char
-    'eol': '\r', // Character(s) to use as line terminators.
-    'end_with_newline': false, // End output with newline or not
-    'indent_level': 0, // Initial indentation level
-    'preserve_newlines': true, // Preserve line-breaks or not
-    'max_preserve_newlines': 2, // Number of line-breaks to be preserved in one chunk
-    'space_in_paren': false, // Add padding spaces within paren or not
-    'space_in_empty_paren': false, // Add a single space inside empty paren or not
-    'jslint_happy': true, // Enable jslint-stricter mode or not
-    'space_after_anon_function': true, // Add a space before an anonymous function's parens or not
-    'space_after_named_function': true, // Add a space before a named function's parens or not
-    'brace_style': ['collapse', 'preserve-inline'], // ['collapse'|'expand'|'end-expand'|'none'][,'preserve-inline'] ['collapse','preserve-inline']
-    'unindent_chained_methods': false, // Don't indent chained method calls or not
-    'break_chained_methods': false, // Break chained method calls across subsequent lines or not
-    'keep_array_indentation': false, // Preserve array indentation or not
-    'unescape_strings': false, // Decode printable characters encoded in xNN notation or not
-    'wrap_line_length': 120, // Wrap lines that exceed N characters
-    'e4x': false, // Pass E4X xml literals through untouched or not
-    'comma_first': false, // Put commas at the beginning of new line instead of end or not
-    'operator_position': 'before-newline', // Set operator position (before-newline|after-newline|preserve-newline) [before-newline]
-    'indent_empty_lines': false, // Keep indentation on empty lines
-    'templating': ['auto'], // List of templating languages
-    'unformatted': ['wbr'],
-    'css': {
-      'selector_separator_newline': true, // Add a newline between multiple selectors or not
-      'newline_between_rules': true // Add a newline between CSS rules or not
+    indent_size: "2", // indentation size
+    indent_char: " ", // indentation character
+    indent_with_tabs: false, // Indent with tabs or not, if yes, ignore indent_size and indent_char
+    eol: "\r", // Character(s) to use as line terminators.
+    end_with_newline: false, // End output with newline or not
+    indent_level: 0, // Initial indentation level
+    preserve_newlines: true, // Preserve line-breaks or not
+    max_preserve_newlines: 2, // Number of line-breaks to be preserved in one chunk
+    space_in_paren: false, // Add padding spaces within paren or not
+    space_in_empty_paren: false, // Add a single space inside empty paren or not
+    jslint_happy: true, // Enable jslint-stricter mode or not
+    space_after_anon_function: true, // Add a space before an anonymous function's parens or not
+    space_after_named_function: true, // Add a space before a named function's parens or not
+    brace_style: ["collapse", "preserve-inline"], // ['collapse'|'expand'|'end-expand'|'none'][,'preserve-inline'] ['collapse','preserve-inline']
+    unindent_chained_methods: false, // Don't indent chained method calls or not
+    break_chained_methods: false, // Break chained method calls across subsequent lines or not
+    keep_array_indentation: false, // Preserve array indentation or not
+    unescape_strings: false, // Decode printable characters encoded in xNN notation or not
+    wrap_line_length: 120, // Wrap lines that exceed N characters
+    e4x: false, // Pass E4X xml literals through untouched or not
+    comma_first: false, // Put commas at the beginning of new line instead of end or not
+    operator_position: "before-newline", // Set operator position (before-newline|after-newline|preserve-newline) [before-newline]
+    indent_empty_lines: false, // Keep indentation on empty lines
+    templating: ["auto"], // List of templating languages
+    unformatted: ["wbr"],
+    css: {
+      selector_separator_newline: true, // Add a newline between multiple selectors or not
+      newline_between_rules: true, // Add a newline between CSS rules or not
     },
-    'html': {
-      'indent_inner_html': true, //  Indent <head> and <body> sections or not, default false
-      'indent_scripts': 'keep', // [keep|separate|normal]
-      'wrap_attributes': 'force-expand-multiline', // Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline|aligned-multiple|preserve|preserve-aligned] ["auto"]
-      'wrap_attributes_indent_size': 2, // Indent wrapped attributes to after N characters [indent-size] (ignored if wrap-attributes is "aligned")
-      'inline': [], // List of tags to be considered inline tags
-      'unformatted': [], // List of tags (defaults to inline) that should not be reformatted
-      'content_unformatted': [], // List of tags (defaults to pre) whose content should not be reformatted
-      'extra_liners': ['style', 'script'], // List of tags (defaults to [head,body,/html] that should have an extra newline before them.
-      'unformatted_content_delimiter': [''] // Keep text content together between this string [""]
-    }
-  }
-}
+    html: {
+      indent_inner_html: true, //  Indent <head> and <body> sections or not, default false
+      indent_scripts: "keep", // [keep|separate|normal]
+      wrap_attributes: "force-expand-multiline", // Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline|aligned-multiple|preserve|preserve-aligned] ["auto"]
+      wrap_attributes_indent_size: 2, // Indent wrapped attributes to after N characters [indent-size] (ignored if wrap-attributes is "aligned")
+      inline: [], // List of tags to be considered inline tags
+      unformatted: [], // List of tags (defaults to inline) that should not be reformatted
+      content_unformatted: [], // List of tags (defaults to pre) whose content should not be reformatted
+      extra_liners: ["style", "script"], // List of tags (defaults to [head,body,/html] that should have an extra newline before them.
+      unformatted_content_delimiter: [""], // Keep text content together between this string [""]
+    },
+  },
+};
 ```
 
 另外再升级一下项目本身的依赖。每次更新 hbuilderx，都建议手动更新一下这个插件的依赖。
@@ -1871,9 +2073,7 @@ npm i js-beautify -S
     "stylelint-webpack-plugin": "^1.2.3"
   },
   "stylelint": {
-    "extends": [
-      "stylelint-config-twbs-bootstrap/scss"
-    ],
+    "extends": ["stylelint-config-twbs-bootstrap/scss"],
     "rules": {
       "declaration-no-important": null,
       "selector-max-class": 8,
@@ -1890,20 +2090,20 @@ npm i js-beautify -S
 `vue.config.js`：
 
 ```js
-const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
-const StylelintFormatter = require('stylelint-formatter-pretty')
+const StylelintWebpackPlugin = require("stylelint-webpack-plugin");
+const StylelintFormatter = require("stylelint-formatter-pretty");
 
 module.exports = {
   configureWebpack: {
     plugins: [
       new StylelintWebpackPlugin({
-        files: ['src/**/*.{vue,htm,html,sass,scss}'],
+        files: ["src/**/*.{vue,htm,html,sass,scss}"],
         fix: true,
-        formatter: StylelintFormatter
-      })
-    ]
-  }
-}
+        formatter: StylelintFormatter,
+      }),
+    ],
+  },
+};
 ```
 
 `.npmrc`：
