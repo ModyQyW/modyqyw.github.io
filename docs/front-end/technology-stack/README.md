@@ -48,12 +48,12 @@ vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / view
 
 ## React 系
 
-umi 全家桶 = umi + dva + antd / material-ui / antd-mobile(mobile)
+react 全家桶 = umi + dva + antd / material-ui / antd-mobile(mobile)
 
 - PC 端网页
-  - umi 全家桶，使用 PC 端组件库
+  - react 全家桶，使用 PC 端组件库
 - 移动端网页
-  - umi 全家桶，使用移动端组件库
+  - react 全家桶，使用移动端组件库
 - 移动端应用
   - expo + react-router / react-navigation + unstated-next + react-native-elements + antd-rn
 - 小程序
