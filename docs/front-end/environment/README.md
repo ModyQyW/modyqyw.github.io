@@ -317,7 +317,7 @@ ping 一下看哪个快就优先哪个，我自己用的顺序是百度 -> 阿�
 2400:3200:baba::1
 ```
 
-## node 和 npm
+## node
 
 ### nvm
 
@@ -330,17 +330,77 @@ ping 一下看哪个快就优先哪个，我自己用的顺序是百度 -> 阿�
 
 ```sh
 npm i -g @tarojs/cil
+npm i -g @umijs/create-umi-app
 npm i -g @vue/cli
 npm i -g @vue/devtools
-npm i -g cgr
+npm i -g create-next-app
+npm i -g create-nuxt-app
 npm i -g expo-cli
 npm i -g fanyi
 npm i -g npm@lts
 npm i -g npm-check
 npm i -g react-devtools
+npm i -g release
 npm i -g ts-node
 npm i -g typescript
 npm i -g yarn
+```
+
+### 项目初始化
+
+上面有不少依赖会用于项目初始化。假如不想安装全局依赖，你也可以考虑使用 [npx](https://www.ruanyifeng.com/blog/2019/02/npx.html) 或者 [yarn create](https://classic.yarnpkg.com/zh-Hans/docs/cli/create)。
+
+初始化项目时，使用 yarn 来安装依赖，一般会更快速。但是对于某些依赖而言，往往还是非常地慢，尤其是 node-sass。
+
+你可以在项目根目录下建立两个文件，名字和内容分别如下所示。
+
+- `.npmrc`
+
+```sh
+registry="https://registry.npm.taobao.org"
+
+chromedriver_cdnurl="https://npm.taobao.org/mirrors/chromedriver"
+electron_mirror="https://npm.taobao.org/mirrors/electron/"
+sass_binary_site="https://npm.taobao.org/mirrors/node-sass/"
+electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builder-binaries/"
+
+```
+
+- `.yarnrc`
+
+```sh
+registry "https://registry.npm.taobao.org"
+
+chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
+electron_mirror "https://npm.taobao.org/mirrors/electron/"
+sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
+
+```
+
+之后删掉`node_modules`和对应的版本锁定文件再重新安装依赖。
+
+```sh
+rm -rf node_modules && rm -rf yarn.lock && rm -rf package-lock.json
+yarn
+# or
+# npm i
+```
+
+一般接手项目时不应该删掉版本锁定文件。
+
+对于 node-sass，你也可以在`package.json`文件中偷梁换柱。说明见 [npm 官方文档](https://docs.npmjs.com/cli-commands/install.html)`npm install <alias>@npm:<name>`部分和 [yarn 官方文档对应部分](hhttps://classic.yarnpkg.com/en/docs/cli/add/#toc-yarn-add-alias/)。
+
+```json
+{
+  ...,
+  "devDependencies": {
+    ...,
+    "node-sass": "npm:dart-sass",
+    ...
+  },
+  ...
+}
 ```
 
 ## vscode
