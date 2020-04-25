@@ -337,6 +337,7 @@ npm i -g create-next-app
 npm i -g create-nuxt-app
 npm i -g expo-cli
 npm i -g fanyi
+npm i -g np
 npm i -g npm@lts
 npm i -g npm-check
 npm i -g react-devtools
@@ -1949,7 +1950,7 @@ trim_trailing_whitespace = true
 
 hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验远比不上 vscode，也比不上 WebStorm，主要原因是它定制化程度比较高，自定义比较难。
 
-如果要使用 uni-app 开发 app，就必须使用 hbuilderx 打包，如果只是开发小程序/网页，hbuilderx 不是必须的。个人建议还是使用 vscode 开发，打包 app 使用 hbuilderx。
+如果要使用 uni-app 开发 app，就必须使用 hbuilderx 打包，如果只是开发小程序/网页，hbuilderx 不是必须的。个人建议还是使用 vscode 开发，打包 app 时再使用 hbuilderx。
 
 但是总会有人会想用 hbuilderx 开发，但是又觉得它不好用，想自己做修改，这部分内容就是为这类人而生的。
 
@@ -1957,13 +1958,7 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 ### 题外话
 
-如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得把`node_modules/@dcloudio/vue-cli-plugin-uni/lib/options.js`文件中下面一行注释掉，否则编译不成功。这种方法需要你在每次装包后都重新操作。
-
-```js
-options.css.loaderOptions.sass.sassOptions.outputStyle = "nested";
-```
-
-你也可以在`vue.config.js`中设置 sass-loader，如下所示。这种方法只需要操作一次。
+如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得在`vue.config.js`中设置 sass-loader，如下所示。这种方法只需要操作一次。
 
 ```js
 module.exports = {
@@ -1979,9 +1974,39 @@ module.exports = {
 
 如果 cli 项目使用 [node-sass](https://www.npmjs.com/package/node-sass) ，无需注释，但需要用 node 8 来安装、编译 node-sass。
 
+不建议用前面说到的偷梁换柱的方法，因为不确定会出现什么问题。
+
+### 安装插件
+
+如下的插件应该覆盖到了 cli 项目和非 cli 项目的全部需求。
+
+- `NPM`
+- `内置浏览器`
+- `内置终端`
+- `App真机运行`
+- `uni-app编译`
+- `uni-app App调试`
+- `prettier`
+- `stylus-supremacy` - 安装`prettier`会自动安装
+- `htmlhint`
+- `stylelint`
+- `eslint-plugin-vue`
+- `eslint-js`
+- `typescript语言服务`
+- `js压缩`
+- `css压缩`
+- `less编译`
+- `scss/sass编译`
+- `stylus编译`
+- `es6编译`
+- `typescript编译`
+- `快应用`
+- `Uni-Migration`
+- `nml项目/快应用调试`
+
 ### 修改配置
 
-首先修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图，然后粘贴以下内容进去。
+修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图，然后粘贴以下内容进去。
 
 ```json
 {
@@ -2003,16 +2028,19 @@ module.exports = {
   "editor.showDefaultEndOfLine": "\\n",
   "editor.tabSize": 2,
   "editor.wordWrap": true,
+  "eslint-vue.validateOnDocumentChanged": true,
   "explorer.folder.openExplorerViewOnClick": true,
   "explorer.iconTheme": "vs-seti",
   "terminal.maxcount": "5",
-  "terminal.type": "内置终端"
+  "terminal.type": "内置终端",
+  "eslint-js.validateOnDocumentChanged": true
 }
+
 ```
 
 ### `format`插件
 
-修改 hbuilderx 自带的`format`插件，工具 => 插件配置 => `format` => `jsbeautifyrc.js`。直接用下面的内容覆盖掉`jsbeautifyrc.js`的原有内容。使用 prettier 插件的话可以不修改此处。
+修改 hbuilderx 自带的`format`插件，工具 => 插件配置 => `format` => `jsbeautifyrc.js`，直接用下面的内容（对应 standard 规范）覆盖掉`jsbeautifyrc.js`的原有内容。使用`prettier`插件的话无需修改此处，因为`prettier`插件应用的优先级更高。
 
 ```js
 // https://github.com/beautify-web/js-beautify#readme
@@ -2110,15 +2138,9 @@ electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builde
 npm i js-beautify -S
 ```
 
-### `eslint-plugin-vue`插件和`eslint-js`插件
-
-- 工具 -> 插件安装 -> 安装`eslint-plugin-vue`和`eslint-js`。
-- 工具 -> 插件配置 -> `eslint-js` -> L29 改成 false，L61 改成 true
-- 工具 -> 插件配置 -> `eslint-plugin-vue` -> L29 改成 false，L61 改成 true
-
 ### 使用`stylelint`检查、自动修复样式
 
-官方的插件只能手动检查，也不能自动修复样式，所以我们自己来 hack。
+官方的`stylelint`插件只能检查，而不能自动修复样式，所以我们自己来 hack。
 
 在项目根目录下新建一个`package.json`文件，一个`vue.config.js`文件和一个`.npmrc`文件，内容分别如下。
 
@@ -2127,10 +2149,10 @@ npm i js-beautify -S
 ```json
 {
   "devDependencies": {
-    "stylelint": "^13.2.1",
-    "stylelint-config-twbs-bootstrap": "^2.0.1",
-    "stylelint-formatter-pretty": "^2.0.0",
-    "stylelint-webpack-plugin": "^1.2.3"
+    "stylelint": "~13.3.0",
+    "stylelint-config-twbs-bootstrap": "~2.0.0",
+    "stylelint-formatter-pretty": "~2.0.0",
+    "stylelint-webpack-plugin": "~1.2.0"
   },
   "stylelint": {
     "extends": ["stylelint-config-twbs-bootstrap/scss"],
@@ -2186,14 +2208,6 @@ npm i
 
 之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。css，less 和 stylus 可自行摸索。
 
-### 必要的插件
-
-装上官方的插件：`NPM`，`内置浏览器`，`内置终端`，`app 真机运行`，`uni-app 编译`，`uni-app App 调试`，`prettier`，`typescript 语言服务`，`快应用`。
-
-重启之后就能使用 hbuilderx 开发项目了。
-
-2020.04.02 注：貌似跟着官方教程设置做了之后还是不能 eslint 一键修复，迷惑。建议还是用 vscode 吧。
-
 ### vue-cli 创建的项目的依赖版本对齐 hbuilderx
 
 如果使用 vue-cli 创建项目来开发 app，注意要对齐项目依赖与 hbuilderx 的依赖，否则打包 app 可能会出现[意外提示](https://ask.dcloud.net.cn/article/35627)。
@@ -2206,7 +2220,7 @@ npm i
 - `20200330`：发布日
 - `001`：发布日发布的第 001 版
 
-但是，这不一定是准确的，因为 hbuilderx 本身可能安装了错误的依赖版本。最稳妥的办法，就是找到 hbuilderx 目录， 打开 plugins -> uniapp-cli -> `package.json`，确认里面安装的到底是什么依赖版本。
+但是，这不一定是准确的，因为 hbuilderx 本身可能安装了错误的依赖版本（这也是能看出来 dcloudio 团队不甚严谨的一个地方）。最稳妥的办法，就是找到 hbuilderx 目录， 打开 plugins -> uniapp-cli -> `package.json`，确认里面安装的到底是什么依赖版本。
 
 ## 参考
 
@@ -2215,13 +2229,10 @@ npm i
 - [微软官方文档 - Windows 安装 WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)
 - [VSCode 官方文档](https://code.visualstudio.com/docs)
 - [Quasar 文档 - VS Code Configuration](https://quasar.dev/start/vs-code-configuration)
-- [Vue 文档 - 风格指南 - 元素 attribute 的顺序](https://cn.vuejs.org/v2/style-guide/#%E5%85%83%E7%B4%A0-attribute-%E7%9A%84%E9%A1%BA%E5%BA%8F-%E6%8E%A8%E8%8D%90)
-- [编码规范@mdo - 属性顺序](https://codeguide.bootcss.com/#html-attribute-order)
-- [React 文档 - DOM 元素](https://zh-hans.reactjs.org/docs/dom-elements.html)
 - [bootstrap/.editorconfig](https://github.com/twbs/bootstrap/blob/master/.editorconfig)
 - [uni-app - 运行并发布到 uni-app](https://uniapp.dcloud.io/quickstart?id=%e8%bf%90%e8%a1%8c%e5%b9%b6%e5%8f%91%e5%b8%83uni-app)
 - [uni-app - uni-app 运行环境版本和编译器版本不一致的问题](https://ask.dcloud.net.cn/article/35627)
 - [uni-app - 格式化操作和格式化插件配置说明](https://ask.dcloud.net.cn/article/36529)
-- [uni-app - hbuilderx eslint 一键修复功能使用说明](https://ask.dcloud.net.cn/article/36532)
+- [uni-app - hbuilderx 使用 eslint 实时校验、自动修复代码错误](https://ask.dcloud.net.cn/article/37070)
 
 <Vssue />
