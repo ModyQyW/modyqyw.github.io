@@ -60,7 +60,7 @@
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-- [迅雷](http://down.sandai.net/mac/thunder_3.3.9.4280.dmg)
+- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
 - [Alfred](https://xclient.info/s/alfred.html) - 也可考虑 [uTools](https://u.tools/)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/)
