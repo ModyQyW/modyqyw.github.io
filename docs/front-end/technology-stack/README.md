@@ -27,7 +27,7 @@
 
 ## Vue 系
 
-vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / viewui / cube-ui(mobile) / vant(mobile)
+vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / viewui / vant(mobile) / cube-ui(mobile) / nut-ui(mobile)
 
 - PC 端网页
   - vue 全家桶，使用 PC 端组件库
@@ -48,7 +48,7 @@ vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / view
 
 ## React 系
 
-react 全家桶 = umi + dva + antd / material-ui / antd-mobile(mobile)
+react 全家桶 = umi + antd / material-ui / antd-mobile(mobile)
 
 - PC 端网页
   - react 全家桶，使用 PC 端组件库
