@@ -30,7 +30,7 @@
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
-- [wox](https://github.com/Wox-launcher/Wox)
+- [wox](https://github.com/Wox-launcher/Wox) - 也可考虑 [uTools](https://u.tools/)
 - [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
@@ -61,7 +61,7 @@
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [迅雷](http://down.sandai.net/mac/thunder_3.3.9.4280.dmg)
-- [Alfred](https://xclient.info/s/alfred.html)
+- [Alfred](https://xclient.info/s/alfred.html) - 也可考虑 [uTools](https://u.tools/)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/)
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
