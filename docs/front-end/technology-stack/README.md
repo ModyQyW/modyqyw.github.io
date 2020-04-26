@@ -48,7 +48,7 @@ vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / view
 
 ## React 系
 
-react 全家桶 = umi + antd / material-ui / antd-mobile(mobile)
+react 全家桶 = umi + unstated-next / hooks / @umijs/plugin-model / redux / mobx + react-suite / antd / material-ui / antd-mobile(mobile)
 
 - PC 端网页
   - react 全家桶，使用 PC 端组件库
