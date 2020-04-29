@@ -57,7 +57,7 @@
   - [lerna-changelog](https://github.com/lerna/lerna-changelog) - 为 lerna 项目自动生成 changelog
 - formatter
   - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
-  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
+  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式，可搭配 prettier 使用
     - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
     - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
     - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
@@ -70,12 +70,16 @@
     - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
     - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
   - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版
-  - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法
+  - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法，可搭配 prettier 使用
+    - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
+    - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended)
+    - [stylelint-config-recommended-scss](https://github.com/kristerkari/stylelint-config-recommended-scss#readme)
     - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
     - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap) - bootstrap 预设的 scss stylelint 配置
     - [stylelint-formatter-pretty](https://www.npmjs.com/package/stylelint-formatter-pretty)
-  - stylus 可参考 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)
-  - sass 可参考 [sass-formatter](https://github.com/TheRealSyler/sass-formatter)
+    - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
+    - stylus 可考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)
+    - sass 可考虑使用 [sass-formatter](https://github.com/TheRealSyler/sass-formatter)
 - [commitlint](https://commitlint.js.org/)
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [husky](https://github.com/typicode/husky)

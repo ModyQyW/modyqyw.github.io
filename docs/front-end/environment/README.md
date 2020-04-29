@@ -4,12 +4,11 @@
 
 ## Windows
 
-- windows 10 ltsc - 稳定，更新少
-- [hyper](https://hyper.is/) - 替换命令行，你也可以直接搜索`powershell 美化教程`
-- wsl - 支持 linux
-- [oh-my-zsh](https://ohmyz.sh/) - 替换 wsl 命令行
+- windows 10 ltsc - 稳定，更新少，缺点是安装 wsl 比较麻烦
+- [hyper](https://hyper.is/) - 替换命令行，你也可以直接搜索`powershell 美化教程`，美化后使用 powershell
+- [oh-my-zsh](https://ohmyz.sh/) - 组合替换 wsl 命令行
 - [7-zip](https://www.7-zip.org/) - 压缩/解压缩工具
-- [Android Studio](https://developer.android.com/studio/)
+- [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [Clash](https://dwz.pm/lf) - v2ray 连接工具
 - [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
@@ -20,18 +19,19 @@
 - [Git](https://git-scm.com/downloads)
 - [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
 - [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
+- [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
+- [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但是 wox 只支持 windows
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
-- [wox](https://github.com/Wox-launcher/Wox) - 也可考虑 [uTools](https://u.tools/)
-- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office
+- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.exe)
@@ -44,7 +44,7 @@
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-- 迅雷 U 享版
+- 迅雷 U 享版 - 下载工具
 
 ## macOS
 
@@ -54,20 +54,18 @@
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷
 - [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
-- [人人影视](http://app.rrys.tv/) - 看剧
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
-- [Alfred](https://xclient.info/s/alfred.html) - 也可考虑 [uTools](https://u.tools/)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
-- [Android Studio](https://developer.android.com/studio/)
+- [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [ClashX](https://github.com/yichengchen/clashX) - v2ray 连接工具
-- [eZip](https://ezip.awehunt.com/) -压缩/解压缩工具
+- [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
@@ -88,8 +86,8 @@
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [OBS](https://obsproject.com/) - 录制、推流
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
-- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器
-- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端
+- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
+- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
 - [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
 - [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
@@ -97,13 +95,13 @@
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [Steam](https://store.steampowered.com/)
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Trello](https://trello.com/platforms) - 看板工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
+- [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macos
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
-- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用微软 office（重度 office 用户为什么要用 mac 呢）
+- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office（重度 office 用户为什么要用 mac 呢）
 
 ## Homebrew
 
@@ -113,21 +111,26 @@
 
 ### 配置镜像源
 
-- 使用[阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
-- 使用[清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
-- 使用[中科大镜像源](https://mirrors.ustc.edu.cn/)
+- 建议使用[清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+- [中科大镜像源](https://mirrors.ustc.edu.cn/)
+- [阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
 
-### 配置 svn
+### 安装依赖
 
 ```sh
+brew install git
+brew install openjdk
+brew install openssh
 brew install svn
 ```
 
-### 配置 jdk
+### 检查错误
 
 ```sh
-brew install openjdk
+brew doctor
 ```
+
+检查错误后可以按照提示进行修复。
 
 ## oh-my-zsh
 
@@ -264,7 +267,7 @@ export PATH=$PATH:$HOME/flutter/bin
 export PATH=/usr/local/opt/openjdk/bin:$PATH
 
 # homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+export PATH=/usr/local/sbin:$PATH
 
 ```
 
@@ -337,6 +340,7 @@ npm i -g create-next-app
 npm i -g create-nuxt-app
 npm i -g expo-cli
 npm i -g fanyi
+npm i -g gatsby-cli
 npm i -g np
 npm i -g npm@lts
 npm i -g npm-check
@@ -440,8 +444,10 @@ yarn
 - [`Prettier`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [`React Hooks Snippets`](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) - 在 vscode 中发起请求
+- [`Sass`](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
+- [`stylelint`](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
@@ -457,8 +463,14 @@ yarn
 
 ```json
 {
-  {
-  // 插件 Bracket Paire Colorizer 2 适用男，制定括号颜色
+  // 插件 Bracket Pair Colorizer 2 适用男，指定括号样式
+  "bracket-pair-colorizer-2.activeScopeCSS": [
+    "borderStyle: solid",
+    "borderWidth: 1px",
+    "borderColor: {color}",
+    "opacity: 0.5"
+  ],
+  // 插件 Bracket Paire Colorizer 2 适用男，指定括号颜色
   "bracket-pair-colorizer-2.colors": [
     "Gold",
     "Orchid",
@@ -543,6 +555,7 @@ yarn
     "sorrycc",
     "stocksnap",
     "streetwill",
+    "styl",
     "stylelint",
     "submenu",
     "swiper",
@@ -574,14 +587,13 @@ yarn
     "zarm",
     "zent"
   ],
-  // vscode 自带功能，指定是否校验 css，这里设置为是
-  "css.validate": true,
+  // vscode 自带功能，指定是否校验 css，这里设置为否
+  "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
   "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 tslint 和 eslint 自动修复
+  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置全部自动修复
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装 prettier 插件
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -636,16 +648,14 @@ yarn
     "*.wpy": "html",
     "*.json": "jsonc"
   },
-  // vscode 自带功能，指定是否校验 js 文件
-  "javascript.implicitProjectConfig.checkJs": true,
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
   "javascript.updateImportsOnFileMove.enabled": "always",
   // vscode 自带功能，指定是否校验 javascript，这里设置为是
   "javascript.validate.enable": true,
-  // vscode 自带功能，指定是否校验 less，这里设置为是
-  "less.validate": true,
+  // vscode 自带功能，指定是否校验 less，这里设置为否
+  "less.validate": false,
   // 插件 Live Server 使用，指定是否检验标签，这里设置为否
   "liveServer.settings.donotVerifyTags": true,
   // vscode 自带功能，预览 markdown 文件时的字体族
@@ -654,10 +664,10 @@ yarn
   "minapp-vscode.disableAutoConfig": true,
   // 插件 REST CLIENT 使用，指定响应预览的字体大小
   "rest-client.fontSize": 14,
-  // vscode 自带功能，指定是否校验 scss，这里设置为是
-  "scss.validate": true,
+  // vscode 自带功能，指定是否校验 scss，这里设置为否
+  "scss.validate": false,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "填你自己的，如果没有上传，就先不填",
+  "sync.gist": "填你自己的",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -724,7 +734,7 @@ yarn
 
 我的配置是：对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 格式化第二次。对其他文件，使用`prettier`插件格式化第一次，保存时 TSLint 和 ESLint 自动格式化第二次。
 
-需要注意的是，我并没有安装 TSLint 插件，因为 TSLint 官方已经建议使用 ESLint，所以也不建议再去用 TSLint 了，晚点我会移除掉 TSLint 相关的配置。
+需要注意的是，我并没有安装 TSLint 插件，因为 TSLint 官方已经建议使用 ESLint，所以也不建议再去用 TSLint 了。
 
 ### snippets
 
@@ -1948,7 +1958,7 @@ trim_trailing_whitespace = true
 
 ## hbuilderx
 
-hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验远比不上 vscode，也比不上 WebStorm，主要原因是它定制化程度比较高，自定义比较难。
+hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验远比不上 vscode，也比不上 WebStorm，主要原因是它定制化程度比较高，自定义比较难，配套的 uni-app 各种底层低级错误也是让人目瞪口呆。
 
 如果要使用 uni-app 开发 app，就必须使用 hbuilderx 打包，如果只是开发小程序/网页，hbuilderx 不是必须的。个人建议还是使用 vscode 开发，打包 app 时再使用 hbuilderx。
 
@@ -1958,7 +1968,7 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 ### 题外话
 
-如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得在`vue.config.js`中设置 sass-loader，如下所示。这种方法只需要操作一次。
+如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得在`vue.config.js`中设置 sass-loader。
 
 ```js
 module.exports = {
@@ -2206,7 +2216,7 @@ electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builde
 npm i
 ```
 
-之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。css，less 和 stylus 可自行摸索。
+之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。css 和 less 可以使用 stylelint-config-recommended，scss 还可以使用 stylelint-config-recommended-scss，stylus 不了解。
 
 ### vue-cli 创建的项目的依赖版本对齐 hbuilderx
 
@@ -2221,6 +2231,8 @@ npm i
 - `001`：发布日发布的第 001 版
 
 但是，这不一定是准确的，因为 hbuilderx 本身可能安装了错误的依赖版本（这也是能看出来 dcloudio 团队不甚严谨的一个地方）。最稳妥的办法，就是找到 hbuilderx 目录， 打开 plugins -> uniapp-cli -> `package.json`，确认里面安装的到底是什么依赖版本。
+
+另外，依赖可能本身存在着错误，猜测是 dcloudio 团队自己开发流程不规范导致的。
 
 ## 参考
 
