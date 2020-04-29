@@ -94,10 +94,6 @@ module.exports = {
           {
             text: '浏览器',
             link: '/coding-basis/browser/'
-          },
-          {
-            text: '包管理器',
-            link: '/coding-basis/package-manager/'
           }
         ]
       },
