@@ -23,11 +23,12 @@
 
 - 国内现状驱动 - 目前国内使用 IE8 或 IE 内核的人数还比较多，在政府部门、高校中尤为多见，为了满足该部分用户需求，不得不使用 jq 1 + bs 3 的组合进行适配
 - 开发效率低
-- 扩展性/移植性低
+- 为了提高开发效率，又会转去使用模版，不利于塑造知识结构，更负上了模板的技术栈
+- 扩展性/移植性低 - 平台不同，技术栈也要做相应改动
 
 ## Vue 系
 
-vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / vant(mobile) / cube-ui(mobile) / nut-ui(mobile)
+vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / element-ui(pc, scss) / antd-vue(pc, scss) / vant(mobile, less) / nut-ui(mobile, scss) / cube-ui(mobile, stylus)
 
 - PC 端网页
   - vue 全家桶，使用 PC 端组件库
@@ -48,7 +49,7 @@ vue 全家桶 = vue + vue-router + vuex + vuetify / element-ui / antd-vue / vant
 
 ## React 系
 
-react 全家桶 = umi + unstated-next / hooks / @umijs/plugin-model / redux / mobx + material-ui / react-suite / antd / antd-mobile(mobile)
+react 全家桶 = umi + unstated-next / hooks / @umijs/plugin-model / redux / mobx + material-ui(pc & mobile, css-in-js like) / react-suite(pc, less) / antd(pc, less) / antd-mobile(mobile, less)
 
 - PC 端网页
   - react 全家桶，使用 PC 端组件库
