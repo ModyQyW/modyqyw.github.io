@@ -102,7 +102,7 @@
 - [postcss](https://postcss.org/) - css 的 babel
   - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
   - [cssnano](https://cssnano.co/) - 压缩 css
-  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合小程序使用
+  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss 使用
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
@@ -148,10 +148,11 @@
 
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
 - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
-- [echarts](https://www.echartsjs.com/zh/index.html) - 图表库，有
+- [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
 - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
 - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
 - [bulma](https://bulma.io/documentation/) - 现代化的 css 框架
+- [tailwindcss](https://tailwindcss.com/)
 - [primer](https://primer.style/css)
 - [es6 入门教程](http://es6.ruanyifeng.com/)
 - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
