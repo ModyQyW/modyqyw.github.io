@@ -48,6 +48,8 @@
 
 ## 项目体系
 
+- [yeoman](https://yeoman.io/) - 构筑专属的 cli
+- [oclif](https://oclif.io/) - 构筑专属的 cli
 - [np](https://github.com/sindresorhus/np) - 更好的 npm publish，自动 push，自动 tag 等
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows)
 - [npm](https://github.com/npm/cli)
