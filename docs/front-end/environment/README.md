@@ -77,6 +77,7 @@
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [iShowU](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) - 录制桌面音频
+- [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Listen1](http://listen1.github.io/listen1/) - 专注于听歌的播放器
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
 - [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
@@ -463,14 +464,14 @@ yarn
 
 ```json
 {
-  // 插件 Bracket Pair Colorizer 2 适用男，指定括号样式
+  // 插件 Bracket Pair Colorizer 2 使用，指定括号样式
   "bracket-pair-colorizer-2.activeScopeCSS": [
     "borderStyle: solid",
     "borderWidth: 1px",
     "borderColor: {color}",
     "opacity: 0.5"
   ],
-  // 插件 Bracket Paire Colorizer 2 适用男，指定括号颜色
+  // 插件 Bracket Paire Colorizer 2 使用，指定括号颜色
   "bracket-pair-colorizer-2.colors": [
     "Gold",
     "Orchid",
@@ -512,9 +513,11 @@ yarn
     "echarts",
     "editorconfig",
     "elementui",
+    "esnext",
     "flaticon",
     "fontawesome",
     "fullhuman",
+    "geekblue",
     "gitee",
     "gitlab",
     "gratisography",
@@ -548,6 +551,7 @@ yarn
     "readonly",
     "reqs",
     "rgba",
+    "scripthost",
     "scrollbar",
     "segmentfault",
     "shineout",
@@ -591,7 +595,7 @@ yarn
   "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
   "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置全部自动修复
+  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为全部自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
@@ -646,7 +650,8 @@ yarn
     "*.sjs": "javascript",
     "*.acss": "css",
     "*.wpy": "html",
-    "*.json": "jsonc"
+    "*.json": "jsonc",
+    "*.nvue": "vue"
   },
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "javascript.implicitProjectConfig.experimentalDecorators": true,
