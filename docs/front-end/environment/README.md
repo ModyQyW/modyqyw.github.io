@@ -708,10 +708,9 @@ yarn
   ],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Vetur 使用，指定 <template> 部分的默认格式化工具的设置
+  // 插件 Vetur 使用，指定 prettyhtml 的设置
   "vetur.format.defaultFormatterOptions": {
     "prettyhtml": {
-      "sortAttributes": true,
       "wrapAttributes": true
     }
   },
