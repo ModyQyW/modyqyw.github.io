@@ -2,29 +2,36 @@
 
 均用于辅助开发。
 
+## firefox 插件
+
+- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
+- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
+- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
+- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
+- [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
+- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
+
 ## chrome 插件
 
 - [谷歌访问助手](https://github.com/haotian-wang/google-access-helper)
 - [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
 - [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
-- [Library Sniffer](chrome://extensions/?id=fhhdlnnepfjhlhilgmeepgkhjmhhhjkh)
 - [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi)
+- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [优酷去广告 插件(已支持优酷、土豆、爱奇艺、乐视网、搜狐视频、酷六)](https://www.pullywood.com/publish/archive/pullywood_ad_block_plugin_for_youku_tudou_iqiyi_ku6_etc.html)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
 
-## firefox 插件
+## edge 插件
 
-- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
-- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
-- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
-- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
+- [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
+- [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
+- [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
+- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://microsoftedge.microsoft.com/addons/detail/fcfebhekhbkhjjimonjmbgmkbclheaoh?hl=zh-CN)
 
 ## 语言
 
@@ -168,6 +175,7 @@
 ## vue 及相关生态
 
 - [中文文档](https://cn.vuejs.org/v2/guide/)
+- [devtools](https://github.com/vuejs/vue-devtools)
 - 路由
   - [vue-router](https://router.vuejs.org/zh/)
 - 状态管理
@@ -256,6 +264,7 @@
 - [英文文档](https://reactjs.org/docs/getting-started.html)
 - [中文文档](https://zh-hans.reactjs.org/docs/getting-started.html)
 - [react-training](https://reacttraining.com/)
+- [devtools](https://github.com/facebook/react/tree/master/packages/react-devtools)
 - 路由
   - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
 - 状态管理
