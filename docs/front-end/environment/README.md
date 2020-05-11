@@ -2,21 +2,23 @@
 
 所有配置仅供参考，自行替换。
 
+## v2ray
+
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，自带客户端
+
 ## Windows
 
-- windows 10 ltsc - 稳定，更新少，缺点是安装 wsl 比较麻烦
-- [hyper](https://hyper.is/) - 替换命令行，你也可以直接搜索`powershell 美化教程`，美化后使用 powershell
-- [oh-my-zsh](https://ohmyz.sh/) - 组合替换 wsl 命令行
-- [7-zip](https://www.7-zip.org/) - 压缩/解压缩工具
+- windows 10 ltsc - 稳定，更新少，缺点是安装 wsl 比较麻烦，wsl 可以使用 [oh-my-zsh](https://ohmyz.sh/)
+- [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)
+- [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
-- [Clash](https://dwz.pm/lf) - v2ray 连接工具
 - [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Git](https://git-scm.com/downloads)
+- [Git](https://git-scm.com/downloads) - 建议将 git bash 作为默认命令行，非常强大
 - [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
@@ -27,14 +29,14 @@
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui
+- [SourceTree](https://www.sourcetreeapp.com/) - git gui，但是安装之后无法通过 utools 直接启动，你也可以考虑使用 [TortoiseGit](https://tortoisegit.org/) 或直接命令行
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但是 wox 只支持 windows
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
+- [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
-- [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.exe)
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图看看](http://kankan.meitu.com/)
 - [美图秀秀](https://mt.meipai.com/)
@@ -64,13 +66,11 @@
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
-- [ClashX](https://github.com/yichengchen/clashX) - v2ray 连接工具
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
@@ -89,6 +89,7 @@
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
+- [Pap.er](https://paper.meiyuan.in/) - 壁纸应用
 - [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
 - [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
@@ -102,7 +103,38 @@
 - [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macos
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
-- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office（重度 office 用户为什么要用 mac 呢）
+- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office（不建议重度 office 用户使用 mac）
+
+## firefox 插件
+
+- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
+- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
+- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
+- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
+- [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
+- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
+
+## chrome 插件
+
+- [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star
+- [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
+- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
+- [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
+- [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
+- [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
+- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+- [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
+- [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
+
+## edge 插件
+
+- [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
+- [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
+- [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
+- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://microsoftedge.microsoft.com/addons/detail/fcfebhekhbkhjjimonjmbgmkbclheaoh?hl=zh-CN)
 
 ## Homebrew
 
@@ -115,6 +147,8 @@
 - 建议使用[清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 - [中科大镜像源](https://mirrors.ustc.edu.cn/)
 - [阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
+
+使用 bash 修改 ~/.bash_profile，使用 zsh 修改 ~/.zshrc。
 
 ### 安装依赖
 
@@ -269,6 +303,7 @@ export PATH=/usr/local/opt/openjdk/bin:$PATH
 
 # homebrew
 export PATH=/usr/local/sbin:$PATH
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 ```
 
@@ -300,25 +335,31 @@ git stash pop
 
 ### 国内公共 DNS
 
-- [百度 DNS](https://dudns.baidu.com/intro/publicdns/)：`180.76.76.76`，`2400:da00::6666`
-- [阿里 DNS](http://alidns.com/)：`223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
+- [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
 
 ### 国外公共 DNS
 
-- [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN)
-- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/)
+- [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
+- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
 
 ### 配置
 
-ping 一下看哪个快就优先哪个，我自己用的顺序是百度 -> 阿里 -> google。
+打开命令行，ping 一下各个 DNS，看哪个快就优先哪个。你也可以使用[站长工具](http://ping.chinaz.com/)来完成这部分工作。
+
+我自己用的顺序是百度 -> 阿里 -> 谷歌。
 
 ```
 180.76.76.76
 223.5.5.5
 223.6.6.6
+8.8.8.8
+8.8.4.4
 2400:da00::6666
 2400:3200::1
 2400:3200:baba::1
+2001:4860:4860::8888
+2001:4860:4860::8844
 ```
 
 ## node
@@ -413,13 +454,15 @@ yarn
 
 ### 插件列表
 
+可直接点击。
+
 - [`Ant Design Snippets`](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
 - [`Ant Design Vue helper`](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antdv 提示
 - [`any-rule`](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [`Bracket Pair Colorizer 2`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [`Change Case`](https://marketplace.visualstudio.com/items?itemName=hjdarnel.change-case) - 变换变量名称格式
 - [`Code Runner`](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
-- [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写
+- [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写 js 时潜在的错误
 - [`Comment Translate`](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) - 翻译注释
 - [`Debugger for Chrome`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [`Debugger for Firefox`](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
@@ -431,6 +474,7 @@ yarn
 - [`Image preview`](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [`JavaScript (ES6) code snippets in StandardJS style`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段，跟随 standard 规范
+- [`https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 允许 vscode 内部使用 typescript@next
 - [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
 - [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
@@ -450,6 +494,7 @@ yarn
 - [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
 - [`stylelint`](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
+- [`Tailwind CSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
 - [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
 - [`Vetur`](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
@@ -464,19 +509,6 @@ yarn
 
 ```json
 {
-  // 插件 Bracket Pair Colorizer 2 使用，指定括号样式
-  "bracket-pair-colorizer-2.activeScopeCSS": [
-    "borderStyle: solid",
-    "borderWidth: 1px",
-    "borderColor: {color}",
-    "opacity: 0.5"
-  ],
-  // 插件 Bracket Paire Colorizer 2 使用，指定括号颜色
-  "bracket-pair-colorizer-2.colors": [
-    "Gold",
-    "Orchid",
-    "LightSkyBlue"
-  ],
   // 插件 Comment Translate 使用，指定翻译的目标语言
   "commentTranslate.targetLanguage": "zh-CN",
   // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
@@ -721,7 +753,16 @@ yarn
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定工作台启动式的显示，这里设置为新的未命名文件
   "workbench.startupEditor": "newUntitledFile",
-  // vscode 自带功能，指定 vue 文件的默认格式化工具，这里设置为 vetur，需要安装 Vetur 插件
+  // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   }
@@ -730,15 +771,19 @@ yarn
 
 ### `Settings Sync`插件
 
-- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：F1 -> `Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
+- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：`F1 -> Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
 
 ### 代码格式化
 
-在文件内按`F1`，然后选择`Format Document`，就会调用特定的 formatter 格式化第一次（`template`标签内的标签的属性会被自动按字母顺序排列，太长时会自动分行），保存时 TSLint 和 ESLint 自动格式化第二次。
+文件内`F1 -> Format Document`，就会调用特定的 formatter 格式化第一次，保存时自动格式化第二次。
 
-我的配置是：对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 格式化第二次。对其他文件，使用`prettier`插件格式化第一次，保存时 TSLint 和 ESLint 自动格式化第二次。
+我的配置是：
 
-需要注意的是，我并没有安装 TSLint 插件，因为 TSLint 官方已经建议使用 ESLint，所以也不建议再去用 TSLint 了。
+- 对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 格式化第二次。
+- 对 css，less，scss 文件，使用`prettier`插件格式化第一次，保存时 Stylelint 格式化第二次。
+- 对 js(x) 和 ts(x) 文件，使用`prettier`插件格式化第一次，保存时 ESLint 格式化第二次。
+
+TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TSLint 了。
 
 ### snippets
 
@@ -1006,222 +1051,6 @@ yarn
   "uni-app h5": {
     "prefix": ["uni-h5"],
     "body": ["H5"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`json.json`
-
-```json
-{
-  // .json 文件内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`jsonc.json`
-
-```json
-{
-  // .json 文件和 .jsonc 文件内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
   },
   "taro 环境变量编译格式 - 仅在某平台出现": {
     "prefix": ["taro-env"],
@@ -2134,18 +1963,6 @@ cd /Applications/HBuilderX.app/Contents/HBuilderX/plugins/format
 code .
 ```
 
-创建一个`.npmrc`文件，内容如下。
-
-```sh
-registry="https://registry.npm.taobao.org"
-
-chromedriver_cdnurl="https://npm.taobao.org/mirrors/chromedriver"
-electron_mirror="https://npm.taobao.org/mirrors/electron/"
-sass_binary_site="https://npm.taobao.org/mirrors/node-sass/"
-electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builder-binaries/"
-
-```
-
 然后在该插件目录下更新依赖。
 
 ```sh
@@ -2154,9 +1971,9 @@ npm i js-beautify -S
 
 ### 使用`stylelint`检查、自动修复样式
 
-官方的`stylelint`插件只能检查，而不能自动修复样式，所以我们自己来 hack。
+官方的`stylelint`插件只能检查，而不能自动修复样式，所以我们自己来 hack，下面以 scss 做示范。
 
-在项目根目录下新建一个`package.json`文件，一个`vue.config.js`文件和一个`.npmrc`文件，内容分别如下。
+在项目根目录下新建一个`package.json`文件和一个`vue.config.js`文件，内容分别如下。
 
 `package.json`：
 
@@ -2164,21 +1981,12 @@ npm i js-beautify -S
 {
   "devDependencies": {
     "stylelint": "~13.3.0",
-    "stylelint-config-twbs-bootstrap": "~2.0.0",
+    "@modyqyw/stylelint-config-scss": "~1.0.0",
     "stylelint-formatter-pretty": "~2.0.0",
-    "stylelint-webpack-plugin": "~1.2.0"
+    "stylelint-webpack-plugin": "~2.0.0"
   },
   "stylelint": {
-    "extends": ["stylelint-config-twbs-bootstrap/scss"],
-    "rules": {
-      "declaration-no-important": null,
-      "selector-max-class": 8,
-      "selector-max-combinators": 8,
-      "selector-max-compound-selectors": 8,
-      "selector-no-qualifying-type": null,
-      "selector-type-no-unknown": null,
-      "unit-no-unknown": null
-    }
+    "extends": ["@modyqyw/stylelint-config-scss"]
   }
 }
 ```
@@ -2202,25 +2010,17 @@ module.exports = {
 };
 ```
 
-`.npmrc`：
-
-```sh
-registry="https://registry.npm.taobao.org"
-
-chromedriver_cdnurl="https://npm.taobao.org/mirrors/chromedriver"
-electron_mirror="https://npm.taobao.org/mirrors/electron/"
-sass_binary_site="https://npm.taobao.org/mirrors/node-sass/"
-electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builder-binaries/"
-
-```
-
 然后安装依赖。
 
 ```sh
 npm i
 ```
 
-之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。css 和 less 可以使用 stylelint-config-recommended，scss 还可以使用 stylelint-config-recommended-scss，stylus 不了解。
+之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。
+
+css 可以使用 @modyqyw/stylelint-config-css，less 可以使用 @modyqyw/stylelint-config-less。
+
+stylelint 不适用于 stylus，但你可以考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)。
 
 ### vue-cli 创建的项目的依赖版本对齐 hbuilderx
 
@@ -2236,10 +2036,12 @@ npm i
 
 但是，这不一定是准确的，因为 hbuilderx 本身可能安装了错误的依赖版本（这也是能看出来 dcloudio 团队不甚严谨的一个地方）。最稳妥的办法，就是找到 hbuilderx 目录， 打开 plugins -> uniapp-cli -> `package.json`，确认里面安装的到底是什么依赖版本。
 
-另外，依赖可能本身存在着错误，猜测是 dcloudio 团队自己开发流程不规范导致的。
+另外，依赖可能本身存在着各类错误，这是 dcloudio 团队自己开发流程不规范导致的，你需要敢于怀疑……
 
 ## 参考
 
+- [Awesome-Windows/Awesome](https://github.com/Awesome-Windows/Awesome/blob/master/README-cn.md)
+- [jaywcjlove/awesome-mac](https://wangchujiang.com/awesome-mac/index.zh.html)
 - [sorrycc/awesome-tools](https://github.com/sorrycc/awesome-tools)
 - [微软官方文档 - Windows Server 安装 WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install-on-server)
 - [微软官方文档 - Windows 安装 WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)

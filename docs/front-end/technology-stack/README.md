@@ -28,7 +28,7 @@
 
 ## Vue 系
 
-vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / element-ui(pc, scss) / antd-vue(pc, scss) / vant(mobile, less) / nut-ui(mobile, scss) / cube-ui(mobile, stylus) + tailwindcss
+vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / antd-vue(pc, less) / element-ui(pc, scss) / vant(mobile, less) / nut-ui(mobile, scss) / cube-ui(mobile, stylus) + tailwindcss
 
 - PC 端网页
   - vue 全家桶，使用 PC 端组件库
@@ -44,8 +44,8 @@ vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / element-u
 点评：
 
 - 学习曲线和缓，心智负担低，适合新手
-- typescript 不友好，类型推断不够强大
-- 官方生态支持
+- typescript 不友好，类型推断不够强大，不建议用 typescript
+- 官方生态支持良好
 
 ## React 系
 
@@ -64,9 +64,8 @@ react 全家桶 = umi + unstated-next / hooks / @umijs/plugin-model / redux / mo
 
 点评：
 
-- 学习曲线陡峭，心智负担高，适合有一定水平的人
-- typescript 友好
-- 生态丰富
-- 具有开创性的意义
+- 学习曲线陡峭，心智负担高，灵活度高，适合有一定水平的人
+- typescript 友好，非常建议使用 typescript
+- 生态丰富，新手难以选择
 
 <Vssue />

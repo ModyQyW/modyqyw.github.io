@@ -1,67 +1,37 @@
-# 库/框架/工具集
+# 库/工具集/框架……
 
-均用于辅助开发。
+- [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
-## firefox 插件
+## 文档搭建
 
-- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
-- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
-- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
-- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
-- [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
-- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
+- [vuepress](https://vuepress.vuejs.org/zh/)
+- [hexo](https://hexo.io/)
 
-## chrome 插件
-
-- [谷歌访问助手](https://github.com/haotian-wang/google-access-helper)
-- [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
-- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
-- [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
-- [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
-- [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
-- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
-- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
-- [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
-- [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
-
-## edge 插件
-
-- [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
-- [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
-- [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
-- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://microsoftedge.microsoft.com/addons/detail/fcfebhekhbkhjjimonjmbgmkbclheaoh?hl=zh-CN)
-
-## 语言
+## 开发语言
 
 - [typescript](https://www.typescriptlang.org/) - 必学，要会用
 - [reason](https://reasonml.github.io/) - 观望
 - [elm](https://elm-lang.org/) - 观望
 - [bucklescript](https://bucklescript.github.io/) - 观望
 
-## 文档
+## 设计语言
 
-- [vuepress](https://vuepress.vuejs.org/zh/)
-- [hexo](https://hexo.io/)
-
-## 设计
-
-- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn)
-- [Material Design](https://material.io/)
-- [Fluent Design](https://www.microsoft.com/design/fluent/)
-- [Primer Design](https://primer.style/)
-- [Tea Design](https://tea-design.github.io/)
+- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服，使用时小心圣诞彩蛋事件重演
+- [Material Design](https://material.io/) - 谷歌
+- [Fluent Design](https://www.microsoft.com/design/fluent/) - 微软
+- [Primer Design](https://primer.style/) - Github
+- [Tea Design](https://tea-design.github.io/) - 腾讯
+- [DevUI Design](https://devui.design/) - 华为
 
 ## 项目体系
 
-- [yeoman](https://yeoman.io/) - 构筑专属的 cli
-- [oclif](https://oclif.io/) - 构筑专属的 cli
+- [yeoman](https://yeoman.io/) - 构筑专属的 cli，你也可以考虑使用 [oclif](https://oclif.io/)
 - [np](https://github.com/sindresorhus/np) - 更好的 npm publish，自动 push，自动 tag 等
+- [release](https://github.com/zeit/release) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows)
 - [npm](https://github.com/npm/cli)
-- [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前来看，用 v1 比较好，v2 坑比较多
-- [npm-check](https://github.com/dylang/npm-check) - 检查依赖，建议配合 yarn upgrade-interactive 使用
+- [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
+- [npm-check](https://github.com/dylang/npm-check) - 检查依赖，可以配合 yarn upgrade-interactive 使用
 - [lerna](https://github.com/lerna/lerna) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog) - 为 lerna 项目自动生成 changelog
 - formatter
@@ -129,6 +99,7 @@
   - [thread-loader](https://webpack.js.org/loaders/thread-loader/) - 放置在这个 loader 后面的 loader 会装载到 worker pool 中运行，有一定限制条件，代替 happy-pack
   - [cache-loader](https://webpack.js.org/loaders/cache-loader/) - 类似于 thread-loader，该 loader 适用于性能开销较大的 loader
   - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
+  - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 esbuild 作为 webpack 的压缩
   - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许引入文件
   - [url-loader](https://webpack.js.org/loaders/url-loader/) - 解析文件引入，允许把文件转换成 base64 编码数据
   - [file-loader](https://webpack.js.org/loaders/file-loader/) - 解析文件引入

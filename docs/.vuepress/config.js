@@ -105,8 +105,8 @@ module.exports = {
             link: '/front-end/roadmap/',
           },
           {
-            text: '库/框架/工具集',
-            link: '/front-end/lib/'
+            text: '库/工具集/框架……',
+            link: '/front-end/lib-toolkit-framework-and-more/'
           },
           {
             text: '技术栈',
