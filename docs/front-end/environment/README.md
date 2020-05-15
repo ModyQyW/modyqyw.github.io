@@ -120,6 +120,7 @@
 - [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
 - [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
+- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-CN)
 - [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
 - [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
@@ -128,10 +129,12 @@
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
+- [扩展管理器（Extension Manager）](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco?hl=zh-CN)
 
 ## edge 插件
 
 - [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
+- [Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
 - [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
 - [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://microsoftedge.microsoft.com/addons/detail/fcfebhekhbkhjjimonjmbgmkbclheaoh?hl=zh-CN)
@@ -369,7 +372,7 @@ git stash pop
 使用 nvm 来管理 node 版本。
 
 - [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows)
+- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 已经很久没有更新了，可以考虑直接安装 node，之后采用覆盖安装的形式来更新 node
 
 ### npm 全局包
 

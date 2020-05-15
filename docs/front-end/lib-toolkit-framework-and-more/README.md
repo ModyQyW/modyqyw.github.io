@@ -130,6 +130,7 @@
 - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
 - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
 - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
+- [mdbootstrap](https://mdbootstrap.com/) - ui 库
 - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
 - [bulma](https://bulma.io/documentation/) - 现代化的 css 框架
 - [tailwindcss](https://tailwindcss.com/)
