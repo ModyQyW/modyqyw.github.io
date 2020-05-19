@@ -5,6 +5,7 @@
 ## 文档搭建
 
 - [vuepress](https://vuepress.vuejs.org/zh/)
+- [dumi](https://d.umijs.org/)
 - [hexo](https://hexo.io/)
 
 ## 开发语言
@@ -65,6 +66,7 @@
   - [yorkie](https://github.com/yyx990803/yorkie)
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
+- [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
 - git
   - [pro git](https://git-scm.com/book/en/v2)
 
@@ -90,7 +92,8 @@
   - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
   - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
   - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
-  - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 压缩 js，代替 uglify-webpack-plugin
+  - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 使用 [terser](https://github.com/terser/terser) 压缩 js，代替 uglify-webpack-plugin
+  - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
   - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
   - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
   - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
@@ -106,7 +109,7 @@
   - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
   - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
   - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 DOM 中
-  - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css @import 和 url()
+  - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css @import 和 url()，可以启用 css module
   - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
   - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
   - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
@@ -117,7 +120,7 @@
 
 - [lodash](https://lodash.com/)
 - [moment](https://momentjs.com/) - 日期时间处理
-- [dayjs](https://dayjs.gitee.io/zh-CN/) - 日期时间处理，moment 的竞品
+- [dayjs](https://dayjs.gitee.io/zh-CN/) - 日期时间处理
 - [date-fns](https://date-fns.org/) - 日期时间处理
 - [history](https://github.com/ReactTraining/history) - 处理访问历史，比较底层的库
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp) - 将路径字符串转换成正则，比较底层的库
@@ -132,8 +135,8 @@
 - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
 - [mdbootstrap](https://mdbootstrap.com/) - ui 库
 - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
-- [bulma](https://bulma.io/documentation/) - 现代化的 css 框架
 - [tailwindcss](https://tailwindcss.com/)
+- [bulma](https://bulma.io/documentation/)
 - [primer](https://primer.style/css)
 - [es6 入门教程](http://es6.ruanyifeng.com/)
 - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
@@ -183,6 +186,7 @@
     - 状态管理
       - 与上方的状态管理一致
     - ui
+      - [uview-ui](https://uviewui.com/)
       - [uni-ui](https://github.com/dcloudio/uni-ui)
       - [color-ui](https://github.com/weilanwl/ColorUI)
       - [grace-ui](https://grace.hcoder.net/) - 收费
@@ -246,9 +250,9 @@
   - [rematch](https://rematch.github.io/rematch/)
   - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
 - ui
-  - [material-ui](https://material-ui.com/zh/)
   - [react-suite](https://rsuitejs.com/)
   - [antd](https://ant.design/docs/react/introduce-cn)
+  - [material-ui](https://material-ui.com/zh/)
   - [blueprint](https://blueprintjs.com/docs/)
   - [react-rainbow](https://react-rainbow.io/)
   - [react-bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
