@@ -8,33 +8,33 @@
 
 ## Windows
 
-- windows 10 ltsc - 稳定，更新少，缺点是安装 wsl 比较麻烦，wsl 可以使用 [oh-my-zsh](https://ohmyz.sh/)
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 比较麻烦，wsl 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
 - [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)
-- [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)
+- [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
-- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
+- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Git](https://git-scm.com/downloads) - 建议将 git bash 作为默认命令行，非常强大
+- [Git](https://git-scm.com/downloads) - 建议将 git bash 作为默认 shell，非常强大
 - [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
-- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 管理 node 版本
+- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 方便管理 node 多版本，由于太久没有更新且存在一定问题，如果只需要单版本，可以考虑直接安装 node 版本，自行设置路径变量
 - [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui，但是安装之后无法通过 utools 直接启动，你也可以考虑使用 [TortoiseGit](https://tortoisegit.org/) 或直接命令行
+- [SourceTree](https://www.sourcetreeapp.com/) - git gui，但是安装之后无法通过 utools 直接启动，你也可以考虑使用 [TortoiseGit](https://tortoisegit.org/)
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但是 wox 只支持 windows
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
-- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office
+- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
@@ -43,7 +43,6 @@
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe)
 - [人人影视](http://app.rrys.tv/) - 看剧
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
-- [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - 迅雷 U 享版 - 下载工具
@@ -68,7 +67,7 @@
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
-- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 链接软件
+- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Google Chrome](https://www.google.cn/chrome/index.html)
@@ -76,20 +75,18 @@
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
-- [iShowU](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) - 录制桌面音频
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Listen1](http://listen1.github.io/listen1/) - 专注于听歌的播放器
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
 - [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
-- [Mounty](https://mounty.app/) - 让 mac 原生支持移动硬盘/u 盘 NTFS 读写
+- [Mounty](https://mounty.app/) - 让 mac 原生支持 NTFS 格式移动盘读写
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [OBS](https://obsproject.com/) - 录制、推流
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
-- [Pap.er](https://paper.meiyuan.in/) - 壁纸应用
 - [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
 - [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
@@ -103,12 +100,12 @@
 - [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macos
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
-- [WPS](https://www.wps.cn/) - 重度 office 用户建议还是用 ms office（不建议重度 office 用户使用 mac）
+- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + ms office
 
 ## firefox 插件
 
 - [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
-- [Octotree](https://addons.mozilla.org/zh-CN/firefox/addon/octotree/)
+- [Gitako](https://addons.mozilla.org/en-US/firefox/addon/gitako-github-file-tree/)
 - [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
 - [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
 - [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
@@ -118,22 +115,22 @@
 
 - [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star
 - [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
+- [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
 - [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-CN)
 - [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
-- [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
-- [扩展管理器（Extension Manager）](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco?hl=zh-CN)
 
 ## edge 插件
 
 - [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
+- [Gitako](https://microsoftedge.microsoft.com/addons/detail/alpoloddcggjhakjemghahlkofjekbca)
 - [Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
 - [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
 - [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
@@ -151,7 +148,7 @@
 - [中科大镜像源](https://mirrors.ustc.edu.cn/)
 - [阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
 
-使用 bash 修改 ~/.bash_profile，使用 zsh 修改 ~/.zshrc。
+使用 bash 修改`~/.bash_profile`，使用 zsh 修改`~/.zshrc`。建议问使用 oh-my-zsh 需要修改什么的人重新看它的文档。
 
 ### 安装依赖
 
@@ -369,10 +366,10 @@ git stash pop
 
 ### nvm
 
-使用 nvm 来管理 node 版本。
+使用 nvm 可以方便地管理 node 多版本。
 
 - [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 已经很久没有更新了，可以考虑直接安装 node，之后采用覆盖安装的形式来更新 node
+- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 由于太久没有更新且存在一定问题，如果只需要单版本，可以考虑直接安装 node 版本，自行设置路径变量
 
 ### npm 全局包
 
@@ -433,8 +430,6 @@ electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builde
 ```sh
 rm -rf node_modules && rm -rf yarn.lock && rm -rf package-lock.json
 yarn
-# or
-# npm i
 ```
 
 一般接手项目时不应该删掉版本锁定文件。
@@ -476,8 +471,8 @@ yarn
 - [`Highlight Matching Tag`](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [`Image preview`](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
-- [`JavaScript (ES6) code snippets in StandardJS style`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段，跟随 standard 规范
-- [`https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 允许 vscode 内部使用 typescript@next
+- [`JavaScript (ES6) code snippets`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
+- [`JavaScript and TypeScript Nightly`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 允许 vscode 内部使用 typescript@next
 - [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
 - [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
@@ -786,15 +781,15 @@ yarn
 - 对 css，less，scss 文件，使用`prettier`插件格式化第一次，保存时 Stylelint 格式化第二次。
 - 对 js(x) 和 ts(x) 文件，使用`prettier`插件格式化第一次，保存时 ESLint 格式化第二次。
 
-TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TSLint 了。
+TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TSLint 了，旧项目也应该安排升级到 ESLint。
 
 ### snippets
 
-安装了`uniapp-snippet`这个插件后，条件编译的部分仍没有相关的提示，需要手动补全，同时也可以手动补全 taro 的编译提示部分。
+安装了`uniapp-snippet`这个插件后，条件编译的部分仍没有相关的提示，需要手动补全，类似地你也可以自己手动补全 taro 的编译提示部分。
 
 点击 vscode 左下角齿轮，点击`User Snippets`，然后选择对应的语言，会自动生成`[语言].json`文件供修改。
 
-下面给出我自己的配置，注意：这些配置跟`setting.json`里的配置挂钩。
+下面给出我自己的配置，注意：这些配置跟`settings.json`里的配置挂钩。
 
 `css.json`
 
@@ -878,7 +873,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -978,7 +973,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1078,7 +1073,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1182,7 +1177,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1286,7 +1281,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1390,7 +1385,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1494,7 +1489,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1594,7 +1589,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1694,7 +1689,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
     "body": ["swan"]
   },
   "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutaio", "taro-mp-tt", "taro-toutaio", "taro-tt"],
+    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
     "body": ["tt"]
   },
   "taro QQ 小程序平台": {
@@ -1800,7 +1795,9 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 但是总会有人会想用 hbuilderx 开发，但是又觉得它不好用，想自己做修改，这部分内容就是为这类人而生的。
 
-以下修改基于 mac hbuilderx 2.6.8 版本，但对其他版本应该也有指导修改的作用。个人写 vue 喜欢用 standard 风格，初学者建议用 airbnb 风格。以下示例依据我个人喜好和前面的 vscode 配置而定，**不要照抄**，根据自己情况做调整。
+以下修改基于 mac hbuilderx 2.6.8 版本，但对其他版本应该也有指导修改的作用，建议根据自己情况做调整。
+
+项目 ESLint 规范建议使用 [Airbnb 规范](https://github.com/airbnb/javascript) + [Prettier](https://prettier.io/) v2。
 
 ### 题外话
 
@@ -1882,94 +1879,6 @@ module.exports = {
   "eslint-js.validateOnDocumentChanged": true
 }
 
-```
-
-### `format`插件
-
-修改 hbuilderx 自带的`format`插件，工具 => 插件配置 => `format` => `jsbeautifyrc.js`，直接用下面的内容（对应 standard 规范）覆盖掉`jsbeautifyrc.js`的原有内容。使用`prettier`插件的话无需修改此处，因为`prettier`插件应用的优先级更高。
-
-```js
-// https://github.com/beautify-web/js-beautify#readme
-module.exports = {
-  parsers: {
-    ".js": "js",
-    ".json": "js",
-    ".njs": "js",
-    ".sjs": "js",
-    ".wxs": "js",
-    ".css": "css",
-    ".nss": "css",
-    ".wxss": "css",
-    ".acss": "css",
-    ".ttss": "css",
-    ".qss": "css",
-    ".html": "html",
-    ".ux": "html",
-    ".wxml": "html",
-    ".nml": "html",
-    ".vue": "html",
-    ".nvue": "html",
-    ".axml": "html",
-    ".swan": "html",
-    ".ttml": "html",
-    ".qml": "html",
-  },
-  options: {
-    indent_size: "2", // indentation size
-    indent_char: " ", // indentation character
-    indent_with_tabs: false, // Indent with tabs or not, if yes, ignore indent_size and indent_char
-    eol: "\r", // Character(s) to use as line terminators.
-    end_with_newline: false, // End output with newline or not
-    indent_level: 0, // Initial indentation level
-    preserve_newlines: true, // Preserve line-breaks or not
-    max_preserve_newlines: 2, // Number of line-breaks to be preserved in one chunk
-    space_in_paren: false, // Add padding spaces within paren or not
-    space_in_empty_paren: false, // Add a single space inside empty paren or not
-    jslint_happy: true, // Enable jslint-stricter mode or not
-    space_after_anon_function: true, // Add a space before an anonymous function's parens or not
-    space_after_named_function: true, // Add a space before a named function's parens or not
-    brace_style: ["collapse", "preserve-inline"], // ['collapse'|'expand'|'end-expand'|'none'][,'preserve-inline'] ['collapse','preserve-inline']
-    unindent_chained_methods: false, // Don't indent chained method calls or not
-    break_chained_methods: false, // Break chained method calls across subsequent lines or not
-    keep_array_indentation: false, // Preserve array indentation or not
-    unescape_strings: false, // Decode printable characters encoded in xNN notation or not
-    wrap_line_length: 120, // Wrap lines that exceed N characters
-    e4x: false, // Pass E4X xml literals through untouched or not
-    comma_first: false, // Put commas at the beginning of new line instead of end or not
-    operator_position: "before-newline", // Set operator position (before-newline|after-newline|preserve-newline) [before-newline]
-    indent_empty_lines: false, // Keep indentation on empty lines
-    templating: ["auto"], // List of templating languages
-    unformatted: ["wbr"],
-    css: {
-      selector_separator_newline: true, // Add a newline between multiple selectors or not
-      newline_between_rules: true, // Add a newline between CSS rules or not
-    },
-    html: {
-      indent_inner_html: true, //  Indent <head> and <body> sections or not, default false
-      indent_scripts: "keep", // [keep|separate|normal]
-      wrap_attributes: "force-expand-multiline", // Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline|aligned-multiple|preserve|preserve-aligned] ["auto"]
-      wrap_attributes_indent_size: 2, // Indent wrapped attributes to after N characters [indent-size] (ignored if wrap-attributes is "aligned")
-      inline: [], // List of tags to be considered inline tags
-      unformatted: [], // List of tags (defaults to inline) that should not be reformatted
-      content_unformatted: [], // List of tags (defaults to pre) whose content should not be reformatted
-      extra_liners: ["style", "script"], // List of tags (defaults to [head,body,/html] that should have an extra newline before them.
-      unformatted_content_delimiter: [""], // Keep text content together between this string [""]
-    },
-  },
-};
-```
-
-另外再升级一下项目本身的依赖。每次更新 hbuilderx，都建议手动更新一下这个插件的依赖。
-
-```sh
-cd /Applications/HBuilderX.app/Contents/HBuilderX/plugins/format
-code .
-```
-
-然后在该插件目录下更新依赖。
-
-```sh
-npm i js-beautify -S
 ```
 
 ### 使用`stylelint`检查、自动修复样式
