@@ -119,6 +119,7 @@
 ## 工具集
 
 - [lodash](https://lodash.com/)
+- [futil-js](https://github.com/smartprocure/futil-js)
 - [moment](https://momentjs.com/) - 日期时间处理
 - [dayjs](https://dayjs.gitee.io/zh-CN/) - 日期时间处理
 - [date-fns](https://date-fns.org/) - 日期时间处理
@@ -129,18 +130,22 @@
 
 ## 原生及相关生态
 
-- [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
-- [axios](https://github.com/axios/axios) - 请求库，用到了 promise
-- [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
-- [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
-- [mdbootstrap](https://mdbootstrap.com/) - ui 库
-- [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
-- [tailwindcss](https://tailwindcss.com/)
-- [bulma](https://bulma.io/documentation/)
-- [primer](https://primer.style/css)
 - [es6 入门教程](http://es6.ruanyifeng.com/)
-- [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
-- [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
+- ui
+  - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
+  - [mdbootstrap](https://mdbootstrap.com/) - ui 库
+  - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
+  - [tailwindcss](https://tailwindcss.com/)
+  - [bulma](https://bulma.io/documentation/)
+  - [primer](https://primer.style/css)
+- 衍生
+  - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
+  - [bluebird](http://bluebirdjs.com/docs/getting-started.html) - promise 库
+  - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
+  - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
+  - [dplyaer](https://dplayer.js.org/) - h5 播放器
+  - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
+  - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
 
 ## typescript
 
