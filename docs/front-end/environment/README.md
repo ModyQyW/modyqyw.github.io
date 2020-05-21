@@ -13,6 +13,7 @@
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
+- [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
@@ -35,6 +36,7 @@
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
+- [Zeal](https://zealdocs.org/) - 离线文档
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
@@ -44,6 +46,7 @@
 - [人人影视](http://app.rrys.tv/) - 看剧
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
+- [语雀](https://www.yuque.com/install/desktop)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - 迅雷 U 享版 - 下载工具
 
@@ -61,10 +64,13 @@
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
+- [语雀](https://www.yuque.com/install/desktop)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
+- [Dash](https://kapeli.com/dash) - 离线文档
+- [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
@@ -104,17 +110,17 @@
 
 ## firefox 插件
 
-- [Adblock Plus](https://addons.mozilla.org/zh-CN/firefox/addon/adblock-plus/)
 - [Gitako](https://addons.mozilla.org/en-US/firefox/addon/gitako-github-file-tree/)
+- [Google Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
 - [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
 - [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
+- [uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
 - [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
 
 ## chrome 插件
 
 - [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star
-- [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
 - [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
 - [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
@@ -123,18 +129,10 @@
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=zh-CN) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
-
-## edge 插件
-
-- [Adblock Plus](https://microsoftedge.microsoft.com/addons/detail/gmgoamodcdcjnbaobigkjelfplakmdhh?hl=zh-CN)
-- [Gitako](https://microsoftedge.microsoft.com/addons/detail/alpoloddcggjhakjemghahlkofjekbca)
-- [Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
-- [React Developer Tools](https://microsoftedge.microsoft.com/addons/detail/gpphkfbcpidddadnkolkpfckpihlkkil?hl=zh-CN)
-- [Video DownloadHelper](https://microsoftedge.microsoft.com/addons/detail/jmkaglaafmhbcpleggkmaliipiilhldn?hl=zh-CN)
-- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://microsoftedge.microsoft.com/addons/detail/fcfebhekhbkhjjimonjmbgmkbclheaoh?hl=zh-CN)
 
 ## Homebrew
 
