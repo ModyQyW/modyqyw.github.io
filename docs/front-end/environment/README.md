@@ -9,7 +9,7 @@
 ## Windows
 
 - windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 比较麻烦，wsl 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
-- [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)
+- [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了浏览器，可能会导致 ie 无法唤起开发者工具
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
@@ -58,6 +58,7 @@
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷
 - [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
+- [看图](https://kantu.qq.com/) - 看图工具
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
@@ -69,6 +70,7 @@
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
+- [Countdown Timer Plus](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E8%AE%A1%E6%97%B6%E5%99%A8-countdown-timer-plus/id1150771803) - 倒计时，鞭策一下自己
 - [Dash](https://kapeli.com/dash) - 离线文档
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
@@ -113,7 +115,7 @@
 - [Gitako](https://addons.mozilla.org/en-US/firefox/addon/gitako-github-file-tree/)
 - [Google Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
 - [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
-- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/)
+- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/) - 有 deepL 就可以不用了
 - [uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
 - [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
@@ -122,13 +124,13 @@
 
 - [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star
 - [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
-- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
+- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb) - 有 deepL 就可以不用了
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-CN)
 - [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
-- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg) - 自动冻结一段时间没有使用的标签页
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=zh-CN) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
@@ -389,6 +391,12 @@ npm i -g release
 npm i -g ts-node
 npm i -g typescript
 npm i -g yarn
+```
+
+更新时只需要执行全局更新即可。
+
+```sh
+npm update -g
 ```
 
 ### 项目初始化
@@ -1795,7 +1803,7 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 以下修改基于 mac hbuilderx 2.6.8 版本，但对其他版本应该也有指导修改的作用，建议根据自己情况做调整。
 
-项目 ESLint 规范建议使用 [Airbnb 规范](https://github.com/airbnb/javascript) + [Prettier](https://prettier.io/) v2。
+vue 项目建议使用 ESLint [Airbnb 规范](https://github.com/airbnb/javascript)。
 
 ### 题外话
 

@@ -27,43 +27,49 @@
 ## 项目体系
 
 - [yeoman](https://yeoman.io/) - 构筑专属的 cli，你也可以考虑使用 [oclif](https://oclif.io/)
-- [np](https://github.com/sindresorhus/np) - 更好的 npm publish，自动 push，自动 tag 等
-- [release](https://github.com/zeit/release) - 自动生成 changelog
-- [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows)
-- [npm](https://github.com/npm/cli)
+- [np](https://github.com/sindresorhus/np#readme) - 更好的 npm publish，自动 push，自动 tag 等
+- [release](https://github.com/zeit/release#readme) - 自动生成 changelog
+- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)，但是已经好久不更新了
+- [npm](https://github.com/npm/cli#readme)
 - [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
-- [npm-check](https://github.com/dylang/npm-check) - 检查依赖，可以配合 yarn upgrade-interactive 使用
-- [lerna](https://github.com/lerna/lerna) - monorepo 管理
-  - [lerna-changelog](https://github.com/lerna/lerna-changelog) - 为 lerna 项目自动生成 changelog
+- [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合 yarn upgrade-interactive 使用
+- [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
+  - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter
   - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
-  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式，可搭配 prettier 使用
-    - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-    - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-    - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react)
-    - [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
-    - [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-    - [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-    - [@vue/eslint-config-prettier](https://github.com/vuejs/eslint-config-prettier)
-    - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard)
-    - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb)
-    - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
-    - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)
-  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版
+  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
+    - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
+    - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)
+    - [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#readme)
+    - [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#readme)
+    - [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript#readme)
+    - [eslint-config-standard](https://github.com/standard/eslint-config-standard#readme)
+    - [eslint-config-standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript#readme)
+    - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react#readme)
+    - [typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#readme)
+    - [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy#readme)
+    - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard#readme)
+    - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb#readme)
+    - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript#readme)
+    - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue#readme)
+    - [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app#readme)
+  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 可以用 eslint-plugin-vue 的 recommended 配置
   - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法，可搭配 prettier 使用
-    - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
-    - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended)
+    - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard#readme)
+    - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended#readme)
     - [stylelint-config-recommended-scss](https://github.com/kristerkari/stylelint-config-recommended-scss#readme)
-    - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
-    - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap) - bootstrap 预设的 scss stylelint 配置
-    - [stylelint-formatter-pretty](https://www.npmjs.com/package/stylelint-formatter-pretty)
-    - [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
-    - stylus 可考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)
-    - sass 可考虑使用 [sass-formatter](https://github.com/TheRealSyler/sass-formatter)
-- [commitlint](https://commitlint.js.org/)
-- [lint-staged](https://github.com/okonet/lint-staged)
-- [husky](https://github.com/typicode/husky)
-  - [yorkie](https://github.com/yyx990803/yorkie)
+    - [stylelint-order](https://github.com/hudochenkov/stylelint-order#readme)
+    - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap#readme) - bootstrap 预设的 scss stylelint 配置
+    - [stylelint-formatter-pretty](https://github.com/Dreamseer/stylelint-formatter-pretty#readme)
+    - [stylelint-prettier](https://github.com/prettier/stylelint-prettier#readme)
+    - stylus 可考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint#readme)
+    - sass 可考虑使用 [sass-formatter](https://github.com/TheRealSyler/sass-formatter#readme)
+- [commitlint](https://commitlint.js.org/) - 检查提交格式
+  - [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint#readme)
+- [commitizen](https://github.com/commitizen/cz-cli#readme) - 常与 commitlint 配合使用，自动生成提交内容
+- [lint-staged](https://github.com/okonet/lint-staged#readme) - 自动跑校验，如 prettier 和 eslint
+- [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
+  - [yorkie](https://github.com/yyx990803/yorkie) - husky 简化版
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
@@ -72,14 +78,14 @@
 
 ## 编译打包
 
-- [babel](https://babeljs.io/) - js 转译器，转换浏览器未支持的 js 特性
+- [babel](https://babeljs.io/) - js 转译器，转换浏览器未支持的 js 特性，搭配 webpack 使用时用 babel-loader 做转译
   - [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
+  - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - 常与 @babel/preset-env 搭配使用
   - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
   - [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)
-  - [core-js](https://github.com/zloirock/core-js) - js 模块化标准库，包含了大量 polyfill
+  - [core-js](https://github.com/zloirock/core-js) - js 模块化标准库，包含了大量 polyfill，常与 @babel/preset-env 搭配使用
+  - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) - 用于 async 函数的独立运行时，常与 @babel/preset-env 搭配使用
   - [bluebird](https://github.com/petkaantonov/bluebird) - 支持 ie8 的 promise polyfill
-  - [polyfill.io](https://polyfill.io/v3/) - 在线自动引入 polyfill
-  - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) - 用于 async 函数的独立运行时
 - [postcss](https://postcss.org/) - css 的 babel
   - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
   - [cssnano](https://cssnano.co/) - 压缩 css
@@ -102,7 +108,6 @@
   - [thread-loader](https://webpack.js.org/loaders/thread-loader/) - 放置在这个 loader 后面的 loader 会装载到 worker pool 中运行，有一定限制条件，代替 happy-pack
   - [cache-loader](https://webpack.js.org/loaders/cache-loader/) - 类似于 thread-loader，该 loader 适用于性能开销较大的 loader
   - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
-  - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 esbuild 作为 webpack 的压缩
   - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许引入文件
   - [url-loader](https://webpack.js.org/loaders/url-loader/) - 解析文件引入，允许把文件转换成 base64 编码数据
   - [file-loader](https://webpack.js.org/loaders/file-loader/) - 解析文件引入
@@ -139,6 +144,7 @@
   - [bulma](https://bulma.io/documentation/)
   - [primer](https://primer.style/css)
 - 衍生
+  - [polyfill.io](https://polyfill.io/v3/) - 在线自动引入 polyfill
   - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
   - [bluebird](http://bluebirdjs.com/docs/getting-started.html) - promise 库
   - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
@@ -165,6 +171,7 @@
 - ui
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
   - [element](https://element.eleme.cn/#/zh-CN/component/installation)
+    - [pl-table](https://github.com/livelyPeng/pl-table) - el-table 增强版
   - [antd-vue](https://www.antdv.com/)
   - [viewui](https://www.iviewui.com/docs/introduce)
   - [buefy](https://github.com/buefy/buefy/)
@@ -204,8 +211,9 @@
     - ui
       - [cml-ui](https://cml.js.org/components/expand.html)
 - 衍生
-  - 待补充
-- 核心知识点
+  - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
+  - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
+- 进阶核心知识点
   - 初始化流程
   - 事件机制
   - virtual dom
@@ -332,18 +340,18 @@
 - 衍生
   - [styled-components](https://styled-components.com/)
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 高效渲染大型列表和表格数据的 react 组件
-  - [preact](https://preactjs.com/) - react 替代品
+  - [preact](https://preactjs.com/) - 类 react 库
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)
   - [fre](https://github.com/yisar/fre) - 原理类似 vue 3 的类 react 库
-  - [inferno](https://infernojs.org/)
-- 核心知识点
+  - [inferno](https://infernojs.org/) - 类 react 库
+- 进阶核心知识点
   - createElement，render，Component
   - virtual dom
   - diff 算法
   - fiber 架构，任务调度，渲染与更新
   - suspense
   - lazy
-  - 生命周期和 hooks
+  - 生命周期
   - react-router 原理及实现
   - redux 和 redux-react 原理及实现
   - mobx 和 mobx-react 原理及实现
@@ -351,7 +359,7 @@
   - 高阶组件 HOC
   - 类组件
   - 递归组件
-  - 函数式组件
+  - 函数式组件和 hooks
   - 组件通信策略
   - 组件测试
   - 弹窗组件实现
@@ -370,9 +378,36 @@
   - SSR 打包和部署事项
   - umi 和 next 的使用
 
+## Angular 及相关生态
+
+- [英文文档](https://angular.io/)
+- [中文文档](https://angular.cn/)
+- [devtools](https://augury.rangle.io/)
+- 路由
+  - 自带路由
+- 状态管理
+  - [ngrx](https://ngrx.io/)
+  - [ngxs](https://www.ngxs.io/)
+  - [akita](https://netbasal.gitbook.io/akita/)
+- ui
+  - [angular-material](https://material.angular.cn/)
+  - [ng-zorro](https://ng.ant.design/docs/introduce/zh)
+  - [devui](https://devui.design/)
+  - [ng-zorro-mobile](https://ng.mobile.ant.design/#/docs/introduce/zh)
+- cli
+  - [angular-cli](https://angular.cn/cli)
+- app
+  - 待补充
+- 小程序
+  - 无
+- 衍生
+  - [rxjs](https://rxjs-dev.firebaseapp.com/)
+  - [ng-nest](https://github.com/NG-NEST/ng-nest)
+
 ## Virtual DOM
 
 - [snabbdom](https://github.com/snabbdom/snabbdom)
+- [cito.js](https://github.com/joelrich/citojs)
 
 ## 服务器端
 
