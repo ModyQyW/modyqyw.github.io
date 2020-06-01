@@ -5,6 +5,8 @@
 - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
 - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
 - 个人学习路径如下，相关库/框架/工具集[参考](./../lib/README.md)
+  - 思维
+    - 源码最优，官方文档次之，github 仓库 issues 再次，博客最次
   - 线性代数
   - 离散数学
   - 计算机组成原理
@@ -16,7 +18,7 @@
   - 数据结构与算法
   - 算法设计
   - 数据库入门
-  - 网页原生
+  - 网页原生：html + css + js
     - [前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)
     - [廖雪峰 js 全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
     - [js 快速入门](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
@@ -42,13 +44,15 @@
   - typescript
   - react 及周边生态
   - webpack，rollup 等打包工具及配套
-  - jest
-  - flutter
+  - jest，mocha 等测试工具及配套
   - Node.js，Koa，Egg
   - 进阶
     - [前端进阶 1](https://yuchengkai.cn/home/)
     - [前端进阶 2](https://muyiy.cn/)
     - [前端工程化](https://github.com/fouber/blog)
+  - 实战
+    - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章
+    - [ant-design-pro](https://ant-design-pro.gitee.io/index-cn)
   - 面试
     - [75 个JavaScript面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
     - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)

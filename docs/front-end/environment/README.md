@@ -122,7 +122,7 @@
 
 ## chrome 插件
 
-- [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star
+- [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star，用 v2ray 的话可以不用这个
 - [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
 - [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb) - 有 deepL 就可以不用了
 - [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
@@ -410,12 +410,17 @@ npm update -g
 - `.npmrc`
 
 ```sh
-registry="https://registry.npm.taobao.org"
-
-chromedriver_cdnurl="https://npm.taobao.org/mirrors/chromedriver"
-electron_mirror="https://npm.taobao.org/mirrors/electron/"
-sass_binary_site="https://npm.taobao.org/mirrors/node-sass/"
-electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builder-binaries/"
+registry=https://registry.npm.taobao.org
+disturl=https://npm.taobao.org/dist
+sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
+electron_mirror=https://npm.taobao.org/mirrors/electron/
+electron_builder_binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
+chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver
+operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver
+selenium_cdnurl=https://npm.taobao.org/mirrors/selenium
+node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector
+fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 
 ```
 
@@ -423,11 +428,16 @@ electron_builder_binaries_mirror="https://npm.taobao.org/mirrors/electron-builde
 
 ```sh
 registry "https://registry.npm.taobao.org"
-
-chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
-electron_mirror "https://npm.taobao.org/mirrors/electron/"
+disturl "https://npm.taobao.org/dist"
 sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+phantomjs_cdnurl "https://npm.taobao.org/mirrors/phantomjs/"
+electron_mirror "https://npm.taobao.org/mirrors/electron/"
 electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
+chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
+operadriver_cdnurl "https://npm.taobao.org/mirrors/operadriver"
+selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
+node_inspector_cdnurl "https://npm.taobao.org/mirrors/node-inspector"
+fsevents_binary_host_mirror "http://npm.taobao.org/mirrors/fsevents/"
 
 ```
 
@@ -518,115 +528,7 @@ yarn
   // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
   "commentTranslate.multiLineMerge": true,
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
-  "cSpell.userWords": [
-    "Avenir",
-    "Ducheng",
-    "Fira",
-    "Hiragino",
-    "Idxs",
-    "Jetbrains",
-    "Menlo",
-    "Sarasa",
-    "Unmount",
-    "acss",
-    "addrs",
-    "alipay",
-    "antd",
-    "bookset",
-    "booksets",
-    "browserslist",
-    "buefy",
-    "bulma",
-    "bytedance",
-    "camelcase",
-    "caniuse",
-    "combinators",
-    "commitlint",
-    "dcloudio",
-    "designdeck",
-    "devtools",
-    "dingtalk",
-    "echarts",
-    "editorconfig",
-    "elementui",
-    "esnext",
-    "flaticon",
-    "fontawesome",
-    "fullhuman",
-    "geekblue",
-    "gitee",
-    "gitlab",
-    "gratisography",
-    "hbuilderx",
-    "icomoon",
-    "ifdef",
-    "ifndef",
-    "ionicons",
-    "jsencrypt",
-    "leetcode",
-    "miniprogram",
-    "miniprograms",
-    "mixins",
-    "mobx",
-    "modyqyw",
-    "monospace",
-    "msgbox",
-    "nprogress",
-    "nums",
-    "nuxt",
-    "nvue",
-    "octicons",
-    "onsen",
-    "pexels",
-    "pixabay",
-    "preact",
-    "prepend",
-    "prettyhtml",
-    "qrcode",
-    "quickapp",
-    "readonly",
-    "reqs",
-    "rgba",
-    "scripthost",
-    "scrollbar",
-    "segmentfault",
-    "shineout",
-    "snabbdom",
-    "sorrycc",
-    "stocksnap",
-    "streetwill",
-    "styl",
-    "stylelint",
-    "submenu",
-    "swiper",
-    "tailwindcss",
-    "tarojs",
-    "toutiao",
-    "twbs",
-    "umijs",
-    "uniapp",
-    "unpackage",
-    "vant",
-    "vetur",
-    "viewui",
-    "vssue",
-    "vueperss",
-    "vuepress",
-    "vuetify",
-    "vuex",
-    "weapp",
-    "webm",
-    "webp",
-    "webstorm",
-    "wechat",
-    "weixin",
-    "woff",
-    "wurui",
-    "wxml",
-    "wxss",
-    "zarm",
-    "zent"
-  ],
+  "cSpell.userWords": [],
   // vscode 自带功能，指定是否校验 css，这里设置为否
   "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
@@ -680,14 +582,15 @@ yarn
     "*.js": "javascriptreact",
     "*.ts": "typescriptreact",
     "*.wxml": "html",
-    "*.wxs": "javascript",
+    "*.wxs": "javascriptreact",
     "*.wxss": "css",
     "*.axml": "html",
-    "*.sjs": "javascript",
+    "*.sjs": "javascriptreact",
     "*.acss": "css",
     "*.wpy": "html",
     "*.json": "jsonc",
-    "*.nvue": "vue"
+    "*.nvue": "vue",
+    "*.ux": "vue"
   },
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "javascript.implicitProjectConfig.experimentalDecorators": true,
@@ -737,19 +640,9 @@ yarn
     "gutterIcon": true
   },
   // 插件 Todo Tree 使用，指定匹配的文本
-  "todo-tree.general.tags": [
-    "FIX",
-    "PERF",
-    "TODO"
-  ],
+  "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Vetur 使用，指定 prettyhtml 的设置
-  "vetur.format.defaultFormatterOptions": {
-    "prettyhtml": {
-      "wrapAttributes": true
-    }
-  },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // vscode 自带功能，指定工作台颜色主题，需要插件 Material Theme
   "workbench.colorTheme": "Community Material Theme Darker",
@@ -771,6 +664,7 @@ yarn
     "editor.defaultFormatter": "octref.vetur"
   }
 }
+
 ```
 
 ### `Settings Sync`插件
@@ -1799,12 +1693,6 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 如果要使用 uni-app 开发 app，就必须使用 hbuilderx 打包，如果只是开发小程序/网页，hbuilderx 不是必须的。个人建议还是使用 vscode 开发，打包 app 时再使用 hbuilderx。
 
-但是总会有人会想用 hbuilderx 开发，但是又觉得它不好用，想自己做修改，这部分内容就是为这类人而生的。
-
-以下修改基于 mac hbuilderx 2.6.8 版本，但对其他版本应该也有指导修改的作用，建议根据自己情况做调整。
-
-vue 项目建议使用 ESLint [Airbnb 规范](https://github.com/airbnb/javascript)。
-
 ### 题外话
 
 如果 cli 项目使用 [dart-sass](https://www.npmjs.com/package/sass)，记得在`vue.config.js`中设置 sass-loader。
@@ -1855,41 +1743,28 @@ module.exports = {
 
 ### 修改配置
 
-修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图，然后粘贴以下内容进去。
+修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图。
 
 ```json
 {
-  "browsers.config": {
-    "Chrome.path": "/Applications/Google Chrome.app",
-    "Firefox.path": "/Applications/Firefox Developer Edition.app"
-  },
   "editor.codeassist.px2rem.proportion": "14",
-  "editor.codeassist.px2upx.decimalLength": 8,
   "editor.colorScheme": "Atom One Dark",
-  "editor.fontFmyCHS": "Sarasa Mono T SC",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
-  "editor.lineHeight": "1.25",
-  "editor.longLineIndicatorColumn": 120,
-  "editor.mouseWheelZoom": false,
   "editor.saveFoldStatus.enabled": true,
-  "editor.saveOnFocusLost": false,
-  "editor.showDefaultEndOfLine": "\\n",
+  "editor.saveOnFocusLost": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "explorer.folder.openExplorerViewOnClick": true,
-  "explorer.iconTheme": "vs-seti",
-  "terminal.maxcount": "5",
-  "terminal.type": "内置终端",
-  "eslint-js.validateOnDocumentChanged": true
+  "eslint-js.validateOnDocumentChanged": true,
+  "explorer.iconTheme": "vs-seti"
 }
 
 ```
 
 ### 使用`stylelint`检查、自动修复样式
 
-官方的`stylelint`插件只能检查，而不能自动修复样式，所以我们自己来 hack，下面以 scss 做示范。
+官方的`stylelint`插件只能检查，而不能自动修复样式，下面示范如何自动修改 scss 的样式。
 
 在项目根目录下新建一个`package.json`文件和一个`vue.config.js`文件，内容分别如下。
 
@@ -1898,7 +1773,7 @@ module.exports = {
 ```json
 {
   "devDependencies": {
-    "stylelint": "~13.3.0",
+    "stylelint": "~13.5.0",
     "@modyqyw/stylelint-config-scss": "~1.0.0",
     "stylelint-formatter-pretty": "~2.0.0",
     "stylelint-webpack-plugin": "~2.0.0"
@@ -1919,8 +1794,11 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new StylelintWebpackPlugin({
-        files: ["src/**/*.{vue,htm,html,sass,scss}"],
+        // 预期 scss 只会写在 vue 和 scss 文件中
+        files: ["src/**/*.{vue,scss}"],
+        // 自动修复
         fix: true,
+        // 指定 formatter
         formatter: StylelintFormatter,
       }),
     ],
@@ -1928,15 +1806,17 @@ module.exports = {
 };
 ```
 
-然后安装依赖。
+然后在项目根目录下安装依赖。
 
 ```sh
 npm i
+# 如果你使用 yarn
+# yarn
 ```
 
 之后，编译的时候就会检查并尽可能地自动修复 scss 样式代码了。
 
-css 可以使用 @modyqyw/stylelint-config-css，less 可以使用 @modyqyw/stylelint-config-less。
+对于 css 可以使用 @modyqyw/stylelint-config-css，对于 less 可以使用 @modyqyw/stylelint-config-less。
 
 stylelint 不适用于 stylus，但你可以考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)。
 

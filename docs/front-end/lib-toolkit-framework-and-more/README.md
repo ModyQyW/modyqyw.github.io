@@ -17,7 +17,7 @@
 
 ## 设计语言
 
-- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服，使用时小心圣诞彩蛋事件重演
+- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服
 - [Material Design](https://material.io/) - 谷歌
 - [Fluent Design](https://www.microsoft.com/design/fluent/) - 微软
 - [Primer Design](https://primer.style/) - Github
@@ -29,31 +29,45 @@
 - [yeoman](https://yeoman.io/) - 构筑专属的 cli，你也可以考虑使用 [oclif](https://oclif.io/)
 - [np](https://github.com/sindresorhus/np#readme) - 更好的 npm publish，自动 push，自动 tag 等
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
-- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)，但是已经好久不更新了
+- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme)
 - [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
+- [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
+- [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
 - [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合 yarn upgrade-interactive 使用
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter
   - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
-    - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
-    - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)
-    - [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#readme)
-    - [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#readme)
-    - [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript#readme)
-    - [eslint-config-standard](https://github.com/standard/eslint-config-standard#readme)
-    - [eslint-config-standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript#readme)
-    - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react#readme)
-    - [typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#readme)
-    - [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy#readme)
-    - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard#readme)
-    - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb#readme)
-    - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript#readme)
-    - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue#readme)
-    - [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app#readme)
-  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 可以用 eslint-plugin-vue 的 recommended 配置
+    - prettier
+      - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
+      - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)
+    - airbnb
+      - [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#readme)
+      - [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#readme)
+      - [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript#readme)
+    - standard
+      - [eslint-config-standard](https://github.com/standard/eslint-config-standard#readme)
+      - [eslint-config-standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript#readme)
+      - [eslint-config-standard-react](https://github.com/standard/eslint-config-standard-react#readme)
+    - typescript-eslint
+      - [typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#readme)
+    - alloy
+      - [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy#readme)
+    - react
+      - [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app#readme)
+    - vue
+      - [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue#readme)
+      - [@vue/eslint-config-standard](https://github.com/vuejs/eslint-config-standard#readme)
+      - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb#readme)
+      - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript#readme)
+    - @modyqyw
+      - [@modyqyw/eslint-config](https://github.com/Millcloud/eslint-config)
+      - [@modyqyw/eslint-config-vue](https://github.com/Millcloud/eslint-config-vue)
+      - [@modyqyw/eslint-config-vue-ts](https://github.com/Millcloud/eslint-config-vue-ts)
+      - [@modyqyw/eslint-config-react](https://github.com/Millcloud/eslint-config-react)
+  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 文件直接用 eslint-plugin-vue 的 recommended 配置检查即可
   - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法，可搭配 prettier 使用
     - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard#readme)
     - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended#readme)
@@ -64,14 +78,19 @@
     - [stylelint-prettier](https://github.com/prettier/stylelint-prettier#readme)
     - stylus 可考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint#readme)
     - sass 可考虑使用 [sass-formatter](https://github.com/TheRealSyler/sass-formatter#readme)
+    - @modyqyw
+      - [@modyqyw/stylelint-config-css](https://github.com/Millcloud/stylelint-config-css)
+      - [@modyqyw/stylelint-config-less](https://github.com/Millcloud/stylelint-config-less)
+      - [@modyqyw/stylelint-config-scss](https://github.com/Millcloud/stylelint-config-scss)
 - [commitlint](https://commitlint.js.org/) - 检查提交格式
   - [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint#readme)
 - [commitizen](https://github.com/commitizen/cz-cli#readme) - 常与 commitlint 配合使用，自动生成提交内容
 - [lint-staged](https://github.com/okonet/lint-staged#readme) - 自动跑校验，如 prettier 和 eslint
 - [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
   - [yorkie](https://github.com/yyx990803/yorkie) - husky 简化版
-- [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
-- [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
+- ci/cd
+  - [travis](https://travis-ci.org/)
+  - [circle](https://circleci.com/)
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
 - git
   - [pro git](https://git-scm.com/book/en/v2)
@@ -89,36 +108,39 @@
 - [postcss](https://postcss.org/) - css 的 babel
   - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
   - [cssnano](https://cssnano.co/) - 压缩 css
-  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss 使用
+  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss，element-ui 等使用，搭配 element-ui 等使用时需要添加白名单
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
-  - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
+  - [devServer](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
   - [webpack-merge](https://github.com/survivejs/webpack-merge) - 合并配置
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain) - 链式生成并简化配置的修改操作
-  - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
-  - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
-  - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
-  - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 使用 [terser](https://github.com/terser/terser) 压缩 js，代替 uglify-webpack-plugin
-  - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
-  - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
-  - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
-  - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
-  - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 提取 css 为单独文件
-  - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin) - 打包时检查样式
-  - [thread-loader](https://webpack.js.org/loaders/thread-loader/) - 放置在这个 loader 后面的 loader 会装载到 worker pool 中运行，有一定限制条件，代替 happy-pack
-  - [cache-loader](https://webpack.js.org/loaders/cache-loader/) - 类似于 thread-loader，该 loader 适用于性能开销较大的 loader
-  - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
-  - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许引入文件
-  - [url-loader](https://webpack.js.org/loaders/url-loader/) - 解析文件引入，允许把文件转换成 base64 编码数据
-  - [file-loader](https://webpack.js.org/loaders/file-loader/) - 解析文件引入
-  - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
-  - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
-  - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 DOM 中
-  - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css @import 和 url()，可以启用 css module
-  - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
-  - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
-  - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
-  - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
+  - plugins
+    - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
+    - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
+    - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
+    - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 使用 [terser](https://github.com/terser/terser) 压缩 js，代替 uglify-webpack-plugin
+    - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
+    - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
+    - [dll-plugin](https://webpack.js.org/plugins/dll-plugin/) - webpack 内置
+    - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
+    - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
+    - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
+    - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 提取 css 为单独文件
+    - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin) - 打包时检查样式
+  - loaders
+    - [thread-loader](https://webpack.js.org/loaders/thread-loader/) - 放置在这个 loader 后面的 loader 会装载到 worker pool 中运行，有一定限制条件，代替 happy-pack
+    - [cache-loader](https://webpack.js.org/loaders/cache-loader/) - 类似于 thread-loader，该 loader 适用于性能开销较大的 loader
+    - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许引入文件
+    - [url-loader](https://webpack.js.org/loaders/url-loader/) - 解析文件引入，允许把文件转换成 base64 编码数据
+    - [file-loader](https://webpack.js.org/loaders/file-loader/) - 解析文件引入
+    - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
+    - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
+    - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 DOM 中
+    - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css @import 和 url()，可以启用 css module
+    - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
+    - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
+    - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
+    - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
 - [rollup](https://rollupjs.org/guide/zh/) - 模块打包器，一般用于打包库，没接触过，可参考 [awesome-rollup](https://github.com/rollup/awesome)
 
 ## 工具集
@@ -138,10 +160,10 @@
 - [es6 入门教程](http://es6.ruanyifeng.com/)
 - ui
   - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
-  - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
+    - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
   - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
-  - [mdbootstrap](https://mdbootstrap.com/) - ui 库
-  - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
+    - [mdbootstrap](https://mdbootstrap.com/) - ui 库
+    - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
   - [tailwindcss](https://tailwindcss.com/)
   - [bulma](https://bulma.io/documentation/)
   - [primer](https://primer.style/css)
@@ -266,10 +288,10 @@
   - [rematch](https://rematch.github.io/rematch/)
   - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
 - ui
-  - [react-suite](https://rsuitejs.com/)
-  - [antd](https://ant.design/docs/react/introduce-cn)
-  - [material-ui](https://material-ui.com/zh/)
   - [blueprint](https://blueprintjs.com/docs/)
+  - [react-suite](https://rsuitejs.com/)
+  - [antd](https://ant.design/docs/react/introduce-cn) - 小心圣诞彩蛋
+  - [material-ui](https://material-ui.com/zh/)
   - [react-rainbow](https://react-rainbow.io/)
   - [react-bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
   - [semantic-ui-react](https://react.semantic-ui.com/)
