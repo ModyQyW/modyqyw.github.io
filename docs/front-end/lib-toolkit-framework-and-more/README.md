@@ -89,8 +89,11 @@
 - [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
   - [yorkie](https://github.com/yyx990803/yorkie) - husky 简化版
 - ci/cd
-  - [travis](https://travis-ci.org/)
-  - [circle](https://circleci.com/)
+  - [travis-ci](https://travis-ci.org/)
+  - [circle-ci](https://circleci.com/)
+  - [jenkins](https://www.jenkins.io/zh/)
+  - [github-ci](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration)
+  - [gitlab-ci](https://docs.gitlab.com/ee/ci/)
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
 - git
   - [pro git](https://git-scm.com/book/en/v2)
