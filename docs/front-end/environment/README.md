@@ -115,22 +115,16 @@
 - [Gitako](https://addons.mozilla.org/en-US/firefox/addon/gitako-github-file-tree/)
 - [Google Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
 - [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
-- [To Google Translate](https://addons.mozilla.org/en-US/firefox/addon/to-google-translate/) - 有 deepL 就可以不用了
 - [uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
 - [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
 
 ## chrome 插件
 
-- [谷歌访问助手](https://github.com/hyyoxhk/google-access-helper) - 不要 star，用 v2ray 的话可以不用这个
 - [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
-- [Google 翻译](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb) - 有 deepL 就可以不用了
-- [LambdaTest Screenshots](https://chrome.google.com/webstore/detail/lambdatest-screenshots/fjcjehbiabkhkdbpkenkhaahhopildlh)
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-CN)
-- [Mac迅雷下载支持](https://chrome.google.com/webstore/detail/mac%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD%E6%94%AF%E6%8C%81/bclmkgofhdgekpoamoialodjdloiilod)
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
-- [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg) - 自动冻结一段时间没有使用的标签页
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=zh-CN) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 - [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)

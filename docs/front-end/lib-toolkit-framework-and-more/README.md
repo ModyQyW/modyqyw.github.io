@@ -94,6 +94,7 @@
   - [jenkins](https://www.jenkins.io/zh/)
   - [github-ci](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration)
   - [gitlab-ci](https://docs.gitlab.com/ee/ci/)
+- [LambdaTest](https://www.lambdatest.com/) - 在线测试工具，在 2000+ 浏览器和操作系统上进行实时互动和自动跨浏览器在线测试
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
 - git
   - [pro git](https://git-scm.com/book/en/v2)
