@@ -12,6 +12,9 @@
 - [语雀](https://www.yuque.com/)
 - [知识星球](https://www.zsxq.com/)
 - [极客时间](https://time.geekbang.org/)
+- [mdn](https://developer.mozilla.org/zh-CN/)
+- [css-tricks](https://css-tricks.com/)
+- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 - [霹雳霹雳](https://www.bilibili.com)
 
 <Vssue />

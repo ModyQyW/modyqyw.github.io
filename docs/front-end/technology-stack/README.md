@@ -4,9 +4,7 @@
 
 ## 原生
 
-- PC 端网页
-  - jquery 1 + bootstrap 3 + bootstrap-table
-- 移动端网页
+- PC 端 / 移动端网页
   - jquery 1 + bootstrap 3 + bootstrap-table
 - 移动端应用
   - cordova

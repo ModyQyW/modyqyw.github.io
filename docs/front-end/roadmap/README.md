@@ -12,6 +12,7 @@
   - 计算机组成原理
   - 操作系统原理
   - 计算机网络原理
+    - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
   - 计算机网络安全
   - 多媒体技术基础
   - 程序设计入门，即 C/C++/Java 入门
@@ -20,12 +21,17 @@
   - 数据库入门
   - 网页原生：html + css + js
     - [前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)
+    - [css-tricks](https://css-tricks.com/)
+      - [A complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    - [you-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css)
     - [廖雪峰 js 全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
     - [js 快速入门](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
     - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
-    - [MDN 文档](https://developer.mozilla.org/)
-    - [正则表达式](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
     - [es6 入门](http://es6.ruanyifeng.com/)
+    - [you-dont-know-js](https://github.com/getify/You-Dont-Know-JS)
+    - [front-end-checklist](https://github.com/thedaviddias/Front-End-Checklist)
+    - [正则表达式](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+    - [MDN 文档](https://developer.mozilla.org/)
   - canvas
     - [廖雪峰 - canvas](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143449990549914b596ac1da54a228a6fa9643e88bc0c000)
     - [MDN - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
@@ -46,6 +52,7 @@
   - webpack，rollup 等打包工具及配套
   - jest，mocha 等测试工具及配套
   - Node.js，Koa，Egg
+    - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - 进阶
     - [前端进阶 1](https://yuchengkai.cn/home/)
     - [前端进阶 2](https://muyiy.cn/)
@@ -54,7 +61,7 @@
     - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章
     - [ant-design-pro](https://ant-design-pro.gitee.io/index-cn)
   - 面试
-    - [75 个JavaScript面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+    - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
     - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
     - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
     - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
