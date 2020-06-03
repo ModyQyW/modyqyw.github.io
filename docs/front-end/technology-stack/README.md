@@ -1,6 +1,12 @@
 # 技术栈
 
-基于个人喜好推荐的技术栈。eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合拳就不再重复说了。
+基于个人喜好推荐的技术栈。
+
+eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合拳就不再重复说了。
+
+移动端应用建议优先原生，其次 uni-app，最次 taro / rn。
+
+小程序建议优先 taro，其次 uni-app，再次原生。
 
 ## 原生
 
