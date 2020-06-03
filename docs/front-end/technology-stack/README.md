@@ -26,7 +26,10 @@
 
 ## Vue 系
 
-vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / element-ui(pc, scss) / vant(mobile, less) + tailwindcss(vuetify 不需要)
+vue 全家桶 = vue + vue-router + vuex + tailwindcss(vuetify 不需要)
+
+- less - antd-vue(pc) / vant(mobile)
+- scss - vuetify(pc & mobile) / element-ui(pc) / nut-ui(mobile) / zarm-ui(mobile)
 
 - PC 端网页
   - vue 全家桶，使用 PC 端组件库
@@ -47,7 +50,10 @@ vue 全家桶 = vue + vue-router + vuex + vuetify(pc & mobile, scss) / element-u
 
 ## React 系
 
-react 全家桶 = umi + unstated-next / hooks / @umijs/plugin-model / redux / mobx + blueprint(pc, scss & less) / react-suite(pc, less) / antd(pc, less) / antd-mobile(mobile, less) + tailwindcss
+react 全家桶 = umi(带 router) + unstated-next / hooks / @umijs/plugin-model / redux + tailwindcss +
+
+- less - antd(pc) / react-suite(pc) / blueprint(pc) / antd-mobile(mobile)
+- scss - zent(pc) / zarm(mobile)
 
 - PC 端网页
   - react 全家桶，使用 PC 端组件库

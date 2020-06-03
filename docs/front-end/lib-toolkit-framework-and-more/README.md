@@ -201,16 +201,16 @@
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
   - [element](https://element.eleme.cn/#/zh-CN/component/installation)
     - [pl-table](https://github.com/livelyPeng/pl-table) - el-table 增强版
-  - [antd-vue](https://www.antdv.com/)
+  - [antd-vue](https://www.antdv.com/) - 不够完善，不建议使用
   - [viewui](https://www.iviewui.com/docs/introduce)
   - [buefy](https://github.com/buefy/buefy/)
   - [bootstrap-vue](https://bootstrap-vue.js.org/docs)
-  - [vue-material](https://vuematerial.io/getting-started)
-  - [muse-ui](https://muse-ui.org/#/zh-CN/installation)
-  - [mint-ui](https://mint-ui.github.io/docs/#/zh-cn2)
-  - [cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start)
+  - [vue-material](https://vuematerial.io/getting-started) - 建议使用更好的 vuetify
+  - [muse-ui](https://muse-ui.org/#/zh-CN/installation) - 断更很久，不建议使用
+  - [mint-ui](https://mint-ui.github.io/docs/#/zh-cn2) - 断更很久，不建议使用
+  - [cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start) - 使用 stylus，使用率较低，不建议使用
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
-  - [mand-mobile](https://didi.github.io/mand-mobile/)
+  - [mand-mobile](https://didi.github.io/mand-mobile/) - 金融场景
   - [nut-ui](http://nutui.jd.com/#/intro)
   - [zarm](https://zhongantech.github.io/zarm-vue/#/documents/quick-start)
   - [onsen-ui](https://onsen.io/v2/guide/vue/)
