@@ -1,6 +1,6 @@
 # 技术栈
 
-基于个人喜好推荐的技术栈。
+基于个人喜好推荐的技术栈。eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合拳就不再重复说了。
 
 ## 原生
 
