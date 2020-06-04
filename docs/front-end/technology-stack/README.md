@@ -35,16 +35,16 @@ eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合
 vue 全家桶 = vue + vue-router + vuex + tailwindcss(vuetify 不需要)
 
 - less - antd-vue(pc) / vant(mobile)
-- scss - vuetify(pc & mobile) / element-ui(pc) / nut-ui(mobile) / zarm-ui(mobile)
+- scss - vuetify(pc & mobile) / element-ui(pc) / nut-ui(mobile) / zarm-vue(mobile)
 
 - PC 端网页
   - vue 全家桶，使用 PC 端组件库
 - 移动端网页
   - vue 全家桶，使用移动端组件库
 - 移动端应用
-  - uni-app + vuex + @modyqyw/mp-scss
+  - uni-app + vuex + @modyqyw/mp-scss + uview-ui
 - 小程序
-  - uni-app + vuex + @modyqyw/mp-scss
+  - uni-app + vuex + @modyqyw/mp-scss + uview-ui
 - 桌面应用
   - PC 端网页选型 + electron
 
@@ -68,7 +68,7 @@ react 全家桶 = umi(带 router) + unstated-next / hooks / @umijs/plugin-model 
 - 移动端应用
   - expo + react-router / react-navigation + unstated-next + react-native-elements + antd-rn
 - 小程序
-  - taro + redux + @modyqyw/mp-scss
+  - taro + redux + @modyqyw/mp-scss + taro-ui
 - 桌面应用
   - PC 端网页选型 + electron
 

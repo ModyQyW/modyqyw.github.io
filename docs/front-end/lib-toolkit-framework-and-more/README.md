@@ -212,7 +212,7 @@
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
   - [mand-mobile](https://didi.github.io/mand-mobile/) - 金融场景
   - [nut-ui](http://nutui.jd.com/#/intro)
-  - [zarm](https://zhongantech.github.io/zarm-vue/#/documents/quick-start)
+  - [zarm-vue](https://zhongantech.github.io/zarm-vue/#/documents/quick-start)
   - [onsen-ui](https://onsen.io/v2/guide/vue/)
   - [prime](https://primefaces.org/primevue/showcase/#/setup)
 - cli
@@ -373,6 +373,9 @@
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)
   - [fre](https://github.com/yisar/fre) - 原理类似 vue 3 的类 react 库
   - [inferno](https://infernojs.org/) - 类 react 库
+  - [react-use](https://github.com/streamich/react-use) - hooks 包
+    - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
+  - [umi-hooks](https://hooks.umijs.org/zh-CN) - hooks 包
 - 进阶核心知识点
   - createElement，render，Component
   - virtual dom
