@@ -1,5 +1,7 @@
 # 学习路径
 
+- [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+- [前端学习资料合集](https://github.com/fyuanfen/note)
 - [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
 - [orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
 - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
@@ -56,6 +58,7 @@
   - 进阶
     - [前端进阶 1](https://yuchengkai.cn/home/)
     - [前端进阶 2](https://muyiy.cn/)
+    - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
     - [前端工程化](https://github.com/fouber/blog)
   - 实战
     - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章

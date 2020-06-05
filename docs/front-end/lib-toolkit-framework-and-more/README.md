@@ -20,9 +20,10 @@
 - [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服
 - [Material Design](https://material.io/) - 谷歌
 - [Fluent Design](https://www.microsoft.com/design/fluent/) - 微软
-- [Primer Design](https://primer.style/) - Github
-- [Tea Design](https://tea-design.github.io/) - 腾讯
 - [DevUI Design](https://devui.design/) - 华为
+- [Primer Design](https://primer.style/) - Github
+- [Eva Design](https://eva.design/)
+- [Tea Design](https://tea-design.github.io/) - 腾讯
 
 ## 项目体系
 
@@ -89,6 +90,7 @@
 - [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
   - [yorkie](https://github.com/yyx990803/yorkie) - husky 简化版
 - ci/cd
+  - [flow-ci](https://flow.ci/)
   - [travis-ci](https://travis-ci.org/)
   - [circle-ci](https://circleci.com/)
   - [jenkins](https://www.jenkins.io/zh/)
@@ -102,6 +104,7 @@
 ## 编译打包
 
 - [babel](https://babeljs.io/) - js 转译器，转换浏览器未支持的 js 特性，搭配 webpack 使用时用 babel-loader 做转译
+  - [babel 教程](https://www.jiangruitao.com/docs/babel/)
   - [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
   - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - 常与 @babel/preset-env 搭配使用
   - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
@@ -184,12 +187,18 @@
 
 ## typescript
 
-- [入门教程](https://ts.xcatliu.com/basics)
-- [官方教程](https://www.typescriptlang.org/docs/home.html)
+- 教程
+  - [入门教程](https://ts.xcatliu.com/basics)
+  - [官方教程](https://www.typescriptlang.org/docs/home.html)
 
 ## vue 及相关生态
 
-- [中文文档](https://cn.vuejs.org/v2/guide/)
+- 教程
+  - [中文文档](https://cn.vuejs.org/v2/guide/)
+  - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
+  - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
+  - [vue 2.5 源码分析](https://github.com/ustbhuangyi/vue-analysis)
+  - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config)
 - [devtools](https://github.com/vuejs/vue-devtools)
 - 路由
   - [vue-router](https://router.vuejs.org/zh/)
@@ -201,8 +210,9 @@
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
   - [element](https://element.eleme.cn/#/zh-CN/component/installation)
     - [pl-table](https://github.com/livelyPeng/pl-table) - el-table 增强版
-  - [antd-vue](https://www.antdv.com/) - 不够完善，不建议使用
+  - [antd-vue](https://www.antdv.com/)
   - [viewui](https://www.iviewui.com/docs/introduce)
+  - [hey-ui](https://www.heyui.top/)
   - [buefy](https://github.com/buefy/buefy/)
   - [bootstrap-vue](https://bootstrap-vue.js.org/docs)
   - [vue-material](https://vuematerial.io/getting-started) - 建议使用更好的 vuetify
@@ -242,8 +252,9 @@
 - 衍生
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
+  - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
 - 进阶核心知识点
-  - 初始化流程
+  - 响应式系统
   - 事件机制
   - virtual dom
   - diff 算法
@@ -279,9 +290,15 @@
 
 ## react 及相关生态
 
-- [英文文档](https://reactjs.org/docs/getting-started.html)
-- [中文文档](https://zh-hans.reactjs.org/docs/getting-started.html)
-- [react-training](https://reacttraining.com/)
+- 教程
+  - [react.js 小书](https://github.com/huzidaha/react-naive-book)
+  - [react 源码解析](https://github.com/KieSun/react-interpretation)
+  - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
+  - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
+  - [react-training](https://reacttraining.com/)
+  - [road to react](https://www.roadtoreact.com/)
+  - [英文文档](https://reactjs.org/docs/getting-started.html)
+  - [中文文档](https://zh-hans.reactjs.org/docs/getting-started.html)
 - [devtools](https://github.com/facebook/react/tree/master/packages/react-devtools)
 - 路由
   - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
@@ -303,6 +320,7 @@
   - [zent](https://youzan.github.io/zent/zh/guides/install)
   - [react-md](https://react-md.dev/v1/)
   - [shineout](https://shine.wiki/)
+  - [zhui](https://zhui-team.github.io/zhui/) - 中国风组件库
   - [antd-mobile](https://mobile.ant.design/docs/react/introduce-cn)
   - [zarm](https://zarm.design/#/components/quick-start)
   - [react-desktop](http://reactdesktop.js.org/)
@@ -313,6 +331,7 @@
   - [primer](https://primer.style/components)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
+    - [blitz](https://github.com/blitz-js/blitz) - 基于 next 在封装，全栈框架
   - [umi](https://umijs.org/zh-CN)
     - [@umijs/plugin-qiankun](https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun) - 微前端解决方案
   - [create-react-app](https://create-react-app.dev/) 无 ssr 相关说明
@@ -329,6 +348,7 @@
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [antd-rn](https://rn.mobile.ant.design/docs/react/introduce-cn)
+      - [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
       - [mand-mobile-rn](https://didi.github.io/mand-mobile-rn/?path=/story/mand-mobile-rn--%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5)
     - cli
       - [expo](https://docs.expo.io/)
@@ -412,8 +432,9 @@
 
 ## Angular 及相关生态
 
-- [英文文档](https://angular.io/)
-- [中文文档](https://angular.cn/)
+- 教程
+  - [英文文档](https://angular.io/)
+  - [中文文档](https://angular.cn/)
 - [devtools](https://augury.rangle.io/)
 - 路由
   - 自带路由
@@ -424,7 +445,9 @@
 - ui
   - [angular-material](https://material.angular.cn/)
   - [ng-zorro](https://ng.ant.design/docs/introduce/zh)
-  - [devui](https://devui.design/)
+  - [nebular](https://akveo.github.io/nebular/docs/getting-started/w)
+  - [dev-ui](https://devui.design/)
+  - [tanbo-ui](https://www.tanboui.com/)
   - [ng-zorro-mobile](https://ng.mobile.ant.design/#/docs/introduce/zh)
 - cli
   - [angular-cli](https://angular.cn/cli)
@@ -478,57 +501,14 @@
 
 node.js 一般用来做服务器端的中间层。
 
-## 在线工具
+## 编程用字体
 
-- [国外在线正则](https://regex101.com/)
-- [国内在线正则](http://tools.jb51.net/regex/create_reg)
-- [逻辑图](https://www.processon.com/)
-- [兼容性查询 caniuse](https://caniuse.com/)
-- [兼容性查询 css](https://www.campaignmonitor.com/css/)
-- [浏览器支持列表](https://browserl.ist/)
-- [全网音乐免费下载](https://music.sonimei.cn/)
-- [UZER.ME](https://uzer.me/) - 云端超级应用空间
-- [nicetool](https://www.nicetool.net/) - 简单易用的工具集合
-- [tool](https://tool.lu/) - 程序员工具箱
-- [BigJPG](https://bigjpg.com/) - 人工智能图片放大
-- [SmallPDF](https://smallpdf.com/cn/) - 在线 PDF 工具
-- [Convertio](https://convertio.co/zh/) - 在线格式转换
-- [在线格式转换](https://www.alltoall.net/)
-
-## 图标
-
-- [iconfont](https://www.iconfont.cn/)
-- [icomoon](https://icomoon.io/)
-- [ionicons](https://ionicons.com/)
-- [fontawesome](https://fontawesome.com/)
-- [ant-design-icons](https://github.com/ant-design/ant-design-icons)
-- [octicons](https://octicons.github.com/)
-- [material-icons](https://google.github.io/material-design-icons/)
-- [material-design-icons](https://materialdesignicons.com/)
-- [flaticon](https://www.flaticon.com/)
-
-## 免费可商用图片
-
-- [pexels](https://www.pexels.com/zh-cn/)
-- [unsplash](https://unsplash.com/)
-- [stocksnap](https://stocksnap.io/)
-- [creative-vix](https://www.pexels.com/@creative-vix)
-- [streetwill](http://streetwill.co/)
-- [gratisography](https://gratisography.com/)
-- [texture](https://www.textures.com/)
-- [pixabay](https://pixabay.com/)
-- [designdeck](http://designdeck.co.uk/index.html)
-
-## 字体
-
-- Menlo
+- [Menlo](https://www.cufonfonts.com/font/menlo)
 - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
-- Dank Mono
 - [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Fira Code](https://github.com/tonsky/FiraCode/releases)
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
-- Monaco
-- [fontbook](https://fontbook.wiki/) - 免费商用字体站
+- [Fira Code](https://github.com/tonsky/FiraCode/releases)
+- [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 
 ## 参考
 
