@@ -14,7 +14,6 @@
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Ditto](https://ditto-cp.sourceforge.io/) - 管理剪切板
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Firefox](https://www.firefox.com.cn/download/#more)
@@ -25,14 +24,13 @@
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [nvm-windows](https://github.com/coreybutler/nvm-windows) - 方便管理 node 多版本，由于太久没有更新且存在一定问题，如果只需要单版本，可以考虑直接安装 node 版本，自行设置路径变量
-- [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui，但是安装之后无法通过 utools 直接启动，你也可以考虑使用 [TortoiseGit](https://tortoisegit.org/)
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但是 wox 只支持 windows
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
@@ -73,14 +71,14 @@
 - [Countdown Timer Plus](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E8%AE%A1%E6%97%B6%E5%99%A8-countdown-timer-plus/id1150771803) - 倒计时，鞭策一下自己
 - [Dash](https://kapeli.com/dash) - 离线文档
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
+- [Dozer](https://github.com/Mortennn/Dozer) - 隐藏状态栏过多的图标
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
@@ -96,11 +94,11 @@
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
 - [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
-- [PicGo](https://github.com/Molunerfinn/PicGo) - 图床工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
+- [ResponsivelyApp](https://github.com/manojVivek/responsively-app) - 同时查看不同屏幕的网页表现
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Trello](https://trello.com/platforms) - 看板工具
@@ -372,16 +370,14 @@ npm i -g @tarojs/cil
 npm i -g @umijs/create-umi-app
 npm i -g @vue/cli
 npm i -g @vue/devtools
-npm i -g create-next-app
+npm i -g cgr
 npm i -g create-nuxt-app
 npm i -g expo-cli
-npm i -g fanyi
-npm i -g gatsby-cli
 npm i -g np
 npm i -g npm@lts
 npm i -g npm-check
+npm i -g prettier
 npm i -g react-devtools
-npm i -g release
 npm i -g ts-node
 npm i -g typescript
 npm i -g yarn
@@ -462,68 +458,54 @@ yarn
 
 ### 插件列表
 
-可直接点击。
-
-- [`Ant Design Snippets`](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
-- [`Ant Design Vue helper`](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antdv 提示
-- [`any-rule`](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
-- [`Bracket Pair Colorizer 2`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
-- [`Change Case`](https://marketplace.visualstudio.com/items?itemName=hjdarnel.change-case) - 变换变量名称格式
-- [`Code Runner`](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
-- [`Code Spell Checker`](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写 js 时潜在的错误
-- [`Comment Translate`](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) - 翻译注释
-- [`Debugger for Chrome`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-- [`Debugger for Firefox`](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
-- [`Debugger for Microsoft Edge`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge)
-- [`DotENV`](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 高亮`.env`键值对
-- [`ES7 React/Redux/GraphQL/React-Native snippets`](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
-- [`ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
-- [`Highlight Matching Tag`](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
-- [`Image preview`](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
-- [`indent-rainbow`](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
-- [`JavaScript (ES6) code snippets`](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
-- [`JavaScript and TypeScript Nightly`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 允许 vscode 内部使用 typescript@next
-- [`jQuery Snippets`](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
-- [`language-stylus`](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
-- [`Less IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
-- [`Live Server`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
-- [`Lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
-- [`Markdown All in One`](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
-- [`Markdown Preview Enhanced`](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
-- [`markdownlint`](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
-- [`Material Icon Theme`](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - Material 图标主题
-- [`Material Theme`](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) - Material 主题
-- [`minapp`](https://marketplace.visualstudio.com/items?itemName=qiu8310.minapp-vscode) - 微信小程序标签和属性智能补全，支持原生小程序，mpvue 和 wepy
-- [`Prettier`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
-- [`React Hooks Snippets`](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
-- [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) - 在 vscode 中发起请求
-- [`Sass`](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
-- [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
-- [`Settings Sync`](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
-- [`stylelint`](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
-- [`SVG`](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
-- [`Tailwind CSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
-- [`Todo Tree`](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
-- [`uniapp-snippet`](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
-- [`Vetur`](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
-- [`Visual Studio IntelliCode`](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
-- [`vscode-element-helper`](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
-- [`Vue Peek`](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
-- [`vuetify-vscode`](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
-- [`WakaTime`](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
-- [`wpy-beautify`](https://marketplace.visualstudio.com/items?itemName=doingweb.wpy-beautify) - 美化 wpy 代码，如果不写 wepy 的话可以卸载了
+- [Ant Design Snippets](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
+- [Ant Design Vue helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antd-vue 提示
+- [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
+- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写 js 时潜在的错误
+- [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+- [Debugger for Firefox](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
+- [Debugger for Microsoft Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge)
+- [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
+- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
+- [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
+- [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
+- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
+- [jQuery Snippets](https://marketplace.visualstudio.com/items?itemName=hridoy.jquery-snippets) - jq 代码段
+- [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
+- [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
+- [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
+- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
+- [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
+- [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
+- [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
+- [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
+- [uniapp-snippet](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
+- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
+- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
+- [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
+- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题
+- [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
+- [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
+- [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
 
 ### `settings.json`
 
 ```json
 {
-  // 插件 Comment Translate 使用，指定翻译的目标语言
-  "commentTranslate.targetLanguage": "zh-CN",
-  // 插件 Comment Translate 使用，合并翻译多行注释，源语言只支持英文
-  "commentTranslate.multiLineMerge": true,
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
   "cSpell.userWords": [],
-  // vscode 自带功能，指定是否校验 css，这里设置为否
+  // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
   "debug.console.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
@@ -531,17 +513,11 @@ yarn
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装 prettier 插件
+  // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // vscode 自带功能，修改编辑区的字体族
   "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，控制编辑区在输入时是否自动提示，这里设置全都提示
-  "editor.quickSuggestions": {
-    "comments": true,
-    "strings": true,
-    "other": true
-  },
-  // vscode 自带功能，控制编辑区怎么放置 snippet 的提示，这里设置把 snippet 的提示放到所有提示的顶部
+  // vscode 自带功能，控制编辑区怎么放置 snippet 的提示，这里设置把 snippet 的提示放到所有提示的顶部，配合插件 Visual Studio IntelliCode 使用
   "editor.snippetSuggestions": "top",
   // vscode 自带功能，控制编辑区的提示列表出现时默认选择什么，这里设置默认选择第一个，配合插件 Visual Studio IntelliCode 使用
   "editor.suggestSelection": "first",
@@ -598,10 +574,6 @@ yarn
   "liveServer.settings.donotVerifyTags": true,
   // vscode 自带功能，预览 markdown 文件时的字体族
   "markdown.preview.fontFamily": "-apple-system, linkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
-  // 插件 minapp 使用，指定是否禁用自动配置文件关联，这里设置为是
-  "minapp-vscode.disableAutoConfig": true,
-  // 插件 REST CLIENT 使用，指定响应预览的字体大小
-  "rest-client.fontSize": 14,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
   "scss.validate": false,
   // 插件 Setting Sync 使用，指定使用的 github gist
@@ -637,12 +609,11 @@ yarn
   "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
+  // 插件 Visual Studio IntelliCode 使用
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // vscode 自带功能，指定工作台颜色主题，需要插件 Material Theme
-  "workbench.colorTheme": "Community Material Theme Darker",
-  // vscode 自带功能，指定工作台图标主题，需要插件 Material Icon Theme
-  "workbench.iconTheme": "material-icon-theme",
-  // vscode 自带功能，指定工作台启动式的显示，这里设置为新的未命名文件
+  // vscode 自带功能，指定图标主题，这里设置为 vscode-icons，需要安装对应的插件
+  "workbench.iconTheme": "vscode-icons",
+  // vscode 自带功能，指定工作台启动时的显示，这里设置为新的未命名文件
   "workbench.startupEditor": "newUntitledFile",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
   "[css]": {
@@ -683,7 +654,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
 
 点击 vscode 左下角齿轮，点击`User Snippets`，然后选择对应的语言，会自动生成`[语言].json`文件供修改。
 
-下面给出我自己的配置，注意：这些配置跟`settings.json`里的配置挂钩。
+下面给出一个示例配置。
 
 `css.json`
 
@@ -785,880 +756,6 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
   "taro h5": {
     "prefix": ["taro-h5"],
     "body": ["h5"]
-  }
-}
-```
-
-`javascript.json`
-
-```json
-{
-  // .vue 文件中的 script 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`javascriptreact.json`
-
-```json
-{
-  // .js 文件和 .jsx 文件内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`less.json`
-
-```json
-{
-  // .less 文件和 .vue 文件中的 style lang="less" 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`sass.json`
-
-```json
-{
-  // .sass 文件和 .vue 文件中的 style lang="sass" 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`scss.json`
-
-```json
-{
-  // .scss 文件和 .vue 文件中的 style lang="scss" 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`stylus.json`
-
-```json
-{
-  // .styl 文件，.stylus 文件和 .vue 文件中的 style lang="stylus" 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-ifdef"],
-    "body": ["/* #ifdef $0 */", "", "/* #endif */"]
-  },
-  "taro 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["taro-ifndef"],
-    "body": ["/* #ifndef $0 */", "", "/* #endif */"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`typescript.json`
-
-```json
-{
-  // .vue 文件中的 script lang="ts" 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`typescriptreact.json`
-
-```json
-{
-  // .ts 文件和 .tsx 文件内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["// #ifdef $0", "", "// #endif"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["// #ifndef $0", "", "// #endif"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
-  },
-  "taro 环境变量编译格式 - 仅在某平台出现": {
-    "prefix": ["taro-env"],
-    "body": ["process.env.TARO_ENV === '$0'"]
-  },
-  "taro 微信小程序平台": {
-    "prefix": [
-      "taro-mp-weixin",
-      "taro-mp-wechat",
-      "taro-weapp",
-      "taro-weixin",
-      "taro-wechat"
-    ],
-    "body": ["weapp"]
-  },
-  "taro 支付宝小程序平台": {
-    "prefix": ["taro-mp-alipay", "taro-mp-my", "taro-alipay", "taro-my"],
-    "body": ["alipay"]
-  },
-  "taro 百度小程序平台": {
-    "prefix": ["taro-mp-baidu", "taro-mp-swan", "taro-baidu", "taro-swan"],
-    "body": ["swan"]
-  },
-  "taro 字节跳动小程序平台": {
-    "prefix": ["taro-mp-toutiao", "taro-mp-tt", "taro-toutiao", "taro-tt"],
-    "body": ["tt"]
-  },
-  "taro QQ 小程序平台": {
-    "prefix": ["taro-mp-qq", "taro-qq"],
-    "body": ["qq"]
-  },
-  "taro 快应用平台": {
-    "prefix": ["taro-quickapp", "taro-qa"],
-    "body": ["quickapp"]
-  },
-  "taro rn": {
-    "prefix": ["taro-rn"],
-    "body": ["rn"]
-  },
-  "taro h5": {
-    "prefix": ["taro-h5"],
-    "body": ["h5"]
-  }
-}
-```
-
-`vue-html.json`
-
-```json
-{
-  // .vue 文件中的 template 标签内生效
-  "uni-app 条件编译格式 - 仅在某平台出现": {
-    "prefix": ["uni-ifdef"],
-    "body": ["<!-- #ifdef $0 -->", "", "<!-- #endif -->"]
-  },
-  "uni-app 条件编译格式 - 仅在某平台不出现": {
-    "prefix": ["uni-ifndef"],
-    "body": ["<!-- #ifndef $0 -->", "", "<!-- #endif -->"]
-  },
-  "uni-app 小程序平台": {
-    "prefix": ["uni-mp"],
-    "body": ["MP"]
-  },
-  "uni-app 微信小程序平台": {
-    "prefix": [
-      "uni-mp-weixin",
-      "uni-mp-wechat",
-      "uni-weapp",
-      "uni-weixin",
-      "uni-wechat"
-    ],
-    "body": ["MP-WEIXIN"]
-  },
-  "uni-app 支付宝小程序平台": {
-    "prefix": ["uni-mp-alipay", "uni-mp-my", "uni-alipay", "uni-my"],
-    "body": ["MP-ALIPAY"]
-  },
-  "uni-app 百度小程序平台": {
-    "prefix": ["uni-mp-baidu", "uni-mp-swan", "uni-baidu", "uni-swan"],
-    "body": ["MP-BAIDU"]
-  },
-  "uni-app 字节跳动小程序平台": {
-    "prefix": ["uni-mp-toutiao", "uni-mp-tt", "uni-toutiao", "uni-tt"],
-    "body": ["MP-TOUTIAO"]
-  },
-  "uni-app QQ 小程序平台": {
-    "prefix": ["uni-mp-qq", "uni-qq"],
-    "body": ["MP-QQ"]
-  },
-  "uni-app app-plus": {
-    "prefix": ["uni-app", "uni-app-plus"],
-    "body": ["APP-PLUS"]
-  },
-  "uni-app app-plus-nvue": {
-    "prefix": ["uni-app-nvue", "uni-app-plus-nvue"],
-    "body": ["APP-PLUS-NVUE"]
-  },
-  "uni-app h5": {
-    "prefix": ["uni-h5"],
-    "body": ["H5"]
   }
 }
 ```
@@ -1767,10 +864,10 @@ module.exports = {
 ```json
 {
   "devDependencies": {
-    "stylelint": "~13.5.0",
-    "@modyqyw/stylelint-config-scss": "~1.0.0",
-    "stylelint-formatter-pretty": "~2.0.0",
-    "stylelint-webpack-plugin": "~2.0.0"
+    "stylelint": "^13.0.0",
+    "@modyqyw/stylelint-config-scss": "^1.0.0",
+    "stylelint-formatter-pretty": "^2.0.0",
+    "stylelint-webpack-plugin": "^2.0.0"
   },
   "stylelint": {
     "extends": ["@modyqyw/stylelint-config-scss"]
