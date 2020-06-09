@@ -21,7 +21,7 @@
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但 wox 只支持 windows
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
@@ -63,7 +63,7 @@
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
@@ -82,13 +82,13 @@
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
-- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
+- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理，超级右键对 QSpace 不起效
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app) - 同时查看不同屏幕的网页表现
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Trello](https://trello.com/platforms) - 看板工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
-- [uTools](https://u.tools/) - 全平台支持的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macos
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macOS
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + ms office
