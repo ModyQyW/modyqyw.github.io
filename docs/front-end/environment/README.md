@@ -23,7 +23,6 @@
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
-- [Zeal](https://zealdocs.org/) - 离线文档
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
@@ -55,9 +54,9 @@
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [Countdown Timer Plus](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E8%AE%A1%E6%97%B6%E5%99%A8-countdown-timer-plus/id1150771803) - 倒计时，鞭策一下自己
-- [Dash](https://kapeli.com/dash) - 离线文档
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [Dozer](https://github.com/Mortennn/Dozer) - 隐藏状态栏过多的图标
+- [draw.io](https://github.com/jgraph/drawio-desktop/releases/) - 免费作图工具，包括流程图，思维导图等
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
