@@ -466,6 +466,7 @@ yarn
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - material 图标主题
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
@@ -596,8 +597,8 @@ yarn
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Visual Studio IntelliCode 使用
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // vscode 自带功能，指定图标主题，这里设置为 vscode-icons，需要安装对应的插件
-  "workbench.iconTheme": "vscode-icons",
+  // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
+  "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定工作台启动时的显示，这里设置为新的未命名文件
   "workbench.startupEditor": "newUntitledFile",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
@@ -746,6 +747,8 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
 ```
 
 ### `.editorconfig`
+
+[官网链接](https://editorconfig.org/)
 
 ```sh
 root = true

@@ -254,25 +254,21 @@
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
+  - [quasar](https://quasar.dev/) - 终极解决方案
 - 进阶核心知识点
-  - 响应式系统
+  - 模板编译器 vue-template-compiler 原理
+  - 响应式 reactive 系统原理，尤其是双向绑定
+  - virtual dom，diff 算法和异步更新策略
   - 事件机制
-  - virtual dom
-  - diff 算法
-  - 异步更新策略
-  - 双向绑定原理
-  - 响应式原理
-  - 模板编译器原理
   - 指令原理
   - 插槽原理
+  - 渲染函数和挂载方法的本质和应用
   - vue-router 原理及实现
   - vuex 原理及实现
-  - 组件概念，组件化思想和组件化机制
-  - 组件通信策略
+  - 组件概念，组件化思想，组件化机制，组件通信策略
   - 组件配置，构造函数和实例的关系
-  - 渲染函数和挂载方法的本质和应用
-  - 递归组件
   - 函数式组件
+  - 递归组件
   - 组件测试
   - 项目配置和规范
   - 权限控制
@@ -398,24 +394,19 @@
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
 - 进阶核心知识点
-  - createElement，render，Component
-  - virtual dom
-  - diff 算法
+  - createElement，render，Component 三个重要的 api
+  - virtual dom 和 diff 算法
   - fiber 架构，任务调度，渲染与更新
-  - suspense
-  - lazy
-  - 生命周期
+  - React.lazy
+  - 生命周期原理
   - react-router 原理及实现
   - redux 和 redux-react 原理及实现
   - mobx 和 mobx-react 原理及实现
-  - 组件概念，组件化思想和组件化机制
-  - 高阶组件 HOC
-  - 类组件
-  - 递归组件
-  - 函数式组件和 hooks
-  - 组件通信策略
+  - unstated-next 原理及实现
+  - 组件概念，组件化思想，组件化机制，高阶组件 HOC，组件通信策略
+  - 类组件，函数式组件和 hooks
   - 组件测试
-  - 弹窗组件实现
+  - Portal 和弹窗组件实现
   - 项目配置和规范
   - 权限控制
   - 路由和导航菜单的动态生成
@@ -509,7 +500,6 @@ node.js 一般用来做服务器端的中间层。
 - [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
-- [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 
 ## 参考
 
