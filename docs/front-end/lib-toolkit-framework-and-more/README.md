@@ -17,13 +17,14 @@
 
 ## 设计语言
 
+- [Atomic Design](https://atomicdesign.bradfrost.com/)
+  - [中文总结](https://www.uisdc.com/atomic-design-theory)
 - [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服
 - [Material Design](https://material.io/) - 谷歌
 - [Fluent Design](https://www.microsoft.com/design/fluent/) - 微软
 - [DevUI Design](https://devui.design/) - 华为
 - [Primer Design](https://primer.style/) - Github
 - [Eva Design](https://eva.design/)
-- [Tea Design](https://tea-design.github.io/) - 腾讯
 
 ## 项目体系
 
@@ -395,7 +396,7 @@
   - [inferno](https://infernojs.org/) - 类 react 库
   - [react-use](https://github.com/streamich/react-use) - hooks 包
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
-  - [umi-hooks](https://hooks.umijs.org/zh-CN) - hooks 包
+  - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
 - 进阶核心知识点
   - createElement，render，Component
   - virtual dom

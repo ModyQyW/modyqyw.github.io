@@ -6,33 +6,22 @@
 
 - [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，自带客户端
 
-## Windows
+## Windows - 偏向娱乐的配置
 
-- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 比较麻烦，wsl 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl2 比较麻烦，wsl2 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
 - [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了浏览器，可能会导致 ie 无法唤起开发者工具
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
-- [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
-- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Firefox](https://www.firefox.com.cn/download/#more)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Git](https://git-scm.com/downloads) - 建议将 git bash 作为默认 shell，非常强大
-- [Github Desktop](https://desktop.github.com/) - 分担一部分 sourcetree 的工作
 - [Google Chrome](https://www.google.cn/chrome/index.html)
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
-- [nvm-windows](https://github.com/coreybutler/nvm-windows) - 方便管理 node 多版本，由于太久没有更新且存在一定问题，如果只需要单版本，可以考虑直接安装 node 版本，自行设置路径变量
-- [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/) 等
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui，但是安装之后无法通过 utools 直接启动，你也可以考虑使用 [TortoiseGit](https://tortoisegit.org/)
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
-- [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
 - [Zeal](https://zealdocs.org/) - 离线文档
 - [百度网盘](http://pan.baidu.com/download)
@@ -43,12 +32,9 @@
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe)
 - [人人影视](http://app.rrys.tv/) - 看剧
 - [网易云音乐](https://music.163.com/#/download) - 听歌启动器
-- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
-- [语雀](https://www.yuque.com/install/desktop)
-- [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - 迅雷 U 享版 - 下载工具
 
-## macOS
+## macOS - 偏向开发的配置
 
 - [爱思助手](https://www.i4.cn/) - ios 手机用
 - [百度网盘](http://pan.baidu.com/download)
