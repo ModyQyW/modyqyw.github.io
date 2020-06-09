@@ -185,6 +185,7 @@
   - [dplyaer](https://dplayer.js.org/) - h5 播放器
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
   - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
+  - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 
 ## typescript
 
