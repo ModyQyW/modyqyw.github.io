@@ -16,9 +16,28 @@
 - [Github](https://github.com/ModyQyW)
 - [Github Page](https://modyqyw.github.io)
 
+## 关于工作
+
+- 统一开发工具与开发规范
+  - vscode
+  - prettier
+  - eslint + @modyqyw/eslint-config-xxx
+  - stylelint + @modyqyw/stylelint-config-xxx
+  - @commitlint/cli + @commitlint/config-conventional
+- 迁移、重构项目，收缩技术栈
+  - wepy -> taro，rn -> uni-app
+  - mobx -> unstated-next
+  - angularjs -> react(umi) + ts / vue(vue-cli)
+- 小程序样式库
+  - @modyqyw/mp-scss
+- 确立开发套路，减少不必要的选型时间
+- 整理相关资料，确立实习生培养路径，力求让实习生能在最短的时间得到最大的进步
+- 关注数据结构与算法，推进性能优化，推进历史代码优化和重构
+- 保持关注新技术，摆脱业务怪圈
+
 ## 关于更新
 
-更新只会在晚上和周末抽空完成。
+更新只会在晚上和周末抽空完成。遇到不可控因素（如赶业务，陪女朋友等），将会不可避免地推迟。
 
 催稿可以
 
