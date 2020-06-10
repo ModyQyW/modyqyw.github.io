@@ -615,22 +615,31 @@ yarn
     "editor.defaultFormatter": "octref.vetur"
   }
 }
-
 ```
 
 ### `Settings Sync`插件
 
 - 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：`F1 -> Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
 
-### 代码格式化
+### 代码格式化与校验
 
 文件内`F1 -> Format Document`，就会调用特定的 formatter 格式化第一次，保存时自动格式化第二次。
 
 我的配置是：
 
-- 对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 格式化第二次。
-- 对 css，less，scss 文件，使用`prettier`插件格式化第一次，保存时 Stylelint 格式化第二次。
-- 对 js(x) 和 ts(x) 文件，使用`prettier`插件格式化第一次，保存时 ESLint 格式化第二次。
+- 对 vue 文件，使用`vetur`插件配置中的 formatter 格式化第一次，保存时 ESLint 校验修复第二次。
+- 对 css，less，scss 文件，使用`prettier`插件格式化第一次，保存时 Stylelint 校验修复第二次。
+- 对 js(x) 和 ts(x) 文件，使用`prettier`插件格式化第一次，保存时 ESLint 校验修复第二次。
+
+如果你的 ESLint 配置中没有代码格式化的部分，你完全可以加入如下的配置。这将会在保存时先使用 ESLint 校验修复，再使用 formatter 格式化。
+
+```json
+{
+  ...,
+  "editor.formatOnSave": true,
+  ...
+}
+```
 
 TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TSLint 了，旧项目也应该安排升级到 ESLint。
 
@@ -838,7 +847,6 @@ module.exports = {
   "eslint-js.validateOnDocumentChanged": true,
   "explorer.iconTheme": "vs-seti"
 }
-
 ```
 
 ### 使用`stylelint`检查、自动修复样式
