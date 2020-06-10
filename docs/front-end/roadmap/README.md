@@ -60,6 +60,7 @@
     - [前端进阶 2](https://muyiy.cn/)
     - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
     - [前端工程化](https://github.com/fouber/blog)
+    - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
   - 实战
     - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章
     - [ant-design-pro](https://ant-design-pro.gitee.io/index-cn)
