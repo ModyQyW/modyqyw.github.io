@@ -481,7 +481,6 @@ yarn
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
 - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
-- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
 - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
@@ -770,11 +769,15 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
 ```
 
 ## webstorm
 
-等 webstorm 本地化完成后补充，配置里面英文太多看得头疼。
+等 webstorm 本地化完成后补充。
 
 ## hbuilderx
 

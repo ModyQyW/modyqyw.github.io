@@ -147,7 +147,18 @@ module.exports = {
 };
 ```
 
-###
+### 搭建环境
+
+首先安装 nvm。nvm 是一个用于管理 node 版本的工具，免去了升级 node 版本的繁琐工作。之后，示例的代码均基于 macOS，使用 linux 和 windows 的朋友请自行作相关调整。
+
+- [nvm for linux/macOS](https://github.com/nvm-sh/nvm)
+- [nvm for windows](https://github.com/coreybutler/nvm-windows)
+
+安装 nvm 之后，使用 nvm 来安装 node lts 版本（即长期支持版）。
+
+```sh
+nvm install --lts
+```
 
 ## rollup
 

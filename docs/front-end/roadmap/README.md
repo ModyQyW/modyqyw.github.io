@@ -1,5 +1,6 @@
 # 学习路径
 
+- [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
 - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
 - [前端学习资料合集](https://github.com/fyuanfen/note)
 - [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
@@ -20,6 +21,7 @@
   - 程序设计入门，即 C/C++/Java 入门
   - 数据结构与算法
   - 算法设计
+    - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
   - 数据库入门
   - 网页原生：html + css + js
     - [前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)

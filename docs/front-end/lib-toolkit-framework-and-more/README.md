@@ -391,6 +391,7 @@
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)
   - [fre](https://github.com/yisar/fre) - 原理类似 vue 3 的类 react 库
   - [inferno](https://infernojs.org/) - 类 react 库
+  - [formik](https://github.com/jaredpalmer/formik) - 表格解决方案
   - [react-use](https://github.com/streamich/react-use) - hooks 包
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
