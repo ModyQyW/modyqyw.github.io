@@ -235,7 +235,7 @@ module.exports = {
     sidebar: 'auto',
     sidebarDepth: 3,
     searchMaxSuggestions: 10,
-    lastUpdated: '上次更新',
+    lastUpdated: false,
     repo: 'ModyQyW/modyqyw.github.io',
     repoLabel: '查看源码',
     docsBranch: 'origin',
