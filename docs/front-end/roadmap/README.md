@@ -6,6 +6,7 @@
 - [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
 - [orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
 - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+- [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
 - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
 - 个人学习路径如下，相关库/框架/工具集[参考](./../lib/README.md)
   - 思维
