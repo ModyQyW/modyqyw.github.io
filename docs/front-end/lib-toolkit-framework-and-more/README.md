@@ -118,11 +118,13 @@
   - [cssnano](https://cssnano.co/) - 压缩 css
   - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss，element-ui 等使用，搭配 element-ui 等使用时需要添加白名单
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
-  - [devServer](https://webpack.js.org/configuration/dev-server/) - 快速开发
+  - [dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
   - [webpack-merge](https://github.com/survivejs/webpack-merge) - 合并配置
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain) - 链式生成并简化配置的修改操作
   - plugins
+    - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin) - 显示更友好的提示信息
+    - [progress-bar-webpack-plugin](https://github.com/clessg/progress-bar-webpack-plugin) - 显示进度条，无美化
     - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
     - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
     - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
@@ -130,6 +132,7 @@
     - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
     - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
     - [dll-plugin](https://webpack.js.org/plugins/dll-plugin/) - webpack 内置
+    - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) - 构建开始前移除上一次的构建产物
     - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
     - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
     - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset

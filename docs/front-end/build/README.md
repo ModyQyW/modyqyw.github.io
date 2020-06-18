@@ -30,7 +30,7 @@ webpack 4 是一个静态模块打包工具，分析依赖生成依赖图，最�
 
 #### 入口 entry
 
-entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`${projectRoot}/src/index.js`。
+entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`${PROJECT_DIR}/src/index.js`。
 
 ```js
 // webpack.config.js，假定该文件放在项目根目录下
@@ -46,7 +46,7 @@ module.exports = {
 
 #### 输出 output
 
-output 指定 webpack 在哪里存放、命名创建的 bundle，主要输出文件的默认值为`${projectRoot}/dist/main.js`，其他生成文件默认放在`${projectRoot}/dist`。
+output 指定 webpack 在哪里存放、命名创建的 bundle，主要输出文件的默认值为`${PROJECT_DIR}/dist/main.js`，其他生成文件默认放在`${PROJECT_DIR}/dist`。
 
 ```js
 // webpack.config.js，假定该文件放在项目根目录下
@@ -204,7 +204,7 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 然后安装 webpack 相关的依赖。`-D`表示安装的依赖显示在`devDependencies`字段中，表示该部分依赖只会在实际部署前起作用。
 
 ```sh
-npm add webpack@^4.0.0 webpack-cli@^3.0.0 -D
+npm add webpack@4 webpack-cli@3 -D
 ```
 
 创建一个内容简单的`index.js`。
@@ -265,7 +265,7 @@ npm run build
 我们先来安装一下相关的依赖。
 
 ```sh
-npm i copy-webpack-plugin@^6.0.0 html-webpack-plugin@^4.0.0 rimraf@^3.0.0 -D
+npm i copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 -D
 ```
 
 在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。`index.html`如下所示。
@@ -291,6 +291,9 @@ npm i copy-webpack-plugin@^6.0.0 html-webpack-plugin@^4.0.0 rimraf@^3.0.0 -D
 // ./src/webpack.config.js
 // 使用 path 模块来指定路径
 const path = require("path");
+// 使用 plugins
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // 指定模式为 production，即生产模式
@@ -318,17 +321,88 @@ module.exports = {
 
 ```
 
-但现在还不够，我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。我们再修改一下`package.json`中的`scripts`字段，修改后，每次构建前都会先清理已有的构建文件再开始构建。
+但现在还不够，我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。我们还需要加入一些额外的配置。
 
-```json
-...,
-  "scripts": {
-    "build": "rimraf dist && webpack"
+```js
+// ./src/webpack.config.js
+// 使用 path 模块来指定路径
+const path = require("path");
+// 使用 plugins
+const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  // 指定模式为 production，即生产模式
+  mode: "production",
+  // 指定入口为当前目录下的 src/app.js 文件，即项目根目录下的 src/app.js 文件
+  entry: path.resolve(__dirname, "src", "index.js"),
+  // 指定输出为当前目录下的 dist/bundle.js 文件，即项目根目录下的 src/bundle.js 文件
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
-  ...
+  // 指定插件
+  plugins: [
+    // 移除上一次的构建文件
+    new CleanPlugin(),
+    // 复制 ./public/favicon.ico 到 ./dist 目录下
+    new CopyPlugin({
+      patterns: [{ from: path.resolve(__dirname, "public", "favicon.ico") }],
+    }),
+    // 使用 ./public/index.html 作为模板
+    new HtmlPlugin({
+      title: "demo01",
+      template: path.resolve(__dirname, "public", "index.html"),
+    }),
+  ],
+};
+
 ```
 
-重新开始构建，之后可以看到`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`。🎉恭喜，一个简单的 webpack demo 已经完成啦～
+我们还可以加一点额外的处理，让它在打包的时候显示进度条。
+
+```js
+// ./src/webpack.config.js
+// 使用 path 模块来指定路径
+const path = require("path");
+// 使用 plugins
+const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+const WebpackBar = require('webpackbar');
+
+module.exports = {
+  // 指定模式为 production，即生产模式
+  mode: "production",
+  // 指定入口为当前目录下的 src/app.js 文件，即项目根目录下的 src/app.js 文件
+  entry: path.resolve(__dirname, "src", "index.js"),
+  // 指定输出为当前目录下的 dist/bundle.js 文件，即项目根目录下的 src/bundle.js 文件
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+  // 指定插件
+  plugins: [
+    // 显示进度条
+    new WebpackBar(),
+    // 移除上一次的构建文件
+    new CleanPlugin(),
+    // 复制 ./public/favicon.ico 到 ./dist 目录下
+    new CopyPlugin({
+      patterns: [{ from: path.resolve(__dirname, "public", "favicon.ico") }],
+    }),
+    // 使用 ./public/index.html 作为模板
+    new HtmlPlugin({
+      title: "demo01",
+      template: path.resolve(__dirname, "public", "index.html"),
+    }),
+  ],
+};
+
+```
+
+重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`。🎉恭喜，一个简单的 webpack demo 已经完成啦～
 
 ```sh
 dist
@@ -340,11 +414,15 @@ dist
 相关文档汇总：
 
 - [webpack - mode](https://webpack.js.org/configuration/mode/)
+- [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin#readme)
 - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
-- [rimraf](https://github.com/isaacs/rimraf#readme)
+- [webpack-bar](https://github.com/nuxt/webpackbar)
+- [webpack plugins 的顺序会影响什么吗？](https://stackoverflow.com/questions/41470771/webpack-does-the-order-of-plugins-matter)
 
 源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-demos/tree/master/demo01)。
+
+## snowpack
 
 ## rollup
 
