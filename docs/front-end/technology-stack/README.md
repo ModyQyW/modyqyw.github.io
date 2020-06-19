@@ -53,6 +53,7 @@ vue 全家桶 = vue + vue-router + vuex + tailwindcss(vuetify 不需要)
 - 学习曲线和缓，心智负担低，适合新手
 - typescript 不友好，类型推断不够强大，不建议用 typescript
 - 官方生态支持良好
+- uni-app 文档和研发流程比较差，但它是目前最好的 vue 系跨端开发框架
 
 ## React 系
 
@@ -68,7 +69,7 @@ react 全家桶 = umi(带 router) + unstated-next / hooks / @umijs/plugin-model 
 - 移动端应用
   - expo + react-router / react-navigation + unstated-next + react-native-elements + antd-rn
 - 小程序
-  - taro + redux + @modyqyw/mp-scss + taro-ui
+  - taro + redux / unstated-next + @modyqyw/mp-scss + taro-ui
 - 桌面应用
   - PC 端网页选型 + electron
 
@@ -77,5 +78,6 @@ react 全家桶 = umi(带 router) + unstated-next / hooks / @umijs/plugin-model 
 - 学习曲线陡峭，心智负担高，灵活度高，适合有一定水平的人
 - typescript 友好，非常建议使用 typescript
 - 生态丰富，新手难以选择
+- expo(rn) 对国内生态不太友好，不建议用 react 系框架来开发 app
 
 <Vssue />

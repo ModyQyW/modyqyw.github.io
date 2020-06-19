@@ -258,6 +258,10 @@
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
+  - [vue-element-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
+  - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard) - 后台管理系统
+  - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
+  - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
 - 进阶核心知识点
   - 模板编译器 vue-template-compiler 原理
@@ -388,6 +392,9 @@
     - ui
       - 无扩展组件
 - 衍生
+  - [ant-design-pro](https://pro.ant.design/index-cn) - 后台管理系统
+  - [react-admin](https://github.com/duxianwei520/react) - 后台管理系统
+  - [react-material-admin](https://github.com/flatlogic/react-material-admin) - 后台管理系统
   - [styled-components](https://styled-components.com/)
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 高效渲染大型列表和表格数据的 react 组件
   - [preact](https://preactjs.com/) - 类 react 库
@@ -398,6 +405,7 @@
   - [react-use](https://github.com/streamich/react-use) - hooks 包
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
+  - [ink](https://github.com/vadimdemedes/ink) - 在交互式命令行中使用 react
 - 进阶核心知识点
   - createElement，render，Component 三个重要的 api
   - virtual dom 和 diff 算法

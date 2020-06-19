@@ -8,14 +8,14 @@
 
 ## Windows - 偏向娱乐的配置
 
-- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl2 比较麻烦，wsl2 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
-- [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了浏览器，可能会导致 ie 无法唤起开发者工具
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
+- [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了 ie，可能会导致 ie 无法唤起开发者工具
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Google Chrome](https://www.google.cn/chrome/index.html)
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
+- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
+- [Google Chrome](https://www.google.cn/chrome/index.html) - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) 也不错
+- [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
@@ -26,11 +26,10 @@
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
-- [美图看看](http://kankan.meitu.com/)
-- [美图秀秀](https://mt.meipai.com/)
+- [美图看看](http://kankan.meitu.com/) - 看图
+- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe)
 - [人人影视](http://app.rrys.tv/) - 看剧
-- [网易云音乐](https://music.163.com/#/download) - 听歌启动器
 - 迅雷 U 享版 - 下载工具
 
 ## macOS - 偏向开发的配置
@@ -40,15 +39,14 @@
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷
 - [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
+- [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
-- [看图](https://kantu.qq.com/) - 看图工具
-- [网易云音乐](https://music.163.com/#/download) - 听歌启动器
+- [看图](https://kantu.qq.com/)
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
-- [语雀](https://www.yuque.com/install/desktop)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
@@ -61,32 +59,28 @@
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Google Chrome](https://www.google.cn/chrome/index.html)
+- [Google Chrome](https://www.google.cn/chrome/index.html) - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) 也不错
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
-- [Listen1](http://listen1.github.io/listen1/) - 专注于听歌的播放器
+- [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
-- [Maipo](http://weiboformac.sinaapp.com/) - mac 微博客户端
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 挺香的
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [Mounty](https://mounty.app/) - 让 mac 原生支持 NTFS 格式移动盘读写
+- [NordPass](https://nordpass.com/) - 密码管理工具
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
-- [OBS](https://obsproject.com/) - 录制、推流
+- [OBS](https://obsproject.com/) - 录制
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
-- [Paste](https://apps.apple.com/cn/app/paste-clipboard-manager/id967805235) - 剪切板管理工具
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
-- [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理，超级右键对 QSpace 不起效
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app) - 同时查看不同屏幕的网页表现
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [Trello](https://trello.com/platforms) - 看板工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macOS
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
