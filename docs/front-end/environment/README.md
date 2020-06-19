@@ -13,22 +13,20 @@
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
-- [Google Chrome](https://www.google.cn/chrome/index.html) - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) 也不错
+- [Google Chrome](https://www.google.cn/chrome/index.html) - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，新版 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
-- [qBittorrent](https://www.qbittorrent.org/) - 下磁力链接
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [wox](https://github.com/Wox-launcher/Wox)，但 wox 只支持 windows
-- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 ms office
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，windows 上类似的工具还有 [wox](https://github.com/Wox-launcher/Wox)
+- [WPS](https://www.wps.cn/) - 建议重度用户用 MS Office
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图看看](http://kankan.meitu.com/) - 看图
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
-- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe)
+- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
 - [人人影视](http://app.rrys.tv/) - 看剧
 - 迅雷 U 享版 - 下载工具
 
@@ -45,8 +43,8 @@
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
+- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg) - 下载工具
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
@@ -58,8 +56,7 @@
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Google Chrome](https://www.google.cn/chrome/index.html) - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) 也不错
+- [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，新版 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
 - [IINA](https://iina.io/) - 播放器
@@ -85,27 +82,19 @@
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macOS
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
-- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + ms office
+- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office
 
-## firefox 插件
+## 浏览器插件
 
-- [Gitako](https://addons.mozilla.org/en-US/firefox/addon/gitako-github-file-tree/)
-- [Google Lighthouse](https://addons.mozilla.org/zh-CN/firefox/addon/google-lighthouse/)
-- [React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/)
-- [uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
-- [Video DownloadHelper](https://addons.mozilla.org/en-US/firefox/addon/video-downloadhelper/)
-- [Vue.js devtools](https://addons.mozilla.org/zh-CN/firefox/addon/vue-js-devtools/)
+基本都可以在浏览器商店中搜到。只附上难以找到或有同类型插件的链接。
 
-## chrome 插件
-
-- [Gitako](https://chrome.google.com/webstore/detail/gitako/giljefjcheohhamkjphiebfjnlphnokk)
-- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-CN)
-- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Suspicious Site Reporter](https://chrome.google.com/webstore/detail/suspicious-site-reporter/jknemblkbdhdcpllfgbfekkdciegfboi) - 显示 https 前缀
-- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=zh-CN) - 配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
-- [Video DownloadHelper](https://chrome.google.com/webstore/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
-- [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [哔哩哔哩助手：bilibili.com 综合辅助扩展](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
+- Gitako - 类似 Octotree 的插件
+- Lighthouse - 网页性能测试
+- React Developer Tools - react 浏览器调试工具
+- uBlock Origin - 广告屏蔽，配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
+- Video DownloadHelper - 视频下载器
+- Vue.js devtools - vue 浏览器调试工具
+- [哔哩哔哩助手](https://bilibili-helper.github.io/)
 
 ## Homebrew
 
@@ -119,7 +108,7 @@
 - [中科大镜像源](https://mirrors.ustc.edu.cn/)
 - [阿里云镜像源](https://developer.aliyun.com/mirror/homebrew)
 
-使用 bash 修改`~/.bash_profile`，使用 zsh 修改`~/.zshrc`。建议问使用 oh-my-zsh 需要修改什么的人重新看它的文档。
+使用 bash 修改`~/.bash_profile`，使用 zsh 修改`~/.zshrc`。
 
 ### 安装依赖
 
@@ -128,6 +117,14 @@ brew install git
 brew install openjdk
 brew install openssh
 brew install svn
+```
+
+openssh 使用出现问题的话可能是配置文件路径不对，`ssh -v SERVER_IP`可以看到使用的配置文件路径。
+
+我自己本身的 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接过去。
+
+```sh
+ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 ```
 
 ### 检查错误
@@ -267,6 +264,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # flutter
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export PATH=$PATH:$HOME/flutter/bin
 
 # openjdk
@@ -340,7 +339,7 @@ git stash pop
 使用 nvm 可以方便地管理 node 多版本。
 
 - [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 由于太久没有更新且存在一定问题，如果只需要单版本，可以考虑直接安装 node 版本，自行设置路径变量
+- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 遇到问题时查 issues
 
 ### npm 全局包
 
@@ -381,15 +380,17 @@ npm update -g
 ```sh
 registry=https://registry.npm.taobao.org
 disturl=https://npm.taobao.org/dist
-sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
-electron_mirror=https://npm.taobao.org/mirrors/electron/
+
+chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
+edgedriver_cdnurl=https://npm.taobao.org/mirrors/edgedriver/
 electron_builder_binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
-chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver
-operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver
-selenium_cdnurl=https://npm.taobao.org/mirrors/selenium
-node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector
+electron_mirror=https://npm.taobao.org/mirrors/electron/
 fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
+node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector/
+operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver/
+phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
+sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
 
 ```
 
@@ -398,15 +399,17 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 ```sh
 registry "https://registry.npm.taobao.org"
 disturl "https://npm.taobao.org/dist"
-sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
-phantomjs_cdnurl "https://npm.taobao.org/mirrors/phantomjs/"
-electron_mirror "https://npm.taobao.org/mirrors/electron/"
-electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
+
 chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
-operadriver_cdnurl "https://npm.taobao.org/mirrors/operadriver"
-selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
-node_inspector_cdnurl "https://npm.taobao.org/mirrors/node-inspector"
+edgedriver_cdnurl "https://npm.taobao.org/mirrors/edgedriver"
+electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
+electron_mirror "https://npm.taobao.org/mirrors/electron/"
 fsevents_binary_host_mirror "http://npm.taobao.org/mirrors/fsevents/"
+node_inspector_cdnurl "https://npm.taobao.org/mirrors/node-inspector"
+operadriver_cdnurl "https://npm.taobao.org/mirrors/operadriver"
+phantomjs_cdnurl "https://npm.taobao.org/mirrors/phantomjs/"
+sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ```
 
@@ -445,8 +448,9 @@ yarn
 - [Ant Design Vue helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antd-vue 提示
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
-- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码
+- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
+- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
@@ -462,6 +466,7 @@ yarn
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - material 图标主题
+- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) - Atom 主题
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
@@ -497,10 +502,6 @@ yarn
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // vscode 自带功能，修改编辑区的字体族
   "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
-  // vscode 自带功能，控制编辑区怎么放置 snippet 的提示，这里设置把 snippet 的提示放到所有提示的顶部，配合插件 Visual Studio IntelliCode 使用
-  "editor.snippetSuggestions": "top",
-  // vscode 自带功能，控制编辑区的提示列表出现时默认选择什么，这里设置默认选择第一个，配合插件 Visual Studio IntelliCode 使用
-  "editor.suggestSelection": "first",
   // vscode 自带功能，控制编辑区 1 个 tab 等于多少个空格，这里设置为 2 个
   "editor.tabSize": 2,
   // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
@@ -589,8 +590,8 @@ yarn
   "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Visual Studio IntelliCode 使用
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // vscode 自带功能，指定颜色主题，这里设置为 One Dark Pro，需要安装对应的插件
+  "workbench.colorTheme": "One Dark Pro",
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定工作台启动时的显示，这里设置为新的未命名文件
@@ -639,7 +640,7 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
 
 ### snippets
 
-安装了`uniapp-snippet`这个插件后，条件编译的部分仍没有相关的提示，需要手动补全，类似地你也可以自己手动补全 taro 的编译提示部分。
+安装了`uniapp-snippet`这个插件后，条件编译的部分仍没有相关的提示，需要手动补全。
 
 点击 vscode 左下角齿轮，点击`User Snippets`，然后选择对应的语言，会自动生成`[语言].json`文件供修改。
 
@@ -904,6 +905,8 @@ npm i
 对于 css 可以使用 @modyqyw/stylelint-config-css，对于 less 可以使用 @modyqyw/stylelint-config-less。
 
 stylelint 不适用于 stylus，但你可以考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint)。
+
+类似地，你可以为项目添加 git hooks（使用 yorkie 或者 husky），手动补全 hbuilderx。当然，更推荐你直接使用 vscode。
 
 ### vue-cli 创建的项目的依赖版本对齐 hbuilderx
 
