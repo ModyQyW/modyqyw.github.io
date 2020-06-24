@@ -130,7 +130,6 @@
     - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
     - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 使用 [terser](https://github.com/terser/terser) 压缩 js，代替 uglify-webpack-plugin
     - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
-    - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
     - [dll-plugin](https://webpack.js.org/plugins/dll-plugin/) - webpack 内置
     - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) - 构建开始前移除上一次的构建产物
     - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
@@ -138,12 +137,14 @@
     - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
     - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 提取 css 为单独文件
     - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin) - 打包时检查样式
+    - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
+    - [commons-chunk-plugin](https://webpack.js.org/plugins/commons-chunk-plugin/) - 打包 MPA 时抽离公共 js 文件，webpack 4 建议使用`optimization.splitChunks`作为代替，建议不要再用了
   - loaders
     - [thread-loader](https://webpack.js.org/loaders/thread-loader/) - 放置在这个 loader 后面的 loader 会装载到 worker pool 中运行，有一定限制条件，代替 happy-pack
     - [cache-loader](https://webpack.js.org/loaders/cache-loader/) - 类似于 thread-loader，该 loader 适用于性能开销较大的 loader
-    - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许引入文件
-    - [url-loader](https://webpack.js.org/loaders/url-loader/) - 解析文件引入，允许把文件转换成 base64 编码数据
-    - [file-loader](https://webpack.js.org/loaders/file-loader/) - 解析文件引入
+    - [raw-loader](https://webpack.js.org/loaders/raw-loader/) - 允许文件以字符串形式引入
+    - [url-loader](https://webpack.js.org/loaders/url-loader/) - 进行图片字体等文件的打包，允许转换成 base64 编码数据
+    - [file-loader](https://webpack.js.org/loaders/file-loader/) - 进行图片字体等文件的打包
     - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
     - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
     - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 DOM 中
