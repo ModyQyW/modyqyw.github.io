@@ -2,9 +2,9 @@
 
 基于个人喜好推荐的技术栈。
 
-eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合拳就不再重复说了。
+eslint + stylelint + prettier + commitlint + commitizen 这套校验组合拳就不再重复说了。
 
-移动端应用建议优先原生，其次 uni-app，最次 taro / rn。
+移动端应用 app 建议优先原生，其次 uni-app，最次 taro / rn。
 
 小程序建议优先 taro，其次 uni-app，再次原生。
 
@@ -25,7 +25,7 @@ eslint + stylelint + prettier + commitlint + commitizen 这套本地校验组合
 
 点评：
 
-- 国内现状驱动 - 目前国内使用 IE8 或 IE 内核的人数还比较多，在政府部门、高校中尤为多见，为了满足该部分用户需求，不得不使用 jq 1 + bs 3 的组合进行适配
+- 国内现状驱动 - 目前国内使用 IE 内核的人数还比较多，在政府部门、高校中尤为多见，为了满足该部分用户需求，不得不使用 jq 1 + bs 3 的组合进行适配，更痛苦的是微软都已经不支持 IE11- 了，还在用
 - 开发效率低
 - 为了提高开发效率，又会转去使用模版，不利于塑造知识结构，更负上了模板的技术栈
 - 扩展性/移植性低 - 平台不同，技术栈也要做相应改动

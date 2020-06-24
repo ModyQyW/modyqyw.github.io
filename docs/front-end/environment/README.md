@@ -13,9 +13,9 @@
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Google Chrome](https://www.google.cn/chrome/index.html) - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，新版 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
+- [Google Chrome](https://www.google.cn/chrome/index.html) - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
-- [Motrix](https://motrix.app/zh-CN/) - 下载工具
+- [Motrix](https://motrix.app/zh-CN/) - 下载工具，如果有迅雷会员可以考虑迅雷 U 享版
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
@@ -28,43 +28,38 @@
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
 - [人人影视](http://app.rrys.tv/) - 看剧
-- 迅雷 U 享版 - 下载工具
 
 ## macOS - 偏向开发的配置
 
 - [爱思助手](https://www.i4.cn/) - ios 手机用
-- [百度网盘](http://pan.baidu.com/download)
+- [百度网盘](http://pan.baidu.com/download) - 可能会用到 [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷
-- [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
-- [看图](https://kantu.qq.com/)
+- [看图](https://kantu.qq.com/) - 看图（捧读）
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
-- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg) - 下载工具
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
-- [Countdown Timer Plus](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E8%AE%A1%E6%97%B6%E5%99%A8-countdown-timer-plus/id1150771803) - 倒计时，鞭策一下自己
+- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [Dozer](https://github.com/Mortennn/Dozer) - 隐藏状态栏过多的图标
 - [draw.io](https://github.com/jgraph/drawio-desktop/releases/) - 免费作图工具，包括流程图，思维导图等
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，新版 [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
-- [HBuilderX](https://www.dcloud.io/) - 使用 uni-app 开发 app 必须使用的工具
+- [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
-- [Motrix](https://motrix.app/zh-CN/) - 下载工具
+- [Motrix](https://motrix.app/zh-CN/) - 下载工具，如果有迅雷会员可以考虑[迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
 - [Mounty](https://mounty.app/) - 让 mac 原生支持 NTFS 格式移动盘读写
 - [NordPass](https://nordpass.com/) - 密码管理工具
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
@@ -80,8 +75,7 @@
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macOS
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
-- [WebStorm](https://www.jetbrains.com/webstorm/) - 开发工具，基本不需要特别配置
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置，也可以考虑使用 [WebStorm](https://www.jetbrains.com/webstorm/)（基本不需要特别配置），如果使用 uni-app 开发 app 必须使用的工具则必须用 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office
 
 ## 浏览器插件
@@ -262,11 +256,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# flutter
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-export PATH=$PATH:$HOME/flutter/bin
 
 # openjdk
 export PATH=/usr/local/opt/openjdk/bin:$PATH
