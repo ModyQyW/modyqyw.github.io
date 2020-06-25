@@ -11,10 +11,9 @@
     "@modyqyw/prettier-config": "^1.0.0",
     "@vssue/api-github-v4": "^1.4.0",
     "@vssue/vuepress-plugin-vssue": "^1.4.6",
-    "@vuepress/plugin-active-header-links": "^1.5.2",
     "@vuepress/plugin-back-to-top": "^1.5.2",
+    "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-medium-zoom": "^1.5.2",
-    "@vuepress/plugin-nprogress": "^1.5.2",
     "@vuepress/plugin-pwa": "^1.5.2",
     "eslint": "^6.8.0",
     "prettier": "^2.0.5",
@@ -22,7 +21,10 @@
     "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "markdown-it-code-copy": "^0.1.0",
+    "markdown-it-copy": "^1.2.0"
+  },
   "eslintConfig": {
     "extends": "@modyqyw"
   },

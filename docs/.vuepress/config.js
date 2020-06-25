@@ -1,50 +1,76 @@
 module.exports = {
-  base: '',
   title: "ModyQyW's blog",
   description: '只是一个博客罢了',
   head: [
-    ['link', {
-      rel: 'icon',
-      href: `/favicon.ico`
-    }],
-    ['link', {
-      rel: 'manifest',
-      href: '/manifest.json'
-    }],
-    ['meta', {
-      name: 'theme-color',
-      content: '#65b687'
-    }],
-    ['meta', {
-      name: 'apple-mobile-web-app-capable',
-      content: 'yes'
-    }],
-    ['meta', {
-      name: 'apple-mobile-web-app-status-bar-style',
-      content: 'black'
-    }],
-    ['link', {
-      rel: 'apple-touch-icon',
-      href: '/favicon.ico'
-    }],
-    ['link', {
-      rel: 'mask-icon',
-      href: '/favicon.ico',
-      color: '#000000'
-    }],
-    ['meta', {
-      name: 'msapplication-TileImage',
-      content: '/favicon.ico'
-    }],
-    ['meta', {
-      name: 'msapplication-TileColor',
-      content: '#000000'
-    }]
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: `/favicon.ico`,
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'manifest',
+        href: '/manifest.json',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: '#65b687',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        href: '/favicon.ico',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'mask-icon',
+        href: '/favicon.ico',
+        color: '#000000',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'msapplication-TileImage',
+        content: '/favicon.ico',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'msapplication-TileColor',
+        content: '#000000',
+      },
+    ],
   ],
   locales: {
     '/': {
-      lang: 'zh-CN'
-    }
+      lang: 'zh-CN',
+    },
   },
   themeConfig: {
     nav: [
@@ -57,7 +83,7 @@ module.exports = {
         items: [
           {
             text: '数学基础',
-            link: '/coding-basis/math/'
+            link: '/coding-basis/math/',
           },
           {
             text: '计算机基础',
@@ -89,13 +115,13 @@ module.exports = {
           },
           {
             text: '算法基础',
-            link: '/coding-basis/algorithm/'
+            link: '/coding-basis/algorithm/',
           },
           {
             text: '浏览器',
-            link: '/coding-basis/browser/'
-          }
-        ]
+            link: '/coding-basis/browser/',
+          },
+        ],
       },
       {
         text: '前端',
@@ -106,11 +132,11 @@ module.exports = {
           },
           {
             text: '库/工具集/框架……',
-            link: '/front-end/lib-toolkit-framework-and-more/'
+            link: '/front-end/lib-toolkit-framework-and-more/',
           },
           {
             text: '技术栈',
-            link: '/front-end/technology-stack/'
+            link: '/front-end/technology-stack/',
           },
           {
             text: '环境',
@@ -118,7 +144,7 @@ module.exports = {
           },
           {
             text: '构建',
-            link: '/front-end/build/'
+            link: '/front-end/build/',
           },
           {
             text: 'jquery-bootstrap',
@@ -134,7 +160,7 @@ module.exports = {
           },
           {
             text: 'typescript',
-            link: '/front-end/typescript/'
+            link: '/front-end/typescript/',
           },
           {
             text: 'react',
@@ -146,48 +172,48 @@ module.exports = {
           },
           {
             text: 'taro',
-            link: '/front-end/taro/'
+            link: '/front-end/taro/',
           },
           {
             text: 'expo',
-            link: '/front-end/expo/'
+            link: '/front-end/expo/',
           },
           {
             text: '音视频',
-            link: '/front-end/av/'
+            link: '/front-end/av/',
           },
           {
             text: '安全',
-            link: '/front-end/safety/'
+            link: '/front-end/safety/',
           },
           {
             text: '监控',
-            link: '/front-end/monitor/'
+            link: '/front-end/monitor/',
           },
           {
             text: '优化',
-            link: '/front-end/optimization/'
+            link: '/front-end/optimization/',
           },
           {
             text: 'koa 和 egg',
-            link: '/front-end/koa-and-egg/'
-          }
-        ]
+            link: '/front-end/koa-and-egg/',
+          },
+        ],
       },
       {
         text: '实战',
         items: [
           {
             text: 'koa 打造的简单后端服务 koa-backend',
-            link: '/combat/koa-backend/'
+            link: '/combat/koa-backend/',
           },
           {
             text: 'egg 打造的简单后端服务 egg-backend',
-            link: '/combat/egg-backend/'
+            link: '/combat/egg-backend/',
           },
           {
             text: 'vue 和 element 打造的待办清单 vue-element-todo-list',
-            link: '/combat/vue-element-todo-list/'
+            link: '/combat/vue-element-todo-list/',
           },
           {
             text: 'vue 和 vuetify 打造的后台管理系统 vue-vuetify-admin',
@@ -195,29 +221,29 @@ module.exports = {
           },
           {
             text: 'uni-app 打造的待办清单小程序和 app uni-app-todo-list',
-            link: '/combat/uni-app-todo-list/'
+            link: '/combat/uni-app-todo-list/',
           },
           {
             text: 'react 和 material 打造的待办清单 react-material-todo-list',
-            link: '/combat/react-material-todo-list/'
+            link: '/combat/react-material-todo-list/',
           },
           {
             text: 'umi 全家桶打造的后台管理系统 umi-admin',
-            link: '/combat/umi-admin/'
+            link: '/combat/umi-admin/',
           },
           {
             text: 'taro 打造的待办清单小程序 taro-todo-list',
-            link: '/combat/taro-todo-list/'
+            link: '/combat/taro-todo-list/',
           },
           {
             text: 'expo 打造的待办清单app expo-todo-list',
-            link: '/combat/expo-todo-list/'
-          }
-        ]
+            link: '/combat/expo-todo-list/',
+          },
+        ],
       },
       {
         text: '推荐',
-        link: '/links/'
+        link: '/links/',
       },
       {
         text: '关于',
@@ -230,37 +256,50 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://github.com/ModyQyW',
-      }
+      },
     ],
     sidebar: 'auto',
     sidebarDepth: 3,
-    searchMaxSuggestions: 10,
-    lastUpdated: false,
+    lastUpdated: 'Last Updated',
     repo: 'ModyQyW/modyqyw.github.io',
     repoLabel: '查看源码',
     docsBranch: 'origin',
     editLinks: true,
-    editLinkText: '编辑此页面'
+    editLinkText: '编辑此页面',
   },
   plugins: [
     '@vuepress/active-header-links',
     '@vuepress/back-to-top',
+    [
+      '@vuepress/last-updated',
+      {
+        dateOptions: {
+          hour12: false,
+        },
+      },
+    ],
     '@vuepress/medium-zoom',
     '@vuepress/nprogress',
     [
-      '@vuepress/pwa', {
+      '@vuepress/pwa',
+      {
         serviceWorker: true,
         updatePopup: {
-          message: "新内容可用。",
-          buttonText: "刷新"
-        }
-      }
+          message: '新内容可用。',
+          buttonText: '刷新',
+        },
+      },
     ],
     [
-      'sitemap',
+      '@vuepress/search',
       {
-        hostname: 'https://modyqyw.top'
-      }
+        searchMaxSuggestions: 10,
+      },
+    ][
+      ('sitemap',
+      {
+        hostname: 'https://modyqyw.top',
+      })
     ],
     [
       'helper-live2d',
@@ -268,14 +307,14 @@ module.exports = {
         live2d: {
           model: 'wanko',
           display: {
-            position: "right",
+            position: 'right',
             width: 135,
             height: 300,
             hOffset: 65,
-            vOffset: 0
-          }
-        }
-      }
+            vOffset: 0,
+          },
+        },
+      },
     ],
     [
       '@vssue/vuepress-plugin-vssue',
@@ -285,12 +324,18 @@ module.exports = {
         repo: 'modyqyw.github.io',
         clientId: 'ee62eae699b0c63fb4c2',
         clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
-        baseURL: 'https://github.com'
-      }
-    ]
+        baseURL: 'https://github.com',
+      },
+    ],
   ],
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    toc: { includeLevel: [2, 3, 4] },
+    extractHeaders: [ 'h2', 'h3', 'h4' ],
+    plugins: [
+      'markdown-it-code-copy',
+      // 'markdown-it-copy',
+    ]
   },
-  evergreen: true
-}
+  evergreen: true,
+};

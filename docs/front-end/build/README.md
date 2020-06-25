@@ -209,7 +209,7 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 然后安装 webpack 相关的依赖。
 
 ```sh
-npm i webpack@4 webpack-cli@3 -D
+npm i webpack@4 webpack-cli@3 -DE
 ```
 
 创建一个内容简单的`index.js`。
@@ -267,7 +267,7 @@ npm run build
 我们先来安装一下相关的依赖。
 
 ```sh
-npm i copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 -D
+npm i copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 -DE
 ```
 
 在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。`index.html`如下所示。
@@ -530,7 +530,7 @@ demo02 将会关注一些常用 loader。
 - [webpack - loaders list](https://v4.webpack.js.org/loaders/)
 - [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 
-#### babel 和 babel-loaders
+#### 新语法相关的 loader
 
 因为 webpack 本身并不支持 es6+ 语法打包，所以我们需要使用 [babel](https://babeljs.io/) 和 [babel-loader](https://github.com/babel/babel-loader#readme)，让 webpack 能够解析 es6+ 语法。
 
@@ -539,8 +539,8 @@ babel 其中一个很好的作用就是转换新语法为旧语法，也就是�
 首先还是要安装相关的依赖。
 
 ```sh
-npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1
-npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 babel-loader@8 -D
+npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1 react@16.13.1 react-dom@16.13.1 -E
+npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 -DE
 ```
 
 其次是修改 webpack 配置。
@@ -554,8 +554,10 @@ module.exports = {
     rules: [
       ...
       {
-        // 指定 js 文件
-        test: /\.js$/,
+        // 指定 js 和 jsx 文件
+        test: /\.jsx?$/,
+        // 不处理 node_modules 和 bower_components
+        exclude: /(node_modules|bower_components)/,
         // 使用 babel-loader 进行处理
         use: {
           loader: 'babel-loader',
@@ -567,6 +569,8 @@ module.exports = {
 };
 
 ```
+
+排除 node_modules 和 bower_components 中的 js 文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。
 
 值得注意的是，loaders 和上面提到的几个核心概念都不同，所使用到的字段是`module.rules`。对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module`（模块）字段内做相关的定义。
 
@@ -645,22 +649,48 @@ chrome >= 70
       }
     ]
   ],
-  "plugins": [["@babel/plugin-transform-runtime"]]
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
 
 ```
 
 因为我们已经在`@babel/preset-env`中配置了`core-js`，所以无需在`@babel/plugin-transform-runtime`中重复配置。
 
+除了 es6+ 的语法，我们还想支持 react。类似地，我们也可以使用 babel 来解析 react 代码，只需要配置`@babel/preset-react`即可。
+
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": { "version": 3, "proposals": true }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
+    }
+  },
+  "plugins": [["@babel/plugin-transform-runtime"]]
+}
+
+```
+
 当然，对比起官方文档和实际大型应用开发需求，教程这部分还相当简陋，建议还是多多阅读文档多多实践。
 
 相关资料汇总：
 
 - [babel](https://babeljs.io/)
+- [webpack - loaders - babel-loader](https://v4.webpack.js.org/loaders/babel-loader/)
 - [babel-loader](https://github.com/babel/babel-loader#readme)
 - [babel 教程](https://www.jiangruitao.com/docs/babel/)
 - [browserslist](https://github.com/browserslist/browserslist#readme)
 - [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
+- [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
 - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
 - [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
 - [core-js](https://github.com/zloirock/core-js#readme)
