@@ -331,11 +331,17 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     toc: { includeLevel: [2, 3, 4] },
-    extractHeaders: [ 'h2', 'h3', 'h4' ],
+    extractHeaders: ['h2', 'h3', 'h4'],
     plugins: [
-      'markdown-it-code-copy',
+      [
+        'markdown-it-code-copy',
+        {
+          buttonStyle:
+            'position: absolute; bottom: 7.5px; right: 6px; cursor: pointer; outline: none;',
+        },
+      ],
       // 'markdown-it-copy',
-    ]
+    ],
   },
   evergreen: true,
 };
