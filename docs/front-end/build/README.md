@@ -680,6 +680,46 @@ chrome >= 70
 
 ```
 
+之后可以修改`${PROJECT_DIR}/src/index.js`，使用 react 和 react-dom 以测试我们的 babel 配置。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div class="container">
+        <p>Hello Webpack!</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+你也可以写成函数式组件 FC。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const App = () => (
+  <div class="container">
+    <p>Hello Webpack!</p>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+之后构建并运行测试即可。如果正常，可以看到页面上会出现`Hello Webpack!`的字样。
+
 当然，对比起官方文档和实际大型应用开发需求，教程这部分还相当简陋，建议还是多多阅读文档多多实践。
 
 相关资料汇总：
@@ -695,6 +735,194 @@ chrome >= 70
 - [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
 - [core-js](https://github.com/zloirock/core-js#readme)
 - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
+
+#### 样式相关的 loader
+
+因为 webpack 本身并不支持 css/less/sass/scss 打包，所以我们需要使用一系列的 loader 让 webpack 能够解析上面的四种文件。
+
+首先还是要安装相关的依赖。
+
+```sh
+npm i antd@4 -E
+npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@8 babel-plugin-import@1 -DE
+```
+
+`css-loader`能够将 css 文件转换成模块，`style-loader`能够将样式模块嵌入到文件中，如果是 js/jsx 文件使用 css 文件，那么转换后的 css 模块会被嵌入到 js/jsx 文件中，然后再生成标签嵌入到`<head>`标签中。
+
+我们先给`${PROJECT_DIR}/src/index.js`添加 css 文件的引入。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const App = () => (
+  <div class="container">
+    <p>Hello Webpack!</p>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+然后创建`${PROJECT_DIR}/src/index.css`，内容如下所示。
+
+```css
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-width: 1280px;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+```
+
+最后，我们修改一下 webpack 配置，增加对 css 文件的解析。
+
+```js
+module.exports = {
+  ...,
+  // loaders
+  module: {
+    rules: [
+      ...,
+      {
+        // css files
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      ...
+    ],
+  },
+};
+
+```
+
+重新构建并运行，我们可以在浏览器控制台中看到，样式被插入到`<head>`标签中，内容与我们书写的一致，并且已经起了作用。
+
+值得注意的是，如果要对某种文件使用多个 loader 处理，loader 的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理 css 文件，再调用`style-loader`处理`css-loader`输出的结果。
+
+要处理 less，sass 和 scss 文件，又有少许的不同。因为`less-loader`会把 less 文件转换成 css 文件，`sass-loader`会把 sass 和 scss 文件转换成 css 文件，而 css 文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的 loader 即可。
+
+```js
+module.exports = {
+  ...,
+  // loaders
+  module: {
+    rules: [
+      ...,
+      {
+        // css files
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'scss-loader'],
+      },
+      ...,
+    ],
+  },
+};
+
+```
+
+由于 stylus 使用率较低，这里就不再探讨 styl 文件的处理。
+
+我们再来试着添加并使用`antd`，并查看是否有什么异常。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮 Button。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from 'antd';
+import './index.less';
+
+const App = () => (
+  <div class="container">
+    <p>Hello Webpack!</p>
+    <Button type="primary">Hello Ant Design!</Button>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+之后修改`${PROJECT_DIR}/babel.config.json`，加入按需加载的优化。
+
+```json
+{
+  ...,
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["import", { "libraryName": "antd", "style": true }]
+  ]
+}
+
+```
+
+再修改 webpack 配置，稍微自定义主题。
+
+```js
+module.exports = {
+  ...,
+  // loaders
+  module: {
+    rules: [
+      ...,
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                modifyVars: {
+                  'primary-color': '#2f54eb',
+                },
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
+      ...
+    ],
+  },
+  ...,
+};
+
+```
+
+重新构建并测试，如果能看到一个深蓝色的按钮出现，基本就是没有问题了。
+
+相关资料汇总：
+
+- [less](http://lesscss.org/)
+- [webpack - loaders - less-loader](https://v4.webpack.js.org/loaders/less-loader/)
+- [less-loader](https://github.com/webpack-contrib/less-loader#readme)
+- [sass](https://sass-lang.com/)
+- [webpack - loaders - sass-loader](https://v4.webpack.js.org/loaders/sass-loader/)
+- [sass-loader](https://github.com/webpack-contrib/sass-loader#readme)
+- [Ant Design](https://ant-design.gitee.io/index-cn)
 
 ## snowpack
 
