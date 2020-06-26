@@ -2,11 +2,14 @@
 
 ## 关于生活
 
-- 定位广东广州，小公司里的前端
-- 魂系列爱好者
+- 一个前端
 - 努力是最不值得拿出来夸口的东西
-- 希望能做自己想做的事，希望能得到最单纯的快乐
-- 没有必要的事情没必要去做，比如搭理傻逼
+- 闲暇时间希望能做自己想做的事，希望能得到最单纯的快乐，希望世界上高素质的人多一些
+- 喜欢的游戏：最后生还者1 The Last of Us Part I，黑魂系列 Dark Souls
+- 喜欢的视频制作者：Mr.Quin，怕上火暴王老菊，纯黑
+- 喜欢的影视剧：疑犯追踪 Person of Interest
+- 讨厌的行为：阴阳怪气
+- 讨厌的人：杠精，阴阳人
 - 支付宝饭碗：13266337925
 - QQ/微信：261857860
 - Email
@@ -24,8 +27,10 @@
   - eslint + @modyqyw/eslint-config-xxx
   - stylelint + @modyqyw/stylelint-config-xxx
   - @commitlint/cli + @commitlint/config-conventional
+  - commitizen
 - 迁移、重构项目，收缩技术栈
-  - wepy -> taro，rn -> uni-app
+  - wepy，mpvue -> taro
+  - rn -> uni-app
   - mobx -> unstated-next
   - angularjs -> react(umi) + ts / vue(vue-cli)
 - 小程序样式库

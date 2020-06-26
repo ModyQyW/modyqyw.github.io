@@ -143,10 +143,6 @@ module.exports = {
             link: '/front-end/environment/',
           },
           {
-            text: '构建',
-            link: '/front-end/build/',
-          },
-          {
             text: 'jquery-bootstrap',
             link: '/front-end/jquery-bootstrap/',
           },
@@ -177,6 +173,26 @@ module.exports = {
           {
             text: 'expo',
             link: '/front-end/expo/',
+          },
+          {
+            text: 'webpack4',
+            link: '/front-end/webpack4/',
+          },
+          {
+            text: 'snowpack',
+            link: '/front-end/snowpack/',
+          },
+          {
+            text: 'vite',
+            link: '/front-end/vite',
+          },
+          {
+            text: 'rollup',
+            link: '/front-end/rollup/',
+          },
+          {
+            text: 'parcel',
+            link: '/front-end/parcel/',
           },
           {
             text: '音视频',
@@ -295,12 +311,14 @@ module.exports = {
       {
         searchMaxSuggestions: 10,
       },
-    ][
-      ('sitemap',
+    ],
+    [
+      'sitemap',
       {
         hostname: 'https://modyqyw.top',
-      })
+      }
     ],
+    "vuepress-plugin-code-copy",
     [
       'helper-live2d',
       {
@@ -332,16 +350,6 @@ module.exports = {
     lineNumbers: true,
     toc: { includeLevel: [2, 3, 4] },
     extractHeaders: ['h2', 'h3', 'h4'],
-    plugins: [
-      [
-        'markdown-it-code-copy',
-        {
-          buttonStyle:
-            'position: absolute; bottom: 7.5px; right: 6px; cursor: pointer; outline: none;',
-        },
-      ],
-      // 'markdown-it-copy',
-    ],
   },
   evergreen: true,
 };

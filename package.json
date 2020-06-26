@@ -18,12 +18,9 @@
     "eslint": "^6.8.0",
     "prettier": "^2.0.5",
     "vuepress": "^1.5.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
-  },
-  "dependencies": {
-    "markdown-it-code-copy": "^0.1.0",
-    "markdown-it-copy": "^1.2.0"
   },
   "eslintConfig": {
     "extends": "@modyqyw"

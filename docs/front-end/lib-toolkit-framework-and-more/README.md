@@ -120,8 +120,8 @@
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
-  - [webpack-merge](https://github.com/survivejs/webpack-merge) - 合并配置
-  - [webpack-chain](https://github.com/neutrinojs/webpack-chain) - 链式生成并简化配置的修改操作
+  - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置
+  - [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme) - 链式生成并简化配置的修改操作
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin) - 显示更友好的提示信息
     - [progress-bar-webpack-plugin](https://github.com/clessg/progress-bar-webpack-plugin) - 显示进度条，无美化

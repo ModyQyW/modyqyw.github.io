@@ -1,18 +1,17 @@
-# 构建
-
-待补充，催稿可以
-
-（1）邮件催稿
-
-（2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
+# webpack4
 
 ## 说明
 
-本篇以教程形式书写，适合想要深入 js 工具链的同学学习以入门。
+- 该部分以教程形式书写，适合想要深入 js 工具链的同学学习以入门。着重关注于基本使用，基本不会涉及拓展使用和原理。
+- 本篇教程默认使用 node v12，chrome 浏览器和 macOS 系统。如果出现不一致的问题，大概率是版本问题，请更新系统（如 windows 7 升级到 windows 10）和浏览器版本到最新。
+- 本篇教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
+- 本篇教程不会考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。
 
-具体的速查可以参考教程内各汇总、参考部分。
+## webpack 是什么
 
-## 为什么需要构建工具
+webpack 是一个静态模块打包工具，分析依赖生成依赖图，最终根据配置进行构建打包。
+
+## 为什么需要 webpack 打包项目
 
 - 允许书写 ES6+ 代码、vue template、jsx 等
 - 无需考虑 css 前缀，自动添加
@@ -21,24 +20,20 @@
 
 总而言之，构建工具减少了重复的工作，使我们能投入更多的时间到开发工作中。
 
-## webpack 4
-
-webpack 4 是一个静态模块打包工具，分析依赖生成依赖图，最终根据配置生成一个或多个 bundle。
-
-### 为什么选择 webpack
+## 为什么选择 webpack
 
 - 社区活跃度高
 - 官方生态完整，社区生态丰富
 - 配置灵活
 - 更新迭代速度快
 
-### 核心概念
+## 核心概念
 
-#### 入口 entry
+### 入口 entry
 
-entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`${PROJECT_DIR}/src/index.js`。本篇教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
+entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`${PROJECT_DIR}/src/index.js`。
 
-注意：windows 系统的默认路径分隔符是`\`，而 unix 系统的默认路径分割符是`/`。在旧版本 windows 上建议不要直接使用`/`，而是使用`path.resolve`或`path.join`，否则可能会造成路径识别的问题。以上两种方法会在之后进行说明。
+`path.resolve`能将提供的字符串参数拼接起来，形成一个绝对路径。
 
 ```js
 // 使用 path 模块来指定路径
@@ -51,7 +46,7 @@ module.exports = {
 
 ```
 
-#### 输出 output
+### 输出 output
 
 output 指定 webpack 在哪里存放、命名创建的 bundle，主要输出文件的默认值为`${PROJECT_DIR}/dist/main.js`，其他生成文件默认放在`${PROJECT_DIR}/dist`。
 
@@ -71,7 +66,7 @@ module.exports = {
 
 ```
 
-#### 加载器 loader
+### 加载器 loader
 
 webpack 本身只能解析 js 和 json 文件，loader 增强了 webpack 的解析能力，使得 webpack 能够解析 jsx，ts，tsx，png，jpg，mp3，mp4，flv，webp 等诸多格式的文件，并将它们转换为有效模块、添加到依赖图中并供应用程序使用。
 
@@ -91,7 +86,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // 指定：在 require/import 语句中涉及到 .png 的路径都先用 url-loader 转换
+      // 指定：用 url-loader 转换 png 文件
       { test: /\.png$/, use: 'url-loader' },
     ],
   },
@@ -101,7 +96,7 @@ module.exports = {
 
 有的 loader 可能还会有额外的属性供你配置。
 
-#### 插件 plugin
+### 插件 plugin
 
 plugin 用于执行范围更广的任务，比如打包优化，资源管理，注入环境变量等。
 
@@ -120,7 +115,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // 指定：在 require/import 语句中涉及到 .png 的路径都先用 url-loader 转换一下
+      // 指定：用 url-loader 转换 png 文件
       { text: /\.png$/, use: 'url-loader' },
     ],
   },
@@ -132,7 +127,7 @@ module.exports = {
 
 ```
 
-#### 模式 mode
+### 模式 mode
 
 指定不同的模式，webpack 会有不同的表现，默认值为`production`。
 
@@ -153,7 +148,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // 指定：在 require/import 语句中涉及到 .png 的路径都先用 url-loader 转换
+      // 指定：用 url-loader 转换 png 文件
       { text: /\.png$/, use: 'url-loader' },
     ],
   },
@@ -165,21 +160,16 @@ module.exports = {
 
 ```
 
-### demo01 - 一个简单的 demo
+## demo01 - 一个简单的 demo
 
 前面简单地讲述了 webpack 4 的 5 个核心概念，下面开始实战。之后，示例的代码均基于 macOS，使用 linux 和 windows 的朋友请自行作相关调整，不再重复提醒。
 
-windows 系统建议使用 git bash 或者 windows terminal，linux 系统和 macOS 建议使用 zsh + oh-my-zsh。
+首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具，免去了升级 node 版本的繁琐工作。
 
-首先安装 nvm。nvm 是一个用于管理 node 版本的工具，免去了升级 node 版本的繁琐工作。
-
-- [nvm for linux/macOS](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows)
-
-安装 nvm 之后，使用 nvm 来安装 node lts 版本（即长期支持版）。
+安装 nvm 之后，使用 nvm 来安装 node v12。
 
 ```sh
-nvm install --lts
+nvm install 12
 ```
 
 新建一个文件夹，命名为 demo。进入到该文件夹中，初始化一个`package.json`文件。
@@ -209,7 +199,7 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 然后安装 webpack 相关的依赖。
 
 ```sh
-npm i webpack@4 webpack-cli@3 -DE
+npm i webpack@4 webpack-cli@3 copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 friendly-errors-webpack-plugin@1 -DE
 ```
 
 创建一个内容简单的`index.js`。
@@ -220,7 +210,7 @@ document.write('Hello webpack!');
 
 ```
 
-创建一个 webpack 配置文件`webpack.config.js`。`path`模块的`resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径（无需考虑路径分隔符的问题），用于定位特定的文件夹或文件。`path`模块还有一个`join`，作用与`resolve`相近，可以自行了解一下。
+创建一个 webpack 配置文件`webpack.config.js`。`path.resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径，用于定位特定的文件夹或文件。`path.join`作用与它相近，可以自行了解。
 
 ```js
 // 使用 path 模块来指定路径
@@ -254,21 +244,19 @@ module.exports = {
 }
 ```
 
-接着，就可以执行命令进行构建了。执行`npm run build`之后，npm 会在`package.json`文件中寻找`scripts`中的`build`字段，找到的话会执行操作，npm 会自动在项目根目录下的`node_modules`文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。寻找的顺序是：项目根目录 -> 全局目录 -> 都没有找到，则报错终止执行。
+接着，就可以执行命令进行构建了。执行`npm run build`之后，npm 会在`package.json`文件中寻找`scripts`中的`build`字段，找到的话会执行操作，否则就报错。
+
+找到`build`字段之后，npm 会在项目根目录下的 node_modules 文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
+
+npm 寻找依赖的顺序是：项目根目录下的 node_modules -> 全局目录。如果都没有找到，则报错终止执行。
 
 ```sh
 npm run build
 ```
 
-最后，我们可以在`dist`目录下看到已经生成了一个`bundle.js`文件。
+最后，我们可以看到，在`dist`目录下已经生成了一个`bundle.js`文件。
 
-但是现在还远远不够，每次都手动创建一个 html 文件并且手动引用这个`bundle.js`是难以接受的，因为这会耗费不必要的时间，而且当项目复杂度越来越高时，这个引用的成本也会越来越高。我们需要一些自动处理的手段，来帮我们自动引入这个`bundle.js`文件到 html 文件中。
-
-我们先来安装一下相关的依赖。
-
-```sh
-npm i copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 -DE
-```
+但是现在还远远不够，每次都耗费不必要的时间取手动创建一个 html 文件和引用这个`bundle.js`是难以忍受的。我们需要一些自动处理的手段，来帮我们自动引入这个`bundle.js`文件到 html 文件中。
 
 在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。`index.html`如下所示。
 
@@ -287,7 +275,7 @@ npm i copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpack
 
 ```
 
-紧接着，我们在`webpack.config.js`中做相关的配置。这样，我们就可以无需操心在 html 文件中引入 js 文件的问题了，而且网站图标也可以帮我们自动处理。
+紧接着，我们在`webpack.config.js`中做相关的配置。这样，我们就可以无需操心在 html 文件中引入 js 文件以及网站图标的问题了。
 
 ```js
 const CopyPlugin = require('copy-webpack-plugin');
@@ -345,6 +333,23 @@ module.exports = {
 
 ```
 
+在遇到错误的时候，让 webpack 输出的错误信息更加友好。
+
+```js
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
+module.exports = {
+  ...
+  plugins: [
+    // 显示友好的错误信息
+    new FriendlyErrorsPlugin(),
+    ...
+  ],
+  ...
+};
+
+```
+
 完整的`webpack.config.js`如下所示。
 
 ```js
@@ -355,6 +360,7 @@ const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   // 指定模式为 production，即生产模式
@@ -368,6 +374,8 @@ module.exports = {
   },
   // 指定插件
   plugins: [
+    // 显示友好的错误信息
+    new FriendlyErrorsPlugin(),
     // 显示进度条
     new WebpackBar(),
     // 移除上一次的构建文件
@@ -386,7 +394,7 @@ module.exports = {
 
 ```
 
-重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`。🎉恭喜，一个简单的 webpack demo 已经完成啦～
+重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`（你也可以使用 vscode 的`live server`插件来运行，这也是本篇教程推荐的方法）。🎉恭喜，一个简单的 webpack demo 已经完成啦～
 
 ```sh
 dist
@@ -404,17 +412,17 @@ dist
 - [webpack-bar](https://github.com/nuxt/webpackbar)
 - [webpack plugins 的顺序会影响什么吗？](https://stackoverflow.com/questions/41470771/webpack-does-the-order-of-plugins-matter)
 
-源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-demos/tree/master/demo01)。
+参考源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-demos/tree/master/demo01)。
 
-### demo02 - 再看 webpack 核心概念与基础应用
+## demo02 - 再看 webpack 核心概念与基础应用
 
-#### 入口 entry
+### 入口 entry
 
 一开始我们说到，webpack 会分析依赖生成依赖图，而分析依赖生成依赖图的起点就由`entry`指定。
 
 ![webpack示意图](https://ae01.alicdn.com/kf/Hc2861d3d0e2b4ad89bfab9c37be5ecbcK.jpg)
 
-单页面应用 SPA 只有单入口，此时`entry`是一个字符串 string。多页面应用 MPA 有多个入口，此时`entry`是一个对象 object。目前，单页面应用比较多见，demo01 就是一个 SPA 的配置。
+单页面应用 SPA 只有单入口，此时`entry`是一个字符串 string。多页面应用 MPA 有多个入口，此时`entry`是一个对象 object。demo01 就是一个 SPA 的配置。
 
 实际上，demo01 中`entry`的写法等同于下面的代码。也就是说，单入口也可以用多入口的写法书写，默认的 key 是`main`，你也可以自行修改。
 
@@ -431,7 +439,7 @@ module.exports = {
 
 ```
 
-还有一个可能会跟`entry`一起使用的字段，那就是`context`。`context`可以指定`entry`的基本路径，接收的值是一个绝对路径，对于 MPA，使用`context`往往能使`entry`更简洁，下面就是一个示例。因为需要用到路径分割符，可能会造成问题，我个人并不建议这么写。
+还有一个可能会跟`entry`一起使用的字段，那就是`context`。`context`可以指定`entry`的基本路径，接收的值是一个绝对路径，对于 MPA，使用`context`往往能使`entry`更简洁，下面就是一个示例。
 
 ```js
 const path = require('path');
@@ -445,7 +453,7 @@ module.exports = {
 
 ```
 
-为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中，后续我们也不会使用`context`字段。无需修改代码，`path.resolve`也能保证其运作成功，但我们需要把对应的`script`修改一下来确保能够运行。
+为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中，后续我们也不会使用`context`字段。我们需要把对应的`script`修改一下来确保能够运行。
 
 ```json
 {
@@ -458,13 +466,11 @@ module.exports = {
 
 ```
 
-注意这里使用了`/`作为路径分隔符，可能会造成问题，我们之后会再加以改进。
-
 相关资料汇总：
 
 - [webpack - entry and context](https://v4.webpack.js.org/configuration/entry-context/)
 
-#### 输出 output
+### 输出 output
 
 分析依赖生成依赖图之后，webpack 就会开始打包，打包结果如何输出就由`output`指定。
 
@@ -479,8 +485,8 @@ module.exports = {
     app: path.resolve('src', 'app.js'),
   },
   output: {
-    filename: '[name].js',
     path: path.resolve('dist'),
+    filename: '[name].js',
   },
 };
 
@@ -488,17 +494,17 @@ module.exports = {
 
 此外，还需要修改 html-webpack-plugin 的配置，让每一个入口点都有一个专属的 html 文件模板，并且还需要让每一个 html 文件模板都插入公共代码块。
 
-MPA 在配置上相当复杂，也相当劝退新手，在这里不再展开阐述，而是以 SPA 作为示例作 webpack 打包教学。有兴趣的可以自行搜索`webpack mpa`学习。
+MPA 在配置上相对复杂，也相对更劝退新手，在这里不再展开阐述，而是以 SPA 作为示例作 webpack 打包教学。有兴趣的可以自行搜索`webpack mpa`学习。
 
 相关资料汇总：
 
 - [webpack - output](https://v4.webpack.js.org/configuration/output/)
 
-#### 插件 plugin
+### 插件 plugin
 
-plugins 用于增强 webpack 功能，比如优化打包文件，管理资源，注入环境变量等等，作用于整个构建过程。
+plugin 用于增强 webpack 功能，比如优化打包文件，管理资源，注入环境变量等等，作用于整个构建过程。
 
-前面的例子中，我们使用到了`copy-webpack-plugin`，`html-webpack-plugin`和`webpackbar`，都是相对来说比较常用的 plugins。
+前面的例子中，我们使用到了`copy-webpack-plugin`，`html-webpack-plugin`和`webpackbar`，都是相对来说比较简单的 plugin。
 
 每个 plugin 都需要放入到`plugins`字段数组中，顺序一般不影响，具体 plugin 的配置需要去查询具体的文档。
 
@@ -508,21 +514,11 @@ plugins 用于增强 webpack 功能，比如优化打包文件，管理资源，
 - [webpack - plugins list](https://v4.webpack.js.org/plugins/)
 - [常用 plugins 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 
-#### 模式 mode
-
-指定不同的模式，webpack 会自动启用不同的功能进行优化，默认值为`production`，默认取值范围为`development`，`production`和`none`。具体可以参考官方文档。
-
-后面还会展示如何自定义`mode`。
-
-相关资料汇总：
-
-- [webpack - mode](https://v4.webpack.js.org/configuration/mode/)
-
-#### 加载器 loader
+### 加载器 loader
 
 由于 webpack 默认只支持解析 js 和 json 文件，所以项目中使用到的其他文件，比如图片文件，字体文件，样式文件等，就只能使用 loaders 解析，解析后文件会作为模块被 webpack 加入到依赖图中。
 
-demo02 将会关注一些常用 loader。
+下面将会关注一些常用 loader。
 
 相关资料汇总：
 
@@ -530,9 +526,9 @@ demo02 将会关注一些常用 loader。
 - [webpack - loaders list](https://v4.webpack.js.org/loaders/)
 - [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 
-#### 新语法相关的 loader
+### 新语法相关的 loader
 
-因为 webpack 本身并不支持 es6+ 语法打包，所以我们需要使用 [babel](https://babeljs.io/) 和 [babel-loader](https://github.com/babel/babel-loader#readme)，让 webpack 能够解析 es6+ 语法。
+因为 webpack 本身并不支持解析 es6+ 语法，所以我们需要使用 [babel](https://babeljs.io/) 和 [babel-loader](https://github.com/babel/babel-loader#readme)，让 webpack 能够解析 es6+ 语法。
 
 babel 其中一个很好的作用就是转换新语法为旧语法，也就是我们常说的转译。babel-loader 使得 webpack 能够结合 babel 来使用。
 
@@ -554,14 +550,12 @@ module.exports = {
     rules: [
       ...
       {
-        // 指定 js 和 jsx 文件
+        // js 和 jsx 文件
         test: /\.jsx?$/,
         // 不处理 node_modules 和 bower_components
         exclude: /(node_modules|bower_components)/,
         // 使用 babel-loader 进行处理
-        use: {
-          loader: 'babel-loader',
-        },
+        use: [{ loader: 'babel-loader' }],
       },
       ...
     ],
@@ -599,9 +593,11 @@ chrome >= 70
 
 描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
 
-这里还需要讲解 2 个新的概念再接着往下说，它们就是`shim`和`polyfill`。`shim`用于兼容，拦截调用不存在的 api 并提供抽象层，并不局限于 html/css/js，而`polyfill`是`shim`的一种，通常使用 js 提供一些浏览器本身没有的 html/css/js 新功能。我们要做的，实际上就是要自动处理`polyfill`，这也就是 babel 另一个很好的作用。
+这里还需要讲解 2 个新的概念再往下继续，它们就是 shim 和 polyfill。shim 用于兼容，拦截调用不存在的 api 并提供抽象层，并不局限于 html/css/js，而 polyfill 是 shim 的一种，通常使用 js 提供一些浏览器本身没有的 html/css/js 新功能。
 
-自动处理`polyfill`也可以通过配置`@babel/preset-env`来做。`@babel/preset-env`默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
+我们要做的，实际上就是要自动处理 polyfill，也就是在 babel 转译的时候，让 babel 自动加入需要支持的浏览器不支持，但我们项目中又用到了的特性。这就是 babel 另一个很好的作用。
+
+自动处理 polyfill 也可以通过配置`@babel/preset-env`来做。`@babel/preset-env`默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
 
 ```json
 {
@@ -617,7 +613,7 @@ chrome >= 70
 
 ```
 
-默认地，`@babel/preset-env`会使用`core-js`v2 和`regenerator-runtime`做 polyfill。`core-js` v3 版本要更好，这里我们指定要使用 v3 版本。
+默认地，`@babel/preset-env`会使用`core-js`v2 和`regenerator-runtime`做 polyfill。`core-js` v3 支持更多，影响更小，现在一般建议使用 v3，这里我们就指定要使用 v3 版本。
 
 ```json
 {
@@ -636,7 +632,9 @@ chrome >= 70
 
 之后，babel 会为我们自动引入代码使用到了的但浏览器不支持的、`core-js`和`regenerator-runtime`关联的部分做 polyfill。
 
-但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用`class`，转译之后就会在使用到`class`的文件头部都增加一串相同的代码，这些代码官方叫做`helpers`。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的，我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
+但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用`class`，转译之后就会在使用到`class`的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
+
+我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
 
 ```json
 {
@@ -690,7 +688,7 @@ import './index.css';
 class App extends React.Component {
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <p>Hello Webpack!</p>
       </div>
     );
@@ -701,7 +699,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-你也可以写成函数式组件 FC。
+你也可以使用函数式组件 FC 书写。
 
 ```js
 import React from 'react';
@@ -709,7 +707,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const App = () => (
-  <div class="container">
+  <div className="container">
     <p>Hello Webpack!</p>
   </div>
 );
@@ -718,7 +716,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-之后构建并运行测试即可。如果正常，可以看到页面上会出现`Hello Webpack!`的字样。
+之后构建并运行测试即可。如果正常，可以看到页面上会出现`Hello Webpack!`的文字。
 
 当然，对比起官方文档和实际大型应用开发需求，教程这部分还相当简陋，建议还是多多阅读文档多多实践。
 
@@ -736,7 +734,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - [core-js](https://github.com/zloirock/core-js#readme)
 - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
 
-#### 样式相关的 loader
+### 样式相关的 loader
 
 因为 webpack 本身并不支持 css/less/sass/scss 打包，所以我们需要使用一系列的 loader 让 webpack 能够解析上面的四种文件。
 
@@ -757,7 +755,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const App = () => (
-  <div class="container">
+  <div className="container">
     <p>Hello Webpack!</p>
   </div>
 );
@@ -799,9 +797,10 @@ module.exports = {
     rules: [
       ...,
       {
-        // css files
+        // css 文件
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        // 先使用 css-loader 再使用 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       ...
     ],
@@ -816,6 +815,8 @@ module.exports = {
 
 要处理 less，sass 和 scss 文件，又有少许的不同。因为`less-loader`会把 less 文件转换成 css 文件，`sass-loader`会把 sass 和 scss 文件转换成 css 文件，而 css 文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的 loader 即可。
 
+由于 stylus 使用率较低，这里就不再探讨 styl 文件的处理，可自行查阅相关资料。
+
 ```js
 module.exports = {
   ...,
@@ -824,17 +825,22 @@ module.exports = {
     rules: [
       ...,
       {
-        // css files
+        // css 文件
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        // 先使用 css-loader 再使用 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
+        // less 文件
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        // 依次使用 less-loader，css-loader 和 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
       },
       {
+        // sass/scss 文件
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 'css-loader', 'scss-loader'],
+        // 依次使用 sass-loader，css-loader 和 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
       },
       ...,
     ],
@@ -843,9 +849,9 @@ module.exports = {
 
 ```
 
-由于 stylus 使用率较低，这里就不再探讨 styl 文件的处理。
+我们把`index.css`重命名为`index.less`并修改`${PROJECT_DIR}/src/index.js`中的引入。重新构建并运行，并没有什么不同。
 
-我们再来试着添加并使用`antd`，并查看是否有什么异常。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮 Button。
+我们再来试着添加并使用`antd`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮 Button。
 
 ```js
 import React from 'react';
@@ -854,7 +860,7 @@ import { Button } from 'antd';
 import './index.less';
 
 const App = () => (
-  <div class="container">
+  <div className="container">
     <p>Hello Webpack!</p>
     <Button type="primary">Hello Ant Design!</Button>
   </div>
@@ -887,14 +893,17 @@ module.exports = {
     rules: [
       ...,
       {
+        // less 文件
         test: /\.less$/,
+        // 依次使用 less-loader，css-loader 和 style-loader 处理
         use: [
-          'style-loader',
-          'css-loader',
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
           {
             loader: 'less-loader',
             options: {
               lessOptions: {
+                // 自定义主题
                 modifyVars: {
                   'primary-color': '#2f54eb',
                 },
@@ -912,23 +921,216 @@ module.exports = {
 
 ```
 
-重新构建并测试，如果能看到一个深蓝色的按钮出现，基本就是没有问题了。
+重新构建并测试，我们能看到一个深蓝色的按钮，按钮文字是`Hello Ant Design`。
 
 相关资料汇总：
 
+- [style-loader](https://github.com/webpack-contrib/style-loader#readme)
+- [css-loader](https://github.com/webpack-contrib/css-loader#readme)
 - [less](http://lesscss.org/)
 - [webpack - loaders - less-loader](https://v4.webpack.js.org/loaders/less-loader/)
 - [less-loader](https://github.com/webpack-contrib/less-loader#readme)
 - [sass](https://sass-lang.com/)
 - [webpack - loaders - sass-loader](https://v4.webpack.js.org/loaders/sass-loader/)
 - [sass-loader](https://github.com/webpack-contrib/sass-loader#readme)
+- [stylus](https://stylus-lang.com/)
+- [stylus-loader](https://github.com/shama/stylus-loader#readme)
 - [Ant Design](https://ant-design.gitee.io/index-cn)
 
-## snowpack
+### 资产相关的 loader
 
-## rollup
+一般称项目使用到的图片、字体、音视频文件等为项目资产。
 
-## parcel
+最常用的处理资产的 loader 就是 file-loader 和 url-loader，而 url-loader 是 file-loader 的升级版，增加了文件大小的上限，达到大小上限时会自动使用 file-loader，没达到大小上限时，会把文件转换成 base64 数据。
+
+```sh
+npm i file-loader@6 url-loader@4 -DE
+```
+
+安装依赖之后，直接修改配置文件即可。
+
+```js
+module.exports = {
+  ...,
+  // loaders
+  module: {
+    rules: [
+      ...,
+      {
+        // 图片文件
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        // 使用 url-loader 处理
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              // 10 MB 上限
+              limit: 10240,
+            },
+          },
+        ],
+      },
+      {
+        // 字体文件
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        // 使用 url-loader 处理
+        use: [{ loader: 'url-loader' }],
+      },
+      {
+        // 音视频文件
+        test: /\.(mp3|mp4|webp|webm|flv)$/,
+        // 使用 url-loader 处理
+        use: [{ loader: 'url-loader' }],
+      }
+    ],
+    ...,
+  },
+  ...,
+}
+```
+
+在`${PROJECT_DIR}/src/assets`中放入一张图片（我这里放入了一张`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`中引入并使用它。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from 'antd';
+import iconWebpack from './assets/webpack.png';
+import './index.less';
+
+const App = () => (
+  <div className="container">
+    <p>Hello Webpack!</p>
+    <img src={iconWebpack} />
+    <Button type="primary">Hello Ant Design!</Button>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+重新构建，可以看到 dist 目录会多出这张图片，但是已经被重命名成内容的哈希值 hash，只要图片内容不变，哈希值就不会变。测试时图片会正常显示。字体和音视频文件就不再演示了。之后还会对哈希值做更进一步的说明。
+
+但是 url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料。
+
+相关资料汇总：
+
+- [file-loader](https://github.com/webpack-contrib/file-loader#readme)
+- [url-loader](https://github.com/webpack-contrib/url-loader#readme)
+- [html-loader](https://github.com/webpack-contrib/html-loader#readme)
+- [webpack - caching](https://webpack.js.org/guides/caching/)
+
+### 模式 mode
+
+指定不同的模式，webpack 会自动启用不同的功能进行优化，默认值为`production`，默认取值范围为`development`，`production`和`none`。
+
+现在，我们每一次要查看代码效果，都需要执行`npm run build`，然后用`live server`启动。这相当地麻烦，尤其是在开发过程中，这么做会耗费不必要的时间，而且开发时也不应该使用`production`模式，而应该使用`development`模式。
+
+`webpack-dev-server`帮我们很好地解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
+
+```sh
+npm i cross-env@7 webpack-dev-server@3 webpack-merge@4 -DE
+```
+
+我们还需要根据环境来调用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
+
+首先修改`package.json`。`cross-env`可以修改`process.env.NODE_ENV`的值，进而供我们确认环境。
+
+```json
+{
+  ...,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js"
+  },
+  ...
+}
+
+```
+
+接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中。
+
+再新建两个配置文件如下。
+
+`${PROJECT_DIR}/config/webpack.dev.js`：
+
+```js
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  mode: 'development',
+  devServer: {
+    hot: true,
+    open: true,
+    quiet: true,
+  },
+  devtool: 'eval-cheap-source-map',
+});
+
+```
+
+`${PROJECT_DIR}/config/webpack.prod.js`也十分类似
+
+```js
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  devtool: 'none',
+});
+
+```
+
+最后修改`${PROJECT_DIR}/config/webpack.config.js`，让它在不同环境时暴露不同的构建配置。
+
+```js
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
+
+if (process.env.NODE_ENV === 'development') {
+  module.exports = devConfig;
+} else {
+  module.exports = prodConfig;
+}
+
+```
+
+对于 react，还可以加入 react-hot-loader 进一步提升使用体验。这里不再展开讲述，可自行查阅相关资料。
+
+相关资料汇总：
+
+- [webpack - configuration - mode](https://v4.webpack.js.org/configuration/mode/)
+- [webpack - configuration - webpack-dev-server](https://v4.webpack.js.org/configuration/dev-server/)
+- [cross-env](https://github.com/kentcdodds/cross-env)
+- [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
+- [react-hot-loader](https://github.com/gaearon/react-hot-loader#readme)
+
+🎉恭喜，你的第二个 webpack demo 已经完成啦～
+
+参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-demos/tree/master/demo02)。
+
+## demo03 - 工程化的思考
+
+待补充，催稿可以
+
+（1）邮件催稿
+
+（2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
+
+## demo04 - 编写可维护的配置
+
+待补充，催稿可以
+
+（1）邮件催稿
+
+（2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
+
+相关资料汇总：
+
+- [webpack - mode](https://v4.webpack.js.org/configuration/mode/)
 
 待补充，催稿可以
 
