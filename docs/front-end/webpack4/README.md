@@ -2,10 +2,11 @@
 
 ## 说明
 
-- 该部分以教程形式书写，适合想要深入 js 工具链的同学学习以入门。着重关注于基本使用，基本不会涉及拓展使用和原理。
-- 本篇教程默认使用 node v12，chrome 浏览器和 macOS 系统。如果出现不一致的问题，大概率是版本问题，请更新系统（如 windows 7 升级到 windows 10）和浏览器版本到最新。
+- 该部分以教程形式书写，默认读者已经了解 npm 的基本知识，适合想要深入 js 工具链的同学学习以入门。
+- 本篇教程着重关注于基本使用，基本不会涉及拓展使用和原理，请自行查阅相关资料学习。
+- 本篇教程默认使用 zsh（windows 可以使用 [git bash](https://git-scm.com/downloads) 或者 [windows terminal](https://github.com/microsoft/terminal/releases)），node v12，vscode，chrome 和 macOS。如果出现不一致的问题，大概率是版本问题，请首先更新版本（如 windows 7 升级到 windows）。
 - 本篇教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
-- 本篇教程不会考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。
+- 本篇教程不考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。
 
 ## webpack 是什么
 
@@ -13,10 +14,10 @@ webpack 是一个静态模块打包工具，分析依赖生成依赖图，最终
 
 ## 为什么需要 webpack 打包项目
 
-- 允许书写 ES6+ 代码、vue template、jsx 等
-- 无需考虑 css 前缀，自动添加
-- 压缩混淆代码
-- 压缩图片、文件等大小
+- 允许书写 es6+ 代码、jsx、vue template 等
+- 自动处理图片、文件等资产文件
+- 允许使用 css 预处理器，自动添加 css 前缀
+- 自动压缩混淆
 
 总而言之，构建工具减少了重复的工作，使我们能投入更多的时间到开发工作中。
 
@@ -25,7 +26,6 @@ webpack 是一个静态模块打包工具，分析依赖生成依赖图，最终
 - 社区活跃度高
 - 官方生态完整，社区生态丰富
 - 配置灵活
-- 更新迭代速度快
 
 ## 核心概念
 
@@ -48,7 +48,7 @@ module.exports = {
 
 ### 输出 output
 
-output 指定 webpack 在哪里存放、命名创建的 bundle，主要输出文件的默认值为`${PROJECT_DIR}/dist/main.js`，其他生成文件默认放在`${PROJECT_DIR}/dist`。
+output 指定 webpack 在哪里存放输出文件和主要输出文件的文件名。主要输出文件默认为`${PROJECT_DIR}/dist/main.js`，其他生成文件默认放在`${PROJECT_DIR}/dist`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -68,7 +68,7 @@ module.exports = {
 
 ### 加载器 loader
 
-webpack 本身只能解析 js 和 json 文件，loader 增强了 webpack 的解析能力，使得 webpack 能够解析 jsx，ts，tsx，png，jpg，mp3，mp4，flv，webp 等诸多格式的文件，并将它们转换为有效模块、添加到依赖图中并供应用程序使用。
+webpack 本身只能解析 js 和 json 文件，loader 增强了 webpack 的解析能力，使得 webpack 能够解析 jsx，ts，tsx，png，jpg 等诸多格式的文件，并将它们转换为有效模块、添加到依赖图中并供应用程序使用。
 
 loader 有两个必需的属性，一个是`test`，用于判断需要解析的文件，另一个是`use`，指定用于解析的 loader。
 
@@ -86,8 +86,12 @@ module.exports = {
   },
   module: {
     rules: [
-      // 指定：用 url-loader 转换 png 文件
-      { test: /\.png$/, use: 'url-loader' },
+      {
+        // png 文件
+        test: /\.png$/,
+        // 使用 url-loader 处理
+        use: 'url-loader'
+      },
     ],
   },
 };
@@ -115,13 +119,20 @@ module.exports = {
   },
   module: {
     rules: [
-      // 指定：用 url-loader 转换 png 文件
-      { text: /\.png$/, use: 'url-loader' },
+      {
+        // png 文件
+        test: /\.png$/,
+        // 使用 url-loader 处理
+        use: 'url-loader'
+      },
     ],
   },
   plugins: [
-    // 指定：使用 webpack-bundle-analyzer 分析生成内容的大小及各依赖占比
-    new BundleAnalyzerPlugin(),
+    // 分析生成包大小
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+    }),
   ],
 };
 
@@ -153,7 +164,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // 指定：使用 webpack-bundle-analyzer 分析生成内容的大小及各依赖占比
+    // 使用 webpack-bundle-analyzer 分析生成内容的大小及各依赖占比
     new BundleAnalyzerPlugin(),
   ],
 };
@@ -162,7 +173,7 @@ module.exports = {
 
 ## demo01 - 一个简单的 demo
 
-前面简单地讲述了 webpack 4 的 5 个核心概念，下面开始实战。之后，示例的代码均基于 macOS，使用 linux 和 windows 的朋友请自行作相关调整，不再重复提醒。
+前面简单地讲述了 webpack 4 的 5 个核心概念，下面开始实战。
 
 首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具，免去了升级 node 版本的繁琐工作。
 
@@ -172,14 +183,14 @@ module.exports = {
 nvm install 12
 ```
 
-新建一个文件夹，命名为 demo。进入到该文件夹中，初始化一个`package.json`文件。
+新建一个文件夹，命名为`demo`。进入到该文件夹中，初始化一个`package.json`文件。
 
 ```sh
 mkdir demo && cd demo
 npm init -y
 ```
 
-根目录下新建一个`.npmrc`文件，用于设置 npm 镜像，加速安装依赖。
+根目录下新建一个`.npmrc`文件，用于设置镜像，加速安装依赖。
 
 ```sh
 registry=https://registry.npm.taobao.org
@@ -196,21 +207,20 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 
 ```
 
-然后安装 webpack 相关的依赖。
+然后安装相关依赖。
 
 ```sh
 npm i webpack@4 webpack-cli@3 copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 friendly-errors-webpack-plugin@1 -DE
 ```
 
-创建一个内容简单的`index.js`。
+创建一个内容简单的`${PROJECT_DIR}/src/index.js`。
 
 ```js
-// ${PROJECT_DIR}/src/index.js
 document.write('Hello webpack!');
 
 ```
 
-创建一个 webpack 配置文件`webpack.config.js`。`path.resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径，用于定位特定的文件夹或文件。`path.join`作用与它相近，可以自行了解。
+创建一个 webpack 配置文件`${PROJECT_DIR}/webpack.config.js`。`path.resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径，用于定位特定的文件夹或文件。`path.join`作用与它相近，可以自行了解。
 
 ```js
 // 使用 path 模块来指定路径
@@ -230,7 +240,7 @@ module.exports = {
 
 ```
 
-目前，我们已经看到了 2 种模式：`development`和`production`。实际上，一共内置了 3 种模式，还有一种模式就是`none`。`development`和`production`模式都会启用一些内置的优化，而`none`模式没有任何优化，一般也不会使用该模式。假如不指定模式，会默认使用`production`模式。
+目前，我们已经看到了 2 种模式：`development`和`production`。实际上，一共内置了 3 种模式，还有一种模式就是`none`。`development`和`production`模式都会启用一些内置的优化，而`none`模式没有任何优化，一般不会使用该模式。假如不指定模式，会默认使用`production`模式。
 
 现在，我们修改`package.json`中的`scripts`字段。
 
@@ -246,9 +256,9 @@ module.exports = {
 
 接着，就可以执行命令进行构建了。执行`npm run build`之后，npm 会在`package.json`文件中寻找`scripts`中的`build`字段，找到的话会执行操作，否则就报错。
 
-找到`build`字段之后，npm 会在项目根目录下的 node_modules 文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
+找到`build`字段之后，npm 会在项目根目录下的`node_modules`文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
 
-npm 寻找依赖的顺序是：项目根目录下的 node_modules -> 全局目录。如果都没有找到，则报错终止执行。
+npm 寻找依赖的顺序是：项目根目录下的`node_modules`->全局目录。如果都没有找到，则报错终止执行。
 
 ```sh
 npm run build
@@ -355,7 +365,7 @@ module.exports = {
 ```js
 // 使用 path 模块来指定路径
 const path = require('path');
-// 使用 plugins
+// 使用 plugin
 const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
@@ -372,7 +382,7 @@ module.exports = {
     path: path.resolve('dist'),
     filename: 'bundle.js',
   },
-  // 指定插件
+  // 指定 plugin
   plugins: [
     // 显示友好的错误信息
     new FriendlyErrorsPlugin(),
@@ -453,7 +463,7 @@ module.exports = {
 
 ```
 
-为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中，后续我们也不会使用`context`字段。我们需要把对应的`script`修改一下来确保能够运行。
+为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中。我们需要把对应的`script`修改一下来确保能够运行。
 
 ```json
 {
@@ -494,7 +504,7 @@ module.exports = {
 
 此外，还需要修改 html-webpack-plugin 的配置，让每一个入口点都有一个专属的 html 文件模板，并且还需要让每一个 html 文件模板都插入公共代码块。
 
-MPA 在配置上相对复杂，也相对更劝退新手，在这里不再展开阐述，而是以 SPA 作为示例作 webpack 打包教学。有兴趣的可以自行搜索`webpack mpa`学习。
+MPA 在配置上相对复杂，也相对更劝退新手，本篇教程只会以 SPA 作为示例，你可以自行搜索相关资料学习 MPA 的 webpack 构建配置。
 
 相关资料汇总：
 
@@ -579,17 +589,18 @@ module.exports = {
 
 ```
 
-但现实往往是残酷的，`@babel/preset-env`并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上。我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。下面是一个示例。
+但现实往往是残酷的，`@babel/preset-env`并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上（注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性）。我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。下面是一个示例。
 
 ```sh
 > 0.2%
 last 5 versions
 not dead
 chrome >= 70
+ie >= 11
 
 ```
 
-`> 0.2%`表示需要支持使用率超过 0.2% 的浏览器，`last 5 versions`表示需要支持浏览器的最近 5 个版本，`not dead`表示浏览器在最近 24 个月内还得到了官方的支持（所以目前已经不应该再支持 IE 11-，要使用 babel 支持 IE 11-，需要更多的工作，这里并不会做相关的演示），`chrome >= 70`表示 chrome 的版本需要不小于 70（目前，qq 浏览器使用的内核就是 chromium 70）。上面四个条件取并集，就是需要支持的浏览器范围。更多的信息可以查看[官方文档](https://github.com/browserslist/browserslist#readme)。
+`> 0.2%`表示需要支持使用率超过 0.2% 的浏览器，`last 5 versions`表示需要支持浏览器的最近 5 个版本，`not dead`表示浏览器在最近 24 个月内还得到了官方的支持（所以目前已经不应该再支持 IE 11-，要使用 babel 支持 IE 11-，需要更多的工作，这里并不会做相关的演示），`chrome >= 70`表示 chrome 的版本需要不小于 70，`ie >= 11`表示 ie 的版本需要不小于 11。上面的条件取并集，就是需要支持的浏览器范围。
 
 描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
 
@@ -630,9 +641,9 @@ chrome >= 70
 
 ```
 
-之后，babel 会为我们自动引入代码使用到了的但浏览器不支持的、`core-js`和`regenerator-runtime`关联的部分做 polyfill。
+之后，babel 会为我们自动引入代码使用到了的但浏览器不支持的、core-js 和 regenerator-runtime 关联的部分做 polyfill。
 
-但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用`class`，转译之后就会在使用到`class`的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
+但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用 class，转译之后就会在使用到 class 的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
 
 我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
 
@@ -673,7 +684,7 @@ chrome >= 70
       "presets": [["@babel/preset-react", { "development": true }]]
     }
   },
-  "plugins": [["@babel/plugin-transform-runtime"]]
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
 
 ```
@@ -745,7 +756,7 @@ npm i antd@4 -E
 npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@8 babel-plugin-import@1 -DE
 ```
 
-`css-loader`能够将 css 文件转换成模块，`style-loader`能够将样式模块嵌入到文件中，如果是 js/jsx 文件使用 css 文件，那么转换后的 css 模块会被嵌入到 js/jsx 文件中，然后再生成标签嵌入到`<head>`标签中。
+css-loader 能够将 css 文件转换成模块，style-loader 能够将样式模块嵌入到文件中，如果是 js/jsx 文件使用 css 文件，那么转换后的 css 模块会被嵌入到 js/jsx 文件中，然后再生成标签嵌入到 head 标签中。
 
 我们先给`${PROJECT_DIR}/src/index.js`添加 css 文件的引入。
 
@@ -792,7 +803,7 @@ body {
 ```js
 module.exports = {
   ...,
-  // loaders
+  // 指定 loader
   module: {
     rules: [
       ...,
@@ -820,7 +831,7 @@ module.exports = {
 ```js
 module.exports = {
   ...,
-  // loaders
+  // 指定 loader
   module: {
     rules: [
       ...,
@@ -888,7 +899,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```js
 module.exports = {
   ...,
-  // loaders
+  // 指定 loader
   module: {
     rules: [
       ...,
@@ -952,7 +963,7 @@ npm i file-loader@6 url-loader@4 -DE
 ```js
 module.exports = {
   ...,
-  // loaders
+  // 指定 loader
   module: {
     rules: [
       ...,
@@ -964,8 +975,12 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              // 10 MB 上限
-              limit: 10240,
+              // 8 MB 上限
+              limit: 8192,
+              // 放入 img 文件夹中
+              outputPath: 'img',
+              // 使用 img 文件夹中的图片
+              publicPath: 'img',
             },
           },
         ],
@@ -974,14 +989,17 @@ module.exports = {
         // 字体文件
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         // 使用 url-loader 处理
-        use: [{ loader: 'url-loader' }],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'fonts',
+              publicPath: 'fonts',
+            },
+          },
+        ],
       },
-      {
-        // 音视频文件
-        test: /\.(mp3|mp4|webp|webm|flv)$/,
-        // 使用 url-loader 处理
-        use: [{ loader: 'url-loader' }],
-      }
     ],
     ...,
   },
@@ -989,7 +1007,7 @@ module.exports = {
 }
 ```
 
-在`${PROJECT_DIR}/src/assets`中放入一张图片（我这里放入了一张`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`中引入并使用它。
+在`${PROJECT_DIR}/src/assets`中放入一个图片文件（我这里放入了`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`中引入并使用它。
 
 ```js
 import React from 'react';
@@ -1010,7 +1028,36 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-重新构建，可以看到 dist 目录会多出这张图片，但是已经被重命名成内容的哈希值 hash，只要图片内容不变，哈希值就不会变。测试时图片会正常显示。字体和音视频文件就不再演示了。之后还会对哈希值做更进一步的说明。
+在`${PROJECT_DIR}/src/assets`中放入一个字体文件（我这里放入了`Alibaba-PuHuiTi-Regular.ttf`），然后在`${PROJECT_DIR}/src/index.less`中引入并使用它。
+
+```less
+@font-face {
+  font-family: "Alibaba PuHuiTi";
+  src: url("./assets/Alibaba-PuHuiTi-Regular.ttf") format("ttf");
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-width: 1280px;
+  min-height: 100%;
+  font-family: "Alibaba PuHuiTi", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.container {
+  width: 100%;
+}
+
+```
+
+重新构建，可以看到 dist 目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字是一长串哈希值 hash。测试时图片会正常显示，字体被正常加载，一切正常。哈希值会在之后做进一步说明。
 
 但是 url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料。
 
@@ -1030,7 +1077,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 `webpack-dev-server`帮我们很好地解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
 
 ```sh
-npm i cross-env@7 webpack-dev-server@3 webpack-merge@4 -DE
+npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4 -DE
 ```
 
 我们还需要根据环境来调用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
@@ -1076,10 +1123,18 @@ module.exports = merge(baseConfig, {
 ```js
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'none',
+  plugins: [
+    // 分析生成包大小
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+    }),
+  ],
 });
 
 ```
@@ -1112,7 +1167,7 @@ if (process.env.NODE_ENV === 'development') {
 
 参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-demos/tree/master/demo02)。
 
-## demo03 - 工程化的思考
+## demo03 - 优化以贴近实际工程
 
 待补充，催稿可以
 

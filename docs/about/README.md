@@ -7,7 +7,7 @@
 - 闲暇时间希望能做自己想做的事，希望能得到最单纯的快乐，希望世界上高素质的人多一些
 - 喜欢的游戏：最后生还者1 The Last of Us Part I，黑魂系列 Dark Souls
 - 喜欢的视频制作者：Mr.Quin，怕上火暴王老菊，纯黑
-- 喜欢的影视剧：疑犯追踪 Person of Interest
+- 喜欢的影视剧：疑犯追踪 Person of Interest，神探夏洛克 Sherlock(BBC)，生活大爆炸 The Big Bang Theory
 - 讨厌的行为：阴阳怪气
 - 讨厌的人：杠精，阴阳人
 - 支付宝饭碗：13266337925
