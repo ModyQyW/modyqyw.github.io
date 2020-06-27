@@ -6,7 +6,7 @@
 - 本篇教程着重关注于基本使用，基本不会涉及拓展使用和原理，请自行查阅相关资料学习。
 - 本篇教程默认使用 zsh（windows 可以使用 [git bash](https://git-scm.com/downloads) 或者 [windows terminal](https://github.com/microsoft/terminal/releases)），node v12，vscode，chrome 和 macOS。如果出现不一致的问题，大概率是版本问题，请首先更新版本（如 windows 7 升级到 windows）。
 - 本篇教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
-- 本篇教程不考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。
+- 本篇教程不考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。要支持 IE 11-，不仅要考虑支持 es5 语法、特性，还要考虑支持 es3 语法、特性，更要考虑怎么填平 IE 11- 各类奇异的特性问题。
 
 ## webpack 是什么
 
@@ -40,7 +40,7 @@ entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`$
 const path = require('path');
 
 module.exports = {
-  // 指定入口为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
 };
 
@@ -55,9 +55,9 @@ output 指定 webpack 在哪里存放输出文件和主要输出文件的文件�
 const path = require('path');
 
 module.exports = {
-  // 指定入口为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -77,9 +77,9 @@ loader 有两个必需的属性，一个是`test`，用于判断需要解析的�
 const path = require('path');
 
 module.exports = {
-  // 指定入口为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -110,9 +110,9 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  // 指定入口为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -148,24 +148,31 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  // 指定模式为 development，即开发模式
+  // 指定 mode 为 development，即开发模式
   mode: 'development',
-  // 指定入口为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
   },
   module: {
     rules: [
-      // 指定：用 url-loader 转换 png 文件
-      { text: /\.png$/, use: 'url-loader' },
+      {
+        // png 文件
+        test: /\.png$/,
+        // 使用 url-loader 处理
+        use: 'url-loader'
+      },
     ],
   },
   plugins: [
-    // 使用 webpack-bundle-analyzer 分析生成内容的大小及各依赖占比
-    new BundleAnalyzerPlugin(),
+    // 分析生成包大小
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+    }),
   ],
 };
 
@@ -227,11 +234,11 @@ document.write('Hello webpack!');
 const path = require('path');
 
 module.exports = {
-  // 指定模式为 production，即生产模式
+  // 指定 mode 为 production，即生产模式
   mode: 'production',
-  // 指定入口为 ${PROJECT_DIR}/src/index.js
+  // 指定 entry
   entry: path.resolve('src', 'index.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -258,7 +265,7 @@ module.exports = {
 
 找到`build`字段之后，npm 会在项目根目录下的`node_modules`文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
 
-npm 寻找依赖的顺序是：项目根目录下的`node_modules`->全局目录。如果都没有找到，则报错终止执行。
+npm 寻找依赖的顺序是：项目根目录下的`node_modules`->全局目录下的`node_modules`。如果都没有找到，则报错终止执行。
 
 ```sh
 npm run build
@@ -266,9 +273,11 @@ npm run build
 
 最后，我们可以看到，在`dist`目录下已经生成了一个`bundle.js`文件。
 
-但是现在还远远不够，每次都耗费不必要的时间取手动创建一个 html 文件和引用这个`bundle.js`是难以忍受的。我们需要一些自动处理的手段，来帮我们自动引入这个`bundle.js`文件到 html 文件中。
+但是现在还远远不够，每次都耗费不必要的时间取手动创建一个 html 文件和引用这个`bundle.js`是难以忍受的。我们需要一些自动处理的手段，来帮我们自动生成 html 文件并引入这个`bundle.js`文件。
 
-在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。`index.html`如下所示。
+在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。
+
+`index.html`如下所示。
 
 ```html
 <!DOCTYPE html>
@@ -294,7 +303,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 module.exports = {
   ...
   plugins: [
-    // 复制 ${PROJECT_DIR}/public/favicon.ico 到 ${PROJECT_DIR}/dist 目录下
+    // 复制 ${PROJECT_DIR}/public/favicon.ico
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
@@ -309,7 +318,7 @@ module.exports = {
 
 ```
 
-但现在还不够，我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。我们还需要加入一些额外的配置。
+但现在还不够，我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。
 
 ```js
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
@@ -326,7 +335,7 @@ module.exports = {
 
 ```
 
-我们还可以加一点额外的处理，让它在打包的时候显示进度条。
+还可以让 webpack 在打包的时候显示进度条。
 
 ```js
 const WebpackBar = require('webpackbar');
@@ -373,11 +382,11 @@ const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-  // 指定模式为 production，即生产模式
+  // 指定 mode 为 production，即生产模式
   mode: 'production',
-  // 指定入口为 ${PROJECT_DIR}/src/index.js
+  // 指定 entry
   entry: path.resolve('src', 'index.js'),
-  // 指定输出为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -390,7 +399,7 @@ module.exports = {
     new WebpackBar(),
     // 移除上一次的构建文件
     new CleanPlugin(),
-    // 复制 ${PROJECT_DIR}/public/favicon.ico 到 ${PROJECT_DIR}/dist 目录下
+    // 复制 ${PROJECT_DIR}/public/favicon.ico
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
@@ -576,7 +585,7 @@ module.exports = {
 
 排除 node_modules 和 bower_components 中的 js 文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。
 
-值得注意的是，loaders 和上面提到的几个核心概念都不同，所使用到的字段是`module.rules`。对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module`（模块）字段内做相关的定义。
+值得注意的是，loaders 和上面提到的几个核心概念都不同，所使用到的字段是`module.rules`。对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module`字段内做相关的定义。
 
 修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们在根目录下创建一个文件`babel.config.json`作为 babel 的配置文件，这也是当前 babel 官方推荐的做法。
 
@@ -589,7 +598,9 @@ module.exports = {
 
 ```
 
-但现实往往是残酷的，`@babel/preset-env`并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上（注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性）。我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。下面是一个示例。
+但现实往往是残酷的，`@babel/preset-env`并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上（注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性）。
+
+我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。下面是一个示例。
 
 ```sh
 > 0.2%
@@ -600,7 +611,7 @@ ie >= 11
 
 ```
 
-`> 0.2%`表示需要支持使用率超过 0.2% 的浏览器，`last 5 versions`表示需要支持浏览器的最近 5 个版本，`not dead`表示浏览器在最近 24 个月内还得到了官方的支持（所以目前已经不应该再支持 IE 11-，要使用 babel 支持 IE 11-，需要更多的工作，这里并不会做相关的演示），`chrome >= 70`表示 chrome 的版本需要不小于 70，`ie >= 11`表示 ie 的版本需要不小于 11。上面的条件取并集，就是需要支持的浏览器范围。
+`> 0.2%`表示需要支持使用率超过 0.2% 的浏览器，`last 5 versions`表示需要支持浏览器的最近 5 个版本，`not dead`表示浏览器在最近 24 个月内还得到过官方的支持，`chrome >= 70`表示 chrome 的版本需要不小于 70，`ie >= 11`表示 ie 的版本需要不小于 11。上面的条件取并集，就是需要支持的浏览器范围。
 
 描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
 
@@ -826,7 +837,7 @@ module.exports = {
 
 要处理 less，sass 和 scss 文件，又有少许的不同。因为`less-loader`会把 less 文件转换成 css 文件，`sass-loader`会把 sass 和 scss 文件转换成 css 文件，而 css 文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的 loader 即可。
 
-由于 stylus 使用率较低，这里就不再探讨 styl 文件的处理，可自行查阅相关资料。
+由于 stylus 使用率较低，这里就不再探讨相关处理，可自行查阅相关资料学习。
 
 ```js
 module.exports = {
@@ -1059,7 +1070,7 @@ body {
 
 重新构建，可以看到 dist 目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字是一长串哈希值 hash。测试时图片会正常显示，字体被正常加载，一切正常。哈希值会在之后做进一步说明。
 
-但是 url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料。
+但是 url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料学习。
 
 相关资料汇总：
 
@@ -1153,7 +1164,7 @@ if (process.env.NODE_ENV === 'development') {
 
 ```
 
-对于 react，还可以加入 react-hot-loader 进一步提升使用体验。这里不再展开讲述，可自行查阅相关资料。
+对于 react，还可以加入 react-hot-loader 进一步提升使用体验。有兴趣可自行查阅相关资料学习。
 
 相关资料汇总：
 
@@ -1169,6 +1180,26 @@ if (process.env.NODE_ENV === 'development') {
 
 ## demo03 - 优化以贴近实际工程
 
+### 使用文件指纹
+
+### 压缩代码
+
+### 自动添加样式前缀
+
+### 静态资源内联
+
+### 提取公共资源
+
+### 代码分割和动态引入
+
+### 使用 eslint 检验 js 代码
+
+### 使用 stylelint 检验 css/less/scss 代码
+
+### 优化日志
+
+### 构建分析
+
 待补充，催稿可以
 
 （1）邮件催稿
@@ -1176,6 +1207,18 @@ if (process.env.NODE_ENV === 'development') {
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
 
 ## demo04 - 编写可维护的配置
+
+### 配置设计
+
+### 使用 eslint 检验配置
+
+### 使用 prettier 格式化配置
+
+### 冒烟测试
+
+### 单元测试
+
+### 持续集成
 
 待补充，催稿可以
 
