@@ -246,6 +246,7 @@
       - [uview-ui](https://uviewui.com/)
       - [uni-ui](https://github.com/dcloudio/uni-ui)
       - [color-ui](https://github.com/weilanwl/ColorUI)
+      - [thor-ui](https://thorui.cn/)
       - [grace-ui](https://grace.hcoder.net/) - 收费
   - chameleon
     - [中文文档](https://cml.js.org/)

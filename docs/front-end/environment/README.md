@@ -8,7 +8,7 @@
 
 ## Windows - 偏向娱乐的配置
 
-- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 [oh-my-zsh](https://ohmyz.sh/)
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 zsh + [oh-my-zsh](https://ohmyz.sh/)
 - [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了 ie，可能会导致 ie 无法唤起开发者工具
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
@@ -34,7 +34,7 @@
 - [爱思助手](https://www.i4.cn/) - ios 手机用
 - [百度网盘](http://pan.baidu.com/download) - 可能会用到 [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
-- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷
+- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
 - [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
 - [看图](https://kantu.qq.com/) - 看图（捧读）
@@ -65,16 +65,16 @@
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [OBS](https://obsproject.com/) - 录制
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
-- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
-- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
+- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合访达 Finder 使用
+- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合访达 Finder 使用
 - [Postman](https://www.getpostman.com/) - 请求，类似的还有 [postwoman](https://postwoman.io/)，[paw](https://paw.cloud/) 等
 - [QQ](https://apps.apple.com/cn/app/qq/id444934666)
-- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理，超级右键对 QSpace 不起效
+- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理，超级右键对 QSpace 不起效，自带快速打开编辑器和终端的功能
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app) - 同时查看不同屏幕的网页表现
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，类似的还有 [alfred](https://www.alfredapp.com/)，但是 alfred 只支持 macOS
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，mac 类似的工具还有 [alfred](https://www.alfredapp.com/)
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置，也可以考虑使用 [WebStorm](https://www.jetbrains.com/webstorm/)（基本不需要特别配置），如果使用 uni-app 开发 app 必须使用的工具则必须用 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office
 
@@ -95,6 +95,8 @@
 ### 安装
 
 按照[官网](https://brew.sh/index_zh-cn)说明安装。
+
+国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)。
 
 ### 配置镜像源
 
@@ -427,7 +429,7 @@ yarn
 
 ## sublime
 
-不建议使用 sublime，软件本身及其生态更新非常慢。建议转用 vscode 或者 webstorm。
+建议转用 vscode 或者 webstorm，sublime 生态太差。
 
 ## vscode
 
@@ -491,6 +493,12 @@ yarn
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // vscode 自带功能，修改编辑区的字体族
   "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Jetbrains Mono', 'Sarasa Mono T SC', 'Fira Code', Monaco, 'Courier New', monospace",
+  // vscode 自带功能，控制输入时是否自动弹出建议
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
+  "editor.suggestSelection": "first",
   // vscode 自带功能，控制编辑区 1 个 tab 等于多少个空格，这里设置为 2 个
   "editor.tabSize": 2,
   // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
@@ -579,6 +587,8 @@ yarn
   "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
+  // 插件 Visual Studio IntelliCode 使用，指定当 editor.suggestSelection 被设置为一个使得该插件的建议不可见的值时，是否会修改 editor.suggestSelection，这里设定为自动覆盖默认值
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // vscode 自带功能，指定颜色主题，这里设置为 One Dark Pro，需要安装对应的插件
   "workbench.colorTheme": "One Dark Pro",
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
