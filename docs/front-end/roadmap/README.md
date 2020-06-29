@@ -1,13 +1,12 @@
 # 学习路径
 
-- [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
-- [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
-- [前端学习资料合集](https://github.com/fyuanfen/note)
-- [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
-- [orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
-- [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
-- [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
-- [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
+- [学习路径1 liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
+- [学习路径2 orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
+- 建议
+  - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+  - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
+  - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
+  - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
 - 个人学习路径如下，相关库/框架/工具集[参考](./../lib/README.md)
   - 思维
     - 源码最优，官方文档次之，github 仓库 issues 再次，博客最次
@@ -58,19 +57,23 @@
   - jest，mocha 等测试工具及配套
   - Node.js，Koa，Egg
     - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
-  - 进阶
-    - [前端进阶 1](https://yuchengkai.cn/home/)
-    - [前端进阶 2](https://muyiy.cn/)
-    - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
-    - [前端工程化](https://github.com/fouber/blog)
-    - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
   - 实战
     - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章
     - [ant-design-pro](https://ant-design-pro.gitee.io/index-cn)
-  - 面试
+  - 进阶
+    - [前端进阶 1](https://yuchengkai.cn/home/)
+    - [前端进阶 2](https://muyiy.cn/)
+    - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
     - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
     - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
     - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
     - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+    - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
+    - [前端工程化](https://github.com/fouber/blog)
+    - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
+    - [前端学习资料合集](https://github.com/fyuanfen/note)
+    - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
+    - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
+    - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
 
 <Vssue />
