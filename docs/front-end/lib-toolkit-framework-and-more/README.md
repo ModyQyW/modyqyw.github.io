@@ -28,7 +28,7 @@
 
 ## 项目体系
 
-- [yeoman](https://yeoman.io/) - 构筑专属的 cli，你也可以考虑使用 [oclif](https://oclif.io/)
+- [yeoman](https://yeoman.io/) - 构筑专属的 cli，也可以考虑使用 [oclif](https://oclif.io/)
 - [np](https://github.com/sindresorhus/np#readme) - 更好的 npm publish，自动 push，自动 tag 等
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
@@ -39,7 +39,7 @@
 - [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合 yarn upgrade-interactive 使用
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
-- formatter
+- formatter & linter
   - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
     - prettier
@@ -110,18 +110,18 @@
   - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - 常与 @babel/preset-env 搭配使用
   - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
   - [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)
+  - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
   - [core-js](https://github.com/zloirock/core-js) - js 模块化标准库，包含了大量 polyfill，常与 @babel/preset-env 搭配使用
   - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) - 用于 async 函数的独立运行时，常与 @babel/preset-env 搭配使用
-  - [bluebird](https://github.com/petkaantonov/bluebird) - 支持 ie8 的 promise polyfill
+- [bluebird](https://github.com/petkaantonov/bluebird) - 支持 ie8 的 promise polyfill
 - [postcss](https://postcss.org/) - css 的 babel
   - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
   - [cssnano](https://cssnano.co/) - 压缩 css
-  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss，element-ui 等使用，搭配 element-ui 等使用时需要添加白名单
+  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss 使用
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
-  - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置
-  - [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme) - 链式生成并简化配置的修改操作
+  - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置，也可以考虑使用 [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin) - 显示更友好的提示信息
     - [progress-bar-webpack-plugin](https://github.com/clessg/progress-bar-webpack-plugin) - 显示进度条，无美化
@@ -147,13 +147,17 @@
     - [file-loader](https://webpack.js.org/loaders/file-loader/) - 进行图片字体等文件的打包
     - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
     - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
-    - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 DOM 中
-    - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css @import 和 url()，可以启用 css module
+    - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 分离 css 文件，适用于生产模式
+    - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 dom 中，适用于开发模式
+    - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css `@import`和`url()`，可以启用 css module
     - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
     - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
     - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
     - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
-- [rollup](https://rollupjs.org/guide/zh/) - 模块打包器，一般用于打包库，没接触过，可参考 [awesome-rollup](https://github.com/rollup/awesome)
+- [snowpack](https://www.snowpack.dev/)
+- [vite](https://github.com/vitejs/vite#readme)
+- [rollup](https://rollupjs.org/guide/zh/) - 模块打包器，一般用于打包库，可参考 [awesome-rollup](https://github.com/rollup/awesome)
+- [parcel](https://v2.parceljs.org/)
 
 ## 工具集
 
@@ -165,7 +169,7 @@
 - [history](https://github.com/ReactTraining/history) - 处理访问历史，比较底层的库
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp) - 将路径字符串转换成正则，比较底层的库
 
-一般用 lodash + dayjs 就能解决普遍在开发中遇到的问题，有条件的可以去学一下源码。用 dayjs 不用 moment 的原因是 moment 太大了，不用 date-fns 的原因是它没有中文文档，对国内新手不友好。
+一般用 lodash + dayjs 就能解决普遍在开发中遇到的问题，有条件的可以去学一下源码。不用 moment 的原因是 moment 默认引入太大了，需要手动压缩体积。不用 date-fns 的原因是它没有中文文档，对国内新手不友好。
 
 ## 原生及相关生态
 
@@ -257,6 +261,7 @@
     - ui
       - [cml-ui](https://cml.js.org/components/expand.html)
 - 衍生
+  - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统

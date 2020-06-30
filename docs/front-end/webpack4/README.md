@@ -10,9 +10,9 @@
 
 ## webpack 是什么
 
-webpack 是一个静态模块打包工具，分析依赖生成依赖图，最终根据配置进行构建打包。
+webpack 是一个静态模块构建工具，分析依赖生成依赖图，最终根据配置进行构建。
 
-## 为什么需要 webpack 打包项目
+## 为什么要使用构建工具
 
 - 允许书写 es6+ 代码、jsx、vue template 等
 - 自动处理图片、文件等资产文件
@@ -31,7 +31,7 @@ webpack 是一个静态模块打包工具，分析依赖生成依赖图，最终
 
 ### 入口 entry
 
-entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`${PROJECT_DIR}/src/index.js`。
+entry 指定 webpack 工作时从哪个文件开始分析依赖（往往是一个 js 或 jsx 文件），默认值为`${PROJECT_DIR}/src/index.js`。
 
 `path.resolve`能将提供的字符串参数拼接起来，形成一个绝对路径。
 
@@ -40,7 +40,7 @@ entry 指定 webpack 工作时从哪个文件开始分析依赖，默认值为`$
 const path = require('path');
 
 module.exports = {
-  // 指定 entry为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
 };
 
@@ -55,9 +55,10 @@ output 指定 webpack 在哪里存放输出文件和主要输出文件的文件�
 const path = require('path');
 
 module.exports = {
-  // 指定 entry为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output 目录为 ${PROJECT_DIR}/dist
+  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -77,9 +78,10 @@ loader 有两个必需的属性，一个是`test`，用于判断需要解析的�
 const path = require('path');
 
 module.exports = {
-  // 指定 entry为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output 目录为 ${PROJECT_DIR}/dist
+  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -98,7 +100,7 @@ module.exports = {
 
 ```
 
-有的 loader 可能还会有额外的属性供你配置。
+有的 loader 可能还会与 plugin 联动，也可能有额外的属性供你配置，具体如何要查看 loader 的文档。
 
 ### 插件 plugin
 
@@ -110,9 +112,10 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  // 指定 entry为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output 目录为 ${PROJECT_DIR}/dist
+  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -150,9 +153,10 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 module.exports = {
   // 指定 mode 为 development，即开发模式
   mode: 'development',
-  // 指定 entry为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定 output目录为 ${PROJECT_DIR}/dist，主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output 目录为 ${PROJECT_DIR}/dist
+  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -190,7 +194,7 @@ module.exports = {
 nvm install 12
 ```
 
-新建一个文件夹，命名为`demo`。进入到该文件夹中，初始化一个`package.json`文件。
+新建一个文件夹，命名为`demo`。进入到该文件夹中，使用 npm 初始化，这将会生成一个默认的`package.json`文件。
 
 ```sh
 mkdir demo && cd demo
@@ -227,7 +231,9 @@ document.write('Hello webpack!');
 
 ```
 
-创建一个 webpack 配置文件`${PROJECT_DIR}/webpack.config.js`。`path.resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径，用于定位特定的文件夹或文件。`path.join`作用与它相近，可以自行了解。
+创建一个 webpack 配置文件`${PROJECT_DIR}/webpack.config.js`。
+
+`path.resolve`可以帮助我们基于项目根目录生成任一平台的绝对路径，用于定位特定的文件夹或文件。`path.join`作用与它相近，可以自行查阅相关资料学习。
 
 ```js
 // 使用 path 模块来指定路径
@@ -247,7 +253,9 @@ module.exports = {
 
 ```
 
-目前，我们已经看到了 2 种模式：`development`和`production`。实际上，一共内置了 3 种模式，还有一种模式就是`none`。`development`和`production`模式都会启用一些内置的优化，而`none`模式没有任何优化，一般不会使用该模式。假如不指定模式，会默认使用`production`模式。
+目前，我们已经看到了 2 种模式：`development`和`production`。实际上，webpack 4 一共内置了 3 种模式，还有一种模式就是`none`。
+
+`development`和`production`模式都会启用一些内置的优化，而`none`模式没有任何优化，一般不会使用该模式。如果不指定模式，会默认使用`production`模式。
 
 现在，我们修改`package.json`中的`scripts`字段。
 
@@ -263,13 +271,13 @@ module.exports = {
 
 接着，就可以执行命令进行构建了。执行`npm run build`之后，npm 会在`package.json`文件中寻找`scripts`中的`build`字段，找到的话会执行操作，否则就报错。
 
-找到`build`字段之后，npm 会在项目根目录下的`node_modules`文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
-
-npm 寻找依赖的顺序是：项目根目录下的`node_modules`->全局目录下的`node_modules`。如果都没有找到，则报错终止执行。
-
 ```sh
 npm run build
 ```
+
+npm 执行`build`命令时，会在项目根目录下的`node_modules`文件夹中寻找 webpack 依赖并调用，webpack 会默认使用项目根目录下的`webpack.config.js`文件进行构建（也就是俗称的打包）。
+
+npm 寻找依赖的顺序是：项目根目录下的`node_modules`->全局目录下的`node_modules`。如果都没有找到，则报错终止执行。
 
 最后，我们可以看到，在`dist`目录下已经生成了一个`bundle.js`文件。
 
@@ -318,7 +326,7 @@ module.exports = {
 
 ```
 
-但现在还不够，我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。
+我们还需要在每次构建之前，把上一次构建的文件给删除掉，也就是删除掉`dist`文件夹，以避免可能发生的冲突。
 
 ```js
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
@@ -335,7 +343,7 @@ module.exports = {
 
 ```
 
-还可以让 webpack 在打包的时候显示进度条。
+我们还可以让 webpack 在打包的时候显示进度条，稍微降低我们等待时的焦虑度。
 
 ```js
 const WebpackBar = require('webpackbar');
@@ -352,7 +360,7 @@ module.exports = {
 
 ```
 
-在遇到错误的时候，让 webpack 输出的错误信息更加友好。
+使用 friendly-errors-webpack-plugin 可以在 webpack 执行遇到错误的时候，输出的错误信息更加友好。
 
 ```js
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
@@ -413,7 +421,7 @@ module.exports = {
 
 ```
 
-重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`（你也可以使用 vscode 的`live server`插件来运行，这也是本篇教程推荐的方法）。🎉恭喜，一个简单的 webpack demo 已经完成啦～
+重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。直接打开`index.html`，可以看到`Hello webpack!`（你也可以使用 vscode 的`live server`插件来运行，这也是本篇教程推荐的方法）。
 
 ```sh
 dist
@@ -422,11 +430,14 @@ dist
 └── index.html
 ```
 
+🎉恭喜，一个简单的 webpack demo 已经完成啦～
+
 相关资料汇总：
 
 - [webpack - mode](https://v4.webpack.js.org/configuration/mode/)
 - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin#readme)
 - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
+- [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin#readme)
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
 - [webpack-bar](https://github.com/nuxt/webpackbar)
 - [webpack plugins 的顺序会影响什么吗？](https://stackoverflow.com/questions/41470771/webpack-does-the-order-of-plugins-matter)
@@ -453,7 +464,7 @@ module.exports = {
   entry: {
     main: path.resolve('src', 'index.js'),
   },
-  ...
+  ...,
 };
 
 ```
@@ -467,12 +478,27 @@ module.exports = {
   ...,
   context: path.resolve('src'),
   entry: './index.js',
-  ...
+  ...,
 };
 
 ```
 
-为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中。我们需要把对应的`script`修改一下来确保能够运行。
+为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中，再指定 entry 的 key 为`app`。
+
+```js
+const path = require('path');
+
+module.exports = {
+  ...,
+  entry: {
+    app: path.resolve('src', 'index.js'),
+  },
+  ...,
+};
+
+```
+
+我们需要把对应的命令修改一下来确保能够运行。默认 webpack 会使用`${PROJECT_DIR}/webpack.config.js`作为配置文件，我们移动配置文件后，webpack 就找不到了，需要手动指定。
 
 ```json
 {
@@ -514,6 +540,25 @@ module.exports = {
 此外，还需要修改 html-webpack-plugin 的配置，让每一个入口点都有一个专属的 html 文件模板，并且还需要让每一个 html 文件模板都插入公共代码块。
 
 MPA 在配置上相对复杂，也相对更劝退新手，本篇教程只会以 SPA 作为示例，你可以自行搜索相关资料学习 MPA 的 webpack 构建配置。
+
+我们修改一下 output 的配置，使得主要输出文件的命名跟随 entry 的 key。
+
+```js
+const path = require('path');
+
+module.exports = {
+  ...,
+  entry: {
+    app: path.resolve('src', 'index.js'),
+  },
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].js',
+  },
+  ...,
+};
+
+```
 
 相关资料汇总：
 

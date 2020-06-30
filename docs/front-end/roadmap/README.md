@@ -7,54 +7,110 @@
   - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
   - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
   - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
-- 个人学习路径如下，相关库/框架/工具集[参考](./../lib/README.md)
+- 个人学习路径如下
   - 思维
-    - 源码最优，官方文档次之，github 仓库 issues 再次，博客最次
+    - 源码最优，官方文档次之，仓库 issues 再次，博客最次
+  - 英语
+    - 新概念英语
   - 线性代数
+    - 向量
+    - 矩阵
   - 离散数学
+    - 集合论
+    - 图论
   - 计算机组成原理
+    - 浮点数
+    - 原码，补码
+    - 缓存
+    - 时序控制
+    - 流水线
   - 操作系统原理
+    - 进程和线程
+    - 信号量
+    - 调度策略
+    - 锁
+    - 页表
   - 计算机网络原理
+    - 网络基本组成
+    - 五层模型
+    - 七层模型
+    - 请求类型
+    - 报文
+    - 抓包分析，如 wireshark，charles，fiddler
+    - 请求分析，如 postman，paw，postwoman
     - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+    - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
   - 计算机网络安全
+    - xss
+    - csrf
+    - 中间人攻击
+    - cookies，localStorage，sessionStorage
+    - 加解密算法，如 rsa
+    - [图解密码技术](https://book.douban.com/subject/26265544/)
   - 多媒体技术基础
-  - 程序设计入门，即 C/C++/Java 入门
-  - 数据结构与算法
-  - 算法设计
+    - 图像
+    - 音频
+    - 视频
+    - webrtc
+  - 程序设计入门
+    - c/c++/java 入门，了解基本的程序设计和静态语言
+  - 数据结构与算法，算法设计
     - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
+    - [algorithm visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
+    - [学习 javascript 数据结构与算法](https://weread.qq.com/web/reader/99732570718ff67e997e35b)
+    - [算法 101](https://101.zoo.team/)
+    - [算法之道](https://book.douban.com/subject/4249686/)
   - 数据库入门
+    - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
+    - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
+  - git
+    - [Pro Git](https://git-scm.com/book/zh/v2)
   - 网页原生：html + css + js
-    - [前端九部 - 入门者手册2019](https://www.yuque.com/fe9/basic)
+    - [前端九部](https://www.yuque.com/fe9/basic)
     - [css-tricks](https://css-tricks.com/)
-      - [A complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-    - [you-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css)
+      - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
     - [廖雪峰 js 全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
     - [js 快速入门](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
     - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
     - [es6 入门](http://es6.ruanyifeng.com/)
     - [you-dont-know-js](https://github.com/getify/You-Dont-Know-JS)
     - [front-end-checklist](https://github.com/thedaviddias/Front-End-Checklist)
-    - [正则表达式](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
-    - [MDN 文档](https://developer.mozilla.org/)
+    - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+    - [mdn 文档](https://developer.mozilla.org/)
+    - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
+    - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
+    - [javascript 设计模式](https://book.douban.com/subject/3329540/)
+    - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
+    - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
+    - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
   - canvas
-    - [廖雪峰 - canvas](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143449990549914b596ac1da54a228a6fa9643e88bc0c000)
-    - [MDN - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
+    - [mdn - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
     - [fabric.js](https://github.com/fabricjs/fabric.js)
+  - webgl
+    - [mdn - webgl](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API)
+    - [three.js](https://threejs.org/)
   - css 处理器
-    - postcss
-    - less
-    - sass/scss
-    - stylus
+    - [postcss](https://postcss.org/)
+    - [less](http://lesscss.org/)
+    - [sass/scss](https://sass-lang.com/)
+    - [stylus](https://stylus-lang.com/)
   - 规范工具
-    - eslint
-    - prettier
-    - stylelint
-    - commitlint
+    - [eslint](https://eslint.org/)
+    - [prettier](https://prettier.io/)
+    - [stylelint](https://stylelint.io/)
+    - [commitlint](https://commitlint.js.org/)
+    - [commitizen](https://github.com/commitizen/cz-cli)
   - vue 及周边生态
+    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - typescript
+    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - react 及周边生态
-  - webpack，rollup 等打包工具及配套
+    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
+  - webpack，snowpack，rollup，parcel 等打包工具及配套
+    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - jest，mocha 等测试工具及配套
+    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - Node.js，Koa，Egg
     - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - 实战
