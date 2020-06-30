@@ -568,7 +568,7 @@ module.exports = {
 
 plugin 用于增强 webpack 功能，比如优化打包文件，管理资源，注入环境变量等等，作用于整个构建过程。
 
-前面的例子中，我们使用到了`copy-webpack-plugin`，`html-webpack-plugin`和`webpackbar`，都是相对来说比较简单的 plugin。
+前面的例子中，我们使用到了 copy-webpack-plugin，html-webpack-plugin 和 webpackbar，都是相对来说比较简单的 plugin。
 
 每个 plugin 都需要放入到`plugins`字段数组中，顺序一般不影响，具体 plugin 的配置需要去查询具体的文档。
 
@@ -634,7 +634,7 @@ module.exports = {
 
 修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们在根目录下创建一个文件`babel.config.json`作为 babel 的配置文件，这也是当前 babel 官方推荐的做法。
 
-要支持 es6+ 语法非常简单，可以直接使用 babel 官方提供的`@babel/preset-env`。它能实现智能转换，而无需提供额外的配置。
+要支持 es6+ 语法非常简单，可以直接使用 babel 官方提供的 @babel/preset-env。它能实现智能转换，而无需提供额外的配置。
 
 ```json
 {
@@ -643,20 +643,36 @@ module.exports = {
 
 ```
 
-但现实往往是残酷的，`@babel/preset-env`并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上（注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性）。
+但现实往往是残酷的，@babel/preset-env 并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上。
 
-我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。下面是一个示例。
+注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性。这相当复杂，这也是本篇教程不会考虑 IE 11- 的原因。
+
+我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。
+
+以下是 demo02 中使用到的`.browserslistrc`文件的内容。
 
 ```sh
 > 0.2%
-last 5 versions
+last 3 versions
 not dead
 chrome >= 70
+firefox >= 68
+edge >= 81
+safari >= 13
 ie >= 11
 
 ```
 
-`> 0.2%`表示需要支持使用率超过 0.2% 的浏览器，`last 5 versions`表示需要支持浏览器的最近 5 个版本，`not dead`表示浏览器在最近 24 个月内还得到过官方的支持，`chrome >= 70`表示 chrome 的版本需要不小于 70，`ie >= 11`表示 ie 的版本需要不小于 11。上面的条件取并集，就是需要支持的浏览器范围。
+- `> 0.2%`表示需要支持使用率超过 0.2% 的浏览器。
+- `last 5 versions`表示需要支持浏览器的最近 3 个版本。
+- `not dead`表示浏览器在最近 24 个月内还得到过官方的支持。
+- `chrome >= 70`表示 chrome 的版本需要不小于 70。
+- `firefox >= 68`表示 firefox 的版本需要不小于 68。
+- `edge >= 81`表示 edge 的版本需要不小于 81。
+- `safari >= 13`表示 safari 的版本需要不小于 13。
+- `ie >= 11`表示 ie 的版本需要不小于 11。
+
+上面的条件取并集，就是需要支持的浏览器范围。
 
 描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
 
@@ -664,7 +680,7 @@ ie >= 11
 
 我们要做的，实际上就是要自动处理 polyfill，也就是在 babel 转译的时候，让 babel 自动加入需要支持的浏览器不支持，但我们项目中又用到了的特性。这就是 babel 另一个很好的作用。
 
-自动处理 polyfill 也可以通过配置`@babel/preset-env`来做。`@babel/preset-env`默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
+自动处理 polyfill 也可以通过配置 @babel/preset-env 来做。@babel/preset-env 默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
 
 ```json
 {
@@ -680,7 +696,7 @@ ie >= 11
 
 ```
 
-默认地，`@babel/preset-env`会使用`core-js`v2 和`regenerator-runtime`做 polyfill。`core-js` v3 支持更多，影响更小，现在一般建议使用 v3，这里我们就指定要使用 v3 版本。
+默认地，@babel/preset-env 会使用 core-js v2 和 regenerator-runtime 做 polyfill。core-js v3 支持更多，影响更小，现在一般建议使用 v3，这里我们就指定要使用 v3 版本。
 
 ```json
 {
@@ -701,7 +717,7 @@ ie >= 11
 
 但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用 class，转译之后就会在使用到 class 的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
 
-我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
+我们可以使用 @babel/plugin-transform-runtime 来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
 
 ```json
 {
@@ -719,9 +735,9 @@ ie >= 11
 
 ```
 
-因为我们已经在`@babel/preset-env`中配置了`core-js`，所以无需在`@babel/plugin-transform-runtime`中重复配置。
+因为我们已经在 @babel/preset-env 中配置了 core-js ，所以无需在 @babel/plugin-transform-runtime 中重复配置。
 
-除了 es6+ 的语法，我们还想支持 react。类似地，我们也可以使用 babel 来解析 react 代码，只需要配置`@babel/preset-react`即可。
+除了 es6+ 的语法，我们还想支持 react。类似地，我们也可以使用 babel 来解析 react 代码，只需要配置 @babel/preset-react 即可。
 
 ```json
 {
@@ -798,8 +814,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
 - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
 - [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
-- [core-js](https://github.com/zloirock/core-js#readme)
 - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
+- [core-js](https://github.com/zloirock/core-js#readme)
+- [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime)
 
 ### 样式相关的 loader
 
@@ -1008,7 +1025,7 @@ module.exports = {
 
 一般称项目使用到的图片、字体、音视频文件等为项目资产。
 
-最常用的处理资产的 loader 就是 file-loader 和 url-loader，而 url-loader 是 file-loader 的升级版，增加了文件大小的上限，达到大小上限时会自动使用 file-loader，没达到大小上限时，会把文件转换成 base64 数据。
+最常用的处理资产的 loader 就是 file-loader 和 url-loader，而 url-loader 是 file-loader 的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用 file-loader，没达到大小上限时，会把文件转换成 base64 数据。
 
 ```sh
 npm i file-loader@6 url-loader@4 -DE
@@ -1130,7 +1147,7 @@ body {
 
 现在，我们每一次要查看代码效果，都需要执行`npm run build`，然后用`live server`启动。这相当地麻烦，尤其是在开发过程中，这么做会耗费不必要的时间，而且开发时也不应该使用`production`模式，而应该使用`development`模式。
 
-`webpack-dev-server`帮我们很好地解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
+webpack-dev-server 帮我们解决了这个问题。使用 webpack-dev-server 可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
 
 ```sh
 npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4 -DE
@@ -1138,7 +1155,7 @@ npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4
 
 我们还需要根据环境来调用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
 
-首先修改`package.json`。`cross-env`可以修改`process.env.NODE_ENV`的值，进而供我们确认环境。
+首先修改`package.json`。cross-env 可以修改`process.env.NODE_ENV`的值，进而供我们确认环境。
 
 ```json
 {
