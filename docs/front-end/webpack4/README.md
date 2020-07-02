@@ -1236,7 +1236,241 @@ if (process.env.NODE_ENV === 'development') {
 
 ### 使用文件指纹
 
-人的指纹是特殊的，不存在完全相同。而文件指纹则略有差异。
+人的指纹是特殊的，不存在完全相同。文件指纹的用途和人的指纹相近，可以用于版本管理。
+
+常用的文件指纹有三类。
+
+- `hash` - 与整个项目的构建有关，只要项目中文件有修改，值就会变化。特别地，对于图片、字体等可以被 url-loader 和 file-loader 处理的文件，`hash`表示的是文件内容，与整个项目的构建无关。一般不建议使用，因为起不到缓存效果和管理版本的作用。
+- `chunkhash` - 根据不同的`chunk`生成`hash`，通常会把不常变动的公共库单独抽离，然后对业务代码使用`chunkhash`，这样改动业务代码不会影响公共库，客户端只需更新业务代码对应的`chunk`。
+- `contenthash` - 根据文件内容生成`hash`。js 文件常常会引用 css 文件，如果使用`chunkhash`，会导致修改 js 文件、没有修改 css 文件的时候，最终构建完发现 css 文件的`hash`也变化了，所以 css 文件一般使用`contenthash`。
+
+我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体文件添加文件指纹。`[name]`表示使用文件本身的命名，`[contenthash:8]`表示使用`contenthash`的前 8 位，你也可以写成`[hash:8]`，结果将会是一样的。
+
+```js
+module.exports = {
+  ...,
+  module: {
+    rules: [
+      ...,
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              ...,
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              ...,
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      ...,
+    ],
+  },
+};
+
+```
+
+需要注意的是，要在生产文件为 css 文件添加文件指纹，就不能使用 style-loader，这是因为 style-loader 会把 css 文件嵌入到 js/jsx 文件中，我们无法得到单独的 css 文件，自然也就无法添加文件指纹了。
+
+要解决这个问题，我们需要添加一个依赖，用于生产环境中分离 css 文件，然后让 style-loader 只在开发环境中起作用。
+
+```sh
+npm i mini-css-extract-plugin@0 -DE
+```
+
+我们把`${PROJECT_DIR}/config/webpack.base.js`中关于 css 的部分都放入`${PROJECT_DIR}/config/webpack.dev.js`中。
+
+现在，完整的`${PROJECT_DIR}/config/webpack.base.js`如下所示。
+
+```js
+const path = require('path');
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
+module.exports = {
+  entry: {
+    app: path.resolve('src', 'index.js'),
+  },
+  plugins: [
+    new FriendlyErrorsPlugin(),
+    new WebpackBar(),
+    new CleanPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: path.resolve('public', 'favicon.ico') }],
+    }),
+    new HtmlPlugin({
+      title: 'demo03',
+      template: path.resolve('public', 'index.html'),
+    }),
+  ],
+  // loaders
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [{ loader: 'babel-loader' }],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'img',
+              publicPath: 'img',
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'fonts',
+              publicPath: 'fonts',
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+
+```
+
+完整的`${PROJECT_DIR}/config/webpack.dev.js`如下所示。
+
+```js
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  mode: 'development',
+  devServer: {
+    hot: true,
+    open: true,
+    quiet: true,
+  },
+  devtool: 'eval-cheap-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        test: /\.less$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+      },
+    ],
+  },
+});
+
+```
+
+我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用 style-loader 而是使用 mini-css-extract-plugin，并为主要输出文件还有 css 文件添加文件指纹。
+
+首先要用 mini-css-extract-plugin 附带的 loader 替换掉 style-loader。我们还要在 options 中指定`publicPath`，用于抽离 css 文件到单独的文件夹。
+
+接着，把 mini-css-extract-plugin 加入到`plugins`中，并指定输出文件名。
+
+完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。`[name]`表示使用文件本身的命名，`[contenthash:8]`表示使用`contenthash`的前 8 位，你也可以写成`[hash:8]`，结果将会是一样的。
+
+```js
+const path = require('path');
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  devtool: 'none',
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].[chunkhash:8].js',
+  },
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+    ],
+  },
+});
+
+```
 
 ### 压缩代码
 
@@ -1255,6 +1489,14 @@ if (process.env.NODE_ENV === 'development') {
 ### 优化日志
 
 ### 构建分析
+
+🎉恭喜，你的第三个 webpack demo 已经完成啦～
+
+相关资料汇总：
+
+- [webpack - 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
+
+参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-demos/tree/master/demo03)。
 
 待补充，催稿可以
 
@@ -1281,15 +1523,5 @@ if (process.env.NODE_ENV === 'development') {
 （1）邮件催稿
 
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
-
-## 参考
-
-不再另外附上相关 plugin，loader 等的 github 仓库链接。
-
-- [webpack 官网](https://webpack.js.org/)
-- [手摸手，带你用合理的姿势使用 webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
-- [手摸手，带你用合理的姿势使用 webpack4（下）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
-- [webpack - 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
-- [webpack - 理解 chunk](https://juejin.im/post/5d2b300de51d45775b419c76)
 
 <Vssue />
