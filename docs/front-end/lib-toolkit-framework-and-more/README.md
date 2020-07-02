@@ -414,6 +414,7 @@
   - [react 源码解析](https://github.com/KieSun/react-interpretation)
   - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
+  - [Dan Abramov's Blog](https://overreacted.io/)
   - createElement，render，Component 三个重要的 api
   - virtual dom 和 diff 算法
   - fiber 架构，任务调度，渲染与更新
