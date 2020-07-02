@@ -1,17 +1,22 @@
 # 学习路径
 
-- [学习路径1 liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
-- [学习路径2 orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
 - 建议
   - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
   - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
   - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
   - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
-- 个人学习路径如下
+- github 学习路径 1 - [liuchong/awesome-roadmaps](https://github.com/liuchong/awesome-roadmaps)
+- github 学习路径 2 - [orsanawwad/awesome-roadmaps](https://github.com/orsanawwad/awesome-roadmaps)
+- 个人学习路径，工具/库/框架等相关参考[另一部分](../lib-toolkit-framework-and-more/README.md)
   - 思维
     - 源码最优，官方文档次之，仓库 issues 再次，博客最次
+    - 不懂先思考，不成再查资料、问人
+    - [w3c](https://www.w3.org/)
+    - [mdn](https://developer.mozilla.org/)
+    - [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
   - 英语
     - 新概念英语
+    - 翻译工具 deepl
   - 线性代数
     - 向量
     - 矩阵
@@ -36,6 +41,7 @@
     - 七层模型
     - 请求类型
     - 报文
+    - 请求流程
     - 抓包分析，如 wireshark，charles，fiddler
     - 请求分析，如 postman，paw，postwoman
     - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
@@ -44,22 +50,22 @@
     - xss
     - csrf
     - 中间人攻击
-    - cookies，localStorage，sessionStorage
+    - 存储，如 cookies，localStorage，sessionStorage
     - 加解密算法，如 rsa
     - [图解密码技术](https://book.douban.com/subject/26265544/)
   - 多媒体技术基础
-    - 图像
-    - 音频
-    - 视频
-    - webrtc
+    - 图像，如 bmp，jpg，jpeg，png，gif，svg，webp
+    - 图像压缩算法
+    - 音频，如 wav，wma，mp3
+    - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
+    - 视频分片
   - 程序设计入门
     - c/c++/java 入门，了解基本的程序设计和静态语言
   - 数据结构与算法，算法设计
     - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
-    - [algorithm visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
-    - [学习 javascript 数据结构与算法](https://weread.qq.com/web/reader/99732570718ff67e997e35b)
-    - [算法 101](https://101.zoo.team/)
-    - [算法之道](https://book.douban.com/subject/4249686/)
+    - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
+  - 正则表达式
+    - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
   - 数据库入门
     - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
     - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
@@ -67,29 +73,19 @@
     - [Pro Git](https://git-scm.com/book/zh/v2)
   - 网页原生：html + css + js
     - [前端九部](https://www.yuque.com/fe9/basic)
-    - [css-tricks](https://css-tricks.com/)
-      - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-    - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
-    - [廖雪峰 js 全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
-    - [js 快速入门](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+    - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
     - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
     - [es6 入门](http://es6.ruanyifeng.com/)
-    - [you-dont-know-js](https://github.com/getify/You-Dont-Know-JS)
-    - [front-end-checklist](https://github.com/thedaviddias/Front-End-Checklist)
-    - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
-    - [mdn 文档](https://developer.mozilla.org/)
-    - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
-    - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
-    - [javascript 设计模式](https://book.douban.com/subject/3329540/)
-    - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
-    - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
-    - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
   - canvas
     - [mdn - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
     - [fabric.js](https://github.com/fabricjs/fabric.js)
+    - [sprite.js](https://github.com/spritejs/spritejs)
   - webgl
     - [mdn - webgl](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API)
     - [three.js](https://threejs.org/)
+    - [sprite.js](https://github.com/spritejs/spritejs)
+  - webrtc
+    - [mdn - webrtc](https://developer.mozilla.org/zh-CN/docs/Glossary/WebRTC)
   - css 处理器
     - [postcss](https://postcss.org/)
     - [less](http://lesscss.org/)
@@ -102,34 +98,48 @@
     - [commitlint](https://commitlint.js.org/)
     - [commitizen](https://github.com/commitizen/cz-cli)
   - vue 及周边生态
-    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - typescript
-    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
   - react 及周边生态
-    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
-  - webpack，snowpack，rollup，parcel 等打包工具及配套
-    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
-  - jest，mocha 等测试工具及配套
-    - 该部分参考 [库/工具集/框架...](../lib-toolkit-framework-and-more/README.md)
-  - Node.js，Koa，Egg
-    - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
+  - webpack 和 rollup 及周边生态
+  - jest，mocha 等测试工具及周边生态
+  - Node.js 及周边生态
   - 实战
     - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%89%8D%E5%BA%8F%E5%87%86%E5%A4%87) 系列文章
     - [ant-design-pro](https://ant-design-pro.gitee.io/index-cn)
   - 进阶
-    - [前端进阶 1](https://yuchengkai.cn/home/)
-    - [前端进阶 2](https://muyiy.cn/)
-    - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
-    - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
-    - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
-    - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
-    - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
-    - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
-    - [前端工程化](https://github.com/fouber/blog)
-    - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
-    - [前端学习资料合集](https://github.com/fyuanfen/note)
-    - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
-    - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
-    - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+    - 数据结构与算法部分
+      - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
+      - [算法 101](https://101.zoo.team/)
+      - [算法之道](https://book.douban.com/subject/4249686/)
+    - css 部分
+      - [css-tricks](https://css-tricks.com/)
+        - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+      - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
+      - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
+    - js 部分
+      - [you-dont-know-js](https://github.com/getify/You-Dont-Know-JS)
+      - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
+      - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
+      - [javascript 设计模式](https://book.douban.com/subject/3329540/)
+      - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
+      - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+      - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+    - 综合部分
+      - [前端进阶 1](https://yuchengkai.cn/home/)
+      - [前端进阶 2](https://muyiy.cn/)
+      - [前端知识清单](https://github.com/thedaviddias/Front-End-Checklist)
+      - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
+      - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
+      - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+      - [冴羽的博客](https://github.com/mqyqingfeng/Blog)
+      - [前端工程化](https://github.com/fouber/blog)
+      - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
+      - [前端学习资料合集](https://github.com/fyuanfen/note)
+      - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
+    - 资料汇总
+      - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
+      - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+      - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
+      - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
 
 <Vssue />

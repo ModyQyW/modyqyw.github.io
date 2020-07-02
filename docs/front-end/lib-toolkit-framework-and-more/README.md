@@ -10,10 +10,10 @@
 
 ## 开发语言
 
-- [typescript](https://www.typescriptlang.org/) - 必学，要会用
-- [reason](https://reasonml.github.io/) - 观望
-- [elm](https://elm-lang.org/) - 观望
-- [bucklescript](https://bucklescript.github.io/) - 观望
+- [typescript](https://www.typescriptlang.org/)
+- [reason](https://reasonml.github.io/)
+- [elm](https://elm-lang.org/)
+- [bucklescript](https://bucklescript.github.io/)
 
 ## 设计语言
 
@@ -32,7 +32,7 @@
 - [np](https://github.com/sindresorhus/np#readme) - 更好的 npm publish，自动 push，自动 tag 等
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
-- [npm](https://github.com/npm/cli#readme)
+- [npm](https://github.com/npm/cli#readme) - npm（复读）
 - [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
@@ -40,7 +40,7 @@
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter & linter
-  - [prettier](https://prettier.io/) - 检查 html/js/jsx/ts/tsx/css/less/scss/styled-components/styled-jsx/graphql/vue/react 等代码的格式
+  - [prettier](https://prettier.io/) - 检查大量代码格式
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
     - prettier
       - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
@@ -70,7 +70,7 @@
       - [@modyqyw/eslint-config-vue-ts](https://github.com/Millcloud/eslint-config-vue-ts)
       - [@modyqyw/eslint-config-react](https://github.com/Millcloud/eslint-config-react)
   - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 文件直接用 eslint-plugin-vue 的 recommended 配置检查即可
-  - [stylelint](https://stylelint.io/) - 检查 scss/sass/less 代码的格式与语法，可搭配 prettier 使用
+  - [stylelint](https://stylelint.io/) - 检查 css/less/scss 代码的格式与语法，可搭配 prettier 使用
     - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard#readme)
     - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended#readme)
     - [stylelint-config-recommended-scss](https://github.com/kristerkari/stylelint-config-recommended-scss#readme)
@@ -78,14 +78,14 @@
     - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap#readme) - bootstrap 预设的 scss stylelint 配置
     - [stylelint-formatter-pretty](https://github.com/Dreamseer/stylelint-formatter-pretty#readme)
     - [stylelint-prettier](https://github.com/prettier/stylelint-prettier#readme)
-    - stylus 可考虑使用 [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) 和 [stylint](https://github.com/SimenB/stylint#readme)
-    - sass 可考虑使用 [sass-formatter](https://github.com/TheRealSyler/sass-formatter#readme)
     - @modyqyw
       - [@modyqyw/stylelint-config-css](https://github.com/Millcloud/stylelint-config-css)
       - [@modyqyw/stylelint-config-less](https://github.com/Millcloud/stylelint-config-less)
       - [@modyqyw/stylelint-config-scss](https://github.com/Millcloud/stylelint-config-scss)
-- [commitlint](https://commitlint.js.org/) - 检查提交格式
-  - [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint#readme)
+  - [sass-formatter](https://github.com/TheRealSyler/sass-formatter#readme) - 检查 sass 代码
+  - [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) - 检查 stylus 代码，也可以考虑 [stylint](https://github.com/SimenB/stylint#readme)
+  - [commitlint](https://commitlint.js.org/) - 检查提交格式
+    - [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint#readme)
 - [commitizen](https://github.com/commitizen/cz-cli#readme) - 常与 commitlint 配合使用，自动生成提交内容
 - [lint-staged](https://github.com/okonet/lint-staged#readme) - 自动跑校验，如 prettier 和 eslint
 - [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
@@ -124,7 +124,6 @@
   - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置，也可以考虑使用 [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin) - 显示更友好的提示信息
-    - [progress-bar-webpack-plugin](https://github.com/clessg/progress-bar-webpack-plugin) - 显示进度条，无美化
     - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
     - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
     - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
@@ -154,10 +153,10 @@
     - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
     - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
     - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
-- [snowpack](https://www.snowpack.dev/)
-- [vite](https://github.com/vitejs/vite#readme)
-- [rollup](https://rollupjs.org/guide/zh/) - 模块打包器，一般用于打包库，可参考 [awesome-rollup](https://github.com/rollup/awesome)
-- [parcel](https://v2.parceljs.org/)
+- [snowpack](https://www.snowpack.dev/) - 使用原生 es module 的构建工具，可参考 [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack)
+- [vite](https://github.com/vitejs/vite#readme) - 使用原生 es module 的开发构建工具
+- [rollup](https://rollupjs.org/guide/zh/) - 模块构建器，一般用于打包库，可参考 [awesome-rollup](https://github.com/rollup/awesome)
+- [parcel](https://v2.parceljs.org/) - 速度快，配置少的构建工具，可参考 [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel)
 
 ## 工具集
 
@@ -173,12 +172,11 @@
 
 ## 原生及相关生态
 
-- [es6 入门教程](http://es6.ruanyifeng.com/)
 - ui
   - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
     - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
   - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
-    - [mdbootstrap](https://mdbootstrap.com/) - ui 库
+    - [mdbootstrap](https://mdbootstrap.com/) - material design + bootstrap
     - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
   - [tailwindcss](https://tailwindcss.com/)
   - [bulma](https://bulma.io/documentation/)
@@ -205,10 +203,7 @@
 
 - 教程
   - [中文文档](https://cn.vuejs.org/v2/guide/)
-  - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
-  - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
-  - [vue 2.5 源码分析](https://github.com/ustbhuangyi/vue-analysis)
-  - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config)
+  - [英文文档](https://vuejs.org/v2/guide/)
 - [devtools](https://github.com/vuejs/vue-devtools)
 - 路由
   - [vue-router](https://router.vuejs.org/zh/)
@@ -230,14 +225,14 @@
   - [mint-ui](https://mint-ui.github.io/docs/#/zh-cn2) - 断更很久，不建议使用
   - [cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start) - 使用 stylus，使用率较低，不建议使用
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
-  - [mand-mobile](https://didi.github.io/mand-mobile/) - 金融场景
+  - [mand-mobile](https://didi.github.io/mand-mobile/)
   - [nut-ui](http://nutui.jd.com/#/intro)
   - [zarm-vue](https://zhongantech.github.io/zarm-vue/#/documents/quick-start)
   - [onsen-ui](https://onsen.io/v2/guide/vue/)
   - [prime](https://primefaces.org/primevue/showcase/#/setup)
 - cli
   - [nuxt](https://zh.nuxtjs.org/guide/installation/)
-  - [vue-cli](https://cli.vuejs.org/zh/guide/)
+  - [vue-cli](https://cli.vuejs.org/zh/guide/) - 需要手动支持 ssr
   - [vapper](https://vapperjs.org/zh/)
 - app/小程序
   - uni-app
@@ -270,7 +265,11 @@
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
-- 进阶核心知识点
+- 进阶
+  - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
+  - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
+  - [vue 2.5 源码分析](https://github.com/ustbhuangyi/vue-analysis)
+  - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config)
   - 模板编译器 vue-template-compiler 原理
   - 响应式 reactive 系统原理，尤其是双向绑定
   - virtual dom，diff 算法和异步更新策略
@@ -304,13 +303,11 @@
 
 - 教程
   - [react.js 小书](https://github.com/huzidaha/react-naive-book)
-  - [react 源码解析](https://github.com/KieSun/react-interpretation)
-  - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
-  - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
+  - [中文文档](https://zh-hans.reactjs.org/docs/getting-started.html)
+  - [react for everyone](https://github.com/Asabeneh/React-For-Everyone)
+  - [英文文档](https://reactjs.org/docs/getting-started.html)
   - [react-training](https://reacttraining.com/)
   - [road to react](https://www.roadtoreact.com/)
-  - [英文文档](https://reactjs.org/docs/getting-started.html)
-  - [中文文档](https://zh-hans.reactjs.org/docs/getting-started.html)
 - [devtools](https://github.com/facebook/react/tree/master/packages/react-devtools)
 - 路由
   - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
@@ -321,6 +318,7 @@
   - [rematch](https://rematch.github.io/rematch/)
   - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
 - ui
+  - [zent](https://youzan.github.io/zent/zh/guides/install)
   - [blueprint](https://blueprintjs.com/docs/)
   - [react-suite](https://rsuitejs.com/)
   - [antd](https://ant.design/docs/react/introduce-cn) - 小心圣诞彩蛋
@@ -329,10 +327,9 @@
   - [react-bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
   - [semantic-ui-react](https://react.semantic-ui.com/)
   - [fluent-ui-react](https://developer.microsoft.com/en-us/fabric/#/components)
-  - [zent](https://youzan.github.io/zent/zh/guides/install)
   - [react-md](https://react-md.dev/v1/)
   - [shineout](https://shine.wiki/)
-  - [zhui](https://zhui-team.github.io/zhui/) - 中国风组件库
+  - [zhui](https://zhui-team.github.io/zhui/)
   - [antd-mobile](https://mobile.ant.design/docs/react/introduce-cn)
   - [zarm](https://zarm.design/#/components/quick-start)
   - [react-desktop](http://reactdesktop.js.org/)
@@ -343,10 +340,10 @@
   - [primer](https://primer.style/components)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
-    - [blitz](https://github.com/blitz-js/blitz) - 基于 next 在封装，全栈框架
+    - [blitz](https://github.com/blitz-js/blitz) - 基于 next 再封装，全栈框架
   - [umi](https://umijs.org/zh-CN)
     - [@umijs/plugin-qiankun](https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun) - 微前端解决方案
-  - [create-react-app](https://create-react-app.dev/) 无 ssr 相关说明
+  - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
   - [gatsby](https://www.gatsbyjs.com/)
 - app
   - react-native
@@ -413,7 +410,10 @@
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
   - [ink](https://github.com/vadimdemedes/ink) - 在交互式命令行中使用 react
-- 进阶核心知识点
+- 进阶
+  - [react 源码解析](https://github.com/KieSun/react-interpretation)
+  - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
+  - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
   - createElement，render，Component 三个重要的 api
   - virtual dom 和 diff 算法
   - fiber 架构，任务调度，渲染与更新
@@ -425,6 +425,8 @@
   - unstated-next 原理及实现
   - 组件概念，组件化思想，组件化机制，高阶组件 HOC，组件通信策略
   - 类组件，函数式组件和 hooks
+    - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
+    - [精读《useEffect 完整指南》](https://juejin.im/post/5c9827745188250ff85afe50)
   - 组件测试
   - Portal 和弹窗组件实现
   - 项目配置和规范
@@ -478,14 +480,16 @@
 
 ## 服务器端
 
+- [restful api](https://restfulapi.net/) - 使用最广泛的请求和响应格式
+- [graphql](https://graphql.org/) - 新请求格式，旨在改进 restful api
 - [nginx](https://www.nginx.com/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - [koa](https://koajs.com/) - node.js 框架，自由度高
     - [egg](https://eggjs.org/zh-cn/) - 封装 koa，约定大于配置，阿里开源的
+    - [think.js](https://thinkjs.org/)
   - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架，学过 Angular 和 Spring 的话建议用这个
-  - [restful api](https://restfulapi.net/) - 使用最广泛的请求和响应格式
-  - [graphql](https://graphql.org/) - 新请求格式，旨在改进 restful api 的弊端
+  restful api 的弊端
   - 核心知识点
     - 运行与调试 debug/nodemon/jest
     - 流程控制 promise/async+await，事件循环机制
@@ -510,8 +514,6 @@
     - mysql，mongodb，sql server
     - redis 数据结构，数据一致性，分布式锁，订阅发布模式，备份与恢复
     - graphql 概念与操作
-
-node.js 一般用来做服务器端的中间层。
 
 ## 编程用字体
 
