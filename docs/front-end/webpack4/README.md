@@ -3,7 +3,7 @@
 ## 说明
 
 - 该部分以教程形式书写，默认读者已经了解 npm 的基本知识，适合想要深入 js 工具链的同学学习以入门。
-- 本篇教程着重关注于基本使用，基本不会涉及拓展使用和原理，请自行查阅相关资料学习。
+- 本篇教程前面部分着重关注于基本使用，后面部分涉及原理，基本不会涉及拓展（但会给出思路），请自行查阅相关资料学习。
 - 本篇教程默认使用 zsh（windows 可以使用 [git bash](https://git-scm.com/downloads) 或者 [windows terminal](https://github.com/microsoft/terminal/releases)），node v12，vscode，chrome 和 macOS。如果出现不一致的问题，大概率是版本问题，请首先更新版本（如 windows 7 升级到 windows）。
 - 本篇教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
 - 本篇教程不考虑 IE 11-。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。要支持 IE 11-，不仅要考虑支持 es5 语法、特性，还要考虑支持 es3 语法、特性，更要考虑怎么填平 IE 11- 各类奇异的特性问题。
@@ -27,11 +27,15 @@ webpack 是一个静态模块构建工具，分析依赖生成依赖图，最终
 - 官方生态完整，社区生态丰富
 - 配置灵活
 
-## 核心概念
+## 基本概念
+
+### 模块 module
+
+webpack 中，一切文件皆为模块`module`。
 
 ### 入口 entry
 
-entry 指定 webpack 工作时从哪个文件开始分析依赖（往往是一个 js 或 jsx 文件），默认值为`${PROJECT_DIR}/src/index.js`。
+entry 指定 webpack 工作时从哪个文件开始分析依赖（往往是一个 js 文件），默认值为`${PROJECT_DIR}/src/index.js`。这个文件，也会被称为入口文件或入口模块。
 
 `path.resolve`能将提供的字符串参数拼接起来，形成一个绝对路径。
 
@@ -48,7 +52,7 @@ module.exports = {
 
 ### 输出 output
 
-output 指定 webpack 在哪里存放输出文件和主要输出文件的文件名。主要输出文件默认为`${PROJECT_DIR}/dist/main.js`，其他生成文件默认放在`${PROJECT_DIR}/dist`。
+output 指定 webpack 在哪里存放输出文件和主要输出文件的文件名。主要输出文件默认为`${PROJECT_DIR}/dist/main.js`，被主要输出文件依赖的其他文件默认输出到`${PROJECT_DIR}/dist`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -71,7 +75,7 @@ module.exports = {
 
 webpack 本身只能解析 js 和 json 文件，loader 增强了 webpack 的解析能力，使得 webpack 能够解析 jsx，ts，tsx，png，jpg 等诸多格式的文件，并将它们转换为有效模块、添加到依赖图中并供应用程序使用。
 
-loader 有两个必需的属性，一个是`test`，用于判断需要解析的文件，另一个是`use`，指定用于解析的 loader。
+webpack 配置中有`module.rules`，这个数组中的每一项中都是处理模块的规则，规则中会用到 loader。每一项有两个必需的属性，一个是`test`，用于指定需要解析的文件，另一个是`use`，指定用于解析的 loader。
 
 ```js
 // 使用 path 模块来指定路径
@@ -143,7 +147,11 @@ module.exports = {
 
 ### 模式 mode
 
-指定不同的模式，webpack 会有不同的表现，默认值为`production`。
+指定不同的模式，webpack 会自动启用不同的优化，默认值为`production`，即生产模式。
+
+模式一共有三种：`production`，`development`，`none`，优化程度由高到低为：`production`>`development`>`none`。
+
+`none`不会启用优化，我们一般不会使用，而`production`和`development`的优化往往需要进一步定制。
 
 ```js
 // 使用 path 模块来指定路径
@@ -182,13 +190,25 @@ module.exports = {
 
 ```
 
+### module，chunk，bundle
+
+webpack 中的`bundle`，指的是最终输出的一个或多个文件，也可以称为最终得到的代码块。而`chunk`则是打包过程中的代码块，它是某些`module`的封装（你也可以称为某些`module`的集合）。构建结束后，`chunk`就呈现为`bundle`。
+
+一个`entry`只会有一个`chunk`，最终也只会生成一个`bundle`，但是这个`bundle`可能会包含多个文件。这是因为我们可能会把引用到的`css`、`js`文件分拆出来，也可能会添加`map`文件。
+
+相关资料汇总：
+
+- [webpack - concepts](https://v4.webpack.js.org/concepts/)
+- [webpack - guides](https://v4.webpack.js.org/guides/)
+- [理解 webpack chunk](https://juejin.im/post/5d2b300de51d45775b419c76)
+
 ## demo01 - 一个简单的 demo
 
-前面简单地讲述了 webpack 4 的 5 个核心概念，下面开始实战。
+前面简单地讲述了 webpack 4 的几个基本概念，下面开始实战。
 
 首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具，免去了升级 node 版本的繁琐工作。
 
-安装 nvm 之后，使用 nvm 来安装 node v12。
+安装 nvm 之后，使用 nvm 来安装 node v12。v12 是我写下本篇教程时 node 的稳定版本。
 
 ```sh
 nvm install 12
@@ -240,7 +260,7 @@ document.write('Hello webpack!');
 const path = require('path');
 
 module.exports = {
-  // 指定 mode 为 production，即生产模式
+  // 指定 mode
   mode: 'production',
   // 指定 entry
   entry: path.resolve('src', 'index.js'),
@@ -252,10 +272,6 @@ module.exports = {
 };
 
 ```
-
-目前，我们已经看到了 2 种模式：`development`和`production`。实际上，webpack 4 一共内置了 3 种模式，还有一种模式就是`none`。
-
-`development`和`production`模式都会启用一些内置的优化，而`none`模式没有任何优化，一般不会使用该模式。如果不指定模式，会默认使用`production`模式。
 
 现在，我们修改`package.json`中的`scripts`字段。
 
@@ -343,7 +359,7 @@ module.exports = {
 
 ```
 
-我们还可以让 webpack 在打包的时候显示进度条，稍微降低我们等待时的焦虑度。
+我们还可以让 webpack 在打包的时候显示进度条，稍微降低我们等待时的焦虑度（或许有用吧）。
 
 ```js
 const WebpackBar = require('webpackbar');
@@ -390,7 +406,7 @@ const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-  // 指定 mode 为 production，即生产模式
+  // 指定 mode
   mode: 'production',
   // 指定 entry
   entry: path.resolve('src', 'index.js'),
@@ -434,7 +450,7 @@ dist
 
 相关资料汇总：
 
-- [webpack - mode](https://v4.webpack.js.org/configuration/mode/)
+- [webpack - configuration - mode](https://v4.webpack.js.org/configuration/mode/)
 - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin#readme)
 - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
 - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin#readme)
@@ -454,7 +470,7 @@ dist
 
 单页面应用 SPA 只有单入口，此时`entry`是一个字符串 string。多页面应用 MPA 有多个入口，此时`entry`是一个对象 object。demo01 就是一个 SPA 的配置。
 
-实际上，demo01 中`entry`的写法等同于下面的代码。也就是说，单入口也可以用多入口的写法书写，默认的 key 是`main`，你也可以自行修改。
+实际上，demo01 中`entry`的写法等同于下面的代码。也就是说，单入口默认的 key 是`main`。
 
 ```js
 const path = require('path');
@@ -486,6 +502,7 @@ module.exports = {
 为了之后的方便，我们先把没有使用到`context`的`webpack.config.js`放入到`${PROJECT_DIR}/config`文件夹中，再指定 entry 的 key 为`app`。
 
 ```js
+// ${PROJECT_DIR}/config/webpack.config.js
 const path = require('path');
 
 module.exports = {
@@ -498,7 +515,7 @@ module.exports = {
 
 ```
 
-我们需要把对应的命令修改一下来确保能够运行。默认 webpack 会使用`${PROJECT_DIR}/webpack.config.js`作为配置文件，我们移动配置文件后，webpack 就找不到了，需要手动指定。
+我们需要把对应的命令修改一下来确保能够运行。webpack 会默认使用`${PROJECT_DIR}/webpack.config.js`作为配置文件，我们移动配置文件后，webpack 使用的配置文件就需要手动指定了。
 
 ```json
 {
@@ -511,13 +528,9 @@ module.exports = {
 
 ```
 
-相关资料汇总：
-
-- [webpack - entry and context](https://v4.webpack.js.org/configuration/entry-context/)
-
 ### 输出 output
 
-分析依赖生成依赖图之后，webpack 就会开始打包，打包结果如何输出就由`output`指定。
+分析依赖生成依赖图之后，webpack 就会开始构建，构建结果如何输出就由`output`指定。
 
 SPA 往往只需要简单地指定`filename`和`path`，如上面示例所示。而如果要构建 MPA，除了修改`entry`，还需要利用占位符确保文件名唯一，下面代码中，`[name]`就是一个占位符，表示使用`entry`中配置的 key 来命名打包后的文件。
 
@@ -539,7 +552,7 @@ module.exports = {
 
 此外，还需要修改 html-webpack-plugin 的配置，让每一个入口点都有一个专属的 html 文件模板，并且还需要让每一个 html 文件模板都插入公共代码块。
 
-MPA 在配置上相对复杂，也相对更劝退新手，本篇教程只会以 SPA 作为示例，你可以自行搜索相关资料学习 MPA 的 webpack 构建配置。
+MPA 在配置上相对复杂，本篇教程只会以 SPA 作为示例，感兴趣的话可以自行搜索相关资料学习 MPA 的 webpack 构建配置。
 
 我们修改一下 output 的配置，使得主要输出文件的命名跟随 entry 的 key。
 
@@ -560,23 +573,13 @@ module.exports = {
 
 ```
 
-相关资料汇总：
-
-- [webpack - output](https://v4.webpack.js.org/configuration/output/)
-
 ### 插件 plugin
 
 plugin 用于增强 webpack 功能，比如优化打包文件，管理资源，注入环境变量等等，作用于整个构建过程。
 
-前面的例子中，我们使用到了 copy-webpack-plugin，html-webpack-plugin 和 webpackbar，都是相对来说比较简单的 plugin。
+前面的例子中，我们使用到了 copy-webpack-plugin，html-webpack-plugin，webpackbar 等相对来说比较简单的 plugin。
 
 每个 plugin 都需要放入到`plugins`字段数组中，顺序一般不影响，具体 plugin 的配置需要去查询具体的文档。
-
-相关资料汇总：
-
-- [webpack - plugins](https://v4.webpack.js.org/configuration/plugins/)
-- [webpack - plugins list](https://v4.webpack.js.org/plugins/)
-- [常用 plugins 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 
 ### 加载器 loader
 
@@ -584,23 +587,17 @@ plugin 用于增强 webpack 功能，比如优化打包文件，管理资源，�
 
 下面将会关注一些常用 loader。
 
-相关资料汇总：
-
-- [webpack - module](https://webpack.js.org/configuration/module/)
-- [webpack - loaders list](https://v4.webpack.js.org/loaders/)
-- [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
-
 ### 新语法相关的 loader
 
-因为 webpack 本身并不支持解析 es6+ 语法，所以我们需要使用 [babel](https://babeljs.io/) 和 [babel-loader](https://github.com/babel/babel-loader#readme)，让 webpack 能够解析 es6+ 语法。
+因为 webpack 本身并不支持解析 es6+ 语法，所以我们需要使用 babel 和 babel-loader，让 webpack 能够解析 es6+ 语法。
 
-babel 其中一个很好的作用就是转换新语法为旧语法，也就是我们常说的转译。babel-loader 使得 webpack 能够结合 babel 来使用。
+babel 其中一个作用就是转换新语法为旧语法，也就是我们常说的转译。babel-loader 使得 webpack 和 babel 能结合使用。
 
 首先还是要安装相关的依赖。
 
 ```sh
 npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1 react@16.13.1 react-dom@16.13.1 -E
-npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 -DE
+npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 @types/react@16 @types/react-dom@16 -DE
 ```
 
 其次是修改 webpack 配置。
@@ -628,11 +625,11 @@ module.exports = {
 
 ```
 
-排除 node_modules 和 bower_components 中的 js 文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。
+不处理 node_modules 和 bower_components 中的 js 文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。
 
 值得注意的是，loaders 和上面提到的几个核心概念都不同，所使用到的字段是`module.rules`。对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module`字段内做相关的定义。
 
-修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们在根目录下创建一个文件`babel.config.json`作为 babel 的配置文件，这也是当前 babel 官方推荐的做法。
+修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们在根目录下创建一个文件`babel.config.json`作为 babel 的配置文件。
 
 要支持 es6+ 语法非常简单，可以直接使用 babel 官方提供的 @babel/preset-env。它能实现智能转换，而无需提供额外的配置。
 
@@ -644,8 +641,6 @@ module.exports = {
 ```
 
 但现实往往是残酷的，@babel/preset-env 并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上。
-
-注意，要支持 IE 11-，在这里指定还不够，还需要考虑支持 es3 语法，es5 语法，还有一大堆 IE11- 不支持的特性。这相当复杂，这也是本篇教程不会考虑 IE 11- 的原因。
 
 我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。
 
@@ -676,9 +671,9 @@ ie >= 11
 
 描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
 
-这里还需要讲解 2 个新的概念再往下继续，它们就是 shim 和 polyfill。shim 用于兼容，拦截调用不存在的 api 并提供抽象层，并不局限于 html/css/js，而 polyfill 是 shim 的一种，通常使用 js 提供一些浏览器本身没有的 html/css/js 新功能。
+这里还需要讲解一下 shim 和 polyfill 再往下继续。shim 用于兼容，拦截调用不存在的 api 并提供抽象层，并不局限于 html/css/js，而 polyfill 是 shim 的一种，通常使用 js 提供一些浏览器本身没有的 html/css/js 新功能。
 
-我们要做的，实际上就是要自动处理 polyfill，也就是在 babel 转译的时候，让 babel 自动加入需要支持的浏览器不支持，但我们项目中又用到了的特性。这就是 babel 另一个很好的作用。
+在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性，实际上就是要自动处理 polyfill。这就是 babel 另一个作用。
 
 自动处理 polyfill 也可以通过配置 @babel/preset-env 来做。@babel/preset-env 默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
 
@@ -713,9 +708,9 @@ ie >= 11
 
 ```
 
-之后，babel 会为我们自动引入代码使用到了的但浏览器不支持的、core-js 和 regenerator-runtime 关联的部分做 polyfill。
+之后，babel 会为我们自动引入 core-js 和 regenerator-runtime 关联的部分做 polyfill。
 
-但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用 class，转译之后就会在使用到 class 的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
+但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用`class`，转译之后就会在使用到`class`的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
 
 我们可以使用 @babel/plugin-transform-runtime 来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
 
@@ -803,30 +798,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 当然，对比起官方文档和实际大型应用开发需求，教程这部分还相当简陋，建议还是多多阅读文档多多实践。
 
-相关资料汇总：
-
-- [babel](https://babeljs.io/)
-- [webpack - loaders - babel-loader](https://v4.webpack.js.org/loaders/babel-loader/)
-- [babel-loader](https://github.com/babel/babel-loader#readme)
-- [babel 教程](https://www.jiangruitao.com/docs/babel/)
-- [browserslist](https://github.com/browserslist/browserslist#readme)
-- [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
-- [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
-- [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
-- [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
-- [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
-- [core-js](https://github.com/zloirock/core-js#readme)
-- [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime)
-
 ### 样式相关的 loader
 
-因为 webpack 本身并不支持 css/less/sass/scss 打包，所以我们需要使用一系列的 loader 让 webpack 能够解析上面的四种文件。
+因为 webpack 本身并不支持 css/less/sass/scss 打包，所以我们需要使用一系列的 loader 让 webpack 能够解析上面的四种文件（stylus 使用率较低，此处不作演示）。
 
 首先还是要安装相关的依赖。
 
 ```sh
-npm i antd@4 -E
-npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@8 babel-plugin-import@1 -DE
+npm i zent@8 -E
+npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@8 babel-plugin-zent@2 -DE
 ```
 
 css-loader 能够将 css 文件转换成模块，style-loader 能够将样式模块嵌入到文件中，如果是 js/jsx 文件使用 css 文件，那么转换后的 css 模块会被嵌入到 js/jsx 文件中，然后再生成标签嵌入到 head 标签中。
@@ -895,11 +875,9 @@ module.exports = {
 
 重新构建并运行，我们可以在浏览器控制台中看到，样式被插入到`<head>`标签中，内容与我们书写的一致，并且已经起了作用。
 
-值得注意的是，如果要对某种文件使用多个 loader 处理，loader 的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理 css 文件，再调用`style-loader`处理`css-loader`输出的结果。
+值得注意的是，如果要对某种文件使用多个 loader 处理，loader 的顺序应该是从后往前的，上面的示例中，会先调用 css-loader 处理 css 文件，再调用 style-loader 处理 css-loader 输出的结果。
 
-要处理 less，sass 和 scss 文件，又有少许的不同。因为`less-loader`会把 less 文件转换成 css 文件，`sass-loader`会把 sass 和 scss 文件转换成 css 文件，而 css 文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的 loader 即可。
-
-由于 stylus 使用率较低，这里就不再探讨相关处理，可自行查阅相关资料学习。
+要处理 less，sass 和 scss 文件，又有少许的不同。因为 less-loader 会把 less 文件转换成 css 文件，sass-loader 会把 sass 和 scss 文件转换成 css 文件，而 css 文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的 loader 即可。
 
 ```js
 module.exports = {
@@ -933,20 +911,20 @@ module.exports = {
 
 ```
 
-我们把`index.css`重命名为`index.less`并修改`${PROJECT_DIR}/src/index.js`中的引入。重新构建并运行，并没有什么不同。
+我们把`index.css`重命名为`index.scss`并修改`${PROJECT_DIR}/src/index.js`中的引入。重新构建并运行，一切正常。
 
-我们再来试着添加并使用`antd`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮 Button。
+我们再来试着添加并使用`zent`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮。
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
-import './index.less';
+import { Button } from 'zent';
+import './index.scss';
 
 const App = () => (
   <div className="container">
     <p>Hello Webpack!</p>
-    <Button type="primary">Hello Ant Design!</Button>
+    <Button type="primary">Hello Zent!</Button>
   </div>
 );
 
@@ -961,65 +939,23 @@ ReactDOM.render(<App />, document.getElementById('root'));
   ...,
   "plugins": [
     "@babel/plugin-transform-runtime",
-    ["import", { "libraryName": "antd", "style": true }]
+    [
+      "zent",
+      {
+        "libraryName": "zent",
+        "noModuleRewrite": false,
+        "automaticStyleImport": true,
+        "useRawStyle": true
+      }
+    ]
   ]
 }
 
 ```
 
-再修改 webpack 配置，稍微自定义主题。
+重新构建并测试，我们能看到一个蓝色的按钮，按钮文字是`Hello Zent`。
 
-```js
-module.exports = {
-  ...,
-  // 指定 loader
-  module: {
-    rules: [
-      ...,
-      {
-        // less 文件
-        test: /\.less$/,
-        // 依次使用 less-loader，css-loader 和 style-loader 处理
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          {
-            loader: 'less-loader',
-            options: {
-              lessOptions: {
-                // 自定义主题
-                modifyVars: {
-                  'primary-color': '#2f54eb',
-                },
-                javascriptEnabled: true,
-              },
-            },
-          },
-        ],
-      },
-      ...
-    ],
-  },
-  ...,
-};
-
-```
-
-重新构建并测试，我们能看到一个深蓝色的按钮，按钮文字是`Hello Ant Design`。
-
-相关资料汇总：
-
-- [style-loader](https://github.com/webpack-contrib/style-loader#readme)
-- [css-loader](https://github.com/webpack-contrib/css-loader#readme)
-- [less](http://lesscss.org/)
-- [webpack - loaders - less-loader](https://v4.webpack.js.org/loaders/less-loader/)
-- [less-loader](https://github.com/webpack-contrib/less-loader#readme)
-- [sass](https://sass-lang.com/)
-- [webpack - loaders - sass-loader](https://v4.webpack.js.org/loaders/sass-loader/)
-- [sass-loader](https://github.com/webpack-contrib/sass-loader#readme)
-- [stylus](https://stylus-lang.com/)
-- [stylus-loader](https://github.com/shama/stylus-loader#readme)
-- [Ant Design](https://ant-design.gitee.io/index-cn)
+可能有人会问，为什么不用 Ant Design 作示例。第一是因为我认为 scss 更亲切，第二是因为圣诞彩蛋事件。
 
 ### 资产相关的 loader
 
@@ -1085,15 +1021,15 @@ module.exports = {
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
+import { Button } from 'zent';
 import iconWebpack from './assets/webpack.png';
-import './index.less';
+import './index.scss';
 
 const App = () => (
   <div className="container">
     <p>Hello Webpack!</p>
     <img src={iconWebpack} />
-    <Button type="primary">Hello Ant Design!</Button>
+    <Button type="primary">Hello Zent!</Button>
   </div>
 );
 
@@ -1130,16 +1066,9 @@ body {
 
 ```
 
-重新构建，可以看到 dist 目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字是一长串哈希值 hash。测试时图片会正常显示，字体被正常加载，一切正常。哈希值会在之后做进一步说明。
+重新构建，可以看到 dist 目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字被修改成一串字符串，这个我们称为文件指纹，会在之后做进一步的解释。测试时一切正常。
 
-但是 url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料学习。
-
-相关资料汇总：
-
-- [file-loader](https://github.com/webpack-contrib/file-loader#readme)
-- [url-loader](https://github.com/webpack-contrib/url-loader#readme)
-- [html-loader](https://github.com/webpack-contrib/html-loader#readme)
-- [webpack - caching](https://webpack.js.org/guides/caching/)
+url-loader 和 file-loader 只会处理 js 中引用的图片，如果我们在 html 里直接引用呢？那就只能使用 html-loader 来处理了。这种情况较为少见，可以自行查阅相关资料学习。
 
 ### 模式 mode
 
@@ -1169,7 +1098,7 @@ npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4
 
 ```
 
-接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中。
+接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中。这样会使得 webpack-dev-server 使用其中配置的 plugin 和 loader，如 html-webpack-plugin，url-loader 等。
 
 再新建两个配置文件如下。
 
@@ -1191,7 +1120,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-`${PROJECT_DIR}/config/webpack.prod.js`也十分类似
+`${PROJECT_DIR}/config/webpack.prod.js`也十分类似。
 
 ```js
 const merge = require('webpack-merge');
@@ -1226,10 +1155,73 @@ if (process.env.NODE_ENV === 'development') {
 
 ```
 
+最后分别执行`npm run dev`和`npm run build`做测试，一切正常。最终项目目录如下所示。
+
+```sh
+.
+├── babel.config.json
+├── config
+│   ├── webpack.base.js
+│   ├── webpack.config.js
+│   ├── webpack.dev.js
+│   └── webpack.prod.js
+├── dist
+│   ├── app.js
+│   ├── favicon.ico
+│   ├── fonts
+│   ├── img
+│   ├── index.html
+│   └── report.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+└── src
+    ├── assets
+    ├── index.js
+    └── index.scss
+```
+
 对于 react，还可以加入 react-hot-loader 进一步提升使用体验。有兴趣可自行查阅相关资料学习。
 
 相关资料汇总：
 
+- [webpack - configuration - entry and context](https://v4.webpack.js.org/configuration/entry-context/)
+- [webpack - configuration - output](https://v4.webpack.js.org/configuration/output/)
+- [webpack - configuration - plugins](https://v4.webpack.js.org/configuration/plugins/)
+- [webpack - plugins list](https://v4.webpack.js.org/plugins/)
+- [常用 plugins 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
+- [webpack - module](https://webpack.js.org/configuration/module/)
+- [webpack - loaders list](https://v4.webpack.js.org/loaders/)
+- [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
+- [babel](https://babeljs.io/)
+- [webpack - loaders - babel-loader](https://v4.webpack.js.org/loaders/babel-loader/)
+- [babel-loader](https://github.com/babel/babel-loader#readme)
+- [babel 教程](https://www.jiangruitao.com/docs/babel/)
+- [browserslist](https://github.com/browserslist/browserslist#readme)
+- [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)
+- [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
+- [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
+- [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
+- [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
+- [core-js](https://github.com/zloirock/core-js#readme)
+- [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime)
+- [style-loader](https://github.com/webpack-contrib/style-loader#readme)
+- [css-loader](https://github.com/webpack-contrib/css-loader#readme)
+- [less](http://lesscss.org/)
+- [webpack - loaders - less-loader](https://v4.webpack.js.org/loaders/less-loader/)
+- [less-loader](https://github.com/webpack-contrib/less-loader#readme)
+- [sass](https://sass-lang.com/)
+- [webpack - loaders - sass-loader](https://v4.webpack.js.org/loaders/sass-loader/)
+- [sass-loader](https://github.com/webpack-contrib/sass-loader#readme)
+- [stylus](https://stylus-lang.com/)
+- [stylus-loader](https://github.com/shama/stylus-loader#readme)
+- [zent](https://youzan.github.io/zent/zh/)
+- [file-loader](https://github.com/webpack-contrib/file-loader#readme)
+- [url-loader](https://github.com/webpack-contrib/url-loader#readme)
+- [html-loader](https://github.com/webpack-contrib/html-loader#readme)
+- [webpack - caching](https://webpack.js.org/guides/caching/)
 - [webpack - configuration - mode](https://v4.webpack.js.org/configuration/mode/)
 - [webpack - configuration - webpack-dev-server](https://v4.webpack.js.org/configuration/dev-server/)
 - [cross-env](https://github.com/kentcdodds/cross-env)
@@ -1245,16 +1237,6 @@ if (process.env.NODE_ENV === 'development') {
 ### 使用文件指纹
 
 人的指纹是特殊的，不存在完全相同。而文件指纹则略有差异。
-
-文件指纹分成三类：
-
-- hash - 与项目相关，只要项目内有文件改变，这类文件指纹就会改变
-- chunkhash - 与 entry 有关，不同的 entry 会生成不同的文件指纹，一般用于 js
-- contenthash - 与文件内容有关，不同的文件内容会生成不同的文件指纹，不能用于 js，demo02 中我们提到的哈希值就是这种
-
-占位符能体现这三类文件指纹。
-
-文件指纹的作用，常常体现在版本管理上。没有变化的文件指纹，说明没有修改，无需客户端更新。借助文件指纹，我们能达到减轻服务器压力，提高用户体验等目的。
 
 ### 压缩代码
 
@@ -1300,14 +1282,14 @@ if (process.env.NODE_ENV === 'development') {
 
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
 
-相关资料汇总：
+## 参考
 
-- [webpack - mode](https://v4.webpack.js.org/configuration/mode/)
+不再另外附上相关 plugin，loader 等的 github 仓库链接。
 
-待补充，催稿可以
-
-（1）邮件催稿
-
-（2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
+- [webpack 官网](https://webpack.js.org/)
+- [手摸手，带你用合理的姿势使用 webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
+- [手摸手，带你用合理的姿势使用 webpack4（下）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
+- [webpack - 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
+- [webpack - 理解 chunk](https://juejin.im/post/5d2b300de51d45775b419c76)
 
 <Vssue />

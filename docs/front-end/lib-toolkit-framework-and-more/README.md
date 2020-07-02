@@ -415,6 +415,8 @@
   - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
   - [Dan Abramov's Blog](https://overreacted.io/)
+  - [build your own react](https://pomb.us/build-your-own-react/)
+  - [Re: 从零开始的 React 再造之旅](https://devrsi0n.com/articles/create-react-from-scratch)
   - createElement，render，Component 三个重要的 api
   - virtual dom 和 diff 算法
   - fiber 架构，任务调度，渲染与更新
@@ -427,6 +429,7 @@
   - 组件概念，组件化思想，组件化机制，高阶组件 HOC，组件通信策略
   - 类组件，函数式组件和 hooks
     - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
+    - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
     - [精读《useEffect 完整指南》](https://juejin.im/post/5c9827745188250ff85afe50)
   - 组件测试
   - Portal 和弹窗组件实现
