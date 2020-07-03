@@ -1608,6 +1608,7 @@ module.exports = merge(baseConfig, {
 相关资料汇总：
 
 - [webpack - 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
+- [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
 
 参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-demos/tree/master/demo03)。
 
@@ -1636,5 +1637,9 @@ module.exports = merge(baseConfig, {
 （1）邮件催稿
 
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
+
+## 致谢
+
+- [XuXianTao](https://github.com/XuXianTao) - 阅读了初稿并提供了弥足珍贵的建议和意见
 
 <Vssue />
