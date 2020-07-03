@@ -75,6 +75,9 @@
     - [前端九部](https://www.yuque.com/fe9/basic)
     - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
     - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
+    - [The Modern JavaScript Tutorial](https://javascript.info/)
+    - [现代 JavaScript 教程](https://zh.javascript.info/)
+    - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
     - [es6 入门](http://es6.ruanyifeng.com/)
   - canvas
     - [mdn - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
@@ -117,7 +120,6 @@
       - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
       - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
     - js 部分
-      - [you-dont-know-js](https://github.com/getify/You-Dont-Know-JS)
       - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
       - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
       - [javascript 设计模式](https://book.douban.com/subject/3329540/)

@@ -583,15 +583,15 @@ plugin 用于增强 webpack 功能，比如优化打包文件，管理资源，�
 
 ### 加载器 loader
 
-由于 webpack 默认只支持解析 js 和 json 文件，所以项目中使用到的其他文件，比如图片文件，字体文件，样式文件等，就只能使用 loaders 解析，解析后文件会作为模块被 webpack 加入到依赖图中。
+由于 webpack 默认只支持解析 js 和 json 文件，所以项目中使用到的其他文件，比如图片文件、字体文件、样式文件等，就只能使用 loaders 解析，解析后文件会作为模块被 webpack 加入到依赖图中。
 
 下面将会关注一些常用 loader。
 
-### 新语法相关的 loader
+### 新语法和新特性相关的 loader
 
-因为 webpack 本身并不支持解析 es6+ 语法，所以我们需要使用 babel 和 babel-loader，让 webpack 能够解析 es6+ 语法。
+因为 webpack 本身并不支持解析 es6+ 语法 syntax，所以要使用 es6+ 语法，我们就需要使用 babel 和 babel-loader 来让 webpack 支持解析。
 
-babel 其中一个作用就是转换新语法为旧语法，也就是我们常说的转译。babel-loader 使得 webpack 和 babel 能结合使用。
+babel 一个主要作用就是转换新语法为旧语法，也就是我们常说的语法转换，转译，比如把箭头函数的写法转换成`function`的写法。babel-loader 使得 webpack 和 babel 能结合使用。
 
 首先还是要安装相关的依赖。
 
@@ -600,16 +600,16 @@ npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1 react@16.13.1 react-
 npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 @types/react@16 @types/react-dom@16 -DE
 ```
 
-其次是修改 webpack 配置。
+其次是修改 webpack 配置。不要忘记，对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module.rules`中配置 loader。
 
 ```js
-// ./config/webpack.config.js
+// ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...
   // 指定 loader
   module: {
     rules: [
-      ...
+      ...,
       {
         // js 和 jsx 文件
         test: /\.jsx?$/,
@@ -627,11 +627,9 @@ module.exports = {
 
 不处理 node_modules 和 bower_components 中的 js 文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。
 
-值得注意的是，loaders 和上面提到的几个核心概念都不同，所使用到的字段是`module.rules`。对于 webpack 而言，所有文件都可以视作一个模块，所以需要在`module`字段内做相关的定义。
+修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们创建`${PROJECT_DIR}/babel.config.json`问价作为 babel 的配置文件。
 
-修改完 webpack 配置后，我们还需要配置 babel，让 babel 根据我们的需求进行转译。我们在根目录下创建一个文件`babel.config.json`作为 babel 的配置文件。
-
-要支持 es6+ 语法非常简单，可以直接使用 babel 官方提供的 @babel/preset-env。它能实现智能转换，而无需提供额外的配置。
+要支持 es6+ 语法非常简单，可以直接使用 babel 官方提供的 @babel/preset-env。它能智能转换 es6+ 语法到 es5 语法，无需提供额外的配置。
 
 ```json
 {
@@ -640,11 +638,13 @@ module.exports = {
 
 ```
 
-但现实往往是残酷的，@babel/preset-env 并不一定能满足项目需求，我们需要描述我们想要支持的浏览器，也就是转译后的代码能够跑在什么浏览器上。
+但现实往往是残酷的，@babel/preset-env 默认的配置通常不能完全满足项目需求。一个比较常见的项目需求是支持特定的浏览器和特定的浏览器版本，比如 IE 11。
 
-我们可以在项目根目录创建一个文件`.browserslistrc`，babel 会自动读取该文件来使用。实际上，这个文件还会被 autoprefixer，stylelint 等依赖使用，之后会进一步讲解。
+这个时候，我们就需要先向 @babel/preset-env 说明目标浏览器（我们想要支持的浏览器），也就是转译后的代码能够跑在什么浏览器上。
 
-以下是 demo02 中使用到的`.browserslistrc`文件的内容。
+怎么说明？我们可以创建`${PROJECT_DIR}/.browserslistrc`文件。`.browserslistrc`文件是一个特殊的文件，依赖于 [browserslist](https://github.com/browserslist/browserslist)，它的内容说明了项目的目标浏览器。如果存在该文件，它的内容就会被 @babel/preset-env 读取并使用。
+
+我们为`.browserslistrc`添加以下内容。
 
 ```sh
 > 0.2%
@@ -659,7 +659,7 @@ ie >= 11
 ```
 
 - `> 0.2%`表示需要支持使用率超过 0.2% 的浏览器。
-- `last 5 versions`表示需要支持浏览器的最近 3 个版本。
+- `last 3 versions`表示需要支持浏览器的最近 3 个版本。
 - `not dead`表示浏览器在最近 24 个月内还得到过官方的支持。
 - `chrome >= 70`表示 chrome 的版本需要不小于 70。
 - `firefox >= 68`表示 firefox 的版本需要不小于 68。
@@ -669,13 +669,13 @@ ie >= 11
 
 上面的条件取并集，就是需要支持的浏览器范围。
 
-描述完之后，我们还需要在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性。
+向 @babel/preset-env 说明完目标浏览器之后，babel 在转译时会更加精准，它会把目标浏览器不支持的 es6+ 语法转换成 es5 语法，同时保留目标浏览器支持的 es6+ 语法。
 
-这里还需要讲解一下 shim 和 polyfill 再往下继续。shim 用于兼容，拦截调用不存在的 api 并提供抽象层，并不局限于 html/css/js，而 polyfill 是 shim 的一种，通常使用 js 提供一些浏览器本身没有的 html/css/js 新功能。
+但是如果转换后的代码中存在浏览器不支持的特性 feature，比如`Promise`，那该怎么办呢？这个时候，babel 的另一个作用，自动补齐特性，就很好地解决了这个问题。
 
-在转译的时候加入这些浏览器不支持，但我们项目中又使用到的特性，实际上就是要自动处理 polyfill。这就是 babel 另一个作用。
+polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代码包。我们可以配置 babel 自动引入 polyfill 来自动补齐目标浏览器的特性。
 
-自动处理 polyfill 也可以通过配置 @babel/preset-env 来做。@babel/preset-env 默认只有转译的配置（默认把 es6+ 语法转换成 es5 语法），不会进行 polyfill，需要进行手动配置。这里我们指定`useBuiltIns`为`usage`模式，这样比较省事，不用配置太多。
+@babel/preset-env 默认只会转译，我们需要手动配置来启用自动补全特性的功能。这里我们指定`useBuiltIns`为`usage`模式，这样做的好处是 @babel/preset-env 会为我们自动引入 polyfill，省去了不少麻烦。
 
 ```json
 {
@@ -691,7 +691,7 @@ ie >= 11
 
 ```
 
-默认地，@babel/preset-env 会使用 core-js v2 和 regenerator-runtime 做 polyfill。core-js v3 支持更多，影响更小，现在一般建议使用 v3，这里我们就指定要使用 v3 版本。
+默认地，@babel/preset-env 会使用 core-js v2 和 regenerator-runtime 做 polyfill。但是 core-js v3 提供的 polyfill 更多更好，同时负面影响也更少，现在一般建议使用 v3，这里我们就指定要使用 v3 版本（前面安装依赖部分也是安装了 v3 版本）。
 
 ```json
 {
@@ -708,11 +708,11 @@ ie >= 11
 
 ```
 
-之后，babel 会为我们自动引入 core-js 和 regenerator-runtime 关联的部分做 polyfill。
+之后，babel 会为我们自动引入 core-js 和 regenerator-runtime 中和项目代码关联的部分，自动补全浏览器特性。
 
-但是还存在一个问题，转译之后可能会使得每个文件头部都增加了相同的代码，比如使用`class`，转译之后就会在使用到`class`的文件头部都增加一串相同的代码。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
+但使用这样的配置构建出来的代码还不能投入到生产环境中。自动补全浏览器特性之后可能会使得每个文件头部都增加了相同的代码，比如多个文件都使用了`Promise`，转译之后就会在这些文件的头部都引入相同的`Promise`相关的 polyfill。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
 
-我们可以使用 @babel/plugin-transform-runtime 来抽离这些重复的代码到一起，进而压缩最终构建包的体积。
+我们可以使用 @babel/plugin-transform-runtime 来抽离这些重复的代码并放到一起，进而压缩最终构建包的体积。
 
 ```json
 {
@@ -730,9 +730,7 @@ ie >= 11
 
 ```
 
-因为我们已经在 @babel/preset-env 中配置了 core-js ，所以无需在 @babel/plugin-transform-runtime 中重复配置。
-
-除了 es6+ 的语法，我们还想支持 react。类似地，我们也可以使用 babel 来解析 react 代码，只需要配置 @babel/preset-react 即可。
+除了 es6+ 的语法，我们还想支持 react 语法。类似地，我们也可以使用 babel 来解析 react 代码，只需要根据文档配置 @babel/preset-react 即可。
 
 ```json
 {
@@ -756,7 +754,7 @@ ie >= 11
 
 ```
 
-之后可以修改`${PROJECT_DIR}/src/index.js`，使用 react 和 react-dom 以测试我们的 babel 配置。
+之后可以修改`${PROJECT_DIR}/src/index.js`，使用 react，react-dom，`Promise`以测试我们的 babel 配置。
 
 ```js
 import React from 'react';
@@ -764,6 +762,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class App extends React.Component {
+  componentDidMount() {
+    new Promise((resolve) => {
+      setTimeout(() => {
+        document.title = 'Hello World!';
+        resolve();
+      }, 5000);
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -780,21 +787,42 @@ ReactDOM.render(<App />, document.getElementById('root'));
 你也可以使用函数式组件 FC 书写。
 
 ```js
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Button } from 'zent';
+import iconWebpack from './assets/webpack.png';
+import './index.scss';
 
-const App = () => (
-  <div className="container">
-    <p>Hello Webpack!</p>
-  </div>
-);
+const App = () => {
+  useEffect(() => {
+    new Promise((resolve) => {
+      setTimeout(() => {
+        document.title = 'Hello World!';
+        resolve();
+      }, 5000);
+    });
+  }, []);
+
+  return (
+    <div className="container">
+      <p>Hello Webpack!</p>
+      <img src={iconWebpack} />
+      <Button type="primary">Hello Zent!</Button>
+    </div>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-之后构建并运行测试即可。如果正常，可以看到页面上会出现`Hello Webpack!`的文字。
+之后构建并运行测试即可。
+
+如果正常，可以看到页面上会出现`Hello Webpack!`的文字，5 秒左右标签页的标题被修改成`Hello World!`。
+
+我们查看`${PROJECT_DIR}/dist/report.html`会看到`es.promise.js`也加入了`bundle`中，这是因为我们给出的目标浏览器包含了`ie >= 11`，而 IE 11 是不支持`Promise`的。
+
+可能你还会有疑虑，那已经支持了`Promise`特性的浏览器会再度引入这部分 polyfill 吗？不会，polyfill 会聪明地先判断浏览器环境，如果不支持这部分特性再引入。
 
 当然，对比起官方文档和实际大型应用开发需求，教程这部分还相当简陋，建议还是多多阅读文档多多实践。
 
@@ -806,7 +834,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```sh
 npm i zent@8 -E
-npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@8 babel-plugin-zent@2 -DE
+npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@9 babel-plugin-zent@2 -DE
 ```
 
 css-loader 能够将 css 文件转换成模块，style-loader 能够将样式模块嵌入到文件中，如果是 js/jsx 文件使用 css 文件，那么转换后的 css 模块会被嵌入到 js/jsx 文件中，然后再生成标签嵌入到 head 标签中。
@@ -955,7 +983,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 重新构建并测试，我们能看到一个蓝色的按钮，按钮文字是`Hello Zent`。
 
-可能有人会问，为什么不用 Ant Design 作示例。第一是因为我认为 scss 更亲切，第二是因为圣诞彩蛋事件。
+可能有人会问，为什么不用 Ant Design 作示例。第一是因为我认为 scss 比 less 更接近 css 本身，第二是因为圣诞彩蛋事件。
 
 ### 资产相关的 loader
 
@@ -1098,7 +1126,7 @@ npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4
 
 ```
 
-接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中。这样会使得 webpack-dev-server 使用其中配置的 plugin 和 loader，如 html-webpack-plugin，url-loader 等。
+接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中，作为基础配置。
 
 再新建两个配置文件如下。
 
@@ -1120,7 +1148,9 @@ module.exports = merge(baseConfig, {
 
 ```
 
-`${PROJECT_DIR}/config/webpack.prod.js`也十分类似。
+devtool 可以帮助调试，在这里不作相关展开，有兴趣可以自行查阅相关资料学习。webpack-merge 会帮助我们自动合并相关字段的配置，这样就使得 webpack-dev-server 也会使用基础配置中的 plugin 和 loader。
+
+`${PROJECT_DIR}/config/webpack.prod.js`也十分类似，指定了 mode，devtool 还有额外的 plugin。额外的 plugin 会被 webpack-merge 加入到基础配置中。
 
 ```js
 const merge = require('webpack-merge');
@@ -1131,7 +1161,6 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'none',
   plugins: [
-    // 分析生成包大小
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
@@ -1192,7 +1221,7 @@ if (process.env.NODE_ENV === 'development') {
 - [webpack - configuration - plugins](https://v4.webpack.js.org/configuration/plugins/)
 - [webpack - plugins list](https://v4.webpack.js.org/plugins/)
 - [常用 plugins 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
-- [webpack - module](https://webpack.js.org/configuration/module/)
+- [webpack - module](https://v4.webpack.js.org/configuration/module/)
 - [webpack - loaders list](https://v4.webpack.js.org/loaders/)
 - [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 - [babel](https://babeljs.io/)
@@ -1221,9 +1250,10 @@ if (process.env.NODE_ENV === 'development') {
 - [file-loader](https://github.com/webpack-contrib/file-loader#readme)
 - [url-loader](https://github.com/webpack-contrib/url-loader#readme)
 - [html-loader](https://github.com/webpack-contrib/html-loader#readme)
-- [webpack - caching](https://webpack.js.org/guides/caching/)
+- [webpack - caching](https://v4.webpack.js.org/guides/caching/)
 - [webpack - configuration - mode](https://v4.webpack.js.org/configuration/mode/)
 - [webpack - configuration - webpack-dev-server](https://v4.webpack.js.org/configuration/dev-server/)
+- [webpack - configuration - devtool](https://v4.webpack.js.org/configuration/devtool/)
 - [cross-env](https://github.com/kentcdodds/cross-env)
 - [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
 - [react-hot-loader](https://github.com/gaearon/react-hot-loader#readme)
@@ -1244,7 +1274,7 @@ if (process.env.NODE_ENV === 'development') {
 - `chunkhash` - 根据不同的`chunk`生成`hash`，通常会把不常变动的公共库单独抽离，然后对业务代码使用`chunkhash`，这样改动业务代码不会影响公共库，客户端只需更新业务代码对应的`chunk`。
 - `contenthash` - 根据文件内容生成`hash`。js 文件常常会引用 css 文件，如果使用`chunkhash`，会导致修改 js 文件、没有修改 css 文件的时候，最终构建完发现 css 文件的`hash`也变化了，所以 css 文件一般使用`contenthash`。
 
-我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体文件添加文件指纹。`[name]`表示使用文件本身的命名，`[contenthash:8]`表示使用`contenthash`的前 8 位，你也可以写成`[hash:8]`，结果将会是一样的。
+我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体文件添加文件指纹。
 
 ```js
 module.exports = {
@@ -1283,17 +1313,19 @@ module.exports = {
 
 ```
 
+`[name]`表示使用文件本身的命名，`[ext]`表示使用文件本身的后缀。`[contenthash:8]`表示使用`contenthash`的前 8 位，你也可以写成`[hash:8]`，结果将会是一样的，这是因为 url-loader 和 file-loader 将会以同样的方式处理`contenthash`和`hash`，这是文件指纹中的一个特例。
+
 需要注意的是，要在生产文件为 css 文件添加文件指纹，就不能使用 style-loader，这是因为 style-loader 会把 css 文件嵌入到 js/jsx 文件中，我们无法得到单独的 css 文件，自然也就无法添加文件指纹了。
 
-要解决这个问题，我们需要添加一个依赖，用于生产环境中分离 css 文件，然后让 style-loader 只在开发环境中起作用。
+要解决这个问题，我们需要添加一个依赖 mini-css-extract-plugin，使用它在项目生产环境中分离 css 文件，然后让 style-loader 只在开发环境中起作用。
 
 ```sh
 npm i mini-css-extract-plugin@0 -DE
 ```
 
-我们把`${PROJECT_DIR}/config/webpack.base.js`中关于 css 的部分都放入`${PROJECT_DIR}/config/webpack.dev.js`中。
+我们再把`${PROJECT_DIR}/config/webpack.base.js`中关于 css 的部分都放入`${PROJECT_DIR}/config/webpack.dev.js`中。
 
-现在，完整的`${PROJECT_DIR}/config/webpack.base.js`如下所示。
+现在，完整的`${PROJECT_DIR}/config/webpack.base.js`如下所示，包含了 entry，各类 plugin 和处理 js/jsx 文件、图片文件和字体文件的 loader。其中，图片文件和字体文件的处理都使用了`contenthash`的前 8 位。
 
 ```js
 const path = require('path');
@@ -1319,7 +1351,6 @@ module.exports = {
       template: path.resolve('public', 'index.html'),
     }),
   ],
-  // loaders
   module: {
     rules: [
       {
@@ -1361,7 +1392,7 @@ module.exports = {
 
 ```
 
-完整的`${PROJECT_DIR}/config/webpack.dev.js`如下所示。
+完整的`${PROJECT_DIR}/config/webpack.dev.js`如下所示，除去基本的配置外，还声明了 mode，webpack-dev-server 的配置，devtool 和 css/less/sass/scss 文件的 loader。在这里，我们使用了 style-loader。
 
 ```js
 const merge = require('webpack-merge');
@@ -1397,11 +1428,89 @@ module.exports = merge(baseConfig, {
 
 我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用 style-loader 而是使用 mini-css-extract-plugin，并为主要输出文件还有 css 文件添加文件指纹。
 
-首先要用 mini-css-extract-plugin 附带的 loader 替换掉 style-loader。我们还要在 options 中指定`publicPath`，用于抽离 css 文件到单独的文件夹。
+要为主要输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。
 
-接着，把 mini-css-extract-plugin 加入到`plugins`中，并指定输出文件名。
+```js
+module.exports = merge(baseConfig, {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].[chunkhash:8].js',
+  },
+  ...,
+});
 
-完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。`[name]`表示使用文件本身的命名，`[contenthash:8]`表示使用`contenthash`的前 8 位，你也可以写成`[hash:8]`，结果将会是一样的。
+```
+
+接着用 mini-css-extract-plugin 附带的 loader 替换掉原本使用的 style-loader。我们还要在 options 中指定`publicPath`，用于指定要读取的 css 文件所处的文件夹。
+
+```js
+module.exports = merge(baseConfig, {
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+    ],
+  },
+});
+
+```
+
+最后，把 mini-css-extract-plugin 加入到`plugins`中，并指定输出文件名。注意：在前面我们已经指定要使用`css`文件夹内的 css 文件，在这里我们需要把文件夹名也添加上去，让 css 文件输出到`${PROJECT_DIR}/dist/css`目录下，否则仍然会直接输出到`${PROJECT_DIR}/dist`目录下，进而导致引用错误。
+
+```js
+module.exports = merge(baseConfig, {
+  ...,
+  plugins: [
+    ...,
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+    }),
+    ...,
+  ],
+  ...,
+});
+
+```
+
+完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。其中，css 文件的处理都使用了`contenthash`的前 8 位。
 
 ```js
 const path = require('path');
@@ -1472,7 +1581,11 @@ module.exports = merge(baseConfig, {
 
 ```
 
-### 压缩代码
+这仅仅是最简单的处理，之后，我们还会遇到更复杂的情况需要我们来处理。
+
+### 压缩 js
+
+### 压缩 css
 
 ### 自动添加样式前缀
 
