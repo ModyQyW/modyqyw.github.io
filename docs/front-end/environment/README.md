@@ -4,7 +4,7 @@
 
 ## v2ray
 
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，自带客户端
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，建议不要使用自带客户端而是使用 [clash](https://github.com/Dreamacro/clash) 或 [clashx](https://github.com/yichengchen/clashX/releases)
 
 ## Windows - 偏向娱乐的配置
 
@@ -35,15 +35,16 @@
 - [百度网盘](http://pan.baidu.com/download) - 可能会用到 [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
-- [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟
+- [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟，可以考虑 [todoist](https://todoist.com/)
 - [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
-- [看图](https://kantu.qq.com/) - 看图（捧读）
+- [看图](https://kantu.qq.com/) - 看图（捧读），可以考虑 [kankan](https://github.com/newham/kankan/blob/master/readme.zh.md#kan-kan)，[pixea](https://apps.apple.com/cn/app/pixea/id1507782672?mt=12)
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=download&t=weixin_download_list&loc=readtemplate,weixin,body,6)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
+- [bitwarden](https://bitwarden.com/) - 密码管理工具，可以考虑 [NordPass](https://nordpass.com/)
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
@@ -53,15 +54,14 @@
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)，[axe.store](https://gitee.com/kuaibiancheng/store)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具，如果有迅雷会员可以考虑[迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
-- [Mounty](https://mounty.app/) - 让 mac 原生支持 NTFS 格式移动盘读写
-- [NordPass](https://nordpass.com/) - 密码管理工具
+- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持 mac 读写 NTFS
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [OBS](https://obsproject.com/) - 录制
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
@@ -298,30 +298,18 @@ git stash pop
 
 - [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
 - [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+- [114 DNS](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
+- [DNSPOS DNS](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`
 
 ### 国外公共 DNS
 
 - [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
 - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
+- [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
 
 ### 配置
 
 打开命令行，ping 一下各个 DNS，看哪个快就优先哪个。你也可以使用[站长工具](http://ping.chinaz.com/)来完成这部分工作。
-
-我自己用的顺序是百度 -> 阿里 -> 谷歌。
-
-```
-180.76.76.76
-223.5.5.5
-223.6.6.6
-8.8.8.8
-8.8.4.4
-2400:da00::6666
-2400:3200::1
-2400:3200:baba::1
-2001:4860:4860::8888
-2001:4860:4860::8844
-```
 
 ## node
 

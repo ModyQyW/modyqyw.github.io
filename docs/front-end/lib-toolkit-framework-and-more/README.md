@@ -17,14 +17,23 @@
 
 ## 设计语言
 
+- [Fiori Design](https://experience.sap.com/fiori-design-web/)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- [Lightning Design System](https://lightningdesignsystem.com/getting-started/)
+- [Material Design](https://material.io/)
 - [Atomic Design](https://atomicdesign.bradfrost.com/)
   - [中文总结](https://www.uisdc.com/atomic-design-theory)
-- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn) - 蚂蚁金服
-- [Material Design](https://material.io/) - 谷歌
-- [Fluent Design](https://www.microsoft.com/design/fluent/) - 微软
-- [DevUI Design](https://devui.design/) - 华为
-- [Primer Design](https://primer.style/) - Github
+- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn)
+- [Fluent Design](https://www.microsoft.com/design/fluent/)
+- [DevUI Design](https://devui.design/)
+- [Primer Design](https://primer.style/)
 - [Eva Design](https://eva.design/)
+- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
+- [Web 界面设计](https://book.douban.com/subject/3821157/)
+- [界面设计模式](https://book.douban.com/subject/25716088/)
+- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
+- [设计心理学](https://book.douban.com/subject/26742341/)
+- [Web 表单设计](https://book.douban.com/subject/4886100/)
 
 ## 项目体系
 
@@ -99,6 +108,7 @@
   - [gitlab-ci](https://docs.gitlab.com/ee/ci/)
 - [LambdaTest](https://www.lambdatest.com/) - 在线测试工具，在 2000+ 浏览器和操作系统上进行实时互动和自动跨浏览器在线测试
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
+- [vConsole](https://github.com/Tencent/vConsole) - 移动端网页开发者工具
 - git
   - [pro git](https://git-scm.com/book/en/v2)
 
@@ -180,6 +190,7 @@
     - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
   - [tailwindcss](https://tailwindcss.com/)
   - [bulma](https://bulma.io/documentation/)
+  - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
   - [uikit](https://getuikit.com/)
 - 衍生
@@ -220,10 +231,6 @@
   - [hey-ui](https://www.heyui.top/)
   - [buefy](https://github.com/buefy/buefy/)
   - [bootstrap-vue](https://bootstrap-vue.js.org/docs)
-  - [vue-material](https://vuematerial.io/getting-started) - 建议使用更好的 vuetify
-  - [muse-ui](https://muse-ui.org/#/zh-CN/installation) - 断更很久，不建议使用
-  - [mint-ui](https://mint-ui.github.io/docs/#/zh-cn2) - 断更很久，不建议使用
-  - [cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/quick-start) - 使用 stylus，使用率较低，不建议使用
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
   - [mand-mobile](https://didi.github.io/mand-mobile/)
   - [nut-ui](http://nutui.jd.com/#/intro)
@@ -341,8 +348,8 @@
 - cli
   - [next](https://nextjs.org/docs/getting-started)
     - [blitz](https://github.com/blitz-js/blitz) - 基于 next 再封装，全栈框架
-  - [umi](https://umijs.org/zh-CN)
-    - [@umijs/plugin-qiankun](https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun) - 微前端解决方案
+  - [umi](https://umijs.org/zh-CN) - 带微前端解决方案
+  - [ice](https://ice.work/) - 带微前端解决方案
   - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
   - [gatsby](https://www.gatsbyjs.com/)
 - app
@@ -410,7 +417,11 @@
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
   - [ink](https://github.com/vadimdemedes/ink) - 在交互式命令行中使用 react
+  - [react-lifecycle-visualizer](https://github.com/Oblosys/react-lifecycle-visualizer#readme) - react 生命周期方法的实时可视化工具
+  - [why-did-you-render](https://github.com/welldone-software/why-did-you-render#readme) - 展示可避免的重复渲染
+  - [react-proto](https://github.com/React-Proto/react-proto#readme) - 为开发人员和设计人员提供的 react 应用原型开发工具
 - 进阶
+  - [react 技术揭秘](https://react.iamkasong.com/)
   - [react 源码解析](https://github.com/KieSun/react-interpretation)
   - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
