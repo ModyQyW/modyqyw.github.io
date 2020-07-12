@@ -1617,9 +1617,50 @@ module.exports = {
 
 ### 压缩 html
 
-### 压缩 css
+要压缩 html，我们可以使用之前用到的`html-webpack-plugin`。除了我们之前用到的指定模板的功能，它还有压缩 html 的功能，而且是默认开启的。
+
+如果我们需要修改`html-webpack-plugin`的压缩选项，我们只需要为`${PROJECT_DIR}/config/webpack.base.js`中的`html-webpack-plugin`的配置添加一个`minify`字段，然后写入自己的配置即可。
+
+下面是默认的`html-webpack-plugin`的压缩选项。
+
+```js
+const HtmlPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new HtmlPlugin({
+      title: 'demo03',
+      template: path.resolve('public', 'index.html'),
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
+    }),
+    ...,
+  ],
+  ...,
+};
+
+```
+
+- `collapseWhitespace: true`表示减少 html 中不必要的空白。
+- `removeComments: true`表示移除 html 中的注释。
+- `removeRedundantAttributes: true`表示移除标签上使用了默认值的属性，比如`<input type="text" />`，可以移除`type="text`。
+- `removeScriptTypeAttributes: true`表示移除`<script>`标签上的`type="text/javascript"`。
+- `removeStyleLinkTypeAttributes: true`表示移除`<style>`和`<link>`标签上的`type="text/css"`。
+- `useShortDoctype: true`表示使用较短的 html 格式声明。
+
+一般不会再需要手动配置，如果有这方面需求，可以翻看文档并做修改。注意：写入的自己的配置不会与默认配置组合使用，所以必须确保写入的自己的配置是完整的。
 
 ### 自动添加样式前缀
+
+## 压缩 css
 
 ### 静态资源内联
 
