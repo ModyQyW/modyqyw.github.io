@@ -21,7 +21,7 @@
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，windows 上类似的工具还有 [wox](https://github.com/Wox-launcher/Wox)
 - [WPS](https://www.wps.cn/) - 建议重度用户用 MS Office
-- [百度网盘](http://pan.baidu.com/download)
+- [百度网盘](http://pan.baidu.com/download) - 可能会用到[城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)，如果有特殊需求可以自己搭，参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图看看](http://kankan.meitu.com/) - 看图
@@ -32,7 +32,7 @@
 ## macOS - 偏向开发的配置
 
 - [爱思助手](https://www.i4.cn/) - ios 手机用
-- [百度网盘](http://pan.baidu.com/download) - 可能会用到 [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
+- [百度网盘](http://pan.baidu.com/download) - 可能会用到[城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)，如果有特殊需求可以自己搭，参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
 - [滴答清单](https://dida365.com/) - 清单类应用，附带番茄钟，可以考虑 [todoist](https://todoist.com/)

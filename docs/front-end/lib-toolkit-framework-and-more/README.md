@@ -224,7 +224,7 @@
   - [qiankun](https://github.com/F-loat/vue-cli-plugin-qiankun) - 微前端解决方案
 - ui
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
-  - [element](https://element.eleme.cn/#/zh-CN/component/installation)
+  - [element](https://element.eleme.cn/#/zh-CN/component/installation) - 已经没有维护人员，慎重考虑
     - [pl-table](https://github.com/livelyPeng/pl-table) - el-table 增强版
   - [antd-vue](https://www.antdv.com/)
   - [viewui](https://www.iviewui.com/docs/introduce)
