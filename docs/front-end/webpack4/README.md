@@ -600,7 +600,7 @@ module.exports = {
 
 下面将会关注一些常用的`loader`。
 
-### 新语法和新特性相关的 loader
+### js 新语法和新特性相关的 loader
 
 因为`webpack`本身并不支持解析 es6+ 语法，所以要使用 es6+ 语法，我们就需要使用`babel`和`babel-loader`。
 
@@ -841,13 +841,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 样式相关的 loader
 
-因为`webpack`本身并不支持解析`.css`，`.less`，`.sass`，`.scss`，所以我们需要使用一系列的 `loader`解析上面的四种文件（stylus 使用率较低，此处不作相关演示）。
+因为`webpack`本身并不支持解析`.css`，`.sass`和`.scss`文件，所以我们需要使用`loader`去解析。
+
+`.less`和`.styl`的配置也相差不大，自己参考对应`loader`的文档摸索即可。
 
 首先还是要安装相关的依赖。
 
 ```sh
 npm i zent@8 -E
-npm i style-loader@1 css-loader@3 less@3 less-loader@6 sass@1 sass-loader@9 babel-plugin-zent@2 -DE
+npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 babel-plugin-zent@2 -DE
 ```
 
 `css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中，如果`.js`文件引用了 css，那么转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中。
@@ -918,7 +920,9 @@ module.exports = {
 
 值得注意的是，如果要对某种文件使用多个`loader`处理，`loader`的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
 
-要处理`.less`，`.sass`和`.scss`文件，又有少许的不同。因为`less-loader`会把`.less`文件转换成`.css`文件，`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的`.loader`配置即可。
+要处理`.sass`和`.scss`文件，又有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的`.loader`配置即可。
+
+另外，由于`sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前有多少`loader`会处理`@import`语句。
 
 ```js
 module.exports = {
@@ -934,16 +938,19 @@ module.exports = {
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
-        // less 文件
-        test: /\.less$/,
-        // 依次使用 less-loader，css-loader 和 style-loader 处理
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
-      },
-      {
         // sass/scss 文件
         test: /\.s[ac]ss$/,
         // 依次使用 sass-loader，css-loader 和 style-loader 处理
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'sass-loader' },
+        ],
       },
       ...,
     ],
@@ -1237,7 +1244,7 @@ if (process.env.NODE_ENV === 'development') {
 
 ## demo03 - 优化以贴近实际工程
 
-### 使用文件指纹
+### 使用文件指纹做版本管理
 
 人的指纹是特殊的，不存在完全相同的人的指纹，依靠人的指纹可以确定唯一的人。文件指纹的用途和人的指纹相近，可以用于版本管理。
 
@@ -1387,12 +1394,17 @@ module.exports = merge(baseConfig, {
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
-        test: /\.less$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }],
-      },
-      {
         test: /\.s[ac]ss$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'sass-loader' },
+        ],
       },
     ],
   },
@@ -1436,19 +1448,6 @@ module.exports = merge(baseConfig, {
         ],
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: 'css',
-            },
-          },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' },
-        ],
-      },
-      {
         test: /\.s[ac]ss$/,
         use: [
           {
@@ -1457,7 +1456,12 @@ module.exports = merge(baseConfig, {
               publicPath: 'css',
             },
           },
-          { loader: 'css-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
           { loader: 'sass-loader' },
         ],
       },
@@ -1557,7 +1561,7 @@ module.exports = merge(baseConfig, {
 
 这仅仅是最简单的处理，之后，我们还会遇到更复杂的情况需要我们来处理。
 
-### 减少信息输出
+### 减少 webpack 信息输出
 
 你可能会注意到，运行`npm run build`输出的信息，要比`npm run dev`输出的信息多得多。这是因为我们控制了`webpack-dev-server`输出的信息，类似地我们也可以控制`webpack`输出的信息。
 
@@ -1658,9 +1662,17 @@ module.exports = {
 
 一般不会再需要手动配置，如果有这方面需求，可以翻看文档并做修改。注意：写入的自己的配置不会与默认配置组合使用，所以必须确保写入的自己的配置是完整的。
 
-### 自动添加样式前缀
+### 使用 postcss 处理 css
 
-### 压缩 css
+`postcss`是一个处理 css 的工具。因为`postcss`有处理某些 css 的新语法和新特性、补全不同浏览器的样式前缀、压缩 css 等功能，不少人称它为 css 界的`babel`。
+
+首先还是要安装相关的依赖。
+
+```sh
+npm i postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
+```
+
+### 全局样式重置
 
 ### 静态资源内联
 
@@ -1751,7 +1763,7 @@ module.exports = {
 - [cross-env](https://github.com/kentcdodds/cross-env)
 - [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
 - [react-hot-loader](https://github.com/gaearon/react-hot-loader#readme)
-- [webpack - 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
+- [webpack 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
 - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
 - [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin/#readme)
 
