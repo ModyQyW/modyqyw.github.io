@@ -273,6 +273,7 @@
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
 - 进阶
+  - [vue 3 组合式 API 征求意见稿](https://composition-api.vuejs.org/zh/)
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
   - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
   - [vue 2.5 源码分析](https://github.com/ustbhuangyi/vue-analysis)
@@ -391,7 +392,7 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
       - [rematch](https://rematch.github.io/rematch/)
     - ui
-      - 无扩展组件
+      - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
     - [中文文档](https://rax.js.org/)
     - 路由
@@ -401,7 +402,7 @@
     - 状态管理
       - 无说明
     - ui
-      - 无扩展组件
+      - [官方提供](https://rax.js.org/docs/components/introduce)
 - 衍生
   - [ant-design-pro](https://pro.ant.design/index-cn) - 后台管理系统
   - [react-admin](https://github.com/duxianwei520/react) - 后台管理系统
@@ -431,6 +432,8 @@
   - createElement，render，Component 三个重要的 api
   - virtual dom 和 diff 算法
   - fiber 架构，任务调度，渲染与更新
+    - [这可能是最通俗的 React Fiber(时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
+    - [React Fiber 架构](https://zhuanlan.zhihu.com/p/37095662)
   - React.lazy
   - 生命周期原理
   - react-router 原理及实现
