@@ -75,7 +75,7 @@
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，mac 类似的工具还有 [alfred](https://www.alfredapp.com/)
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置，也可以考虑使用 [WebStorm](https://www.jetbrains.com/webstorm/)（基本不需要特别配置），如果使用 uni-app 开发 app 必须使用的工具则必须用 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置，也可以考虑使用 [WebStorm](https://www.jetbrains.com/webstorm/)（基本不需要特别配置，生态不如 vscode），如果使用 uni-app 开发 app 必须使用的工具则必须用 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
 - [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office
 
 ## 浏览器插件
@@ -433,6 +433,7 @@ yarn
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
+- [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks) - 飞冰实用插件，支持 react 和 rax
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
@@ -446,7 +447,7 @@ yarn
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - material 图标主题
 - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) - Atom 主题
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
@@ -584,15 +585,6 @@ yarn
   // vscode 自带功能，指定工作台启动时的显示，这里设置为新的未命名文件
   "workbench.startupEditor": "newUntitledFile",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   }
