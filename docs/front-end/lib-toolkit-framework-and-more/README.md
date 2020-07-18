@@ -544,11 +544,16 @@
 
 ## 免费可商用字体
 
-- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/) - 感谢 Moniek 的来邮并附带的链接 :D
+- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/)
+- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
+- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
 - [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
 - [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
-- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 
 ## 参考
 
 - [sorrycc/awesome-f2e-libs](https://github.com/sorrycc/awesome-f2e-libs)
+
+## 致谢
+
+- Moniek - 来邮为我提供了建议，附带了免费可商用字体列表
