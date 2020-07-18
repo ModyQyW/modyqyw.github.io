@@ -143,6 +143,7 @@
     - [dll-plugin](https://webpack.js.org/plugins/dll-plugin/) - webpack 内置
     - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) - 构建开始前移除上一次的构建产物
     - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
+      - [inline-chunk-html-plugin](https://github.com/pikadun/InlineChunkHtmlPlugin#readme) - [html-inline-css-webpack-plugin](https://github.com/DustinJackson/html-webpack-inline-source-plugin#readme) 的替代品，html-webpack-plugin 的扩展插件，允许内联 js 代码
     - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
     - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
     - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 分离 css 文件，适用于生产模式
@@ -163,6 +164,7 @@
     - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
     - [sass-loader](https://webpack.js.org/loaders/sass-loader/) - 解析 sass/scss 文件成 css 文件
     - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
+    - [raw-loader](https://github.com/webpack-contrib/raw-loader#readme) - 允许以字符串形式导入文件
     - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
 - [snowpack](https://www.snowpack.dev/) - 使用原生 es module 的构建工具，可参考 [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack)
 - [vite](https://github.com/vitejs/vite#readme) - 使用原生 es module 的开发构建工具

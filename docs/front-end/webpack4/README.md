@@ -848,7 +848,7 @@ npm i zent@8 -E
 npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
-`css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中，如果`.js`文件引用了 css，那么转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中。
+`css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中，也就是我们常说的内联。
 
 我们先在`${PROJECT_DIR}/src/index.js`引入`.css`文件。
 
@@ -911,6 +911,8 @@ module.exports = {
 };
 
 ```
+
+默认地，`.js`文件引用了 css，转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中，你也可以通过修改`style-loader`地配置来自定义这一行为。
 
 重新构建并运行，我们可以在浏览器控制台中看到，样式被插入到`<head>`标签中，内容与我们书写的一致，并且已经起了作用。
 
@@ -1076,7 +1078,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 一般称项目使用到的图片、字体、音视频文件等为项目资产。
 
-最常用的处理资产的`loader`就是`file-loader`和`url-loader`。`url-loader`是`file-loader`的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用`file-loader`，没达到大小上限时，会把文件转换成 base64 数据。
+最常用的处理资产的`loader`就是`file-loader`和`url-loader`。`url-loader`是`file-loader`的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用`file-loader`，没达到大小上限时，会把文件转换成 base64 数据并硬编码进代码中。
 
 ```sh
 npm i file-loader@6 url-loader@4 -DE
@@ -1130,6 +1132,10 @@ module.exports = {
   ...,
 }
 ```
+
+为什么要转换成 base64 数据并硬编码进代码呢？一方面，直接硬编码进代码可以避免在读取该部分文件时的页面闪烁，提高用户体验，另一方面也可以减少网络请求，降低服务器压力。
+
+如果 base64 数据太多太大，加载网页的速度依旧会变慢，所以不是所有文件都适宜转换成 base64 数据。
 
 在`${PROJECT_DIR}/src/assets`中放入一个图片文件（我这里放入了`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`中引入并使用它。
 
@@ -1901,10 +1907,6 @@ module.exports = {
 
 到此为止，`postcss`已经能自动处理我们的 css 代码中用到的新语法和新特性，会自动添加属性前缀，能压缩并移除注释了。
 
-### 全局样式重置
-
-### 静态资源内联
-
 ### 提取公共资源
 
 ### 代码分割和动态引入
@@ -1997,6 +1999,7 @@ module.exports = {
 - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
 - [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin/#readme)
 - [postcss](https://postcss.org/)
+- [CSS 3 中 -webkit-, -moz-, -o-, -ms- 这些私有前缀什么时候可以移除？](https://www.zhihu.com/question/20597072)
 - [autoprefixer](https://github.com/postcss/autoprefixer#readme)
 - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
 - [cssnano](https://cssnano.co/)
