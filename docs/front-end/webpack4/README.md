@@ -802,8 +802,6 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```js
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'zent';
-import iconWebpack from './assets/webpack.png';
 import './index.scss';
 
 const App = () => {
@@ -819,8 +817,6 @@ const App = () => {
   return (
     <div className="container">
       <p>Hello Webpack!</p>
-      <img src={iconWebpack} />
-      <Button type="primary">Hello Zent!</Button>
     </div>
   );
 };
@@ -849,7 +845,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```sh
 npm i zent@8 -E
-npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 babel-plugin-zent@2 -DE
+npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
 `css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中，如果`.js`文件引用了 css，那么转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中。
@@ -920,9 +916,39 @@ module.exports = {
 
 值得注意的是，如果要对某种文件使用多个`loader`处理，`loader`的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
 
-要处理`.sass`和`.scss`文件，又有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，并在最后加上相应的`.loader`配置即可。
+要处理`.sass`和`.scss`文件，又有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们首先需要复制粘贴，并在最后加上相应的`.loader`配置。
 
-另外，由于`sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前有多少`loader`会处理`@import`语句。
+```js
+module.exports = {
+  ...,
+  // 指定 loader
+  module: {
+    rules: [
+      ...,
+      {
+        // css 文件
+        test: /\.css$/,
+        // 先使用 css-loader 再使用 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        // sass/scss 文件
+        test: /\.s[ac]ss$/,
+        // 依次使用 sass-loader，css-loader 和 style-loader 处理
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+      ...,
+    ],
+  },
+};
+
+```
+
+由于`sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前有多少`loader`会处理`@import`语句。
 
 ```js
 module.exports = {
@@ -959,20 +985,61 @@ module.exports = {
 
 ```
 
+由于 sass 并没有提供 url 重写的功能，我们还需要配置`resolve-url-loader`，否则可能会在实际使用出现 url 指向不正确的问题。注意：`resolve-url-loader`并不会处理`@import`语句，所以无需再修改`css-loader`的`importLoaders`配置。
+
+```js
+module.exports = {
+  ...,
+  // 指定 loader
+  module: {
+    rules: [
+      ...,
+      {
+        // css 文件
+        test: /\.css$/,
+        // 先使用 css-loader 再使用 style-loader 处理
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+      {
+        // sass/scss 文件
+        test: /\.s[ac]ss$/,
+        // 依次使用 sass-loader，resolve-url-loader，css-loader 和 style-loader 处理
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+      ...,
+    ],
+  },
+};
+
+```
+
 我们把`index.css`重命名为`index.scss`并修改`${PROJECT_DIR}/src/index.js`中的引入。重新构建并测试，一切正常。
 
-我们再来试着添加并使用`zent`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的按钮。
+我们再来试着添加并使用`zent`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的带图标的按钮。
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'zent';
+import { Button, Icon } from 'zent';
 import './index.scss';
 
 const App = () => (
   <div className="container">
     <p>Hello Webpack!</p>
-    <Button type="primary">Hello Zent!</Button>
+    <Button type="primary">
+      <Icon type="youzan" />
+      Hello Zent!
+    </Button>
   </div>
 );
 
@@ -1001,7 +1068,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-重新构建并测试，我们能看到一个蓝色的按钮，按钮文字是`Hello Zent`。
+重新构建并测试，我们能看到一个蓝色的按钮，按钮内左边是有赞的图标，文字是`Hello Zent`。
 
 可能有人会问，为什么不用`antd`作示例。第一是因为我认为`zent`使用的 scss 的语法比`antd`使用的 less 的更接近 css，第二是因为`antd`曾经出过圣诞彩蛋事件，目前对我来说没有可信度。
 
@@ -1069,7 +1136,7 @@ module.exports = {
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'zent';
+import { Button, Icon } from 'zent';
 import iconWebpack from './assets/webpack.png';
 import './index.scss';
 
@@ -1077,7 +1144,10 @@ const App = () => (
   <div className="container">
     <p>Hello Webpack!</p>
     <img src={iconWebpack} />
-    <Button type="primary">Hello Zent!</Button>
+    <Button type="primary">
+      <Icon type="youzan" />
+      Hello Zent!
+    </Button>
   </div>
 );
 
@@ -1127,7 +1197,7 @@ body {
 `webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
 
 ```sh
-npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4 -DE
+npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@5 -DE
 ```
 
 我们还需要根据环境来调用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
@@ -1153,7 +1223,7 @@ npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@4
 `${PROJECT_DIR}/config/webpack.dev.js`：
 
 ```js
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 
 module.exports = merge(baseConfig, {
@@ -1177,7 +1247,7 @@ module.exports = merge(baseConfig, {
 `${PROJECT_DIR}/config/webpack.prod.js`也十分类似，指定了`mode`，`devtool`还有额外的 `plugin`。额外的`plugin`会被`webpack-merge`使用，与基础配置组合。
 
 ```js
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -1377,7 +1447,7 @@ module.exports = {
 完整的`${PROJECT_DIR}/config/webpack.dev.js`如下所示，除去基本的配置外，还声明了`mode`，`webpack-dev-server`，`devtool`和`loader`。在这里，我们使用了`style-loader`。
 
 ```js
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 
 module.exports = merge(baseConfig, {
@@ -1403,6 +1473,7 @@ module.exports = merge(baseConfig, {
               importLoaders: 1,
             },
           },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader' },
         ],
       },
@@ -1492,7 +1563,7 @@ module.exports = merge(baseConfig, {
 
 ```js
 const path = require('path');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -1528,19 +1599,6 @@ module.exports = merge(baseConfig, {
         ],
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: 'css',
-            },
-          },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' },
-        ],
-      },
-      {
         test: /\.s[ac]ss$/,
         use: [
           {
@@ -1550,6 +1608,7 @@ module.exports = merge(baseConfig, {
             },
           },
           { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader' },
         ],
       },
@@ -1664,13 +1723,181 @@ module.exports = {
 
 ### 使用 postcss 处理 css
 
-`postcss`是一个处理 css 的工具。因为`postcss`有处理某些 css 的新语法和新特性、补全不同浏览器的样式前缀、压缩 css 等功能，不少人称它为 css 界的`babel`。
+`postcss`是一个处理 css 的工具。因为`postcss`能通过不同的插件实现各类对 css 的操作（包括补齐特性、压缩等），不少人称它为 css 界的`babel`。
 
-首先还是要安装相关的依赖。
+还是要先安装相关的依赖。
 
 ```sh
-npm i postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
+npm i postcss@7 postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
 ```
+
+要怎么使用`postcss`呢？很简单，在`webpack`配置文件中加入`postcss-loader`，之后创建一个`${PROJECT_DIR}/postcss.config.js`文件供`postcss`读取使用即可。
+
+注意：由于`postcss-loader`会处理`@import`语句，所以还需要修改`css-loader`的`importLoaders`配置。
+
+`${PROJECT_DIR}/config/webpack.dev.js`：
+
+```js
+const { merge } = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+    ],
+  },
+  ...,
+});
+
+```
+
+`${PROJECT_DIR}/config/webpack.prod.js`：
+
+```js
+const { merge } = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+    ],
+  },
+  ...,
+});
+
+```
+
+`${PROJECT_DIR}/postcss.config.js`：
+
+```js
+module.exports = {};
+
+```
+
+空文件不会让`postcss`起任何作用。要让`postcss`对 css 作特定的处理，就需要使用插件。
+
+浏览器厂商们有时会给实验性的或者非标准的 css 属性添加前缀，这样就可以让开发者进行试验，同时也不会使得标准化之后现有代码被破坏。
+
+由于存在浏览器厂商自实现某些实验性的属性、停止更新浏览器导致没有浏览器跟随标准等情况，所以为 css 属性添加特定浏览器的前缀也带有了 polyfill 的意味。
+
+手动添加前缀是相当麻烦的一件事情，使用`autoprefixer`插件可以让`postcss`自动为我们补全浏览器的样式前缀。
+
+`${PROJECT_DIR}/postcss.config.js`：
+
+```js
+module.exports = {
+  plugins: [
+    require('autoprefixer'),
+  ],
+};
+
+```
+
+无需额外的配置，就是这么简单。`autoprefixer`会自动寻找目标浏览器的说明（就是`${PROJECT_DIR}/.browserslistrc`，希望你还没有忘记），并且根据目标浏览器自动地添加前缀。
+
+而要处理某些 css 的新语法和新特性，我们就需要用到另外一个插件`postcss-preset-env`。和`@babel/preset-env`类似，它可以为我们处理 css 的某些新语法和新特性，而且，它还内置了`autoprefixer`！
+
+我们可以把`autoprefixer`换成`postcss-preset-env`，同样的，无需额外的配置。`${PROJECT_DIR}/.browserslistrc`也会被自动地读取并使用，此时，`postcss`会根据目标浏览器自动添加属性前缀、处理相对稳定的新语法和新特性。
+
+```js
+module.exports = {
+  plugins: [
+    require('postcss-preset-env'),
+  ],
+};
+
+```
+
+默认地，`postcss-preset-env`会自动处理 stage 2+ 的新语法和新特性，你可以在它的[官方网站](https://preset-env.cssdb.org/features)中查阅。
+
+最后，`cssnano`插件可以帮助我们压缩`.css`文件并且去除掉多余的注释，用法也同样很简单。但要注意：只有在生产环境下才需要压缩并去除注释，所以我们在生产环境时再引入`cssnano`。
+
+这里我们参考官方文档的配置，使用`cssnano-preset-default`并配置移除所有注释。
+
+```js
+module.exports = {
+  plugins: [
+    require('postcss-preset-env'),
+    process.env.NODE_ENV === 'production' &&
+      require('cssnano')({
+        preset: ['default', { discardComments: { removeAll: true } }],
+      }),
+  ],
+};
+
+```
+
+TODO: 解释为什么没有加入`cssnano`时，生成的`.css`已经被压缩但没有被移除注释。
+
+到此为止，`postcss`已经能自动处理我们的 css 代码中用到的新语法和新特性，会自动添加属性前缀，能压缩并移除注释了。
 
 ### 全局样式重置
 
@@ -1682,7 +1909,7 @@ npm i postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
 
 ### 使用 eslint 检验 js 代码
 
-### 使用 stylelint 检验 css/less/scss 代码
+### 使用 stylelint 检验 scss 代码
 
 ### 优化日志
 
@@ -1754,6 +1981,7 @@ npm i postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
 - [less-loader](https://github.com/webpack-contrib/less-loader#readme)
 - [sass](https://sass-lang.com/)
 - [sass-loader](https://github.com/webpack-contrib/sass-loader#readme)
+- [resolve-url-loader](https://github.com/bholloway/resolve-url-loader#readme)
 - [stylus](https://stylus-lang.com/)
 - [stylus-loader](https://github.com/shama/stylus-loader#readme)
 - [zent](https://youzan.github.io/zent/zh/)
@@ -1766,6 +1994,11 @@ npm i postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
 - [webpack 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
 - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
 - [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin/#readme)
+- [postcss](https://postcss.org/)
+- [autoprefixer](https://github.com/postcss/autoprefixer#readme)
+- [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
+- [cssnano](https://cssnano.co/)
+- [stylelint](https://stylelint.io/)
 
 ## 致谢
 

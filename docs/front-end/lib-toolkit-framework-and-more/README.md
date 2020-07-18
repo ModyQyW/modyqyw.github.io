@@ -277,6 +277,7 @@
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
   - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
   - [vue 2.5 源码分析](https://github.com/ustbhuangyi/vue-analysis)
+  - [vue 3 生态技术内幕](https://www.yuque.com/woniuppp/vue3)
   - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config)
   - 模板编译器 vue-template-compiler 原理
   - 响应式 reactive 系统原理，尤其是双向绑定
@@ -540,6 +541,13 @@
 - [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
+
+## 免费可商用字体
+
+- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/) - 感谢 Moniek 的来邮并附带的链接 :D
+- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
+- [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
+- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 
 ## 参考
 
