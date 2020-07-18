@@ -125,7 +125,8 @@
   - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) - 用于 async 函数的独立运行时，常与 @babel/preset-env 搭配使用
 - [bluebird](https://github.com/petkaantonov/bluebird) - 支持 ie8 的 promise polyfill
 - [postcss](https://postcss.org/) - css 的 babel
-  - [autoprefixer](https://github.com/postcss/autoprefixer) - 自动补全 css 前缀
+  - [autoprefixer](https://github.com/postcss/autoprefixer#readme) - 自动补全 css 前缀
+  - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme) - 转换 css，添加 polyfill
   - [cssnano](https://cssnano.co/) - 压缩 css
   - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss 使用
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
@@ -144,7 +145,8 @@
     - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
     - [copy-webpack-plugin](https://webpack.js.org/plugins/copy-webpack-plugin/) - 将本身存在的单个文件或整个目录复制到构建目录
     - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/) - 压缩 asset
-    - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 提取 css 为单独文件
+    - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 分离 css 文件，适用于生产模式
+    - [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin#readme) - 压缩 css
     - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin) - 打包时检查样式
     - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) - 第一次打包正常速度，之后加速 90%，没有维护，建议不要再用了
     - [commons-chunk-plugin](https://webpack.js.org/plugins/commons-chunk-plugin/) - 打包 MPA 时抽离公共 js 文件，webpack 4 建议使用`optimization.splitChunks`作为代替，建议不要再用了
@@ -156,7 +158,6 @@
     - [file-loader](https://webpack.js.org/loaders/file-loader/) - 进行图片字体等文件的打包
     - [babel-loader](https://webpack.js.org/loaders/babel-loader/) - 使用 babel 和 webpack 编译 js 文件
     - [ts-loader](https://github.com/TypeStrong/ts-loader) - 解析 ts
-    - [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) - 分离 css 文件，适用于生产模式
     - [style-loader](https://webpack.js.org/loaders/style-loader/) - 把 css 插入到 dom 中，适用于开发模式
     - [css-loader](https://webpack.js.org/loaders/css-loader/) - 解析 css `@import`和`url()`，可以启用 css module
     - [less-loader](https://webpack.js.org/loaders/less-loader/) - 解析 less 文件成 css 文件
