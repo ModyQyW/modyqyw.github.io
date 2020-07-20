@@ -86,7 +86,6 @@
 - Lighthouse - 网页性能测试
 - React Developer Tools - react 浏览器调试工具
 - uBlock Origin - 广告屏蔽，配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
-- Video DownloadHelper - 视频下载器
 - Vue.js devtools - vue 浏览器调试工具
 - [哔哩哔哩助手](https://bilibili-helper.github.io/)
 

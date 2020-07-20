@@ -1246,7 +1246,7 @@ module.exports = merge(baseConfig, {
 - `hot: true`表示开启`webpack-dev-server`的热更新。
 - `noInfo: true`表示减少构建输出的信息显示，但是错误和警告仍会正常显示。
 
-`devtool`可以帮助调试，这里指定为`eval-cheap-source-map`，有兴趣可以自行查阅相关资料作进一步学习。
+`devtool`可以帮助调试，这里指定为`eval-cheap-source-map`，有兴趣可以自行查阅相关资料作进一步学习，结尾处也有给出参考文章。
 
 `webpack-merge`会帮助我们自动合并相关字段的配置，这样就使得`webpack-dev-server`也会使用基础配置中的`plugin`和`loader`。
 
@@ -1259,7 +1259,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  devtool: 'none',
+  devtool: 'cheap-source-map',
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
@@ -2003,6 +2003,7 @@ module.exports = {
 - [autoprefixer](https://github.com/postcss/autoprefixer#readme)
 - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
 - [cssnano](https://cssnano.co/)
+- [阮一峰 - JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 - [stylelint](https://stylelint.io/)
 
 ## 致谢

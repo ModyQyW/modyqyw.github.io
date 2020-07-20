@@ -5,6 +5,7 @@
   - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
   - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
   - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
+  - [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
 - [学习路径英文版](https://roadmap.sh/)
 - [学习路径繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)
 - 个人学习路径，工具/库/框架等相关参考[另一部分](../lib-toolkit-framework-and-more/README.md)
