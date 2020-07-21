@@ -3,10 +3,10 @@
 ## 说明
 
 - 形式：本部分以教程形式书写。
-- 适用：本教程适合想要深入 js 工具链的读者学习以入门`webpack4`。默认读者已经了解 npm，有原生 js 和 react/vue 开发经验。
-- 思路：本教程书写思路是`为什么 -> 怎么做`，力求解决实际配置中的各类问题。
+- 适用：本教程适合想要深入 js 工具链的读者学习以入门`webpack4`。默认读者已经了解 npm，有原生 js 和`react`/`vue`开发经验。
+- 思路：本教程书写思路是`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`，力求解决实际配置中的各类问题。
 - 结构：本教程会以单页应用作示例，前面部分着重关注于基本使用，后面部分涉及原理，更多相关信息在章节末尾列写，可以自行查阅资料作进一步的学习。
-- 环境：本篇教程默认使用 macOS，zsh，oh-my-zsh，node v12，vscode 和 chrome。另外使用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)来测试构建后的文件，做法可参考其文档。
+- 环境：本篇教程默认使用 macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外使用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)来测试构建后的文件，做法可参考其文档。
 - 约定：本教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
 - 范围：本教程不考虑 IE 11- 的浏览器。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。此外，要支持 IE 11-，还要考虑怎么支持 es5+ 乃至 es3+ 的语法和特性，相当耗费时间。
 
@@ -20,6 +20,7 @@
 - 能自动处理图片、文件等资产文件
 - 能使用 css 预处理器，自动添加 css 前缀
 - 能压缩混淆
+- 能帮助做构建文件的版本管理
 
 总而言之，构建工具减少了重复的工作，使我们能投入更多的时间到开发工作中。
 
@@ -66,9 +67,9 @@ path.resolve("a", "b1", "..", "b2") // string ${PROJECT_DIR}/a/b2
 
 ### 输出 output
 
-`output`指定`webpack`在哪里存放输出文件和主要输出文件的文件名。
+`output`可以指定`webpack`存放所有输出文件的路径`output.path`和主要输出文件（往往是一个`.js`文件）的路径`output.filename`。
 
-主要输出文件默认为`${PROJECT_DIR}/dist/main.js`，被主要输出文件依赖的其他文件默认输出到`${PROJECT_DIR}/dist`。
+主要输出文件默认为`${PROJECT_DIR}/dist/main.js`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -212,7 +213,7 @@ module.exports = {
 
 `chunk`则是打包过程中的代码块，它是某些`module`的封装，也可以称为某些`module`的集合。构建结束后，`chunk`就呈现为`bundle`。
 
-一个`entry`只会有一个`chunk`，最终也只会生成一个`bundle`，但是这个`bundle`可能会包含多个文件。这是因为我们可能会把引用到的`.css`、`.js`文件分拆出来，也可能会添加`.map`文件。
+一个`entry`会有一个或多个`chunk`，但最终只会生成一个`bundle`，但是这个`bundle`可能会包含多个文件。这是因为我们可能会把引用到的`.css`、`.js`文件分拆出来，也可能会添加`.map`文件。
 
 ## demo01 - 一个简单的 demo
 
@@ -240,7 +241,7 @@ cd demo # 进入该文件夹中
 npm init -y # npm 初始化
 ```
 
-根目录下新建一个`.npmrc`文件。该文件用于配置`npm`，比如指定依赖源等，这里我们指定依赖源为国内的淘宝源，使得安装依赖会变快。
+根目录下新建一个`.npmrc`文件。该文件用于配置`npm`，比如指定依赖源等，这里我们指定依赖源为国内的淘宝源，这样安装依赖的速度会更快一点。
 
 ```sh
 registry=https://registry.npm.taobao.org
@@ -270,7 +271,7 @@ document.write('Hello webpack!');
 
 ```
 
-创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。即使不指定配置文件，`webpack`也会默认使用`${PROJECT_DIR}/webpack.config.js`。
+创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件时，`webpack`会默认使用`${PROJECT_DIR}/webpack.config.js`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -333,7 +334,7 @@ npm run build
 
 ```
 
-接着，我们在`${PROJECT_DIR}/webpack.config.js`中做相关的配置，之后就无需操心在`.html`文件中引入`.js`文件以及网站图标的问题了。
+接着，我们在`${PROJECT_DIR}/webpack.config.js`中配置`copy-webpack-plugin`和`html-webpack-plugin`，让它们来帮忙处理在`.html`文件中引入`.js`文件以及网站图标的问题。
 
 ```js
 const CopyPlugin = require('copy-webpack-plugin');
@@ -743,7 +744,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 ```
 
-除了 es6+ 的语法，我们还想支持 react 语法。类似地，我们也可以使用`babel`来解析 react 代码，只需要根据文档配置`@babel/preset-react`即可。
+除了 es6+ 的语法，我们还想支持`react`语法。类似地，我们也可以使用`babel`来解析`react`代码，只需要根据文档配置`@babel/preset-react`即可。
 
 ```json
 {
@@ -767,7 +768,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 ```
 
-之后可以修改`${PROJECT_DIR}/src/index.js`，使用 react，react-dom，`Promise`以测试我们的 babel 配置。
+之后可以修改`${PROJECT_DIR}/src/index.js`，使用`react`，`react-dom`，`Promise`以测试我们的配置。
 
 ```js
 import React from 'react';
@@ -1103,9 +1104,9 @@ module.exports = {
             options: {
               // 8 MB 上限
               limit: 8192,
-              // 放入 img 文件夹中
+              // 放入 ${output.path}/img 文件夹中
               outputPath: 'img',
-              // 使用 img 文件夹中的图片
+              // 使用 ${output.path}/img 文件夹中的图片
               publicPath: 'img',
             },
           },
@@ -1132,6 +1133,8 @@ module.exports = {
   ...,
 }
 ```
+
+注意：`outputPath`和`publicPath`是和项目中配置的输出路径`output.path`相关的，在这个项目里，就是和`${PROJECT_DIR}/dist`相关的。我们把图片和字体放入各自的文件夹中，就是为了区分开不同类型的文件。
 
 为什么要转换成 base64 数据并硬编码进代码呢？一方面，直接硬编码进代码可以避免在读取该部分文件时的页面闪烁，提高用户体验，另一方面也可以减少网络请求，降低服务器压力。
 
@@ -1161,9 +1164,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-在`${PROJECT_DIR}/src/assets`中放入一个字体文件（我这里放入了阿里普惠体的字体文件`Alibaba-PuHuiTi-Regular.ttf`），然后在`${PROJECT_DIR}/src/index.less`中引入并使用它。
+在`${PROJECT_DIR}/src/assets`中放入一个字体文件（我这里放入了阿里普惠体的字体文件`Alibaba-PuHuiTi-Regular.ttf`），然后在`${PROJECT_DIR}/src/index.scss`中引入并使用它。
 
-```less
+```scss
 @font-face {
   font-family: "Alibaba PuHuiTi";
   src: url("./assets/Alibaba-PuHuiTi-Regular.ttf") format("ttf");
@@ -1190,7 +1193,7 @@ body {
 
 ```
 
-重新构建，可以看到 dist 目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字被修改成一串字符串，这个我们称为文件指纹，会在之后做进一步的解释。测试时一切正常。
+重新构建，可以看到`${PROJECT_DIR}/dist`目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字被修改成一串字符串，这个我们称为文件指纹，会在之后做进一步的解释。测试时一切正常。
 
 `url-loader`和`file-loader`只会处理`.js`中引用的图片，如果我们在`.html`里直接引用呢？那就只能使用`html-loader`来处理了。这种情况较为少见，可以自行查阅相关资料学习。
 
@@ -1312,7 +1315,7 @@ if (process.env.NODE_ENV === 'development') {
     └── index.scss
 ```
 
-对于 react，还可以加入`react-hot-loader`进一步提升使用体验。有兴趣可自行查阅相关资料学习。
+对于`react`，还可以加入`react-hot-loader`进一步提升使用体验。有兴趣可自行查阅相关资料学习。
 
 🎉恭喜，你的第二个 webpack demo 已经完成啦～
 
@@ -1384,6 +1387,8 @@ npm i mini-css-extract-plugin@0 -DE
 我们再把`${PROJECT_DIR}/config/webpack.base.js`中关于 css 的部分都放入`${PROJECT_DIR}/config/webpack.dev.js`中。
 
 现在，完整的`${PROJECT_DIR}/config/webpack.base.js`如下所示，包含了`entry`，`plugin`和`loader`。其中，图片文件和字体文件的处理都使用了`contenthash`的前 8 位。
+
+注意：我们只是移除了其中关于 css 的部分，给出完整的文件只是谨慎起见，避免移除错误。
 
 ```js
 const path = require('path');
@@ -1491,21 +1496,7 @@ module.exports = merge(baseConfig, {
 
 我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用`style-loader`而是使用`mini-css-extract-plugin`，并为主要输出文件还有`.css`文件添加文件指纹。
 
-要为主要输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。
-
-```js
-module.exports = merge(baseConfig, {
-  ...,
-  output: {
-    path: path.resolve('dist'),
-    filename: '[name].[chunkhash:8].js',
-  },
-  ...,
-});
-
-```
-
-接着用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，用于指定要读取的`.css`文件所处的文件夹。
+首先用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，用于指定要读取的`.css`文件所处的文件夹。把`.css`文件放入到特定的文件夹中，有利于区分开不同类型的文件。
 
 ```js
 module.exports = merge(baseConfig, {
@@ -1548,7 +1539,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-最后，把`mini-css-extract-plugin`加入到`plugins`中，并指定输出文件名。注意：在前面我们已经指定要使用`${PROJECT_DIR}/dist/css`文件夹内的`.css`文件，在这里我们需要把文件夹名也添加上去，让`.css`文件输出到`${PROJECT_DIR}/dist/css`目录下，否则仍然会直接输出到`${PROJECT_DIR}/dist`目录下，进而导致引用错误。
+接着，把`mini-css-extract-plugin`加入到`plugins`中，并指定输出文件名。注意：在前面我们已经指定要使用`${PROJECT_DIR}/dist/css`文件夹内的`.css`文件，在这里我们需要把文件夹名也添加上去，让`.css`文件输出到`${PROJECT_DIR}/dist/css`目录下，否则仍然会直接输出到`${PROJECT_DIR}/dist`目录下，进而导致引用错误。
 
 ```js
 module.exports = merge(baseConfig, {
@@ -1565,6 +1556,20 @@ module.exports = merge(baseConfig, {
 
 ```
 
+要为主要输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。`.js`文件往往依赖于其它`.js`文件，参考上面的做法，我们可以让`.js`文件都放入到特定的文件夹中。你可以再进一步思考、实践一下，修改`output.path`能否达成这个目的。
+
+```js
+module.exports = merge(baseConfig, {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: 'js/[name].[chunkhash:8].js',
+  },
+  ...,
+});
+
+```
+
 完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。其中，`.css`文件的处理都使用了`contenthash`的前 8 位。
 
 ```js
@@ -1576,10 +1581,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  devtool: 'none',
+  devtool: 'cheap-source-map',
   output: {
     path: path.resolve('dist'),
-    filename: '[name].[chunkhash:8].js',
+    filename: 'js/[name].[chunkhash:8].js',
   },
   plugins: [
     new BundleAnalyzerPlugin({
@@ -1624,30 +1629,13 @@ module.exports = merge(baseConfig, {
 
 ```
 
-这仅仅是最简单的处理，之后，我们还会遇到更复杂的情况需要我们来处理。
-
-### 减少 webpack 信息输出
-
-你可能会注意到，运行`npm run build`输出的信息，要比`npm run dev`输出的信息多得多。这是因为我们控制了`webpack-dev-server`输出的信息，类似地我们也可以控制`webpack`输出的信息。
-
-要控制`webpack`输出的信息很简单，只需要在`${PROJECT_DIR}/config/webpack.prod.js`中设置`stats`字段。
-
-```js
-module.exports = {
-  ...,
-  stats: 'minimal',
-  ...,
-};
-
-```
-
-`stats`用于控制显示哪些信息，默认为`normal`。我们修改成`minimal`，就可以达到和`webpack-dev-server`的配置一样的效果。
+这仅仅是最简单的处理，在实际应用中，我们还可能会遇到更复杂的情况需要我们来处理。
 
 ### 移除 js 中的注释以压缩 js
 
-如果我们构建之后打开`${PROJECT_DIR}/dist/app.[chunkhash:8].js`，就会发现大量 js 代码堆叠到一起，这是正常的压缩现象。但是，文件中还存在有一些注释，这是生产环境中不需要的，我们还需要手动配置来去除掉这些注释。
+如果我们构建之后打开`${PROJECT_DIR}/dist/js/app.[chunkhash:8].js`，就会发现大量 js 代码堆叠到一起，这是正常的压缩现象。但是，文件中还存在有一些注释，这是生产环境中不需要的，我们还需要手动配置来去除掉这些注释。
 
-`webpack`默认在生产环境下使用`terser-webpack-plugin`来压缩 js，我们只需要做进一步的配置即可。
+`webpack`默认在生产环境下使用`terser-webpack-plugin`来压缩`.js`文件，我们只需要做进一步的配置即可。
 
 虽然安装`webpack`依赖会一并安装该依赖，但是我们通常会显式安装我们所需要的依赖，避免可能的版本问题。
 
@@ -1909,6 +1897,158 @@ module.exports = {
 
 ### 提取公共资源
 
+项目内往往有一些比较基础的依赖，比如`vue`，`react`，`react-dom`等。把这些基础依赖都抽离出来统一放置，这就是提取公共资源，它能有效地压缩项目业务代码的构建大小。
+
+此外，我们可以给公共资源文件添加文件指纹，在不更新公共资源且公共资源已经被浏览器缓存的情况下，用户会更快地加载出页面。
+
+这部分优化属于生产环境下的构建优化，已经被`webpack`内置了。我们要做的，就是做相应的配置，下面一步步地增加配置。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+    },
+    ...,
+  },
+  ...,
+});
+
+```
+
+我们添加了一个字段`optimization.splitChunks`，表明我们的意图：我们需要手动地分离`chunk`。
+
+我们指定了`chunks: 'all'`，这表示这表示我们想要分离所有引入的库（不管是异步引入还是同步引入）。
+
+具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。
+
+我们通过`optimization.cacheGroups`来配置。首先是项目内的组件库`zent`单独成一个`chunk`。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+});
+
+```
+
+接着是`node_modules`文件夹内同步引入的其他依赖。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 20,
+          chunks: 'initial',
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+});
+
+```
+
+- `vendors`的`priority`设置得比`zent`的`priority`低，因此，`zent`会优先生成一个`chunk`，而`vendors`对应的`chunk`不会再包含`zent`。
+- 设置`vendors.chunks`为`initial`，意味着`chunk-vendors`只会包含代码中同步引入的部分，异步引入的部分会加入到`${PROJECT_DIR}/dist/js/[name].[chunkhash:8].js`中。
+
+最后则是页面公共组件。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 20,
+          chunks: 'initial',
+        },
+        components: {
+          name: 'chunk-components',
+          test: path.resolve('src', 'components'),
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+});
+
+```
+
+- `minChunks`表示最小引用次数，这里设置为 2，即`chunk-components`内的代码都被`${PROJECT_DIR}/dist/js/[name].[chunkhash:8].js`中的代码引用过 2 次或以上。
+- `reuseExistingChunk: true`表示如果`chunk-components`包含了已经被分离出来的部分（某些代码已经被分进了自定义`chunk`中），这些部分会被复用而不再打包进`chunk-components`中。
+
+我们可以构建一下，看看效果。下面是我在构建后的截图。
+
+![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/H87f5de8ee8364b738eb862ceb5397eabi.jpg)
+
+- 列`Asset`给出了打包出来的各个文件的位置和名称。
+- 列`Size`给出了打包出来的各个文件的大小。
+- 列`Chunks`和`Chunk Names`是我们所要关注的重点。
+  - `Chunk Names`一共三个：`app`，`chunk-zent`和`chunk-vendors`。
+  - `app`就是我们设置的`entry`键值，也就是说，`entry`本身就会生成一个`chunk`。
+  - `chunk-zent`和`chunk-vendors`是我们配置后分离出来的`chunk`，位置和命名会跟随`output.filename`（也就是`[name]:[chunkhash:8].js`）。我们如果修改`${PROJECT_DIR}/src/index.js`，就会发现只有`app`对应的文件指纹发生了变化，而`chunk-zent`和`chunk-vendors`的文件指纹没有发生变化。
+  - 没有`chunk-components`，这是因为我们目前没有使用任何的页面公共组件。
+
+没有`splitChunks`的构建后的截图如下所示。
+
+![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Ha1f3bbf35b324517a408e07434d67502p.jpg)
+
+可以看到，如果不使用`splitChunks`，几乎所有的代码都会挤到一个文件中，在比较大的项目中，文件大小就会难以控制。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了`splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是`app`相关的文件），缩短了获取的时间。
+
+### 使用 gzip 压缩资产文件
+
 ### 代码分割和动态引入
 
 ### 使用 eslint 检验 js 代码
@@ -1918,6 +2058,23 @@ module.exports = {
 ### 优化日志
 
 ### 构建分析
+
+### 减少 webpack 信息输出
+
+你可能会注意到，运行`npm run build`输出的信息，要比`npm run dev`输出的信息多得多。这是因为我们控制了`webpack-dev-server`输出的信息，类似地我们也可以控制`webpack`输出的信息。
+
+要控制`webpack`输出的信息很简单，只需要在`${PROJECT_DIR}/config/webpack.prod.js`中设置`stats`字段。
+
+```js
+module.exports = {
+  ...,
+  stats: 'minimal',
+  ...,
+};
+
+```
+
+`stats`用于控制显示哪些信息，默认为`normal`。我们修改成`minimal`，就可以达到和`webpack-dev-server`的配置一样的效果。
 
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
