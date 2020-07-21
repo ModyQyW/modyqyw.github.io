@@ -2029,6 +2029,52 @@ module.exports = merge(baseConfig, {
 - `minChunks`表示最小引用次数，这里设置为 2，即`chunk-components`内的代码都被`${PROJECT_DIR}/dist/js/[name].[chunkhash:8].js`中的代码引用过 2 次或以上。
 - `reuseExistingChunk: true`表示如果`chunk-components`包含了已经被分离出来的部分（某些代码已经被分进了自定义`chunk`中），这些部分会被复用而不再打包进`chunk-components`中。
 
+你也可以配置分离出公共方法的`chunk`。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = merge(baseConfig, {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 20,
+          chunks: 'initial',
+        },
+        components: {
+          name: 'chunk-components',
+          test: path.resolve('src', 'components'),
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+        utils: {
+          name: 'chunk-utils',
+          test: path.resolve('src', 'utils'),
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+});
+
+```
+
 我们可以构建一下，看看效果。下面是我在构建后的截图。
 
 ![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/H87f5de8ee8364b738eb862ceb5397eabi.jpg)
@@ -2039,13 +2085,15 @@ module.exports = merge(baseConfig, {
   - `Chunk Names`一共三个：`app`，`chunk-zent`和`chunk-vendors`。
   - `app`就是我们设置的`entry`键值，也就是说，`entry`本身就会生成一个`chunk`。
   - `chunk-zent`和`chunk-vendors`是我们配置后分离出来的`chunk`，位置和命名会跟随`output.filename`（也就是`[name]:[chunkhash:8].js`）。我们如果修改`${PROJECT_DIR}/src/index.js`，就会发现只有`app`对应的文件指纹发生了变化，而`chunk-zent`和`chunk-vendors`的文件指纹没有发生变化。
-  - 没有`chunk-components`，这是因为我们目前没有使用任何的页面公共组件。
+  - 没有`chunk-components`和`chunk-utils`，这是因为我们目前没有使用任何的页面公共组件和公共方法。
 
 没有`splitChunks`的构建后的截图如下所示。
 
 ![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Ha1f3bbf35b324517a408e07434d67502p.jpg)
 
 可以看到，如果不使用`splitChunks`，几乎所有的代码都会挤到一个文件中，在比较大的项目中，文件大小就会难以控制。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了`splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是`app`相关的文件），缩短了获取的时间。
+
+### 使用 cdn 加载基础库
 
 ### 使用 gzip 压缩资产文件
 
