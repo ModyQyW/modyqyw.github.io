@@ -65,6 +65,7 @@
   - 数据结构与算法，算法设计
     - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
     - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
+    - [小浩算法](https://www.geekxh.com/)
   - 正则表达式
     - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
   - 数据库入门

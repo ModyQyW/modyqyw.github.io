@@ -89,6 +89,10 @@
 - Vue.js devtools - vue 浏览器调试工具
 - [哔哩哔哩助手](https://bilibili-helper.github.io/)
 
+## 安卓
+
+- [blokada](https://blokada.org/) - 免费广告屏蔽器
+
 ## Homebrew
 
 ### 安装

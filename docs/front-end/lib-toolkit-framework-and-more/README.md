@@ -2,6 +2,12 @@
 
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
+## 浏览器开发者工具
+
+- [chrome](https://developers.google.cn/web/tools/chrome-devtools)
+- [firefox](https://developer.mozilla.org/en-US/docs/Tools)
+- [edge(chromium)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
+
 ## 文档搭建
 
 - [vuepress](https://vuepress.vuejs.org/zh/)
@@ -228,7 +234,7 @@
 - ui
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
   - [element](https://element.eleme.cn/#/zh-CN/component/installation) - 已经没有维护人员，慎重考虑
-    - [pl-table](https://github.com/livelyPeng/pl-table) - el-table 增强版
+    - [umy-ui](https://github.com/u-leo/umy-ui) - el-table 增强版
   - [antd-vue](https://www.antdv.com/)
   - [viewui](https://www.iviewui.com/docs/introduce)
   - [hey-ui](https://www.heyui.top/)
@@ -348,7 +354,8 @@
   - [onsen-ui](https://onsen.io/v2/guide/react/)
   - [shards](https://designrevision.com/docs/shards-react/getting-started)
   - [prime](https://primefaces.org/primereact/showcase/#/setup)
-  - [chakra](https://chakra-ui.com/)
+  - [chakra-ui](https://chakra-ui.com/)
+  - [react-spectrum](https://react-spectrum.adobe.com/)
   - [primer](https://primer.style/components)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
