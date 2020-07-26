@@ -102,7 +102,7 @@ module.exports = {
   // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
   // 指定 output 目录为 ${PROJECT_DIR}/dist
-  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 entry 对应的输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -136,7 +136,7 @@ module.exports = {
   // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
   // 指定 output 目录为 ${PROJECT_DIR}/dist
-  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 entry 对应的输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -181,7 +181,7 @@ module.exports = {
   // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
   // 指定 output 目录为 ${PROJECT_DIR}/dist
-  // 指定主要输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 entry 对应的输出文件为 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -847,7 +847,7 @@ npm i zent@8 -E
 npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
-`css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中，也就是我们常说的内联。
+`css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
 
 我们先在`${PROJECT_DIR}/src/index.js`引入`.css`文件。
 
@@ -915,7 +915,7 @@ module.exports = {
 
 重新构建并运行，我们可以在浏览器控制台中看到，样式被插入到`<head>`标签中，内容与我们书写的一致，并且已经起了作用。
 
-值得注意的是，如果要对某种文件使用多个`loader`处理，`loader`的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
+值得注意的是，如果要使用多个`loader`处理某种文件，`loader`的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
 
 要处理`.sass`和`.scss`文件，又有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们首先需要复制粘贴，并在最后加上相应的`.loader`配置。
 
@@ -1075,7 +1075,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 资产相关的 loader
 
-一般称项目使用到的图片、字体、音视频文件等为项目资产。
+一般称项目使用到的图片、字体、音频、视频等为项目资产。
 
 最常用的处理资产的`loader`就是`file-loader`和`url-loader`。`url-loader`是`file-loader`的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用`file-loader`，没达到大小上限时，会把文件转换成 base64 数据并硬编码进代码中。
 
@@ -1094,7 +1094,7 @@ module.exports = {
       ...,
       {
         // 图片文件
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         // 使用 url-loader 处理
         use: [
           {
@@ -1297,6 +1297,7 @@ if (process.env.NODE_ENV === 'development') {
 │   └── webpack.prod.js
 ├── dist
 │   ├── app.js
+│   ├── app.js.map
 │   ├── favicon.ico
 │   ├── fonts
 │   ├── img
@@ -1327,7 +1328,7 @@ if (process.env.NODE_ENV === 'development') {
 
 常用的文件指纹有三类：
 
-- `hash` - 与整个项目的构建有关，只要项目中文件有修改，值就会变化。特别地，对于图片、字体等可以被`url-loader`和`file-loader`处理的文件，`hash`表示的是文件内容，与整个项目的构建无关。一般不建议使用，因为起不到缓存效果和管理版本的作用。
+- `hash` - 与整个项目的构建有关，只要项目中文件有修改，值就会变化。特别地，对于图片、字体等可以被`url-loader`和`file-loader`处理的文件，`hash`表示的是文件内容，与整个项目的构建无关。因为起不到缓存效果和管理版本的作用，所以不建议用于资产文件外的文件。
 - `chunkhash` - 根据不同的`chunk`生成`hash`，通常会把不常变动的公共库单独抽离，然后对业务代码使用`chunkhash`，这样改动业务代码不会影响公共库，客户端只需更新业务代码对应的`chunk`。
 - `contenthash` - 根据文件内容生成`hash`。`.js`文件常常会引用`.css`文件，如果使用`chunkhash`，会导致修改`.js`文件、没有修改`.css`文件的时候，最终构建完发现`.css`文件的`hash`也变化了，所以 css 文件一般使用`contenthash`。
 
@@ -1340,7 +1341,7 @@ module.exports = {
     rules: [
       ...,
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         use: [
           {
             loader: 'url-loader',
@@ -1420,7 +1421,7 @@ module.exports = {
         use: [{ loader: 'babel-loader' }],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         use: [
           {
             loader: 'url-loader',
@@ -1492,7 +1493,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用`style-loader`而是使用`mini-css-extract-plugin`，并为主要输出文件还有`.css`文件添加文件指纹。
+我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用`style-loader`而是使用`mini-css-extract-plugin`，并为输出的`.js`文件还有`.css`文件添加文件指纹。
 
 首先用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，用于指定要读取的`.css`文件所处的文件夹。把`.css`文件放入到特定的文件夹中，有利于区分开不同类型的文件。
 
@@ -1554,19 +1555,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-要为主要输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。`.js`文件往往依赖于其它`.js`文件，参考上面的做法，我们可以让`.js`文件都放入到特定的文件夹中。你可以再进一步思考、实践一下，修改`output.path`能否达成这个目的。
-
-```js
-module.exports = merge(baseConfig, {
-  ...,
-  output: {
-    path: path.resolve('dist'),
-    filename: 'js/[name].[chunkhash:8].js',
-  },
-  ...,
-});
-
-```
+要为`entry`对应的输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。
 
 完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。其中，`.css`文件的处理都使用了`contenthash`的前 8 位。
 
@@ -1582,7 +1571,7 @@ module.exports = merge(baseConfig, {
   devtool: 'cheap-source-map',
   output: {
     path: path.resolve('dist'),
-    filename: 'js/[name].[chunkhash:8].js',
+    filename: '[name].[chunkhash:8].js',
   },
   plugins: [
     new BundleAnalyzerPlugin({
@@ -1638,7 +1627,7 @@ module.exports = merge(baseConfig, {
 虽然安装`webpack`依赖会一并安装该依赖，但是我们通常会显式安装我们所需要的依赖，避免可能的版本问题。
 
 ```sh
-npm i terser-webpack-plugin@1 -DE
+npm i terser-webpack-plugin@3 -DE
 ```
 
 我们无需从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
@@ -1711,7 +1700,7 @@ module.exports = {
 - `removeStyleLinkTypeAttributes: true`表示移除`<style>`和`<link>`标签上的`type="text/css"`。
 - `useShortDoctype: true`表示使用较短的 html 格式声明。
 
-一般不会再需要手动配置，如果有这方面需求，可以翻看文档并做修改。注意：写入的自己的配置不会与默认配置组合使用，所以必须确保写入的自己的配置是完整的。
+一般不会再需要手动配置，如果有这方面需求，可以翻看文档并做修改。注意：写入的自己的配置不会与默认配置组合使用（默认配置会被覆盖），所以必须确保写入的自己的配置是完整的。
 
 ### 使用 postcss 处理 css
 
@@ -1920,9 +1909,9 @@ module.exports = merge(baseConfig, {
 
 我们添加了一个字段`optimization.splitChunks`，表明我们的意图：我们需要手动地分离`chunk`。
 
-我们指定了`chunks: 'all'`，这表示这表示我们想要分离所有引入的库（不管是异步引入还是同步引入）。
+我们指定了`chunks: 'all'`，这表示这表示我们想要把所有引入的库从已有的业务代码中分离出来。
 
-具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。
+具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。异步引入的其他依赖，`webpack`默认另行打包出一个`bundle`。
 
 我们通过`optimization.cacheGroups`来配置。首先是项目内的组件库`zent`单独成一个`chunk`。
 
@@ -1962,11 +1951,7 @@ module.exports = merge(baseConfig, {
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
-        zent: {
-          name: 'chunk-zent',
-          priority: 30,
-          test: /[\\/]node_modules[\\/]_?zent(.*)/,
-        },
+        ...,
         vendors: {
           name: 'chunk-vendors',
           test: /[\\/]node_modules[\\/]/,
@@ -1997,17 +1982,7 @@ module.exports = merge(baseConfig, {
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
-        zent: {
-          name: 'chunk-zent',
-          priority: 30,
-          test: /[\\/]node_modules[\\/]_?zent(.*)/,
-        },
-        vendors: {
-          name: 'chunk-vendors',
-          test: /[\\/]node_modules[\\/]/,
-          priority: 20,
-          chunks: 'initial',
-        },
+        ...,
         components: {
           name: 'chunk-components',
           test: path.resolve('src', 'components'),
@@ -2029,7 +2004,7 @@ module.exports = merge(baseConfig, {
 
 我们可以构建一下，看看效果。下面是我在构建后的截图。
 
-![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/H87f5de8ee8364b738eb862ceb5397eabi.jpg)
+![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/U9cbdde6f3a1f4b728dcb3f9902ac9300C.jpg)
 
 - 列`Asset`给出了打包出来的各个文件的位置和名称。
 - 列`Size`给出了打包出来的各个文件的大小。
@@ -2042,9 +2017,25 @@ module.exports = merge(baseConfig, {
 
 没有`splitChunks`的构建后的截图如下所示。
 
-![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Ha1f3bbf35b324517a408e07434d67502p.jpg)
+![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Uabea4a17c0224557bf1213cd32339ea01.jpg)
 
 可以看到，如果不使用`splitChunks`，几乎所有的代码都会挤到一个文件中，在比较大的项目中，文件就会变得非常大。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了`splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是`app`相关的文件），缩短了获取的时间。
+
+但使用了`splitChunks`后，另一个问题也暴露出来了，那就是所有`.js`文件都放到了`${PROJECT_DIR}/dist`目录下。随着项目规模越来越大，`.js`文件会越来越多，也就越来越难以管理。
+
+和前面对字体、图片、`.css`文件的配置类似，我们可以让`.js`文件都放入特定的文件夹中。由于这些`.js`文件实际上都是从`entry`对应的`.js`文件中分离出来的，所以这些`js`文件会跟随`output`的配置。我们修改`output.filename`，使得所有的`.js`文件都会放入`${PROJECT_DIR}/dist/js`文件夹中。
+
+```js
+module.exports = merge(baseConfig, {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: 'js/[name].[chunkhash:8].js',
+  },
+  ...,
+});
+
+```
 
 ### 使用 cdn 加载基础库
 
@@ -2163,6 +2154,8 @@ module.exports = {
 - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
 - [cssnano](https://cssnano.co/)
 - [阮一峰 - JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
+- [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
+- [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
 - [stylelint](https://stylelint.io/)
 
 ## 致谢
