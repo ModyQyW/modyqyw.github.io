@@ -432,7 +432,9 @@ yarn
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
+- [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
+- [EJS language support](https://marketplace.visualstudio.com/items?itemName=DigitalBrainstem.javascript-ejs-support) - 支持 ejs 语法
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
@@ -473,6 +475,15 @@ yarn
 {
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
   "cSpell.userWords": [],
+  // 插件 CSS Peek 使用，指定插件会在什么格式的文件中使用
+  "css_peek.peekFromLanguages": [
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript",
+    "javascript",
+    "vue"
+  ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
@@ -532,6 +543,8 @@ yarn
     "*.nvue": "vue",
     "*.ux": "vue"
   },
+  // 插件 iceworks 相关
+  "iceworks.materialSources": [],
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是

@@ -1237,7 +1237,7 @@ module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
     hot: true,
-    noInfo: true,
+    quiet: true,
   },
   devtool: 'eval-cheap-source-map',
 });
@@ -1245,7 +1245,7 @@ module.exports = merge(baseConfig, {
 ```
 
 - `hot: true`表示开启`webpack-dev-server`的热更新。
-- `noInfo: true`表示减少构建输出的信息显示，但是错误和警告仍会正常显示。
+- `quiet: true`表示减少构建输出的信息显示。
 
 `devtool`可以帮助调试，这里指定为`eval-cheap-source-map`，有兴趣可以自行查阅相关资料作进一步学习，结尾处也有给出参考文章。
 
@@ -1882,13 +1882,56 @@ module.exports = {
 
 到此为止，`postcss`已经能自动处理我们的 css 代码中用到的新语法和新特性，会自动添加属性前缀，能压缩并移除注释了。
 
-### 提取公共资源
+### 基础依赖的处理
 
-项目内往往有一些比较基础的依赖，比如`vue`，`react`，`react-dom`等。把这些基础依赖都抽离出来统一放置，这就是提取公共资源，它能有效地压缩项目业务代码的构建大小。
+项目内往往有一些比较基础的依赖，比如`vue`，`react`，`react-dom`等。默认地，`webpack`会把这些基础依赖放入`entry`对应的输出文件中，进而影响最终构建的大小。又因为这些基础依赖往往比较稳定，不会经常更新，打包进`entry`对应的输出文件中会出现业务代码变化、基础依赖没有变化、但用户需要重新拉取包含了基础依赖的代码的情况。
 
-此外，我们可以给公共资源文件添加文件指纹，在不更新公共资源且公共资源已经被浏览器缓存的情况下，用户会更快地加载出页面。
+我们可以使用公共 cdn 来加载这些依赖，解决上面提到的两个问题。首先要在`${PROJECT_DIR}/config/webpack.prod.js`配置`externals`，向`webpack`说明无需添加到构建包中的依赖。
 
-这部分优化属于生产环境下的构建优化，已经被`webpack`内置了。我们要做的，就是做相应的配置，下面一步步地增加配置。
+```js
+module.exports = {
+  ...,
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
+  ...,
+};
+
+```
+
+`externals`是一个对象 object，它的键就是`webpack`需要排除的依赖名，稍后我们再说明对应的值。上面给出的配置会让`webpack`构建时排除`react`和`react-dom`两个依赖，不把它们加入到最终构建包中。
+
+之后，还需要手动加入`react`和`react-dom`的公共 cdn 链接，使得项目能够使用到`react`和`react-dom`这两个依赖，否则构建之后将无法运行。
+
+这里使用了 [jsdelivr](https://www.jsdelivr.com/) 这个公共 cdn，你也可以使用 [unpkg](https://unpkg.com/) 这个比较常用的公共 cdn。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="favicon.ico" type="image/x-icon" />
+    <title>demo03</title>
+  </head>
+  <body>
+    <div id="root" />
+    <script src="https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"></script>
+  </body>
+</html>
+
+```
+
+注意：公共 cdn 链接指定的依赖版本，要与项目内使用的依赖版本一致，否则可能导致开发和生产环境的表现不一致。`react`的 cdn 链接中暴露了`React`这个变量，而`react-dom`的 cdn 链接中暴露了`ReactDOM`这个变量，对应地，我们要把这两个变量指定为对应键的值。
+
+我们尝试构建一下。最终构建的文件中，没有`react`和`react-dom`的存在。运行测试正常。我们也可以借助`html-webpack-externals-plugin`来实现类似的功能，这里不再做相应的展开演示。
+
+但是更多时候，比起相信公共 cdn，相信自己更好。不使用公共 cdn，我们可以自行把这些基础依赖抽离出来统一放置。这么做要比使用公共 cdn 更好，无需手动指定、更新公共 cdn 的依赖版本，也无需考虑公共 cdn 的稳定性。
+
+`webpack`已经内置了这部分优化，但还需要进一步配置。我们要做的就是配置`optimization.splitChunks`，让这部分内置的优化更紧贴我们的项目。
 
 ```js
 // ${PROJECT_DIR}/config/webpack.prod.js
@@ -1907,9 +1950,8 @@ module.exports = merge(baseConfig, {
 
 ```
 
-我们添加了一个字段`optimization.splitChunks`，表明我们的意图：我们需要手动地分离`chunk`。
-
-我们指定了`chunks: 'all'`，这表示这表示我们想要把所有引入的库从已有的业务代码中分离出来。
+- 使用`optimization.splitChunks`，表示我们想要手动配置地分离`chunk`。
+- 指定`chunks: 'all'`，表示我们想要把所有引入的库从已有的业务代码中分离出来。
 
 具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。异步引入的其他依赖，`webpack`默认另行打包出一个`bundle`。
 
@@ -1968,7 +2010,7 @@ module.exports = merge(baseConfig, {
 ```
 
 - `vendors`的`priority`设置得比`zent`的`priority`低，因此，`zent`会优先生成一个`chunk`，而`vendors`对应的`chunk`不会再包含`zent`。
-- 设置`vendors.chunks`为`initial`，意味着`chunk-vendors`只会包含代码中同步引入的部分，异步引入的部分会加入到`${PROJECT_DIR}/dist/js/[name].[chunkhash:8].js`中。
+- 设置`vendors.chunks`为`initial`，意味着`chunk-vendors`只会包含代码中同步引入的部分，异步引入的部分会加入到`${PROJECT_DIR}/dist/app.[chunkhash:8].js`中。
 
 最后则是页面公共组件。
 
@@ -1999,10 +2041,12 @@ module.exports = merge(baseConfig, {
 
 ```
 
-- `minChunks`表示最小引用次数，这里设置为 2，即`chunk-components`内的代码都被`${PROJECT_DIR}/dist/js/[name].[chunkhash:8].js`中的代码引用过 2 次或以上。
+- `minChunks`表示最小引用次数，这里设置为 2，即`chunk-components`内的代码都被其他`.js`中的代码引用过 2 次或以上。
 - `reuseExistingChunk: true`表示如果`chunk-components`包含了已经被分离出来的部分（某些代码已经被分进了自定义`chunk`中），这些部分会被复用而不再打包进`chunk-components`中。
 
-我们可以构建一下，看看效果。下面是我在构建后的截图。
+我们可以构建一下，看看效果。查看构建文件可以发现，`html-webpack-plugin`已经自动引入了各个`chunk`，无需我们操心。
+
+下面是我在构建后的截图。
 
 ![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/U9cbdde6f3a1f4b728dcb3f9902ac9300C.jpg)
 
@@ -2011,7 +2055,8 @@ module.exports = merge(baseConfig, {
 - 列`Chunks`和`Chunk Names`是我们所要关注的重点。
   - `Chunk Names`一共三个：`app`，`chunk-zent`和`chunk-vendors`。
   - `app`就是我们设置的`entry`键值，也就是说，`entry`本身就会生成一个`chunk`。
-  - `chunk-zent`和`chunk-vendors`是我们配置后分离出来的`chunk`，位置和命名会跟随`output.filename`（也就是`[name]:[chunkhash:8].js`）。
+  - `chunk-zent`和`chunk-vendors`是我们配置后从`chunk app`中分离出来的`chunk`，位置和命名会跟随`output.filename`（也就是`${PROJECT_DIR}/dist/[name]:[chunkhash:8].js`）。
+  - `react`和`react-dom`已经被加入到`chunk-vendors`中。
   - 我们如果修改`${PROJECT_DIR}/src/index.js`，就会发现只有`app`对应的文件指纹发生了变化，而`chunk-zent`和`chunk-vendors`的文件指纹没有发生变化。这样就使得这两个部分能有效地缓存，减少请求时间。
   - 没有`chunk-components`，这是因为我们目前没有使用任何的页面公共组件。
 
@@ -2019,11 +2064,11 @@ module.exports = merge(baseConfig, {
 
 ![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Uabea4a17c0224557bf1213cd32339ea01.jpg)
 
-可以看到，如果不使用`splitChunks`，几乎所有的代码都会挤到一个文件中，在比较大的项目中，文件就会变得非常大。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了`splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是`app`相关的文件），缩短了获取的时间。
+可以看到，如果不使用`splitChunks`，几乎所有的代码都会挤到`app.[chunkhash:8].js`中，在比较大的项目中，文件就会变得非常大。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了`splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是`app`相关的文件），缩短了获取的时间。
 
-但使用了`splitChunks`后，另一个问题也暴露出来了，那就是所有`.js`文件都放到了`${PROJECT_DIR}/dist`目录下。随着项目规模越来越大，`.js`文件会越来越多，也就越来越难以管理。
+但使用了`splitChunks`后，另一个问题也暴露出来了，那就是所有`.js`文件都放到了`${PROJECT_DIR}/dist`目录下，这并不利于管理。
 
-和前面对字体、图片、`.css`文件的配置类似，我们可以让`.js`文件都放入特定的文件夹中。由于这些`.js`文件实际上都是从`entry`对应的`.js`文件中分离出来的，所以这些`js`文件会跟随`output`的配置。我们修改`output.filename`，使得所有的`.js`文件都会放入`${PROJECT_DIR}/dist/js`文件夹中。
+和前面对字体、图片、`.css`文件的配置类似，我们可以让`.js`文件都放入特定的文件夹中。我们修改`output.filename`，使得所有的`.js`文件都会放入`${PROJECT_DIR}/dist/js`文件夹中。
 
 ```js
 module.exports = merge(baseConfig, {
@@ -2036,8 +2081,6 @@ module.exports = merge(baseConfig, {
 });
 
 ```
-
-### 使用 cdn 加载基础库
 
 ### 使用 gzip 压缩资产文件
 
