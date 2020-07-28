@@ -2,21 +2,22 @@
 
 ## 说明
 
-- 形式：本部分以教程形式书写。
-- 适用：本教程适合想要深入 js 工具链的读者学习以入门`webpack4`。默认读者已经了解 npm，有原生 js 和`react`/`vue`开发经验。
-- 思路：本教程书写思路是`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`，力求解决实际配置中的各类问题。
-- 结构：本教程会以单页应用作示例，前面部分着重关注于基本使用，后面部分涉及原理，更多相关信息在章节末尾列写，可以自行查阅资料作进一步的学习。
-- 环境：本篇教程默认使用 macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外使用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)来测试构建后的文件，做法可参考其文档。
-- 约定：本教程使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录即为项目根目录。
-- 范围：本教程不考虑 IE 11- 的浏览器。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。此外，要支持 IE 11-，还要考虑怎么支持 es5+ 乃至 es3+ 的语法和特性，相当耗费时间。
+- 形式：教程。
+- 适用：了解 npm，有原生 js 和`react`/`vue`开发经验，想要深入 js 工具链的开发者。
+- 目标：跟着教程实操能入门`webpack4`，能解决实际开发中的 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
+- 思路：`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`。
+- 结构：以单页应用作示例，前面部分着重关注于基本使用，后面部分涉及原理，最后列出参考资料给读者自行查阅学习。
+- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外使用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)来测试构建后的文件。
+- 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
+- 范围：不考虑 IE 11- 的浏览器。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。此外，要支持 IE 11-，还要考虑怎么支持 es5+ 乃至 es3+ 的语法和特性，相当耗费时间。
 
 ## webpack 是什么
 
-`webpack`是一个静态模块构建工具，分析依赖生成依赖图，最终根据配置进行构建。
+`webpack`是一个静态模块构建工具，分析依赖生成依赖图，最终根据配置进行构建（也就是打包）。
 
 ## 为什么要使用构建工具
 
-- 能支持新语法 syntax、新特性 feature
+- 能支持新语法`syntax`、新特性`feature`
 - 能自动处理图片、文件等资产文件
 - 能使用 css 预处理器，自动添加 css 前缀
 - 能压缩混淆
@@ -26,8 +27,9 @@
 
 ## 为什么选择 webpack
 
-- 社区活跃度高
-- 官方生态完整，社区生态丰富
+- 使用广泛
+- 生态丰富
+- 社区活跃
 - 配置灵活
 
 ## 基本概念
@@ -51,7 +53,9 @@ module.exports = {
 
 ```
 
-`path`是 node 的内置模块，我们可以在`webpack`的配置文件中使用`require`语句引用该模块。`path.resolve`是`path`模块内置的方法，它能将提供的字符串参数拼接起来，形成一个绝对路径，用于指定`entry`的值。
+`path`是 node 的内置模块，我们可以在`webpack`的配置文件中使用`require`语句引用这个模块。
+
+`path.resolve`是`path`模块内置的方法，它能将提供的字符串参数拼接起来，形成一个绝对路径，用于指定`entry`的值。
 
 `path.join`与`path.resolve`用法、作用相似，使用频率也比较高。二者之间的主要区别是`path.join`仅仅拼接给出的字符串并返回，而`path.resolve`会解析并返回一个绝对路径。
 
@@ -67,7 +71,7 @@ path.resolve("a", "b1", "..", "b2"); // string ${PROJECT_DIR}/a/b2
 
 ### 输出 output
 
-`output`可以指定`webpack`存放所有输出文件的路径`output.path`和输出的`.js`文件的路径`output.filename`。
+`output`可以指定`webpack`存放所有输出文件的基本路径`output.path`和`entry`对应的输出文件的**路径和名称**`output.filename`。
 
 `entry`对应的输出文件默认为`${PROJECT_DIR}/dist/main.js`。
 
@@ -90,9 +94,9 @@ module.exports = {
 
 ### 加载器 loader
 
-`webpack`本身只能解析`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得 `webpack`能够解析`.jsx`，`.ts`，`.tsx`，`.css`等文件、将它们转换为模块、添加到依赖图中并供应用程序使用。
+`webpack`本身只能解析`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得 `webpack`能够解析`.jsx`，`.ts`，`.tsx`，`.css`等文件，将它们转换为模块并且添加到依赖图中供构建使用。
 
-`module.rules`数组中的每一项中都是处理模块的规则，规则中会声明用到的`loader`。每一项有两个必需的属性，一个是`test`，用于指定需要解析的文件，值往往是一个正则表达式，另一个是`use`，指定用于解析的`loader`。
+`module.rules`数组中的每一项都是处理模块的规则，规则中会声明用到的`loader`。每一项有两个必需的属性，一个是`test`，用于指定需要解析的文件，值往往是一个正则表达式，另一个是`use`，指定用于解析的`loader`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -156,6 +160,7 @@ module.exports = {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
+      openAnalyzer: false,
     }),
   ],
 };
@@ -201,6 +206,7 @@ module.exports = {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
+      openAnalyzer: false,
     }),
   ],
 };
@@ -211,23 +217,23 @@ module.exports = {
 
 `bundle`指的是最终输出的一个或多个文件，也就是最终得到的代码块。
 
-`chunk`则是打包过程中的代码块，它是某些`module`的封装，也可以称为某些`module`的集合。构建结束后，`chunk`就呈现为`bundle`。
+`chunk`则是打包过程中的代码块，它是某些`module`的封装，也可以称为某些`module`的集合。构建结束后，`chunk`就呈现为`bundle`。但有时为了便于区分，我们会使用`chunk`来命名文件，所以有时会在`bundle`中看到名字带`chunk`的文件。
 
-一个`entry`会有一个或多个`chunk`，但最终只会生成一个`bundle`，但是这个`bundle`可能会包含多个文件。这是因为我们可能会把引用到的`.css`、`.js`文件分拆出来，也可能会添加`.map`文件。
+一个`entry`会对应若干个`chunk`，但最终只会生成一个`bundle`，这个`bundle`一般会包含多个文件。
 
 ## demo01 - 一个简单的 demo
 
-前面简单地讲述了`webpack`的几个基本概念，下面开始实战。
+前面简单地讲述了`webpack`的几个基本概念，下面开始实战来强化这些概念。
 
-首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具，使用 nvm 能免去频繁更换 node 版本的繁琐。
+首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具。
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
-如果你已经安装了 node，你也可以考虑完全卸载 node 之后安装 nvm。如果没有频繁更换 node 版本的需求，可以直接安装 node。
+如果你已经安装了 node，你也可以考虑完全卸载 node 之后安装 nvm。如果没有频繁更换 node 版本的需求，可以直接使用 node。
 
-安装 nvm 之后，使用 nvm 来安装 node v12（写下这篇教程时 node 的长期支持版本）。
+安装 nvm 之后，使用 nvm 来安装 node v12（写下这篇教程的时候，node 的长期支持版本就是 v12）。
 
 ```sh
 nvm install 12
@@ -261,7 +267,13 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 然后安装相关依赖。
 
 ```sh
-npm i webpack@4 webpack-cli@3 copy-webpack-plugin@6 html-webpack-plugin@4 clean-webpack-plugin@3 webpackbar@4 friendly-errors-webpack-plugin@1 -DE
+npm i webpack@4 -DE
+npm i webpack-cli@3 -DE
+npm i copy-webpack-plugin@6 -DE
+npm i html-webpack-plugin@4 -DE
+npm i clean-webpack-plugin@3 -DE
+npm i webpackbar@4 -DE
+npm i friendly-errors-webpack-plugin@1 -DE
 ```
 
 创建一个内容简单的`${PROJECT_DIR}/src/index.js`。
@@ -271,7 +283,7 @@ document.write('Hello webpack!');
 
 ```
 
-创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件时，`webpack`会默认使用`${PROJECT_DIR}/webpack.config.js`。
+创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件时，`webpack`会默认使用这个文件作为配置文件。
 
 ```js
 // 使用 path 模块来指定路径
@@ -315,7 +327,7 @@ npm run build
 
 在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。
 
-`index.html`如下所示。
+`index.html`如下所示。注意：我们在 L7 中引入了`favicon.ico`作为网站图标。
 
 ```html
 <!DOCTYPE html>
@@ -332,7 +344,7 @@ npm run build
 
 ```
 
-接着，我们在`${PROJECT_DIR}/webpack.config.js`中配置`copy-webpack-plugin`和`html-webpack-plugin`，让它们来帮忙处理在`.html`文件中引入`.js`文件以及网站图标的问题。
+接着，我们在`${PROJECT_DIR}/webpack.config.js`中配置，让`copy-webpack-plugin`来处理网站图标，让`html-webpack-plugin`处理`.html`文件中的引入。
 
 ```js
 const CopyPlugin = require('copy-webpack-plugin');
@@ -340,12 +352,21 @@ const HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
   ...
+  // 指定 entry
+  entry: path.resolve('src', 'index.js'),
+  // 指定 output
+  output: {
+    path: path.resolve('dist'),
+    filename: 'bundle.js',
+  },
   plugins: [
     // 复制 ${PROJECT_DIR}/public/favicon.ico
+    // 最终生成 ${PROJECT_DIR}/dist/favicon.ico
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
     // 使用 ${PROJECT_DIR}/public/index.html 作为模板
+    // 最终生成 ${PROJECT_DIR}/dist/index.html
     new HtmlPlugin({
       title: 'demo01',
       template: path.resolve('public', 'index.html'),
@@ -356,13 +377,14 @@ module.exports = {
 
 ```
 
-`copy-webpack-plugin`会帮我们把网站图标复制到输出目录下（在这个例子中，就是`${PROJECT_DIR}/dist`），而`html-webpack-plugin`会使用`${PROJECT_DIR}/public/index.html`作为承载`bundle.js`和网站 icon 的模板。
+- `copy-webpack-plugin`会把`favicon.ico`复制到输出目录下（在这个例子中，就是`${PROJECT_DIR}/dist`）。
+- `html-webpack-plugin`会使用`${PROJECT_DIR}/public/index.html`作为承载`bundle.js`和`favicon.ico`的模板，最终会生成`${PROJECT_DIR}/dist/index.html`，这个文件会自动引入相关的`.js`文件。
 
 重新构建，构建结束后，我们会发现`${PROJECT_DIR}/dist`下出现了三个文件：`favicon.ico`，`index.html`和`bundle.js`，而`index.html`中还自动引入了`bundle.js`。
 
-一切都很完美，但不能忽视的是，每次构建前都应该删除上一次构建的结果，也就是删除`${PROJECT_DIR}/dist`，否则可能会导致新的构建和旧的构建产生冲突、`${PROJECT_DIR}`占用空间越来越大不利于部署等问题。
+一切都很完美，但不能忽视的是，每次构建前都应该删除上一次构建的结果，也就是删除`${PROJECT_DIR}/dist`，否则可能会导致新旧构建冲突、`${PROJECT_DIR}/dist`里面的文件越来越多越来越大等问题。
 
-我们可以使用`clean-webpack-plugin`来帮我们解决这个问题，默认地，`clean-webpack-plugin`会帮我们自动删除上一次构建的结果。
+我们可以使用`clean-webpack-plugin`来解决这个问题，默认地，`clean-webpack-plugin`会根据`output.path`自动确认、删除上一次构建的结果。
 
 ```js
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
@@ -379,7 +401,7 @@ module.exports = {
 
 ```
 
-让`webpack`在打包的时候显示进度条也是常见的做法，这能够在一定程度上降低等待的焦虑度。
+让`webpack`在打包的时候显示进度条也是常见的做法，这能在一定程度上降低等待的焦虑度。
 
 ```js
 const WebpackBar = require('webpackbar');
@@ -396,7 +418,7 @@ module.exports = {
 
 ```
 
-假如打包出现了问题，`webpack`将会输出一长串错误信息，这不利于快速地确认问题。使用`friendly-errors-webpack-plugin`可以使输出的错误信息更加友好。
+假如打包出现了问题，`webpack`将会输出一长串错误信息，难以快速确认问题。使用`friendly-errors-webpack-plugin`可以使输出的错误信息更加友好。
 
 ```js
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
@@ -413,7 +435,7 @@ module.exports = {
 
 ```
 
-完整的`webpack.config.js`如下所示。
+完整的`webpack.config.js`代码如下所示。
 
 ```js
 // 使用 path 模块来指定路径
@@ -2082,7 +2104,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-### 使用 gzip 压缩资产文件
+### gzip 压缩
 
 ### 代码分割和动态引入
 
