@@ -2,28 +2,28 @@
 
 ## 说明
 
-- 形式：教程。
+- 形式：尽量口语化的教程。
 - 适用：了解 npm，有原生 js 和`react`/`vue`开发经验，想要深入 js 工具链的开发者。
-- 目标：跟着教程实操能入门`webpack4`，能解决实际开发中的 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
+- 目标：跟着教程实操能入门`webpack4`，能解决实际开发中 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
 - 思路：`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`。
-- 结构：以单页应用作示例，前面部分着重关注于基本使用，后面部分涉及原理，最后列出参考资料给读者自行查阅学习。
-- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外使用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)来测试构建后的文件。
+- 结构：拿单页应用作示例，前面部分着重关注怎么使用，后面部分涉及原理，最后列出参考资料给读者查阅学习。
+- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)测试构建产物。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
-- 范围：不考虑 IE 11- 的浏览器。IE 11- 已经在 24 个月内没有得到官方支持，不应该再使用。此外，要支持 IE 11-，还要考虑怎么支持 es5+ 乃至 es3+ 的语法和特性，相当耗费时间。
+- 范围：不考虑 IE 11- 的浏览器。IE 11- 已经连续 24 个月没有得到官方支持，所以不应该再使用 IE 11-。另外，要支持 IE 11-，还要考虑怎么支持完整的 es5 乃至 es3 的语法和特性，非常耗费时间。考虑到[国情](https://tongji.baidu.com/research/site)原因，教程中还是会示例怎么支持 IE 11 的。
 
 ## webpack 是什么
 
-`webpack`是一个静态模块构建工具，分析依赖生成依赖图，最终根据配置进行构建（也就是打包）。
+`webpack`是一个静态模块构建工具，根据配置分析依赖、生成依赖图、构建（也就是打包）。
 
 ## 为什么要使用构建工具
 
-- 能支持新语法`syntax`、新特性`feature`
-- 能自动处理图片、文件等资产文件
-- 能使用 css 预处理器，自动添加 css 前缀
-- 能压缩混淆
-- 能帮助做构建文件的版本管理
+- 无需手动处理新语法`syntax`、新特性`feature`
+- 进一步处理图片、文件等资产文件
+- 无需手动添加 css 前缀
+- 无需手动压缩混淆
+- 无需手动做构建文件的版本管理
 
-总而言之，构建工具减少了重复的工作，使我们能投入更多的时间到开发工作中。
+总而言之，构建工具帮我们完成了大量重复的构建工作，使我们能投入更多的时间到开发工作中。
 
 ## 为什么选择 webpack
 
@@ -36,7 +36,7 @@
 
 ### 模块 module
 
-`webpack`中，一切文件都可以被解析成模块`module`。
+`webpack`中，任何文件都可以被解析成模块`module`。
 
 ### 入口 entry
 
