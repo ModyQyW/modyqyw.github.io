@@ -179,20 +179,16 @@ module.exports = {
             link: '/front-end/webpack4/',
           },
           {
-            text: 'snowpack',
-            link: '/front-end/snowpack/',
-          },
-          {
-            text: 'vite',
-            link: '/front-end/vite',
-          },
-          {
             text: 'rollup',
             link: '/front-end/rollup/',
           },
           {
             text: 'parcel',
             link: '/front-end/parcel/',
+          },
+          {
+            text: 'vite',
+            link: '/front-end/vite',
           },
           {
             text: '音视频',
