@@ -6,7 +6,7 @@
 - 适用：了解 npm，有原生 js 和`react`/`vue`开发经验，想要深入 js 工具链的开发者。
 - 目标：跟着教程实操能入门`webpack4`，能解决实际开发中 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
 - 思路：`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`。
-- 结构：拿单页应用作示例，前面部分着重关注怎么使用，后面部分涉及原理，最后列出参考资料给读者查阅学习。
+- 结构：拿单页应用作示例，前面部分着重关注怎么使用，后面部分涉及原理，最后列出参考资料给你查阅学习。
 - 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)测试构建产物。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
 - 范围：不考虑 IE 11- 的浏览器。IE 11- 已经连续 24 个月没有得到官方支持，所以不应该再使用 IE 11-。另外，要支持 IE 11-，还要考虑怎么支持完整的 es5 乃至 es3 的语法和特性，非常耗费时间。考虑到[国情](https://tongji.baidu.com/research/site)原因，教程中还是会示例怎么支持 IE 11 的。
@@ -40,7 +40,7 @@
 
 ### 入口 entry
 
-`entry`指定`webpack`工作时从哪个`.js`文件开始分析依赖，默认值为`${PROJECT_DIR}/src/index.js`。这个文件，也会被称为入口文件或入口模块。
+`entry`指定`webpack`工作的时候从哪个`.js`文件开始分析依赖，默认值是`${PROJECT_DIR}/src/index.js`。这个文件，也会被叫做入口文件或者入口模块。
 
 ```js
 // 使用 path 模块来指定路径
@@ -53,13 +53,13 @@ module.exports = {
 
 ```
 
-`path`是 node 的内置模块，我们可以在`webpack`的配置文件中使用`require`语句引用这个模块。
+`path`是 node 的内置模块，我们可以在`webpack`的配置文件里使用`require`语句引用这个模块。
 
-`path.resolve`是`path`模块内置的方法，它能将提供的字符串参数拼接起来，形成一个绝对路径，用于指定`entry`的值。
+`path.resolve`是`path`模块内置的方法，它能将提供的字符串参数拼接成一个绝对路径，来指定`entry`的值。
 
-`path.join`与`path.resolve`用法、作用相似，使用频率也比较高。二者之间的主要区别是`path.join`仅仅拼接给出的字符串并返回，而`path.resolve`会解析并返回一个绝对路径。
+`path.join`和`path.resolve`用法、作用相似，使用频率也比较高。两者之间的主要区别是`path.join`仅仅拼接给出的字符串然后返回，而`path.resolve`会解析然后返回一个绝对路径。
 
-下面给出示例帮助理解二者之间的主要区别。
+下面是两个对比示例。
 
 ```js
 path.join('/a', '/b'); // string /a/b
@@ -71,19 +71,19 @@ path.resolve("a", "b1", "..", "b2"); // string ${PROJECT_DIR}/a/b2
 
 ### 输出 output
 
-`output`可以指定`webpack`存放所有输出文件的基本路径`output.path`和`entry`对应的输出文件的**路径和名称**`output.filename`。
+`output`可以指定`webpack`存放所有输出文件的基本路径`output.path`，还有`entry`对应的输出文件的**路径和名称**`output.filename`。
 
-`entry`对应的输出文件默认为`${PROJECT_DIR}/dist/main.js`。
+`entry`对应的输出文件默认是`${PROJECT_DIR}/dist/main.js`。
 
 ```js
 // 使用 path 模块来指定路径
 const path = require('path');
 
 module.exports = {
-  // 指定 entry 为 ${PROJECT_DIR}/src/app.js
+  // 指定 entry 是 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
-  // 指定 output 目录为 ${PROJECT_DIR}/dist
-  // 指定 entry 对应的输出文件为 ${PROJECT_DIR}/dist/bundle.js
+  // 指定 output 目录是 ${PROJECT_DIR}/dist
+  // 指定 entry 对应的输出文件是 ${PROJECT_DIR}/dist/bundle.js
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',
@@ -94,9 +94,9 @@ module.exports = {
 
 ### 加载器 loader
 
-`webpack`本身只能解析`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得 `webpack`能够解析`.jsx`，`.ts`，`.tsx`，`.css`等文件，将它们转换为模块并且添加到依赖图中供构建使用。
+`webpack`本身只能处理`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得`webpack`能够处理`.jsx`，`.ts`，`.tsx`，`.css`等文件。
 
-`module.rules`数组中的每一项都是处理模块的规则，规则中会声明用到的`loader`。每一项有两个必需的属性，一个是`test`，用于指定需要解析的文件，值往往是一个正则表达式，另一个是`use`，指定用于解析的`loader`。
+`module.rules`数组里面的每一项都是处理模块的规则。每一项规则有两个必需的属性，一个是`test`，用来指定需要解析的文件，它的值往往是一个正则表达式，另一个是`use`，指定用来解析文件的`loader`。
 
 ```js
 // 使用 path 模块来指定路径
@@ -125,11 +125,11 @@ module.exports = {
 
 ```
 
-有的`loader`可能还会与`plugin`有关联，也可能有额外的属性供你配置，具体信息要查看对应`loader`的文档。
+有的`loader`还会关联`plugin`或者有额外的属性供你配置，具体信息要查看对应`loader`的文档。
 
 ### 插件 plugin
 
-`plugin`用于执行范围更广的任务，比如打包优化，资源管理，注入环境变量等。
+`plugin`被用来执行范围更广的任务，比如打包优化，资源管理，注入环境变量等。
 
 ```js
 // 使用 path 模块来指定路径
@@ -169,9 +169,9 @@ module.exports = {
 
 ### 模式 mode
 
-指定不同的模式，`webpack`会自动启用不同的优化，默认值为`production`，即生产模式。
+指定不同的模式，`webpack`会自动启用不同的优化。
 
-模式一共有三种：`production`，`development`，`none`，优化程度由高到低为：`production`>`development`>`none`。
+模式一共有三种：`production`（生产模式），`development`（开发模式），`none`（无优化模式），默认值是`production`，优化程度由高到低依次是`production`，`development`，`none`。
 
 `none`不会启用优化，我们一般不会使用，而`production`和`development`的默认优化往往不能满足项目要求，还需要我们进一步定制。
 
@@ -215,11 +215,11 @@ module.exports = {
 
 ### module，chunk，bundle
 
-`bundle`指的是最终输出的一个或多个文件，也就是最终得到的代码块。
+`bundle`是最终输出的一个或多个文件，也就是最终得到的代码块，或者叫做构建包。
 
-`chunk`则是打包过程中的代码块，它是某些`module`的封装，也可以称为某些`module`的集合。构建结束后，`chunk`就呈现为`bundle`。但有时为了便于区分，我们会使用`chunk`来命名文件，所以有时会在`bundle`中看到名字带`chunk`的文件。
+`chunk`则是构建过程中的代码块，它是一些`module`的封装，也可以叫做这些`module`的集合。构建结束后，`chunk`就表现为`bundle`。但为了方便区分，一般会在一些文件的文件名里使用`chunk`。
 
-一个`entry`会对应若干个`chunk`，但最终只会生成一个`bundle`，这个`bundle`一般会包含多个文件。
+一个`entry`会对应一个或者多个`chunk`，但最终只会生成一个`bundle`，这个`bundle`一般会包含多个文件。
 
 ## demo01 - 一个简单的 demo
 
@@ -239,15 +239,15 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install 12
 ```
 
-新建一个文件夹，命名为`demo`。进入到该文件夹中，使用`npm`初始化，这将会生成一个默认的`package.json`文件。
+新建一个`demo`文件夹，进入该文件夹，用`npm`初始化，这会在当前目录下生成一个默认的`package.json`文件。
 
 ```sh
-mkdir demo # 新建一个名为 demo 的文件夹
-cd demo # 进入该文件夹中
+mkdir demo # 新建一个 demo 文件夹
+cd demo # 进入该文件夹
 npm init -y # npm 初始化
 ```
 
-根目录下新建一个`.npmrc`文件。该文件用于配置`npm`，比如指定依赖源等，这里我们指定依赖源为国内的淘宝源，这样安装依赖的速度会更快一点。
+根目录下新建一个`.npmrc`文件用来配置`npm`，这里我们指定依赖源是国内的淘宝源，这样安装依赖的速度会更快一点。
 
 ```sh
 registry=https://registry.npm.taobao.org
@@ -283,7 +283,7 @@ document.write('Hello webpack!');
 
 ```
 
-创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件时，`webpack`会默认使用这个文件作为配置文件。
+创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件的时候，`webpack`会默认使用这个文件作为配置文件。
 
 ```js
 // 使用 path 模块来指定路径
@@ -303,7 +303,7 @@ module.exports = {
 
 ```
 
-我们再来修改`package.json`中的`scripts`字段。这样，我们就能通过命令调用`webpack`构建。
+我们再来修改`package.json`里面的`scripts`字段。这样，我们就能通过命令调用`webpack`构建。
 
 ```json
 {
@@ -321,13 +321,13 @@ module.exports = {
 npm run build
 ```
 
-构建结束后，我们可以看到，在`dist`目录下已经生成了一个`bundle.js`文件。但是我们还不能直接使用这个`bundle.js`文件，要使用它，我们还需要手动创建一个`.html`文件并且引用。
+构建结束之后，我们可以看到，在`dist`文件夹里面已经出现了一个`bundle.js`文件。但是我们还不能直接使用这个`bundle.js`文件，要使用它，我们还需要手动创建一个`.html`文件，然后在文件里面引用`bundle.js`。
 
-在实际开发中，每次构建后都耗费时间做这样的重复工作是难以忍受的。我们需要一些自动处理的手段，来帮我们自动生成`.html`文件并引入这个`bundle.js`文件。
+实际开发的时候，每次构建之后都耗费时间去做这样的重复工作是难以忍受的。我们需要一些自动处理的手段，来帮我们自动生成`.html`文件并引用这个`bundle.js`文件。
 
-在项目根目录下新建一个`public`文件夹，放入`favicon.ico`（可以自己随便找一个，或者把已有的图片转成 ico 格式）和`index.html`。
+项目根目录新建一个`public`文件夹，里面放`favicon.ico`（可以自己随便找一个，或者把你现在有的图片转成 ico 格式）和`index.html`。
 
-`index.html`如下所示。注意：我们在 L7 中引入了`favicon.ico`作为网站图标。
+`index.html`里面的内容列出在下面。注意：我们在 L7 引用了`favicon.ico`作为网站图标。
 
 ```html
 <!DOCTYPE html>
@@ -344,7 +344,7 @@ npm run build
 
 ```
 
-接着，我们在`${PROJECT_DIR}/webpack.config.js`中配置，让`copy-webpack-plugin`来处理网站图标，让`html-webpack-plugin`处理`.html`文件中的引入。
+接着，我们在`${PROJECT_DIR}/webpack.config.js`里配置，让`copy-webpack-plugin`来处理网站图标，让`html-webpack-plugin`处理`.html`文件里的引用。
 
 ```js
 const CopyPlugin = require('copy-webpack-plugin');
@@ -377,12 +377,12 @@ module.exports = {
 
 ```
 
-- `copy-webpack-plugin`会把`favicon.ico`复制到输出目录下（在这个例子中，就是`${PROJECT_DIR}/dist`）。
-- `html-webpack-plugin`会使用`${PROJECT_DIR}/public/index.html`作为承载`bundle.js`和`favicon.ico`的模板，最终会生成`${PROJECT_DIR}/dist/index.html`，这个文件会自动引入相关的`.js`文件。
+- `copy-webpack-plugin`会把`favicon.ico`复制到输出目录下（在这个例子里面，输出目录就是`${PROJECT_DIR}/dist`）。
+- `html-webpack-plugin`会使用`${PROJECT_DIR}/public/index.html`作为承载`bundle.js`和`favicon.ico`的模板，最终会生成`${PROJECT_DIR}/dist/index.html`，这个文件会自动引用相关的`.js`文件。
 
-重新构建，构建结束后，我们会发现`${PROJECT_DIR}/dist`下出现了三个文件：`favicon.ico`，`index.html`和`bundle.js`，而`index.html`中还自动引入了`bundle.js`。
+重新构建，构建结束之后，我们会发现`${PROJECT_DIR}/dist`里面出现了三个文件：`favicon.ico`，`index.html`和`bundle.js`，而`index.html`中还自动引用了`bundle.js`。
 
-一切都很完美，但不能忽视的是，每次构建前都应该删除上一次构建的结果，也就是删除`${PROJECT_DIR}/dist`，否则可能会导致新旧构建冲突、`${PROJECT_DIR}/dist`里面的文件越来越多越来越大等问题。
+一切都很完美，但不能忽视的是，每次构建之前都应该删除上一次的构建包，也就是删除`${PROJECT_DIR}/dist`，否则可能会导致新旧构建冲突、`${PROJECT_DIR}/dist`里面的文件越来越多越来越大等问题。
 
 我们可以使用`clean-webpack-plugin`来解决这个问题，默认地，`clean-webpack-plugin`会根据`output.path`自动确认、删除上一次构建的结果。
 
@@ -401,7 +401,7 @@ module.exports = {
 
 ```
 
-让`webpack`在打包的时候显示进度条也是常见的做法，这能在一定程度上降低等待的焦虑度。
+让`webpack`在构建的时候显示进度条也是常见的做法，这能在一定程度上降低等待的焦虑度。
 
 ```js
 const WebpackBar = require('webpackbar');
@@ -418,7 +418,7 @@ module.exports = {
 
 ```
 
-假如打包出现了问题，`webpack`将会输出一长串错误信息，难以快速确认问题。使用`friendly-errors-webpack-plugin`可以使输出的错误信息更加友好。
+如果构建出现了问题，`webpack`会输出一长串错误信息，使用`friendly-errors-webpack-plugin`可以让输出的错误信息更加友好。
 
 ```js
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
@@ -435,7 +435,7 @@ module.exports = {
 
 ```
 
-完整的`webpack.config.js`代码如下所示。
+完整的`webpack.config.js`代码列写在下面。
 
 ```js
 // 使用 path 模块来指定路径
@@ -466,10 +466,12 @@ module.exports = {
     // 移除上一次的构建文件
     new CleanPlugin(),
     // 复制 ${PROJECT_DIR}/public/favicon.ico
+    // 最终生成 ${PROJECT_DIR}/dist/favicon.ico
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
     }),
     // 使用 ${PROJECT_DIR}/public/index.html 作为模板
+    // 最终生成 ${PROJECT_DIR}/dist/index.html
     new HtmlPlugin({
       title: 'demo01',
       template: path.resolve('public', 'index.html'),
@@ -479,7 +481,7 @@ module.exports = {
 
 ```
 
-重新开始构建，之后可以看到进度条和简短的提示信息。最终生成的`dist`目录的结构如下。使用`live server`来查看效果，可以看到`Hello webpack!`。
+重新开始构建，之后可以看到进度条和简短的提示信息。下面是最终生成的`dist`目录的结构。
 
 ```sh
 dist
@@ -487,6 +489,8 @@ dist
 ├── favicon.ico
 └── index.html
 ```
+
+使用`live server`来查看效果，可以看到`Hello webpack!`。
 
 🎉恭喜，一个简单的 webpack demo 已经完成啦～
 

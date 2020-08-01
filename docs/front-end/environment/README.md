@@ -45,7 +45,7 @@
 - [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - [bitwarden](https://bitwarden.com/) - 密码管理工具，可以考虑 [NordPass](https://nordpass.com/)
-- [Charles](https://xclient.info/s/charles.html) - 抓包工具
+- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包工具，可以考虑 [Charles](https://xclient.info/s/charles.html)
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
@@ -450,8 +450,8 @@ yarn
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - material 图标主题
-- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) - Atom 主题
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - 图标主题，你也可以尝试 [Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)，[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme) - 颜色主题，你也可以尝试 [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)，[Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight)，[Winter is Coming](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming)，[Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)，[Community Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-community-material-theme)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
@@ -475,15 +475,6 @@ yarn
 {
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
   "cSpell.userWords": [],
-  // 插件 CSS Peek 使用，指定插件会在什么格式的文件中使用
-  "css_peek.peekFromLanguages": [
-    "html",
-    "javascriptreact",
-    "typescriptreact",
-    "typescript",
-    "javascript",
-    "vue"
-  ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
   // vscode 自带功能，修改调试控制台的字体族
@@ -506,13 +497,14 @@ yarn
   "editor.tabSize": 2,
   // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
   "editor.wordWrap": "on",
-  // vscode 自带功能，指定语言的解析器
+  // vscode 自带功能，emmet 辅助编写代码
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
-    "json": "jsonc"
+    "json": "jsonc",
+    "vue-html": "html"
   },
-  // 插件 ESLint 使用，设置传给 ESLint 的配置，这里设置允许使用修饰符
+  // 插件 ESLint 使用，设置传给 ESLint 的配置，这里设置允许使用 decorator
   "eslint.options": {
     "experimentalDecorators": true
   },
@@ -594,9 +586,9 @@ yarn
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Visual Studio IntelliCode 使用，指定当 editor.suggestSelection 被设置为一个使得该插件的建议不可见的值时，是否会修改 editor.suggestSelection，这里设定为自动覆盖默认值
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // vscode 自带功能，指定颜色主题，这里设置为 One Dark Pro，需要安装对应的插件
+  // vscode 自带功能，指定颜色主题，需要安装对应的插件
   "workbench.colorTheme": "One Dark Pro",
-  // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
+  // vscode 自带功能，指定图标主题，需要安装对应的插件
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定工作台启动时的显示，这里设置为新的未命名文件
   "workbench.startupEditor": "newUntitledFile",

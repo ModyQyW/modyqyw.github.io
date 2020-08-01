@@ -49,13 +49,14 @@
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme) - npm（复读）
 - [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
-- [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台的环境变量声明
-- [rimraf](https://github.com/isaacs/rimraf) - 在命令行中删除文件
+- [cross-env](https://github.com/kentcdodds/cross-env#readme) - 跨平台的环境变量声明
+- [rimraf](https://github.com/isaacs/rimraf#readme) - 在命令行中删除文件
 - [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合 yarn upgrade-interactive 使用
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter & linter
   - [prettier](https://prettier.io/) - 检查大量代码格式
+    - [@modyqyw/prettier-config](https://github.com/MillCloud/prettier-config#readme)
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
     - prettier
       - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
@@ -80,11 +81,11 @@
       - [@vue/eslint-config-airbnb](https://github.com/vuejs/eslint-config-airbnb#readme)
       - [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript#readme)
     - @modyqyw
-      - [@modyqyw/eslint-config](https://github.com/Millcloud/eslint-config)
-      - [@modyqyw/eslint-config-vue](https://github.com/Millcloud/eslint-config-vue)
-      - [@modyqyw/eslint-config-vue-ts](https://github.com/Millcloud/eslint-config-vue-ts)
-      - [@modyqyw/eslint-config-react](https://github.com/Millcloud/eslint-config-react)
-  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 文件直接用 eslint-plugin-vue 的 recommended 配置检查即可
+      - [@modyqyw/eslint-config](https://github.com/MillCloud/eslint-config#readme)
+      - [@modyqyw/eslint-config-vue](https://github.com/MillCloud/eslint-config-vue#readme)
+      - [@modyqyw/eslint-config-vue-ts](https://github.com/MillCloud/eslint-config-vue-ts#readme)
+      - [@modyqyw/eslint-config-react](https://github.com/MillCloud/eslint-config-react#readme)
+  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 文件直接用 eslint-plugin-vue 的 recommended 配置检查即可
   - [stylelint](https://stylelint.io/) - 检查 css/less/scss 代码的格式与语法，可搭配 prettier 使用
     - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard#readme)
     - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended#readme)
@@ -94,9 +95,9 @@
     - [stylelint-formatter-pretty](https://github.com/Dreamseer/stylelint-formatter-pretty#readme)
     - [stylelint-prettier](https://github.com/prettier/stylelint-prettier#readme)
     - @modyqyw
-      - [@modyqyw/stylelint-config-css](https://github.com/Millcloud/stylelint-config-css)
-      - [@modyqyw/stylelint-config-less](https://github.com/Millcloud/stylelint-config-less)
-      - [@modyqyw/stylelint-config-scss](https://github.com/Millcloud/stylelint-config-scss)
+      - [@modyqyw/stylelint-config-css](https://github.com/MillCloud/stylelint-config-css#readme)
+      - [@modyqyw/stylelint-config-less](https://github.com/MillCloud/stylelint-config-less#readme)
+      - [@modyqyw/stylelint-config-scss](https://github.com/MillCloud/stylelint-config-scss#readme)
   - [sass-formatter](https://github.com/TheRealSyler/sass-formatter#readme) - 检查 sass 代码
   - [stylus-supremacy](https://thisismanta.github.io/stylus-supremacy/) - 检查 stylus 代码，也可以考虑 [stylint](https://github.com/SimenB/stylint#readme)
   - [commitlint](https://commitlint.js.org/) - 检查提交格式
@@ -104,7 +105,7 @@
 - [commitizen](https://github.com/commitizen/cz-cli#readme) - 常与 commitlint 配合使用，自动生成提交内容
 - [lint-staged](https://github.com/okonet/lint-staged#readme) - 自动跑校验，如 prettier 和 eslint
 - [husky](https://github.com/typicode/husky#readme) - 简单地使用 git 钩子
-  - [yorkie](https://github.com/yyx990803/yorkie) - husky 简化版
+  - [yorkie](https://github.com/yyx990803/yorkie#readme) - husky 简化版
 - ci/cd
   - [flow-ci](https://flow.ci/)
   - [travis-ci](https://travis-ci.org/)
@@ -113,7 +114,7 @@
   - [github-ci](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration)
   - [gitlab-ci](https://docs.gitlab.com/ee/ci/)
 - [LambdaTest](https://www.lambdatest.com/) - 在线测试工具，在 2000+ 浏览器和操作系统上进行实时互动和自动跨浏览器在线测试
-- [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md) - 为手机网页设计的调试面板
+- [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 为手机网页设计的调试面板
 - [vConsole](https://github.com/Tencent/vConsole) - 移动端网页开发者工具
 - git
   - [pro git](https://git-scm.com/book/en/v2)
@@ -126,7 +127,7 @@
   - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - 常与 @babel/preset-env 搭配使用
   - [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
   - [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)
-  - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app)
+  - [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app#readme)
   - [core-js](https://github.com/zloirock/core-js) - js 模块化标准库，包含了大量 polyfill，常与 @babel/preset-env 搭配使用
   - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) - 用于 async 函数的独立运行时，常与 @babel/preset-env 搭配使用
 - [bluebird](https://github.com/petkaantonov/bluebird) - 支持 ie8 的 promise polyfill
@@ -134,7 +135,7 @@
   - [autoprefixer](https://github.com/postcss/autoprefixer#readme) - 自动补全 css 前缀
   - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme) - 转换 css，添加 polyfill
   - [cssnano](https://cssnano.co/) - 压缩 css
-  - [purgecss](https://purgecss.com/) - 移除不用的 css，可以结合 tailwindcss 使用
+  - [purgecss](https://purgecss.com/) - 移除不用的 css
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
@@ -145,7 +146,7 @@
     - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) - bundle 分析
     - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin) - 统计 webpack 各阶段耗时
     - [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) - 使用 [terser](https://github.com/terser/terser) 压缩 js，代替 uglify-webpack-plugin
-    - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild) 压缩 js
+    - [esbuild-webpack-plugin](https://github.com/sorrycc/esbuild-webpack-plugin) - 使用 [esbuild](https://github.com/evanw/esbuild#readme) 压缩 js
     - [dll-plugin](https://webpack.js.org/plugins/dll-plugin/) - webpack 内置
     - [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin) - 构建开始前移除上一次的构建产物
     - [html-webpack-plugin](https://webpack.js.org/plugins/html-webpack-plugin/) - 指定承载 bundle 的 html 文件
@@ -186,6 +187,8 @@
 - [date-fns](https://date-fns.org/) - 日期时间处理
 - [history](https://github.com/ReactTraining/history) - 处理访问历史，比较底层的库
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp) - 将路径字符串转换成正则，比较底层的库
+- [qs](https://www.npmjs.com/package/qs) - 增加了安全性的查询字符串解析和字符串化库
+- [query-string](https://www.npmjs.com/package/query-string) - 解析和串联 URL 查询字符串
 
 一般用 lodash + dayjs 就能解决普遍在开发中遇到的问题，有条件的可以去学一下源码。不用 moment 的原因是 moment 默认引入太大了，需要手动压缩体积。不用 date-fns 的原因是它没有中文文档，对国内新手不友好。
 
