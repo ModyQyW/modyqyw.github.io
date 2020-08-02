@@ -1,14 +1,8 @@
 # 学习路径
 
-- 建议
-  - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
-  - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
-  - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
-  - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
-  - [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
-- [学习路径英文版](https://roadmap.sh/)
-- [学习路径繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)
-- 个人学习路径，工具/库/框架等相关参考[另一部分](../lib-toolkit-framework-and-more/README.md)
+- [学习路径英文版](https://roadmap.sh/) - 对应的[繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)
+- [学习路径方糖气球版](https://ftqq.com/fangtang-fullstack/)
+- 个人学习路径，工具/库/框架等杂项参考[另一部分](../misc/README.md)
   - 思维
     - 源码最优，官方文档次之，仓库 issues 再次，博客最次
     - 不懂先思考，不成再查资料、问人
@@ -43,7 +37,7 @@
     - 请求类型
     - 报文
     - 请求流程
-    - 抓包分析，如 wireshark，charles，fiddler
+    - 抓包分析，如 wireshark，charles，fiddler，lightproxy
     - 请求分析，如 postman，paw，postwoman
     - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
     - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
@@ -152,5 +146,11 @@
       - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
       - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
       - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
+- 建议
+  - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+  - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
+  - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
+  - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
+  - [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
 
 <Vssue />

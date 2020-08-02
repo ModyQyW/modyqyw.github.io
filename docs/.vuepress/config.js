@@ -131,16 +131,16 @@ module.exports = {
             link: '/front-end/roadmap/',
           },
           {
-            text: '库/工具集/框架……',
-            link: '/front-end/lib-toolkit-framework-and-more/',
+            text: '环境',
+            link: '/front-end/environment/',
           },
           {
             text: '技术栈',
             link: '/front-end/technology-stack/',
           },
           {
-            text: '环境',
-            link: '/front-end/environment/',
+            text: '杂项',
+            link: '/front-end/misc/',
           },
           {
             text: 'jquery-bootstrap',

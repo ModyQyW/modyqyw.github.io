@@ -1,5 +1,9 @@
 # 库/工具集/框架……
 
+这个部分覆盖了很多方面，建议把这个部分当成速查表来使用。
+
+## 基本概念
+
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
 ## 浏览器开发者工具
@@ -41,6 +45,35 @@
 - [设计心理学](https://book.douban.com/subject/26742341/)
 - [Web 表单设计](https://book.douban.com/subject/4886100/)
 
+## 编程用字体
+
+- [Menlo](https://www.cufonfonts.com/font/menlo)
+- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
+- [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
+- [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
+- [Fira Code](https://github.com/tonsky/FiraCode/releases)
+
+## 免费可商用字体
+
+- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/)
+- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
+- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
+- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
+- [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
+
+## 开源图标
+
+- [iconfont](https://www.iconfont.cn/)
+- [bootstrap icons](https://icons.getbootstrap.com/)
+- [material design icons](https://materialdesignicons.com/)
+- [material icons](https://google.github.io/material-design-icons/)
+- [remix icons](https://remixicon.com/)
+- [ionicons](https://ionicons.com/)
+- [octicons](https://primer.style/octicons/)
+- [flaticon](https://www.flaticon.com/)
+- [font awesome](https://fontawesome.com/)
+- [ant-design-icons](https://github.com/ant-design/ant-design-icons)
+
 ## 项目体系
 
 - [yeoman](https://yeoman.io/) - 构筑专属的 cli，也可以考虑使用 [oclif](https://oclif.io/)
@@ -48,10 +81,10 @@
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme) - npm（复读）
-- [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好，v2 坑比较多
+- [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好
 - [cross-env](https://github.com/kentcdodds/cross-env#readme) - 跨平台的环境变量声明
-- [rimraf](https://github.com/isaacs/rimraf#readme) - 在命令行中删除文件
-- [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合 yarn upgrade-interactive 使用
+- [rimraf](https://github.com/isaacs/rimraf#readme) - 跨平台在命令行中删除文件
+- [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合`yarn upgrade-interactive`使用
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter & linter
@@ -238,17 +271,17 @@
   - [vuetify](https://vuetifyjs.com/zh-Hans/)
   - [element](https://element.eleme.cn/#/zh-CN/component/installation) - 已经没有维护人员，慎重考虑
     - [umy-ui](https://github.com/u-leo/umy-ui) - el-table 增强版
+    - [kkbjs-element](https://github.com/kkbjs/element3#readme) - 对应 vue 3 版本的 element，开课吧 fork 修改
   - [antd-vue](https://www.antdv.com/)
-  - [viewui](https://www.iviewui.com/docs/introduce)
   - [hey-ui](https://www.heyui.top/)
-  - [buefy](https://github.com/buefy/buefy/)
   - [bootstrap-vue](https://bootstrap-vue.js.org/docs)
+  - [viewui](https://www.iviewui.com/docs/introduce)
+  - [buefy](https://github.com/buefy/buefy/)
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
   - [mand-mobile](https://didi.github.io/mand-mobile/)
   - [nut-ui](http://nutui.jd.com/#/intro)
   - [zarm-vue](https://zhongantech.github.io/zarm-vue/#/documents/quick-start)
-  - [onsen-ui](https://onsen.io/v2/guide/vue/)
-  - [prime](https://primefaces.org/primevue/showcase/#/setup)
+  - [更多](https://github.com/topics/vue)
 - cli
   - [nuxt](https://zh.nuxtjs.org/guide/installation/)
   - [vue-cli](https://cli.vuejs.org/zh/guide/) - 需要手动支持 ssr
@@ -279,7 +312,7 @@
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
-  - [vue-element-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
+  - [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard) - 后台管理系统
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
@@ -354,12 +387,11 @@
   - [antd-mobile](https://mobile.ant.design/docs/react/introduce-cn)
   - [zarm](https://zarm.design/#/components/quick-start)
   - [react-desktop](http://reactdesktop.js.org/)
-  - [onsen-ui](https://onsen.io/v2/guide/react/)
   - [shards](https://designrevision.com/docs/shards-react/getting-started)
   - [prime](https://primefaces.org/primereact/showcase/#/setup)
   - [chakra-ui](https://chakra-ui.com/)
   - [react-spectrum](https://react-spectrum.adobe.com/)
-  - [primer](https://primer.style/components)
+  - [更多](https://github.com/topics/vue)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
     - [blitz](https://github.com/blitz-js/blitz) - 基于 next 再封装，全栈框架
@@ -552,22 +584,6 @@
     - mysql，mongodb，sql server
     - redis 数据结构，数据一致性，分布式锁，订阅发布模式，备份与恢复
     - graphql 概念与操作
-
-## 编程用字体
-
-- [Menlo](https://www.cufonfonts.com/font/menlo)
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
-- [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
-- [Fira Code](https://github.com/tonsky/FiraCode/releases)
-
-## 免费可商用字体
-
-- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/)
-- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
-- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
-- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
-- [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
 
 ## 参考
 

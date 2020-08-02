@@ -504,9 +504,9 @@ dist
 
 ![webpack示意图](https://ae01.alicdn.com/kf/Hc2861d3d0e2b4ad89bfab9c37be5ecbcK.jpg)
 
-单页面应用 SPA 只有单入口，此时`entry`是一个字符串 string 或一个对象 object。多页面应用 MPA 有多入口，此时`entry`只能是是一个对象 object。demo01 就是一个 SPA 的配置。
+单页面应用 SPA 只有单入口，`entry`是一个字符串 string 或一个对象 object。多页面应用 MPA 有多入口，`entry`只能是一个对象 object。demo01 就是一个 SPA 的配置。
 
-单入口也可以写成多入口的形式，demo01 中`entry`的写法等同于下面的代码。单入口默认的 key 是`main`。
+demo01 中`entry`的写法等同于下面的代码，也就是说，单入口写成字符串形式的时候，实际上会转换成对象形式，默认的 key 是`main`。
 
 ```js
 const path = require('path');
@@ -535,7 +535,7 @@ module.exports = {
 
 ```
 
-考虑到实际开发时必要的工程化，我们需要单独维护`webpack`配置相关的文件。我们先把没有使用到`context`的`webpack.config.js`移动到到`${PROJECT_DIR}/config`文件夹中，再指定`entry`的 key 为`app`。
+考虑到实际开发时必要的工程化，我们需要单独维护`webpack`配置相关的文件。我们先把没有使用到`context`的`webpack.config.js`移动到`${PROJECT_DIR}/config`文件夹中，再指定`entry`的 key 为`app`。
 
 ```js
 // ${PROJECT_DIR}/config/webpack.config.js
@@ -551,7 +551,7 @@ module.exports = {
 
 ```
 
-`webpack`会默认使用`${PROJECT_DIR}/webpack.config.js`作为配置文件，我们移动配置文件后，就需要修改命令、手动指定配置文件了。
+`webpack`默认使用`${PROJECT_DIR}/webpack.config.js`作为配置文件，我们移动配置文件后，就需要修改命令、手动指定配置文件了。
 
 ```json
 {
@@ -566,33 +566,13 @@ module.exports = {
 
 ### 输出 output
 
-分析依赖生成依赖图之后，`webpack`就会开始构建，构建结果如何输出就由`output`指定。
+`webpack`构建的结果如何输出由`output`指定。
 
-SPA 可以只简单地指定`filename`和`path`，如上面示例所示。而如果要构建 MPA，除了修改`entry`，还需要利用占位符确保文件名唯一。
+SPA 可以直接指定`output.filename`和`output.path`，像之前的示例一样，但更好的方法是使用对应的`chunk`的名称来给文件起名。
 
-下面代码中，`filename: '[name].js'`表示使用`entry`中配置的 key 来命名对应`entry`构建出来的文件。
+`entry`目前只会对应一个`chunk`，而这个`chunk`的名称就是`entry`的 key，也就是`app`。
 
-```js
-const path = require('path');
-
-module.exports = {
-  entry: {
-    main: path.resolve('src', 'main.js'),
-    app: path.resolve('src', 'app.js'),
-  },
-  output: {
-    path: path.resolve('dist'),
-    filename: '[name].js',
-  },
-};
-
-```
-
-此外，还需要修改`html-webpack-plugin`的配置，让每一个入口点都有一个专属的`.html`文件模板，并且还需要让每一个`.html`文件模板都插入公共代码块。
-
-MPA 在配置上相对复杂，本篇教程只会以 SPA 作为示例，感兴趣的话可以自行搜索相关资料学习 MPA 的 `webpack`构建配置。
-
-我们修改一下`output`的配置，使得`entry`指定的文件构建完毕后的命名跟随`entry`的 key。
+我们修改一下`output`的配置，使得`entry`指定的文件构建出来之后跟随`entry`的 key。
 
 ```js
 const path = require('path');
@@ -611,19 +591,23 @@ module.exports = {
 
 ```
 
+或许你会疑惑，为什么用`chunk`的名称来给文件起名更好？现在这样起名叫`bundle.js`不好吗？
+
+对于现在的项目规模，起名叫`bundle.js`完全足够了。但对于更大的项目，我们往往会用到`splitChunks`做优化，这种时候就不能直接起名叫`bundle.js`了。至于为什么不能，先留着这个疑问吧，之后这个疑问就会得到解答了。
+
 ### 插件 plugin
 
-`plugin`用于增强`webpack`功能，比如优化打包文件，管理资源，注入环境变量等等，作用于整个构建过程。
+`plugin`用来增强`webpack`功能，比如优化打包文件，管理资源，注入环境变量等等，它作用于整个构建过程。
 
-前面的例子中，我们使用到了`copy-webpack-plugin`，`html-webpack-plugin`等相对来说比较简单的`plugin`。
+前面的例子中，我们用到了`copy-webpack-plugin`，`html-webpack-plugin`一些相对来说比较简单的`plugin`。
 
-每个`plugin`都需要放入到`plugins`字段数组中，顺序一般不影响，具体的配置需要去查询具体的文档。
+每个`plugin`都需要放到`plugins`字段数组里，顺序一般不影响，具体的配置需要去查询具体的文档。
 
 ### 加载器 loader
 
-由于`webpack`默认只支持解析`.js`和`.json`文件，所以项目中使用到的其他文件，比如图片文件、字体文件、样式文件等，就只能使用`loader`解析。
+因为`webpack`默认只支持解析`.js`和`.json`文件，所以项目中使用到的其他文件，比如图片文件、字体文件、样式文件等，就只能使用`loader`解析。
 
-下面将会关注一些常用的`loader`。
+下面会关注一些常用的`loader`。
 
 ### js 新语法和新特性相关的 loader
 
@@ -2184,8 +2168,8 @@ module.exports = {
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
 - [webpack-bar](https://github.com/nuxt/webpackbar)
 - [webpack plugins 的顺序会影响什么吗？](https://stackoverflow.com/questions/41470771/webpack-does-the-order-of-plugins-matter)
-- [常用 plugins 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
-- [常用 loaders 汇总](https://modyqyw.top/front-end/lib-toolkit-framework-and-more/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
+- [常用 plugins 汇总](https://modyqyw.top/front-end/misc/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
+- [常用 loaders 汇总](https://modyqyw.top/front-end/misc/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 - [babel](https://babeljs.io/)
 - [babel-loader](https://github.com/babel/babel-loader#readme)
 - [babel 教程](https://www.jiangruitao.com/docs/babel/)
