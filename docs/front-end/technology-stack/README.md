@@ -1,18 +1,25 @@
 # 技术栈
 
-基于个人喜好推荐的技术栈。
+基于个人喜好推荐的技术栈，更多内容参见[杂项](../misc/README.md)。
 
-eslint + stylelint + prettier + commitlint + commitizen 这套校验组合拳就不再重复说了。
+## 校验
 
-移动端应用 app 建议优先原生，其次 uni-app，最次 taro / rn。
+项目校验用下面的组合。
 
-小程序建议优先 taro，其次 uni-app，再次原生。
+- prettier - 格式化各类代码
+- eslint - 格式化、校验 js/jsx/ts/tsx/vue 代码
+- stylelint - 格式化、校验 css/less/scss 代码
+- commitizen - 便捷生成提交信息
+- commitlint - 校验提交信息
+- lint-staged - 提交前执行指定的校验
+- yorkie - 便捷指定 git hook 对应的操作，也可以用 husky
 
 ## 原生
 
-- PC 端 / 移动端网页
-  - jquery 1 + bootstrap 3 + bootstrap-table
-- 移动端应用
+- 电脑端 / 移动端网页
+  - 适配 ie8 - jquery 1 + bootstrap 3 + bootstrap-table
+  - ie8 qtm - jquery 3 + bootstrap 4 + bootstrap-table
+- 移动端客户端
   - cordova
   - flutter
   - java
@@ -20,33 +27,27 @@ eslint + stylelint + prettier + commitlint + commitizen 这套校验组合拳就
   - kotlin
 - 小程序
   - 各家小程序原生
-- 桌面应用
+- 桌面客户端
   - jquery 3 + bootstrap 4 + bootstrap-table + electron
-
-点评：
-
-- 国内现状驱动 - 目前国内使用 ie 内核的人数还比较多，在政府部门、高校中尤为多见，为了满足该部分用户需求，不得不使用 jq 1 + bs 3 的组合进行适配，更痛苦的是微软都已经不支持 ie11- 了，还在用
-- 开发效率低
-- 为了提高开发效率，又会转去使用模版，不利于塑造知识结构，更负上了模板的技术栈
-- 扩展性/移植性低 - 平台不同，技术栈也要做相应改动
 
 ## Vue 系
 
-vue 全家桶 = vue + vue-router + vuex + tailwindcss(vuetify 不需要)
-
-- less - antd-vue(pc) / vant(mobile)
-- scss - vuetify(pc & mobile) / element-ui(pc) / nut-ui(mobile) / zarm-vue(mobile)
-
-- PC 端网页
-  - vue 全家桶，使用 pc 组件库
+- 电脑端网页
+  - vue + vue-router + vuex + vuetify
+  - vue + vue-router + vuex + element-ui / antd-vue / view-ui / hey-ui + tailwindcss / bulma
+  - nuxt + vuetify
+  - nuxt + element-ui / antd-vue / view-ui / hey-ui + tailwindcss / bulma
 - 移动端网页
-  - vue 全家桶，使用 mobile组件库
-- 移动端应用
-  - uni-app + vuex + @modyqyw/mp-scss + uview-ui
+  - vue + vue-router + vuex + vant / nut-ui / zarm-vue
+- 移动端客户端
+  - uni-app + vuex + uview-ui + @modyqyw/mp-scss
 - 小程序
-  - uni-app + vuex + @modyqyw/mp-scss + uview-ui
-- 桌面应用
-  - PC 端网页选型 + electron
+  - uni-app + vuex + uview-ui + @modyqyw/mp-scss
+- 桌面客户端
+  - vue + vue-router + vuex + vuetify + electron
+  - vue + vue-router + vuex + element-ui / antd-vue / view-ui / hey-ui + tailwindcss / bulma + electron
+  - nuxt + vuetify + electron
+  - nuxt + element-ui / antd-vue / view-ui / hey-ui + tailwindcss / bulma + electron
 
 ## React 系
 
@@ -55,15 +56,21 @@ react 全家桶 = umi(带 router) + unstated-next / hooks / @umijs/plugin-model 
 - less - antd(pc) / react-suite(pc) / blueprint(pc) / antd-mobile(mobile)
 - scss - zent(pc) / zarm(mobile)
 
-- PC 端网页
-  - react 全家桶，使用 PC 端组件库
+- 电脑端网页
+  - umi + unstated-next / hooks / redux + material-ui
+  - umi + unstated-next / hooks / redux + antd / react-suite / blueprint / zent + tailwindcss / bulma
+  - next + unstated-next / hooks / redux + material-ui
+  - next + unstated-next / hooks / redux + antd / react-suite / blueprint / zent + tailwindcss / bulma
 - 移动端网页
-  - react 全家桶，使用移动端组件库
-- 移动端应用
-  - expo + react-router / react-navigation + unstated-next + react-native-elements + antd-rn
+  - umi + unstated-next / hooks / redux + antd-mobile / zarm + tailwindcss / bulma
+- 移动端客户端
+  - expo + react-router / react-navigation + unstated-next / hooks / redux + react-native-elements + ui-kitten
 - 小程序
-  - taro + redux / unstated-next + @modyqyw/mp-scss + taro-ui
-- 桌面应用
-  - PC 端网页选型 + electron
+  - taro + unstated-next / hooks / redux + taro-ui + @modyqyw/mp-scss
+- 桌面客户端
+  - umi + unstated-next / hooks / redux + material-ui + electron
+  - umi + unstated-next / hooks / redux + antd / react-suite / blueprint / zent + tailwindcss / bulma + electron
+  - next + unstated-next / hooks / redux + material-ui + electron
+  - next + unstated-next / hooks / redux + antd / react-suite / blueprint / zent + tailwindcss / bulma + electron
 
 <Vssue />
