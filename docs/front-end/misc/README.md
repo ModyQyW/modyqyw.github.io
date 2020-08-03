@@ -214,7 +214,8 @@
 ## 工具集
 
 - [lodash](https://lodash.com/)
-- [futil-js](https://github.com/smartprocure/futil-js)
+- [xe-utils](https://x-extends.gitee.io/xe-utils/)
+- [futil-js](https://github.com/smartprocure/futil-js#readme)
 - [moment](https://momentjs.com/) - 日期时间处理
 - [dayjs](https://dayjs.gitee.io/zh-CN/) - 日期时间处理
 - [date-fns](https://date-fns.org/) - 日期时间处理

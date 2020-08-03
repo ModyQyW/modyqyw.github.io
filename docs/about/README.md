@@ -4,11 +4,12 @@
 
 - 一个前端
 - 努力是最不值得拿出来夸口的东西
-- 闲暇时间希望能做自己想做的事，希望能得到最单纯的快乐，希望世界上高素质的人多一些
+- 闲暇时间希望能做自己想做的事，希望能得到最单纯的快乐
+- 希望世界上高素质的人多一些，包括但不限于不写错别字，不写病句，能正确且准确地表达出个人想法，不阴阳怪气，不懂就闭嘴等等
 - 喜欢的游戏：最后生还者1 The Last of Us Part I，黑魂系列 Dark Souls
 - 喜欢的视频制作者：Mr.Quin，怕上火暴王老菊，纯黑
 - 喜欢的影视剧：疑犯追踪 Person of Interest，神探夏洛克 Sherlock(BBC)，生活大爆炸 The Big Bang Theory
-- 讨厌的行为：阴阳怪气
+- 讨厌的行为：阴阳怪气，不懂装懂，自以为是
 - 讨厌的人：杠精，阴阳人
 - 支付宝饭碗：13266337925
 - QQ/微信：261857860
@@ -28,17 +29,18 @@
   - stylelint + @modyqyw/stylelint-config-xxx
   - @commitlint/cli + @commitlint/config-conventional
   - commitizen
-- 迁移、重构项目，收缩技术栈
-  - wepy，mpvue -> taro
+  - lint-staged
+  - yorkie
+- 关注数据结构、算法、新标准等，推进历史代码优化、迁移和重构
+- 收缩了项目技术栈
+  - wepy，mpvue -> uni-app，taro
   - rn -> uni-app
   - mobx -> unstated-next
-  - angularjs -> react(umi) + ts / vue(vue-cli)
+  - angularjs -> react(umi，next) + ts / vue(vue-cli，nuxt)
 - 小程序样式库
   - @modyqyw/mp-scss
-- 确立开发套路，减少不必要的选型时间
-- 整理学习资料，确立实习生培养路径
-- 关注数据结构与算法，推进性能优化，推进历史代码优化和重构
-- 保持关注新技术，摆脱业务怪圈
+- 确立[项目选型](../front-end/technology-stack/README.md)
+- 保持关注新技术，整理学习资料供学习使用
 
 ## 关于更新
 

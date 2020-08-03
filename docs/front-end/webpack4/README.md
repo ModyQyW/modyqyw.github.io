@@ -611,9 +611,9 @@ module.exports = {
 
 ### js 新语法和新特性相关的 loader
 
-因为`webpack`本身并不支持解析 es6+ 语法，所以要使用 es6+ 语法，我们就需要使用`babel`和`babel-loader`。
+因为`webpack`本身并不支持解析 es6+ 语法，所以要使用 es6+ 语法，我们就需要使用`babel`和`babel-loader`，让它们来解析 es6+ 语法。
 
-`babel`一个主要作用就是转换新语法为旧语法，也就是我们常说的语法转换，比如把箭头函数的写法转换成`function`的写法。`babel-loader`使得`webpack`在构建过程中能使用`babel`处理相关的文件。
+`babel`的一个主要作用就是把新语法转换成旧语法，也就是我们常说的语法转换，比如把箭头函数转换成`function`。`babel-loader`使得`webpack`在构建过程中能使用`babel`处理相关的文件。
 
 首先还是要安装相关的依赖。
 
@@ -622,7 +622,7 @@ npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1 react@16.13.1 react-
 npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 @types/react@16 @types/react-dom@16 -DE
 ```
 
-其次是修改`webpack`配置。不要忘记，对于`webpack`而言，所有文件都可以视作一个模块，所以需要在`module.rules`中配置`loader`。
+然后修改`webpack`配置。不要忘记，对于`webpack`来说，所有文件都可以看成一个模块，所以需要在模块对应的字段下写配置。
 
 ```js
 // ${PROJECT_DIR}/config/webpack.config.js
@@ -647,9 +647,9 @@ module.exports = {
 
 ```
 
-不处理`node_modules`和`bower_components`中的`.js`文件能够有效地提高编译效率，同时避免可能存在的重新编译问题。
+不处理`node_modules`和`bower_components`里面的`.js`文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。一般来说，`node_modules`和`bower_components`里面的`.js`文件都会直接支持 es5，如果有特殊需求（比如支持 es3），或者一些`.js`文件没有直接支持 es5，才需要去特别处理这部分文件。
 
-修改完`webpack`配置后，我们还需要配置`babel`，让它根据我们的需求进行转译。我们创建`${PROJECT_DIR}/babel.config.json`作为`babel`的配置文件。
+修改完`webpack`配置后，我们还需要配置`babel`，让它根据我们的需求转换语法。我们创建`${PROJECT_DIR}/babel.config.json`作为`babel`的配置文件。
 
 要支持 es6+ 语法非常简单，可以直接使用`babel`官方提供的`@babel/preset-env`。它能智能转换 es6+ 语法到 es5 语法，无需提供额外的配置。
 

@@ -4,8 +4,16 @@
 - [学习路径方糖气球版](https://ftqq.com/fangtang-fullstack/)
 - 个人学习路径，工具/库/框架等杂项参考[另一部分](../misc/README.md)
   - 思维
-    - 源码最优，官方文档次之，仓库 issues 再次，博客最次
-    - 不懂先思考，不成再查资料、问人
+    - 不懂的问题先看源码、官方文档、仓库 issues，然后尝试自己调试、思考，最后是查资料、提问、整理。
+    - 不要用设问的语气提问。
+      - 反例：`这个功能应该很简单吧？不会用很长时间实现吧？`提问者主观上已经形成“很简单”的印象，如果这个印象是正确的，那还好，如果是错误的，就需要别人帮你纠正，但是别人没有义务纠正你的错误印象。
+      - 正例：`实现这个功能的难度如何？需要多长时间？`
+    - 提问的时候，准确地描述自己的操作和问题、提供相关的信息，这样有利于别人复现你的问题。
+      - 反例1：`为什么登录后不跳转？`什么网址？哪个项目？登录是怎么操作的？想要跳转到哪里？别人没有义务花时间去理解这个不清不楚的问题然后回答。
+      - 正例1：`<https://www.abc.com> 这个网址打开之后，点击右上角“登录”按钮，输入账号密码，确认登录后，页面没有跳转到“个人中心”，为什么？`
+      - 反例2：`vscode 怎么用？`别人没有义务花时间回答这个覆盖范围超广的问题，百度、必应、谷歌之类的搜索引擎更适合回答这个问题。
+      - 正例2：`vscode 的 codeActionsOnSave 怎么用？我查过官网和别的一些资料，但是还是不理解，你能跟我讲解一下或者给个示例吗？`
+  - 文档
     - [w3c](https://www.w3.org/)
     - [mdn](https://developer.mozilla.org/)
     - [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
@@ -60,6 +68,7 @@
     - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
     - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
     - [小浩算法](https://www.geekxh.com/)
+    - [IAlgorithms](https://ziyi2.github.io/algorithms/)
   - 正则表达式
     - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
   - 数据库入门
