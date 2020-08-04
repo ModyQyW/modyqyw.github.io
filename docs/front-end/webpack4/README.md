@@ -839,9 +839,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 样式相关的 loader
 
-因为`webpack`本身并不支持解析`.css`，`.sass`和`.scss`文件，所以我们需要使用`loader`去解析。
+因为`webpack`本身并不支持解析`.css`，`.sass`和`.scss`文件，所以我们需要用`loader`去解析这些文件。
 
-`.less`和`.styl`的配置也相差不大，自己参考对应`loader`的文档摸索即可。
+要解析`.less`和`.styl`文件，相对应的`loader`的配置大同小异，参考对应文档摸索就行了。
 
 首先还是要安装相关的依赖。
 
@@ -850,7 +850,7 @@ npm i zent@8 -E
 npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
-`css-loader`能够解析`.css`文件成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
+`css-loader`能够把`.css`文件解析成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
 
 我们先在`${PROJECT_DIR}/src/index.js`引入`.css`文件。
 
@@ -869,7 +869,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-然后创建`${PROJECT_DIR}/src/index.css`，内容如下所示。
+然后创建`${PROJECT_DIR}/src/index.css`，简单地设置样式。
 
 ```css
 *,
@@ -914,13 +914,13 @@ module.exports = {
 
 ```
 
-默认地，`.js`文件引用了 css，转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中，你也可以通过修改`style-loader`地配置来自定义这一行为。
+默认地，`.js`文件引用了 css，转换后的 css 模块会被嵌入到`.js`文件中，然后再生成标签嵌入到`<head>`标签中，你也可以通过修改`style-loader`的配置来自定义这一行为。
 
-重新构建并运行，我们可以在浏览器控制台中看到，样式被插入到`<head>`标签中，内容与我们书写的一致，并且已经起了作用。
+重新构建并运行，我们可以在浏览器开发者工具中看到，样式已经被插入到`<head>`标签里面了。
 
-值得注意的是，如果要使用多个`loader`处理某种文件，`loader`的顺序应该是从后往前的，上面的示例中，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
+需要注意，`loader`的调用顺序是从后往前的。上面的示例里，会先调用`css-loader`处理`.css`文件，再调用`style-loader`做进一步处理。
 
-要处理`.sass`和`.scss`文件，又有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们首先需要复制粘贴，并在最后加上相应的`.loader`配置。
+处理`.sass`和`.scss`文件有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，然后配置`sass-loader`就可以了。
 
 ```js
 module.exports = {
@@ -952,7 +952,7 @@ module.exports = {
 
 ```
 
-由于`sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前有多少`loader`会处理`@import`语句。
+`sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前还有 1 个`loader`会处理`@import`语句。
 
 ```js
 module.exports = {
@@ -989,7 +989,7 @@ module.exports = {
 
 ```
 
-由于 sass 并没有提供 url 重写的功能，我们还需要配置`resolve-url-loader`，否则可能会在实际使用出现 url 指向不正确的问题。注意：`resolve-url-loader`并不会处理`@import`语句，所以无需再修改`css-loader`的`importLoaders`配置。
+另外需要注意，sass 没有 url 重写的功能，所以我们还需要加入`resolve-url-loader`，不然可能会在实际使用的时候出现 url 指向不正确的问题。`resolve-url-loader`并不会处理`@import`语句，所以不用再修改`css-loader`的`importLoaders`配置。
 
 ```js
 module.exports = {
@@ -1027,9 +1027,9 @@ module.exports = {
 
 ```
 
-我们把`index.css`重命名为`index.scss`并修改`${PROJECT_DIR}/src/index.js`中的引入。重新构建并测试，一切正常。
+我们把`index.css`重命名为`index.scss`并修改`${PROJECT_DIR}/src/index.js`里面的引入。重新构建、测试，一切正常。
 
-我们再来试着添加并使用`zent`。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的带图标的按钮。
+我们再来试着添加并使用`zent`这个组件库。首先修改`${PROJECT_DIR}/src/index.js`，加入一个简单的带图标的按钮。
 
 ```js
 import React from 'react';
@@ -1051,7 +1051,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-之后修改`${PROJECT_DIR}/babel.config.json`，根据`zent`的官网说明加入按需加载的优化。
+然后修改`${PROJECT_DIR}/babel.config.json`，根据`zent`的官网说明加入按需加载的优化。
 
 ```json
 {
@@ -1072,9 +1072,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-重新构建并测试，我们能看到一个蓝色的按钮，按钮内左边是有赞的图标，文字是`Hello Zent`。
+重新构建、测试，可以看到一个蓝色的按钮，按钮内左边是有赞的图标，文字是`Hello Zent`。
 
-可能有人会问，为什么不用`antd`作示例。第一是因为我认为`zent`使用的 scss 的语法比`antd`使用的 less 的更接近 css，第二是因为`antd`曾经出过圣诞彩蛋事件，目前对我来说没有可信度。
+可能有人会问，为什么不用`antd`作示例呢？第一，我认为`zent`使用的 scss 的语法比`antd`使用的 less 的更接近 css；第二，`antd`曾经出过圣诞彩蛋事件，目前对我来说没有可信度。
 
 ### 资产相关的 loader
 
