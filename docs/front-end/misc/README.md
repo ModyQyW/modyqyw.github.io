@@ -231,6 +231,7 @@
 - ui
   - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
     - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
+  - [masonry](https://masonry.desandro.com/) - 层叠网格布局插件
   - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
     - [mdbootstrap](https://mdbootstrap.com/) - material design + bootstrap
     - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用[旧版](https://bootstrap-table-docs3.wenzhixin.net.cn/zh-cn/home/)
@@ -245,7 +246,14 @@
   - [bluebird](http://bluebirdjs.com/docs/getting-started.html) - promise 库
   - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
   - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
-  - [dplyaer](https://dplayer.js.org/) - h5 播放器
+  - [leaflet](https://leafletjs.com/) - 地图库
+  - [aplayer](https://aplayer.js.org/) - h5 音频播放器
+  - [dplayer](https://dplayer.js.org/) - h5 视频播放器
+  - [screenfull](https://github.com/sindresorhus/screenfull.js/#readme) - 全屏
+  - [file-saver](https://github.com/eligrey/FileSaver.js#readme) - 文件保存
+  - [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
+  - [hammer](http://hammerjs.github.io/) - 触摸手势
+  - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
   - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
   - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
