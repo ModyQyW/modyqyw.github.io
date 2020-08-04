@@ -647,11 +647,11 @@ module.exports = {
 
 ```
 
-不处理`node_modules`和`bower_components`里面的`.js`文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。一般来说，`node_modules`和`bower_components`里面的`.js`文件都会直接支持 es5，如果有特殊需求（比如支持 es3），或者一些`.js`文件没有直接支持 es5，才需要去特别处理这部分文件。
+不处理`node_modules`和`bower_components`里面的`.js`文件能够有效地提高编译效率，同时避免可能存在的二次编译问题。一般来说，`node_modules`和`bower_components`里面的`.js`文件都会直接支持 es5，如果有特殊需求（比如支持 es3），或者一些`.js`文件没有直接支持 es5，就要特别处理这部分文件。
 
 修改完`webpack`配置后，我们还需要配置`babel`，让它根据我们的需求转换语法。我们创建`${PROJECT_DIR}/babel.config.json`作为`babel`的配置文件。
 
-要支持 es6+ 语法非常简单，可以直接使用`babel`官方提供的`@babel/preset-env`。它能智能转换 es6+ 语法到 es5 语法，无需提供额外的配置。
+要支持 es6+ 语法非常简单，可以直接使用`babel`官方提供的`@babel/preset-env`。它能把 es6+ 语法转换到 es5 语法，无需提供额外的配置。
 
 ```json
 {
@@ -660,11 +660,11 @@ module.exports = {
 
 ```
 
-但现实往往是残酷的，`@babel/preset-env`默认的配置通常不能准确满足项目需求。一个比较常见的项目需求是支持特定的浏览器和特定的浏览器版本，比如 ie 11。
+但现实往往是残酷的，`@babel/preset-env`默认的配置通常不能准确满足项目需求。一个比较常见的项目需求是支持特定的浏览器和特定的浏览器版本，比如支持 ie 11。
 
-这个时候，我们就需要先向`@babel/preset-env`说明目标浏览器（我们想要支持的浏览器），也就是语法转换后的代码能够跑在什么浏览器上。
+这个时候，我们就需要向`@babel/preset-env`说明目标浏览器（我们想要支持的浏览器），也就是语法转换后的代码能够跑在什么浏览器上。
 
-怎么说明？我们可以创建`${PROJECT_DIR}/.browserslistrc`文件。`.browserslistrc`文件是一个特殊的文件，依赖于`browserslist`，它的内容说明了项目的目标浏览器。如果存在该文件，它的内容就会被`@babel/preset-env`读取并使用。
+我们可以用`${PROJECT_DIR}/.browserslistrc`文件来说明目标浏览器。`.browserslistrc`文件是一个特殊的依赖于`browserslist`的文件，它的内容说明了项目的目标浏览器，会被`@babel/preset-env`读取并使用。
 
 我们为`.browserslistrc`添加以下内容。
 
@@ -691,29 +691,13 @@ ie >= 11
 
 上面的条件取并集，就是需要支持的浏览器范围。
 
-向`@babel/preset-env`说明完目标浏览器之后，`babel`在转换语法时会更加精准，它会把目标浏览器不支持的 es6+ 语法转换成 es5 语法，同时保留目标浏览器支持的 es6+ 语法。
+说明目标浏览器之后，`babel`在转换语法的时候会更加精准。它会把目标浏览器不支持的 es6+ 语法转换成 es5 语法，同时保留目标浏览器支持的 es6+ 语法。
 
 但是如果转换后的代码中存在浏览器不支持的特性，比如`Promise`，那该怎么办呢？这个时候，`babel`的另一个作用，自动补齐特性，就很好地解决了这个问题。
 
 polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代码包。我们可以配置`babel`自动引入 polyfill 来自动补齐目标浏览器的特性。
 
-`@babel/preset-env`默认只会转换语法，我们需要手动配置来启用自动补全特性的功能。这里我们指定`useBuiltIns`为`usage`模式，这样做的好处是`@babel/preset-env`会为我们自动按需引入 polyfill，省去了不少麻烦。
-
-```json
-{
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "useBuiltIns": "usage"
-      }
-    ]
-  ]
-}
-
-```
-
-默认地，`@babel/preset-env`会使用`core-js` v2 和`regenerator-runtime`做 polyfill。但是`core-js` v3 提供的 polyfill 更多，同时减少了全局污染，现在一般建议使用 v3。这里我们就指定要使用 v3 版本。
+`@babel/preset-env`默认只会转换语法，我们需要手动配置来启用自动补全特性的功能。
 
 ```json
 {
@@ -730,11 +714,20 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 ```
 
-之后，`babel` 会为我们自动引入`core-js` v3 和`regenerator-runtime`中和项目代码关联的部分，自动补全浏览器特性。
+- `useBuiltIns`指定`@babel/preset-env`怎么处理 polyfill。
+  - 默认地，`useBuiltIns`的值是`false`，也就是不处理 polyfill。
+  - `useBuiltIns`可以指定成`entry`，这时候我们需要手动地在项目入口引入`core-js`和`regenerator-runtime`。
+  - 指定成`usage`是更好的选择，这时候我们无需手动引入，`babel/preset-env`会为我们做相关的引入。
+- `core-js`指定`@babel/preset-env`使用什么版本的`core-js`，只有`useBuiltIns`的值是`entry`或`usage`的时候起作用。
+  - 默认地，`core-js`的值是`2`，表示使用`core-js`v2。
+  - 指定成`3`是更好的选择，因为`core-js`v3 提供了更多的 polyfill，同时减少了全局污染。
+  - 只指定版本，就只会引入稳定的特性。要引入提案特性，可以指定`"proposals": true`，这样就可以使用`core-js`v3 已经支持的提案（一般已经足够稳定）。
+
+这时候，`babel`会为我们自动引入`core-js`v3 和`regenerator-runtime`中和项目代码关联的部分，自动补全浏览器特性。
 
 但使用这样的配置构建出来的代码还不能投入到生产环境中。自动补全浏览器特性之后可能会使得每个文件头部都增加了相同的代码，比如多个文件都使用了`Promise`，转译之后就会在这些文件的头部都引入相同的`Promise`相关的 polyfill。这些重复的代码会影响最终构建包的体积，在实际开发中是难以接受的。
 
-我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的代码并放到一起，进而压缩最终构建包的体积。
+我们可以使用`@babel/plugin-transform-runtime`来抽离这些重复的 polyfill 代码，把它们放到一起，进一步压缩最终构建包的体积。业务代码需要用到对应功能的时候，再去引入。当然，引入 polyfill 也会帮我们自动处理。
 
 ```json
 {
@@ -752,7 +745,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 ```
 
-除了 es6+ 的语法，我们还想支持`react`语法。类似地，我们也可以使用`babel`来解析`react`代码，只需要根据文档配置`@babel/preset-react`即可。
+除了 es6+ 的语法，我们还想支持`react`语法。我们也可以用`babel`来解析`react`代码，只需要根据`@babel/preset-react`的文档配置就可以了。
 
 ```json
 {
@@ -806,7 +799,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-你也可以使用函数式组件 FC 书写。
+现在更推荐用函数式组件 Function Component。如果不了解这部分的话，必须要去再看看官方文档了。
 
 ```js
 import React, { useEffect } from 'react';
@@ -836,9 +829,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 之后构建并运行测试即可。
 
-如果正常，可以看到页面上会出现`Hello Webpack!`的文字，5 秒左右标签页的标题被修改成`Hello World!`。
+如果一切正常，可以看到页面上会出现`Hello Webpack!`的文字，5 秒左右标签页的标题被修改成`Hello World!`。
 
-我们查看`${PROJECT_DIR}/dist/report.html`会看到`es.promise.js`也加入了`bundle`中，这是因为我们给出的目标浏览器包含了`ie >= 11`，而 IE 11 是不支持`Promise`的。
+我们查看`${PROJECT_DIR}/dist/report.html`会看到`es.promise.js`也加入了`bundle`中，这是因为我们给出的目标浏览器包含了`ie >= 11`，而 ie 11 是不支持`Promise`的。
 
 可能你还会有疑虑，那已经支持了`Promise`特性的浏览器会再度引入这部分 polyfill 吗？不会，polyfill 会聪明地先判断浏览器环境，如果不支持这部分特性再引入。
 
