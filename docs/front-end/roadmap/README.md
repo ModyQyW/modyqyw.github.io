@@ -82,11 +82,11 @@
   - [Pro Git](https://git-scm.com/book/zh/v2)
 - 网页原生：html + css + js
   - [前端九部](https://www.yuque.com/fe9/basic)
+  - [学习 css 布局](http://zh.learnlayout.com/)
   - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
   - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
   - [The Modern JavaScript Tutorial](https://javascript.info/)
   - [现代 JavaScript 教程](https://zh.javascript.info/)
-  - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
   - [es6 入门](http://es6.ruanyifeng.com/)
 - canvas
   - [mdn - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
@@ -135,6 +135,7 @@
     - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
     - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
     - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+    - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
   - 综合部分
     - [前端进阶 1](https://yuchengkai.cn/home/)
     - [前端进阶 2](https://muyiy.cn/)

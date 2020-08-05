@@ -799,7 +799,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-现在更推荐用函数式组件 Function Component。如果不了解这部分的话，必须要去再看看官方文档了。
+现在更推荐用函数式组件 Functional Component。如果不了解这部分的话，必须要去再看看官方文档了。
 
 ```js
 import React, { useEffect } from 'react';
@@ -1078,15 +1078,21 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 资产相关的 loader
 
-一般称项目使用到的图片、字体、音频、视频等为项目资产。
+一般我们把项目使用到的图片、字体、音频、视频等文件叫做项目资产文件。
 
-最常用的处理资产的`loader`就是`file-loader`和`url-loader`。`url-loader`是`file-loader`的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用`file-loader`，没达到大小上限时，会把文件转换成 base64 数据并硬编码进代码中。
+最常用的处理资产的`loader`就是`file-loader`和`url-loader`。`url-loader`是`file-loader`的升级版，增加了文件大小的上限配置，达到大小上限时会自动使用`file-loader`，没达到大小上限的时候，会把文件转换成 base64 数据，然后硬编码到代码里。
+
+为什么要转换成 base64 数据并硬编码进代码呢？一方面，直接硬编码进代码可以避免在读取该部分文件时的页面闪烁，提高用户体验，另一方面也可以减少网络请求，降低服务器压力。
+
+如果 base64 数据太多太大，加载网页的速度依旧会变慢，所以不是所有文件都适宜转换成 base64 数据。
+
+下面来演示如何加入和使用这两个`loader`。首先还是安装依赖。
 
 ```sh
 npm i file-loader@6 url-loader@4 -DE
 ```
 
-安装依赖之后，直接修改配置文件即可。
+直接修改配置文件。
 
 ```js
 module.exports = {
@@ -1105,9 +1111,9 @@ module.exports = {
             options: {
               // 8 MB 上限
               limit: 8192,
-              // 放入 ${output.path}/img 文件夹中
+              // 放进 ${output.path}/img 文件夹里
               outputPath: 'img',
-              // 使用 ${output.path}/img 文件夹中的图片
+              // 使用 ${output.path}/img 文件夹里的图片
               publicPath: 'img',
             },
           },
@@ -1135,13 +1141,10 @@ module.exports = {
 }
 ```
 
-注意：`outputPath`和`publicPath`是和项目中配置的输出路径`output.path`相关的，在这个项目里，就是和`${PROJECT_DIR}/dist`相关的。我们把图片和字体放入各自的文件夹中，就是为了区分开不同类型的文件。
+- `outputPath`和`publicPath`是和项目中配置的输出路径`output.path`相关的，在这个项目里，也就是和`${PROJECT_DIR}/dist`相关。像上面的配置，最终构建结果会显示图片放进了`${PROJECT_DIR}/dist/img`里，而字体放进了`${PROJECT_DIR}/dist/fonts`。
+- 把图片和字体放入各自的文件夹中，主要目的是区分开不同类型的文件，避免所有文件都直接放在`${PROJECT_DIR}/dist`。
 
-为什么要转换成 base64 数据并硬编码进代码呢？一方面，直接硬编码进代码可以避免在读取该部分文件时的页面闪烁，提高用户体验，另一方面也可以减少网络请求，降低服务器压力。
-
-如果 base64 数据太多太大，加载网页的速度依旧会变慢，所以不是所有文件都适宜转换成 base64 数据。
-
-在`${PROJECT_DIR}/src/assets`中放入一个图片文件（我这里放入了`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`中引入并使用它。
+放一个图片文件在`${PROJECT_DIR}/src/assets`里面（我这里放了`webpack.png`），然后在`${PROJECT_DIR}/src/index.js`里引入、使用它。
 
 ```js
 import React from 'react';
@@ -1165,7 +1168,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-在`${PROJECT_DIR}/src/assets`中放入一个字体文件（我这里放入了阿里普惠体的字体文件`Alibaba-PuHuiTi-Regular.ttf`），然后在`${PROJECT_DIR}/src/index.scss`中引入并使用它。
+放一个字体文件在`${PROJECT_DIR}/src/assets`里面（我这里放入了阿里普惠体的字体文件`Alibaba-PuHuiTi-Regular.ttf`），然后在`${PROJECT_DIR}/src/index.scss`里引入、使用它。
 
 ```scss
 @font-face {
@@ -1194,9 +1197,9 @@ body {
 
 ```
 
-重新构建，可以看到`${PROJECT_DIR}/dist`目录下额外多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字被修改成一串字符串，这个我们称为文件指纹，会在之后做进一步的解释。测试时一切正常。
+重新构建，可以看到`${PROJECT_DIR}/dist`目录下多出了两个文件夹`fonts`和`img`，里面分别是一个字体文件和一个图片文件，名字被修改成一串字符串。这个我们称为文件指纹，会在之后做进一步的解释。测试一切正常。
 
-`url-loader`和`file-loader`只会处理`.js`中引用的图片，如果我们在`.html`里直接引用呢？那就只能使用`html-loader`来处理了。这种情况较为少见，可以自行查阅相关资料学习。
+`url-loader`和`file-loader`只会处理`.js`中引用的图片，如果我们在`.html`里直接引用呢？那就只能使用`html-loader`来处理了。这种情况比较少见，在这里不再展开。
 
 ### 模式 mode
 
