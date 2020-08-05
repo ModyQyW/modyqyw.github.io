@@ -73,6 +73,7 @@
 - [flaticon](https://www.flaticon.com/)
 - [font awesome](https://fontawesome.com/)
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
+- [coreui-icons](https://icons.coreui.io/icons/)
 
 ## 项目体系
 
