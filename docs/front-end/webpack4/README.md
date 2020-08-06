@@ -1203,17 +1203,17 @@ body {
 
 ### 模式 mode
 
-指定不同的模式，`webpack`会自动启用不同的功能进行优化，默认值为`production`，默认取值范围为`development`，`production`和`none`。
+指定不同的模式，`webpack`会自动启用不同的优化。默认模式是`production`，默认取值范围是`development`，`production`和`none`。
 
-现在，我们每一次要查看代码效果，都需要执行`npm run build`，然后用`live server`启动。这相当地麻烦，尤其是在开发过程中，这么做会耗费不必要的时间，而且开发时也不应该使用`production`模式，而应该使用`development`模式。
+现在，我们每一次查看代码效果，都要执行`npm run build`，然后用`live server`启动。这相当麻烦，尤其是开发的时候，这么做会耗费很多时间，而且开发时也不应该使用`production`模式，而应该使用`development`模式。
 
-`webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发时修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（会把生成文件放到内存中）。
+`webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发的时候修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（实际上，会把生成文件放到内存中）。
 
 ```sh
 npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@5 -DE
 ```
 
-我们还需要根据环境来调用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
+我们还要根据环境来使用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
 
 首先修改`package.json`。`cross-env`可以修改`process.env.NODE_ENV`的值，进而供我们确认环境。
 
@@ -1229,7 +1229,7 @@ npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@5
 
 ```
 
-接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放入`${PROJECT_DIR}/config/webpack.base.js`中，作为基础配置。
+接着，我们把原本`${PROJECT_DIR}/config/webpack.config.js`中除`mode`之外的内容抽离出来，放到`${PROJECT_DIR}/config/webpack.base.js`里。这部分内容作为基础配置，会被对应环境的配置所引用。
 
 再新建两个配置文件如下。
 
@@ -1250,14 +1250,12 @@ module.exports = merge(baseConfig, {
 
 ```
 
-- `hot: true`表示开启`webpack-dev-server`的热更新。
-- `quiet: true`表示减少构建输出的信息显示。
+- `devServer.hot = true`表示开启`webpack-dev-server`的热更新。
+- `devServer.quiet = true`表示减少构建输出的信息显示。
+- `devtool`可以确定错误对应的代码，能帮助调试，这里指定为`eval-cheap-source-map`。
+- 使用`webpack-merge`自动合并相关字段的配置，`webpack-dev-server`就能使用基础配置了。
 
-`devtool`可以帮助调试，这里指定为`eval-cheap-source-map`，有兴趣可以自行查阅相关资料作进一步学习，结尾处也有给出参考文章。
-
-`webpack-merge`会帮助我们自动合并相关字段的配置，这样就使得`webpack-dev-server`也会使用基础配置中的`plugin`和`loader`。
-
-`${PROJECT_DIR}/config/webpack.prod.js`也十分类似，指定了`mode`，`devtool`还有额外的 `plugin`。额外的`plugin`会被`webpack-merge`使用，与基础配置组合。
+`${PROJECT_DIR}/config/webpack.prod.js`也十分类似，指定了`mode`，`devtool`还有额外的 `plugin`。
 
 ```js
 const { merge } = require('webpack-merge');
@@ -1271,13 +1269,14 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       defaultSizes: 'stat',
+      openAnalyzer: false,
     }),
   ],
 });
 
 ```
 
-最后修改`${PROJECT_DIR}/config/webpack.config.js`，让它在不同环境时暴露不同的构建配置。
+最后修改`${PROJECT_DIR}/config/webpack.config.js`，让它在不同环境暴露不同的构建配置。
 
 ```js
 const devConfig = require('./webpack.dev.js');
@@ -1291,7 +1290,7 @@ if (process.env.NODE_ENV === 'development') {
 
 ```
 
-最后分别执行`npm run dev`和`npm run build`做测试，一切正常。最终项目目录如下所示。
+最后分别执行`npm run dev`和`npm run build`做测试，一切正常。下面是最终项目目录。
 
 ```sh
 .
@@ -1320,7 +1319,7 @@ if (process.env.NODE_ENV === 'development') {
     └── index.scss
 ```
 
-对于`react`，还可以加入`react-hot-loader`进一步提升使用体验。有兴趣可自行查阅相关资料学习。
+对于`react`，还可以加入`react-hot-loader`进一步提升使用体验。有兴趣可以查阅相关资料学习。
 
 🎉恭喜，你的第二个 webpack demo 已经完成啦～
 
