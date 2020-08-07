@@ -65,6 +65,7 @@
 
 ## 开源图标
 
+- [icones](https://github.com/antfu/icones#readme)
 - [iconfont](https://www.iconfont.cn/)
 - [bootstrap icons](https://icons.getbootstrap.com/)
 - [material design icons](https://materialdesignicons.com/)

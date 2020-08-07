@@ -1329,15 +1329,15 @@ if (process.env.NODE_ENV === 'development') {
 
 ### 使用文件指纹做版本管理
 
-人的指纹是特殊的，不存在完全相同的人的指纹，依靠人的指纹可以确定唯一的人。文件指纹的用途和人的指纹相近，可以用于版本管理。
+人的指纹是特殊的，不存在完全相同的人的指纹，所以依靠人的指纹可以确定唯一的人。文件指纹的用途和人的指纹相近，可以用来确定文件有没有改变，方便做版本管理。
 
-常用的文件指纹有三类：
+常用的文件指纹有三类。
 
-- `hash` - 与整个项目的构建有关，只要项目中文件有修改，值就会变化。特别地，对于图片、字体等可以被`url-loader`和`file-loader`处理的文件，`hash`表示的是文件内容，与整个项目的构建无关。因为起不到缓存效果和管理版本的作用，所以不建议用于资产文件外的文件。
-- `chunkhash` - 根据不同的`chunk`生成`hash`，通常会把不常变动的公共库单独抽离，然后对业务代码使用`chunkhash`，这样改动业务代码不会影响公共库，客户端只需更新业务代码对应的`chunk`。
-- `contenthash` - 根据文件内容生成`hash`。`.js`文件常常会引用`.css`文件，如果使用`chunkhash`，会导致修改`.js`文件、没有修改`.css`文件的时候，最终构建完发现`.css`文件的`hash`也变化了，所以 css 文件一般使用`contenthash`。
+- `hash` - 和整个项目的构建有关，只要项目里有文件被修改，值就会有变化。特别地，对于图片、字体这些资产文件，`hash`和整个项目的构建无关，而是和文件内容相关。因为对版本管理没什么帮助，所以一般只会在资产文件上使用。
+- `chunkhash` - 根据不同的`chunk`生成`hash`。通常会把依赖库和业务代码分别抽离出对应的`chunk`，然后使用`chunkhash`。也就是说，一般对`.js`文件使用`chunkhash`。
+- `contenthash` - 根据文件内容生成`hash`。`.js`文件常常会引用`.css`文件，如果使用`chunkhash`，就会导致修改`.js`文件、没有修改`.css`文件的情况下，`.css`文件的`hash`也变化了，这不太符合工程要求，所以`.css`文件一般使用`contenthash`。资产文件也可以使用`contenthash`。
 
-我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体文件添加文件指纹。
+我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体添加文件指纹。
 
 ```js
 module.exports = {
@@ -1377,22 +1377,22 @@ module.exports = {
 ```
 
 - `[name]`表示使用文件本身的命名。
-- `[contenthash:8]`表示使用`contenthash`的前 8 位，也可以写成`[hash:8]`，结果将会是一样的，这是因为`url-loader`和`file-loader`将会以同样的方式处理`contenthash`和`hash`，这是文件指纹中的一个特例。
+- `[contenthash:8]`表示使用`contenthash`的前 8 位，也可以写成`[hash:8]`，结果会是一样的，这是因为`url-loader`和`file-loader`将会以同样的方式处理`contenthash`和`hash`，这是文件指纹的特例。
 - `[ext]`表示使用文件本身的后缀。
 
-需要注意的是，要在生产模式下为`.css`文件添加文件指纹，就不能使用`style-loader`，这是因为`style-loader`会把`.css`文件嵌入到`.js`文件中，我们无法得到单独的`.css`文件，自然也就无法添加文件指纹了。
+而要在生产模式下为`.css`文件添加文件指纹，就不能使用`style-loader`。`style-loader`会把`.css`文件嵌入到`.js`文件中，我们无法得到单独的`.css`文件，自然也就无法添加文件指纹了。
 
-要解决这个问题，我们需要添加一个依赖`mini-css-extract-plugin`，使用它在项目生产环境中分离`.css`文件，然后让`style-loader`只在开发环境中起作用。
+要解决这个问题，我们要使用`mini-css-extract-plugin`，它能分离出`.css`文件让我们添加文件指纹。一般只会在生产环境中使用它，在开发环境里，从效率考虑，还是会使用`style-loader`。
 
 ```sh
 npm i mini-css-extract-plugin@0 -DE
 ```
 
-我们再把`${PROJECT_DIR}/config/webpack.base.js`中关于 css 的部分都放入`${PROJECT_DIR}/config/webpack.dev.js`中。
+我们再把`${PROJECT_DIR}/config/webpack.base.js`里关于 css 的部分都放到`${PROJECT_DIR}/config/webpack.dev.js`里。
 
-现在，完整的`${PROJECT_DIR}/config/webpack.base.js`如下所示，包含了`entry`，`plugin`和`loader`。其中，图片文件和字体文件的处理都使用了`contenthash`的前 8 位。
+现在，完整的`${PROJECT_DIR}/config/webpack.base.js`包含了`entry`，`plugin`和`loader`。其中，图片文件和字体文件的处理都使用了`contenthash`的前 8 位。
 
-注意：我们只是移除了其中关于 css 的部分，给出完整的文件只是谨慎起见，避免移除错误。
+注意：我们只是移除了其中关于 css 的部分，下面给出完整的文件内容供参考。
 
 ```js
 const path = require('path');
@@ -1459,7 +1459,7 @@ module.exports = {
 
 ```
 
-完整的`${PROJECT_DIR}/config/webpack.dev.js`如下所示，除去基本的配置外，还声明了`mode`，`webpack-dev-server`，`devtool`和`loader`。在这里，我们使用了`style-loader`。
+完整的`${PROJECT_DIR}/config/webpack.dev.js`内容也放在下面。除去基本的配置外，还声明了`mode`，`webpack-dev-server`，`devtool`和`loader`。在这里，我们使用了`style-loader`。
 
 ```js
 const { merge } = require('webpack-merge');
@@ -1498,9 +1498,9 @@ module.exports = merge(baseConfig, {
 
 ```
 
-我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用`style-loader`而是使用`mini-css-extract-plugin`，并为输出的`.js`文件还有`.css`文件添加文件指纹。
+我们再来修改`${PROJECT_DIR}/config/webpack.prod.js`，不使用`style-loader`而是使用`mini-css-extract-plugin`。
 
-首先用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，用于指定要读取的`.css`文件所处的文件夹。把`.css`文件放入到特定的文件夹中，有利于区分开不同类型的文件。
+首先用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，也就是指定代码使用的`.css`文件所在的相对于`output.path`的文件夹。
 
 ```js
 module.exports = merge(baseConfig, {
@@ -1543,7 +1543,9 @@ module.exports = merge(baseConfig, {
 
 ```
 
-接着，把`mini-css-extract-plugin`加入到`plugins`中，并指定输出文件名。注意：在前面我们已经指定要使用`${PROJECT_DIR}/dist/css`文件夹内的`.css`文件，在这里我们需要把文件夹名也添加上去，让`.css`文件输出到`${PROJECT_DIR}/dist/css`目录下，否则仍然会直接输出到`${PROJECT_DIR}/dist`目录下，进而导致引用错误。
+`publicPath: 'css'`表示要使用`${output.path}/css`里的`.css`文件。
+
+接着，把`mini-css-extract-plugin`加到`plugins`里，指定输出文件名。在前面我们已经指定要使用`${output.path}/css`文件夹里的`.css`文件，在这里我们需要把文件夹名也添加上去，让`.css`文件输出到`${output.path}/css`目录下。
 
 ```js
 module.exports = merge(baseConfig, {
@@ -1560,9 +1562,24 @@ module.exports = merge(baseConfig, {
 
 ```
 
-要为`entry`对应的输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`即可。
+而要为`entry`对应的输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`。
 
-完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。其中，`.css`文件的处理都使用了`contenthash`的前 8 位。
+```js
+const { merge } = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = merge(baseConfig, {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].[chunkhash:8].js',
+  },
+  ...,
+};
+
+```
+
+完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。
 
 ```js
 const path = require('path');
