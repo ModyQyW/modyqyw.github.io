@@ -476,14 +476,16 @@
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)
   - [fre](https://github.com/yisar/fre) - 原理类似 vue 3 的类 react 库
   - [inferno](https://infernojs.org/) - 类 react 库
-  - [formik](https://github.com/jaredpalmer/formik) - 表格解决方案
-  - [react-use](https://github.com/streamich/react-use) - hooks 包
+  - [create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) - 用于创建可重用的 react 库的 cli
+  - [formik](https://github.com/jaredpalmer/formik#readme) - 表格解决方案
+  - [react-use](https://github.com/streamich/react-use#readme) - hooks 包
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
-  - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
+    - [ahooks](https://ahooks.js.org/zh-CN)
   - [ink](https://github.com/vadimdemedes/ink) - 在交互式命令行中使用 react
   - [react-lifecycle-visualizer](https://github.com/Oblosys/react-lifecycle-visualizer#readme) - react 生命周期方法的实时可视化工具
   - [why-did-you-render](https://github.com/welldone-software/why-did-you-render#readme) - 展示可避免的重复渲染
   - [react-proto](https://github.com/React-Proto/react-proto#readme) - 为开发人员和设计人员提供的 react 应用原型开发工具
+  - [react-ui-mode-cc](https://github.com/shenghanqin/react-ui-mode-cc#readme) - 响应式设计与自适应设计结合的方案 react 实现
 - 进阶
   - [react 技术揭秘](https://react.iamkasong.com/)
   - [react 源码解析](https://github.com/KieSun/react-interpretation)

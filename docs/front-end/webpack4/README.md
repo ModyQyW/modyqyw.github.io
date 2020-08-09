@@ -1642,17 +1642,17 @@ module.exports = merge(baseConfig, {
 
 ### 移除 js 中的注释以压缩 js
 
-如果我们构建之后打开`${PROJECT_DIR}/dist/js/app.[chunkhash:8].js`，就会发现大量 js 代码堆叠到一起，这是正常的压缩现象。但是，文件中还存在有一些注释，这是生产环境中不需要的，我们还需要手动配置来去除掉这些注释。
+如果我们完成之后打开`${PROJECT_DIR}/dist/js/app.[chunkhash:8].js`，就会发现大量 js 代码堆叠到一起，这是正常的压缩现象。但是，文件里还有一些注释，这是生产环境不需要的，我们可以手动配置来去除这些注释，进一步地压缩`.js`文件。
 
 `webpack`默认在生产环境下使用`terser-webpack-plugin`来压缩`.js`文件，我们只需要做进一步的配置即可。
 
-虽然安装`webpack`依赖会一并安装该依赖，但是我们通常会显式安装我们所需要的依赖，避免可能的版本问题。
+虽然安装`webpack`依赖的时候会自动安装该依赖，但是我们通常会显式安装我们所需要的依赖，指定版本，避免版本不一致的问题。
 
 ```sh
 npm i terser-webpack-plugin@3 -DE
 ```
 
-我们无需从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
+我们不是从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
 
 ```js
 const TerserPlugin = require('terser-webpack-plugin');
@@ -1679,11 +1679,11 @@ module.exports = {
 
 简单地配置`terser-webpack-plugin`，就可以使得最终输出的结果没有注释。
 
-这个配置也是`terser-webpack-plugin`文档中提供的例子，而这只是`terser-webpack-plugin`功能的冰山一角。感兴趣的话可以自行查阅相关资料学习。
+这个配置也是`terser-webpack-plugin`文档中提供的例子，而这只是`terser-webpack-plugin`功能的冰山一角。感兴趣的话可以查阅相关资料学习。
 
 ### 压缩 html
 
-要压缩 html，我们可以使用之前用到的`html-webpack-plugin`。除了我们之前用到的指定模板的功能，它还有压缩 html 的功能，而且是默认开启的。
+要压缩`.html`文件，我们可以使用之前用到的`html-webpack-plugin`。除了我们之前用到的指定模板的功能，它还有压缩 html 的功能，而且是默认开启的。
 
 如果我们需要修改`html-webpack-plugin`的压缩选项，我们只需要为`${PROJECT_DIR}/config/webpack.base.js`中的`html-webpack-plugin`的配置添加一个`minify`字段，然后写入自己的配置即可。
 
@@ -1722,11 +1722,11 @@ module.exports = {
 - `removeStyleLinkTypeAttributes: true`表示移除`<style>`和`<link>`标签上的`type="text/css"`。
 - `useShortDoctype: true`表示使用较短的 html 格式声明。
 
-一般不会再需要手动配置，如果有这方面需求，可以翻看文档并做修改。注意：写入的自己的配置不会与默认配置组合使用（默认配置会被覆盖），所以必须确保写入的自己的配置是完整的。
+一般不需要手动配置，如果有这方面需求，可以翻看文档再做修改。注意：写入的自己的配置不会和默认配置组合使用（默认配置会被覆盖），所以必须确保写入的自己的配置是完整的。
 
 ### 使用 postcss 处理 css
 
-`postcss`是一个处理 css 的工具。因为`postcss`能通过不同的插件实现各类对 css 的操作（包括补齐特性、压缩等），不少人称它为 css 界的`babel`。
+`postcss`是一个处理 css 的工具。因为`postcss`能通过不同的插件实现各种对 css 的操作（包括补齐特性、压缩等），不少人叫它 css 界的`babel`。
 
 还是要先安装相关的依赖。
 
@@ -1734,9 +1734,9 @@ module.exports = {
 npm i postcss@7 postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
 ```
 
-要怎么使用`postcss`呢？很简单，在`webpack`配置文件中加入`postcss-loader`，之后创建一个`${PROJECT_DIR}/postcss.config.js`文件供`postcss`读取使用即可。
+要怎么使用`postcss`呢？很简单，在`webpack`配置文件里使用`postcss-loader`，之后创建一个`${PROJECT_DIR}/postcss.config.js`文件作为`postcss`的配置文件。
 
-注意：由于`postcss-loader`会处理`@import`语句，所以还需要修改`css-loader`的`importLoaders`配置。
+注意：`postcss-loader`会处理`@import`语句，所以还需要修改`css-loader`的`importLoaders`配置。
 
 `${PROJECT_DIR}/config/webpack.dev.js`：
 
@@ -1845,11 +1845,11 @@ module.exports = {};
 
 ```
 
-空文件不会让`postcss`起任何作用。要让`postcss`对 css 作特定的处理，就需要使用插件。
+空文件等同于没有配置`postcss`。要让`postcss`处理 css，就需要使用插件。
 
 浏览器厂商们有时会给实验性的或者非标准的 css 属性添加前缀，这样就可以让开发者进行试验，同时也不会使得标准化之后现有代码被破坏。
 
-由于存在浏览器厂商自实现某些实验性的属性、停止更新浏览器导致没有浏览器跟随标准等情况，所以为 css 属性添加特定浏览器的前缀也带有了 polyfill 的意味。
+因为存在浏览器厂商自实现某些实验性的属性、停止更新浏览器导致没有浏览器跟随标准等情况，所以为 css 属性添加特定浏览器的前缀也带有了 polyfill 的意味。
 
 手动添加前缀是相当麻烦的一件事情，使用`autoprefixer`插件可以让`postcss`自动为我们补全浏览器的样式前缀。
 
@@ -1868,7 +1868,7 @@ module.exports = {
 
 而要处理某些 css 的新语法和新特性，我们就需要用到另外一个插件`postcss-preset-env`。和`@babel/preset-env`类似，它可以为我们处理 css 的某些新语法和新特性，而且，它还内置了`autoprefixer`！
 
-我们可以把`autoprefixer`换成`postcss-preset-env`，同样的，无需额外的配置。`${PROJECT_DIR}/.browserslistrc`也会被自动地读取并使用，此时，`postcss`会根据目标浏览器自动添加属性前缀、处理相对稳定的新语法和新特性。
+我们可以把`autoprefixer`换成`postcss-preset-env`，同样的，无需额外的配置。`${PROJECT_DIR}/.browserslistrc`也会被自动地读取使用。这时候，`postcss`会根据目标浏览器自动添加属性前缀、处理相对稳定的新语法和新特性。
 
 ```js
 module.exports = {
@@ -1879,11 +1879,11 @@ module.exports = {
 
 ```
 
-默认地，`postcss-preset-env`会自动处理 stage 2+ 的新语法和新特性，你可以在它的[官方网站](https://preset-env.cssdb.org/features)中查阅。
+默认地，`postcss-preset-env`会自动处理 stage 2+ 的新语法和新特性，你可以在它的[官方网站](https://preset-env.cssdb.org/features)中查看。
 
 最后，`cssnano`插件可以帮助我们压缩`.css`文件并且去除掉多余的注释，用法也同样很简单。但要注意：只有在生产环境下才需要压缩并去除注释，所以我们在生产环境时再引入`cssnano`。
 
-这里我们参考官方文档的配置，使用`cssnano-preset-default`并配置移除所有注释。
+这里我们参考官方文档的配置，使用`cssnano-preset-default`，配置移除所有注释。
 
 ```js
 module.exports = {
