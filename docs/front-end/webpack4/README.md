@@ -1906,9 +1906,11 @@ module.exports = {
 
 ### 基础依赖的处理
 
-项目内往往有一些比较基础的依赖，比如`vue`，`react`，`react-dom`等。默认地，`webpack`会把这些基础依赖放入`entry`对应的输出文件中，进而影响最终构建的大小。又因为这些基础依赖往往比较稳定，不会经常更新，打包进`entry`对应的输出文件中会出现业务代码变化、基础依赖没有变化、但用户需要重新拉取包含了基础依赖的代码的情况。
+项目内往往有一些比较基础的依赖，比如`vue`，`react`，`react-dom`。默认地，`webpack`会把这些基础依赖放入`entry`对应的输出文件中。
 
-我们可以使用公共 cdn 来加载这些依赖，解决上面提到的两个问题。首先要在`${PROJECT_DIR}/config/webpack.prod.js`配置`externals`，向`webpack`说明无需添加到构建包中的依赖。
+这些基础依赖往往比较稳定，不会经常更新，如果打包进`entry`对应的输出文件，就会出现业务代码变化、基础依赖没有变化、但用户需要重新拉取包含了基础依赖的代码的情况，这相当不合理。
+
+我们可以使用公共 cdn 来加载这些依赖，解决这个问题。首先要在`${PROJECT_DIR}/config/webpack.prod.js`配置`externals`，向`webpack`说明无需添加到构建包中的依赖。
 
 ```js
 module.exports = {
@@ -1922,11 +1924,11 @@ module.exports = {
 
 ```
 
-`externals`是一个对象 object，它的键就是`webpack`需要排除的依赖名，稍后我们再说明对应的值。上面给出的配置会让`webpack`构建时排除`react`和`react-dom`两个依赖，不把它们加入到最终构建包中。
+`externals`是一个对象 object，它的键就是`webpack`需要排除的依赖名，稍后我们再说明对应的值。上面的配置会让`webpack`构建时排除`react`和`react-dom`两个依赖，不把它们加入到最终构建包中。
 
-之后，还需要手动加入`react`和`react-dom`的公共 cdn 链接，使得项目能够使用到`react`和`react-dom`这两个依赖，否则构建之后将无法运行。
+之后，还需要手动加入`react`和`react-dom`的公共 cdn 链接，使得项目能够使用`react`和`react-dom`这两个依赖，否则构建包没办法正常运行。
 
-这里使用了 [jsdelivr](https://www.jsdelivr.com/) 这个公共 cdn，你也可以使用 [unpkg](https://unpkg.com/) 这个比较常用的公共 cdn。
+这里使用了 [jsdelivr](https://www.jsdelivr.com/) 这个公共 cdn，你也可以使用 [unpkg](https://unpkg.com/)。
 
 ```html
 <!DOCTYPE html>
@@ -1947,9 +1949,10 @@ module.exports = {
 
 ```
 
-注意：公共 cdn 链接指定的依赖版本，要与项目内使用的依赖版本一致，否则可能导致开发和生产环境的表现不一致。`react`的 cdn 链接中暴露了`React`这个变量，而`react-dom`的 cdn 链接中暴露了`ReactDOM`这个变量，对应地，我们要把这两个变量指定为对应键的值。
+- 公共 cdn 链接指定的依赖版本，要和项目内使用的依赖版本一致，不然可能导致开发和生产环境的表现不一致。
+- `react`的 cdn 链接中暴露了`React`这个变量，而`react-dom`的 cdn 链接中暴露了`ReactDOM`这个变量，对应地，我们要把这两个变量指定为对应键的值。
 
-我们尝试构建一下。最终构建的文件中，没有`react`和`react-dom`的存在。运行测试正常。我们也可以借助`html-webpack-externals-plugin`来实现类似的功能，这里不再做相应的展开演示。
+我们尝试构建一下。最终构建的文件中，没有`react`和`react-dom`的存在。运行测试正常。我们也可以借助`html-webpack-externals-plugin`来实现类似的功能，这里不再做相应的演示，感兴趣的可以自行查看资料。
 
 但是更多时候，比起相信公共 cdn，相信自己更好。不使用公共 cdn，我们可以自行把这些基础依赖抽离出来统一放置。这么做要比使用公共 cdn 更好，无需手动指定、更新公共 cdn 的依赖版本，也无需考虑公共 cdn 的稳定性。
 
@@ -1972,10 +1975,10 @@ module.exports = merge(baseConfig, {
 
 ```
 
-- 使用`optimization.splitChunks`，表示我们想要手动配置地分离`chunk`。
+- 使用`optimization.splitChunks`，表示我们想要手动配置地分离`chunk`，而路径和名称会跟随`output.path`。
 - 指定`chunks: 'all'`，表示我们想要把所有引入的库从已有的业务代码中分离出来。
 
-具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。异步引入的其他依赖，`webpack`默认另行打包出一个`bundle`。
+具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个`chunk`，然后`node_modules`文件夹内同步引入的其他依赖单独成一个`chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个`chunk`。
 
 我们通过`optimization.cacheGroups`来配置。首先是项目内的组件库`zent`单独成一个`chunk`。
 
