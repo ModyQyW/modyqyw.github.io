@@ -14,9 +14,9 @@
 
 ## 文档搭建
 
-- [vuepress](https://vuepress.vuejs.org/zh/)
-- [dumi](https://d.umijs.org/)
-- [hexo](https://hexo.io/)
+- [vuepress](https://vuepress.vuejs.org/zh/) - 静态网站生成器
+- [dumi](https://d.umijs.org/) - 为组件开发场景而生的文档工具
+- [hexo](https://hexo.io/) - 快速、简洁且高效的博客框架
 
 ## 开发语言
 
@@ -25,7 +25,7 @@
 - [elm](https://elm-lang.org/)
 - [bucklescript](https://bucklescript.github.io/)
 
-## 设计语言
+## 设计
 
 - [Fiori Design](https://experience.sap.com/fiori-design-web/)
 - [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
@@ -65,20 +65,20 @@
 
 - [icones](https://github.com/antfu/icones#readme)
 - [iconfont](https://www.iconfont.cn/)
-- [bootstrap icons](https://icons.getbootstrap.com/)
-- [material design icons](https://materialdesignicons.com/)
-- [material icons](https://google.github.io/material-design-icons/)
-- [remix icons](https://remixicon.com/)
+- [bootstrap-icons](https://icons.getbootstrap.com/)
+- [material-design-icons](https://materialdesignicons.com/)
+- [material-icons](https://google.github.io/material-design-icons/)
+- [remix-icons](https://remixicon.com/)
 - [ionicons](https://ionicons.com/)
 - [octicons](https://primer.style/octicons/)
 - [flaticon](https://www.flaticon.com/)
-- [font awesome](https://fontawesome.com/)
+- [fontawesome](https://fontawesome.com/)
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
 - [coreui-icons](https://icons.coreui.io/icons/)
 
 ## 项目体系
 
-- [yeoman](https://yeoman.io/) - 构筑专属的 cli，也可以考虑使用 [oclif](https://oclif.io/)
+- [yeoman](https://yeoman.io/) - 构筑专属的 cli，也可以考虑 [oclif](https://oclif.io/)
 - [np](https://github.com/sindresorhus/np#readme) - 更好的 npm publish，自动 push，自动 tag 等
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
@@ -87,13 +87,13 @@
   - [pnpm](https://pnpm.js.org/) - 包管理器
 - [cross-env](https://github.com/kentcdodds/cross-env#readme) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf#readme) - 跨平台在命令行中删除文件
-- [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合`yarn upgrade-interactive`使用
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 检查、升级依赖，也可以考虑`yarn upgrade-interactive`和 [npm-check](https://github.com/dylang/npm-check#readme)
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - formatter & linter
-  - [prettier](https://prettier.io/) - 检查大量代码格式
+  - [prettier](https://prettier.io/) - 检查大量代码格式，建议用于 stylelint、eslint 等工具之前
     - [@modyqyw/prettier-config](https://github.com/MillCloud/prettier-config#readme)
-  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式
+  - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式，建议用于 prettier 之后
     - prettier
       - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#readme)
       - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)
@@ -121,8 +121,8 @@
       - [@modyqyw/eslint-config-vue](https://github.com/MillCloud/eslint-config-vue#readme)
       - [@modyqyw/eslint-config-vue-ts](https://github.com/MillCloud/eslint-config-vue-ts#readme)
       - [@modyqyw/eslint-config-react](https://github.com/MillCloud/eslint-config-react#readme)
-  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme) - 检查 html 代码的格式，针对 html 的 prettier 增强版，一般建议用于 prettier 后面专门处理 html 文件，vue 文件直接用 eslint-plugin-vue 的 recommended 配置检查即可
-  - [stylelint](https://stylelint.io/) - 检查 css/less/scss 代码的格式与语法，可搭配 prettier 使用
+  - [prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme) - 检查 html 代码的格式，针对 html 的 prettier 增强版，建议用于 prettier 之后，专门处理 html 文件，vue 文件中的`<template></template>`部分直接用 eslint-plugin-vue 的 recommended 配置检查
+  - [stylelint](https://stylelint.io/) - 检查 css/less/scss 代码的格式与语法，建议用于 prettier 之后
     - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard#readme)
     - [stylelint-config-recommended](https://github.com/stylelint/stylelint-config-recommended#readme)
     - [stylelint-config-recommended-scss](https://github.com/kristerkari/stylelint-config-recommended-scss#readme)
@@ -175,7 +175,7 @@
 - [webpack](https://webpack.js.org/) - v4，模块打包器，一般用于打包项目，可参考 [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [dev-server](https://webpack.js.org/configuration/dev-server/) - 快速开发
   - [optimization](https://webpack.js.org/configuration/optimization/) - 配置优化，包括 split chunks 等
-  - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置，也可以考虑使用 [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
+  - [webpack-merge](https://github.com/survivejs/webpack-merge#readme) - 合并配置，也可以考虑 [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin) - 显示更友好的提示信息
     - [webpack-bar](https://github.com/nuxt/webpackbar) - 显示进度条
@@ -246,8 +246,9 @@
 - 衍生
   - [polyfill.io](https://polyfill.io/v3/) - 在线自动引入 polyfill
   - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
-  - [bluebird](http://bluebirdjs.com/docs/getting-started.html) - promise 库
-  - [axios](https://github.com/axios/axios) - 请求库，用到了 promise
+  - [bluebird](http://bluebirdjs.com/docs/getting-started.html) - promise polyfill
+  - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
+  - [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
   - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
   - [leaflet](https://leafletjs.com/) - 地图库
   - [aplayer](https://aplayer.js.org/) - h5 音频播放器
@@ -259,7 +260,7 @@
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
   - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
-  - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
+  - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate) - 模板
 
 ## typescript
 
@@ -298,25 +299,52 @@
   - [nuxt](https://zh.nuxtjs.org/guide/installation/)
   - [vue-cli](https://cli.vuejs.org/zh/guide/) - 需要手动支持 ssr
   - [vapper](https://vapperjs.org/zh/)
-- app/小程序
+- app
   - uni-app
     - [中文文档](https://uniapp.dcloud.io/)
     - 路由
-      - 自带路由
+      - [自带路由](https://uniapp.dcloud.io/frame?id=%e8%b7%af%e7%94%b1)
     - 状态管理
-      - 与上方的状态管理一致
+      - [vuex](https://vuex.vuejs.org/zh/)
     - ui
       - [uview-ui](https://uviewui.com/)
-      - [uni-ui](https://github.com/dcloudio/uni-ui)
-      - [color-ui](https://github.com/weilanwl/ColorUI)
       - [thor-ui](https://thorui.cn/)
+      - [uni-ui](https://github.com/dcloudio/uni-ui#readme)
+      - [color-ui](https://github.com/weilanwl/ColorUI#reamd)
       - [grace-ui](https://grace.hcoder.net/) - 收费
   - chameleon
     - [中文文档](https://cml.js.org/)
     - 路由
-      - 自带路由
+      - [自带路由](https://cml.js.org/docs/config.html#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE)
     - 状态管理
-      - 自带类似于 vuex 的状态管理方案 [chameleon-store](https://cml.js.org/docs/store.html)
+      - [chameleon-store](https://cml.js.org/docs/store.html)
+    - ui
+      - [cml-ui](https://cml.js.org/components/expand.html)
+  - weex
+    - [中文文档](https://weex.apache.org/zh/)
+  - native-script
+    - [英文文档](https://nativescript.org/)
+  - ionic
+    - [英文文档](https://ionicframework.com/docs)
+- 小程序
+  - uni-app
+    - [中文文档](https://uniapp.dcloud.io/)
+    - 路由
+      - [自带路由](https://uniapp.dcloud.io/frame?id=%e8%b7%af%e7%94%b1)
+    - 状态管理
+      - [vuex](https://vuex.vuejs.org/zh/)
+    - ui
+      - [uview-ui](https://uviewui.com/)
+      - [thor-ui](https://thorui.cn/)
+      - [uni-ui](https://github.com/dcloudio/uni-ui#readme)
+      - [color-ui](https://github.com/weilanwl/ColorUI#reamd)
+      - [grace-ui](https://grace.hcoder.net/) - 收费
+  - chameleon
+    - [中文文档](https://cml.js.org/)
+    - 路由
+      - [自带路由](https://cml.js.org/docs/config.html#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE)
+    - 状态管理
+      - [chameleon-store](https://cml.js.org/docs/store.html)
     - ui
       - [cml-ui](https://cml.js.org/components/expand.html)
 - 衍生
@@ -378,7 +406,7 @@
 - 路由
   - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
 - 状态管理
-  - context + hooks
+  - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
   - [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md)
   - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
   - [rematch](https://rematch.github.io/rematch/)
@@ -403,7 +431,7 @@
   - [prime](https://primefaces.org/primereact/showcase/#/setup)
   - [chakra-ui](https://chakra-ui.com/)
   - [react-spectrum](https://react-spectrum.adobe.com/)
-  - [更多](https://github.com/topics/vue)
+  - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
     - [blitz](https://github.com/blitz-js/blitz) - 基于 next 再封装，全栈框架
@@ -419,7 +447,11 @@
       - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
       - [react-navigation](https://reactnavigation.org/)
     - 状态管理
-      - 与上方的状态管理一致
+      - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
+      - [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
+      - [rematch](https://rematch.github.io/rematch/)
+      - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -433,25 +465,26 @@
       - [native-base](https://nativebase.io/)
     - cli
       - [expo](https://docs.expo.io/)
-      - [rn-mobx-scaffold](https://github.com/ModyQyW/rn-mobx-scaffold)
-      - [rn-unstated-ts-scaffold](https://github.com/ModyQyW/rn-unstated-ts-scaffold)
+  - ionic
+    - [英文文档](https://ionicframework.com/docs)
 - 小程序
   - taro
     - [中文文档](https://taro-docs.jd.com/taro/docs/README.html)
     - 路由
-      - 自带路由
+      - [自带路由](https://taro-docs.jd.com/taro/docs/router/)
     - 状态管理
-      - context + hooks
+      - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)，详见[文档](https://taro-docs.jd.com/taro/docs/redux.html)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
+      - [@tarojsx/ui](https://github.com/tarojsx/ui#readme)
   - remax
     - [中文文档](https://remaxjs.org/)
     - 路由
       - 自带路由
     - 状态管理
-      - context + hooks
+      - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
       - [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
       - [rematch](https://rematch.github.io/rematch/)
@@ -460,11 +493,9 @@
   - rax
     - [中文文档](https://rax.js.org/)
     - 路由
-      - 单页应用 rax-use-router
-      - 多页应用 build-plugin-rax-multi-pages
-      - [说明](https://rax.js.org/docs/guide/routes)
+      - [自带路由](https://rax.js.org/docs/guide/routes)
     - 状态管理
-      - 无说明
+      - [rax-redux](https://github.com/alibaba/rax/tree/master/packages/rax-redux#readme)
     - ui
       - [官方提供](https://rax.js.org/docs/components/introduce)
 - 衍生
@@ -492,6 +523,7 @@
   - [react 技术揭秘](https://react.iamkasong.com/)
   - [react 源码解析](https://github.com/KieSun/react-interpretation)
   - [react 相关库源码分析](https://github.com/BUPTlhuanyu/ReactNote)
+  - [react fiber 源码分析](https://zhuanlan.zhihu.com/p/179934120)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
   - [Dan Abramov's Blog](https://overreacted.io/)
   - [build your own react](https://pomb.us/build-your-own-react/)
@@ -551,7 +583,10 @@
 - cli
   - [angular-cli](https://angular.cn/cli)
 - app
-  - 待补充
+  - native-script
+    - [英文文档](https://nativescript.org/)
+  - ionic
+    - [英文文档](https://ionicframework.com/docs)
 - 小程序
   - 无
 - 衍生
