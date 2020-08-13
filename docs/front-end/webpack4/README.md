@@ -847,7 +847,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```sh
 npm i zent@8 -E
-npm i style-loader@1 css-loader@3 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
+npm i style-loader@1 css-loader@4 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
 `css-loader`能够把`.css`文件解析成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
@@ -1649,7 +1649,7 @@ module.exports = merge(baseConfig, {
 虽然安装`webpack`依赖的时候会自动安装该依赖，但是我们通常会显式安装我们所需要的依赖，指定版本，避免版本不一致的问题。
 
 ```sh
-npm i terser-webpack-plugin@3 -DE
+npm i terser-webpack-plugin@4 -DE
 ```
 
 我们不是从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
@@ -2107,7 +2107,56 @@ module.exports = merge(baseConfig, {
 
 ```
 
-### gzip 压缩
+### 使用 gzip 文件
+
+gzip 是一种数据压缩格式，或者说是一种文件格式。在生产环境打包的最后阶段，为生成的文件生成对应的`.gz`文件，可以有效地减小文件体积，让支持 gzip 的浏览器更快地加载页面。
+
+```sh
+npm i compression-webpack-plugin@4 -DE
+```
+
+然后我们在`${PROJECT_DIR}/config/webpack.prod.js`里配置它。
+
+```js
+const CompressionPlugin = require('compression-webpack-plugin');
+
+module.exports = merge(baseConfig, {
+  ...,
+  plugins: [
+    ...,
+    new CompressionPlugin({
+      test: /\.(html|css|js|png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/,
+    }),
+  ],
+  ...,
+});
+
+```
+
+在上面，我们配置了`compression-webpack-plugin`去处理生成的`.html`，`.css`，`.js`，`.png`等文件。默认地，它会使用 gzip 算法去压缩处理。
+
+但`compression-webpack-plugin`还有一个默认的限制，那就是如果生成的`.gz`文件的大小不能达到原文件的 80% 或以下，就不会去生成`.gz`文件。这是为了减少不必要的压缩，提高处理速度，在大型项目中，提高的速度尤为明显。
+
+我们可以构建一下，看看效果。查看构建文件可以发现，文件基本都出现了对应的`.gz`文件。
+
+如果你不在意处理速度，而是追求极致的压缩，你可以改成下面这样。这样做的话，所有符合正则表达式的文件都会生成`.gz`文件。
+
+```js
+const CompressionPlugin = require('compression-webpack-plugin');
+
+module.exports = merge(baseConfig, {
+  ...,
+  plugins: [
+    ...,
+    new CompressionPlugin({
+      test: /\.(html|css|js|png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/,
+      minRatio: 1,
+    }),
+  ],
+  ...,
+});
+
+```
 
 ### 代码分割和动态引入
 

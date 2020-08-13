@@ -83,7 +83,8 @@
 - [release](https://github.com/zeit/release#readme) - 自动生成 changelog
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版见 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme) - npm（复读）
-- [yarn](https://classic.yarnpkg.com/zh-Hans) - 目前用 v1 比较好
+  - [yarn](https://classic.yarnpkg.com/zh-Hans) - 包管理器，目前用 v1 比较好
+  - [pnpm](https://pnpm.js.org/) - 包管理器
 - [cross-env](https://github.com/kentcdodds/cross-env#readme) - 跨平台的环境变量声明
 - [rimraf](https://github.com/isaacs/rimraf#readme) - 跨平台在命令行中删除文件
 - [npm-check](https://github.com/dylang/npm-check#readme) - 检查依赖，可以配合`yarn upgrade-interactive`使用
@@ -470,7 +471,8 @@
   - [ant-design-pro](https://pro.ant.design/index-cn) - 后台管理系统
   - [react-admin](https://github.com/duxianwei520/react) - 后台管理系统
   - [react-material-admin](https://github.com/flatlogic/react-material-admin) - 后台管理系统
-  - [styled-components](https://styled-components.com/)
+  - [emotion](https://emotion.sh/) - css-in-js
+  - [styled-components](https://styled-components.com/) - css-in-js
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 高效渲染大型列表和表格数据的 react 组件
   - [preact](https://preactjs.com/) - 类 react 库
   - [anu](https://github.com/RubyLouvre/anu) - 能运行到 ie8 的 react，带[脚手架](https://gitee.com/menhal/React_IE8_boilerplate)

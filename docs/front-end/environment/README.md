@@ -4,22 +4,22 @@
 
 ## v2ray
 
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，建议不要使用自带客户端而是使用 [clash](https://github.com/Dreamacro/clash) 或 [clashx](https://github.com/yichengchen/clashX/releases)
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，自带客户端，教程内也推荐了其它客户端
 
 ## Windows - 偏向娱乐的配置
 
-- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 zsh + [oh-my-zsh](https://ohmyz.sh/)
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 zsh + [oh-my-zsh](https://ohmyz.sh/)，也可以用双系统 Ubuntu，Deepin，优麒麟
 - [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了 ie，可能会导致 ie 无法唤起开发者工具
-- [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）
+- [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）和 [7zip](https://www.7-zip.org/)
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Google Chrome](https://www.google.cn/chrome/index.html) - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
+- [Google Chrome](https://www.google.cn/chrome/index.html) - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具，如果有迅雷会员可以考虑迅雷 U 享版
-- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 播放器
-- [PowerToys](https://github.com/microsoft/PowerToys) - 实用的小插件集合
+- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
+- [PowerToys](https://github.com/microsoft/PowerToys) - 小工具集合
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，windows 上类似的工具还有 [wox](https://github.com/Wox-launcher/Wox)
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，windows 上类似的工具还有 [wox](https://github.com/Wox-launcher/Wox#readme)
 - [WPS](https://www.wps.cn/) - 建议重度用户用 MS Office
 - [百度网盘](http://pan.baidu.com/download) - 可能会用到[城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)，如果有特殊需求可以自己搭，参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
@@ -53,7 +53,7 @@
 - [draw.io](https://github.com/jgraph/drawio-desktop/releases/) - 免费作图工具，包括流程图，思维导图等
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[Firefox Developer](https://www.mozilla.org/en-US/firefox/developer/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
+- [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)，[axe.store](https://gitee.com/kuaibiancheng/store)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
@@ -80,7 +80,7 @@
 
 ## 浏览器插件
 
-基本都可以在浏览器商店中搜到。只附上难以找到或有同类型插件的链接。
+基本都可以在浏览器商店中搜到。只附上难以找到或没有同类型插件的链接。
 
 - Gitako - 类似 Octotree 的插件
 - Lighthouse - 网页性能测试
