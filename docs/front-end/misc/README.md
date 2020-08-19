@@ -23,7 +23,7 @@
 - [typescript](https://www.typescriptlang.org/)
 - [reason](https://reasonml.github.io/)
 - [elm](https://elm-lang.org/)
-- [bucklescript](https://bucklescript.github.io/)
+- [rescript](https://rescript-lang.org/)
 
 ## 设计
 
@@ -355,9 +355,10 @@
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
-  - [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
+  - [vue-ven-admin](https://github.com/anncwb/vue-vben-admin) - 后台管理系统
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard) - 后台管理系统
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
+  - [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
   - [swrv](https://github.com/Kong/swrv) - 用于数据获取
