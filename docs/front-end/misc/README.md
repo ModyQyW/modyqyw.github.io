@@ -261,12 +261,15 @@
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
   - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
   - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate) - 模板
+  - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects) - 使用 html5、css 和 js 构建的迷你项目示例
 
 ## typescript
 
 - 教程
   - [入门教程](https://ts.xcatliu.com/basics)
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
+  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
+  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
 
 ## vue 及相关生态
 
@@ -357,6 +360,7 @@
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
+  - [swrv](https://github.com/Kong/swrv) - 用于数据获取
 - 进阶
   - [vue 3 组合式 API 征求意见稿](https://composition-api.vuejs.org/zh/)
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
@@ -511,6 +515,8 @@
   - [inferno](https://infernojs.org/) - 类 react 库
   - [create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) - 用于创建可重用的 react 库的 cli
   - [formik](https://github.com/jaredpalmer/formik#readme) - 表格解决方案
+  - [swr](https://swr.vercel.app/) - 用于数据获取的 hook
+  - [react-query](https://react-query.tanstack.com/) - 获取、缓存和更新异步数据的 hook
   - [react-use](https://github.com/streamich/react-use#readme) - hooks 包
     - [bixi-hooks](https://github.com/olivewind/bixi-hooks)
     - [ahooks](https://ahooks.js.org/zh-CN)
@@ -606,10 +612,12 @@
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - [koa](https://koajs.com/) - node.js 框架，自由度高
-    - [egg](https://eggjs.org/zh-cn/) - 封装 koa，约定大于配置，阿里开源的
-    - [think.js](https://thinkjs.org/)
-  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架，学过 Angular 和 Spring 的话建议用这个
-  restful api 的弊端
+    - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
+    - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
+  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
+  - [sails.js](https://sailsjs.com/) - node.js 的 MVC 框架
+  - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
+  - restful api 的弊端
   - 核心知识点
     - 运行与调试 debug/nodemon/jest
     - 流程控制 promise/async+await，事件循环机制
@@ -634,6 +642,10 @@
     - mysql，mongodb，sql server
     - redis 数据结构，数据一致性，分布式锁，订阅发布模式，备份与恢复
     - graphql 概念与操作
+
+## 开源
+
+- [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
 
 ## 参考
 
