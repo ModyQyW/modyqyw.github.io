@@ -156,6 +156,7 @@
     - [前端学习资料合集](https://github.com/fyuanfen/note)
     - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
     - [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
+    - [前端数据治理之道](https://zhuanlan.zhihu.com/p/165213964)
 
 ## github
 

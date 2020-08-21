@@ -90,6 +90,7 @@
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 检查、升级依赖，也可以考虑`yarn upgrade-interactive`和 [npm-check](https://github.com/dylang/npm-check#readme)
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo 管理
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
+- [nx](https://nx.dev/) - 可拓展的 monorepo 开发工具
 - formatter & linter
   - [prettier](https://prettier.io/) - 检查大量代码格式，建议用于 stylelint、eslint 等工具之前
     - [@modyqyw/prettier-config](https://github.com/MillCloud/prettier-config#readme)
@@ -585,6 +586,7 @@
   - [ng-zorro](https://ng.ant.design/docs/introduce/zh)
   - [nebular](https://akveo.github.io/nebular/docs/getting-started/w)
   - [dev-ui](https://devui.design/)
+  - [ng-nest](https://ngnest.com/)
   - [tanbo-ui](https://www.tanboui.com/)
   - [ng-zorro-mobile](https://ng.mobile.ant.design/#/docs/introduce/zh)
 - cli
@@ -598,7 +600,8 @@
   - 无
 - 衍生
   - [rxjs](https://rxjs-dev.firebaseapp.com/)
-  - [ng-nest](https://github.com/NG-NEST/ng-nest)
+  - [ng-nest-admin](https://github.com/NG-NEST/ng-nest-admin#readme) - 后台管理系统
+  - [ng-alain](https://ng-alain.com/) - 后台管理系统
 
 ## Virtual DOM
 
