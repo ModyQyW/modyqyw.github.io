@@ -17,8 +17,8 @@
 ## 原生
 
 - 电脑端 / 移动端网页
-  - 适配 ie8 - jquery 1 + bootstrap 3 + bootstrap-table
-  - ie8 qtm - jquery 3 + bootstrap 4 + bootstrap-table
+  - ie8 - jquery 1 + bootstrap 3 + bootstrap-table
+  - ie11 - jquery 3 + bootstrap 4 + bootstrap-table
 - 移动端客户端
   - cordova
   - flutter

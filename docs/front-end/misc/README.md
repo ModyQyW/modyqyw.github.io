@@ -260,7 +260,8 @@
   - [hammer](http://hammerjs.github.io/) - 触摸手势
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
-  - [qiankun](https://qiankun.umijs.org/zh/) - 微前端解决方案
+  - [single-spa](https://single-spa.js.org/) - 微前端解决方案
+    - [qiankun](https://qiankun.umijs.org/zh/) - 基于 single-spa 封装的微前端解决方案
   - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate) - 模板
   - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects) - 使用 html5、css 和 js 构建的迷你项目示例
 
@@ -294,6 +295,8 @@
   - [bootstrap-vue](https://bootstrap-vue.js.org/docs)
   - [viewui](https://www.iviewui.com/docs/introduce)
   - [buefy](https://github.com/buefy/buefy/)
+  - [chakra-ui](https://vue.chakra-ui.com/)
+  - [vuesax](https://vuesax.com/)
   - [vant](https://youzan.github.io/vant/#/zh-CN/)
   - [mand-mobile](https://didi.github.io/mand-mobile/)
   - [nut-ui](http://nutui.jd.com/#/intro)

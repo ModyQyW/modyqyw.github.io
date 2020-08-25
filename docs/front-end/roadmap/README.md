@@ -87,7 +87,7 @@
   - [30 天 js](https://github.com/Asabeneh/30DaysOfJavaScript)
   - [The Modern JavaScript Tutorial](https://javascript.info/)
   - [现代 JavaScript 教程](https://zh.javascript.info/)
-  - [es6 入门](http://es6.ruanyifeng.com/)
+  - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
 - canvas
   - [mdn - canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
   - [fabric.js](https://github.com/fabricjs/fabric.js)
