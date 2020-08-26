@@ -6,21 +6,35 @@
 
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
+## 参考文档
+
+- [w3c](https://www.w3.org/)
+- [mdn](https://developer.mozilla.org/)
+- [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
+
 ## 浏览器开发者工具
 
 - [chrome](https://developers.google.cn/web/tools/chrome-devtools)
 - [firefox](https://developer.mozilla.org/en-US/docs/Tools)
 - [edge(chromium)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
 
-## 文档搭建
+## 静态网站生成
 
-- [vuepress](https://vuepress.vuejs.org/zh/) - 静态网站生成器
-- [dumi](https://d.umijs.org/) - 为组件开发场景而生的文档工具
-- [hexo](https://hexo.io/) - 快速、简洁且高效的博客框架
+- [vuepress](https://vuepress.vuejs.org/)
+- [dumi](https://d.umijs.org/)
+- [hexo](https://hexo.io/)
+- [gatsby](https://www.gatsbyjs.com/)
+  - [docz](https://www.docz.site/)
+- [next](https://nextjs.org/)
+- [nuxt](https://nuxtjs.org/)
 
 ## 开发语言
 
 - [typescript](https://www.typescriptlang.org/)
+  - [入门教程](https://ts.xcatliu.com/basics)
+  - [官方教程](https://www.typescriptlang.org/docs/home.html)
+  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
+  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
 - [reason](https://reasonml.github.io/)
 - [elm](https://elm-lang.org/)
 - [rescript](https://rescript-lang.org/)
@@ -260,18 +274,13 @@
   - [hammer](http://hammerjs.github.io/) - 触摸手势
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
+  - [fabric.js](https://github.com/fabricjs/fabric.js)
+  - [sprite.js](https://github.com/spritejs/spritejs)
+  - [three.js](https://threejs.org/)
   - [single-spa](https://single-spa.js.org/) - 微前端解决方案
     - [qiankun](https://qiankun.umijs.org/zh/) - 基于 single-spa 封装的微前端解决方案
   - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate) - 模板
   - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects) - 使用 html5、css 和 js 构建的迷你项目示例
-
-## typescript
-
-- 教程
-  - [入门教程](https://ts.xcatliu.com/basics)
-  - [官方教程](https://www.typescriptlang.org/docs/home.html)
-  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
-  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
 
 ## vue 及相关生态
 
@@ -357,6 +366,7 @@
 - 衍生
   - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案
+  - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
   - [vue-ven-admin](https://github.com/anncwb/vue-vben-admin) - 后台管理系统
@@ -448,6 +458,7 @@
   - [ice](https://ice.work/) - 带微前端解决方案
   - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
   - [gatsby](https://www.gatsbyjs.com/)
+  - [after](https://github.com/jaredpalmer/after.js#readme)
 - app
   - react-native
     - [英文文档](https://facebook.github.io/react-native/)
@@ -582,6 +593,7 @@
   - 自带路由
 - 状态管理
   - [ngrx](https://ngrx.io/)
+  - [rxjs](https://rxjs.dev/)
   - [ngxs](https://www.ngxs.io/)
   - [akita](https://netbasal.gitbook.io/akita/)
 - ui
@@ -602,7 +614,6 @@
 - 小程序
   - 无
 - 衍生
-  - [rxjs](https://rxjs-dev.firebaseapp.com/)
   - [ng-nest-admin](https://github.com/NG-NEST/ng-nest-admin#readme) - 后台管理系统
   - [ng-alain](https://ng-alain.com/) - 后台管理系统
 

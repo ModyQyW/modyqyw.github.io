@@ -847,7 +847,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```sh
 npm i zent@8 -E
-npm i style-loader@1 css-loader@4 sass@1 sass-loader@9 resolve-url-loader@3 babel-plugin-zent@2 -DE
+npm i style-loader@1 css-loader@4 sass@1 sass-loader@10 resolve-url-loader@3 babel-plugin-zent@2 -DE
 ```
 
 `css-loader`能够把`.css`文件解析成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
@@ -1210,7 +1210,7 @@ body {
 `webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发的时候修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（实际上，会把生成文件放到内存中）。
 
 ```sh
-npm i cross-env@7 webpack-bundle-analyzer@3 webpack-dev-server@3 webpack-merge@5 -DE
+npm i cross-env@7 webpack-dev-server@3 webpack-merge@5 -DE
 ```
 
 我们还要根据环境来使用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
@@ -1260,18 +1260,10 @@ module.exports = merge(baseConfig, {
 ```js
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: 'cheap-source-map',
-  plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      defaultSizes: 'stat',
-      openAnalyzer: false,
-    }),
-  ],
 });
 
 ```
@@ -1585,7 +1577,6 @@ module.exports = merge(baseConfig, {
 const path = require('path');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(baseConfig, {
@@ -1596,10 +1587,6 @@ module.exports = merge(baseConfig, {
     filename: '[name].[chunkhash:8].js',
   },
   plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      defaultSizes: 'stat',
-    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
     }),
@@ -2208,6 +2195,14 @@ module.exports = {
 ### 单元测试
 
 ### 持续集成
+
+## 原理
+
+### 热更新 hot-reload
+
+### 摇树优化 tree-shaking
+
+### 作用域提升 scope-hoisting
 
 🎉恭喜，你的第四个 webpack demo 已经完成啦～
 
