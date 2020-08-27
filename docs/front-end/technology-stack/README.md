@@ -65,7 +65,7 @@
   - umi / next + unstated-next + zent / blueprint / react-bootstrap + tailwindcss / bulma
 - 移动端网页
   - umi / next + unstated-next + material-ui
-  - umi / next + unstated-next + zarm / react-bootstrap + tailwindcss / bulma
+  - umi / next + unstated-next + yep-react / zarm / react-bootstrap + tailwindcss / bulma
 - 移动端客户端
   - expo + react-router + unstated-next + react-native-elements / ui-kitten
 - 小程序
