@@ -309,6 +309,7 @@
 - cli
   - [nuxt](https://zh.nuxtjs.org/)
   - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
+  - [ream](https://ream.dev/)
   - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
 - app
   - uni-app

@@ -136,13 +136,13 @@ brew doctor
 
 ## oh-my-zsh
 
-### 安装
+### 安装 oh-my-zsh
 
 首先按照[说明](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)安装 zsh。
 
 之后按照[官网说明](https://ohmyz.sh/#install)安装。
 
-### 配置
+### 配置 oh-my-zsh
 
 打开`~/.zshrc`进行配置。下面给出我个人的配置内容。
 

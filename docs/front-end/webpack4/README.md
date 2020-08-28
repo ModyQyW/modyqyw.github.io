@@ -498,7 +498,7 @@ dist
 
 ## demo02 - 再看 webpack 核心概念与基础应用
 
-### 入口 entry
+### 再看入口 entry
 
 一开始我们说到，`webpack`会分析依赖生成依赖图，而分析依赖生成依赖图的起点就由`entry`指定。
 
@@ -564,7 +564,7 @@ module.exports = {
 
 ```
 
-### 输出 output
+### 再看输出 output
 
 `webpack`构建的结果如何输出由`output`指定。
 
@@ -595,7 +595,7 @@ module.exports = {
 
 对于现在的项目规模，起名叫`bundle.js`完全足够了。但对于更大的项目，我们往往会用到`splitChunks`做优化，这种时候就不能直接起名叫`bundle.js`了。至于为什么不能，先留着这个疑问吧，之后这个疑问就会得到解答了。
 
-### 插件 plugin
+### 再看插件 plugin
 
 `plugin`用来增强`webpack`功能，比如优化打包文件，管理资源，注入环境变量等等，它作用于整个构建过程。
 
@@ -603,7 +603,7 @@ module.exports = {
 
 每个`plugin`都需要放到`plugins`字段数组里，顺序一般不影响，具体的配置需要去查询具体的文档。
 
-### 加载器 loader
+### 再看加载器 loader
 
 因为`webpack`默认只支持解析`.js`和`.json`文件，所以项目中使用到的其他文件，比如图片文件、字体文件、样式文件等，就只能使用`loader`解析。
 
@@ -1201,7 +1201,7 @@ body {
 
 `url-loader`和`file-loader`只会处理`.js`中引用的图片，如果我们在`.html`里直接引用呢？那就只能使用`html-loader`来处理了。这种情况比较少见，在这里不再展开。
 
-### 模式 mode
+### 再看模式 mode
 
 指定不同的模式，`webpack`会自动启用不同的优化。默认模式是`production`，默认取值范围是`development`，`production`和`none`。
 
@@ -2145,11 +2145,110 @@ module.exports = merge(baseConfig, {
 
 ```
 
-### 代码分割和动态引入
+### 使用 eslint 格式化和检验代码
 
-### 使用 eslint 检验 js 代码
+`eslint`是现在最热门的 js 校验工具（当然也支持 ts），我们也可以在`webpack`中使用`eslint`。
 
-### 使用 stylelint 检验 scss 代码
+```sh
+npm i @modyqyw/eslint-config-react@1 eslint@7 eslint-webpack-plugin@2 -DE
+```
+
+目前，大部分项目会使用`eslint-loader`而不是`eslint-webpack-plugin`。因为`eslint-loader`将要被废弃，所以这里我们用`eslint-webpack-plugin`来做配置，但是它们的配置相差不大，而且`eslint-webpack-plugin`还修复了一些问题，推荐使用。
+
+安装完依赖之后，我们可以在根目录下建立一个新文件`.eslintrc.js`作为`eslint`的配置文件。这里用我自己封装的`eslint`规则来演示。
+
+```js
+module.exports = {
+  extends: ['@modyqyw/react'],
+};
+
+```
+
+*题外话：如果你想在 vscode 中享受 eslint 的提示，请参考[这里](../environment/README.md#vscode)手动配置。*
+
+无论是开发环境还是生产环境都需要使用到`eslint`，所以我们需要在公共的配置文件里加入`eslint-webpack-plugin`。
+
+```js
+/* eslint-disable import/no-extraneous-dependencies */
+...
+const ESLintPlugin = require('eslint-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new ESLintPlugin({
+      files: 'src',
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+      fix: true,
+    }),
+  ],
+  ...,
+};
+
+```
+
+- L1：我们添加了注释，表示让`eslint`在这个文件内忽略`eslint-plugin-import`里面的`no-extraneous-dependencies`规则，减少不必要的麻烦。类似的，我们还需要修改`${PROJECT_DIR}/config`里面的所有文件，还有`${PROJECT_DIR}/postcss.config.js`。
+- L3：引入`eslint-webpack-plugin`
+- L10：指定`eslint`需要校验的文件目录，这里指定成`src`，默认地，等同于`${PROJECT_DIR}/src`
+- L11：指定`eslint`需要校验的文件格式，这里指定成`.js`，`.jsx`，`.ts`，`.tsx`
+- L12：指定`eslint`开启自动修复功能
+
+现在，我们执行命令`npm run dev`和`npm run build`，命令行中会提示哪里出现了不能自动修复的错误。
+
+```sh
+ ERROR  Failed to compile with 1 errors
+
+ error
+
+
+.../webpack4-demos/demo03/src/index.js
+   9:5  error  Do not use 'new' for side effects                                                                          no-new
+  20:7  error  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+✖ 1 problem (1 error, 0 warnings)
+```
+
+- L6：提示我们这个文件里有错误
+- L7：提示这个文件里的第 9 行第 5 列开始错误地使用了`new`
+- L8：提示这个文件里地第 20 行第 7 列应该为`<img>`添加一个`alt`属性
+
+我们只需要对应地改一下就可以了。前面加入`Promise`只是为了验证我们的配置，现在可以直接去掉。
+
+```js
+// ${PROJECT_DIR}/src/index.js
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { Button, Icon } from 'zent';
+import iconWebpack from './assets/webpack.png';
+import './index.scss';
+
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.title = 'Hello World!';
+    }, 5000);
+  }, []);
+
+  return (
+    <div className="container">
+      <p>Hello Webpack!</p>
+      <img src={iconWebpack} alt="icon-webpack" />
+      <Button type="primary">
+        <Icon type="youzan" />
+        Hello Zent!
+      </Button>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+### 使用 stylelint 格式化和检验代码
+
+### 代码提交的格式化和校验
 
 ### 优化日志
 
@@ -2265,6 +2364,8 @@ module.exports = {
 - [autoprefixer](https://github.com/postcss/autoprefixer#readme)
 - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
 - [cssnano](https://cssnano.co/)
+- [eslint-loader](https://github.com/webpack-contrib/eslint-loader#readme)
+- [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme)
 - [阮一峰 - JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 - [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
 - [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
