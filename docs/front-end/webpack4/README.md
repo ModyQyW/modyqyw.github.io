@@ -2194,7 +2194,7 @@ module.exports = {
 - L11：指定`eslint`需要校验的文件格式，这里指定成`.js`，`.jsx`，`.ts`，`.tsx`
 - L12：指定`eslint`开启自动修复功能
 
-现在，我们执行命令`npm run dev`和`npm run build`，命令行中会提示哪里出现了不能自动修复的错误。
+现在，我们执行命令`npm run dev`和`npm run build`，`eslint`会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
 
 ```sh
  ERROR  Failed to compile with 1 errors
@@ -2247,6 +2247,49 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ### 使用 stylelint 格式化和检验代码
+
+`stylelint`是 css，less，sass，scss 等样式语言的校验工具，我们也可以在`webpack`中使用`stylelint`。
+
+```sh
+npm i @modyqyw/stylelint-config-scss@1 stylelint@13 stylelint-webpack-plugin@2 -DE
+```
+
+安装完依赖之后，我们可以在根目录下建立一个新文件`stylelint.config.js`作为`stylelint`的配置文件。这里用我自己封装的`stylelint`规则来演示。
+
+```js
+module.exports = {
+  extends: ['@modyqyw/stylelint-config-scss'],
+};
+
+```
+
+*题外话：如果你想在 vscode 中享受 stylelint 的提示，请参考[这里](../environment/README.md#vscode)手动配置。*
+
+无论是开发环境还是生产环境都需要使用到`stylelint`，所以我们需要在公共的配置文件里加入`stylelint-webpack-plugin`。
+
+```js
+...
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new StylelintPlugin({
+      files: 'src/**/*.scss',
+      fix: true,
+    }),
+  ],
+  ...,
+};
+
+```
+
+- L2：引入`stylelint-webpack-plugin`
+- L9：指定`stylelint`需要校验的文件格式，这里指定成`src`目录下所有的`.scss`文件
+- L10：指定`stylelint`开启自动修复功能
+
+现在，我们执行命令`npm run dev`和`npm run build`，`stylelint`会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
 
 ### 代码提交的格式化和校验
 
@@ -2364,12 +2407,13 @@ module.exports = {
 - [autoprefixer](https://github.com/postcss/autoprefixer#readme)
 - [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
 - [cssnano](https://cssnano.co/)
+- [eslint](https://eslint.org/)
 - [eslint-loader](https://github.com/webpack-contrib/eslint-loader#readme)
 - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme)
+- [stylelint](https://stylelint.io/)
 - [阮一峰 - JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 - [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
 - [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
-- [stylelint](https://stylelint.io/)
 
 ## 致谢
 
