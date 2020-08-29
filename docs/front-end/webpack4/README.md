@@ -272,7 +272,6 @@ npm i webpack-cli@3 -DE
 npm i copy-webpack-plugin@6 -DE
 npm i html-webpack-plugin@4 -DE
 npm i clean-webpack-plugin@3 -DE
-npm i webpackbar@4 -DE
 npm i friendly-errors-webpack-plugin@1 -DE
 ```
 
@@ -401,23 +400,6 @@ module.exports = {
 
 ```
 
-让`webpack`在构建的时候显示进度条也是常见的做法，这能在一定程度上降低等待的焦虑度。
-
-```js
-const WebpackBar = require('webpackbar');
-
-module.exports = {
-  ...
-  plugins: [
-    // 显示进度条
-    new WebpackBar(),
-    ...
-  ],
-  ...
-};
-
-```
-
 如果构建出现了问题，`webpack`会输出一长串错误信息，使用`friendly-errors-webpack-plugin`可以让输出的错误信息更加友好。
 
 ```js
@@ -444,7 +426,6 @@ const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -461,8 +442,6 @@ module.exports = {
   plugins: [
     // 显示友好的错误信息
     new FriendlyErrorsPlugin(),
-    // 显示进度条
-    new WebpackBar(),
     // 移除上一次的构建文件
     new CleanPlugin(),
     // 复制 ${PROJECT_DIR}/public/favicon.ico
@@ -481,7 +460,7 @@ module.exports = {
 
 ```
 
-重新开始构建，之后可以看到进度条和简短的提示信息。下面是最终生成的`dist`目录的结构。
+重新开始构建，之后可以看到简短的提示信息。下面是最终生成的`dist`目录的结构。
 
 ```sh
 dist
@@ -1221,7 +1200,7 @@ npm i cross-env@7 webpack-dev-server@3 webpack-merge@5 -DE
 {
   ...,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js --progress",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js"
   },
   ...
@@ -1391,7 +1370,6 @@ const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const WebpackBar = require('webpackbar');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -1400,7 +1378,6 @@ module.exports = {
   },
   plugins: [
     new FriendlyErrorsPlugin(),
-    new WebpackBar(),
     new CleanPlugin(),
     new CopyPlugin({
       patterns: [{ from: path.resolve('public', 'favicon.ico') }],
@@ -2145,7 +2122,7 @@ module.exports = merge(baseConfig, {
 
 ```
 
-### 使用 eslint 格式化和检验代码
+### 格式化和检验代码
 
 `eslint`是现在最热门的 js 校验工具（当然也支持 ts），我们也可以在`webpack`中使用`eslint`。
 
@@ -2246,9 +2223,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```
 
-### 使用 stylelint 格式化和检验代码
-
-`stylelint`是 css，less，sass，scss 等样式语言的校验工具，我们也可以在`webpack`中使用`stylelint`。
+而`stylelint`是 css，less，sass，scss 等样式语言的校验工具，我们也可以在`webpack`中使用`stylelint`。
 
 ```sh
 npm i @modyqyw/stylelint-config-scss@1 stylelint@13 stylelint-webpack-plugin@2 -DE
@@ -2291,13 +2266,9 @@ module.exports = {
 
 现在，我们执行命令`npm run dev`和`npm run build`，`stylelint`会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
 
-### 代码提交的格式化和校验
+*题外话：考虑到我们的代码仓库大部分都是需要协作的 git 仓库，还有必要考虑使用 editorconfig，prettier，commitlint，commitizen，lint-staged，husky 等工具。因为和 webpack 关系不大，所以这里不做展开，但源代码中有给出示例配置。注意：prettier 应放到 eslint 和 stylelint 的前面，否则就需要修改 eslint 和 stylelint 的规则避免潜在问题。*
 
-### 优化日志
-
-### 构建分析
-
-### 减少 webpack 信息输出
+### 优化日志显示
 
 你可能会注意到，运行`npm run build`输出的信息，要比`npm run dev`输出的信息多得多。这是因为我们控制了`webpack-dev-server`输出的信息，类似地我们也可以控制`webpack`输出的信息。
 
@@ -2313,6 +2284,8 @@ module.exports = {
 ```
 
 `stats`用于控制显示哪些信息，默认为`normal`。我们修改成`minimal`，就可以达到和`webpack-dev-server`的配置一样的效果。
+
+### 构建分析
 
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
@@ -2367,7 +2340,6 @@ module.exports = {
 - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
 - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin#readme)
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
-- [webpack-bar](https://github.com/nuxt/webpackbar)
 - [webpack plugins 的顺序会影响什么吗？](https://stackoverflow.com/questions/41470771/webpack-does-the-order-of-plugins-matter)
 - [常用 plugins 汇总](https://modyqyw.top/front-end/misc/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
 - [常用 loaders 汇总](https://modyqyw.top/front-end/misc/#%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85)
