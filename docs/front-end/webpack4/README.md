@@ -7,7 +7,7 @@
 - 目标：跟着教程实操能入门`webpack4`，能解决实际开发中 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
 - 思路：`是什么 -> 为什么 -> 怎么做`和`为什么 -> 是什么 -> 怎么做`。
 - 结构：拿单页应用作示例，前面部分着重关注怎么使用，后面部分涉及原理，最后列出参考资料给你查阅学习。
-- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)测试构建产物。
+- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)测试构建。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
 - 范围：不考虑 IE 11- 的浏览器。IE 11- 已经连续 24 个月没有得到官方支持，所以不应该再使用 IE 11-。另外，要支持 IE 11-，还要考虑怎么支持完整的 es5 乃至 es3 的语法和特性，非常耗费时间。考虑到[国情](https://tongji.baidu.com/research/site)原因，教程中还是会示例怎么支持 IE 11 的。
 
@@ -17,13 +17,13 @@
 
 ## 为什么要使用构建工具
 
-- 无需手动处理新语法`syntax`、新特性`feature`
+- 不需要手动处理新语法`syntax`、新特性`feature`
 - 进一步处理图片、文件等资产文件
-- 无需手动添加 css 前缀
-- 无需手动压缩混淆
-- 无需手动做构建文件的版本管理
+- 不需要手动添加 css 前缀
+- 不需要手动压缩混淆
+- 不需要手动做构建文件的版本管理
 
-总而言之，构建工具帮我们完成了大量重复的构建工作，使我们能投入更多的时间到开发工作中。
+总而言之，构建工具帮我们完成了大量重复的构建工作，使我们能投入更多的时间到开发工作。
 
 ## 为什么选择 webpack
 
@@ -36,11 +36,11 @@
 
 ### 模块 module
 
-`webpack`中，任何文件都可以被解析成模块`module`。
+任何文件都可以被`webpack`解析成模块`module`。`webpack`本身支持解析某些文件，而`webpack`本身不支持解析的，需要使用别的工具来帮助解析。
 
 ### 入口 entry
 
-`entry`指定`webpack`工作的时候从哪个`.js`文件开始分析依赖，默认值是`${PROJECT_DIR}/src/index.js`。这个文件，也会被叫做入口文件或者入口模块。
+`entry`指定`webpack`工作的时候从哪个`.js`文件开始分析依赖，默认值是`${PROJECT_DIR}/src/index.js`。这个文件也会被叫做入口文件或者入口模块。
 
 ```js
 // 使用 path 模块来指定路径
@@ -57,7 +57,7 @@ module.exports = {
 
 `path.resolve`是`path`模块内置的方法，它能将提供的字符串参数拼接成一个绝对路径，来指定`entry`的值。
 
-`path.join`和`path.resolve`用法、作用相似，使用频率也比较高。两者之间的主要区别是`path.join`仅仅拼接给出的字符串然后返回，而`path.resolve`会解析然后返回一个绝对路径。
+`path.join`和`path.resolve`用法、作用相似，使用频率也比较高。两者之间的主要区别是`path.join`仅仅拼接给出的字符串然后返回一个字符串（可能无意义，取决于给出的字符串），而`path.resolve`会解析然后返回一个绝对路径。
 
 下面是两个对比示例。
 
@@ -71,7 +71,7 @@ path.resolve("a", "b1", "..", "b2"); // string ${PROJECT_DIR}/a/b2
 
 ### 输出 output
 
-`output`可以指定`webpack`存放所有输出文件的基本路径`output.path`，还有`entry`对应的输出文件的**路径和名称**`output.filename`。
+`output`可以指定`webpack`存放所有输出文件的基本路径`output.path`，还有`entry`对应的输出文件的**路径和文件名**`output.filename`。
 
 `entry`对应的输出文件默认是`${PROJECT_DIR}/dist/main.js`。
 
@@ -96,7 +96,7 @@ module.exports = {
 
 `webpack`本身只能处理`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得`webpack`能够处理`.jsx`，`.ts`，`.tsx`，`.css`等文件。
 
-`module.rules`数组里面的每一项都是处理模块的规则。每一项规则有两个必需的属性，一个是`test`，用来指定需要解析的文件，它的值往往是一个正则表达式，另一个是`use`，指定用来解析文件的`loader`。
+`module.rules`数组里面的每一个元素都是处理模块的规则。
 
 ```js
 // 使用 path 模块来指定路径
@@ -124,6 +124,8 @@ module.exports = {
 };
 
 ```
+
+每一个元素都是对象 Object，有两个必需的属性，一个是`test`，用来指定需要解析的文件，它的值往往是一个正则表达式，另一个是`use`，指定用来解析文件的`loader`。
 
 有的`loader`还会关联`plugin`或者有额外的属性供你配置，具体信息要查看对应`loader`的文档。
 
@@ -173,7 +175,7 @@ module.exports = {
 
 模式一共有三种：`production`（生产模式），`development`（开发模式），`none`（无优化模式），默认值是`production`，优化程度由高到低依次是`production`，`development`，`none`。
 
-`none`不会启用优化，我们一般不会使用，而`production`和`development`的默认优化往往不能满足项目要求，还需要我们进一步定制。
+`none`不会启用优化，我们一般不会去用它。而`production`和`development`的默认优化往往不能满足项目要求，我们还要进一步定制。
 
 ```js
 // 使用 path 模块来指定路径
@@ -267,12 +269,12 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 然后安装相关依赖。
 
 ```sh
-npm i webpack@4 -DE
-npm i webpack-cli@3 -DE
-npm i copy-webpack-plugin@6 -DE
-npm i html-webpack-plugin@4 -DE
-npm i clean-webpack-plugin@3 -DE
-npm i friendly-errors-webpack-plugin@1 -DE
+npm i webpack@~4.44.0 -D
+npm i webpack-cli@~3.3.0 -D
+npm i copy-webpack-plugin@~6.0.0 -D
+npm i html-webpack-plugin@~4.3.0 -D
+npm i clean-webpack-plugin@~3.0.0 -D
+npm i friendly-errors-webpack-plugin@~1.7.0 -D
 ```
 
 创建一个内容简单的`${PROJECT_DIR}/src/index.js`。
@@ -320,7 +322,7 @@ module.exports = {
 npm run build
 ```
 
-构建结束之后，我们可以看到，在`dist`文件夹里面已经出现了一个`bundle.js`文件。但是我们还不能直接使用这个`bundle.js`文件，要使用它，我们还需要手动创建一个`.html`文件，然后在文件里面引用`bundle.js`。
+构建结束后，我们可以看到，在`dist`文件夹里面会出现一个`bundle.js`文件。但是我们还不能直接使用这个`bundle.js`文件，要使用它，我们还需要手动创建一个`.html`文件，然后引用`bundle.js`。
 
 实际开发的时候，每次构建之后都耗费时间去做这样的重复工作是难以忍受的。我们需要一些自动处理的手段，来帮我们自动生成`.html`文件并引用这个`bundle.js`文件。
 
@@ -460,13 +462,22 @@ module.exports = {
 
 ```
 
-重新开始构建，之后可以看到简短的提示信息。下面是最终生成的`dist`目录的结构。
+重新开始构建，之后可以看到简短的提示信息。下面是最终的目录结构（省略了`node_modules`）。
 
 ```sh
-dist
-├── bundle.js
-├── favicon.ico
-└── index.html
+.
+├── dist
+│   ├── bundle.js
+│   ├── favicon.ico
+│   └── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   └── index.js
+└── webpack.config.js
 ```
 
 使用`live server`来查看效果，可以看到`Hello webpack!`。
@@ -597,8 +608,19 @@ module.exports = {
 首先还是要安装相关的依赖。
 
 ```sh
-npm i @babel/runtime@7 core-js@3 regenerator-runtime@0.11.1 react@16.13.1 react-dom@16.13.1 -E
-npm i @babel/cli@7 @babel/core@7 @babel/plugin-transform-runtime@7 @babel/preset-env@7 @babel/preset-react@7 babel-loader@8 @types/react@16 @types/react-dom@16 -DE
+npm i @babel/runtime@~7.11.0
+npm i core-js@~3.6.0
+npm i react@~16.13.0
+npm i react-dom@~16.13.0
+npm i regenerator-runtime@0.11.1
+npm i @babel/cli@~7.10.0 -D
+npm i @babel/core@~7.11.0 -D
+npm i @babel/plugin-transform-runtime@~7.11.0 -D
+npm i @babel/preset-env@~7.11.0 -D
+npm i @babel/preset-react@~7.10.0 -D
+npm i babel-loader@~8.1.0 -D
+npm i @types/react@~16.9.0 -D
+npm i @types/react-dom@~16.9.0 -D
 ```
 
 然后修改`webpack`配置。不要忘记，对于`webpack`来说，所有文件都可以看成一个模块，所以需要在模块对应的字段下写配置。
@@ -825,8 +847,13 @@ ReactDOM.render(<App />, document.getElementById('root'));
 首先还是要安装相关的依赖。
 
 ```sh
-npm i zent@8 -E
-npm i style-loader@1 css-loader@4 sass@1 sass-loader@10 resolve-url-loader@3 babel-plugin-zent@2 -DE
+npm i zent@~8.5.0
+npm i style-loader@~1.2.0 -D
+npm i css-loader@~4.2.0 -D
+npm i sass@~1.26.0 -D
+npm i sass-loader@~10.0.0 -D
+npm i resolve-url-loader@~3.1.0 -D
+npm i babel-plugin-zent@~2.2.0 -D
 ```
 
 `css-loader`能够把`.css`文件解析成 css 模块，`style-loader`能够将 css 模块嵌入到文件中。
@@ -1068,7 +1095,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 下面来演示如何加入和使用这两个`loader`。首先还是安装依赖。
 
 ```sh
-npm i file-loader@6 url-loader@4 -DE
+npm i file-loader@~6.0.0 -D
+npm i url-loader@~4.1.0 -D
 ```
 
 直接修改配置文件。
@@ -1189,7 +1217,9 @@ body {
 `webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发的时候修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下（实际上，会把生成文件放到内存中）。
 
 ```sh
-npm i cross-env@7 webpack-dev-server@3 webpack-merge@5 -DE
+npm i cross-env@~7.0.0 -D
+npm i webpack-dev-server@~3.11.0 -D
+npm i webpack-merge@~5.1.0 -D
 ```
 
 我们还要根据环境来使用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
@@ -1356,7 +1386,7 @@ module.exports = {
 要解决这个问题，我们要使用`mini-css-extract-plugin`，它能分离出`.css`文件让我们添加文件指纹。一般只会在生产环境中使用它，在开发环境里，从效率考虑，还是会使用`style-loader`。
 
 ```sh
-npm i mini-css-extract-plugin@0 -DE
+npm i mini-css-extract-plugin@~0.11.0 -D
 ```
 
 我们再把`${PROJECT_DIR}/config/webpack.base.js`里关于 css 的部分都放到`${PROJECT_DIR}/config/webpack.dev.js`里。
@@ -1613,7 +1643,7 @@ module.exports = merge(baseConfig, {
 虽然安装`webpack`依赖的时候会自动安装该依赖，但是我们通常会显式安装我们所需要的依赖，指定版本，避免版本不一致的问题。
 
 ```sh
-npm i terser-webpack-plugin@4 -DE
+npm i terser-webpack-plugin@~4.1.0 -D
 ```
 
 我们不是从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
@@ -1695,7 +1725,11 @@ module.exports = {
 还是要先安装相关的依赖。
 
 ```sh
-npm i postcss@7 postcss-loader@3 autoprefixer@9 postcss-preset-env@6 cssnano@4 -DE
+npm i postcss@~7.0.0 -D
+npm i postcss-loader@~3.0.0 -D
+npm i autoprefixer@~9.6.0 -D
+npm i postcss-preset-env@~6.7.0 -D
+npm i cssnano@~4.1.0 -D
 ```
 
 要怎么使用`postcss`呢？很简单，在`webpack`配置文件里使用`postcss-loader`，之后创建一个`${PROJECT_DIR}/postcss.config.js`文件作为`postcss`的配置文件。
@@ -1830,7 +1864,7 @@ module.exports = {
 
 无需额外的配置，就是这么简单。`autoprefixer`会自动寻找目标浏览器的说明（就是`${PROJECT_DIR}/.browserslistrc`，希望你还没有忘记），并且根据目标浏览器自动地添加前缀。
 
-而要处理某些 css 的新语法和新特性，我们就需要用到另外一个插件`postcss-preset-env`。和`@babel/preset-env`类似，它可以为我们处理 css 的某些新语法和新特性，而且，它还内置了`autoprefixer`！
+而要处理某些 css 的新语法和新特性，我们就需要用到另外一个插件`postcss-preset-env`。和`@babel/preset-env`类似，它可以为我们处理 css 的某些新语法和新特性，而且，它还内置了`autoprefixer`的功能。
 
 我们可以把`autoprefixer`换成`postcss-preset-env`，同样的，无需额外的配置。`${PROJECT_DIR}/.browserslistrc`也会被自动地读取使用。这时候，`postcss`会根据目标浏览器自动添加属性前缀、处理相对稳定的新语法和新特性。
 
@@ -2076,7 +2110,7 @@ module.exports = merge(baseConfig, {
 gzip 是一种数据压缩格式，或者说是一种文件格式。在生产环境打包的最后阶段，为生成的文件生成对应的`.gz`文件，可以有效地减小文件体积，让支持 gzip 的浏览器更快地加载页面。
 
 ```sh
-npm i compression-webpack-plugin@4 -DE
+npm i compression-webpack-plugin@~5.0.0 -D
 ```
 
 然后我们在`${PROJECT_DIR}/config/webpack.prod.js`里配置它。
@@ -2127,7 +2161,9 @@ module.exports = merge(baseConfig, {
 `eslint`是现在最热门的 js 校验工具（当然也支持 ts），我们也可以在`webpack`中使用`eslint`。
 
 ```sh
-npm i @modyqyw/eslint-config-react@1 eslint@7 eslint-webpack-plugin@2 -DE
+npm i @modyqyw/eslint-config-react@~1.4.0 -D
+npm i eslint@~7.7.0 -D
+npm i eslint-webpack-plugin@~2.1.0 -D
 ```
 
 目前，大部分项目会使用`eslint-loader`而不是`eslint-webpack-plugin`。因为`eslint-loader`将要被废弃，所以这里我们用`eslint-webpack-plugin`来做配置，但是它们的配置相差不大，而且`eslint-webpack-plugin`还修复了一些问题，推荐使用。
@@ -2226,7 +2262,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 而`stylelint`是 css，less，sass，scss 等样式语言的校验工具，我们也可以在`webpack`中使用`stylelint`。
 
 ```sh
-npm i @modyqyw/stylelint-config-scss@1 stylelint@13 stylelint-webpack-plugin@2 -DE
+npm i @modyqyw/stylelint-config-scss@~1.0.0 -D
+npm i stylelint@~13.6.0 -D
+npm i stylelint-webpack-plugin@~2.1.0 -D
 ```
 
 安装完依赖之后，我们可以在根目录下建立一个新文件`stylelint.config.js`作为`stylelint`的配置文件。这里用我自己封装的`stylelint`规则来演示。
@@ -2286,6 +2324,55 @@ module.exports = {
 `stats`用于控制显示哪些信息，默认为`normal`。我们修改成`minimal`，就可以达到和`webpack-dev-server`的配置一样的效果。
 
 ### 构建分析
+
+在开发大型项目的时候，往往需要根据实际情况去做特定的优化。
+
+```sh
+npm i webpack-bundle-analyzer@~3.8.0 -D
+npm i speed-measure-webpack-plugin@~1.3.0 -D
+```
+
+我们会使用`webpack-bundle-analyzer`来确定对应`chunk`的大小，然后考虑是否还需要调整。
+
+```js
+// ${PROJECT_DIR}/config/webpack.prod.js
+const { merge } = require('webpack-merge');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+module.exports = merge(baseConfig, {
+  ...,
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+      openAnalyzer: false,
+    }),
+    ...,
+  ],
+  ...,
+}));
+
+```
+
+现在执行`npm run build`，会生成一个分析文件`${PROJECT_DIR}/dist/report.html`，它里面的内容就是各个`chunk`的大小。我们可以根据它来做适当的调整，具体调整方案和实际情况相关。
+
+而考量不同阶段打包的时间，我们会使用`speed-measure-webpack-plugin`。
+
+```js
+// ${PROJECT_DIR}/config/webpack.dev.js
+// ${PROJECT_DIR}/config/webpack.prod.js
+...
+const { merge } = require('webpack-merge');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const baseConfig = require('./webpack.base.js');
+
+module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
+  ...,
+}));
+
+```
+
+现在执行`npm run dev`，命令行里面会显示我们使用的`plugin`和`loader`的耗时。我们可以根据这些耗时来做适当的调整，缩短等待时间。
 
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
