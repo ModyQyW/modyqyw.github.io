@@ -2389,13 +2389,13 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
 
 参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-demos/tree/master/demo03)。
 
+## demo04 - 编写可维护的配置
+
 待补充，催稿可以
 
 （1）邮件催稿
 
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
-
-## demo04 - 编写可维护的配置
 
 ### 配置设计
 

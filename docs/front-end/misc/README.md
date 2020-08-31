@@ -106,6 +106,7 @@
   - [lerna-changelog](https://github.com/lerna/lerna-changelog#readme) - 为 lerna 项目自动生成 changelog
 - [nx](https://nx.dev/) - 可拓展的 monorepo 开发工具
 - formatter & linter
+  - [ls-lint](https://ls-lint.org/) - 检查文件和目录名
   - [prettier](https://prettier.io/) - 检查大量代码格式，建议用于 stylelint、eslint 等工具之前
     - [@modyqyw/prettier-config](https://github.com/MillCloud/prettier-config#readme)
   - [eslint](https://eslint.org/) - 检查 js/jsx/ts/tsx/vue 代码的语法，可附带检查格式，建议用于 prettier 之后
@@ -280,6 +281,7 @@
   - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
   - [single-spa](https://single-spa.js.org/) - 微前端解决方案
     - [qiankun](https://qiankun.umijs.org/) - 基于 single-spa 封装的微前端解决方案
+  - [berial](https://github.com/berialjs/berial) - 简单的微前端方案
   - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate#readme) - 模板
   - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects#readme) - 使用 html5、css 和 js 构建的迷你项目示例
 
