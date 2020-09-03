@@ -369,6 +369,7 @@
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
   - [vue-ven-admin](https://github.com/anncwb/vue-vben-admin) - 后台管理系统
+  - [vue-antd-admin](https://github.com/iczer/vue-antd-admin) - 后台管理系统
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard) - 后台管理系统
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard) - 后台管理系统
   - [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) - 后台管理系统
@@ -490,7 +491,7 @@
   - [emotion](https://emotion.sh/) - css-in-js
   - [styled-components](https://styled-components.com/) - css-in-js
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 高效渲染大型列表和表格数据的 react 组件
-  - [formik](https://github.com/jaredpalmer/formik#readme) - 表格解决方案
+  - [formik](https://github.com/jaredpalmer/formik#readme) - 表单解决方案
   - [create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) - 用于创建可重用的 react 库的 cli
   - [swr](https://swr.vercel.app/) - 用于数据获取的 hook
   - [react-query](https://react-query.tanstack.com/) - 获取、缓存和更新异步数据的 hook

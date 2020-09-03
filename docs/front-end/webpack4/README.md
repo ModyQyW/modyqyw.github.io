@@ -2429,6 +2429,12 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
 
 （2）打赏，备注“催稿+内容”（通常这种方式会更有效点，毕竟收了钱不好意思再拖）
 
+## 结束
+
+这篇教程到这里就结束了。当然，你的学习还没有结束，毕竟这里很多东西都是没有提及的，比如`webpack.definePlugin`，MPA 的实践，把`webpack`配置等等。你大可以去参考`create-react-app`，`@vue/cli`等优秀的 cli 的源码，学习更多的`webpack`配置。
+
+如果你发现这篇教程有任何问题，欢迎在下面评论提意见，或者提交 issue / pr。提前感谢:D
+
 ## 参考
 
 - [nodejs 12.x - path](https://nodejs.org/dist/latest-v12.x/docs/api/path.html)

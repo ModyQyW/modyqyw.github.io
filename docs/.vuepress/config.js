@@ -143,8 +143,12 @@ module.exports = {
             link: '/front-end/misc/',
           },
           {
-            text: 'jquery-bootstrap',
-            link: '/front-end/jquery-bootstrap/',
+            text: 'jquery',
+            link: '/front-end/jquery/',
+          },
+          {
+            text: 'bootstrap',
+            link: '/front-end/bootstrap/'
           },
           {
             text: 'vue',
