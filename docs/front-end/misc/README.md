@@ -515,6 +515,7 @@
   - [Re: 从零开始的 React 再造之旅](https://devrsi0n.com/articles/create-react-from-scratch)
   - [这可能是最通俗的 React Fiber(时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
   - [React Fiber 架构](https://zhuanlan.zhihu.com/p/37095662)
+  - [react hooks 完全上手指南](https://zhuanlan.zhihu.com/p/92211533)
   - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
   - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
   - [精读《useEffect 完整指南》](https://juejin.im/post/5c9827745188250ff85afe50)
