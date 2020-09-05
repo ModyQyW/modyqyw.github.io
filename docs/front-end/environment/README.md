@@ -20,7 +20,7 @@
 - [PowerToys](https://github.com/microsoft/PowerToys) - 小工具集合
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，windows 上类似的工具还有 [wox](https://github.com/Wox-launcher/Wox#readme)
-- [WPS](https://www.wps.cn/) - 建议重度用户用 MS Office
+- [WPS](https://www.wps.cn/) - 建议重度用户用 MS Office 确保兼容性
 - [百度网盘](http://pan.baidu.com/download) - 可能会用到[城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)，如果有特殊需求可以自己搭，参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
@@ -48,18 +48,18 @@
 - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包工具，可以考虑 [Charles](https://xclient.info/s/charles.html)
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
-- [DeepL](https://www.deepl.com/translator) - 翻译工具
+- [DeepL](https://www.deepl.com/translator) - 翻译工具，你也可以考虑 [Bob](https://github.com/ripperhe/Bob#readme)
 - [Dozer](https://github.com/Mortennn/Dozer) - 隐藏状态栏过多的图标
 - [draw.io](https://github.com/jgraph/drawio-desktop/releases/) - 免费作图工具，包括流程图，思维导图等
 - [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Google Chrome](https://www.google.cn/chrome/index.html) -  - 其他比较好的浏览器也可以考虑，比如 [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)，[新版 Microsoft Edge](https://www.microsoft.com/zh-cn/edge)，[opera](https://www.opera.com/)，[brave](https://brave.com/)，[wexond](https://wexond.net/)，[vivaldi](https://vivaldi.com/zh-hans/)，[iridium](https://iridiumbrowser.de/) 等
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN)，[axe.store](https://gitee.com/kuaibiancheng/store)
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器，国内可以考虑使用 [HomebrewCN](https://gitee.com/cunkai/HomebrewCN#readme)，[axe.store](https://gitee.com/kuaibiancheng/store#readme)
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Listen1](https://github.com/listen1/listen1_desktop/releases) - 听歌
-- [Magnet](https://xclient.info/s/magnet.html) - 管理工作空间
+- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，你也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
 - [Motrix](https://motrix.app/zh-CN/) - 下载工具，如果有迅雷会员可以考虑[迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
 - [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持 mac 读写 NTFS
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
@@ -76,7 +76,7 @@
 - [Tencent Lemon](https://lemon.qq.com/) - 清理工具
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具，mac 类似的工具还有 [alfred](https://www.alfredapp.com/)
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置，也可以考虑使用 [WebStorm](https://www.jetbrains.com/webstorm/)（基本不需要特别配置，生态不如 vscode），如果使用 uni-app 开发 app 必须使用的工具则必须用 [HBuilderX](https://www.dcloud.io/hbuilderx.html)
-- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office
+- [WPS](https://www.wps.cn/) - 建议重度 office 用户用 windows + MS Office 确保兼容性
 
 ## 浏览器插件
 
@@ -417,6 +417,8 @@ yarn
   ...
 }
 ```
+
+**注意：如果你使用的 ui 库使用了`node-sass`而不是`dart-sass`，请使用`node-sass`避免可能出现的问题！**
 
 ## sublime
 
