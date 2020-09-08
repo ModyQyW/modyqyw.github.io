@@ -269,10 +269,13 @@
   - [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
   - [simple-crop](https://github.com/newbieYoung/Simple-Crop#readme) - 图片裁剪
   - [cropperjs](https://github.com/fengyuanchen/cropperjs#readme) - 图片裁剪
+  - [recordrtc](https://github.com/muaz-khan/RecordRTC) - webrtc 库
+  - [howler.js](https://howlerjs.com/) - audio 支持
+  - [video.js](https://videojs.com/) - video 支持
   - [hammer](http://hammerjs.github.io/) - 触摸手势
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
-  - [tui-editor](http://ui.toast.com/tui-editor) - 高校、可扩展的 GFM Markdown Wysiwyg 编辑器
+  - [tui-editor](http://ui.toast.com/tui-editor) - 高效、可扩展的 GFM Markdown Wysiwyg 编辑器
   - [quilljs](https://quilljs.com/) - 现代所见即所得的富文本编辑器
   - [fabric.js](http://fabricjs.com/) - canvas 库，支持 svg 和 canvas 相互解析
   - [sprite.js](https://spritejs.org/) - 跨平台高性能图形系统，支持 canvas 和 webgl
