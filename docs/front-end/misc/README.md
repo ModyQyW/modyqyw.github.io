@@ -86,7 +86,6 @@
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
   - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
   - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
-- [reason](https://reasonml.github.io/)
 - [elm](https://elm-lang.org/)
 - [rescript](https://rescript-lang.org/)
 
@@ -398,7 +397,7 @@
 - 状态管理
   - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
   - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
+  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/react](https://redux-model.github.io/redux-model/)
   - [rematch](https://rematch.github.io/rematch/)
   - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
 - ui
@@ -432,7 +431,7 @@
     - 状态管理
       - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
       - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/react](https://redux-model.github.io/redux-model/)
       - [rematch](https://rematch.github.io/rematch/)
       - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
     - ui
@@ -458,7 +457,7 @@
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
       - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)，详见[文档](https://taro-docs.jd.com/taro/docs/redux.html)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/taro](https://redux-model.github.io/redux-model/)，详见[文档](https://taro-docs.jd.com/taro/docs/redux.html)
       - [rematch](https://rematch.github.io/rematch/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
