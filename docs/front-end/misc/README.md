@@ -68,6 +68,7 @@
 - [fontawesome](https://fontawesome.com/)
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
 - [coreui-icons](https://icons.coreui.io/icons/)
+- [tabler-icons](https://tablericons.com/)
 
 ## 静态网站生成
 
@@ -574,6 +575,7 @@
   - [koa](https://koajs.com/) - node.js 框架，自由度高
     - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
     - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
+    - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
   - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
   - [sails.js](https://sailsjs.com/) - node.js 的 MVC 框架
   - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
