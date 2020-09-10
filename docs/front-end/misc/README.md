@@ -273,6 +273,7 @@
   - [recordrtc](https://github.com/muaz-khan/RecordRTC) - webrtc 库
   - [howler.js](https://howlerjs.com/) - audio 支持
   - [video.js](https://videojs.com/) - video 支持
+  - [popper.js](https://popper.js.org/) - 文字提示和弹出式菜单
   - [hammer](http://hammerjs.github.io/) - 触摸手势
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析

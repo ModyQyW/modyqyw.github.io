@@ -8,7 +8,7 @@
 
 ## Windows - 偏向娱乐的配置
 
-- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 zsh + [oh-my-zsh](https://ohmyz.sh/)，也可以用双系统 Ubuntu，Deepin，优麒麟
+- windows 10 ltsc - 稳定，砍掉了一切社交功能，缺点是安装 wsl 和 wsl2 比较麻烦，wsl 和 wsl2 中建议使用 zsh + [oh-my-zsh](https://ohmyz.sh/)，也可以用双系统 Ubuntu，Deepin
 - [360 Total Security](https://www.360totalsecurity.com/zh-cn/features/360-total-security/) - 电脑管理，你也可以考虑使用[腾讯电脑管家](https://guanjia.qq.com/)，如果锁定了 ie，可能会导致 ie 无法唤起开发者工具
 - [360zip](https://www.360totalsecurity.com/zh-cn/360zip/) - 压缩/解压缩工具，你也可以考虑 [bandizip](https://www.bandisoft.com/bandizip/)（有广告）和 [7zip](https://www.7-zip.org/)
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 加速工具
@@ -326,21 +326,28 @@ git stash pop
 ### npm 全局包
 
 ```sh
-npm i -g @tarojs/cil
-npm i -g @umijs/create-umi-app
-npm i -g @vue/cli
-npm i -g @vue/devtools
-npm i -g cgr
-npm i -g create-nuxt-app
-npm i -g expo-cli
-npm i -g np
-npm i -g npm@lts
-npm i -g npm-check
-npm i -g prettier
-npm i -g react-devtools
-npm i -g ts-node
-npm i -g typescript
-npm i -g yarn
+npm i -g @tarojs/cli --registry=https://registry.npm.taobao.org
+npm i -g @vue/cli --registry=https://registry.npm.taobao.org
+npm i -g @vue/devtools --registry=https://registry.npm.taobao.org
+npm i -g cgr --registry=https://registry.npm.taobao.org
+npm i -g cnpm --registry=https://registry.npm.taobao.org
+npm i -g commitizen --registry=https://registry.npm.taobao.org
+npm i -g conventional-changelog --registry=https://registry.npm.taobao.org
+npm i -g expo-cli --registry=https://registry.npm.taobao.org
+npm i -g lerna --registry=https://registry.npm.taobao.org
+npm i -g less --registry=https://registry.npm.taobao.org
+npm i -g nativefier --registry=https://registry.npm.taobao.org
+npm i -g np --registry=https://registry.npm.taobao.org
+npm i -g npm@lts --registry=https://registry.npm.taobao.org
+npm i -g npm-check-updates --registry=https://registry.npm.taobao.org
+npm i -g prettier --registry=https://registry.npm.taobao.org
+npm i -g react-devtools --registry=https://registry.npm.taobao.org
+npm i -g sass --registry=https://registry.npm.taobao.org
+npm i -g ts-node --registry=https://registry.npm.taobao.org
+npm i -g tyarn --registry=https://registry.npm.taobao.org
+npm i -g typescript --registry=https://registry.npm.taobao.org
+npm i -g yarn --registry=https://registry.npm.taobao.org
+npm i -g yo --registry=https://registry.npm.taobao.org
 ```
 
 更新时只需要执行全局更新即可。
