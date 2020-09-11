@@ -262,6 +262,7 @@
   - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
   - [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
   - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
+  - [chart.js](https://github.com/chartjs/Chart.js) - 图表库
   - [leaflet](https://leafletjs.com/) - 地图库
   - [aplayer](https://aplayer.js.org/) - h5 音频播放器
   - [dplayer](https://dplayer.js.org/) - h5 视频播放器
