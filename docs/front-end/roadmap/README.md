@@ -171,6 +171,11 @@
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - ……
 
+## 极客时间版
+
+- [计算机基础](https://time.geekbang.org/learning/path-detail/3)
+- [前端工程师](https://time.geekbang.org/learning/path-detail/2)
+
 ## github
 
 - [英文版](https://roadmap.sh/) - [繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)

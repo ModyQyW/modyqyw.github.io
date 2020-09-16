@@ -143,12 +143,12 @@ module.exports = {
             link: '/front-end/misc/',
           },
           {
-            text: 'jquery',
-            link: '/front-end/jquery/',
+            text: 'jquery3',
+            link: '/front-end/jquery3/',
           },
           {
             text: 'bootstrap',
-            link: '/front-end/bootstrap/'
+            link: '/front-end/bootstrap/',
           },
           {
             text: 'vue',
@@ -187,10 +187,6 @@ module.exports = {
             link: '/front-end/rollup/',
           },
           {
-            text: 'parcel',
-            link: '/front-end/parcel/',
-          },
-          {
             text: 'vite',
             link: '/front-end/vite',
           },
@@ -211,8 +207,20 @@ module.exports = {
             link: '/front-end/optimization/',
           },
           {
-            text: 'koa 和 egg',
+            text: 'express',
+            link: '/front-end/express/',
+          },
+          {
+            text: 'koa',
             link: '/front-end/koa-and-egg/',
+          },
+          {
+            text: 'egg',
+            link: '/front-end/egg/',
+          },
+          {
+            text: 'nest',
+            link: '/front-end/nest/',
           },
         ],
       },
@@ -316,9 +324,9 @@ module.exports = {
       'sitemap',
       {
         hostname: 'https://modyqyw.top',
-      }
+      },
     ],
-    "vuepress-plugin-code-copy",
+    'vuepress-plugin-code-copy',
     [
       'helper-live2d',
       {

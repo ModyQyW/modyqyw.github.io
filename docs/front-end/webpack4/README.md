@@ -2391,7 +2391,7 @@ module.exports = new SpeedMeasurePlugin().wrap(merge(baseConfig, {
 
 ## 结束
 
-这篇教程到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如`webpack.definePlugin`，MPA 的实践，`webpack`配置封装等等。你大可以去参考`create-react-app`，`@vue/cli`，`poi`等优秀的 cli 的源码，学习更多的`webpack`配置。真正开发的时候，建议直接使用 cli。
+这篇教程到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如`webpack.definePlugin`，CSS Modules 支持，MPA 的实践，SSR 支持，`webpack`配置封装等等。你大可以去参考`create-react-app`，`@vue/cli`，`poi`等优秀的 cli 的源码，学习更多的`webpack`配置。真正开发的时候，建议直接使用 cli。
 
 如果你发现这篇教程有任何问题，欢迎在下面评论提意见，或者提交 issue / pr。提前感谢:D
 

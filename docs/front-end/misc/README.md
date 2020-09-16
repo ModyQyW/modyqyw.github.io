@@ -331,6 +331,8 @@
       - [uni-ui](https://github.com/dcloudio/uni-ui#readme)
       - [color-ui](https://github.com/weilanwl/ColorUI#readme)
       - [grace-ui](https://grace.hcoder.net/) - 收费
+    - 进阶
+      - [uni-app 多端构建原理浅析](https://f-loat.github.io/posts/2019/08/03/uni-app-%E5%A4%9A%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.html)
   - chameleon
     - [中文文档](https://cml.js.org/)
     - 路由
@@ -369,8 +371,11 @@
 - 衍生
   - [fes.js](https://webank.gitee.io/fes.js/) - 管理台应用解决方案
   - [swrv](https://github.com/Kong/swrv) - 用于数据获取
+  - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
+  - [vue-formulate](https://vueformulate.com/) - 表单解决方案
   - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板
+  - [@ant-design-vue/use](https://github.com/vueComponent/use) - hooks
   - [vue-general-components](https://github.com/xxholly32/vue-general-components#readme) - 快速搭建 vue 组件
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
@@ -496,7 +501,7 @@
   - [inferno](https://infernojs.org/) - 类 react 库
   - [emotion](https://emotion.sh/) - css-in-js
   - [styled-components](https://styled-components.com/) - css-in-js
-  - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 高效渲染大型列表和表格数据的 react 组件
+  - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 表格解决方案，高效渲染大型列表和表格数据的 react 组件
   - [formik](https://github.com/jaredpalmer/formik#readme) - 表单解决方案
   - [create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) - 用于创建可重用的 react 库的 cli
   - [swr](https://swr.vercel.app/) - 用于数据获取的 hook
