@@ -223,6 +223,7 @@
     - [postcss-loader](https://webpack.js.org/loaders/postcss-loader/) - 使用 postcss 处理 css 文件
     - [raw-loader](https://github.com/webpack-contrib/raw-loader#readme) - 允许以字符串形式导入文件
     - [eslint-loader](https://webpack.js.org/loaders/eslint-loader/) - 代码校验
+- [poi](https://poi.js.org/) - 封装 webpack
 - [snowpack](https://www.snowpack.dev/) - 使用原生 es module 的构建工具，可参考 [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack)
 - [vite](https://github.com/vitejs/vite#readme) - 使用原生 es module 的开发构建工具
 - [rollup](https://rollupjs.org/guide/zh/) - 模块构建器，一般用于打包库，可参考 [awesome-rollup](https://github.com/rollup/awesome)
@@ -233,15 +234,15 @@
 - [lodash](https://lodash.com/)
 - [xe-utils](https://x-extends.gitee.io/xe-utils/)
 - [futil-js](https://github.com/smartprocure/futil-js#readme)
-- [moment](https://momentjs.com/) - 日期时间处理
+- [moment](https://momentjs.com/) - 日期时间处理，已经进入维护期
 - [dayjs](https://dayjs.gitee.io/zh-CN/) - 日期时间处理
 - [date-fns](https://date-fns.org/) - 日期时间处理
+- [js-joda](https://js-joda.github.io/js-joda/) - 日期时间处理
+- [luxon](https://moment.github.io/luxon/) - 日期时间处理
 - [history](https://github.com/ReactTraining/history) - 处理访问历史，比较底层的库
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp) - 将路径字符串转换成正则，比较底层的库
 - [qs](https://www.npmjs.com/package/qs) - 增加了安全性的查询字符串解析和字符串化库
 - [query-string](https://www.npmjs.com/package/query-string) - 解析和串联 URL 查询字符串
-
-一般用 lodash + dayjs 就能解决开发中的普遍问题，建议研究一下源码。
 
 ## 原生及相关生态
 
@@ -257,6 +258,7 @@
   - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
   - [ui-kit](https://getuikit.com/)
+  - [umi.css](https://www.hua-mi.cn/umi-css/)
 - 衍生（某些库会有对应的 vue / react 版本，可自行搜索，后面不再另行列出）
   - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
   - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
@@ -371,6 +373,7 @@
 - 衍生
   - [fes.js](https://webank.gitee.io/fes.js/) - 管理台应用解决方案
   - [swrv](https://github.com/Kong/swrv) - 用于数据获取
+  - [@ant-design-vue/use](https://github.com/vueComponent/use) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案

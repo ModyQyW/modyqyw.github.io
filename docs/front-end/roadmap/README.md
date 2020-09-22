@@ -171,6 +171,10 @@
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - ……
 
+## MDN 版
+
+- [英文版](https://developer.mozilla.org/en-US/docs/Web) - [简中版](https://developer.mozilla.org/zh-CN/docs/Web)
+
 ## 极客时间版
 
 - [计算机基础](https://time.geekbang.org/learning/path-detail/3)
