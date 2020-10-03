@@ -15,6 +15,7 @@
   - @modyqyw/stylelint-config-css
   - @modyqyw/stylelint-config-less
   - @modyqyw/stylelint-config-scss
+- ls-lint - 校验目录
 - commitizen - 便捷生成提交信息
 - commitlint - 校验提交信息
   - @commitlint/config-conventional

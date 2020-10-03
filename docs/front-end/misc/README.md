@@ -53,6 +53,10 @@
 - [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
 - [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
 - [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
+- [100font](https://www.100font.com)
+- [猫啃网](https://www.maoken.com)
+- [找字体](https://www.zfont.cn)
+- [字魂](https://izihun.com)
 
 ## 开源图标
 
@@ -69,6 +73,7 @@
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
 - [coreui-icons](https://icons.coreui.io/icons/)
 - [tabler-icons](https://tablericons.com/)
+- [simple-icons](https://simpleicons.org/)
 
 ## 静态网站生成
 
@@ -374,6 +379,7 @@
   - [fes.js](https://webank.gitee.io/fes.js/) - 管理台应用解决方案
   - [swrv](https://github.com/Kong/swrv) - 用于数据获取
   - [@ant-design-vue/use](https://github.com/vueComponent/use) - hooks 包
+  - [vue-composable](https://pikax.me/vue-composable/) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案

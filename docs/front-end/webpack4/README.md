@@ -10,6 +10,7 @@
 - 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)测试构建。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
 - 范围：不考虑 IE 11- 的浏览器。IE 11- 已经连续 24 个月没有得到官方支持，所以不应该再使用 IE 11-。另外，要支持 IE 11-，还要考虑怎么支持完整的 es5 乃至 es3 的语法和特性，非常耗费时间。考虑到[国情](https://tongji.baidu.com/research/site)原因，教程中还是会示例怎么支持 IE 11 的。
+- 状态：教程目前处于完善中状态，可能会有少量遗漏、错误、不完美，但已经可以正常阅读。如果你发现了错误，请在评论里告诉我，谢谢。
 
 ## webpack 是什么
 

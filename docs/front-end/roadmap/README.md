@@ -148,6 +148,7 @@
   - [前端进阶 2](https://muyiy.cn/)
   - [front-end checklist](https://frontendchecklist.io/)
   - [cute javascript](http://js.pingan8787.com/)
+  - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
   - [前端面试指南](https://lucifer.ren/fe-interview/)
   - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
   - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
