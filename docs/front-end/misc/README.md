@@ -266,6 +266,8 @@
   - [umi.css](https://www.hua-mi.cn/umi-css/)
 - 衍生（某些库会有对应的 vue / react 版本，可自行搜索，后面不再另行列出）
   - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
+  - [format.js](https://formatjs.io/) - 国际化
+  - [i18next](https://www.i18next.com/) - 国际化
   - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
   - [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
   - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
@@ -282,6 +284,7 @@
   - [howler.js](https://howlerjs.com/) - audio 支持
   - [video.js](https://videojs.com/) - video 支持
   - [popper.js](https://popper.js.org/) - 文字提示和弹出式菜单
+  - [luckysheet](https://github.com/mengshukeji/Luckysheet#readme) - 在线表格
   - [hammer](http://hammerjs.github.io/) - 触摸手势
   - [slick](https://kenwheeler.github.io/slick/) - 走马灯
   - [markdown-it](https://github.com/markdown-it/markdown-it) - markdown 解析
@@ -511,6 +514,7 @@
   - [emotion](https://emotion.sh/) - css-in-js
   - [styled-components](https://styled-components.com/) - css-in-js
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 表格解决方案，高效渲染大型列表和表格数据的 react 组件
+    - [react-window](https://github.com/bvaughn/react-window) - 简洁的 react-virtualized
   - [formik](https://github.com/jaredpalmer/formik#readme) - 表单解决方案
   - [create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) - 用于创建可重用的 react 库的 cli
   - [swr](https://swr.vercel.app/) - 用于数据获取的 hook

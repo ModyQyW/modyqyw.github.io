@@ -195,6 +195,10 @@
 
 - [ledge](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
 
+## 素燕
+
+- [前端小课](https://github.com/lefex/FE#readme)
+
 ## 学习建议
 
 - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
