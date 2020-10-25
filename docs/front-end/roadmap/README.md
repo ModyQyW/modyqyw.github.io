@@ -168,6 +168,7 @@
   - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
   - [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
   - [前端数据治理之道](https://zhuanlan.zhihu.com/p/165213964)
+  - [Hacker Laws](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
   - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
   - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
