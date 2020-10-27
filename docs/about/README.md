@@ -35,7 +35,7 @@
 - 收缩了项目技术栈
   - wepy，mpvue -> uni-app，taro
   - rn -> uni-app
-  - mobx -> unstated-next
+  - mobx -> constate
   - angularjs -> react(umi，next) + ts / vue(vue-cli，nuxt)
 - 小程序样式库
   - @modyqyw/mp-scss

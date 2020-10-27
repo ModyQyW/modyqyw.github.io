@@ -41,38 +41,38 @@
 
 - 电脑端网页
   - vue + vue-router + vuex + vuetify
-  - vue + vue-router + vuex + element-ui / bootstrap-vue + tailwindcss / bulma
+  - vue + vue-router + vuex + element-ui + tailwindcss / bulma
   - nuxt + vuetify
-  - nuxt + element-ui / bootstrap-vue + tailwindcss / bulma
+  - nuxt + element-ui + tailwindcss / bulma
 - 移动端网页
   - vue + vue-router + vuex + vuetify
-  - vue + vue-router + vuex + nut-ui / zarm-vue / bootstrap-vue + tailwindcss / bulma
+  - vue + vue-router + vuex + nut-ui / zarm-vue + tailwindcss / bulma
   - nuxt + vuetify
-  - nuxt + nut-ui / zarm-vue / bootstrap-vue + tailwindcss / bulma
+  - nuxt + nut-ui / zarm-vue + tailwindcss / bulma
 - 移动端客户端
-  - uni-app + vuex + uview-ui + @modyqyw/mp-scss
+  - uni-app + vuex + uni-ui / uview-ui + @modyqyw/mp-scss
 - 小程序
-  - uni-app + vuex + uview-ui + @modyqyw/mp-scss
+  - uni-app + vuex + uni-ui / uview-ui + @modyqyw/mp-scss
 - 桌面客户端
   - vue + vue-router + vuex + vuetify + electron
-  - vue + vue-router + vuex + element-ui / bootstrap-vue + tailwindcss / bulma + electron
+  - vue + vue-router + vuex + element-ui + tailwindcss / bulma + electron
   - nuxt + vuetify + electron
-  - nuxt + element-ui / bootstrap-vue + tailwindcss / bulma + electron
+  - nuxt + element-ui + tailwindcss / bulma + electron
 
 ## React 系
 
 - 电脑端网页
-  - umi / next + unstated-next + material-ui
-  - umi / next + unstated-next + zent / blueprint / react-bootstrap + tailwindcss / bulma
+  - umi / next + constate + material-ui
+  - umi / next + constate + zent / blueprint + tailwindcss / bulma
 - 移动端网页
-  - umi / next + unstated-next + material-ui
-  - umi / next + unstated-next + yep-react / zarm / react-bootstrap + tailwindcss / bulma
+  - umi / next + constate + material-ui
+  - umi / next + constate + yep-react / zarm + tailwindcss / bulma
 - 移动端客户端
-  - expo + react-router + unstated-next + react-native-elements / ui-kitten
+  - expo + react-router + constate + react-native-elements / ui-kitten
 - 小程序
-  - taro + unstated-next + taro-ui + @modyqyw/mp-scss
+  - taro + constate + taro-ui + @modyqyw/mp-scss
 - 桌面客户端
-  - umi / next + unstated-next + material-ui + electron
-  - umi / next + unstated-next + zent / blueprint / react-bootstrap + tailwindcss / bulma + electron
+  - umi / next + constate + material-ui + electron
+  - umi / next + constate + zent / blueprint + tailwindcss / bulma + electron
 
 <Vssue />

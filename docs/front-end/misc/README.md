@@ -420,10 +420,13 @@
   - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
 - 状态管理
   - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
-  - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/react](https://redux-model.github.io/redux-model/)
-  - [rematch](https://rematch.github.io/rematch/)
-  - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
+    - [constate](https://github.com/diegohaz/constate#readme)
+    - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
+  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
+    - [rematch](https://rematch.netlify.app/)
+  - [mobx](https://mobx.js.org/) + mobx-react
+    - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
+  - [recoil](https://recoiljs.org/)
 - ui
   - [material-ui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
@@ -453,11 +456,14 @@
       - [react-router](https://reacttraining.com/react-router/web/guides/quick-start)
       - [react-navigation](https://reactnavigation.org/)
     - 状态管理
-      - [context](https://zh-hans.reactjs.org/docs/context.html) + [hooks](https://zh-hans.reactjs.org/docs/hooks-intro.html)
-      - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/react](https://redux-model.github.io/redux-model/)
-      - [rematch](https://rematch.github.io/rematch/)
-      - [mobx](https://mobx.js.org/) + [mobx-react](https://mobx-react.js.org/)
+      - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
+        - [constate](https://github.com/diegohaz/constate#readme)
+        - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
+        - [rematch](https://rematch.netlify.app/)
+      - [mobx](https://mobx.js.org/) + mobx-react
+        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -480,9 +486,13 @@
       - [自带路由](https://taro-docs.jd.com/taro/docs/router/)
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
-      - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [@redux-model/taro](https://redux-model.github.io/redux-model/)，详见[文档](https://taro-docs.jd.com/taro/docs/redux.html)
-      - [rematch](https://rematch.github.io/rematch/)
+        - [constate](https://github.com/diegohaz/constate#readme)
+        - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
+        - [rematch](https://rematch.netlify.app/)
+      - [mobx](https://mobx.js.org/) + mobx-react
+        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
@@ -493,9 +503,13 @@
       - 自带路由
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
-      - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/)
-      - [rematch](https://rematch.github.io/rematch/)
+        - [constate](https://github.com/diegohaz/constate#readme)
+        - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
+        - [rematch](https://rematch.netlify.app/)
+      - [mobx](https://mobx.js.org/) + mobx-react
+        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
