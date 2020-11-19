@@ -90,6 +90,7 @@
   - [docz](https://www.docz.site/)
 - [next](https://nextjs.org/)
 - [nuxt](https://nuxtjs.org/)
+- [pagic](https://pagic.cn/)
 
 ## 开发语言
 
