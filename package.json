@@ -1,29 +1,25 @@
 {
   "author": "ModyQyW",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "@modyqyw/eslint-config": "~1.7.0",
-    "@modyqyw/prettier-config": "~1.1.0",
+    "@modyqyw/fabric": "~1.0.7",
     "@vssue/api-github-v4": "~1.4.0",
-    "@vssue/vuepress-plugin-vssue": "~1.4.0",
-    "@vuepress/plugin-back-to-top": "~1.5.0",
-    "@vuepress/plugin-blog": "~1.9.0",
-    "@vuepress/plugin-medium-zoom": "~1.5.0",
-    "@vuepress/plugin-pwa": "~1.5.0",
-    "eslint": "~7.8.0",
-    "prettier": "~2.1.0",
-    "vuepress": "~1.5.0",
-    "vuepress-plugin-code-copy": "~1.0.0",
-    "vuepress-plugin-helper-live2d": "~1.0.0",
-    "vuepress-plugin-sitemap": "~2.3.0"
-  },
-  "eslintConfig": {
-    "extends": "@modyqyw"
-  },
-  "prettier": "@modyqyw/prettier-config"
+    "@vssue/vuepress-plugin-vssue": "~1.4.6",
+    "@vuepress/plugin-back-to-top": "~1.7.1",
+    "@vuepress/plugin-blog": "~1.9.3",
+    "@vuepress/plugin-medium-zoom": "~1.7.1",
+    "@vuepress/plugin-pwa": "~1.7.1",
+    "babel-eslint": "~10.1.0",
+    "eslint": "~7.13.0",
+    "prettier": "~2.1.2",
+    "vuepress": "~1.7.1",
+    "vuepress-plugin-code-copy": "~1.0.6",
+    "vuepress-plugin-helper-live2d": "~1.0.2",
+    "vuepress-plugin-sitemap": "~2.3.1"
+  }
 }

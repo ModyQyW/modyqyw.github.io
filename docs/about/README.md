@@ -39,7 +39,7 @@
   - angularjs -> react(umi，next) + ts / vue(vue-cli，nuxt)
 - 小程序样式库
   - @modyqyw/mp-scss
-- 确立[项目选型](../front-end/technology-stack/README.md)
+- 确立项目选型
 - 保持关注新技术，整理学习资料供学习使用
 
 ## 关于更新

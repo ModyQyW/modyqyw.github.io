@@ -1,5 +1,24 @@
 # 学习路径
 
+这个部分包含了不同版本的前端学习路径。所有内容仅供参考。
+
+## 极客时间版
+
+- [计算机基础](https://time.geekbang.org/learning/path-detail/3)
+- [前端工程师](https://time.geekbang.org/learning/path-detail/2)
+
+## 方糖气球
+
+- [方糖气球](https://ftqq.com/fangtang-fullstack/)
+
+## 素燕
+
+- [前端小课](https://github.com/lefex/FE#readme)
+
+## 培训版
+
+- [前端路径](https://docs.qq.com/doc/DWUR0cW1ZY1pNWE1F)
+
 ## 个人版
 
 - 英语
@@ -24,6 +43,10 @@
   - 锁
   - 页表
 - 计算机网络原理和安全
+  - [图解网络硬件](https://book.douban.com/subject/25919428/)
+  - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
+  - [图解 HTTP](https://book.douban.com/subject/25863515/)
+  - [图解密码技术](https://book.douban.com/subject/26265544/)
   - 网络基本组成
   - 五层模型
   - 七层模型
@@ -39,10 +62,6 @@
   - 内存安全策略 csp
   - owasp 安全风险
   - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
-  - [图解网络硬件](https://book.douban.com/subject/25919428/)
-  - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
-  - [图解 HTTP](https://book.douban.com/subject/25863515/)
-  - [图解密码技术](https://book.douban.com/subject/26265544/)
 - 多媒体技术基础
   - 图像，如 bmp，jpg，jpeg，png，gif，svg，webp
   - 图像压缩算法
@@ -58,6 +77,7 @@
   - [IAlgorithms](https://ziyi2.github.io/algorithms/)
 - 正则表达式
   - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+  - [JavaScript 正则迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
 - 数据库入门
   - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
   - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
@@ -66,6 +86,12 @@
   - git
     - [Pro Git](https://git-scm.com/book/zh/v2)
 - 网页原生：html + css + js
+  - [microsoft - web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
+  - [前端九部](https://www.yuque.com/fe9/basic)
+  - [学习 css 布局](http://zh.learnlayout.com/)
+  - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
+  - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
   - html 基础
   - html 语义化
   - html 表单和验证
@@ -78,6 +104,7 @@
   - css 弹性布局
   - css 网格布局
   - css 响应式布局
+  - css 自适应布局
   - js 基础
   - js 严格模式
   - js dom 操作
@@ -88,12 +115,6 @@
   - js 闭包
   - js 模块化
   - js es6+
-  - js fetch
-  - [前端九部](https://www.yuque.com/fe9/basic)
-  - [学习 css 布局](http://zh.learnlayout.com/)
-  - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
-  - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
 - 包管理器
   - npm
   - yarn
@@ -101,7 +122,6 @@
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
   - [sass/scss](https://sass-lang.com/)
-  - [stylus](https://stylus-lang.com/)
 - 校验工具和格式化工具
   - [ls-lint](https://ls-lint.org/)
   - [prettier](https://prettier.io/)
@@ -109,10 +129,7 @@
   - [stylelint](https://stylelint.io/)
   - [commitlint](https://commitlint.js.org/)
   - [commitizen](https://github.com/commitizen/cz-cli)
-- typescript
-  - [入门教程](https://ts.xcatliu.com/basics)
-  - [官方教程](https://www.typescriptlang.org/docs/home.html)
-  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
+- typescript，详细可参考[前端 -> 杂项 -> 开发语言](../misc/README.md#开发语言)
 - vue 及相关生态，详细可参考[前端 -> 杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
 - react 及相关生态，详细可参考[前端 -> 杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
 - 编译打包工具，如 babel，webpack，rollup，percel，snowpack，vite 等，详细可参考[前端 -> 杂项 -> 编译打包](../misc/README.md#编译打包)
@@ -120,11 +137,6 @@
   - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
   - [算法 101](https://101.zoo.team/)
   - [算法之道](https://book.douban.com/subject/4249686/)
-- [web components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
-  - 自定义元素
-  - shadow dom
-  - html 模板
-- [pwa](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 - css 进阶
   - [css-tricks](https://css-tricks.com/)
   - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
@@ -133,6 +145,7 @@
   - [oocss](http://oocss.org/)
   - [smacss](http://smacss.com/)
   - [css modules](https://github.com/css-modules/css-modules#readme)
+  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
 - js 进阶
   - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
   - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
@@ -156,6 +169,8 @@
   - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
   - [前端面试题库](https://lgwebdream.github.io/FE-Interview/)
   - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+  - [译文：ES6 箭头函数中的 this？你可能想多了](https://www.cnblogs.com/vajoy/p/4902935.html)
+  - [前端精读周刊](https://github.com/dt-fe/weekly)
   - [一些文章的汇总](https://github.com/Michael-lzg/my--article#readme)
   - [冴羽的博客](https://github.com/mqyqingfeng/Blog#readme)
   - [Nealyang 的博客](https://github.com/Nealyang/PersonalBlog#readme)
@@ -173,32 +188,20 @@
   - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
+  - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
   - ……
 
 ## MDN 版
 
 - [英文版](https://developer.mozilla.org/en-US/docs/Web) - [简中版](https://developer.mozilla.org/zh-CN/docs/Web)
 
-## 极客时间版
-
-- [计算机基础](https://time.geekbang.org/learning/path-detail/3)
-- [前端工程师](https://time.geekbang.org/learning/path-detail/2)
-
 ## github
 
 - [英文版](https://roadmap.sh/) - [繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)
 
-## 方糖气球
-
-- [方糖气球](https://ftqq.com/fangtang-fullstack/)
-
 ## ledge
 
 - [ledge](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
-
-## 素燕
-
-- [前端小课](https://github.com/lefex/FE#readme)
 
 ## 学习建议
 
@@ -207,5 +210,6 @@
 - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
 - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
 - [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
+- [前端转行之路](https://mp.weixin.qq.com/s/eiCnTATNLrSnkDi25IbhnA)
 
 <Vssue />

@@ -135,10 +135,6 @@ module.exports = {
             link: '/front-end/environment/',
           },
           {
-            text: '技术栈',
-            link: '/front-end/technology-stack/',
-          },
-          {
             text: '杂项',
             link: '/front-end/misc/',
           },
@@ -165,10 +161,6 @@ module.exports = {
           {
             text: 'react',
             link: '/front-end/react/',
-          },
-          {
-            text: 'react-native',
-            link: '/front-end/react-native/',
           },
           {
             text: 'taro',
@@ -209,10 +201,6 @@ module.exports = {
           {
             text: 'express',
             link: '/front-end/express/',
-          },
-          {
-            text: 'koa',
-            link: '/front-end/koa-and-egg/',
           },
           {
             text: 'egg',
