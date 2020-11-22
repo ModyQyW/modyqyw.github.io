@@ -274,6 +274,7 @@
 ### 监控
 
 - [sentry](https://sentry.io/)
+- [webfunny](https://github.com/a597873885/webfunny_monitor#readme)
 
 ### 微服务
 
