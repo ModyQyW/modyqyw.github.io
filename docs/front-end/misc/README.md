@@ -104,19 +104,6 @@
 
 ## 项目基本选型
 
-### 工程化
-
-- prettier
-- eslint
-- stylelint
-- ls-lint
-- commitizen
-- commitlint
-  - @commitlint/config-conventional
-- husky
-- lint-staged
-- @modyqyw/fabric
-
 ### 原生
 
 - 桌面端 / 移动端网页
@@ -143,7 +130,14 @@
 
 ### React 系
 
-// TODO
+- 电脑端网页，移动端网页
+  - [(react + react-router) / umi / next] + constate + (material-ui / antd)
+- 移动端客户端
+  - expo + (react-router / react-navigation) + constate + react-native-elements
+- 小程序
+  - taro + constate + @modyqyw/mp-scss
+- 桌面客户端
+  - [(react + react-router) / umi / next] + constate + (material-ui / antd) + electron
 
 ## 项目流程
 
@@ -172,8 +166,9 @@
 - [Microsoft Azure DevOps Service](https://azure.microsoft.com/en-us/services/devops/)
 - [滴答清单](https://dida365.com/)
 
-### 校验和格式化
+### 规范校验和格式化
 
+- [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
 - [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
 - [eslint](https://eslint.org/) - 校验 + 格式化
@@ -270,6 +265,21 @@
 ### 发布
 
 - [np](https://github.com/sindresorhus/np#readme)
+
+### 部署
+
+- [vercel](https://vercel.com/)
+- [netlify](https://www.netlify.com/)
+
+### 监控
+
+- [sentry](https://sentry.io/)
+
+### 微服务
+
+- [qiankun](https://qiankun.umijs.org/zh)
+- [single-spa](https://single-spa.js.org/)
+- [berial](https://github.com/berialjs/berial#readme)
 
 ## 工具集
 

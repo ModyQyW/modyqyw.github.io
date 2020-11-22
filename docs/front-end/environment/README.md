@@ -2,98 +2,96 @@
 
 所有配置仅供参考。
 
-## v2ray
+## 系统通用
 
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - 稳定，自带客户端，教程内也推荐了其它客户端
-
-## Windows
-
-- Windows 10 LTSC - 稳定，砍掉了一切社交功能，建议 Ubuntu/Deepin（开发用，配置可以参考 [macOS](#macos)） + Windows 10 LTSC（娱乐用）
-- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
-- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
-- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
-- [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
-- [Google Chrome](https://www.google.cn/chrome/index.html)
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
-- [Motrix](https://motrix.app/zh-CN/) - 下载工具
-- [OBS](https://obsproject.com/) - 录制
-- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
-- [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
-- [QQ](https://im.qq.com/download/) - [插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
-- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具
-- [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图 + 图片查看
-- [百度网盘](http://pan.baidu.com/download)
-- [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.exe)
-- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
-- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
-- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme)
-- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
-- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
-- [向日葵](https://sunlogin.oray.com/) - 远程工具
-- [迅雷 U 享版](https://forspeed.rbread02.cn/download/pc/ThunderVIP3.2.1.498.zip) - 下载工具
-- [微信](https://weixin.qq.com/) - [插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
-- [人人影视](http://app.rrys.tv/) - 看剧
-
-自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
-
-## macOS
-
-- [爱思助手](https://www.i4.cn/) - ios 手机用
-- [百度网盘](http://pan.baidu.com/download)
-- [城通网盘](https://imgstatic.ctfile.com/upload/apps/ctfile.dmg)
-- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
-- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
-- [滴答清单](https://dida365.com/) - 帮助高效完成任务和规划时间
-- [欢乐斗地主](https://apps.apple.com/cn/app/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/id1471294129?mt=12) - 打牌
-- [看图](https://kantu.qq.com/)
-- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme)
-- [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
-- [微信](https://mac.weixin.qq.com/) - [插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme)
-- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
-- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
-- [向日葵](https://sunlogin.oray.com/) - 远程工具
-- [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-- [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
 - [Android Studio](https://developer.android.com/studio/)
-- [Bitwarden](https://bitwarden.com/)
-- [Bob](https://github.com/ripperhe/Bob#readme) - 翻译工具
-- [Charles](https://xclient.info/s/charles.html) - 抓包工具
-- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包工具
-- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
-- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
+- [Bitwarden](https://bitwarden.com/) - 密码管理
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [draw.io](https://github.com/jgraph/drawio-desktop/releases/) - 免费作图工具
-- [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
+- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 免费作图工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
 - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
 - [Google Chrome](https://www.google.cn/chrome/index.html)
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，自带客户端，教程内也推荐了其它客户端
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 开发 app 工具
+- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包工具
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
+- [Motrix](https://motrix.app/zh-CN/) - 下载工具
+- [OBS](https://obsproject.com/) - 录制
+- [Postman](https://www.getpostman.com/) - 请求工具
+- [QQ](https://im.qq.com/download/)
+- [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 同时查看不同屏幕的网页表现
+- [SourceTree](https://www.sourcetreeapp.com/) - git gui
+- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
+- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
+- [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
+- [爱思助手](https://www.i4.cn/) - ios 手机用
+- [百度网盘](http://pan.baidu.com/download)
+- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
+- [城通网盘](https://www.ctfile.com/)
+- [滴答清单](https://dida365.com/) - 帮助高效完成任务和规划时间
+- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme)
+- [人人影视](http://app.rrys.tv/) - 看剧
+- [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
+- [微信](https://weixin.qq.com/)
+- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
+- [向日葵](https://sunlogin.oray.com/) - 远程工具
+- [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
+
+### 自建网盘
+
+自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
+
+### DNS
+
+- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
+- [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+- [114 DNS](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
+- [DNSPOS DNS](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`
+- [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
+- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
+- [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
+
+## Windows
+
+- Windows 10 LTSC - 稳定，砍掉了一切社交功能，可以 Ubuntu/Deepin + Windows 10 LTSC
+- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
+- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
+- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
+- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
+- [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
+- [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
+- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
+- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
+- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
+- [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
+- [迅雷 U 享版](https://forspeed.rbread02.cn/download/pc/ThunderVIP3.2.1.498.zip) - 下载工具
+
+## macOS
+
+- [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
+- [Bob](https://github.com/ripperhe/Bob#readme) - 翻译工具
+- [Charles](https://xclient.info/s/charles.html) - 抓包工具
+- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
+- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
+- [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间
-- [Motrix](https://motrix.app/zh-CN/) - 下载工具
 - [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持 mac 读写 NTFS
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
-- [OBS](https://obsproject.com/) - 录制
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合访达 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合访达 Finder 使用
-- [Postman](https://www.getpostman.com/) - 请求工具
-- [QQ](https://im.qq.com/download/)
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
-- [ResponsivelyApp](https://github.com/manojVivek/responsively-app) - 同时查看不同屏幕的网页表现
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
 - [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
-- [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
+- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
+- [看图](https://kantu.qq.com/)
+- [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme)
+- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
 
 ## 浏览器插件
 
@@ -304,21 +302,6 @@ git stash
 upgrade_oh_my_zsh
 git stash pop
 ```
-
-## DNS
-
-### 国内公共 DNS
-
-- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
-- [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
-- [114 DNS](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
-- [DNSPOS DNS](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`
-
-### 国外公共 DNS
-
-- [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
-- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
-- [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
 
 ## node
 
