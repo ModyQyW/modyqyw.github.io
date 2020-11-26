@@ -2740,7 +2740,7 @@ module.exports = (env, argv) => {
 
 ## 结束
 
-这篇笔记和示例到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如 CSS Modules 支持，MPA 的实践，SSR 支持，`webpack`配置封装等等。你大可以去参考`create-react-app`，`@vue/cli`等优秀的 cli 的源码，学习更多的`webpack`配置。真正开发的时候，建议直接使用 cli。
+这篇笔记和示例到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如 CSS Modules 支持，MPA 的实践，SSR 支持，`webpack`配置封装等等。你大可以去参考`create-react-app`，`@vue/cli`，`poi`等优秀的 cli 的源码，学习更多的`webpack`配置。真正开发的时候，建议直接使用 cli。
 
 如果你发现任何问题，欢迎在下面评论提意见，或者提交 issue / pr。提前感谢:D
 
@@ -2776,6 +2776,11 @@ module.exports = (env, argv) => {
 - [resolve-url-loader](https://github.com/bholloway/resolve-url-loader#readme)
 - [stylus](https://stylus-lang.com/)
 - [stylus-loader](https://github.com/shama/stylus-loader#readme)
+- [postcss](https://postcss.org/)
+- [CSS 3 中 -webkit-, -moz-, -o-, -ms- 这些私有前缀什么时候可以移除？](https://www.zhihu.com/question/20597072)
+- [autoprefixer](https://github.com/postcss/autoprefixer#readme)
+- [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
+- [cssnano](https://cssnano.co/)
 - [zent](https://youzan.github.io/zent/zh/)
 - [file-loader](https://github.com/webpack-contrib/file-loader#readme)
 - [url-loader](https://github.com/webpack-contrib/url-loader#readme)
@@ -2786,15 +2791,14 @@ module.exports = (env, argv) => {
 - [webpack 文件指纹策略](https://jkfhto.github.io/2019-10-18/webpack/webpack-%E6%96%87%E4%BB%B6%E6%8C%87%E7%BA%B9%E7%AD%96%E7%95%A5%EF%BC%9Achunkhash%E3%80%81contenthash%E5%92%8Chash/)
 - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
 - [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin/#readme)
-- [postcss](https://postcss.org/)
-- [CSS 3 中 -webkit-, -moz-, -o-, -ms- 这些私有前缀什么时候可以移除？](https://www.zhihu.com/question/20597072)
-- [autoprefixer](https://github.com/postcss/autoprefixer#readme)
-- [postcss-preset-env](https://github.com/csstools/postcss-preset-env#readme)
-- [cssnano](https://cssnano.co/)
+- [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin#readme)
+- [dotenv](https://github.com/motdotla/dotenv#readme)
 - [eslint](https://eslint.org/)
 - [eslint-loader](https://github.com/webpack-contrib/eslint-loader#readme)
 - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme)
 - [stylelint](https://stylelint.io/)
+- [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin#readme)
+- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
 - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack#readme)
 - [阮一峰 - JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 - [潘嘉晨 - 手摸手，带你用合理的姿势使用webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
