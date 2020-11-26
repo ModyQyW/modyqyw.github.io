@@ -295,19 +295,10 @@ module.exports = {
     [
       '@vuepress/pwa',
       {
-        serviceWorker: true,
-        updatePopup: {
-          message: '新内容可用。',
-          buttonText: '刷新',
-        },
+        updatePopup: true,
       },
     ],
-    [
-      '@vuepress/search',
-      {
-        searchMaxSuggestions: 10,
-      },
-    ],
+    '@vuepress/search',
     [
       'sitemap',
       {
