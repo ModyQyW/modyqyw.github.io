@@ -4,8 +4,12 @@
 
 ## 系统通用
 
+### 应用
+
 - [Android Studio](https://developer.android.com/studio/)
-- [Bitwarden](https://bitwarden.com/) - 密码管理
+- Axure RP
+- [BitComet](https://www.bitcomet.com/) - 下载工具
+- [BitWarden](https://bitwarden.com/) - 密码管理
 - [DeepL](https://www.deepl.com/translator) - 翻译工具
 - [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 免费作图工具
 - [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
@@ -25,39 +29,38 @@
 - [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
 - [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
+- [zy-player](http://zyplayer.fun/) - 资源播放器
+- [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download)
 - [爱思助手](https://www.i4.cn/) - ios 手机用
 - [百度网盘](http://pan.baidu.com/download)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
 - [城通网盘](https://www.ctfile.com/)
 - [滴答清单](https://dida365.com/) - 帮助高效完成任务和规划时间
 - [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme)
-- [人人影视](http://app.rrys.tv/) - 看剧
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/)
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
 - [向日葵](https://sunlogin.oray.com/) - 远程工具
-- [支付宝小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-
-### 自建网盘
 
 自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
 
 ### DNS
 
-- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
 - [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
 - [114 DNS](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
 - [DNSPOS DNS](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`
 - [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
 - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
 - [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
 
-## Windows
+## Windows 应用
 
 - Windows 10 LTSC - 稳定，砍掉了一切社交功能，可以 Ubuntu/Deepin + Windows 10 LTSC
 - [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
 - [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
+- [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
 - [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
 - [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
@@ -65,7 +68,6 @@
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
 - [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
-- [迅雷 U 享版](https://forspeed.rbread02.cn/download/pc/ThunderVIP3.2.1.498.zip) - 下载工具
 
 ## macOS
 
@@ -74,12 +76,13 @@
 - [Charles](https://xclient.info/s/charles.html) - 抓包工具
 - [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
 - [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
-- [eZip](https://ezip.awehunt.com/) - 压缩/解压缩工具
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
+- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具
 - [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
+- Sketch
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间
 - [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持 mac 读写 NTFS
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
@@ -91,11 +94,10 @@
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
 - [看图](https://kantu.qq.com/)
 - [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme)
-- [迅雷](http://down.sandai.net/mac/thunder_3.4.1.4368.dmg)
+
+[macWK](https://macwk.com/) - 精品 mac 资源
 
 ## 浏览器插件
-
-基本都可以在浏览器商店中搜到。只附上难以找到或没有同类型插件的链接。
 
 - Gitako - 便捷查看 Github
 - Lighthouse - 网页性能测试
@@ -108,7 +110,7 @@
 
 ### 安装
 
-按照[官网](https://brew.sh/index_zh-cn)说明安装。
+挂梯子，按照[官网](https://brew.sh/index_zh-cn)安装。
 
 ### 配置镜像源
 
@@ -131,24 +133,15 @@ brew install svn
 - 默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
 ```sh
+# 软链接
 ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 ```
-
-### 检查错误
-
-```sh
-brew doctor
-```
-
-检查错误后可以按照提示进行修复。
 
 ## oh-my-zsh
 
 ### 安装 oh-my-zsh
 
-首先按照[说明](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)安装 zsh。
-
-之后按照[官网说明](https://ohmyz.sh/#install)安装。
+挂梯子，按照[官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki)安装。
 
 ### 配置 oh-my-zsh
 
@@ -260,6 +253,7 @@ export DEFAULT_USER="$(whoami)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -305,60 +299,11 @@ git stash pop
 
 ## node
 
-### nvm
-
-使用 nvm 可以方便地管理 node 多版本。
-
-- [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 遇到问题时查 issues
-
-### npm 全局包
+### 镜像
 
 ```sh
-npm i -g @antfu/ni --registry=https://registry.npm.taobao.org
-npm i -g @tarojs/cli --registry=https://registry.npm.taobao.org
-npm i -g @vue/cli --registry=https://registry.npm.taobao.org
-npm i -g @vue/devtools --registry=https://registry.npm.taobao.org
-npm i -g cgr --registry=https://registry.npm.taobao.org
-npm i -g cnpm --registry=https://registry.npm.taobao.org
-npm i -g commitizen --registry=https://registry.npm.taobao.org
-npm i -g conventional-changelog --registry=https://registry.npm.taobao.org
-npm i -g expo-cli --registry=https://registry.npm.taobao.org
-npm i -g lerna --registry=https://registry.npm.taobao.org
-npm i -g less --registry=https://registry.npm.taobao.org
-npm i -g nativefier --registry=https://registry.npm.taobao.org
-npm i -g np --registry=https://registry.npm.taobao.org
-npm i -g npm@lts --registry=https://registry.npm.taobao.org
-npm i -g npm-check-updates --registry=https://registry.npm.taobao.org
-npm i -g pnpm --registry=https://registry.npm.taobao.org
-npm i -g postcss --registry=https://registry.npm.taobao.org
-npm i -g postcss-cli --registry=https://registry.npm.taobao.org
-npm i -g prettier --registry=https://registry.npm.taobao.org
-npm i -g react-devtools --registry=https://registry.npm.taobao.org
-npm i -g sass --registry=https://registry.npm.taobao.org
-npm i -g ts-node --registry=https://registry.npm.taobao.org
-npm i -g typescript --registry=https://registry.npm.taobao.org
-npm i -g yarn --registry=https://registry.npm.taobao.org
-```
-
-更新时只需要执行全局更新即可。
-
-```sh
-npm update -g --registry=https://registry.npm.taobao.org
-```
-
-### 项目初始化
-
-上面有不少依赖会用于项目初始化。假如不想安装全局依赖，你也可以考虑使用 [npx](https://www.ruanyifeng.com/blog/2019/02/npx.html) 或者 [yarn create](https://classic.yarnpkg.com/zh-Hans/docs/cli/create)。
-
-初始化项目时，使用 yarn 来安装依赖，一般会更快速。但是对于某些依赖而言，往往还是非常地慢，尤其是 node-sass。
-
-你可以在项目根目录下建立两个文件，名字和内容分别如下所示。
-
-- `.npmrc`
-
-```sh
-registry=https://registry.npm.taobao.org
+# ~/.npmrc
+# registry=https://registry.npm.taobao.org // for publishing
 
 chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
 edgedriver_cdnurl=https://npm.taobao.org/mirrors/edgedriver/
@@ -373,9 +318,8 @@ selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
 
 ```
 
-- `.yarnrc`
-
 ```sh
+# ~/.yarnrc
 registry "https://registry.npm.taobao.org"
 
 chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
@@ -391,30 +335,70 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ```
 
-之后删掉`node_modules`和对应的版本锁定文件再重新安装依赖。
+也可以直接全局依赖安装[`node-mirrors-china`](https://github.com/gucong3000/mirror-config-china#readme)。
+
+### nvm
+
+使用 nvm 可以方便地管理 node 多版本。
+
+- [nvm for macos and linux](https://github.com/nvm-sh/nvm)
+- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 遇到问题时查 issues
+
+### 全局依赖
 
 ```sh
-rm -rf node_modules && rm -rf yarn.lock && rm -rf package-lock.json
-yarn
+npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
+npm i -g --registry=https://registry.npm.taobao.org @kraken-project/cli
+npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
+npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
+npm i -g --registry=https://registry.npm.taobao.org @vue/cli
+npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
+npm i -g --registry=https://registry.npm.taobao.org cgr
+npm i -g --registry=https://registry.npm.taobao.org cnpm
+npm i -g --registry=https://registry.npm.taobao.org commitizen
+npm i -g --registry=https://registry.npm.taobao.org conventional-changelog
+npm i -g --registry=https://registry.npm.taobao.org create-next-app
+npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
+npm i -g --registry=https://registry.npm.taobao.org create-react-app
+npm i -g --registry=https://registry.npm.taobao.org create-vite-app
+npm i -g --registry=https://registry.npm.taobao.org expo-cli
+npm i -g --registry=https://registry.npm.taobao.org lerna
+npm i -g --registry=https://registry.npm.taobao.org less
+npm i -g --registry=https://registry.npm.taobao.org nativefier
+npm i -g --registry=https://registry.npm.taobao.org np
+npm i -g --registry=https://registry.npm.taobao.org npm@lts
+npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
+npm i -g --registry=https://registry.npm.taobao.org pnpm
+npm i -g --registry=https://registry.npm.taobao.org postcss
+npm i -g --registry=https://registry.npm.taobao.org postcss-cli
+npm i -g --registry=https://registry.npm.taobao.org prettier
+npm i -g --registry=https://registry.npm.taobao.org rax-cli
+npm i -g --registry=https://registry.npm.taobao.org react-devtools
+npm i -g --registry=https://registry.npm.taobao.org sass
+npm i -g --registry=https://registry.npm.taobao.org ts-node
+npm i -g --registry=https://registry.npm.taobao.org typescript
+npm i -g --registry=https://registry.npm.taobao.org yarn
 ```
 
-一般接手项目时不应该删掉版本锁定文件。
+更新时只需要执行全局更新即可。
 
-对于 node-sass，你也可以在`package.json`文件中偷梁换柱。说明见 [npm 官方文档](https://docs.npmjs.com/cli-commands/install.html)`npm install <alias>@npm:<name>`部分和 [yarn 官方文档对应部分](hhttps://classic.yarnpkg.com/en/docs/cli/add/#toc-yarn-add-alias/)。
+```sh
+npm update -g --registry=https://registry.npm.taobao.org
+```
+
+### dart-sass 偷梁换柱 node-sass
 
 ```json
 {
   ...,
   "devDependencies": {
     ...,
-    "node-sass": "npm:dart-sass",
+    "node-sass": "npm:sass",
     ...
   },
   ...
 }
 ```
-
-**注意：如果项目依赖使用了`node-sass`而不是`dart-sass`，请使用`node-sass`避免可能出现的问题！同时也应尽量避免在新项目里使用和`node-sass`有关的依赖**
 
 ## vscode
 
@@ -423,8 +407,8 @@ yarn
 - [Ant Design Snippets](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
 - [Ant Design Vue helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antd-vue 提示
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
-- [changelog-generator](https://marketplace.visualstudio.com/items?itemName=axetroy.vscode-changelog-generator) - 生成变动日志的工具
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
@@ -434,7 +418,6 @@ yarn
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
-- [Expo Tools](https://marketplace.visualstudio.com/items?itemName=byCedric.vscode-expo) - 支持 expo
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks) - 飞冰实用插件，支持 react 和 rax
@@ -450,15 +433,14 @@ yarn
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - 图标主题，也可以考虑 [Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)，[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+- [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
-- [One Light Pro](https://marketplace.visualstudio.com/items?itemName=andrewm098.OneLight-Pro)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
-- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) - 发送请求，查看响应
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
-- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置，自行查看文档
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
@@ -469,15 +451,23 @@ yarn
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
 - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
-- [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) - 预览 pdf
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
-- [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime) - 统计打码时间
 
 ### `settings.json`
 
 ```json
 {
+  // 插件 Auto Close Tag 使用，指定插件在什么语言时激活
+  "auto-close-tag.activationOnLanguage": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "markdown",
+    "vue"
+  ],
   // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
   "cSpell.userWords": [],
   // 插件 Code Spell Checker 使用，指定要检查的文件
@@ -492,7 +482,6 @@ yarn
     "jsonc",
     "less",
     "markdown",
-    "php",
     "plaintext",
     "sass",
     "scss",
@@ -505,7 +494,7 @@ yarn
   ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
-  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为全部自动修复
+  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 eslint 和 stylelint 自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
@@ -513,7 +502,7 @@ yarn
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // vscode 自带功能，修改编辑区的字体族
-  "editor.fontFamily": "-apple-system, Menlo, 'Source Code Pro', 'Sarasa Mono T SC', 'Jetbrains Mono', 'Fira Code', Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "-apple-system, Menlo, 'Heiti', 'Source Code Pro', 'Sarasa Mono T SC', 'Jetbrains Mono', 'Fira Code', Monaco, 'Courier New', monospace",
   // vscode 自带功能，控制输入时是否自动弹出建议
   "editor.quickSuggestions": {
     "strings": true
@@ -568,25 +557,12 @@ yarn
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
   "javascript.updateImportsOnFileMove.enabled": "always",
-  // vscode 自带功能，关联 expo 配置文件格式
-  "json.schemas": [
-    {
-      "name": "vscode-expo-manifest",
-      "url": "file:///Users/wurui/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-39.0.0.json",
-      "fileMatch": [
-        "app.json",
-        "app.config.json"
-      ]
-    }
-  ],
   // vscode 自带功能，指定是否校验 less，这里设置为否
   "less.validate": false,
-  // 插件 Live Server 使用，指定是否检验标签，这里设置为否
-  "liveServer.settings.donotVerifyTags": true,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
   "scss.validate": false,
   // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "填你自己的",
+  "sync.gist": "",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -618,11 +594,18 @@ yarn
   "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
+  // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
+  "vscode-office.markdownType": "vditor",
   // 插件 Visual Studio IntelliCode 使用，指定当 editor.suggestSelection 被设置为一个使得该插件的建议不可见的值时，是否会修改 editor.suggestSelection，这里设定为自动覆盖默认值
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // vscode 自带功能，指定颜色主题，需要安装对应的插件
+  // vscode 自带功能，指定颜色主题，这里指定为 One Dark Pro
   "workbench.colorTheme": "One Dark Pro",
-  // vscode 自带功能，指定图标主题，需要安装对应的插件
+  // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
+  "workbench.editorAssociations": [{
+    "viewType": "default",
+    "filenamePattern": "*.md"
+  }],
+  // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
   "[vue]": {
@@ -631,30 +614,10 @@ yarn
 }
 ```
 
-### `Settings Sync`插件
+### 格式化和校验
 
-- 安装`Settings Sync`这个插件后，可以把 vscode 的相关配置保存到你的 github gist 上面去，具体操作：`F1 -> Sync: Update/Upload Settings`。插件会为你自动上传相关配置，并自动设置`sync.gist`字段（注意：网络不好可能会上传失败）。
-
-你也可以尝试使用 vscode 附带的同步功能。
-
-### 代码格式化与校验
-
-- `F1 -> Format Document`调用 formatter 格式化。按照上面的配置`.vue`文件会调用`Vetur`，其它文件会调用 Prettier。
-- `F1 -> Save`或者`F1 -> Save All`保存时调用 linter 自动校验并修复。按照上面的配置会调用 ESLint 和 Stylelint。
-
-因为我的项目 linter 配置里都启用了格式化相关的规则，所以以 linter 配置为主，`Prettier`配置为辅格式化。
-
-如果项目内 linter 配置里没有启用格式化相关的规则，可以使用`editor.formatOnSave`。这将会在保存时先调用 linter 自动校验并修复，再调用 formatter 格式化。
-
-```json
-{
-  ...,
-  "editor.formatOnSave": true,
-  ...
-}
-```
-
-TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TSLint 了，旧项目也应该安排升级到 ESLint。
+- eslint 和 stylelint 使用 prettier - 可以设置`editor.formatOnSave: true`。
+- eslint 和 stylelint 没有使用 prettier - `F1 -> Format Document`（调用 prettier），然后保存（调用 eslint 和 stylelint）。
 
 ### snippets
 
@@ -662,11 +625,8 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
 
 点击 vscode 左下角齿轮，点击`User Snippets`，然后选择对应的语言，会自动生成`[语言].json`文件供修改。
 
-下面给出一个示例配置。
-
-`css.json`
-
 ```json
+// css.json
 {
   // .css 文件和 .vue 文件中的 style 标签内生效
   "uni-app 条件编译格式 - 仅在某平台出现": {
@@ -714,28 +674,11 @@ TSLint 官方已经建议使用 ESLint，所以新项目不要再考虑使用 TS
 }
 ```
 
-### `.editorconfig`
-
-[官网链接](https://editorconfig.org/)
-
-```sh
-root = true
-
-[*]
-charset = utf-8
-end_of_line = lf
-indent_size = 2
-indent_style = space
-insert_final_newline = true
-trim_trailing_whitespace = true
-
-```
-
 ## hbuilderx
 
-hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验远比不上 vscode，也比不上 webstorm。
+### 作用
 
-如果要使用 uni-app 开发 app，就必须使用 hbuilderx 打包，如果只是开发小程序/网页，hbuilderx 不是必须的。个人建议还是使用 vscode 开发，在调试、打包 app 时再使用 hbuilderx。
+用于 uni-app 开发 app 时的调试和构建，其他情况使用 vscode。
 
 ### 修改配置
 
@@ -743,7 +686,6 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
 
 ```json
 {
-  "editor.codeassist.px2rem.proportion": "14",
   "editor.colorScheme": "Atom One Dark",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
@@ -751,28 +693,21 @@ hbuilderx 是一个号称很强的专门用来写 vue 的 ide，但实际体验�
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.18.4/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.18.4/bin/npm",
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/npm",
   "terminal.type": "外部终端"
 }
 
 ```
 
-### vue-cli 创建的项目的依赖版本对齐 hbuilderx
+node 和 npm 路径不正确会导致一直编译中。
 
-如果使用 vue-cli 创建项目来开发 app，注意要对齐项目依赖与 hbuilderx 的依赖，否则打包 app 可能会出现[意外提示](https://ask.dcloud.net.cn/article/35627)。
+### 依赖版本
 
-拿`2.0.0-26820200330001`版本来说：
+看起来数字天堂团队并没有完善的项目开发流程，导致某些时候 vue-cli 创建的项目依赖版本和 HBuilderX 的依赖版本不一致。
 
-- 没有`alpha` - 对应正式版
-- `2.0.0` - 不明
-- `268` - 对应 hbuilderx 2.6.8
-- `20200330` - 发布日
-- `001` - 发布日发布的第 001 版
-
-但是，这不一定是准确的，因为 hbuilderx 本身可能安装了错误的依赖版本。最稳妥的办法，就是找到 hbuilderx 目录， 打开 plugins -> uniapp-cli -> `package.json`，确认里面安装的到底是什么依赖版本。
-
-另外，依赖可能本身存在着各类错误，这是 dcloudio 团队自己开发流程不规范导致的，你需要敢于怀疑……
+- 回退版本
+- 查看 HBuilderX -> plugins -> uniapp-cli 的依赖版本
 
 ## 参考
 

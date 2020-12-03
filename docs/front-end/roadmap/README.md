@@ -132,7 +132,7 @@
 - typescript，详细可参考[前端 -> 杂项 -> 开发语言](../misc/README.md#开发语言)
 - vue 及相关生态，详细可参考[前端 -> 杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
 - react 及相关生态，详细可参考[前端 -> 杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
-- 编译打包工具，如 babel，webpack，rollup，percel，snowpack，vite 等，详细可参考[前端 -> 杂项 -> 编译打包](../misc/README.md#编译打包)
+- 编译打包工具，如 babel，webpack，rollup，parcel，snowpack，vite 等，详细可参考[前端 -> 杂项 -> 编译打包](../misc/README.md#编译打包)
 - 数据结构与算法进阶
   - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
   - [算法 101](https://101.zoo.team/)
