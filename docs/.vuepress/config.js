@@ -246,14 +246,6 @@ module.exports = {
         ],
       },
       {
-        text: '推荐',
-        link: '/links/',
-      },
-      {
-        text: '关于',
-        link: '/about/',
-      },
-      {
         text: '赞赏',
         link: '/donate/',
       },

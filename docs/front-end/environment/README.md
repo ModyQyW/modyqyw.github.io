@@ -121,7 +121,7 @@
 
 ### 安装依赖
 
-```sh
+```shell
 brew install git
 brew install openjdk
 brew install openssh
@@ -132,7 +132,7 @@ brew install svn
 - 每次更新系统都需要重新配置 ssh。
 - 默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
-```sh
+```shell
 # 软链接
 ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 ```
@@ -147,7 +147,7 @@ ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 
 打开`~/.zshrc`进行配置。下面给出我个人的配置内容。
 
-```sh
+```shell
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -277,7 +277,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 打开`~/.oh-my-zsh/themes/robbyrussell.zsh-theme`进行修改。
 
-```sh
+```shell
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
@@ -290,7 +290,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 ### 升级
 
-```sh
+```shell
 cd ~/.oh-my-zsh
 git stash
 upgrade_oh_my_zsh
@@ -301,7 +301,7 @@ git stash pop
 
 ### 镜像
 
-```sh
+```shell
 # ~/.npmrc
 # registry=https://registry.npm.taobao.org // for publishing
 
@@ -318,7 +318,7 @@ selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
 
 ```
 
-```sh
+```shell
 # ~/.yarnrc
 registry "https://registry.npm.taobao.org"
 
@@ -346,7 +346,7 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ### 全局依赖
 
-```sh
+```shell
 npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
 npm i -g --registry=https://registry.npm.taobao.org @kraken-project/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
@@ -382,7 +382,7 @@ npm i -g --registry=https://registry.npm.taobao.org yarn
 
 更新时只需要执行全局更新即可。
 
-```sh
+```shell
 npm update -g --registry=https://registry.npm.taobao.org
 ```
 

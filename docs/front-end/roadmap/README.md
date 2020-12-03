@@ -2,7 +2,7 @@
 
 这个部分包含了不同版本的前端学习路径。所有内容仅供参考。
 
-## 极客时间版
+## 极客时间
 
 - [计算机基础](https://time.geekbang.org/learning/path-detail/3)
 - [前端工程师](https://time.geekbang.org/learning/path-detail/2)
@@ -15,11 +15,15 @@
 
 - [前端小课](https://github.com/lefex/FE#readme)
 
-## 培训版
+## 前端九部
+
+- [入门者手册](https://www.yuque.com/fe9/basic)
+
+## 培训
 
 - [前端路径](https://docs.qq.com/doc/DWUR0cW1ZY1pNWE1F)
 
-## 个人版
+## 个人
 
 - 英语
   - 新概念英语
@@ -169,6 +173,7 @@
   - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
   - [前端面试题库](https://lgwebdream.github.io/FE-Interview/)
   - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+  - [前端每日面试题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
   - [译文：ES6 箭头函数中的 this？你可能想多了](https://www.cnblogs.com/vajoy/p/4902935.html)
   - [前端精读周刊](https://github.com/dt-fe/weekly)
   - [一些文章的汇总](https://github.com/Michael-lzg/my--article#readme)
@@ -191,19 +196,20 @@
   - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
   - ……
 
-## MDN 版
+## MDN
 
-- [英文版](https://developer.mozilla.org/en-US/docs/Web) - [简中版](https://developer.mozilla.org/zh-CN/docs/Web)
+- [英文版](https://developer.mozilla.org/en-US/docs/Web)
+- [简中版](https://developer.mozilla.org/zh-CN/docs/Web)
 
-## github
+## roadmap.sh
 
-- [英文版](https://roadmap.sh/) - [繁中版](https://github.com/goodjack/developer-roadmap-chinese#readme)
+- [英文版](https://roadmap.sh/)
 
 ## ledge
 
-- [ledge](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
+- [前端技能图谱](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
 
-## 学习建议
+## 学习建议和经验之谈
 
 - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
 - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)

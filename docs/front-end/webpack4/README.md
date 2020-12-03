@@ -64,7 +64,7 @@
 
 `entry`指定`webpack`工作的时候从哪个文件开始分析依赖，默认值是`${PROJECT_DIR}/src/index.js`。这个文件也会被叫做入口文件或者入口模块。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 
@@ -83,7 +83,7 @@ module.exports = {
 
 下面是两个对比示例。
 
-```js
+```javascript
 path.join('/a', '/b'); // string /a/b
 path.resolve('/a', '/b'); // string /b
 
@@ -97,7 +97,7 @@ path.resolve("a", "b1", "..", "b2"); // string ${PROJECT_DIR}/a/b2
 
 `entry`对应的输出文件默认是`${PROJECT_DIR}/dist/main.js`。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 
@@ -120,7 +120,7 @@ module.exports = {
 
 `webpack`本身只能处理`.js`和`.json`文件，`loader`增强了`webpack`的解析能力，使得`webpack`能够处理`.jsx`，`.ts`，`.tsx`，`.css`等文件。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 
@@ -158,7 +158,7 @@ module.exports = {
 
 `plugin`被用来执行范围更广的任务，比如打包优化，资源管理，注入环境变量等。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -202,7 +202,7 @@ module.exports = {
 
 `none`不会启用优化，我们一般不会去用它。而`production`和`development`的默认优化往往不能满足项目要求，我们还要进一步定制。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -256,7 +256,7 @@ module.exports = {
 
 首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具。
 
-```sh
+```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 ```
 
@@ -264,13 +264,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 
 安装 nvm 之后，使用 nvm 来安装 node v12。
 
-```sh
+```shell
 nvm install 12
 ```
 
 新建一个`demo`文件夹，进入该文件夹，用`npm`初始化，这会在当前目录下生成一个默认的`package.json`文件。
 
-```sh
+```shell
 mkdir demo # 新建一个 demo 文件夹
 cd demo # 进入该文件夹
 npm init -y # npm 初始化
@@ -278,7 +278,7 @@ npm init -y # npm 初始化
 
 根目录下新建一个`.npmrc`文件用来配置`npm`，这里我们指定依赖源是国内的淘宝源，这样安装依赖的速度会更快一点。
 
-```sh
+```shell
 registry=https://registry.npm.taobao.org/
 sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
 phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
@@ -294,7 +294,7 @@ fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 
 然后安装相关依赖。
 
-```sh
+```shell
 npm i clean-webpack-plugin@~3.0.0 -D
 npm i copy-webpack-plugin@~6.3.2 -D
 npm i friendly-errors-webpack-plugin@~1.7.0 -D
@@ -305,14 +305,14 @@ npm i webpack-cli@~4.2.0 -D
 
 创建一个内容简单的`${PROJECT_DIR}/src/index.js`。
 
-```js
+```javascript
 document.write('Hello webpack!');
 
 ```
 
 创建一个`webpack`配置文件`${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件的时候，`webpack`会默认使用这个文件作为配置文件。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 
@@ -344,7 +344,7 @@ module.exports = {
 
 接着，就执行命令开始构建吧。
 
-```sh
+```shell
 npm run build
 ```
 
@@ -373,7 +373,7 @@ npm run build
 
 接着，我们在`${PROJECT_DIR}/webpack.config.js`里配置，让`copy-webpack-plugin`来处理网站图标，让`html-webpack-plugin`处理`.html`文件里的引用。
 
-```js
+```javascript
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
@@ -413,7 +413,7 @@ module.exports = {
 
 我们可以使用`clean-webpack-plugin`来解决这个问题，默认地，`clean-webpack-plugin`会根据`output.path`自动确认、删除上一次构建的结果。
 
-```js
+```javascript
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -430,7 +430,7 @@ module.exports = {
 
 如果构建出现了问题，`webpack`会输出一长串错误信息，使用`friendly-errors-webpack-plugin`可以让输出的错误信息更加友好。
 
-```js
+```javascript
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
@@ -447,7 +447,7 @@ module.exports = {
 
 完整的`webpack.config.js`代码列写在下面。
 
-```js
+```javascript
 // 使用 path 模块来指定路径
 const path = require('path');
 // 使用 plugin
@@ -490,7 +490,7 @@ module.exports = {
 
 重新开始构建，之后可以看到简短的提示信息。下面是最终的目录结构（省略了`node_modules`）。
 
-```sh
+```shell
 .
 ├── dist
 │   ├── bundle.js
@@ -526,7 +526,7 @@ module.exports = {
 
 demo01 中`entry`的写法等同于下面的代码，也就是说，单入口写成字符串形式的时候，实际上会转换成对象形式，默认的 key 是`main`。
 
-```js
+```javascript
 const path = require('path');
 
 module.exports = {
@@ -541,7 +541,7 @@ module.exports = {
 
 `context`可能会跟`entry`一起使用，它可以指定`entry`的基本路径。对于 MPA，使用`context`往往能使`entry`更简洁。下面是一个示例。
 
-```js
+```javascript
 const path = require('path');
 
 module.exports = {
@@ -557,7 +557,7 @@ module.exports = {
 
 我们先把没有使用到`context`的`webpack.config.js`移动到`${PROJECT_DIR}/config`文件夹中，再指定`entry`的 key 为`app`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const path = require('path');
 
@@ -594,7 +594,7 @@ SPA 可以直接指定`output.filename`和`output.path`，像之前的示例一�
 
 我们修改一下`output`的配置，使得`entry`指定的文件构建出来之后跟随`entry`的 key。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const path = require('path');
 
@@ -636,7 +636,7 @@ module.exports = {
 
 首先还是要安装相关的依赖。
 
-```sh
+```shell
 npm i @babel/runtime@~7.12.5
 npm i core-js@~3.7.0
 npm i react@~17.0.1
@@ -654,7 +654,7 @@ npm i @types/react-dom@~17.0.0 -D
 
 然后修改`webpack`配置。不要忘记，对于`webpack`来说，所有文件都可以看成一个模块，所以需要在模块对应的字段下写配置。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...
@@ -700,7 +700,7 @@ module.exports = {
 
 我们为`${PROJECT_DIR}/.browserslistrc`添加以下内容。
 
-```sh
+```shell
 > 0.2%
 last 3 versions
 not dead
@@ -803,7 +803,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 之后可以修改`${PROJECT_DIR}/src/index.js`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -820,7 +820,7 @@ ReactDOM.render(
 
 如果不想写`.jsx`等后缀，我们可以手动设置`resolve.extensions`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...
@@ -834,7 +834,7 @@ module.exports = {
 
 我们在`App.jsx`里使用`react`，`react-dom`，`Promise`以测试我们的配置。
 
-```js
+```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
 import iconWebpack from './assets/webpack.png';
@@ -870,7 +870,7 @@ export default App;
 
 首先还是要安装相关的依赖。
 
-```sh
+```shell
 npm i zent@~8.5.12
 npm i babel-plugin-zent@~2.2.2 -D
 npm i style-loader@~2.0.0 -D
@@ -884,7 +884,7 @@ npm i resolve-url-loader@~3.1.2 -D
 
 我们先在`${PROJECT_DIR}/src/index.js`引入`.css`文件。
 
-```js
+```javascript
 // ${PROJECT_DIR}/src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -927,7 +927,7 @@ body {
 
 最后，我们修改一下`webpack`配置，增加对`.css`文件的解析。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -954,7 +954,7 @@ module.exports = {
 
 处理`.sass`和`.scss`文件有少许的不同。因为`sass-loader`会把`.sass`和`.scss`文件转换成`.css`文件，而`.css`文件的处理步骤就跟上面一致。所以，我们只需要复制粘贴，然后配置`sass-loader`就可以了。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -987,7 +987,7 @@ module.exports = {
 
 `sass-loader`会处理`@import`语句，所以我们还需要配置`css-loader`，说明在`css-loader`之前还有 1 个`loader`会处理`@import`语句。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -1025,7 +1025,7 @@ module.exports = {
 
 sass/scss 没有 url 重写的功能，所以我们还需要加入`resolve-url-loader`，避免实际使用的时候出现 url 指向不正确的问题。`resolve-url-loader`不会处理`@import`语句，所以不用再修改`css-loader`的`importLoaders`配置。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -1066,7 +1066,7 @@ module.exports = {
 
 我们再来试着添加并使用`zent`这个组件库。我们修改`${PROJECT_DIR}/src/App.jsx`，加入栅格系统和带图标的按钮。
 
-```jsx
+```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
 import {
@@ -1130,7 +1130,7 @@ export default App;
 
 但仅仅是解析`.css`，`.sass`和`scss`还远远不能达到实际的需求，我们往往会需要使用 css 新特性，或者压缩 css 代码，又或者为 css 属性添加浏览器前缀。这时候我们就需要使用`postcss`和`postcss-loader`，不少人把`postcss`叫做 css 界的`babel`。
 
-```sh
+```shell
 npm i postcss@~8.1.10 -D
 npm i postcss-loader@~4.1.0 -D
 npm i autoprefixer@~10.0.2 -D
@@ -1140,7 +1140,7 @@ npm i cssnano@~4.1.10 -D
 
 在`webpack`配置文件里使用`postcss-loader`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -1191,7 +1191,7 @@ module.exports = {
 
 创建一个`${PROJECT_DIR}/postcss.config.js`文件作为`postcss`的配置文件。
 
-```js
+```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {};
 
@@ -1205,7 +1205,7 @@ module.exports = {};
 
 手动添加前缀是相当麻烦的一件事情，使用`autoprefixer`插件可以让`postcss`自动为我们补全浏览器的样式前缀。
 
-```js
+```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {
   plugins: [
@@ -1221,7 +1221,7 @@ module.exports = {
 
 这时候，`postcss`就会根据目标浏览器自动添加属性前缀、处理相对稳定的新语法和新特性了。
 
-```js
+```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {
   plugins: [
@@ -1237,7 +1237,7 @@ module.exports = {
 
 这里我们参考官方文档的配置，使用`cssnano-preset-default`，配置移除所有注释。
 
-```js
+```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {
   plugins: [
@@ -1274,14 +1274,14 @@ module.exports = {
 
 下面来演示如何加入和使用这两个`loader`。首先还是安装依赖。
 
-```sh
+```shell
 npm i file-loader@~6.2.0 -D
 npm i url-loader@~4.1.1 -D
 ```
 
 直接修改配置文件。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 module.exports = {
   ...,
@@ -1335,7 +1335,7 @@ module.exports = {
 
 放一个图片文件在`${PROJECT_DIR}/src/assets`里面（我这里放了`webpack.png`），然后在`${PROJECT_DIR}/src/App.jsx`里引入、使用它。
 
-```js
+```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
 import {
@@ -1430,7 +1430,7 @@ body {
 
 `webpack-dev-server`帮我们解决了这个问题。使用`webpack-dev-server`可以不刷新浏览器就看到我们开发的时候修改代码后的结果（这也就是我们常说的热更新），也不会生成文件放到`dist`目录下。实际上，生成文件会被放到内存中。
 
-```sh
+```shell
 npm i cross-env@~7.0.2 -D
 npm i webpack-dev-server@~3.11.0 -D
 npm i webpack-merge@~5.4.0 -D
@@ -1459,7 +1459,7 @@ npm i webpack-merge@~5.4.0 -D
 
 再新建两个配置文件，内容列写在下面。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.dev.js
 module.exports = {
   mode: 'development',
@@ -1476,7 +1476,7 @@ module.exports = {
 - `devServer.quiet = true`表示减少构建输出的信息显示。
 - `devtool`可以确定错误对应的代码，能帮助调试，这里指定为`eval-cheap-source-map`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   mode: 'production',
@@ -1487,7 +1487,7 @@ module.exports = {
 
 最后修改`${PROJECT_DIR}/config/webpack.config.js`，让它在不同环境暴露不同的构建配置。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
@@ -1506,7 +1506,7 @@ if (process.env.NODE_ENV === 'development') {
 
 最后分别执行`npm run dev`和`npm run build`做测试，一切正常。下面是最终项目目录（省略了`node_modules`）。
 
-```sh
+```shell
 .
 ├── babel.config.json
 ├── config
@@ -1555,7 +1555,7 @@ if (process.env.NODE_ENV === 'development') {
 
 我们先来修改`${PROJECT_DIR}/config/webpack.base.js`，为图片和字体添加文件指纹。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.base.js
 module.exports = {
   ...,
@@ -1601,7 +1601,7 @@ module.exports = {
 
 要解决这个问题，我们要使用`mini-css-extract-plugin`，它能分离出`.css`文件让我们添加文件指纹。一般只会在生产环境中使用它，在开发环境里，从效率考虑，还是会使用`style-loader`。
 
-```sh
+```shell
 npm i mini-css-extract-plugin@~1.3.1 -D
 ```
 
@@ -1611,7 +1611,7 @@ npm i mini-css-extract-plugin@~1.3.1 -D
 
 我们只是移除了其中关于 css 的部分，下面给出完整的文件内容供参考。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.base.js
 const path = require('path');
 const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
@@ -1677,7 +1677,7 @@ module.exports = {
 
 完整的`${PROJECT_DIR}/config/webpack.dev.js`内容也放在下面。除去基本的配置外，还声明了`mode`，`webpack-dev-server`，`devtool`和`loader`。在这里，我们使用了`style-loader`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.dev.js
 module.exports = {
   mode: 'development',
@@ -1740,7 +1740,7 @@ module.exports = {
 
 首先用`mini-css-extract-plugin`附带的`loader`替换掉原本使用的`style-loader`。我们还要指定`publicPath`，也就是指定代码使用的`.css`文件所在的相对于`output.path`的文件夹。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 ...
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -1816,7 +1816,7 @@ module.exports = {
 
 接着，把`mini-css-extract-plugin`加到`plugins`里，指定输出文件名。在前面我们已经指定要使用`${output.path}/css`文件夹里的`.css`文件，在这里我们需要把文件夹名也添加上去，让`.css`文件输出到`${output.path}/css`目录下。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 ...
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -1837,7 +1837,7 @@ module.exports = {
 
 而要为`entry`对应的输出文件添加文件指纹非常简单，只需要直接使用`chunkhash`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   ...,
@@ -1852,7 +1852,7 @@ module.exports = {
 
 完整的`${PROJECT_DIR}/config/webpack.prod.js`如下所示。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -1944,13 +1944,13 @@ module.exports = {
 
 虽然安装`webpack`依赖的时候会自动安装该依赖，但是我们通常会显式安装我们所需要的依赖，指定版本，避免版本不一致的问题。
 
-```sh
+```shell
 npm i terser-webpack-plugin@~4.2.3 -D
 ```
 
 我们不是从头配置`terser-webpack-plugin`，而是修改`webpack`原本的`terser-webpack-plugin`配置，所以我们是在`optimization`字段中（而不是在`plugins`字段中）使用`terser-webpack-plugin`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -1987,7 +1987,7 @@ module.exports = {
 
 下面是默认的`html-webpack-plugin`的压缩选项。
 
-```js
+```javascript
 const HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -2030,7 +2030,7 @@ module.exports = {
 
 我们可以使用公共 cdn 来加载这些依赖，解决这个问题。首先要在`${PROJECT_DIR}/config/webpack.prod.js`配置`externals`，向`webpack`说明无需添加到构建包中的依赖。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   ...,
@@ -2077,7 +2077,7 @@ module.exports = {
 
 `webpack`已经内置了这部分优化，但还需要进一步配置。我们要做的就是配置`optimization.splitChunks`，让这部分内置的优化更紧贴我们的项目。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   mode: 'production',
@@ -2101,7 +2101,7 @@ module.exports = {
 
 我们通过`optimization.cacheGroups`来配置。首先是项目内的组件库`zent`单独成一个`chunk`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   mode: 'production',
@@ -2127,7 +2127,7 @@ module.exports = {
 
 接着是`node_modules`文件夹内同步引入的其他依赖。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   mode: 'production',
@@ -2158,7 +2158,7 @@ module.exports = {
 
 最后则是页面公共组件。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   mode: 'production',
@@ -2214,7 +2214,7 @@ module.exports = {
 
 和前面对字体、图片、`.css`文件的配置类似，我们可以让`.js`文件都放入特定的文件夹中。我们修改`output.filename`，使得所有的`.js`文件都会放入`${PROJECT_DIR}/dist/js`文件夹中。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 module.exports = {
   ...,
@@ -2231,13 +2231,13 @@ module.exports = {
 
 gzip 是一种数据压缩格式，或者说是一种文件格式。在生产环境打包的最后阶段，为生成的文件生成对应的`.gz`文件，可以有效地减小文件体积，让支持 gzip 的浏览器更快地加载页面。
 
-```sh
+```shell
 npm i compression-webpack-plugin@~6.1.1 -D
 ```
 
 然后我们在`${PROJECT_DIR}/config/webpack.prod.js`里配置它。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 ...
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -2267,14 +2267,14 @@ module.exports = {
 
 首先安装相关的依赖。
 
-```sh
+```shell
 npm i dotenv@~8.2.0 -D
 npm remove cross-env
 ```
 
 接着来修改一下`${PROJECT_DIR}/config/webpack.config.js`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const devConfig = require('./webpack.dev.js');
 const prodConfig = require('./webpack.prod.js');
@@ -2351,7 +2351,7 @@ APP_MODE=production
 
 之后，我们在`${PROJECT_DIR}/config/webpack.config.js`里根据`mode`读取对应的环境变量文件并添加到`process.env`里。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -2422,7 +2422,7 @@ module.exports = (env, argv) => {
 
 为了在 js 里也能直接使用环境变量，我们还需要使用`webpack.DefinePlugin`，指定对应的值。下面是完整的配置文件。
 
-```js
+```javascript
 const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
@@ -2500,7 +2500,7 @@ module.exports = (env, argv) => {
 
 `eslint`是现在最热门的 js 校验工具（当然也支持 ts），我们也可以在`webpack`中使用`eslint`。
 
-```sh
+```shell
 npm i @modyqyw/fabric@~1.1.0 -D
 npm i eslint@~7.14.0 -D
 npm i eslint-webpack-plugin@~2.4.0 -D
@@ -2510,7 +2510,7 @@ npm i eslint-webpack-plugin@~2.4.0 -D
 
 安装完依赖之后，我们可以在根目录下建立一个新文件`.eslintrc.js`作为`eslint`的配置文件。这里用我自己封装的`eslint`规则来演示。
 
-```js
+```javascript
 // ${PROJECT_DIR}/.eslintrc.js
 /* eslint-disable import/no-extraneous-dependencies */
 const config = require('@modyqyw/fabric/eslint/react');
@@ -2523,7 +2523,7 @@ module.exports = {
 
 无论是开发环境还是生产环境都需要使用到`eslint`，所以我们需要在公共的配置文件里加入`eslint-webpack-plugin`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.base.js
 /* eslint-disable import/no-extraneous-dependencies */
 ...
@@ -2551,7 +2551,7 @@ module.exports = {
 
 现在，我们执行命令`npm run dev`和`npm run build`，`eslint`会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
 
-```sh
+```shell
  ERROR  Failed to compile with 1 errors
 
  error
@@ -2566,7 +2566,7 @@ module.exports = {
 
 我们只需要提示对应地改一下就可以了。前面加入`Promise`只是为了验证我们的配置，现在可以直接去掉。
 
-```js
+```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
 import {
@@ -2607,7 +2607,7 @@ export default App;
 
 而`stylelint`是 css，less，sass，scss 等样式语言的校验工具，我们也可以在`webpack`中使用`stylelint`。
 
-```sh
+```shell
 npm i @modyqyw/fabric@~1.1.0 -D
 npm i stylelint@~13.8.0 -D
 npm i stylelint-webpack-plugin@~2.1.1 -D
@@ -2615,7 +2615,7 @@ npm i stylelint-webpack-plugin@~2.1.1 -D
 
 安装完依赖之后，我们可以在根目录下建立一个新文件`stylelint.config.js`作为`stylelint`的配置文件。这里用我自己封装的`stylelint`规则来演示。
 
-```js
+```javascript
 // ${PROJECT_DIR}/stylelint.config.js
 /* eslint-disable import/no-extraneous-dependencies */
 const config = require('@modyqyw/fabric/stylelint/scss');
@@ -2630,7 +2630,7 @@ module.exports = {
 
 无论是开发环境还是生产环境都需要使用到`stylelint`，所以我们需要在公共的配置文件里加入`stylelint-webpack-plugin`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
@@ -2661,7 +2661,7 @@ module.exports = {
 
 要控制`webpack`输出的信息很简单，只需要在`${PROJECT_DIR}/config/webpack.prod.js`中设置`stats`字段。
 
-```js
+```javascript
 // ${PROJECT_DIR}/webpack.prod.js
 module.exports = {
   ...,
@@ -2677,14 +2677,14 @@ module.exports = {
 
 在开发大型项目的时候，往往需要根据实际情况去做特定的优化。
 
-```sh
+```shell
 npm i webpack-bundle-analyzer@~4.1.0 -D
 npm i speed-measure-webpack-plugin@~1.3.3 -D
 ```
 
 我们会使用`webpack-bundle-analyzer`来确定对应`chunk`的大小，然后考虑是否还需要调整。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.prod.js
 const { merge } = require('webpack-merge');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -2708,7 +2708,7 @@ module.exports = {
 
 而考量不同阶段打包的时间，我们会使用`speed-measure-webpack-plugin`。
 
-```js
+```javascript
 // ${PROJECT_DIR}/config/webpack.config.js
 const { merge } = require('webpack-merge');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
