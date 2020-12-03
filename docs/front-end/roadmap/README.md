@@ -15,6 +15,10 @@
 
 - [前端小课](https://github.com/lefex/FE#readme)
 
+## 微软
+
+- [web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
+
 ## 前端九部
 
 - [入门者手册](https://www.yuque.com/fe9/basic)
