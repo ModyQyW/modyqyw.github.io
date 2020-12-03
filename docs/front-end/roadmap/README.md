@@ -25,7 +25,7 @@
 
 ## 培训
 
-- [前端路径](https://docs.qq.com/doc/DWUR0cW1ZY1pNWE1F)
+- [前端路径](https://www.yuque.com/modyqyw/roadmap/qmb86n)
 
 ## 个人
 
