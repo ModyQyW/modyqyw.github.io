@@ -2,44 +2,45 @@
 
 所有配置仅供参考。
 
-## 系统通用
+## 通用
 
-### 应用
+### 通用应用
 
-- [Android Studio](https://developer.android.com/studio/)
-- Axure RP
-- [BitComet](https://www.bitcomet.com/) - 下载工具
+- [Android Studio](https://developer.android.com/studio/) - 安卓开发
+- Axure RP - 原型图查看
+- [BitComet](https://www.bitcomet.com/) - 下载
 - [BitWarden](https://bitwarden.com/) - 密码管理
-- [DeepL](https://www.deepl.com/translator) - 翻译工具
-- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 免费作图工具
-- [FileZilla](https://filezilla-project.org/) - 图形界面的 ftp 连接软件
-- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
-- [Google Chrome](https://www.google.cn/chrome/index.html)
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，自带客户端，教程内也推荐了其它客户端
-- [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 开发 app 工具
-- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包工具
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
-- [Motrix](https://motrix.app/zh-CN/) - 下载工具
+- [DeepL](https://www.deepl.com/translator) - 翻译
+- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 作图
+- [Fiddler](https://www.telerik.com/fiddler) - 抓包
+- [FileZilla](https://filezilla-project.org/) - ftp 连接
+- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
+- [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商
+- [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
+- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包
+- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
+- [Motrix](https://motrix.app/zh-CN/) - 下载
 - [OBS](https://obsproject.com/) - 录制
-- [Postman](https://www.getpostman.com/) - 请求工具
-- [QQ](https://im.qq.com/download/)
-- [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 同时查看不同屏幕的网页表现
+- [Postman](https://www.getpostman.com/) - 请求
+- [QQ](https://im.qq.com/download/) - 社交
+- [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 响应式开发
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
 - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
-- [uTools](https://u.tools/) - 全平台支持且体验一致的快捷工具
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发工具，下面有提供个人配置
+- [uTools](https://u.tools/) - 全平台支持且体验一致的效率工具
+- [Visual Studio Code](https://code.visualstudio.com/) - 开发
 - [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
-- [zy-player](http://zyplayer.fun/) - 资源播放器
-- [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download)
-- [爱思助手](https://www.i4.cn/) - ios 手机用
-- [百度网盘](http://pan.baidu.com/download)
+- [zy-player](http://zyplayer.fun/) - 资源播放
+- [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download) - 阿里小程序开发
+- [爱思助手](https://www.i4.cn/) - ios
+- [百度网盘](http://pan.baidu.com/download) - 存取资源
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
-- [城通网盘](https://www.ctfile.com/)
-- [滴答清单](https://dida365.com/) - 帮助高效完成任务和规划时间
-- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme)
+- [城通网盘](https://www.ctfile.com/) - 存取资源
+- [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
+- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme) - 听歌
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
-- [微信](https://weixin.qq.com/)
-- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)
+- [微信](https://weixin.qq.com/) - 社交
+- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html) - 微信小程序开发
 - [向日葵](https://sunlogin.oray.com/) - 远程工具
 
 自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
@@ -54,50 +55,7 @@
 - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
 - [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
 
-## Windows 应用
-
-- Windows 10 LTSC - 稳定，砍掉了一切社交功能，可以 Ubuntu/Deepin + Windows 10 LTSC
-- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
-- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
-- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
-- [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
-- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
-- [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
-- [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
-- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
-- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
-- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
-- [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme)
-
-## macOS
-
-- [AltStore](https://altstore.io/) - 不越狱也能自由安装 ipa 的 app store
-- [Bob](https://github.com/ripperhe/Bob#readme) - 翻译工具
-- [Charles](https://xclient.info/s/charles.html) - 抓包工具
-- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
-- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
-- [IINA](https://iina.io/) - 播放器
-- [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
-- [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
-- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具
-- [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
-- Sketch
-- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间
-- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持 mac 读写 NTFS
-- [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
-- [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
-- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合访达 Finder 使用
-- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合访达 Finder 使用
-- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
-- [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
-- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于访达 Finder
-- [看图](https://kantu.qq.com/)
-- [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme)
-
-[macWK](https://macwk.com/) - 精品 mac 资源
-
-## 浏览器插件
+### 浏览器插件
 
 - Gitako - 便捷查看 Github
 - Lighthouse - 网页性能测试
@@ -106,20 +64,66 @@
 - Vue.js devtools - vue 浏览器调试工具
 - 哔哩哔哩助手
 
-## Homebrew
+## Windows
 
-### 安装
+### 应用
+
+- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
+- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
+- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
+- [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
+- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
+- [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
+- [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
+- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
+- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
+- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
+- [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
+
+## macOS
+
+### macOS 应用
+
+- [AltStore](https://altstore.io/) - iOS
+- [Bob](https://github.com/ripperhe/Bob#readme) - 翻译
+- [Charles](https://xclient.info/s/charles.html) - 抓包
+- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
+- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
+- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
+- [IINA](https://iina.io/) - 播放器
+- [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
+- [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
+- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具
+- [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
+- Sketch - 设计稿查看
+- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间
+- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持读写 NTFS
+- [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
+- [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
+- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
+- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
+- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
+- [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
+- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于 Finder
+- [看图](https://kantu.qq.com/)
+- [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme) - 防撤回
+
+[macWK](https://macwk.com/) - 精品 mac 资源聚合
+
+### Homebrew
+
+#### 安装 Homebrew
 
 挂梯子，按照[官网](https://brew.sh/index_zh-cn)安装。
 
-### 配置镜像源
+#### 配置 Homebrew 镜像源
 
 - [清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 - [中科大镜像源](https://mirrors.ustc.edu.cn/)
 
 使用 bash 修改`~/.bash_profile`，使用 zsh 修改`~/.zshrc`。
 
-### 安装依赖
+#### 安装相关依赖
 
 ```shell
 brew install git
@@ -137,15 +141,15 @@ brew install svn
 ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 ```
 
-## oh-my-zsh
+### oh-my-zsh
 
-### 安装 oh-my-zsh
+#### 安装 oh-my-zsh
 
 挂梯子，按照[官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki)安装。
 
-### 配置 oh-my-zsh
+#### 配置 oh-my-zsh
 
-打开`~/.zshrc`进行配置。下面给出我个人的配置内容。
+打开`~/.zshrc`进行配置。
 
 ```shell
 # If you come from bash you might have to change your $PATH.
@@ -273,9 +277,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 ```
 
-### 主题配置
-
-打开`~/.oh-my-zsh/themes/robbyrussell.zsh-theme`进行修改。
+另外修改`~/.oh-my-zsh/themes/robbyrussell.zsh-theme`。
 
 ```shell
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
@@ -288,7 +290,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 ```
 
-### 升级
+#### 升级 oh-my-zsh
 
 ```shell
 cd ~/.oh-my-zsh

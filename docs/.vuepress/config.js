@@ -131,7 +131,7 @@ module.exports = {
             link: '/front-end/roadmap/',
           },
           {
-            text: '环境',
+            text: '环境配置',
             link: '/front-end/environment/',
           },
           {
@@ -201,47 +201,6 @@ module.exports = {
           {
             text: 'nest',
             link: '/front-end/nest/',
-          },
-        ],
-      },
-      {
-        text: '实战',
-        items: [
-          {
-            text: 'koa 打造的简单后端服务 koa-backend',
-            link: '/combat/koa-backend/',
-          },
-          {
-            text: 'egg 打造的简单后端服务 egg-backend',
-            link: '/combat/egg-backend/',
-          },
-          {
-            text: 'vue 和 element 打造的待办清单 vue-element-todo-list',
-            link: '/combat/vue-element-todo-list/',
-          },
-          {
-            text: 'vue 和 vuetify 打造的后台管理系统 vue-vuetify-admin',
-            link: '/combat/vue-vuetify-admin/',
-          },
-          {
-            text: 'uni-app 打造的待办清单小程序和 app uni-app-todo-list',
-            link: '/combat/uni-app-todo-list/',
-          },
-          {
-            text: 'react 和 material 打造的待办清单 react-material-todo-list',
-            link: '/combat/react-material-todo-list/',
-          },
-          {
-            text: 'umi 全家桶打造的后台管理系统 umi-admin',
-            link: '/combat/umi-admin/',
-          },
-          {
-            text: 'taro 打造的待办清单小程序 taro-todo-list',
-            link: '/combat/taro-todo-list/',
-          },
-          {
-            text: 'expo 打造的待办清单app expo-todo-list',
-            link: '/combat/expo-todo-list/',
           },
         ],
       },
