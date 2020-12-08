@@ -42,11 +42,11 @@
 
 ### 竞品
 
-- [parcel](https://parceljs.org/)
+- [parcel](https://parceljs.org/) - 等 v2
 - [snowpack](https://www.snowpack.dev/)
 - [vite](https://github.com/vitejs/vite)
 
-[rollup](https://www.rollupjs.org/guide/en/) 仅用于 js 构建，不属于`webpack`竞品。
+[rollup](https://www.rollupjs.org/guide/en/) 在某些方面有缺失，不属于`webpack`竞品。
 
 [poi](https://poi.js.org/) 属于`webpack`的封装，同样不属于`webpack`竞品。
 
@@ -1541,7 +1541,7 @@ if (process.env.NODE_ENV === 'development') {
 
 参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-demos/tree/master/demo02)。
 
-## demo03 - 优化以贴近实际工程
+## demo03 - 优化
 
 ### 使用文件指纹做版本管理
 
@@ -2328,21 +2328,21 @@ module.exports = (env, argv) => {
 
 而环境变量文件只会包含环境变量的键值对，下面是我们将要使用的三个文件。
 
-```env
+```sh
 # env.development
 NODE_ENV=development
 APP_MODE=development
 
 ```
 
-```env
+```sh
 # env.staging
 NODE_ENV=production
 APP_MODE=staging
 
 ```
 
-```env
+```sh
 # env.production
 NODE_ENV=production
 APP_MODE=production

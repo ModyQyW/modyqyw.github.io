@@ -4,8 +4,6 @@
 
 ## 通用
 
-### 通用应用
-
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - Axure RP - 原型图查看
 - [BitComet](https://www.bitcomet.com/) - 下载
@@ -66,8 +64,6 @@
 
 ## Windows
 
-### Windows 应用
-
 - [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
 - [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
@@ -81,8 +77,6 @@
 - [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 
 ## macOS
-
-### macOS 应用
 
 - [AltStore](https://altstore.io/) - iOS
 - [Bob](https://github.com/ripperhe/Bob#readme) - 翻译
@@ -120,7 +114,7 @@
 - [清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 - [中科大镜像源](https://mirrors.ustc.edu.cn/)
 
-使用 bash 修改`~/.bash_profile`，使用 zsh 修改`~/.zshrc`。
+使用 bash 就修改`~/.bash_profile`，使用 zsh 就修改`~/.zshrc`。
 
 #### 安装相关依赖
 
@@ -336,8 +330,6 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ```
 
-也可以直接全局依赖安装[`node-mirrors-china`](https://github.com/gucong3000/mirror-config-china#readme)。
-
 ### nvm
 
 使用 nvm 可以方便地管理 node 多版本。
@@ -387,7 +379,7 @@ npm i -g --registry=https://registry.npm.taobao.org yarn
 npm update -g --registry=https://registry.npm.taobao.org
 ```
 
-### dart-sass 偷梁换柱 node-sass
+### node-sass 问题
 
 ```json
 {
@@ -401,9 +393,11 @@ npm update -g --registry=https://registry.npm.taobao.org
 }
 ```
 
+这样做会用`dart-sass`代替`node-sass`，但可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)。
+
 ## vscode
 
-### 插件列表
+### 插件
 
 - [Ant Design Snippets](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
 - [Ant Design Vue helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antd-vue 提示
@@ -448,6 +442,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
 - [TypeScript Debugger](https://marketplace.visualstudio.com/items?itemName=kakumei.ts-debug)
+- [TypeScript React Hooks Tools](https://marketplace.visualstudio.com/items?itemName=kingwl.ts-react-hooks-tools) - 用 typescript 和 react hooks 重构
 - [uniapp-snippet](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
 - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
@@ -455,7 +450,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
 
-### `settings.json`
+### settings.json
 
 ```json
 {

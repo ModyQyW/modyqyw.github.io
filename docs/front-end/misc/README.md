@@ -6,7 +6,7 @@
 
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
-## 参考文档
+## 基本文档
 
 - [w3c](https://www.w3.org/)
 - [mdn](https://developer.mozilla.org/)
@@ -52,7 +52,7 @@
 - [设计心理学](https://book.douban.com/subject/26742341/)
 - [Web 表单设计](https://book.douban.com/subject/4886100/)
 
-### 免费可商用字体
+### 字体
 
 - [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/)
 - [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
@@ -64,7 +64,7 @@
 - [找字体](https://www.zfont.cn)
 - [字魂](https://izihun.com)
 
-### 开源图标
+### 图标
 
 - [icones](https://github.com/antfu/icones#readme)
 - [iconfont](https://www.iconfont.cn/)
@@ -123,24 +123,41 @@
 ### Vue 系
 
 - 桌面端网页，移动端网页
-  - [(vue + vue-router + vuex) / nuxt] + vuetify
+  - (vue + vue-router + vuex) / nuxt
+  - vuetify
 - 移动端应用，小程序
-  - uni-app + vuex + uni-ui + uview-ui + @modyqyw/mp-scss
+  - uni-app
+  - vuex
+  - uni-ui + uview-ui + @modyqyw/mp-scss
 - 桌面端应用
-  - [(vue + vue-router + vuex) / nuxt] + vuetify + electron
+  - (vue + vue-router + vuex) / nuxt
+  - vuetify
+  - electron
 
 ### React 系
 
 - 桌面端网页
-  - [(react + react-router) / umi / next] + [constate / (redux + react-redux + redux-toolkit) / unstated-next] + (blueprint / zent)
+  - (react + react-router) / umi / next
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - blueprint / zent
 - 移动端网页
-  - [(react + react-router) / umi / next] + [constate / (redux + react-redux + redux-toolkit) / unstated-next] + yep-react
+  - (react + react-router) / umi / next
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - yep-react
 - 移动端应用
-  - (expo / alita) + (react-router / react-navigation) + [constate / (redux + react-redux + redux-toolkit) / unstated-next] + react-native-elements
+  - expo / alita
+  - react-router / react-navigation
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - react-native-elements
 - 小程序
-  - taro + [constate / (redux + react-redux + redux-toolkit) / unstated-next] + @modyqyw/mp-scss
+  - taro
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - @modyqyw/mp-scss
 - 桌面端应用
-  - [(react + react-router) / umi / next] + [constate / (redux + react-redux + redux-toolkit) / unstated-next] + (blueprint / zent) + electron
+  - (react + react-router) / umi / next
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - (blueprint / zent)
+  - electron
 
 ## 项目流程
 
@@ -350,9 +367,6 @@
 - [sprite.js](https://spritejs.org/) - 跨平台高性能图形系统，支持 canvas 和 webgl
 - [d3](https://d3js.org/) - 使用 svg，canvas 和 html，基于数据操作文档的库
 - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
-- [single-spa](https://single-spa.js.org/) - 微前端解决方案
-  - [qiankun](https://qiankun.umijs.org/) - 基于 single-spa 封装的微前端解决方案
-- [berial](https://github.com/berialjs/berial) - 简单的微前端方案
 - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate#readme) - 模板
 - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects#readme) - 使用 html5、css 和 js 构建的迷你项目示例
 
@@ -428,8 +442,9 @@
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm#readme) - 仿饿了么
   - [quasar](https://quasar.dev/) - 终极解决方案
 - 进阶
-  - [vue 3 生态技术内幕](https://www.yuque.com/hugsun/vue3)
+  - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
   - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+  - [vue 3 生态技术内幕](https://www.yuque.com/hugsun/vue3)
   - [vue 3 组合式 API 征求意见稿](https://composition-api.vuejs.org/)
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
   - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
