@@ -82,39 +82,39 @@ module.exports = {
         text: '代码基础',
         items: [
           {
-            text: '数学基础',
+            text: '数学',
             link: '/coding-basis/math/',
           },
           {
-            text: '计算机基础',
-            link: '/coding-basis/computer/',
+            text: '计算机组成',
+            link: '/coding-basis/computer-organization/',
           },
           {
-            text: '网络基础',
+            text: '网络',
             link: '/coding-basis/internet/',
           },
           {
-            text: 'git 基础',
+            text: 'git',
             link: '/coding-basis/git/',
           },
           {
-            text: 'html 基础',
+            text: 'html',
             link: '/coding-basis/html/',
           },
           {
-            text: 'css 基础',
+            text: 'css',
             link: '/coding-basis/css/',
           },
           {
-            text: 'js 基础',
+            text: 'js',
             link: '/coding-basis/js/',
           },
           {
-            text: '数据结构基础',
+            text: '数据结构',
             link: '/coding-basis/data-structure/',
           },
           {
-            text: '算法基础',
+            text: '算法',
             link: '/coding-basis/algorithm/',
           },
           {
@@ -197,10 +197,6 @@ module.exports = {
           {
             text: 'egg',
             link: '/front-end/egg/',
-          },
-          {
-            text: 'nest',
-            link: '/front-end/nest/',
           },
         ],
       },

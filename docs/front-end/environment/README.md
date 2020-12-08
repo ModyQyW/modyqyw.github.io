@@ -66,7 +66,7 @@
 
 ## Windows
 
-### 应用
+### Windows 应用
 
 - [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
 - [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
@@ -92,7 +92,6 @@
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
-- [itsycal](https://www.mowglii.com/itsycal/) - 日历工具
 - [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具
 - [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
 - Sketch - 设计稿查看
