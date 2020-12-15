@@ -16,6 +16,7 @@
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
 - [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
+- [Kite](https://www.kite.com/) - 代码自动补全工具，竞品 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)
 - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
 - [Motrix](https://motrix.app/zh-CN/) - 下载
@@ -420,6 +421,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
 - [JavaScript Debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug)
+- [Kite AI Code AutoComplete](https://marketplace.visualstudio.com/items?itemName=kiteco.kite) - Kite VSCode 插件
 - [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
@@ -445,7 +447,6 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [TypeScript React Hooks Tools](https://marketplace.visualstudio.com/items?itemName=kingwl.ts-react-hooks-tools) - 用 typescript 和 react hooks 重构
 - [uniapp-snippet](https://marketplace.visualstudio.com/items?itemName=dlhtx.uniapp-snippet) - uni-app 代码段提示
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
-- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode) - 微软官方人工智能辅助开发插件
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
@@ -550,9 +551,11 @@ npm update -g --registry=https://registry.npm.taobao.org
   "iceworks.materialSources": [],
   "iceworks.packageManager": "yarn",
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
   "javascript.updateImportsOnFileMove.enabled": "always",
+  // 插件 Kite AI Code AutoComplete 使用，关闭启动时的提示
+  "kite.showWelcomeNotificationOnStartup": false,
   // vscode 自带功能，指定是否校验 less，这里设置为否
   "less.validate": false,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
@@ -592,8 +595,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
-  // 插件 Visual Studio IntelliCode 使用，指定当 editor.suggestSelection 被设置为一个使得该插件的建议不可见的值时，是否会修改 editor.suggestSelection，这里设定为自动覆盖默认值
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // vscode 自带功能，指定颜色主题，这里指定为 One Dark Pro
   "workbench.colorTheme": "One Dark Pro",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响

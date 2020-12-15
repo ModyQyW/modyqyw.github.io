@@ -211,6 +211,7 @@
 - [react-dom/test-utils](https://zh-hans.reactjs.org/docs/test-utils.html) - react 组件测试
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
 - [vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
+- [chii](https://github.com/liriliri/chii#readme) - 远程调试工具
 - [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
 
 ### 构建
