@@ -518,10 +518,8 @@ npm update -g --registry=https://registry.npm.taobao.org
     "json": "jsonc",
     "vue-html": "html"
   },
-  // 插件 ESLint 使用，设置传给 ESLint 的配置，这里设置允许使用 decorator
-  "eslint.options": {
-    "experimentalDecorators": true
-  },
+  // 插件 ESLint 使用，开启 debug 模式
+  "eslint.debug": true,
   // 插件 ESLint 使用，设置校验的语言
   "eslint.probe": [
     "javascript",
