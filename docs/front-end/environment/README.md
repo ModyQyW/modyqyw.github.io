@@ -438,6 +438,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置，自行查看文档
+- [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode) - 检查代码质量
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
@@ -504,6 +505,8 @@ npm update -g --registry=https://registry.npm.taobao.org
   "editor.quickSuggestions": {
     "strings": true
   },
+  // vscode 自带功能，控制是否渲染垂直标尺
+  "editor.rulers": [{ "column": 80 }],
   // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
   "editor.suggestSelection": "first",
   // vscode 自带功能，控制编辑区 1 个 tab 等于多少个空格，这里设置为 2 个
@@ -520,7 +523,7 @@ npm update -g --registry=https://registry.npm.taobao.org
     "experimentalDecorators": true
   },
   // 插件 ESLint 使用，设置校验的语言
-  "eslint.validate": [
+  "eslint.probe": [
     "javascript",
     "javascriptreact",
     "typescript",
@@ -598,10 +601,12 @@ npm update -g --registry=https://registry.npm.taobao.org
   // vscode 自带功能，指定颜色主题，这里指定为 One Dark Pro
   "workbench.colorTheme": "One Dark Pro",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
-  "workbench.editorAssociations": [{
-    "viewType": "default",
-    "filenamePattern": "*.md"
-  }],
+  "workbench.editorAssociations": [
+    {
+      "viewType": "default",
+      "filenamePattern": "*.md"
+    }
+  ],
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
   "workbench.iconTheme": "material-icon-theme",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
@@ -694,7 +699,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/npm",
   "terminal.type": "外部终端"
 }
-
 ```
 
 node 和 npm 路径不正确会导致一直编译中。
