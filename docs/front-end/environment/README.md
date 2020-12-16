@@ -518,8 +518,6 @@ npm update -g --registry=https://registry.npm.taobao.org
     "json": "jsonc",
     "vue-html": "html"
   },
-  // 插件 ESLint 使用，开启 debug 模式
-  "eslint.debug": true,
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
   // vscode 自带功能，指定特定后缀的文件的解析器，这里添加四种小程序，wepy，uni-app 的支持，另外把 json 文件视为 jsonc 文件
