@@ -345,6 +345,7 @@
 - [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
 - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
 - [faker.js](https://github.com/Marak/faker.js#readme) - 生成随机数据
+- [math.js](https://mathjs.org/) - 数学库
 - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
 - [chart.js](https://github.com/chartjs/Chart.js) - 图表库
 - [leaflet](https://leafletjs.com/) - 地图库
@@ -610,12 +611,13 @@
 
 ## 服务器端
 
-- [restful api](https://restfulapi.net/) - 使用最广泛的请求和响应格式
-  - [graphql](https://graphql.org/) - 意在改进 restful api
-- [graphql](https://graphql.org/) - 新请求格式，旨在改进 restful api
+- [json-rpc](https://www.jsonrpc.org/)
+- [restful api](https://restfulapi.net/)
+- [graphql](https://graphql.org/)
 - [nginx](https://www.nginx.com/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [使用 Node.js 构建 JavaScript 应用程序](https://docs.microsoft.com/zh-cn/learn/paths/build-javascript-applications-nodejs/)
+  - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap#readme)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - [koa](https://koajs.com/) - node.js 框架，自由度高
     - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
