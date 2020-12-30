@@ -4,10 +4,13 @@
 
 ## 通用
 
+- Adobe Photoshop - 专业图片处理，[在线 PS](https://www.uupoop.com/)
+- Affinity Photo - 专业图片处理
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - Axure RP - 原型图查看
 - [BitComet](https://www.bitcomet.com/) - 下载
 - [BitWarden](https://bitwarden.com/) - 密码管理
+- [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
 - [DeepL](https://www.deepl.com/translator) - 翻译
 - [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 作图
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包
@@ -99,6 +102,7 @@
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
 - [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
 - [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于 Finder
+- [剪映专业版](https://apps.apple.com/cn/app/%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/id1529999940) - 视频处理
 - [看图](https://kantu.qq.com/)
 - [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme) - 防撤回
 
@@ -342,33 +346,24 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ```shell
 npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
-npm i -g --registry=https://registry.npm.taobao.org @kraken-project/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
-npm i -g --registry=https://registry.npm.taobao.org cnpm
-npm i -g --registry=https://registry.npm.taobao.org commitizen
-npm i -g --registry=https://registry.npm.taobao.org conventional-changelog
-npm i -g --registry=https://registry.npm.taobao.org create-next-app
-npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
-npm i -g --registry=https://registry.npm.taobao.org create-react-app
 npm i -g --registry=https://registry.npm.taobao.org create-vite-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
-npm i -g --registry=https://registry.npm.taobao.org lerna
 npm i -g --registry=https://registry.npm.taobao.org less
 npm i -g --registry=https://registry.npm.taobao.org nativefier
 npm i -g --registry=https://registry.npm.taobao.org np
-npm i -g --registry=https://registry.npm.taobao.org npm@lts
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
 npm i -g --registry=https://registry.npm.taobao.org pnpm
 npm i -g --registry=https://registry.npm.taobao.org postcss
 npm i -g --registry=https://registry.npm.taobao.org postcss-cli
 npm i -g --registry=https://registry.npm.taobao.org prettier
-npm i -g --registry=https://registry.npm.taobao.org rax-cli
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
 npm i -g --registry=https://registry.npm.taobao.org sass
+npm i -g --registry=https://registry.npm.taobao.org serve
 npm i -g --registry=https://registry.npm.taobao.org ts-node
 npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
@@ -400,27 +395,21 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 ### 插件
 
-- [Ant Design Snippets](https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets) - antd 提示
-- [Ant Design Vue helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) - antd-vue 提示
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
-- [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-- [Debugger for Firefox](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
-- [Debugger for Microsoft Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge)
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
-- [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks) - 飞冰实用插件，支持 react 和 rax
+- [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks) - 飞冰套件
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
-- [JavaScript Debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug)
 - [Kite AI Code AutoComplete](https://marketplace.visualstudio.com/items?itemName=kiteco.kite) - Kite VSCode 插件
 - [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
@@ -446,11 +435,11 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
 - [TypeScript Debugger](https://marketplace.visualstudio.com/items?itemName=kakumei.ts-debug)
 - [TypeScript React Hooks Tools](https://marketplace.visualstudio.com/items?itemName=kingwl.ts-react-hooks-tools) - 用 typescript 和 react hooks 重构
-- [uni-app-snippet](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-app-snippets) - uni-app 代码段提示
+- [uni-helper](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - uni-* 开发帮助工具
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
-- [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 官方插件
+- [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 开发帮助工具
 
 ### settings.json
 
@@ -622,6 +611,8 @@ npm update -g --registry=https://registry.npm.taobao.org
 ```json
 {
   "editor.colorScheme": "Atom One Dark",
+  "editor.fontFamily": "Menlo",
+  "editor.fontFmyCHS": "Hei",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
@@ -629,9 +620,9 @@ npm update -g --registry=https://registry.npm.taobao.org
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
   "node.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/npm",
-  "terminal.type": "外部终端"
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/npm"
 }
+
 ```
 
 node 和 npm 路径不正确会导致一直编译中。
@@ -653,9 +644,5 @@ node 和 npm 路径不正确会导致一直编译中。
 - [VSCode 官方文档](https://code.visualstudio.com/docs)
 - [Quasar 文档 - VS Code Configuration](https://quasar.dev/start/vs-code-configuration)
 - [bootstrap/.editorconfig](https://github.com/twbs/bootstrap/blob/master/.editorconfig)
-- [uni-app - 运行并发布到 uni-app](https://uniapp.dcloud.io/quickstart?id=%e8%bf%90%e8%a1%8c%e5%b9%b6%e5%8f%91%e5%b8%83uni-app)
-- [uni-app - uni-app 运行环境版本和编译器版本不一致的问题](https://ask.dcloud.net.cn/article/35627)
-- [uni-app - 格式化操作和格式化插件配置说明](https://ask.dcloud.net.cn/article/36529)
-- [uni-app - hbuilderx 使用 eslint 实时校验、自动修复代码错误](https://ask.dcloud.net.cn/article/37070)
 
 <Vssue />
