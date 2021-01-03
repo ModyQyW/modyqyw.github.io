@@ -54,15 +54,19 @@
 
 ### 字体
 
-- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2020](https://www.websiteplanet.com/blog/best-free-fonts/)
-- [Alibaba fonts](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
+- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2021](https://www.websiteplanet.com/blog/best-free-fonts/)
 - [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
 - [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
-- [免费可商用中文字体合集](https://www.uisdc.com/200-models-free-commercial-fonts)
 - [100font](https://www.100font.com)
 - [猫啃网](https://www.maoken.com)
 - [找字体](https://www.zfont.cn)
 - [字魂](https://izihun.com)
+- [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
+- [未来荧黑](https://github.com/welai/glow-sans/releases)
+- [更纱黑体](https://github.com/be5invis/Sarasa-Gothic/releases)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
+- [Fira Code](https://github.com/tonsky/FiraCode/releases)
 
 ### 图标
 
@@ -338,6 +342,7 @@
 - [umi.css](https://www.hua-mi.cn/umi-css/)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
   - [zepto](https://zeptojs.com/) - 类 jquery api，针对现代浏览器
+- [page.js](http://visionmedia.github.io/page.js/) - 路由
 - [format.js](https://formatjs.io/) - 国际化
 - [i18next](https://www.i18next.com/) - 国际化
 - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
@@ -393,9 +398,9 @@
   - [更多](https://github.com/topics/vue)
 - cli
   - [nuxt](https://zh.nuxtjs.org/)
+  - [quasar](https://quasar.dev/)
   - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
-  - [ream](https://ream.dev/)
-  - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
+  - [ream (WIP)](https://ream.dev/)
 - app / 小程序
   - uni-app
     - [文档](https://uniapp.dcloud.io/)
@@ -423,6 +428,8 @@
       - [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss)
 - 衍生
   - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config#readme)
+  - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
+  - [genesis](https://fmfe.github.io/genesis-docs/) - 轻量的 vue ssr
   - [fes.js](https://webank.gitee.io/fes.js/) - 管理台应用解决方案
   - [swrv](https://github.com/Kong/swrv#readme) - 用于数据获取
   - [vue-dollar](https://github.com/antfu/v-dollar#readme) - 简化 vue3 的 api
@@ -443,7 +450,6 @@
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard#readme) - 后台管理系统
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard#readme) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm#readme) - 仿饿了么
-  - [quasar](https://quasar.dev/) - 终极解决方案
 - 进阶
   - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
   - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
