@@ -279,7 +279,9 @@
   - [poi](https://poi.js.org/)
   - [modyqyw/webpack-demos](https://github.com/modyqyw/webpack-demos) - webpack 示例项目
 - [rollup](https://rollupjs.org/guide/zh/)
-  - [awesome-rollup](https://github.com/rollup/awesome)
+  - [awesome-rollup](https://github.com/rollup/awesome#readme)
+- [parcel](https://v2.parceljs.org/)
+  - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel#readme)
 - [snowpack](https://www.snowpack.dev/)
 - [vite](https://github.com/vitejs/vite#readme)
   - [awesome-vite](https://github.com/vitejs/awesome-vite#readme)
@@ -331,6 +333,12 @@
 
 - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
   - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
+- [css bem](http://getbem.com/)
+- [css modules](https://github.com/css-modules/css-modules#readme)
+- [atomic css](https://acss.io/)
+- [oocss](http://oocss.org/)
+- [smacss](http://smacss.com/)
+- [suit css](https://suitcss.github.io/)
 - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
   - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用旧版
   - [mdbootstrap](https://mdbootstrap.com/) - material design + bootstrap

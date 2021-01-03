@@ -83,6 +83,9 @@
   - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
   - [小浩算法](https://www.geekxh.com/)
   - [IAlgorithms](https://ziyi2.github.io/algorithms/)
+  - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
+  - [算法 101](https://101.zoo.team/)
+  - [算法之道](https://book.douban.com/subject/4249686/)
 - 正则表达式
   - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
   - [JavaScript 正则迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
@@ -97,7 +100,6 @@
   - [microsoft - web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
   - [前端九部](https://www.yuque.com/fe9/basic)
   - [学习 css 布局](http://zh.learnlayout.com/)
-  - [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
   - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
   - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
   - html 基础
@@ -126,10 +128,12 @@
 - 包管理器
   - npm
   - yarn
+  - pnpm
 - css 处理器
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
   - [sass/scss](https://sass-lang.com/)
+  - [stylus](https://stylus-lang.com/)
 - 校验工具和格式化工具
   - [ls-lint](https://ls-lint.org/)
   - [prettier](https://prettier.io/)
@@ -137,38 +141,16 @@
   - [stylelint](https://stylelint.io/)
   - [commitlint](https://commitlint.js.org/)
   - [commitizen](https://github.com/commitizen/cz-cli)
+  - [husky](https://typicode.github.io/husky/)
+  - [lint-staged](https://github.com/okonet/lint-staged#readme)
 - typescript，详细可参考[前端 -> 杂项 -> 开发语言](../misc/README.md#开发语言)
 - vue 及相关生态，详细可参考[前端 -> 杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
 - react 及相关生态，详细可参考[前端 -> 杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
 - 编译打包工具，详细可参考[前端 -> 杂项 -> 构建](../misc/README.md#构建)
-- 数据结构与算法进阶
-  - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
-  - [算法 101](https://101.zoo.team/)
-  - [算法之道](https://book.douban.com/subject/4249686/)
-- css 进阶
-  - [css-tricks](https://css-tricks.com/)
-  - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
-  - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
-  - [bem](http://getbem.com/)
-  - [oocss](http://oocss.org/)
-  - [smacss](http://smacss.com/)
-  - [css modules](https://github.com/css-modules/css-modules#readme)
-  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
-- js 进阶
-  - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
-  - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
-  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
-  - [javascript 设计模式](https://book.douban.com/subject/3329540/)
-  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
-  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
-  - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
-  - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
-- 测试，如 testing-library
 - 服务器端开发，如 node.js，express，koa，egg，graphql 等，详细可参考[前端 -> 杂项 -> 服务器端](../misc/README.md#服务器端)
 - 静态网页生成，如 vuepress，dumi 等，详细可参考[前端 -> 杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
 - 继续提高，学无止境
   - [front-end checklist](https://frontendchecklist.io/)
-  - [cute javascript](http://js.pingan8787.com/)
   - [前端进阶之道](https://yuchengkai.cn/home/)
   - [木易杨前端进阶](https://muyiy.cn/)
   - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
@@ -185,6 +167,19 @@
   - [一些文章的汇总](https://github.com/Michael-lzg/my--article#readme)
   - [冴羽的博客](https://github.com/mqyqingfeng/Blog#readme)
   - [Nealyang 的博客](https://github.com/Nealyang/PersonalBlog#readme)
+  - [css tricks](https://css-tricks.com/)
+  - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
+  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
+  - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
+  - [cute javascript](http://js.pingan8787.com/)
+  - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
+  - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
+  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
+  - [javascript 设计模式](https://book.douban.com/subject/3329540/)
+  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
+  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+  - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+  - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
   - [译文：ES6 箭头函数中的 this？你可能想多了](https://www.cnblogs.com/vajoy/p/4902935.html)
   - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
   - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
