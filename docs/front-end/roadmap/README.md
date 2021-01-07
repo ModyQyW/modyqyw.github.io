@@ -98,6 +98,7 @@
     - [Pro Git](https://git-scm.com/book/zh/v2)
 - 网页原生：html + css + js
   - [microsoft - web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
+  - [前端小课](https://lefex.github.io/fe-mini-course/)
   - [前端九部](https://www.yuque.com/fe9/basic)
   - [学习 css 布局](http://zh.learnlayout.com/)
   - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)

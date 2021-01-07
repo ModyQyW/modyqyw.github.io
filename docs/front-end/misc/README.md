@@ -215,7 +215,10 @@
 - [react-dom/test-utils](https://zh-hans.reactjs.org/docs/test-utils.html) - react 组件测试
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
 - [vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
-- [chii](https://github.com/liriliri/chii#readme) - 远程调试工具
+- [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
+- [LightProxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
+- [chii](https://github.com/liriliri/chii/blob/master/docs/README_CN.md#readme) - 远程调试工具
+- [spy-debugger](https://github.com/wuchangming/spy-debugger#readme) - 一站式页面调试、抓包工具
 - [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
 
 ### 构建
@@ -283,8 +286,10 @@
 - [parcel](https://v2.parceljs.org/)
   - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel#readme)
 - [snowpack](https://www.snowpack.dev/)
+  - [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack#readme)
 - [vite](https://github.com/vitejs/vite#readme)
   - [awesome-vite](https://github.com/vitejs/awesome-vite#readme)
+- [wmr](https://github.com/preactjs/wmr#readme)
 
 ### 持续集成
 
@@ -335,10 +340,8 @@
   - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
 - [css bem](http://getbem.com/)
 - [css modules](https://github.com/css-modules/css-modules#readme)
-- [atomic css](https://acss.io/)
 - [oocss](http://oocss.org/)
 - [smacss](http://smacss.com/)
-- [suit css](https://suitcss.github.io/)
 - [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
   - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用旧版
   - [mdbootstrap](https://mdbootstrap.com/) - material design + bootstrap
