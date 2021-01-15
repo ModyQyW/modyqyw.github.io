@@ -4,22 +4,38 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script",
+    "lint:json": "prettier ./**/*.json --write",
+    "lint:markdown": "markdownlint . --fix",
+    "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix"
   },
   "devDependencies": {
-    "@modyqyw/fabric": "~1.0.7",
-    "@vssue/api-github-v4": "~1.4.0",
-    "@vssue/vuepress-plugin-vssue": "~1.4.6",
-    "@vuepress/plugin-back-to-top": "~1.7.1",
+    "@modyqyw/fabric": "~1.11.1",
+    "@vssue/api-github-v4": "~1.4.7",
+    "@vssue/vuepress-plugin-vssue": "~1.4.7",
+    "@vuepress/plugin-back-to-top": "~1.8.0",
     "@vuepress/plugin-blog": "~1.9.3",
-    "@vuepress/plugin-medium-zoom": "~1.7.1",
-    "@vuepress/plugin-pwa": "~1.7.1",
+    "@vuepress/plugin-medium-zoom": "~1.8.0",
+    "@vuepress/plugin-pwa": "~1.8.0",
     "babel-eslint": "~10.1.0",
-    "eslint": "~7.13.0",
-    "prettier": "~2.1.2",
-    "vuepress": "~1.7.1",
+    "eslint": "~7.17.0",
+    "markdownlint-cli": "~0.26.0",
+    "prettier": "~2.2.1",
+    "vuepress": "~1.8.0",
     "vuepress-plugin-code-copy": "~1.0.6",
     "vuepress-plugin-helper-live2d": "~1.0.2",
     "vuepress-plugin-sitemap": "~2.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.json": "prettier --write",
+    "*.markdown": "markdownlint --fix",
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }
