@@ -4,6 +4,7 @@
 
 ## 通用
 
+- [520ssr](https://www.520ssr.co/auth/register?code=oiwx) - v2ray 服务商
 - Adobe Photoshop - 专业图片处理，[在线 PS](https://www.uupoop.com/)
 - Affinity Photo - 专业图片处理
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
@@ -36,10 +37,11 @@
 - [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download) - 阿里小程序开发
 - [爱思助手](https://www.i4.cn/) - ios
 - [百度网盘](http://pan.baidu.com/download) - 存取资源
-- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具集合
+- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
 - [城通网盘](https://www.ctfile.com/) - 存取资源
 - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
 - [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme) - 听歌
+- [片库](https://www.pianku.li/)
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/) - 社交
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html) - 微信小程序开发
@@ -69,15 +71,16 @@
 ## Windows
 
 - [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
-- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具
+- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
 - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
-- [PowerToys](https://github.com/microsoft/PowerToys) - 官方功能集
+- [PowerToys](https://github.com/microsoft/PowerToys) - 官方实用工具
 - [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
+- [万彩办公大师](http://www.wofficebox.com/) - 小工具箱
 - [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 
 ## macOS
@@ -90,10 +93,9 @@
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
-- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具
-- [Magnet](https://magnet.crowdcafe.com/) - 管理工作空间
+- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - Sketch - 设计稿查看
-- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间
+- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
 - [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持读写 NTFS
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
@@ -351,6 +353,7 @@ npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
+npm i -g --registry=https://registry.npm.taobao.org commitizen
 npm i -g --registry=https://registry.npm.taobao.org create-vite-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org less
@@ -396,6 +399,8 @@ npm update -g --registry=https://registry.npm.taobao.org
 ### 插件
 
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
+- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
+- [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight)
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
@@ -413,14 +418,12 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Kite AI Code AutoComplete](https://marketplace.visualstudio.com/items?itemName=kiteco.kite) - Kite VSCode 插件
 - [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - 启动一个本地服务器
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - 图标主题，也可以考虑 [Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)，[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
-- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
@@ -484,6 +487,7 @@ npm update -g --registry=https://registry.npm.taobao.org
   // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 eslint 和 stylelint 自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
+    "source.fixAll.markdownlint": true,
     "source.fixAll.stylelint": true
   },
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
@@ -575,8 +579,8 @@ npm update -g --registry=https://registry.npm.taobao.org
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
-  // vscode 自带功能，指定颜色主题，这里指定为 One Dark Pro
-  "workbench.colorTheme": "One Dark Pro",
+  // vscode 自带功能，指定颜色主题
+  "workbench.colorTheme": "Atom One Dark",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
   "workbench.editorAssociations": [
     {
@@ -592,11 +596,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   }
 }
 ```
-
-### 格式化和校验
-
-- eslint 和 stylelint 使用 prettier - 可以设置`editor.formatOnSave: true`。
-- eslint 和 stylelint 没有使用 prettier - `F1 -> Format Document`（调用 prettier），然后保存（调用 eslint 和 stylelint）。
 
 ## hbuilderx
 

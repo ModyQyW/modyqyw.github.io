@@ -62,7 +62,7 @@
   - 报文
   - 请求流程
   - 抓包分析，如 wireshark，charles，fiddler，lightproxy
-  - 请求分析，如 postman，paw，postwoman
+  - 请求分析，如 postman，paw，hoppscotch
   - https
   - 存储，如 cookies，localStorage，sessionStorage
   - 加解密算法，如 des，3des，dsa，rsa
@@ -71,7 +71,7 @@
   - owasp 安全风险
   - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 - 多媒体技术基础
-  - 图像，如 bmp，jpg，jpeg，png，gif，svg，webp
+  - 图像，如 bmp，jpg，jpeg，png，gif，svg，webp，avif
   - 图像压缩算法
   - 音频，如 wav，wma，mp3
   - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
@@ -196,6 +196,7 @@
   - [Hacker Laws](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
   - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
   - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+  - [编程书籍](https://github.com/XiangLinPro/IT_book#readme)
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
