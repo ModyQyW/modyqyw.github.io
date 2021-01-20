@@ -17,6 +17,7 @@
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包
 - [FileZilla](https://filezilla-project.org/) - ftp 连接
 - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
+- [GeoGebra](https://www.geogebra.org/) - 数学工具
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
 - [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
@@ -61,6 +62,7 @@
 
 ### 浏览器插件
 
+- Allow CORS: Access-Control-Allow-Origin
 - Gitako - 便捷查看 Github
 - Lighthouse - 网页性能测试
 - React Developer Tools - react 浏览器调试工具
@@ -93,6 +95,7 @@
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
+- [iTerm2](https://iterm2.com/) - 终端替换
 - [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - Sketch - 设计稿查看
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
@@ -112,8 +115,6 @@
 
 ### Homebrew
 
-#### 安装 Homebrew
-
 挂梯子，按照[官网](https://brew.sh/index_zh-cn)安装。
 
 #### 配置 Homebrew 镜像源
@@ -127,14 +128,21 @@
 
 ```shell
 brew install git
+brew install git-flow
+brew install git-lfs
 brew install openjdk
 brew install openssh
 brew install svn
 ```
 
-- `ssh -v SERVER_IP`可以看到当前使用的配置文件路径。
-- 每次更新系统都需要重新配置 ssh。
-- 默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
+- [git](https://git-scm.com/)
+- [git-flow](https://www.gitflow.com/)
+- [git-lfs](https://git-lfs.github.com/)
+- [openjdk](https://openjdk.java.net/)
+- [openssh](https://www.openssh.com/)
+- [svn](https://subversion.apache.org/)
+
+`ssh -v SERVER_IP`可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
 ```shell
 # 软链接
@@ -143,11 +151,7 @@ ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 
 ### oh-my-zsh
 
-#### 安装 oh-my-zsh
-
 挂梯子，按照[官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki)安装。
-
-#### 配置 oh-my-zsh
 
 打开`~/.zshrc`进行配置。
 
@@ -273,6 +277,7 @@ export PATH=/usr/local/opt/openjdk/bin:$PATH
 
 # homebrew
 export PATH=/usr/local/sbin:$PATH
+export HOMEBREW_CORE_GIT_REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 ```
@@ -288,15 +293,6 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-```
-
-#### 升级 oh-my-zsh
-
-```shell
-cd ~/.oh-my-zsh
-git stash
-upgrade_oh_my_zsh
-git stash pop
 ```
 
 ## node
@@ -342,9 +338,11 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 使用 nvm 可以方便地管理 node 多版本。
 
 - [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows) - 遇到问题时查 issues
+- [nvm for windows](https://github.com/coreybutler/nvm-windows) - npm 可能不能更新，见 [nvm-windows#300](https://github.com/coreybutler/nvm-windows/issues/300)
 
 ### 全局依赖
+
+使用以下命令安装全局依赖。
 
 ```shell
 npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
@@ -372,7 +370,7 @@ npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
 ```
 
-更新时只需要执行全局更新即可。
+使用 nvm-windows 时重新执行以上命令即可更新，否则执行下面的命令全局更新。
 
 ```shell
 npm update -g --registry=https://registry.npm.taobao.org
@@ -424,6 +422,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) - 图标主题，也可以考虑 [Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)，[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
+- [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
@@ -599,8 +598,6 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 ## hbuilderx
 
-### 作用
-
 用于 uni-app 开发 app 时的调试和构建，其他情况使用 vscode。
 
 ### 修改配置
@@ -618,8 +615,8 @@ npm update -g --registry=https://registry.npm.taobao.org
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.0/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.1/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.1/bin/npm"
 }
 
 ```
@@ -638,10 +635,6 @@ node 和 npm 路径不正确会导致一直编译中。
 - [Awesome-Windows/Awesome](https://github.com/Awesome-Windows/Awesome/blob/master/README-cn.md)
 - [jaywcjlove/awesome-mac](https://wangchujiang.com/awesome-mac/index.zh.html)
 - [sorrycc/awesome-tools](https://github.com/sorrycc/awesome-tools)
-- [微软官方文档 - Windows Server 安装 WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install-on-server)
-- [微软官方文档 - Windows 安装 WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)
-- [VSCode 官方文档](https://code.visualstudio.com/docs)
-- [Quasar 文档 - VS Code Configuration](https://quasar.dev/start/vs-code-configuration)
-- [bootstrap/.editorconfig](https://github.com/twbs/bootstrap/blob/master/.editorconfig)
+- [VSCode Documents](https://code.visualstudio.com/docs)
 
 <Vssue />
