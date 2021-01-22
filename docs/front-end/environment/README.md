@@ -128,8 +128,11 @@
 
 ```shell
 brew install git
+git config --global core.autocrlf false
 brew install git-flow
 brew install git-lfs
+git lfs install
+sudo git lfs install --system
 brew install openjdk
 brew install openssh
 brew install svn

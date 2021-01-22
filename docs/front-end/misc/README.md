@@ -128,14 +128,16 @@
 
 - 桌面端网页，移动端网页
   - (vue + vue-router + vuex) / nuxt
-  - vuetify
+  - vuetify / element / element-plus
+- 移动端网页
+  - (vue + vue-router + vuex) / nuxt
+  - vuetify / nut-ui / zarm-vue / vant
 - 移动端应用，小程序
-  - uni-app
-  - vuex
+  - uni-app + vuex
   - uni-ui + uview-ui + @modyqyw/mp-scss
 - 桌面端应用
   - (vue + vue-router + vuex) / nuxt
-  - vuetify
+  - vuetify / element / element-plus
   - electron
 
 ### React 系
@@ -143,32 +145,35 @@
 - 桌面端网页
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - blueprint / zent
+  - zent / blueprint / material-ui
 - 移动端网页
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - yep-react
+  - yep-react / zarm
 - 移动端应用
   - expo / alita
   - react-router / react-navigation
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - react-native-elements
+  - react-native-elements / react-native-ui-kitten
 - 小程序
-  - taro
+  - taro / remax
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
   - @modyqyw/mp-scss
 - 桌面端应用
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - (blueprint / zent)
+  - zent / blueprint / material-ui
   - electron
 
 ## 项目流程
 
 ### 设计
 
-- Axure RP - 原型
-- Sketch - 设计稿
+- Axure RP
+- 墨刀
+- xiaopiu
+- Sketch
+- Figma
 - Draw.io - 思维导图，功能结构图等相关图例
 - MS Office - 产品需求文档等相关文档
 - WPS Office - 产品需求文档等相关文档
@@ -177,18 +182,18 @@
 
 - git
   - [pro git](https://git-scm.com/book/en/v2)
-- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本
-- [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
+- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版本 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme)
 - [yarn](https://classic.yarnpkg.com/zh-Hans)
 - [pnpm](https://pnpm.js.org/)
 - [@antfu/ni](https://github.com/antfu/ni#readme) - 自动选择 npm/yarn/pnpm
-- [lerna](https://github.com/lerna/lerna#readme)
-- [nx](https://nx.dev/)
+- [lerna](https://github.com/lerna/lerna#readme) - monorepo
+- [nx](https://nx.dev/) - monorepo
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 可以结合`yarn upgrade-interactive`使用
-- [yeoman](https://yeoman.io/)
-- [oclif](https://oclif.io/)
+- [yeoman](https://yeoman.io/) - 构建脚手架
+- [oclif](https://oclif.io/) - 构建脚手架
 - [Microsoft Azure DevOps Service](https://azure.microsoft.com/en-us/services/devops/)
+- [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
 - [滴答清单](https://dida365.com/)
 
 ### 规范校验和格式化
@@ -196,18 +201,19 @@
 - [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
 - [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
-- [eslint](https://eslint.org/) - 校验 + 格式化
-- [stylelint](https://stylelint.io/) - 校验 + 格式化
+- [markdownlint](https://github.com/DavidAnson/markdownlint#readme) - markdown 格式化
+- [eslint](https://eslint.org/) - 脚本文件校验 + 格式化
+- [stylelint](https://stylelint.io/) - 样式文件呢校验 + 格式化
 - [commitlint](https://commitlint.js.org/) - 校验提交
-- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme) - 支持 prettier，eslint 和 stylelint
-- [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
 - [husky](https://github.com/typicode/husky#readme) - Git 钩子处理
 - [lint-staged](https://github.com/okonet/lint-staged#readme) - 校验和格式化暂存区文件
-- [@modyqyw/fabric](https://github.com/MillCloud/fabric)
+- [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
+- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme) - 通用配置指引
 
 ### 调试
 
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
+- [sinon](https://sinonjs.org/)
 - [jest](https://jestjs.io/) - 单元测试
 - [mocha](https://mochajs.org/) - 单元测试
 - [testing-library](https://testing-library.com/) - 组件测试
@@ -311,6 +317,12 @@
 ### 监控
 
 - [sentry](https://sentry.io/)
+
+### DevOps
+
+- [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
+- [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
+- [阿里云 DevOps](https://develop.aliyun.com/devops)
 
 ### 微服务
 
