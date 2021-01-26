@@ -210,16 +210,16 @@
 ### 调试
 
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
-- [sinon](https://sinonjs.org/)
 - [jest](https://jestjs.io/) - 单元测试
 - [mocha](https://mochajs.org/) - 单元测试
 - [testing-library](https://testing-library.com/) - 组件测试
-- [@vue/test-utils](https://vue-test-utils.vuejs.org/) - vue 组件测试
-- [react-dom/test-utils](https://zh-hans.reactjs.org/docs/test-utils.html) - react 组件测试
+- [cypress](https://docs.cypress.io/) - 端对端测试
+- [nightwatch](https://nightwatchjs.org/) - 端对端测试
+- [test-cafe](https://devexpress.github.io/testcafe/) - 端对端测试
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
-- [vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
+- [v-console](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
 - [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
-- [LightProxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
+- [light-proxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
 - [chii](https://github.com/liriliri/chii/blob/master/docs/README_CN.md#readme) - 远程调试工具
 - [spy-debugger](https://github.com/wuchangming/spy-debugger#readme) - 一站式页面调试、抓包工具
 - [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
