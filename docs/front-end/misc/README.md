@@ -192,9 +192,6 @@
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 可以结合`yarn upgrade-interactive`使用
 - [yeoman](https://yeoman.io/) - 构建脚手架
 - [oclif](https://oclif.io/) - 构建脚手架
-- [Microsoft Azure DevOps Service](https://azure.microsoft.com/en-us/services/devops/)
-- [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
-- [滴答清单](https://dida365.com/)
 
 ### 规范校验和格式化
 
@@ -318,10 +315,14 @@
 
 - [sentry](https://sentry.io/)
 
-### DevOps
+### 任务管理和 DevOps
 
 - [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 - [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
+- [Jira](https://www.atlassian.com/zh/software/jira)
+- [Trello](https://trello.com/home)
+- [滴答清单](https://help.dida365.com/tasks)
+- [Ledge](https://devops.phodal.com/)
 - [阿里云 DevOps](https://develop.aliyun.com/devops)
 
 ### 微服务
