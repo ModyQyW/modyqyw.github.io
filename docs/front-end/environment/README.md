@@ -136,6 +136,10 @@ sudo git lfs install --system
 brew install openjdk
 brew install openssh
 brew install svn
+brew install --cask openineditor-lite
+brew install --cask openinterminal-lite
+brew install --cask responsively
+brew install --cask rectangle
 ```
 
 - [git](https://git-scm.com/)
@@ -144,6 +148,10 @@ brew install svn
 - [openjdk](https://openjdk.java.net/)
 - [openssh](https://www.openssh.com/)
 - [svn](https://subversion.apache.org/)
+- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal)
+- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal)
+- [ResponsivelyApp](https://responsively.app/)
+- [Rectangle](https://github.com/rxhanson/Rectangle#readme)
 
 `ssh -v SERVER_IP`可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
@@ -152,11 +160,17 @@ brew install svn
 ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
 ```
 
+需要升级时可以运行以下命令。
+
+```shell
+brew update && brew upgrade && brew cleanup && brew doctor
+```
+
 ### oh-my-zsh
 
 挂梯子，按照[官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki)安装。
 
-打开`~/.zshrc`进行配置。
+打开`~/.zshrc`进行配置，最后不要忘记执行`source ~/.zshrc`。
 
 ```shell
 # If you come from bash you might have to change your $PATH.
@@ -307,12 +321,10 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 # registry=https://registry.npm.taobao.org // for publishing
 
 chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
-edgedriver_cdnurl=https://npm.taobao.org/mirrors/edgedriver/
 electron_builder_binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
 electron_mirror=https://npm.taobao.org/mirrors/electron/
 fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
 node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector/
-operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver/
 phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
 sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
 selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
@@ -324,12 +336,10 @@ selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
 registry "https://registry.npm.taobao.org"
 
 chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
-edgedriver_cdnurl "https://npm.taobao.org/mirrors/edgedriver"
 electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
 electron_mirror "https://npm.taobao.org/mirrors/electron/"
 fsevents_binary_host_mirror "http://npm.taobao.org/mirrors/fsevents/"
 node_inspector_cdnurl "https://npm.taobao.org/mirrors/node-inspector"
-operadriver_cdnurl "https://npm.taobao.org/mirrors/operadriver"
 phantomjs_cdnurl "https://npm.taobao.org/mirrors/phantomjs/"
 sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
 selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
@@ -351,11 +361,11 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
+npm i -g --registry=https://registry.npm.taobao.org @vitejs/create-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
 npm i -g --registry=https://registry.npm.taobao.org commitizen
-npm i -g --registry=https://registry.npm.taobao.org create-vite-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org less
 npm i -g --registry=https://registry.npm.taobao.org nativefier
