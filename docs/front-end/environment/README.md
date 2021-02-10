@@ -391,7 +391,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 ### node-sass 问题
 
-```json
+```javascript
 {
   ...,
   "devDependencies": {
@@ -458,7 +458,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 ### settings.json
 
-```json
+```javascript
 {
   // 插件 Auto Close Tag 使用，指定插件在什么语言时激活
   "auto-close-tag.activationOnLanguage": [
@@ -617,7 +617,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图。
 
-```json
+```javascript
 {
   "editor.colorScheme": "Atom One Dark",
   "editor.fontFamily": "Menlo",
