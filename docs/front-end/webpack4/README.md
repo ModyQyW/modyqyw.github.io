@@ -331,7 +331,7 @@ module.exports = {
 
 我们再来修改 `package.json` 里面的 `scripts` 字段。这样，我们就能通过 `webpack-cli` 提供的命令调用 `webpack` 构建。
 
-```javascript
+```json
 {
   ...,
   "scripts": {
@@ -572,7 +572,7 @@ module.exports = {
 
 移动配置文件后，就需要修改 `package.json` 里的命令，手动指定配置文件了。
 
-```javascript
+```json
 {
   ...,
   "scripts": {
@@ -684,7 +684,7 @@ module.exports = {
 
 要支持 es6+ 语法非常简单，只需要直接使用的 `@babel/preset-env`。
 
-```javascript
+```json
 {
   "presets": ["@babel/preset-env"]
 }
@@ -728,7 +728,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 `@babel/preset-env` 默认只会转换语法，我们需要手动配置来启用自动补全特性的功能。
 
-```javascript
+```json
 {
   "presets": [
     [
@@ -758,7 +758,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 我们可以使用 `@babel/plugin-transform-runtime` 来抽离这些重复的 polyfill 代码，把它们放到一起，进一步压缩最终构建包的体积。代码里面用到对应功能的时候，会自动引入对应的 polyfill。
 
-```javascript
+```json
 {
   "presets": [
     [
@@ -776,7 +776,7 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
 
 除了 es6+ 的语法，我们还想支持 `react` 语法。我们也可以用 `babel` 来解析 `react` 代码，只需要根据 `@babel/preset-react` 的文档配置就可以了。
 
-```javascript
+```json
 {
   "presets": [
     [
@@ -1104,7 +1104,7 @@ export default App;
 
 然后修改 `${PROJECT_DIR}/babel.config.json`，根据 `babel-plugin-zent` 说明加入按需加载的优化。
 
-```javascript
+```json
 {
   ...,
   "plugins": [
@@ -1438,7 +1438,7 @@ npm i webpack-merge@~5.7.3 -D
 
 首先修改`package.json`。
 
-```javascript
+```jso
 {
   ...,
   "scripts": {
@@ -2298,7 +2298,7 @@ module.exports = (env, argv) => {
 
 然后修改 `${PROJECT_DIR}/package.json` 里面的 `scripts`。非复杂情况下，`cross-env` 可以不再使用，复杂情况可以参考 uni-app 官方模板，为了在统一模式下构建不同端的代码，需要用到 `cross-env` 来指定不同端的 `process.env.UNI_PLATFORM`。
 
-```javascript
+```json
 {
   ...,
   "scripts": {
@@ -2396,7 +2396,7 @@ module.exports = (env, argv) => {
 
 另外修改 `package.json` 里面的 `scripts` 字段。
 
-```javascript
+```json
 {
   ...,
   "scripts": {
