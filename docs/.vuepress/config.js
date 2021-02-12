@@ -259,7 +259,7 @@ module.exports = {
     [
       '@vssue/vuepress-plugin-vssue',
       {
-        platform: 'github-v4',
+        platform: 'github',
         owner: 'ModyQyW',
         repo: 'modyqyw.github.io',
         clientId: 'ee62eae699b0c63fb4c2',

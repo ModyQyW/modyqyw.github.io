@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@modyqyw/fabric": "~1.15.0",
-    "@vssue/api-github-v4": "~1.4.7",
+    "@vssue/api-github-v3": "~1.4.7",
     "@vssue/vuepress-plugin-vssue": "~1.4.7",
     "@vuepress/plugin-back-to-top": "~1.8.1",
     "@vuepress/plugin-medium-zoom": "~1.8.1",

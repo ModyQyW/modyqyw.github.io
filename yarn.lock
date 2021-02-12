@@ -1139,10 +1139,10 @@
     "@typescript-eslint/types" "4.15.0"
     eslint-visitor-keys "^2.0.0"
 
-"@vssue/api-github-v4@~1.4.7":
+"@vssue/api-github-v3@~1.4.7":
   version "1.4.7"
-  resolved "https://registry.npm.taobao.org/@vssue/api-github-v4/download/@vssue/api-github-v4-1.4.7.tgz#873554ec8e8351e5eeb8ca76246c2914b20e1bc4"
-  integrity sha1-hzVU7I6DUeXuuMp2JGwpFLIOG8Q=
+  resolved "https://registry.npm.taobao.org/@vssue/api-github-v3/download/@vssue/api-github-v3-1.4.7.tgz#7e30304111ac34b5785abe2f99be8dcc04e94cdf"
+  integrity sha1-fjAwQRGsNLV4Wr4vmb6NzATpTN8=
   dependencies:
     "@vssue/utils" "^1.4.7"
     axios "^0.21.1"

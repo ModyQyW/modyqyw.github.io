@@ -252,7 +252,7 @@ for (let col = 0; col < 10000; col += 1) {
 console.log(new Date() - timestamp);
 ```
 
-毫无疑问 `sum` 的结果是相同的，但你能考虑到两种方法的耗时吗？
+我们的重点不在 `sum` 的结果，而在两种方法的耗时。
 
 测试环境如下。
 
@@ -279,7 +279,7 @@ console.log(new Date() - timestamp);
 
 这和 js 引擎怎么处理数组这种引用类型有关。一般来说，js 引擎会把数组按行顺序存放在内存里，所以先访问同一行的数据（先访问 `array[0][0]` 再访问 `array[0][1]`）要比先访问同一列的数据（先访问 `array[0][0]` 再访问 `array[1][0]`）要快，在列数较多的情况下速度差距表现尤其明显。
 
-一个具体的建议是，按照访问顺序来访问 Array 和 Object。
+一个建议是，按照访问顺序来访问 Array 和 Object。
 
 访问 Array 可以使用 `Array.prototype.forEach` 或 `Array.prototype.entries`，也可以直接使用 `for` 和 `while` 遍历。
 
@@ -399,9 +399,17 @@ div.style.color = 'blue'; // 浏览器统一处理
 
 前端已经发展了多年，已经有相当多的新特性新语法加入到浏览器的支持中。遗憾的是，为了兼容低版本的浏览器，比如 IE（大部分政企和高校计算机仍在使用），低版本 Android 和低版本 iOS，不得不加入各种 polyfill，甚至只能使用旧做法来做兼容。
 
-这些兼容浪费了开发人员太多的时间、精力，浪费了服务器的空间，也浪费了访问用户的流量和时间（如果下载速度比较慢的话）。鼓励用户放弃旧版本的浏览器不仅是帮助开发人员，也是在帮助访问用户。如果有意放弃低版本浏览器和设备，不妨学习一下 YouTube 是怎么劝说用户放弃 IE 6 的。
+拿 [caniuse](https://caniuse.com) 上面的 flexbox 来举例。
 
-迫于现实压力，在低版本浏览器彻底退出历史舞台之前，我们仍然需要做兼容，但这不阻碍我们来看一下放弃兼容之后我们能预想到的做法，某一些做法甚至已经投入到实践当中了。
+<img :src="$withBase('/images/optimization/caniuse-flexbox.png')" alt="caniuse-flexbox">
+
+可以看到，IE 全系列，Android 4.4 和 iOS 9 之前的版本对 flexbox 支持度不佳。如果我们需要适配这些版本，就需要加入 polyfill，甚至不能使用 flexbox（IE 6-9）。
+
+为了兼容而加入的 polyfill 浪费了服务器的空间，也浪费了访问用户的流量和时间（如果下载速度比较慢的话）。如果要兼容更古老的浏览器，还会浪费了开发人员过多的时间、精力。
+
+鼓励用户放弃旧版本的浏览器不仅是帮助开发人员，也是在帮助访问用户。如果有意放弃低版本浏览器和手机系统，不妨学习一下 YouTube 是怎么劝说用户放弃 IE 6 的。
+
+迫于现实压力，在低版本浏览器彻底退出历史舞台之前，我们仍然需要做兼容，但这不阻碍我们来看一下放弃兼容之后可行的做法，某些做法甚至已经投入到实践当中了。
 
 - 图片使用 WebP/SVG/HEIF/AVIF 替代 BMP/JPG/PNG 等。
 - 图标使用 SVG 或图标字体替代 PNG。
@@ -410,11 +418,56 @@ div.style.color = 'blue'; // 浏览器统一处理
 
 ## 确定标签的位置
 
-一般来说，加载外链样式文件的标签应该要放在 html 文件头部，而加载外链脚本文件的标签应该要放在 html 文件尾部。
+下面是一个使用了 bootstrap 3 的 html 文件基本结构。
 
-html 文件的解析是从上到下的，而加载外链样式文件的标签放在 html 文件的哪个位置并不影响 html 的解析，因为 css 的解析和 html 的解析会同步进行，但它的位置会影响渲染。如果把它放在 html 文件的尾部，就需要额外的时间解析样式文件，而且浏览器会先渲染出一个没有外链样式的页面（会有行内样式），样式解析、加载完之后再重新渲染出有外链样式的页面，这将会导致耗费额外的时间，页面本身也会出现闪烁，用户体验相当不好。
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    ...
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
 
-解析到加载外链脚本文件的标签时，浏览器会立即下载执行，html 的解析就此暂停。如果下载执行的耗时过长，网页就会长时间没有响应，导致假死现象。而当外链脚本文件内没有操作 DOM 时，可以使用 `async` 或 `defer` 属性设置为异步加载。使用 `async` 属性的外链脚本文件一旦加载完成就会立即执行，而使用 `defer` 属性的会在 `DOMContentLoaded` 事件之前（也就是页面 DOM 加载完成时）执行。另外还需要注意，既然是异步加载，就无法确定哪个外链脚本文件的内容会被优先执行，这取决于下载完成的顺序。
+```
+
+可以看到，加载外链样式文件的标签放在了 html 文件头部，而加载外链脚本文件的标签放在了 html 文件尾部。这也是最常见的做法。
+
+首先需要明确一点，html 文件的解析是从上到下的。
+
+加载外链样式文件的标签放的位置，其实不影响 html 的解析，因为 css 的解析和 html 的解析会同步进行，但放的位置会影响渲染。
+
+如果把加载外链样式文件的标签放在 html 文件的尾部，浏览器就需要额外的时间解析样式文件。同时，浏览器会先渲染出一个没有外链样式的页面（会有行内样式），样式解析、加载完之后再重新渲染，这会耗费额外的时间，页面本身会闪烁，用户体验相当不好。
+
+而当浏览器解析到加载外链脚本文件的标签时，浏览器会立即下载执行，html 的解析就此暂停。如果下载执行的耗时过长，网页就会长时间没有响应，导致假死现象。
+
+所以，把加载外链样式文件的标签放在 html 文件头部，把加载外链脚本文件的标签放在 html 文件尾部，就成了最常见的做法。
+
+如果外链脚本文件内部没有操作 DOM，可以使用 `async` 或 `defer` 属性将它设置成异步加载。使用 `async` 属性的外链脚本文件一旦加载完成就会立即执行，而使用 `defer` 属性的会在 `DOMContentLoaded` 事件之前（也就是页面 DOM 加载完成时）执行。
+
+还需要注意的一点是，既然是异步加载，就无法确定哪个外链脚本文件的内容会被优先执行，这取决于下载完成的顺序。
 
 ## 合理构建
 
