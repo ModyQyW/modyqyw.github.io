@@ -262,6 +262,7 @@
     - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
     - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
     - [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin#readme)
+    - [prerender-webpack-plugin](https://github.com/chrisvfritz/prerender-spa-plugin#readme)
     - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
     - [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin#readme)
     - [css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin#readme)

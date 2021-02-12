@@ -1,6 +1,6 @@
 module.exports = {
   title: "ModyQyW's blog",
-  description: '只是一个博客罢了',
+  description: '一个前端博客',
   head: [
     [
       'link',
@@ -201,12 +201,8 @@ module.exports = {
         ],
       },
       {
-        text: '赞赏',
-        link: '/donate/',
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/ModyQyW',
+        text: '关于',
+        link: '/about/',
       },
     ],
     sidebar: 'auto',
@@ -267,8 +263,7 @@ module.exports = {
         owner: 'ModyQyW',
         repo: 'modyqyw.github.io',
         clientId: 'ee62eae699b0c63fb4c2',
-        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
-        baseURL: 'https://github.com',
+        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e'
       },
     ],
   ],
