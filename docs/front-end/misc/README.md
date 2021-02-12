@@ -238,6 +238,7 @@
   - [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript)
   - [core-js](https://github.com/zloirock/core-js#readme)
   - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime#readme)
+  - [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import/)
 - [postcss](https://postcss.org/)
   - [awesome-postcss](https://github.com/jdrgomes/awesome-postcss#readme)
   - [autoprefixer](https://github.com/postcss/autoprefixer#readme)

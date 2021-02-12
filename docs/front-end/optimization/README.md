@@ -4,10 +4,10 @@
 
 - 形式：尽量口语化的笔记和示例。
 - 适用：对 `vue` 和 `react` 底层，浏览器底层，js 引擎有基本了解，想要了解前端优化的开发者。
-- 目标：了解前端项目的可用优化，包括开发、编译和运行，这些优化一般需要手动处理，而不包含在各类 Linter 规则之中。
+- 目标：了解前端项目的可用优化，包括开发、编译和运行，这些优化一般需要手动处理，而不包含在各类 Linter 规则又或是官方文档说明里面。
 - 状态：目前处于完善中状态，可能会有遗漏、错误、不完美，但已经可以正常阅读。如果你发现了错误，请在评论里告诉我，谢谢。
 
-## 活用语言特性和数据类型处理条件分支
+## 处理条件分支，避免代码堆叠
 
 假定现在需要实现一个方法，接收的参数是数字，返回的参数是颜色值字符串。传入 13 的时候返回黑色，其他情况返回白色。
 
@@ -50,7 +50,7 @@ const getColorString = (number) => {
 };
 ```
 
-毫无疑问，继续添加 case 也会让 case 堆积如山。在这个例子里，考虑使用 Array 来处理越来越多的 case 是一个更好的选择。
+毫无疑问，继续添加 case 也会让 case 堆叠起来。在这个例子里，考虑使用 Array 来处理越来越多的 case 是一个更好的选择。
 
 ```javascript
 const colors = [
@@ -122,7 +122,7 @@ const getColorString = (colorName) => {
 };
 ```
 
-这么做的好处就是分离了数据源和操作，在改动时更加方便明确。
+这么做的好处就是分离了数据源和操作，避免了不必要的堆叠，在改动时更加方便明确。
 
 如果使用了 `vue` 全家桶，结合计算属性也能写出类似的代码。
 
@@ -157,7 +157,7 @@ export default {
 </script>
 ```
 
-## 使用事件委托减少绑定的事件数量
+## 使用事件委托减少事件绑定
 
 假如你有下面这么一段核心的 html 代码，需要监听所有 `li` 元素的点击事件。
 
@@ -197,9 +197,9 @@ document.querySelector('ul').onclick = ({ target }) => {
 };
 ```
 
-如果要为大量元素都绑定一个事件，不如在它们共同的父元素上绑定一个事件以做处理，这就是事件委托。它能有效地减少绑定的事件数量，减少内存使用。
+如果要为大量元素都绑定一个事件，不如在它们共同的父元素上绑定一个事件以做处理，这就是事件委托。它能有效地减少绑定的事件，减少浏览器使用的内存。
 
-## 留意局部性
+## 留意局部性，避免性能劣化
 
 局部性原理 Locality 是操作系统里面的一个概念，指 CPU 访问存储器时访问的存储单元都趋于聚集在一个较小的连续区域内，这有利于提高访问速度。如果你不了解操作系统的概念，大可以直接跳到这部分的结尾看我给出的建议。
 
@@ -210,8 +210,6 @@ document.querySelector('ul').onclick = ({ target }) => {
 - 时间局部性 - 被访问一次的内存位置在短期内很可能被再次访问。
 - 空间局部性 - 未来访问的内存位置很可能和当前访问的内存位置相邻。
 - 顺序局部性 - 大部分指令是顺序进行的。
-
-如果你了解 vue composition-api 和 react hooks，你应该能感受到它们和时间局部性有异曲同工之妙，它们都推荐把相关联的代码放在一起。
 
 因为时间局部性和顺序局部性和引擎相关性较大，我们难以施加影响，所以我们重点关注一下空间局部性。
 
@@ -273,6 +271,10 @@ console.log(new Date() - timestamp);
     <td>内存</td>
     <td>16 GB 2400 MHz DDR4</td>
   </tr>
+  <tr>
+    <td>浏览器</td>
+    <td>Microsoft Edge 88.0.705.68</td>
+  </tr>
 </table>
 
 遍历方法 1 的耗时在 0.98 秒左右波动，而遍历方法 2 的耗时在 3.85 秒左右波动，遍历方法 2 使用的时间几乎是遍历方法 1 的 4 倍。
@@ -317,7 +319,7 @@ for (const [key, value] of Object.entries(object)) {
 }
 ```
 
-## 克制地使用 JS 改变网页内容
+## 克制地操作 DOM，减少重新渲染
 
 浏览器使用 HTML Parser（HTML 解析器）解析 HTML 文件，得到 DOM Tree（DOM 树，DOM 即 Document Object Model，文档对象模型）。
 
@@ -393,9 +395,9 @@ div.style.color = 'blue'; // 浏览器统一处理
 
 另一个解决办法就是使用 `window.requestAnimationFrame`，它可以把一些代码放到下一次重新渲染时执行，类似的 API 还有 `window.requestIdleCallback`。
 
-由于我个人对这方面接触还是相对较少，这里就不展开了。如果你感兴趣，不妨去查阅一下 API 说明，以及 react 团队为 concurrent mode 做出的工作。
+由于我接触这方面相对较少，这里就不展开了。如果你感兴趣，不妨去查阅一下 API 说明，以及 react 团队为 concurrent mode 做出的工作。
 
-## 鼓励用户更新，减少不必要的兼容
+## 鼓励更新，减少不必要兼容
 
 前端已经发展了多年，已经有相当多的新特性新语法加入到浏览器的支持中。遗憾的是，为了兼容低版本的浏览器，比如 IE（大部分政企和高校计算机仍在使用），低版本 Android 和低版本 iOS，不得不加入各种 polyfill，甚至只能使用旧做法来做兼容。
 
@@ -416,7 +418,7 @@ div.style.color = 'blue'; // 浏览器统一处理
 - 使用浏览器原生支持的 html 新标签，css 新特性（比如 flexbox/grid，可以替代 float），js 新语法和新特性（比如箭头函数，Map 和 Set）。
 - ...
 
-## 确定标签的位置
+## 确定标签的位置，避免解析阻塞
 
 下面是一个使用了 bootstrap 3 的 html 文件基本结构。
 
@@ -469,48 +471,214 @@ div.style.color = 'blue'; // 浏览器统一处理
 
 还需要注意的一点是，既然是异步加载，就无法确定哪个外链脚本文件的内容会被优先执行，这取决于下载完成的顺序。
 
-## 合理构建
+## 合理构建，减少请求的时间
 
-脚手架往往已经为我们准备好了合理的构建，假如我们不是在使用脚手架，那么这部分相对来说更像是分析脚手架为我们做了什么，还有我们还能往脚手架里添加什么。
+每一次请求资源都需要耗费一些时间。下面是我用 Microsoft Edge 88.0.705.6 打开百度的网络统计。
 
-每一次请求资源都需要耗费一些时间，即便是长连接也是如此，所以减少请求次数、压缩资源体积就成了常见有效的优化方法。
+<img :src="$withBase('/images/optimization/edge-devtools-network.png')" alt="edge-devtools-network">
 
-要减少请求次数，我们可以把小文件合并成大文件，这样能减少非下载数据的时间。早期前端会使用雪碧图来压缩图片，现在更常见的是把较小的图片内联到代码内（`url-loader` 和 `file-loader`），如果不考虑兼容性也会使用 SVG。而在处理 js 时，也会进行必要的分块（`splitChunks`），合理的分块可以使加载速度变快，让用户先获取到必要的资源以显示网页。
+可以看到在禁止缓存的情况下，百度首页有 63 个请求，一共用了 7.63 秒才完成，`DOMContentLoaded` 只使用了 1.29 秒，速度已经相当不错了。
 
-而压缩资源体积则经常由各个插件完成，比如 `terser-webpack-plugin` 和 `cssnano`，通过移除注释、移除空格等方式，它们成功地压缩了资源本身的体积。而要再进一步压缩，我们现在常常会考虑使用 `compression-webpack-plugin`，压缩得到 gzip 文件，它往往会更小。
+点入计时，我们可以看到某一个请求的具体耗时信息。
 
-除此之外，我们还可以使用 CDN 来访问某些包的已构建资源，CDN 往往能加快资源的访问速度。但 CDN 的稳定性并不由自己掌控，我自己更倾向于使用 `splitChunks` 分理出一些版本稳定的包，放到自己的服务器上，设置好缓存。一般而言，这样不会依赖于 CDN，是我认为更好的选择。
+<img :src="$withBase('/images/optimization/edge-devtools-network-timing-1.png')" alt="edge-devtools-network-timing-1">
 
-`vue-cli` 还有特别的优化，那就是 `preload` 和 `prefetch`（`@vue/preload-webpack-plugin`），使用了之后浏览器会在页面加载完成后，利用空闲时间提前获取用户未来可能会访问的内容。
+- Queueing 表示在请求队列中等待的时间。
+- Stalled 表示从连接建立完成到真正可以传输数据之间的时间差，包含了代理协商时间。
+- Initial Connection（或 Connecting）表示建立连接所花费的时间，包括 TCP 握手，重试，协商 SSL 等耗时。
+- SSL 表示完成 SSL 握手所耗费的时间。
+- Request sent 表示发出网络请求所花费的时间。
+- Waiting(TFFB) 表示等待发出页面请求到接收到应答数据第一个字节的时间。
+- Content Download 表示接收响应数据所花费的时间。
 
-有关 `webpack` 的部分，你可以查看我的 [webpack4 示例](../webpack4/README.md)。
+此外，还有两个可能出现的说明。
 
-## 重构
+- Proxy negotiation 表示与代理服务器连接进行协商所花费的时间。
+- DNS Lookup 表示执行 DNS 查找所花费的时间。
 
-重构在我看来也属于优化的一种，以上所提及的优化手段都可以用到重构里面去。我还想提一些我自己关于重构的认识。
+可以看到，这个请求里面请求和响应的时间是最长的，第二长的是连接相关的时间。但并非总是这样。
 
-- 不要为了优化过早地重构。在项目开发早期，尽可能地把时间投入到实际开发上，等项目稳定之后，再考虑优化的问题。当然，仍然鼓励一步到位写出良好的代码。对于初学者而言，可以保留自己早期的代码，积累经验后再回头重构，这会有更好的学习体验。
-- 不要拖到最后一刻再去重构。无法否认的是，项目的需求会不停变更后，原本符合需求的良好的代码可能会逐渐劣化，在代码变得难以挽回之前，很需要去重构一次代码。一般我会认为，如果一处功能的代码对应的需求修改了 3-5 次，就需要一次小型的重构。大型的重构往往出现在 50 次修改之后，或需要迁移代码的时候。
-- 提取重复代码并封装。
-- 尽可能拆分函数功能，让一个函数尽可能对应一个功能。
-- 尽可能使用预置的 API，如 `Array.prototype.filter` 筛选符合条件的数组元素，比直接写 `forEach` 或者 `for` 等要简洁一些。
+下面是一个图片的请求。可以看到这一次，花费在连接上的时间更长，请求和响应的时间较短。
 
-## 优化 vue
+<img :src="$withBase('/images/optimization/edge-devtools-network-timing-2.png')" alt="edge-devtools-network-timing-1">
 
-- `vue` 本身应用了 Virtual DOM，尽可能自动且高效地处理节点的操作。
-- 总是结合使用 `v-for` 和 `key`，以便维护内部组件及其子树的状态。这和 `vue` 的 Diff 算法效率有关。
-- 模板不应该包含过于复杂的表达式，它们应该被拆分为计算属性或方法。
-  - 如果计算属性或方法也过于复杂，应该再做进一步拆分。
-- 不需要观测的数据（比如纯粹的展示用数据），可以在 `created` 生命周期内挂载到 `this` 上，避开 `getter`，`setter` 和 `watcher`，减少内存占用。也可以考虑使用 `Object.freeze`。
-- 无需维护自己状态的组件，如展示类组件和高阶组件，一般更适合用函数式组件渲染，减少额外的开销。
-- `v-if` 更适合条件不太可能改变的情况，`v-show` 更适合条件频繁切换的情况。
-  - `v-if` 是惰性的，如果初始条件为假，则什么也不做，只有在条件第一次变为真时才开始局部编译，切换消耗更多。
-  - `v-show` 不是惰性的，在任何条件下都被编译，然后被缓存，保留 DOM 元素，初始渲染消耗更多。
-- 要灵活使用路由懒加载。首页无需懒加载，其他页面建议懒加载。
-- 需要改善 SEO 时，考虑 SSR（Server Side Render，服务端渲染）或者预渲染 prerender。
-  - SSR允许搜索引擎爬虫抓取工具直接抓取完全渲染的页面
+也因此，我们的构建配置要尽可能地优化这两点。
 
-## 优化 react
+一般资源都需要花费一部分时间在连接上。如果我们能合理地合并资源，减少请求的次数，就能实现有效优化。
+
+针对图片，以前会使用多张整合成一张的雪碧图，而现在一般会使用 `url-loader` 和 `file-loader` 把较小的图片内联到代码内，它们对其它的资产文件也一样有效。
+
+针对脚本文件，现在会使用 `webpack.optimization.splitChunks` 来划分，让用户先获取必要的资源来正常显示首页。
+
+除了合并资源外，压缩资源体积也是很好的解决的方法。分别使用 `html-webpack-plugin`，`cssnano` 和 `terser-webpack-plugin` 处理 html，css 和 js 文件，移除注释、空格等不影响正常运行的代码，达到压缩的目的。
+
+要进一步地压缩，不妨考虑 `compression-webpack-plugin`，它可以压缩文件得到体积更小的 gzip 文件。
+
+上面这些优化都是关于 `webpack` 的，你可以查看我的 [webpack4 示例](../webpack4/README.md) 进一步了解。
+
+除此之外，还可以使用 CDN 来访问某些包的已构建资源，CDN 往往拥有更快的请求和响应速度。问题在于 CDN 的稳定性并不由自己掌控，我自己更倾向于把 `splitChunks` 分离出的包部署在服务器上，不使用 CDN。
+
+框架的脚手架往往已经为我们准备好了合理的构建，我们无需操心太多，这也是为什么我更推荐使用脚手架直接开发。
+
+值得一提的是，相比于 `create-react-app`，`vue-cli` 有着特别的优化，那就是 `preload` 和 `prefetch`（使用了 `@vue/preload-webpack-plugin`）。
+
+`<link rel="preload">` 是一种 resource hint，用来告诉浏览器页面加载后很快会被用到的资源，开始主体渲染之前尽早 preload。默认情况下，一个 `vue-cli` 创建的应用会为所有初始化渲染需要的文件自动生成 preload 提示。
+
+`<link rel="prefetch">` 也是一种 resource hint，用来告诉浏览器在页面加载完成后，利用空闲时间提前获取用户未来可能会访问的内容。默认情况下，一个 `vue-cli` 应用会为所有作为 async chunk 生成的 js 文件自动生成 prefetch 提示。
+
+在非 `vue-cli` 初始化的项目里，你可以考虑手动添加这部分优化。
+
+## 在合适的时候做合适的重构
+
+在需求改动了一定次数之后，原本合理的代码架构可能会显得不是那么合理，跟进需求改动越来越困难。这往往是新需求与既往设计冲突而导致的。
+
+我一般倾向于在需求改动 50 次左右的时候做一次中小型的重构，而大型的重构难以简单地决定，一般由需求量，工作量，以及日期安排等因素综合决定。
+
+常见的优化手法有很多，比如封装重复代码，拆分函数功能，尽可能地使用预置 API 等。
+
+```javascript
+// bad
+function handleSubmit(nickname, password) {
+  if (password.length < 8) {
+    alert('密码长度不符合要求，请使用强密码');
+  } else {
+    let username = '';
+    for (let i = 0; i < 8; i += 1) {
+      if (nickname[i]) {
+        username += nickname[i];
+      } else {
+        break;
+      }
+    }
+    alert('账号是' + username);
+  }
+}
+
+```
+
+上面一段代码试图处理提交事件，思路直观但相当糟糕。
+
+首先是在提交方法内部定义了怎么校验，导致函数本身不够单一。一种更好的做法是，分离校验和提交的定义，但可以在提交方法内部调用校验方法。分离后，无论是校验还是提交，都更易于扩展了。
+
+```javascript
+// better
+function handleValidate(password) {
+  if (password.length < 8) {
+    alert('密码长度不符合要求，请使用强密码');
+    return false;
+  }
+  return true;
+}
+
+function handleSubmit(nickname, password) {
+  if (handleValidate(password)) {
+    let username = '';
+    for (let i = 0; i < 8; i += 1) {
+      if (nickname[i]) {
+        username += nickname[i];
+      } else {
+        break;
+      }
+    }
+    alert('账号是' + username);
+  }
+}
+
+```
+
+另一个问题是，使用了 `for` 循环来获取 `nickname` 变量的前 8 位，并在不足 8 位时停止操作。使用预置的 `String.prototype.slice` 可以直接了当地完成这一步工作。
+
+```javascript
+// even better
+function handleValidate(password) {
+  if (password.length < 8) {
+    alert('密码长度不符合要求，请使用强密码');
+    return false;
+  }
+  return true;
+}
+
+function handleSubmit(nickname, password) {
+  if (handleValidate(password)) {
+    let username = nickname.slice(0, 8);
+    alert('账号是' + username);
+  }
+}
+
+```
+
+现在就更良好了。更多的重构手法你可以阅读 Martin Fowler 的《重构》一书。
+
+我在这里还想再强调一点，那就是选择合适的时间点去做重构。过早地重构会浪费宝贵的开发时间，过晚地重构会使重构工作难以开展，代码难以挽回。
+
+## 手动优化 vue
+
+### 函数式组件
+
+函数式组件没有状态（也就是没有响应式数据），也没有实例（也就是没有 `this`），因此它的渲染开销也较少。
+
+函数式组件非常适合用于展示固定数据。
+
+### 改善 SEO
+
+`vue-cli` 默认为我们构建一个对 SEO 不太友好的 SPA。如果需要良好的 SEO，我们不得不考虑一些方案。
+
+如果只是想改善少量页面（`/`，`/about`，`/contact` 等）的 SEO，使用预渲染 prerender 即可（[prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin#readme)）。预渲染可以在构建时 build time 生成针对特定路由的静态网页，甚至可以将网站完全静态化。
+
+在其它的情况下，你可能更需要服务端渲染 SSR。其具体的优劣和配置指南可以直接查看 [Vue SSR 指南](https://ssr.vuejs.org/zh/)。
+
+除了手动配置 SSR 之外，直接使用 [Nuxt](https://nuxtjs.org/) 或 [Quasar](https://quasar.dev/) 也是一个很好的选择。
+
+由于我接触这方面相对较少，这里就不展开了。
+
+### 异步加载非首页路由
+
+正如我在[合理构建，减少请求的时间](#合理构建减少请求的时间)里提到的一样，`vue-cli` 会内置 preload 和 prefetch 的优化。
+
+下面是一个简单的配置例子。
+
+```javascript
+import Index from '@/views/index.vue';
+
+export default new VueRouter({
+  routes: [
+    {
+      path: '/',
+      name: 'index',
+      component: Index, // preload
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/about.vue'), // prefetch
+    },
+  ],
+});
+```
+
+`vue-cli` 会自动处理资源，为同步引入的资源添加 preload，为异步引入的资源添加 prefetch。
+
+一般来说，可以被直接访问的页面（比如首页，关于页）需要 preload，其它页面只需要 prefetch。
+
+### 合理使用 vuex
+
+在实际开发中往往会遇到多个组件需要反映相同的变化数据的情况，这时最好将共享状态提升到最近的共同父组件中去。当共同的父组件与它们跨越的层级较多，这时候更推荐使用全局状态管理。
+
+关于状态管理模式，可以直接查看 [Vuex 是什么](https://vuex.vuejs.org/zh/)。这里只想先讨论如何划分模块的问题。
+
+如何划分模块，甚至要不要划分模块，一直没有定论。`redux` 派更倾向于不使用 `vuex` 模块，类比 `redux` 一样使用 `vuex`。我个人属于另一派，更则倾向于使用 `vuex` 模块，并为每个模块都开启命名空间。
+
+我会把 `vuex` 模块分成两类，一类是应用使用的模块，另一类是业务使用的模块。应用使用的模块往往命名为 `app`，里面保存用户设置的语言、主题等数据；业务使用的模块命名视具体情况而定，里面保存用户信息和业务相关等数据。
+
+<img :src="$withBase('/images/optimization/vuex-modules.svg')" alt="vuex-modules">
+
+这么做的好处是明确划分了界限，强调模块化。坏处就是业务本身比较错综复杂时，非常考究开发者划分模块的功底。一旦划分的模块被业务需求模糊了界限，划分模块就会显得多余且累赘。
+
+此外，不是什么数据都适合只放到 vuex 里面去。为了做主题、语言、登录状态等持久化，必须考虑使用 storage 存储数据以持久化。
+
+## 手动优化 react
+
+TODO
 
 ## 参考
 
