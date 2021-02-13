@@ -704,4 +704,8 @@ TODO
 - [Vue.js 服务端渲染指南](https://ssr.vuejs.org/zh/)
 - [LightHouse](https://github.com/GoogleChrome/lighthouse#readme)
 
+## 致谢
+
+- [XuXianTao](https://github.com/XuXianTao) - 阅读了初稿并提供了弥足珍贵的建议和意见
+
 <Vssue />

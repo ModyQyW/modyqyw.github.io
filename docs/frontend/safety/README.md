@@ -153,4 +153,8 @@ XSS 攻击更多的是欺骗用户，让用户认为某个网站是安全的，�
 - 上野宣 - 图解 HTTP
 - [一次安全可靠的通信——HTTPS原理](https://developers.weixin.qq.com/community/develop/article/doc/000046a5fdc7802a15f7508b556413)
 
+## 致谢
+
+- [XuXianTao](https://github.com/XuXianTao) - 阅读了初稿并提供了弥足珍贵的建议和意见
+
 <Vssue />

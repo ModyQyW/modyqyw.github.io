@@ -1,5 +1,11 @@
 # 监控
 
+## 参考
+
+- [谭光志 - 带你入门前端工程](https://woai3c.gitee.io/introduction-to-frontend-engineering/)
+- [如何进行 web 性能监控](http://www.alloyteam.com/2020/01/14184/)
+- [sentry](https://docs.sentry.io/)
+
 待补充，催稿可以
 
 （1）邮件催稿
