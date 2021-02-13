@@ -1,6 +1,5 @@
 module.exports = {
   title: "ModyQyW's blog",
-  description: '一个前端博客',
   head: [
     [
       'link',
