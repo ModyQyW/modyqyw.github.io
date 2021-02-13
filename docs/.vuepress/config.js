@@ -139,30 +139,6 @@ module.exports = {
             link: '/frontend/misc/',
           },
           {
-            text: 'vue',
-            link: '/frontend/vue/',
-          },
-          {
-            text: 'uni-app',
-            link: '/frontend/uni-app/',
-          },
-          {
-            text: 'typescript',
-            link: '/frontend/typescript/',
-          },
-          {
-            text: 'react',
-            link: '/frontend/react/',
-          },
-          {
-            text: 'taro',
-            link: '/frontend/taro/',
-          },
-          {
-            text: 'expo',
-            link: '/frontend/expo/',
-          },
-          {
             text: '测试',
             link: '/frontend/test',
           },
@@ -175,14 +151,6 @@ module.exports = {
             link: '/frontend/webpack4/',
           },
           {
-            text: 'rollup',
-            link: '/frontend/rollup/',
-          },
-          {
-            text: 'vite',
-            link: '/frontend/vite',
-          },
-          {
             text: '安全',
             link: '/frontend/safety/',
           },
@@ -193,14 +161,6 @@ module.exports = {
           {
             text: '优化',
             link: '/frontend/optimization/',
-          },
-          {
-            text: 'express',
-            link: '/frontend/express/',
-          },
-          {
-            text: 'egg',
-            link: '/frontend/egg/',
           },
         ],
       },
