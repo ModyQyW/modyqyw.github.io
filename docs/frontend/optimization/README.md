@@ -611,6 +611,16 @@ function handleSubmit(nickname, password) {
 
 我在这里还想再强调一点，那就是选择合适的时间点去做重构。过早地重构会浪费宝贵的开发时间，过晚地重构会使重构工作难以开展，代码难以挽回。
 
+## 使用 LightHouse 辅助分析
+
+[LightHouse](https://github.com/GoogleChrome/lighthouse#readme) 是一个谷歌开源的网站性能分析工具，它可以分析任意网站的性能，打分并给出一些建议。
+
+你可以使用浏览器插件，也可以使用 cli。这里使用浏览器插件做演示。
+
+测试的对象依然是百度。LightHouse 生成了报告，我将它保存成 <a target="_blank" :href="$withBase('/documents/optimization/lighthouse-report-for-baidu.pdf')">PDF</a> 供你在线查看。
+
+报告对问题的描述和给出的解决方案都相当详细，在这里就不再展开讲解报告了。
+
 ## 手动优化 vue
 
 ### 函数式组件
@@ -684,10 +694,14 @@ TODO
 
 - David Thomas, Andrew Hunt - 程序员修炼之道
 - Martin Fowler - 重构
-- [谭光志 - 带你入门前端工程](https://woai3c.gitee.io/introduction-to-front-end-engineering/)
+- [chrome devtools](https://developers.google.cn/web/tools/chrome-devtools)
+- [firefox devtools](https://developer.mozilla.org/en-US/docs/Tools)
+- [edge(chromium devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
+- [谭光志 - 带你入门前端工程](https://woai3c.gitee.io/introduction-to-frontend-engineering/)
 - [[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用](https://segmentfault.com/a/1190000002789651)
 - [阮一峰 - 网页性能管理详解](https://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html)
 - [WindrunnerMax - Vue 常用性能优化](https://www.cnblogs.com/WindrunnerMax/p/13972793.html)
 - [Vue.js 服务端渲染指南](https://ssr.vuejs.org/zh/)
+- [LightHouse](https://github.com/GoogleChrome/lighthouse#readme)
 
 <Vssue />

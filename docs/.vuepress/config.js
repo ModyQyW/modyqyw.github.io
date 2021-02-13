@@ -128,75 +128,79 @@ module.exports = {
         items: [
           {
             text: '学习路径',
-            link: '/front-end/roadmap/',
+            link: '/frontend/roadmap/',
           },
           {
             text: '环境配置',
-            link: '/front-end/environment/',
+            link: '/frontend/environment/',
           },
           {
             text: '杂项',
-            link: '/front-end/misc/',
+            link: '/frontend/misc/',
           },
           {
             text: 'vue',
-            link: '/front-end/vue/',
+            link: '/frontend/vue/',
           },
           {
             text: 'uni-app',
-            link: '/front-end/uni-app/',
+            link: '/frontend/uni-app/',
           },
           {
             text: 'typescript',
-            link: '/front-end/typescript/',
+            link: '/frontend/typescript/',
           },
           {
             text: 'react',
-            link: '/front-end/react/',
+            link: '/frontend/react/',
           },
           {
             text: 'taro',
-            link: '/front-end/taro/',
+            link: '/frontend/taro/',
           },
           {
             text: 'expo',
-            link: '/front-end/expo/',
+            link: '/frontend/expo/',
+          },
+          {
+            text: '测试',
+            link: '/frontend/test',
+          },
+          {
+            text: '持续集成 CI',
+            link: '/frontend/ci',
           },
           {
             text: 'webpack4',
-            link: '/front-end/webpack4/',
+            link: '/frontend/webpack4/',
           },
           {
             text: 'rollup',
-            link: '/front-end/rollup/',
+            link: '/frontend/rollup/',
           },
           {
             text: 'vite',
-            link: '/front-end/vite',
-          },
-          {
-            text: '音视频',
-            link: '/front-end/av/',
+            link: '/frontend/vite',
           },
           {
             text: '安全',
-            link: '/front-end/safety/',
+            link: '/frontend/safety/',
           },
           {
             text: '监控',
-            link: '/front-end/monitor/',
+            link: '/frontend/monitor/',
           },
           {
             text: '优化',
-            link: '/front-end/optimization/',
+            link: '/frontend/optimization/',
           },
           {
             text: 'express',
-            link: '/front-end/express/',
+            link: '/frontend/express/',
           },
           {
             text: 'egg',
-            link: '/front-end/egg/',
+            link: '/frontend/egg/',
           },
         ],
       },

@@ -151,7 +151,7 @@
 - 服务器端开发，如 node.js，express，koa，egg，graphql 等，详细可参考[前端 -> 杂项 -> 服务器端](../misc/README.md#服务器端)
 - 静态网页生成，如 vuepress，dumi 等，详细可参考[前端 -> 杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
 - 继续提高，学无止境
-  - [front-end checklist](https://frontendchecklist.io/)
+  - [frontend checklist](https://frontendchecklist.io/)
   - [前端进阶之道](https://yuchengkai.cn/home/)
   - [木易杨前端进阶](https://muyiy.cn/)
   - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
