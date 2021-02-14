@@ -226,7 +226,7 @@ module.exports = {
         owner: 'ModyQyW',
         repo: 'modyqyw.github.io',
         clientId: 'ee62eae699b0c63fb4c2',
-        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e'
+        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
       },
     ],
   ],
