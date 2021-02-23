@@ -355,10 +355,13 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ### 全局依赖
 
-使用以下命令安装全局依赖。
+## 11
+
+使用以下命令安装全局依赖，包括 `vue`，`nuxt`，`react`，`next`，`taro`，`rax`，`remax`，`expo`，`egg`，`nest`，`typescript`，`less`，`sass` 等项目常用 cli。
 
 ```shell
 npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
+npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
 npm i -g --registry=https://registry.npm.taobao.org @vitejs/create-app
@@ -366,6 +369,11 @@ npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
 npm i -g --registry=https://registry.npm.taobao.org commitizen
+npm i -g --registry=https://registry.npm.taobao.org create-next-app
+npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
+npm i -g --registry=https://registry.npm.taobao.org create-react-app
+npm i -g --registry=https://registry.npm.taobao.org create-remax-app
+npm i -g --registry=https://registry.npm.taobao.org egg-init
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org less
 npm i -g --registry=https://registry.npm.taobao.org nativefier
@@ -375,6 +383,7 @@ npm i -g --registry=https://registry.npm.taobao.org pnpm
 npm i -g --registry=https://registry.npm.taobao.org postcss
 npm i -g --registry=https://registry.npm.taobao.org postcss-cli
 npm i -g --registry=https://registry.npm.taobao.org prettier
+npm i -g --registry=https://registry.npm.taobao.org rax-cli
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
 npm i -g --registry=https://registry.npm.taobao.org sass
 npm i -g --registry=https://registry.npm.taobao.org serve
