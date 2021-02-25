@@ -1,209 +1,107 @@
-module.exports = {
-  title: "ModyQyW's blog",
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: `/favicon.ico`,
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'manifest',
-        href: '/manifest.json',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'theme-color',
-        content: '#65b687',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'apple-touch-icon',
-        href: '/favicon.ico',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'mask-icon',
-        href: '/favicon.ico',
-        color: '#000000',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'msapplication-TileImage',
-        content: '/favicon.ico',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'msapplication-TileColor',
-        content: '#000000',
-      },
-    ],
-  ],
-  locales: {
-    '/': {
-      lang: 'zh-CN',
-    },
-  },
+const { config } = require('vuepress-theme-hope');
+
+module.exports = config({
+  title: "ModyQyW's Site",
+  description: '基于 vuepress 和 vuepress-theme-hope 打造的个人网站',
   themeConfig: {
+    // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
+    baseLang: 'zh-CN',
+    author: 'ModyQyW <wurui7@mail3.sysu.edu.cn>',
     nav: [
-      {
-        text: '首页',
-        link: '/',
-      },
+      { text: '首页', link: '/' },
       {
         text: '代码基础',
+        prefix: '/coding-basis/',
         items: [
-          {
-            text: '数学',
-            link: '/coding-basis/math/',
-          },
-          {
-            text: '计算机组成',
-            link: '/coding-basis/computer-organization/',
-          },
-          {
-            text: '网络',
-            link: '/coding-basis/internet/',
-          },
-          {
-            text: 'git',
-            link: '/coding-basis/git/',
-          },
-          {
-            text: 'html',
-            link: '/coding-basis/html/',
-          },
-          {
-            text: 'css',
-            link: '/coding-basis/css/',
-          },
-          {
-            text: 'js',
-            link: '/coding-basis/js/',
-          },
-          {
-            text: '数据结构',
-            link: '/coding-basis/data-structure/',
-          },
-          {
-            text: '算法',
-            link: '/coding-basis/algorithm/',
-          },
-          {
-            text: '浏览器',
-            link: '/coding-basis/browser/',
-          },
+          { text: '数学', link: 'math/' },
+          { text: '计算机组成', link: 'computer-organization/' },
+          { text: '网络', link: 'internet/' },
+          { text: 'git', link: 'git/' },
+          { text: 'html', link: 'html/' },
+          { text: 'css', link: 'css/' },
+          { text: 'js', link: 'js/' },
+          { text: '数据结构', link: 'data-structure/' },
+          { text: '算法', link: 'algorithm/' },
+          { text: '浏览器', link: 'browser/' },
         ],
       },
       {
         text: '前端',
+        prefix: '/frontend/',
         items: [
-          {
-            text: '学习路径',
-            link: '/frontend/roadmap/',
-          },
-          {
-            text: '环境配置',
-            link: '/frontend/environment/',
-          },
-          {
-            text: '杂项',
-            link: '/frontend/misc/',
-          },
-          {
-            text: '测试',
-            link: '/frontend/test',
-          },
-          {
-            text: '持续集成 CI',
-            link: '/frontend/ci',
-          },
-          {
-            text: 'webpack4',
-            link: '/frontend/webpack4/',
-          },
-          {
-            text: '安全',
-            link: '/frontend/safety/',
-          },
-          {
-            text: '监控',
-            link: '/frontend/monitor/',
-          },
-          {
-            text: '优化',
-            link: '/frontend/optimization/',
-          },
+          { text: '学习路径', link: 'roadmap/' },
+          { text: '环境配置', link: 'environment/' },
+          { text: '杂项', link: 'misc/' },
+          { text: '测试', link: 'test/' },
+          { text: '持续集成 CI', link: 'ci/' },
+          { text: 'webpack4', link: 'webpack4/' },
+          { text: '安全', link: 'safety/' },
+          { text: '监控', link: 'monitor/' },
+          { text: '优化', link: 'optimization/' },
         ],
       },
-      {
-        text: '关于',
-        link: '/about/',
-      },
+      { text: '关于', link: '/about/' },
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/coding-basis/': [
+        'math/',
+        'computer-organization/',
+        'internet/',
+        'git/',
+        'html/',
+        'css/',
+        'js/',
+        'data-structure/',
+        'algorithm/',
+        'browser/',
+      ],
+      '/frontend/': [
+        'roadmap/',
+        'environment/',
+        'misc/',
+        'test/',
+        'ci/',
+        'webpack4/',
+        'safety/',
+        'monitor/',
+        'optimization/',
+      ],
+      '/': [''],
+    },
+    hostname: 'https://modyqyw.github.io',
+    // 默认主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/default/
     sidebarDepth: 3,
-    lastUpdated: 'Last Updated',
+    lastUpdated: '上次更新',
     repo: 'ModyQyW/modyqyw.github.io',
-    repoLabel: '查看源码',
     docsBranch: 'origin',
     editLinks: true,
     editLinkText: '编辑此页面',
+    // 主题功能配置 https://vuepress-theme-hope.github.io/zh/config/theme/feature/
+    blog: false,
+    pageInfo: false,
+    // 主题插件配置 https://vuepress-theme-hope.github.io/zh/config/theme/plugin/
+    mdEnhance: {
+      lineNumbers: true,
+    },
+    comment: false,
+    copyright: false,
+    pwa: {
+      favicon: '/favicon.ico',
+      manifest: {
+        icons: [
+          { src: 'icons/w48.png', sizes: '48x48', type: 'image/png' },
+          { src: 'icons/w72.png', sizes: '72x72', type: 'image/png' },
+          { src: 'icons/w96.png', sizes: '96x96', type: 'image/png' },
+          { src: 'icons/w144.png', sizes: '144x144', type: 'image/png' },
+          { src: 'icons/w168.png', sizes: '168x168', type: 'image/png' },
+          { src: 'icons/w192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'icons/w256.png', sizes: '256x256', type: 'image/png' },
+        ],
+      },
+    },
+    feed: false,
   },
   plugins: [
-    '@vuepress/active-header-links',
-    '@vuepress/back-to-top',
-    [
-      '@vuepress/last-updated',
-      {
-        dateOptions: {
-          hour12: false,
-        },
-      },
-    ],
-    '@vuepress/medium-zoom',
-    '@vuepress/nprogress',
-    [
-      '@vuepress/pwa',
-      {
-        updatePopup: true,
-      },
-    ],
-    '@vuepress/search',
-    [
-      'sitemap',
-      {
-        hostname: 'https://modyqyw.top',
-      },
-    ],
-    'vuepress-plugin-code-copy',
     [
       'helper-live2d',
       {
@@ -236,4 +134,4 @@ module.exports = {
     extractHeaders: ['h2', 'h3', 'h4'],
   },
   evergreen: true,
-};
+});
