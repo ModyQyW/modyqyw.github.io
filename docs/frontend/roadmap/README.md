@@ -164,6 +164,7 @@
   - [前端学习资料合集](https://github.com/fyuanfen/note)
   - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
   - [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
+  - [Web 全栈体系](https://hejialianghe.gitee.io/)
   - [前端精读周刊](https://github.com/dt-fe/weekly)
   - [一些文章的汇总](https://github.com/Michael-lzg/my--article#readme)
   - [冴羽的博客](https://github.com/mqyqingfeng/Blog#readme)
