@@ -1438,7 +1438,7 @@ npm i webpack-merge@~5.7.3 -D
 
 首先修改`package.json`。
 
-```jso
+```json
 {
   ...,
   "scripts": {
