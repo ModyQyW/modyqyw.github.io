@@ -2,7 +2,7 @@ const { config } = require('vuepress-theme-hope');
 
 module.exports = config({
   title: "ModyQyW's Site",
-  description: '基于 vuepress 和 vuepress-theme-hope 打造的个人网站',
+  description: '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
   themeConfig: {
     // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
     baseLang: 'zh-CN',
