@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build:no-rename": "vuepress build docs",
+    "build": "vuepress build docs && renamer ./docs/.vuepress/dist/manifest.webmanifest --replace manifest.json",
     "deploy": "sh deploy.sh",
     "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script",
     "lint:json": "prettier ./**/*.json --write",
@@ -18,6 +19,7 @@
     "eslint": "~7.20.0",
     "markdownlint-cli": "~0.26.0",
     "prettier": "~2.2.1",
+    "renamer": "~2.0.1",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
     "vuepress-theme-hope": "~1.10.0"
