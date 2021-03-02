@@ -2,7 +2,8 @@ const { config } = require('vuepress-theme-hope');
 
 module.exports = config({
   title: "ModyQyW's Site",
-  description: '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
+  description:
+    '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
   themeConfig: {
     // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
     baseLang: 'zh-CN',
@@ -13,16 +14,15 @@ module.exports = config({
         text: '代码基础',
         prefix: '/coding-basis/',
         items: [
-          { text: '数学', link: 'math/' },
-          { text: '计算机组成', link: 'computer-organization/' },
-          { text: '网络', link: 'internet/' },
-          { text: 'git', link: 'git/' },
-          { text: 'html', link: 'html/' },
-          { text: 'css', link: 'css/' },
-          { text: 'js', link: 'js/' },
-          { text: '数据结构', link: 'data-structure/' },
-          { text: '算法', link: 'algorithm/' },
-          { text: '浏览器', link: 'browser/' },
+          { text: '数学基础', link: 'math/' },
+          { text: '计算机组成基础', link: 'computer-organization/' },
+          { text: '网络基础', link: 'internet/' },
+          { text: 'git 基础', link: 'git/' },
+          { text: '浏览器基础', link: 'browser/' },
+          { text: 'html 基础', link: 'html/' },
+          { text: 'css 基础', link: 'css/' },
+          { text: 'js 基础', link: 'js/' },
+          { text: '数据结构和算法基础', link: 'data-structure-and-algorithm/' },
         ],
       },
       {
@@ -48,12 +48,11 @@ module.exports = config({
         'computer-organization/',
         'internet/',
         'git/',
+        'browser/',
         'html/',
         'css/',
         'js/',
-        'data-structure/',
-        'algorithm/',
-        'browser/',
+        'data-structure-and-algorithm/',
       ],
       '/frontend/': [
         'roadmap/',
@@ -71,7 +70,6 @@ module.exports = config({
     hostname: 'https://modyqyw.top',
     // 默认主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/default/
     sidebarDepth: 3,
-    lastUpdated: '上次更新',
     repo: 'ModyQyW/modyqyw.github.io',
     docsBranch: 'origin',
     editLinks: true,

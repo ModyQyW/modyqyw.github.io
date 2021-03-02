@@ -1,6 +1,4 @@
-# 数据结构基础(js)
-
-可以 pull [对应仓库](https://github.com/ModyQyW/dsa)的源码下来学习。
+# 数据结构和算法基础
 
 ## 线性表
 
