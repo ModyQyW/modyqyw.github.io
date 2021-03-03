@@ -21,10 +21,11 @@
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
 - [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
-- [Kite](https://www.kite.com/) - 代码自动补全工具，竞品 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)
+- [Kite](https://www.kite.com/) - 代码自动补全工具，竞品 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)，酌情使用
 - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
 - [Motrix](https://motrix.app/zh-CN/) - 下载
+- [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载
 - [OBS](https://obsproject.com/) - 录制
 - [Postman](https://www.getpostman.com/) - 请求
 - [QQ](https://im.qq.com/download/) - 社交
@@ -95,7 +96,7 @@
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
-- [iTerm2](https://iterm2.com/) - 终端替换
+- [itsycal](https://www.mowglii.com/itsycal/) - 日历
 - [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - Sketch - 设计稿查看
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
@@ -355,8 +356,6 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ### 全局依赖
 
-## 11
-
 使用以下命令安装全局依赖，包括 `vue`，`nuxt`，`react`，`next`，`taro`，`rax`，`remax`，`expo`，`egg`，`nest`，`typescript`，`less`，`sass` 等项目常用 cli。
 
 ```shell
@@ -368,6 +367,7 @@ npm i -g --registry=https://registry.npm.taobao.org @vitejs/create-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
+npm i -g --registry=https://registry.npm.taobao.org cnpm
 npm i -g --registry=https://registry.npm.taobao.org commitizen
 npm i -g --registry=https://registry.npm.taobao.org create-next-app
 npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
@@ -438,6 +438,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Kite AI Code AutoComplete](https://marketplace.visualstudio.com/items?itemName=kiteco.kite) - Kite VSCode 插件
 - [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
+- [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
@@ -451,7 +452,6 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置，自行查看文档
-- [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode) - 检查代码质量
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - tailwindcss 类名提示
@@ -464,6 +464,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 开发帮助工具
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
 ### settings.json
 
@@ -637,20 +638,22 @@ npm update -g --registry=https://registry.npm.taobao.org
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.1/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.1/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/npm"
 }
 
 ```
 
 node 和 npm 路径不正确会导致一直编译中。
 
-### 依赖版本
+### 常见问题
 
 看起来数字天堂团队并没有完善的项目开发流程，导致某些时候 vue-cli 创建的项目依赖版本和 HBuilderX 的依赖版本不一致。
 
 - 回退版本
 - 查看 HBuilderX -> plugins -> uniapp-cli 的依赖版本
+
+另外，他们也尝试做自己的生态，比如 nvue 和 uni_modules，这些都有着不少的坑。如果不是为了跨端，没有必要使用 uni-app。如果是为了跨端，也可以尝试优秀的 React 系框架。
 
 ## 参考
 
