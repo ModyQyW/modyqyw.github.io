@@ -1,7 +1,5 @@
 # html 基础
 
-只是基础，并不是所有的 html。均依据 html5 说明，不考虑不原生支持 html5 的浏览器（特指非 chromium 内核的 IE 系列）。
-
 ## html 元素
 
 网页由 html 元素组成。
@@ -18,7 +16,7 @@ html 元素通常由 3 个部分组成：开始标签 start tag，内容和结�
 <img src="a.jpg">
 ```
 
-XML 规范中，元素可以自闭合，适用于空元素。
+[XML](https://www.runoob.com/xml/xml-tutorial.html) 规范中，元素可以自闭合，适用于空元素。
 
 ```html
 <div class="div" />

@@ -15,14 +15,6 @@
 
 - [前端小课](https://github.com/lefex/FE#readme)
 
-## 微软
-
-- [web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
-
-## 前端九部
-
-- [入门者手册](https://www.yuque.com/fe9/basic)
-
 ## 个人
 
 - 英语
@@ -93,39 +85,18 @@
   - git
     - [Pro Git](https://git-scm.com/book/zh/v2)
 - 网页原生：html + css + js
-  - [microsoft - web-dev-for-beginners](https://github.com/microsoft/Web-Dev-For-Beginners#readme)
   - [前端小课](https://lefex.github.io/fe-mini-course/)
   - [前端九部](https://www.yuque.com/fe9/basic)
   - [学习 css 布局](http://zh.learnlayout.com/)
   - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
   - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
-  - html 基础
-  - html 语义化
-  - html 表单和验证
-  - html 可访问性
-  - css 基础
-  - css 定位
-  - css 显示
-  - css 盒模型
-  - css 浮动
-  - css 弹性布局
-  - css 网格布局
-  - css 响应式布局
-  - css 自适应布局
-  - js 基础
-  - js 严格模式
-  - js dom 操作
-  - js 变量提升
-  - js 事件冒泡
-  - js 作用域
-  - js 原型和原型链
-  - js 闭包
-  - js 模块化
-  - js es6+
+  - html 基础，包括语义化，表单和验证，可访问性等
+  - css 基础，包括定位，显示，盒模型，浮动，弹性布局，排版，视觉效果，响应式布局，自适应布局等
+  - js es5 和 es6+
 - 包管理器
-  - npm
-  - yarn
-  - pnpm
+  - [npm](https://docs.npmjs.com/)
+  - [yarn](https://classic.yarnpkg.com/)
+  - [pnpm](https://pnpm.js.org/)
 - css 处理器
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
@@ -144,65 +115,54 @@
 - vue 及相关生态，详细可参考[前端 -> 杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
 - react 及相关生态，详细可参考[前端 -> 杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
 - 编译打包工具，详细可参考[前端 -> 杂项 -> 构建](../misc/README.md#构建)
-- 服务器端开发，如 node.js，express，koa，egg，graphql 等，详细可参考[前端 -> 杂项 -> 服务器端](../misc/README.md#服务器端)
-- 静态网页生成，如 vuepress，dumi 等，详细可参考[前端 -> 杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
+- 服务器端开发，详细可参考[前端 -> 杂项 -> 服务器端](../misc/README.md#服务器端)
+- 静态网页生成，详细可参考[前端 -> 杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
 - 继续提高，学无止境
-  - [frontend checklist](https://frontendchecklist.io/)
-  - [前端进阶之道](https://yuchengkai.cn/home/)
-  - [木易杨前端进阶](https://muyiy.cn/)
-  - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
-  - [前端面试指南](https://lucifer.ren/fe-interview/)
-  - [面经总结](http://blog.poetries.top/FE-Interview-Questions/)
-  - [面试题整理](https://mp.weixin.qq.com/s/9XoKz2CeQXBgCobEwMuanQ)
-  - [前端面试题库](https://lgwebdream.github.io/FE-Interview/)
-  - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
-  - [前端每日面试题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
-  - [前端学习资料合集](https://github.com/fyuanfen/note)
-  - [前端技术干货系列](https://mp.weixin.qq.com/s/G8b2SRG0FqI5taGwjH35aw)
-  - [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
-  - [Web 全栈体系](https://hejialianghe.gitee.io/)
-  - [前端精读周刊](https://github.com/dt-fe/weekly)
-  - [一些文章的汇总](https://github.com/Michael-lzg/my--article#readme)
-  - [冴羽的博客](https://github.com/mqyqingfeng/Blog#readme)
-  - [Nealyang 的博客](https://github.com/Nealyang/PersonalBlog#readme)
-  - [css tricks](https://css-tricks.com/)
-  - [you need to know css](https://github.com/l-hammer/You-need-to-know-css)
-  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
-  - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
-  - [cute javascript](http://js.pingan8787.com/)
-  - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
-  - [javascript 语言精粹](https://book.douban.com/subject/3590768/)
-  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
-  - [javascript 设计模式](https://book.douban.com/subject/3329540/)
-  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
-  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
-  - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
-  - [you dont know js](https://github.com/getify/You-Dont-Know-JS)
-  - [译文：ES6 箭头函数中的 this？你可能想多了](https://www.cnblogs.com/vajoy/p/4902935.html)
-  - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
-  - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
-  - [vue 3 生态技术内幕](https://www.yuque.com/hugsun/vue3)
-  - [react 源码通关指南](https://zhuanlan.zhihu.com/p/266748892)
-  - [前端工程化](https://github.com/fouber/blog)
-  - [阿里巴巴DevOps实践手册](https://developer.aliyun.com/topic/download?id=205)
-  - [ledge](https://devops.phodal.com/)
-  - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
-  - [图标设计类型和风格总结](https://www.uisdc.com/icon-design-style)
-  - [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
-  - [前端数据治理之道](https://zhuanlan.zhihu.com/p/165213964)
-  - [Hacker Laws](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
   - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
   - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
   - [编程书籍](https://github.com/XiangLinPro/IT_book#readme)
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
+  - [Hacker Laws - 对开发人员有用的定律、理论、原则和模式](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
+  - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
+  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
+  - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
+  - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
+  - [JavaScript 语言精髓与编程实践](https://weread.qq.com/web/reader/bd73243071e43421bd7c139)
+  - [javascript 设计模式](https://weread.qq.com/web/reader/9cf32ff0811e1abd8g0134b2)
+  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
+  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+  - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
+  - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+  - [vue 3 生态技术内幕](https://www.yuque.com/hugsun/vue3)
+  - [react 源码通关指南](https://zhuanlan.zhihu.com/p/266748892)
+  - [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
+  - [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
+  - [前端面经总结](http://interview.poetries.top/)
+  - [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
+  - [前端每日一题](https://lgwebdream.github.io/FE-Interview/)
+  - [前端每日一题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
+  - [前端精读周刊](https://github.com/dt-fe/weekly)
+  - [冴羽的博客](https://github.com/mqyqingfeng/Blog#readme)
+  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
+  - [you-need-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/)
+  - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
+  - [css tricks](https://css-tricks.com/)
+  - [Web 全栈体系](https://hejialianghe.gitee.io/)
+  - [cute javascript](http://js.pingan8787.com/)
+  - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
+  - [前端进阶之道](https://yuchengkai.cn/home/)
+  - [木易杨前端进阶](https://muyiy.cn/)
+  - [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+  - [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+  - [前端数据治理之道](https://zhuanlan.zhihu.com/p/165213964)
+  - [前端工程化](https://github.com/fouber/blog)
+  - [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/download?id=205)
+  - [ledge](https://devops.phodal.com/)
+  - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
+  - [图标设计类型和风格总结](https://www.uisdc.com/icon-design-style)
   - ……
-
-## MDN
-
-- [英文版](https://developer.mozilla.org/en-US/docs/Web)
-- [简中版](https://developer.mozilla.org/zh-CN/docs/Web)
 
 ## roadmap.sh
 

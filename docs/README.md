@@ -29,7 +29,7 @@ features:
   link: /coding-basis/html/
 - title: css 基础（待完善）
   link: /coding-basis/css/
-- title: js 基础（未开始）
+- title: js 基础（待完善）
   link: /coding-basis/js/
 - title: 数据结构和算法基础（未开始）
   link: /coding-basis/data-structure-and-algorithm/

@@ -32,6 +32,8 @@ module.exports = config({
           { text: '学习路径', link: 'roadmap/' },
           { text: '环境配置', link: 'environment/' },
           { text: '杂项', link: 'misc/' },
+          { text: 'vue', link: 'vue/' },
+          { text: 'react', link: 'react/' },
           { text: '测试', link: 'test/' },
           { text: '持续集成 CI', link: 'ci/' },
           { text: 'webpack4', link: 'webpack4/' },
