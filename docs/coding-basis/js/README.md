@@ -293,7 +293,7 @@ var object1 = {
   object2: {
     name: 'object2',
     getName: function() {
-  　  console.log(this.name);
+      console.log(this.name);
       consoleFn();
       function consoleFn() {
         console.log(this === window);
