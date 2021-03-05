@@ -648,6 +648,7 @@ setTimeout(function() {
 - [sunshine小小倩 - this、apply、call、bind](https://juejin.cn/post/6844903496253177863)
 - [xuelanying - 事件循环](https://www.cnblogs.com/xuelanying/p/14406912.html)
 - [wanngxi01 - 一道题理解setTimeout,Promise,async/await以及宏任务与微任务](https://www.cnblogs.com/wangxi01/p/11190608.html)
+- [九旬 - 为什么要用 setTimeout 模拟 setInterval](https://segmentfault.com/a/1190000038829248)
 - [Matt Frisbie - JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
 - [周爱民 - JavaScript 语言精髓与编程实践](https://weread.qq.com/web/reader/bd73243071e43421bd7c139)
 - [这波能反杀 - 前端基础进阶（一）：内存空间详细图解](https://www.jianshu.com/p/996671d4dcc4)

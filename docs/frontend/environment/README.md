@@ -100,7 +100,7 @@
 - [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - Sketch - 设计稿查看
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
-- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持读写 NTFS
+- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持读写 NTFS，不支持 Big Sur 和 M1，建议考虑[赤友 NTFS 助手](https://www.ntfsformac.com/) 和 [Mounty](https://mounty.app/)
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
@@ -130,6 +130,7 @@
 ```shell
 brew install git
 git config --global core.autocrlf false
+git config --global init.defaultBranch main
 brew install git-flow
 brew install git-lfs
 git lfs install

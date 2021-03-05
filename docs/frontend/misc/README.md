@@ -645,21 +645,32 @@
 
 ## 服务器端
 
-- [json-rpc](https://www.jsonrpc.org/)
-- [restful api](https://restfulapi.net/)
-- [graphql](https://graphql.org/)
-- [nginx](https://www.nginx.com/)
+- 接口规范
+  - [json-rpc](https://www.jsonrpc.org/)
+  - [restful api](https://restfulapi.net/)
+  - [graphql](https://graphql.org/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [使用 Node.js 构建 JavaScript 应用程序](https://docs.microsoft.com/zh-cn/learn/paths/build-javascript-applications-nodejs/)
   - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap#readme)
+  - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
-  - [koa](https://koajs.com/) - node.js 框架，自由度高
-    - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
-    - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
-    - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
-  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
-  - [sails.js](https://sailsjs.com/) - node.js 的 MVC 框架
+  - [express.js](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
   - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
+  - [koa.js](https://koajs.com/) - node.js 框架，自由度高
+    - [egg.js](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
+    - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
+    - [daruk.js](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
+  - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
+  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
+- 增强
+  - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
+  - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
+  - [mysql](https://www.mysql.com/) - 关系型数据库
+  - [redis](https://redis.io/) - 非关系型数据库
+  - [mongodb](https://www.mongodb.com/) - 非关系型数据库
+  - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
+  - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
+  - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
 
 ## 开源
 
