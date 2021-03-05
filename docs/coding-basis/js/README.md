@@ -1,5 +1,7 @@
 # js 基础
 
+## 类型比较
+
 ## 作用域的简单理解
 
 作用域就是变量和函数生效的区域。
@@ -438,9 +440,9 @@ console.log(animal); // Animal {name: "Animal"}
 
 <img :src="$withBase('/images/js/prototype.svg')" width="512px" alt="原型链">
 
-几乎所有 JavaScript 的实例对象都基于 Object。
+`null` 之外的每一个 JavaScript 对象在创建时会关联另一个对象，这个对象就是原型，每一个对象都会从原型“继承”属性。
 
-而我们平时使用的数组、对象，默认就有很多方法给我们调用，这些方法都是定义在原型链上的，这就是基于原型链的继承。它使得实例对象能访问在原型链的任何位置上设置的属性。
+而我们平时使用的数组、对象，默认就有很多方法给我们调用，这些方法都是定义在原型链上的，这就是基于原型链的继承。
 
 ```javascript
 function Animal() {
@@ -453,9 +455,9 @@ var animal = new Animal();
 animal.eat(); // eat something
 ```
 
-除了基于原型链的继承，还有基于构造函数的继承，这都是相当复杂的，这里不再展开，而是推荐使用 ES6 引入的 `class`。
+继承意味着复制操作，但是 JavaScript 默认并不会复制对象的属性。JavaScript 只是在两个对象之间创建关联，一个对象就可以通过委托访问另一个对象的属性和函数了。与其叫继承，不如叫做委托更准确些。
 
-ES6 引入了 `class`，使用 `class` 和 `extends` 可以更好更优雅地实现我们的业务，只要记得转译就可以了。
+我更推荐使用 ES6 引入的 `class` 和 `extends`，它们可以更好更优雅地实现我们的业务，只要记得转译就可以了。
 
 ```javascript
 Object.prototype.eat = function() {
@@ -642,10 +644,17 @@ setTimeout(function() {
 - [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
 - [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
 - [前端面经总结](http://interview.poetries.top/)
+- [冴羽博客](https://github.com/mqyqingfeng/Blog)
+- [nicole_zhang18970 - 浅谈 instanceof 和 typeof 的实现原理](https://juejin.cn/post/6844903613584654344)
+- [blanu - [译] JavaScript：立即执行函数表达式（IIFE）](https://segmentfault.com/a/1190000007569312)
 - [王仕军 - 破解前端面试（80% 应聘者不及格系列）：从闭包说起](https://juejin.cn/post/6844903474212143117)
+- [王仕军 - 破解前端面试（80% 应聘者不及格系列）：从 DOM 说起](https://juejin.cn/post/6844903474547671047)
 - [Liril - Excuse me？这个前端面试在搞事！](https://zhuanlan.zhihu.com/p/25407758)
 - [vajoy - ES6 箭头函数中的 this？你可能想多了（翻译）](https://www.cnblogs.com/vajoy/p/4902935.html)
+- [micherwa - 细说 call、apply 以及 bind 的区别和用法](<https://segmentfault.com/a/1190000018017796>)
 - [sunshine小小倩 - this、apply、call、bind](https://juejin.cn/post/6844903496253177863)
+- [winty - 这一次彻底弄懂 Promise 原理](https://juejin.cn/post/6844904063570542599)
+- [暮雨清秋 - 详解JavaScript中的Event Loop（事件循环）机制](https://zhuanlan.zhihu.com/p/33058983)
 - [xuelanying - 事件循环](https://www.cnblogs.com/xuelanying/p/14406912.html)
 - [wanngxi01 - 一道题理解setTimeout,Promise,async/await以及宏任务与微任务](https://www.cnblogs.com/wangxi01/p/11190608.html)
 - [九旬 - 为什么要用 setTimeout 模拟 setInterval](https://segmentfault.com/a/1190000038829248)

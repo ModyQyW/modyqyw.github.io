@@ -90,13 +90,14 @@
 
 ## 静态网站生成
 
-- [vuepress](https://vuepress.vuejs.org/)
-- [dumi](https://d.umijs.org/)
 - [hexo](https://hexo.io/)
+- [vuepress](https://vuepress.vuejs.org/)
+- [nuxt](https://nuxtjs.org/)
+- [dumi](https://d.umijs.org/)
+- [docusaurus](https://v2.docusaurus.io/)
 - [gatsby](https://www.gatsbyjs.com/)
   - [docz](https://www.docz.site/)
 - [next](https://nextjs.org/)
-- [nuxt](https://nuxtjs.org/)
 - [pagic](https://pagic.cn/)
 
 ## 开发语言
@@ -379,6 +380,8 @@
 - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
 - [faker.js](https://github.com/Marak/faker.js#readme) - 生成随机数据
 - [math.js](https://mathjs.org/) - 数学库
+- [async-validator](https://github.com/yiminghe/async-validator#readme) - 异步校验
+- [lazyload](https://github.com/verlok/vanilla-lazyload#readme) - 懒加载
 - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
 - [chart.js](https://github.com/chartjs/Chart.js) - 图表库
 - [leaflet](https://leafletjs.com/) - 地图库
