@@ -44,8 +44,6 @@ features:
   link: /frontend/misc/
 - title: 前端测试（未开始）
   link: /frontend/test/
-- title: 前端持续集成（未开始）
-  link: /frontend/ci/
 - title: 前端 webpack4
   details: 尽可能覆盖一个前端项目的 webpack4 构建基础
   link: /frontend/webpack4/
