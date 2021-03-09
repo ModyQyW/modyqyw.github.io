@@ -28,66 +28,6 @@
 - [firefox](https://developer.mozilla.org/en-US/docs/Tools)
 - [edge(chromium)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
 
-## 界面和交互设计
-
-### 设计体系
-
-- [Fiori Design](https://experience.sap.com/fiori-design-web/)
-- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
-- [Lightning Design System](https://lightningdesignsystem.com/getting-started/)
-- [Material Design](https://material.io/)
-- [Atomic Design](https://atomicdesign.bradfrost.com/)
-  - [中文总结](https://www.uisdc.com/atomic-design-theory)
-- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn)
-- [Fluent Design](https://www.microsoft.com/design/fluent/)
-- [DevUI Design](https://devui.design/)
-- [Primer Design](https://primer.style/)
-- [Eva Design](https://eva.design/)
-- [Zan Design](https://design.youzan.com/)
-
-### 相关书籍
-
-- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
-- [Web 界面设计](https://book.douban.com/subject/3821157/)
-- [界面设计模式](https://book.douban.com/subject/25716088/)
-- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
-- [设计心理学](https://book.douban.com/subject/26742341/)
-- [Web 表单设计](https://book.douban.com/subject/4886100/)
-
-### 字体
-
-- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2021](https://www.websiteplanet.com/blog/best-free-fonts/)
-- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
-- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
-- [100font](https://www.100font.com)
-- [猫啃网](https://www.maoken.com)
-- [找字体](https://www.zfont.cn)
-- [字魂](https://izihun.com)
-- [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
-- [未来荧黑](https://github.com/welai/glow-sans/releases)
-- [更纱黑体](https://github.com/be5invis/Sarasa-Gothic/releases)
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
-- [Fira Code](https://github.com/tonsky/FiraCode/releases)
-
-### 图标
-
-- [icones](https://github.com/antfu/icones#readme)
-- [iconfont](https://www.iconfont.cn/)
-- [bootstrap-icons](https://icons.getbootstrap.com/)
-- [material-design-icons](https://materialdesignicons.com/)
-- [material-icons](https://google.github.io/material-design-icons/)
-- [remix-icons](https://remixicon.com/)
-- [ionicons](https://ionicons.com/)
-- [octicons](https://primer.style/octicons/)
-- [flaticon](https://www.flaticon.com/)
-- [fontawesome](https://fontawesome.com/)
-- [ant-design-icons](https://github.com/ant-design/ant-design-icons)
-- [coreui-icons](https://icons.coreui.io/icons/)
-- [tabler-icons](https://tablericons.com/)
-- [simple-icons](https://simpleicons.org/)
-- [icon-park](https://iconpark.bytedance.com/)
-
 ## 静态网站生成
 
 - [hexo](https://hexo.io/)
@@ -109,6 +49,14 @@
   - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
 - [elm](https://elm-lang.org/) - 观望
 - [rescript](https://rescript-lang.org/) - 观望
+
+## CDN
+
+- [cdnjs](https://cdnjs.com/)
+- [360 前端静态资源库](https://cdn.baomitu.com/)
+- [bootcdn](https://www.bootcdn.cn/)
+- [unpkg](https://unpkg.com/)
+- [jsdelivr](https://www.jsdelivr.com/)
 
 ## 项目基本选型
 
@@ -170,16 +118,78 @@
 
 ## 项目流程
 
-### 设计
+### 界面和交互设计
 
-- Axure RP
-- 墨刀
-- xiaopiu
+#### 体系
+
+- [Fiori Design](https://experience.sap.com/fiori-design-web/)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- [Lightning Design System](https://lightningdesignsystem.com/getting-started/)
+- [Material Design](https://material.io/)
+- [Atomic Design](https://atomicdesign.bradfrost.com/)
+  - [中文总结](https://www.uisdc.com/atomic-design-theory)
+- [Ant Design](https://ant-design.gitee.io/docs/spec/introduce-cn)
+- [Fluent Design](https://www.microsoft.com/design/fluent/)
+- [DevUI Design](https://devui.design/)
+- [Primer Design](https://primer.style/)
+- [Eva Design](https://eva.design/)
+- [Zan Design](https://design.youzan.com/)
+
+#### 相关书籍
+
+- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
+- [Web 界面设计](https://book.douban.com/subject/3821157/)
+- [界面设计模式](https://book.douban.com/subject/25716088/)
+- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
+- [设计心理学](https://book.douban.com/subject/26742341/)
+- [Web 表单设计](https://book.douban.com/subject/4886100/)
+
+#### 字体
+
+- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2021](https://www.websiteplanet.com/blog/best-free-fonts/)
+- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
+- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
+- [100font](https://www.100font.com)
+- [猫啃网](https://www.maoken.com)
+- [找字体](https://www.zfont.cn)
+- [字魂](https://izihun.com)
+- [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
+- [未来荧黑](https://github.com/welai/glow-sans/releases)
+- [更纱黑体](https://github.com/be5invis/Sarasa-Gothic/releases)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
+- [Fira Code](https://github.com/tonsky/FiraCode/releases)
+
+#### 图标
+
+- [icones](https://github.com/antfu/icones#readme)
+- [iconfont](https://www.iconfont.cn/)
+- [bootstrap-icons](https://icons.getbootstrap.com/)
+- [material-design-icons](https://materialdesignicons.com/)
+- [material-icons](https://google.github.io/material-design-icons/)
+- [remix-icons](https://remixicon.com/)
+- [ionicons](https://ionicons.com/)
+- [octicons](https://primer.style/octicons/)
+- [flaticon](https://www.flaticon.com/)
+- [fontawesome](https://fontawesome.com/)
+- [ant-design-icons](https://github.com/ant-design/ant-design-icons)
+- [coreui-icons](https://icons.coreui.io/icons/)
+- [tabler-icons](https://tablericons.com/)
+- [simple-icons](https://simpleicons.org/)
+- [icon-park](https://iconpark.bytedance.com/)
+
+#### 工具
+
+- [Axure RP](https://www.axure.com/) - 交互原型设计软件
+- [墨刀](https://modao.cc/) - 在线原型设计和远程协作平台
+- [xiaopiu](https://www.xiaopiu.com/) - 产品原型设计工具与团队实时协作平台
 - Sketch
 - Figma
+- 蓝湖
 - Draw.io - 思维导图，功能结构图等相关图例
 - MS Office - 产品需求文档等相关文档
 - WPS Office - 产品需求文档等相关文档
+- Storybook - 组织、构建 UI 组建
 
 ### 管理
 
@@ -192,7 +202,7 @@
 - [@antfu/ni](https://github.com/antfu/ni#readme) - 自动选择 npm/yarn/pnpm
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo
 - [nx](https://nx.dev/) - monorepo
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 可以结合`yarn upgrade-interactive`使用
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 可以结合 `yarn upgrade-interactive` 使用
 - [yeoman](https://yeoman.io/) - 构建脚手架
 - [oclif](https://oclif.io/) - 构建脚手架
 
@@ -210,22 +220,7 @@
 - [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
 - [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme) - 通用配置指引
 
-### 调试
-
-- [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
-- [jest](https://jestjs.io/) - 单元测试
-- [mocha](https://mochajs.org/) - 单元测试
-- [testing-library](https://testing-library.com/) - 组件测试
-- [cypress](https://docs.cypress.io/) - 端对端测试
-- [nightwatch](https://nightwatchjs.org/) - 端对端测试
-- [test-cafe](https://devexpress.github.io/testcafe/) - 端对端测试
-- [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
-- [v-console](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
-- [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
-- [light-proxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
-- [chii](https://github.com/liriliri/chii/blob/master/docs/README_CN.md#readme) - 远程调试工具
-- [spy-debugger](https://github.com/wuchangming/spy-debugger#readme) - 一站式页面调试、抓包工具
-- [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
+### 选型
 
 ### 构建
 
@@ -297,7 +292,25 @@
   - [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack#readme)
 - [vite](https://github.com/vitejs/vite#readme)
   - [awesome-vite](https://github.com/vitejs/awesome-vite#readme)
-- [wmr](https://github.com/preactjs/wmr#readme)
+
+当然，更多时候我更推荐使用 CLI 初始化然后开始开发。做一个属于自己的模板也很不错，但要记得持续维护它。
+
+### 调试
+
+- [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
+- [jest](https://jestjs.io/) - 单元测试
+- [mocha](https://mochajs.org/) - 单元测试
+- [testing-library](https://testing-library.com/) - 组件测试
+- [cypress](https://docs.cypress.io/) - 端对端测试
+- [nightwatch](https://nightwatchjs.org/) - 端对端测试
+- [test-cafe](https://devexpress.github.io/testcafe/) - 端对端测试
+- [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
+- [v-console](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
+- [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
+- [light-proxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
+- [chii](https://github.com/liriliri/chii/blob/master/docs/README_CN.md#readme) - 远程调试工具
+- [spy-debugger](https://github.com/wuchangming/spy-debugger#readme) - 一站式页面调试、抓包工具
+- [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
 
 ### 持续集成
 

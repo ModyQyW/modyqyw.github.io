@@ -270,7 +270,7 @@ getName(); // window
 
 `getName` 运行在全局环境中，所以此时 `this` 指向 `window`。
 
-如果一个函数嵌套在多层对象内，`this` 指向链式调用最后的对象。
+多层对象内的函数的 `this` 指向链式调用最后的对象。
 
 ```javascript
 var name = 'window';
@@ -286,7 +286,7 @@ var object1 = {
 object1.object2.getName(); // object2
 ```
 
-而因为嵌套函数不会继承 `this`，所以嵌套函数里面的 `this` 在非严格模式下指向全局对象，严格模式下指向 `undefined`。
+多层对象里的嵌套函数不会继承 `this`，所以嵌套函数里面的 `this` 在非严格模式下指向全局对象，严格模式下指向 `undefined`。
 
 ```javascript
 var name = 'window';
