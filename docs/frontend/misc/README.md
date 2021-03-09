@@ -403,6 +403,7 @@
 - [dplayer](https://dplayer.js.org/) - 视频播放器
 - [video.js](https://videojs.com/) - 播放器
 - [reveal.js](https://revealjs.com/) - 演讲
+- [dexie.js](https://dexie.org/) - IndexedDB
 - [screenfull](https://github.com/sindresorhus/screenfull.js/#readme) - 全屏
 - [file-saver](https://github.com/eligrey/FileSaver.js#readme) - 文件保存
   - [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
