@@ -303,6 +303,7 @@
 - [edge devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
 - [jest](https://jestjs.io/) - 单元测试，备选 [mocha](https://mochajs.org/) + [chai](https://www.chaijs.com/)
+  - [ts-jest](https://kulshekhar.github.io/ts-jest/)
 - [testing-library](https://testing-library.com/) - 组件测试
 - [cypress](https://docs.cypress.io/) - 端对端测试，备选 [nightwatch](https://nightwatchjs.org/) 和 [testcafe](https://devexpress.github.io/testcafe/)
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板

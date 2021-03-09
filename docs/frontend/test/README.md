@@ -31,6 +31,10 @@ TODO
 
 TODO
 
+## 参考
+
+- [谭光志 - 带你入门前端工程](https://woai3c.gitee.io/introduction-to-front-end-engineering/)
+
 待补充，催稿可以
 
 （1）邮件催稿
