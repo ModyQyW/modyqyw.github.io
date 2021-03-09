@@ -8,11 +8,12 @@
 
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 
-## 基本文档
+## 基本知识查阅
 
 - [w3c](https://www.w3.org/)
 - [mdn](https://developer.mozilla.org/)
 - [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
+- [css-tricks](https://css-tricks.com/)
 
 ## 编程用字体
 
@@ -21,27 +22,31 @@
 - [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
-
-## 浏览器开发者工具
-
-- [chrome](https://developers.google.cn/web/tools/chrome-devtools)
-- [firefox](https://developer.mozilla.org/en-US/docs/Tools)
-- [edge(chromium)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
+- [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
 
 ## 静态网站生成
 
 - [hexo](https://hexo.io/)
 - [vuepress](https://vuepress.vuejs.org/)
+  - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
+  - [vuepress-next](https://vuepress.github.io/)
 - [nuxt](https://nuxtjs.org/)
+- [vitepress](https://vitepress.vuejs.org/)
+  - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
 - [dumi](https://d.umijs.org/)
 - [docusaurus](https://v2.docusaurus.io/)
 - [gatsby](https://www.gatsbyjs.com/)
   - [docz](https://www.docz.site/)
 - [next](https://nextjs.org/)
 - [pagic](https://pagic.cn/)
+- [hugo](https://gohugo.io/)
+- [jekyll](https://jekyllrb.com/)
 
 ## 开发语言
 
+- javascript
+  - [现代 JavaScript 教程](https://zh.javascript.info)
+  - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
 - [typescript](https://www.typescriptlang.org/)
   - [入门教程](https://ts.xcatliu.com/basics)
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
@@ -50,77 +55,18 @@
 - [elm](https://elm-lang.org/) - 观望
 - [rescript](https://rescript-lang.org/) - 观望
 
-## CDN
+## 界面和交互设计
 
-- [cdnjs](https://cdnjs.com/)
-- [360 前端静态资源库](https://cdn.baomitu.com/)
-- [bootcdn](https://www.bootcdn.cn/)
-- [unpkg](https://unpkg.com/)
-- [jsdelivr](https://www.jsdelivr.com/)
+### 书籍
 
-## 项目基本选型
+- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
+- [Web 界面设计](https://book.douban.com/subject/3821157/)
+- [界面设计模式](https://book.douban.com/subject/25716088/)
+- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
+- [设计心理学](https://book.douban.com/subject/26742341/)
+- [Web 表单设计](https://book.douban.com/subject/4886100/)
 
-### 原生
-
-- 桌面端网页，移动端网页
-  - ie8 - jquery 1 + bootstrap 3 + bootstrap-table
-  - ie11+ - jquery 3 + bootstrap 4 + bootstrap-table
-- 移动端应用
-  - flutter
-  - ionic
-  - cordova
-  - native-script
-- 小程序
-  - 各家小程序原生
-- 桌面端应用
-  - jquery 3 + bootstrap 4 + bootstrap-table + electron
-
-### Vue 系
-
-- 桌面端网页，移动端网页
-  - (vue + vue-router + vuex) / nuxt
-  - vuetify / element / element-plus
-- 移动端网页
-  - (vue + vue-router + vuex) / nuxt
-  - vuetify / nut-ui / zarm-vue / vant
-- 移动端应用，小程序
-  - uni-app + vuex
-  - uni-ui + uview-ui + @modyqyw/mp-scss
-- 桌面端应用
-  - (vue + vue-router + vuex) / nuxt
-  - vuetify / element / element-plus
-  - electron
-
-### React 系
-
-- 桌面端网页
-  - (react + react-router) / umi / next
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - zent / blueprint / material-ui
-- 移动端网页
-  - (react + react-router) / umi / next
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - yep-react / zarm
-- 移动端应用
-  - expo / alita
-  - react-router / react-navigation
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - react-native-elements / react-native-ui-kitten
-- 小程序
-  - taro / remax
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - @modyqyw/mp-scss
-- 桌面端应用
-  - (react + react-router) / umi / next
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - zent / blueprint / material-ui
-  - electron
-
-## 项目流程
-
-### 界面和交互设计
-
-#### 体系
+### 体系
 
 - [Fiori Design](https://experience.sap.com/fiori-design-web/)
 - [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
@@ -135,16 +81,7 @@
 - [Eva Design](https://eva.design/)
 - [Zan Design](https://design.youzan.com/)
 
-#### 相关书籍
-
-- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
-- [Web 界面设计](https://book.douban.com/subject/3821157/)
-- [界面设计模式](https://book.douban.com/subject/25716088/)
-- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
-- [设计心理学](https://book.douban.com/subject/26742341/)
-- [Web 表单设计](https://book.douban.com/subject/4886100/)
-
-#### 字体
+### 字体
 
 - [70+ Best Free Fonts for Designers – Free for Commercial Use in 2021](https://www.websiteplanet.com/blog/best-free-fonts/)
 - [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
@@ -155,12 +92,8 @@
 - [字魂](https://izihun.com)
 - [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 - [未来荧黑](https://github.com/welai/glow-sans/releases)
-- [更纱黑体](https://github.com/be5invis/Sarasa-Gothic/releases)
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
-- [Fira Code](https://github.com/tonsky/FiraCode/releases)
 
-#### 图标
+### 图标
 
 - [icones](https://github.com/antfu/icones#readme)
 - [iconfont](https://www.iconfont.cn/)
@@ -178,35 +111,95 @@
 - [simple-icons](https://simpleicons.org/)
 - [icon-park](https://iconpark.bytedance.com/)
 
-#### 工具
+### 工具
 
 - [Axure RP](https://www.axure.com/) - 交互原型设计软件
 - [墨刀](https://modao.cc/) - 在线原型设计和远程协作平台
 - [xiaopiu](https://www.xiaopiu.com/) - 产品原型设计工具与团队实时协作平台
-- Sketch
-- Figma
-- 蓝湖
-- Draw.io - 思维导图，功能结构图等相关图例
+- [Sketch](https://www.sketch.com/) - 矢量设计工具
+- [Figma](https://www.figma.com/) - 协同界面设计工具
+- [蓝湖](https://lanhuapp.com/) - 产品设计协作平台
+- [Draw.io](https://app.diagrams.net/) - 思维导图，功能结构图等相关图例
 - MS Office - 产品需求文档等相关文档
 - WPS Office - 产品需求文档等相关文档
-- Storybook - 组织、构建 UI 组建
+- [Storybook](https://storybook.js.org/) - 组织、构建 UI 组建
 
-### 管理
+## 代码管理
 
 - git
   - [pro git](https://git-scm.com/book/en/v2)
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版本 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
 - [npm](https://github.com/npm/cli#readme)
-- [yarn](https://classic.yarnpkg.com/zh-Hans)
-- [pnpm](https://pnpm.js.org/)
-- [@antfu/ni](https://github.com/antfu/ni#readme) - 自动选择 npm/yarn/pnpm
+  - [yarn](https://classic.yarnpkg.com/zh-Hans)
+  - [pnpm](https://pnpm.js.org/)
+  - [@antfu/ni](https://github.com/antfu/ni#readme) - 自动选择 npm/yarn/pnpm
 - [lerna](https://github.com/lerna/lerna#readme) - monorepo
 - [nx](https://nx.dev/) - monorepo
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme) - 可以结合 `yarn upgrade-interactive` 使用
-- [yeoman](https://yeoman.io/) - 构建脚手架
-- [oclif](https://oclif.io/) - 构建脚手架
 
-### 规范校验和格式化
+## 选型
+
+### 原生
+
+- 桌面端网页，移动端网页
+  - ie8 - [jquery](https://github.com/jquery/jquery#readme) 1 + [bootstrap](https://github.com/twbs/bootstrap#readme) 3 + [bootstrap-table](https://github.com/wenzhixin/bootstrap-table#readme)
+  - ie11+ - jquery 3 + bootstrap 4 + bootstrap-table
+- 移动端应用
+  - [flutter](https://flutter.cn/)
+  - [ionic](https://ionicframework.com/)
+  - [cordova](https://cordova.apache.org/)
+  - [native-script](https://nativescript.org/)
+  - [capacitor](https://capacitorjs.com/)
+  - [framework7](https://framework7.io/)
+- 小程序
+  - 各家小程序原生
+- 桌面端应用
+  - jquery 3 + bootstrap 4 + bootstrap-table + [electron](https://www.electronjs.org/)
+
+### Vue 系
+
+- 桌面端网页，移动端网页
+  - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [nuxt](https://nuxtjs.org/)
+  - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
+- 移动端网页
+  - (vue + vue-router + vuex) / nuxt
+  - vuetify / [nut-ui](https://nutui.jd.com/) / [zarm-vue](https://vue.zarm.design/) / [vant](https://vant-contrib.gitee.io/vant/)
+- 移动端应用，小程序
+  - [uni-app](https://uniapp.dcloud.io/) + vuex
+  - [uni-ui](https://github.com/dcloudio/uni-ui#readme) + [uview-ui](https://uviewui.com/) + [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
+- 桌面端应用
+  - (vue + vue-router + vuex) / nuxt
+  - vuetify / element / element-plus / ant-design-vue-next
+  - electron
+
+[vue-next](https://v3.cn.vuejs.org/) [vue-router](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/)
+
+### React 系
+
+- 桌面端网页
+  - ([react](https://zh-hans.reactjs.org/) + [react-router](https://reacttraining.com/react-router/)) / [umi](https://umijs.org/zh-CN) / [next](https://nextjs.org/)
+  - [constate](https://github.com/diegohaz/constate#readme) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md#readme) / [mobx](https://mobx.js.org/README.html)
+  - [zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/))
+- 移动端网页
+  - (react + react-router) / umi / next
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/)
+- 移动端应用
+  - [expo](https://expo.io/) / [alita](https://alitajs.com/)
+  - react-router / [react-navigation](https://reactnavigation.org/)
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - [react-native-elements](https://reactnativeelements.com/) / [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
+- 小程序
+  - [taro](https://taro.zone/) / [remax](https://remaxjs.org/) / [rax](https://rax.js.org/)
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - @modyqyw/mp-scss
+- 桌面端应用
+  - (react + react-router) / umi / next
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next
+  - zent / blueprint / material-ui / (antd + antd-pro-components)
+  - electron
+
+## 代码规范
 
 - [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
 - [ls-lint](https://ls-lint.org/) - 目录校验
@@ -220,9 +213,19 @@
 - [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
 - [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme) - 通用配置指引
 
-### 选型
+## CDN
 
-### 构建
+- [cdnjs](https://cdnjs.com/)
+- [360 前端静态资源库](https://cdn.baomitu.com/)
+- [bootcdn](https://www.bootcdn.cn/)
+- [unpkg](https://unpkg.com/)
+- [jsdelivr](https://www.jsdelivr.com/)
+
+## 构建
+
+这一部分主要想要展示 CLI 主要工作的依赖，你也可以在这部分了解 CLI 所做的一些工作。
+
+实际开发时，非常建议使用 CLI 初始化然后开发。当然，做一个自己的模板，又或者用 [yeoman](https://yeoman.io/) 或者 [oclif](https://oclif.io/) 做一个自己的脚手架，都是不错的选择，但要记得持续维护。
 
 - [cross-env](https://github.com/kentcdodds/cross-env#readme) - 设置跨平台环境变量
 - [rimraf](https://github.com/isaacs/rimraf#readme) - 跨平台删除文件
@@ -246,12 +249,10 @@
 - [webpack](https://webpack.js.org/)
   - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack#readme)
   - [webpack 教程](https://www.jiangruitao.com/webpack/)
-  - [前端 - webpack4](../webpack4/README.md)
   - [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin#readme)
-    - [webpack-bar](https://github.com/nuxt/webpackbar#readme)
     - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer#readme)
     - [speed-measure-webpack-plugin](https://github.com/stephencookdev/speed-measure-webpack-plugin#readme)
     - [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin/#readme) - 代替 uglify-webpack-plugin
@@ -261,11 +262,10 @@
     - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#readme)
     - [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin#readme)
     - [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin#readme)
-    - [prerender-webpack-plugin](https://github.com/chrisvfritz/prerender-spa-plugin#readme)
+    - [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin#readme)
     - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin#readme)
-    - [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin#readme)
-    - [css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin#readme)
-    - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme)
+    - [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin#readme) - webpack 5 使用 [css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin#readme)
+    - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme) - 代替 eslint-loader
     - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin#readme)
     - [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#readme)
   - loaders
@@ -282,37 +282,38 @@
     - [less-loader](https://github.com/webpack-contrib/less-loader#readme)
     - [stylus-loader](https://github.com/webpack-contrib/stylus-loader#readme)
     - [postcss-loader](https://github.com/webpack-contrib/less-loader#readme)
-  - [poi](https://poi.js.org/)
-  - [modyqyw/webpack-demos](https://github.com/modyqyw/webpack-demos) - webpack 示例项目
+  - [modyqyw/webpack-demos](https://github.com/modyqyw/webpack-demos) - webpack 入门示例
 - [rollup](https://rollupjs.org/guide/zh/)
   - [awesome-rollup](https://github.com/rollup/awesome#readme)
-- [parcel](https://v2.parceljs.org/)
+  - [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve#readme)
+  - [rollup-plugin-typescript2](https://github.com/ezolenko/rollup-plugin-typescript2#readme)
+  - [rollup-plugin-terser](https://github.com/TrySound/rollup-plugin-terser#readme)
+  - [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts#readme)
+- [parcel-next](https://v2.parceljs.org/)
   - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel#readme)
 - [snowpack](https://www.snowpack.dev/)
   - [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack#readme)
 - [vite](https://github.com/vitejs/vite#readme)
   - [awesome-vite](https://github.com/vitejs/awesome-vite#readme)
 
-当然，更多时候我更推荐使用 CLI 初始化然后开始开发。做一个属于自己的模板也很不错，但要记得持续维护它。
+## 调试
 
-### 调试
-
+- [chrome devtools](https://developers.google.cn/web/tools/chrome-devtools)
+- [firefox devtools](https://developer.mozilla.org/en-US/docs/Tools)
+- [edge devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
-- [jest](https://jestjs.io/) - 单元测试
-- [mocha](https://mochajs.org/) - 单元测试
+- [jest](https://jestjs.io/) - 单元测试，备选 [mocha](https://mochajs.org/) + [chai](https://www.chaijs.com/)
 - [testing-library](https://testing-library.com/) - 组件测试
-- [cypress](https://docs.cypress.io/) - 端对端测试
-- [nightwatch](https://nightwatchjs.org/) - 端对端测试
-- [test-cafe](https://devexpress.github.io/testcafe/) - 端对端测试
+- [cypress](https://docs.cypress.io/) - 端对端测试，备选 [nightwatch](https://nightwatchjs.org/) 和 [testcafe](https://devexpress.github.io/testcafe/)
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
 - [v-console](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
 - [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
-- [light-proxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
+  - [light-proxy](https://lightproxy.org/zh-CN) - 跨平台代理调试工具
 - [chii](https://github.com/liriliri/chii/blob/master/docs/README_CN.md#readme) - 远程调试工具
 - [spy-debugger](https://github.com/wuchangming/spy-debugger#readme) - 一站式页面调试、抓包工具
 - [serve](https://github.com/vercel/serve#readme) - 本地测试静态目录
 
-### 持续集成
+## 持续集成
 
 - [flow-ci](https://flow.ci/)
 - [travis-ci](https://travis-ci.org/)
@@ -320,20 +321,22 @@
 - [jenkins](https://www.jenkins.io/zh/)
 - [github-ci](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration)
 
-### 发布
+## 发布
 
 - [np](https://github.com/sindresorhus/np#readme)
 
-### 部署
+## 部署
 
 - [vercel](https://vercel.com/)
 - [netlify](https://www.netlify.com/)
+- [Github Pages](https://pages.github.com/)
+- [Gitee Pages](https://gitee.com/help/articles/4136)
 
-### 监控
+## 监控
 
 - [sentry](https://sentry.io/)
 
-### 任务管理和 DevOps
+## 任务管理和 DevOps
 
 - [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 - [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
@@ -343,27 +346,12 @@
 - [Ledge](https://devops.phodal.com/)
 - [阿里云 DevOps](https://develop.aliyun.com/devops)
 
-### 微服务
+## 微服务
 
 - [single-spa](https://single-spa.js.org/)
   - [qiankun](https://qiankun.umijs.org/zh)
 - [berial](https://github.com/berialjs/berial#readme)
-- [emp](https://github.com/efoxTeam/emp#readme)
-
-## 工具集
-
-- [lodash](https://lodash.com/)
-- [xe-utils](https://x-extends.gitee.io/xe-utils/)
-- [futil-js](https://github.com/smartprocure/futil-js#readme)
-- [moment](https://momentjs.com/)
-- [dayjs](https://dayjs.gitee.io/zh-CN/)
-- [date-fns](https://date-fns.org/)
-- [js-joda](https://js-joda.github.io/js-joda/)
-- [luxon](https://moment.github.io/luxon/)
-- [history](https://github.com/ReactTraining/history)
-- [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
-- [qs](https://www.npmjs.com/package/qs)
-- [query-string](https://www.npmjs.com/package/query-string)
+- [emp](https://github.com/efoxTeam/emp/blob/main/README-zh_CN.md#readme)
 
 ## 原生及相关生态
 
@@ -373,40 +361,53 @@
 - [css modules](https://github.com/css-modules/css-modules#readme)
 - [oocss](http://oocss.org/)
 - [smacss](http://smacss.com/)
-- [bootstrap](https://getbootstrap.com/) - ui 库，要适配 ie8 需要使用 v3
-  - [bootstrap-table](https://bootstrap-table.com/) - 搭配 bootstrap 使用的表格组件，要搭配 bootstrap v3 要使用旧版
-  - [mdbootstrap](https://mdbootstrap.com/) - material design + bootstrap
+- [bootstrap](https://getbootstrap.com/)
+- [bootstrap-table](https://bootstrap-table.com/)
 - [ui-kit](https://getuikit.com/)
 - [tailwindcss](https://tailwindcss.com/)
+  - [windicss](https://windicss.netlify.app/)
   - [bulma](https://bulma.io/documentation/)
   - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
-- [umi.css](https://www.hua-mi.cn/umi-css/)
+  - [umi.css](https://www.hua-mi.cn/umi-css/)
+- [lodash](https://lodash.com/)
+  - [xe-utils](https://x-extends.gitee.io/xe-utils/)
+  - [futil-js](https://github.com/smartprocure/futil-js#readme)
+- [moment](https://momentjs.com/)
+  - [dayjs](https://dayjs.gitee.io/zh-CN/)
+  - [luxon](https://moment.github.io/luxon/)
+  - [date-fns](https://date-fns.org/)
+  - [js-joda](https://js-joda.github.io/js-joda/)
+- [history](https://github.com/ReactTraining/history)
+- [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
+- [qs](https://www.npmjs.com/package/qs)
+- [query-string](https://www.npmjs.com/package/query-string)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
-  - [zepto](https://zeptojs.com/) - 类 jquery api，针对现代浏览器
 - [page.js](http://visionmedia.github.io/page.js/) - 路由
 - [format.js](https://formatjs.io/) - 国际化
 - [i18next](https://www.i18next.com/) - 国际化
 - [axios](https://github.com/axios/axios#readme) - 请求库，用到了 promise
-  - [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter#readme)
-- [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
-- [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
-- [faker.js](https://github.com/Marak/faker.js#readme) - 生成随机数据
+  - [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter#readme) - 拦截请求
+  - [superagent](https://github.com/visionmedia/superagent#readme) - 请求库
+  - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
+  - [faker.js](https://github.com/Marak/faker.js#readme) - 生成随机数据
+  - [mirage.js](https://miragejs.com/)
 - [math.js](https://mathjs.org/) - 数学库
 - [async-validator](https://github.com/yiminghe/async-validator#readme) - 异步校验
 - [lazyload](https://github.com/verlok/vanilla-lazyload#readme) - 懒加载
 - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
-- [chart.js](https://github.com/chartjs/Chart.js) - 图表库
+  - [chart.js](https://github.com/chartjs/Chart.js) - 图表库
 - [leaflet](https://leafletjs.com/) - 地图库
 - [howler.js](https://howlerjs.com/) - audio 支持
 - [aplayer](https://aplayer.js.org/) - 音频播放器
 - [dplayer](https://dplayer.js.org/) - 视频播放器
 - [video.js](https://videojs.com/) - 播放器
+- [reveal.js](https://revealjs.com/) - 演讲
 - [screenfull](https://github.com/sindresorhus/screenfull.js/#readme) - 全屏
 - [file-saver](https://github.com/eligrey/FileSaver.js#readme) - 文件保存
-- [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
-- [simple-crop](https://github.com/newbieYoung/Simple-Crop#readme) - 图片裁剪
+  - [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
 - [cropper.js](https://github.com/fengyuanchen/cropperjs#readme) - 图片裁剪
+  - [simple-crop](https://github.com/newbieYoung/Simple-Crop#readme) - 图片裁剪
 - [recordrtc](https://github.com/muaz-khan/RecordRTC) - webrtc 库
 - [popper.js](https://popper.js.org/) - 文字提示和弹出式菜单
 - [luckysheet](https://github.com/mengshukeji/Luckysheet#readme) - 在线表格
@@ -435,15 +436,15 @@
   - [element](https://element.eleme.cn/)
     - [element-plus](https://element-plus.org/)
     - [element3](https://element3-ui.com/)
-  - [antd-vue](https://www.antdv.com/)
-  - [vant](https://youzan.github.io/vant/)
+  - [antd-vue-next](https://2x.antdv.com/)
   - [nut-ui](http://nutui.jd.com/)
+  - [vant](https://youzan.github.io/vant/)
   - [zarm-vue](https://vue.zarm.design/)
   - [更多](https://github.com/topics/vue)
 - cli
+  - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
   - [nuxt](https://zh.nuxtjs.org/)
   - [quasar](https://quasar.dev/)
-  - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
   - [ream (WIP)](https://ream.dev/)
 - app / 小程序
   - uni-app
@@ -460,7 +461,7 @@
       - [uni-ajax](https://uniajax.ponjs.com/)
       - [luch-request](https://www.quanzhan.co/luch-request/)
     - 进阶
-      - [uni-app 多端构建原理浅析](https://f-loat.github.io/posts/2019/08/03/uni-app-%E5%A4%9A%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.html)
+      - [uni-app 多端构建原理浅析（较旧）](https://f-loat.github.io/posts/2019/08/03/uni-app-%E5%A4%9A%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.html)
   - chameleon
     - [中文文档](https://cml.js.org/)
     - 路由
@@ -478,17 +479,17 @@
   - [swrv](https://github.com/Kong/swrv#readme) - 用于数据获取
   - [vue-dollar](https://github.com/antfu/v-dollar#readme) - 简化 vue3 的 api
   - [vue-demi](https://github.com/antfu/vue-demi#readme) - 创建跨版本的库
-  - [vue-use](https://vueuse.js.org/) - hooks 包
+  - [vue-use](https://vueuse.js.org/) - 官方 hooks 包
   - [vue-composable](https://pikax.me/vue-composable/) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
   - [@ant-design-vue/use](https://github.com/vueComponent/use) - hooks 包
-  - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
+  - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antd-vue 和 view-ui
   - [vue-good-table](https://xaksis.github.io/vue-good-table/) - 表格解决方案
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案
-  - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板
+  - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板，vue 3 不再需要
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin#readme) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin#readme) - 后台管理系统
-  - [vue-ven-admin](https://github.com/anncwb/vue-vben-admin#readme) - 后台管理系统
+  - [vue-vben-admin](https://github.com/anncwb/vue-vben-admin#readme) - 后台管理系统
   - [vue-antd-admin](https://github.com/iczer/vue-antd-admin#readme) - 后台管理系统
   - [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro) - 后台管理系统
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard#readme) - 后台管理系统
@@ -518,22 +519,18 @@
   - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
     - [constate](https://github.com/diegohaz/constate#readme)
     - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
-    - [rematch](https://rematch.netlify.app/)
-  - [mobx](https://mobx.js.org/) + mobx-react
-    - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
-  - [recoil](https://recoiljs.org/)
+  - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
+  - [mobx](https://mobx.js.org/)
 - ui
   - [material-ui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
-  - [react-md](https://react-md.dev/)
   - [antd](https://ant.design/)
   - [react-suite](https://rsuitejs.com/)
   - [shineout](https://shine.wiki/)
   - [yep-react](https://yep-react.jd.com/)
   - [zarm](https://zarm.design/)
-  - [antd-mobile](https://mobile.ant.design/)
+  - [antd-mobile-next](https://next.mobile.ant.design/)
   - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
@@ -553,11 +550,8 @@
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate#readme)
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
-        - [rematch](https://rematch.netlify.app/)
-      - [mobx](https://mobx.js.org/) + mobx-react
-        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
-      - [recoil](https://recoiljs.org/)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
+      - [mobx](https://mobx.js.org/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -582,11 +576,8 @@
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate#readme)
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
-        - [rematch](https://rematch.netlify.app/)
-      - [mobx](https://mobx.js.org/) + mobx-react
-        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
-      - [recoil](https://recoiljs.org/)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
+      - [mobx](https://mobx.js.org/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
@@ -599,11 +590,8 @@
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate#readme)
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
-      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/) + [redux-saga](https://redux-saga.js.org/)
-        - [rematch](https://rematch.netlify.app/)
-      - [mobx](https://mobx.js.org/) + mobx-react
-        - [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy)
-      - [recoil](https://recoiljs.org/)
+      - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
+      - [mobx](https://mobx.js.org/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
@@ -695,6 +683,7 @@
 ## 参考
 
 - [sorrycc/awesome-f2e-libs](https://github.com/sorrycc/awesome-f2e-libs)
+- [15+人团队的前端体系架构应该如何管理？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247507147&idx=2&sn=bf3f9939b7b3bb9fcaab22ea838d5556&chksm=f9526988ce25e09e80fa4a401cf1346b55be6f59f9a7f5cde17a336c3ce481ada4f7b08a8eaa&scene=27#wechat_redirect)
 
 ## 致谢
 
