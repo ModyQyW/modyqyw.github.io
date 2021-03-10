@@ -199,8 +199,10 @@
   - zent / blueprint / material-ui / (antd + antd-pro-components)
   - electron
 
-## 代码规范
+## 规范
 
+- [中文技术文档写作规范](document-style-guide)
+- [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
 - [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
 - [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
@@ -336,6 +338,9 @@
 ## 监控
 
 - [sentry](https://sentry.io/)
+  - [谭光志 - 带你入门前端工程 - 前端监控](https://woai3c.gitee.io/introduction-to-front-end-engineering/07.html)
+  - [如何进行 web 性能监控](http://www.alloyteam.com/2020/01/14184/)
+  - [顶级开源项目 Sentry 20.x JS-SDK 设计艺术（理念与设计原则篇）](https://juejin.cn/post/6937664300630671390)
 
 ## 任务管理和 DevOps
 

@@ -50,8 +50,6 @@ features:
 - title: 前端安全
   details: 了解常见的前端安全问题和解决方案
   link: /frontend/safety/
-- title: 前端监控（未开始）
-  link: /frontend/monitor/
 - title: 前端优化（待完善）
   details: 了解前端优化手段，提高项目的运行效率
   link: /frontend/optimization/
