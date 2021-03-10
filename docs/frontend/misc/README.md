@@ -166,7 +166,7 @@
   - vuetify / [nut-ui](https://nutui.jd.com/) / [zarm-vue](https://vue.zarm.design/) / [vant](https://vant-contrib.gitee.io/vant/)
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
-  - [uni-ui](https://github.com/dcloudio/uni-ui#readme) + [uview-ui](https://uviewui.com/) + [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
+  - [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui#readme) + [uview-ui](https://uviewui.com/) + [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
 - 桌面端应用
   - (vue + vue-router + vuex) / nuxt
   - vuetify / element / element-plus / ant-design-vue-next
@@ -461,6 +461,7 @@
     - 状态管理
       - [vuex](https://vuex.vuejs.org/)
     - ui
+      - [thor-ui](https://www.thorui.cn/doc/)
       - [uview-ui](https://uviewui.com/)
       - [uni-ui](https://github.com/dcloudio/uni-ui#readme)
       - [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss)
