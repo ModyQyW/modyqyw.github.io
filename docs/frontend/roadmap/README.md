@@ -26,22 +26,24 @@
 - 离散数学
   - 集合论
   - 图论
-- [计算机组成原理](https://time.geekbang.org/column/intro/100026001)
+- 计算机组成原理
+  - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
   - 浮点数
   - 原码，补码
   - 缓存
   - 时序控制
   - 流水线
 - 操作系统原理
+  - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
   - 进程和线程
   - 信号量
   - 调度策略
   - 锁
   - 页表
 - 计算机网络原理和安全
-  - [图解网络硬件](https://book.douban.com/subject/25919428/)
+  - [图解网络硬件](https://weread.qq.com/web/reader/92e326e0718ff67892eea53)
   - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
-  - [图解 HTTP](https://book.douban.com/subject/25863515/)
+  - [图解 HTTP](https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca)
   - [图解密码技术](https://book.douban.com/subject/26265544/)
   - 网络基本组成
   - 五层模型
@@ -59,7 +61,7 @@
   - owasp 安全风险
   - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 - 多媒体技术基础
-  - 图像，如 bmp，jpg，jpeg，png，gif，svg，webp，avif
+  - 图像，如 bmp，jpg，jpeg，png，apng，gif，svg，webp，avif
   - 图像压缩算法
   - 音频，如 wav，wma，mp3
   - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
@@ -88,6 +90,7 @@
   - [前端小课](https://lefex.github.io/fe-mini-course/)
   - [前端九部](https://www.yuque.com/fe9/basic)
   - [学习 css 布局](http://zh.learnlayout.com/)
+  - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
   - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
   - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
   - html 基础，包括语义化，表单和验证，可访问性等
@@ -97,26 +100,36 @@
   - [npm](https://docs.npmjs.com/)
   - [yarn](https://classic.yarnpkg.com/)
   - [pnpm](https://pnpm.js.org/)
+  - [@antfu/ni](https://github.com/antfu/ni#readme)
 - css 处理器
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
   - [sass/scss](https://sass-lang.com/)
   - [stylus](https://stylus-lang.com/)
-- 校验工具和格式化工具
+- 规范
+  - [中文技术文档写作规范](document-style-guide)
+  - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
+  - [EditorConfig](https://editorconfig.org/)
   - [ls-lint](https://ls-lint.org/)
   - [prettier](https://prettier.io/)
+  - [markdownlint](https://github.com/DavidAnson/markdownlint#readme)
   - [eslint](https://eslint.org/)
   - [stylelint](https://stylelint.io/)
   - [commitlint](https://commitlint.js.org/)
-  - [commitizen](https://github.com/commitizen/cz-cli)
-  - [husky](https://typicode.github.io/husky/)
+  - [commitizen](https://github.com/commitizen/cz-cli#readme)
+  - [husky](https://github.com/typicode/husky#readme)
   - [lint-staged](https://github.com/okonet/lint-staged#readme)
-- typescript，详细可参考[前端 -> 杂项 -> 开发语言](../misc/README.md#开发语言)
-- vue 及相关生态，详细可参考[前端 -> 杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
-- react 及相关生态，详细可参考[前端 -> 杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
-- 编译打包工具，详细可参考[前端 -> 杂项 -> 构建](../misc/README.md#构建)
-- 服务器端开发，详细可参考[前端 -> 杂项 -> 服务器端](../misc/README.md#服务器端)
-- 静态网页生成，详细可参考[前端 -> 杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
+  - [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
+- [typescript](https://www.typescriptlang.org/)
+  - [入门教程](https://ts.xcatliu.com/basics)
+  - [官方教程](https://www.typescriptlang.org/docs/home.html)
+  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
+  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
+- vue 及相关生态，详细可参考 [前端杂项 -> vue 及相关生态](../misc/README.md#vue-及相关生态)
+- react 及相关生态，详细可参考 [前端杂项 -> react 及相关生态](../misc/README.md#react-及相关生态)
+- 编译打包工具，详细可参考 [前端杂项 -> 构建](../misc/README.md#构建)
+- 服务器端开发，详细可参考 [前端杂项 -> 服务器端](../misc/README.md#服务器端)
+- 静态网页生成，详细可参考 [前端杂项 -> 静态网站生成](../misc/README.md#静态网站生成)
 - 继续提高，学无止境
   - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
   - [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)

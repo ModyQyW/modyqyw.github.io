@@ -44,9 +44,15 @@
 
 ## 开发语言
 
+- css
+  - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
 - javascript
   - [现代 JavaScript 教程](https://zh.javascript.info)
+  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
   - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
+  - [javascript 设计模式](https://weread.qq.com/web/reader/9cf32ff0811e1abd8g0134b2)
+  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
+  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
 - [typescript](https://www.typescriptlang.org/)
   - [入门教程](https://ts.xcatliu.com/basics)
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
@@ -210,9 +216,9 @@
 - [eslint](https://eslint.org/) - 脚本文件校验 + 格式化
 - [stylelint](https://stylelint.io/) - 样式文件呢校验 + 格式化
 - [commitlint](https://commitlint.js.org/) - 校验提交
+- [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
 - [husky](https://github.com/typicode/husky#readme) - Git 钩子处理
 - [lint-staged](https://github.com/okonet/lint-staged#readme) - 校验和格式化暂存区文件
-- [commitizen](https://github.com/commitizen/cz-cli#readme) - 引导填写提交信息
 - [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme) - 通用配置指引
 
 ## CDN
@@ -367,6 +373,10 @@
 - [css modules](https://github.com/css-modules/css-modules#readme)
 - [oocss](http://oocss.org/)
 - [smacss](http://smacss.com/)
+- [postcss](https://postcss.org/)
+- [less](http://lesscss.org/)
+- [sass/scss](https://sass-lang.com/)
+- [stylus](https://stylus-lang.com/)
 - [bootstrap](https://getbootstrap.com/)
 - [bootstrap-table](https://bootstrap-table.com/)
 - [ui-kit](https://getuikit.com/)
@@ -429,6 +439,8 @@
 - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
 - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate#readme) - 模板
 - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects#readme) - 使用 html5、css 和 js 构建的迷你项目示例
+- [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+- [JavaScript 正则迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
 
 ## vue 及相关生态
 
@@ -677,7 +689,9 @@
 - 增强
   - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
   - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
+  - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
   - [mysql](https://www.mysql.com/) - 关系型数据库
+    - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
   - [redis](https://redis.io/) - 非关系型数据库
   - [mongodb](https://www.mongodb.com/) - 非关系型数据库
   - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
