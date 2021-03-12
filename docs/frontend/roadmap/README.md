@@ -107,7 +107,7 @@
   - [sass/scss](https://sass-lang.com/)
   - [stylus](https://stylus-lang.com/)
 - 规范
-  - [中文技术文档写作规范](document-style-guide)
+  - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
   - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
   - [EditorConfig](https://editorconfig.org/)
   - [ls-lint](https://ls-lint.org/)
