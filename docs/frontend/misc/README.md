@@ -378,7 +378,7 @@
 - [sass/scss](https://sass-lang.com/)
 - [stylus](https://stylus-lang.com/)
 - [bootstrap](https://getbootstrap.com/)
-- [bootstrap-table](https://bootstrap-table.com/)
+  - [bootstrap-table](https://bootstrap-table.com/)
 - [ui-kit](https://getuikit.com/)
 - [tailwindcss](https://tailwindcss.com/)
   - [windicss](https://windicss.netlify.app/)
@@ -386,6 +386,8 @@
   - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
   - [umi.css](https://www.hua-mi.cn/umi-css/)
+  - [aqua.css](https://aquacss.netlify.app/)
+- [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
 - [lodash](https://lodash.com/)
   - [xe-utils](https://x-extends.gitee.io/xe-utils/)
   - [futil-js](https://github.com/smartprocure/futil-js#readme)
@@ -506,6 +508,7 @@
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antd-vue 和 view-ui
   - [vue-good-table](https://xaksis.github.io/vue-good-table/) - 表格解决方案
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案
+  - [vuese](https://github.com/vuese/vuese#readme) - 快速生成 vue 组件文档
   - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板，vue 3 不再需要
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin#readme) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin#readme) - 后台管理系统
