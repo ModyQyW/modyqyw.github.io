@@ -597,7 +597,9 @@ npm update -g --registry=https://registry.npm.taobao.org
     "gutterIcon": true
   },
   // 插件 Todo Tree 使用，指定匹配的文本
-  "todo-tree.general.tags": ["FIX", "PERF", "TODO"],
+  "todo-tree.general.tags": ["FIX", "PERF", "TODO", "[ ]", "[x]"],
+  // 插件 Todo Tree 使用，指定匹配的正则表达式
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
