@@ -374,6 +374,7 @@ npm i -g --registry=https://registry.npm.taobao.org create-next-app
 npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
 npm i -g --registry=https://registry.npm.taobao.org create-react-app
 npm i -g --registry=https://registry.npm.taobao.org create-remax-app
+npm i -g --registry=https://registry.npm.taobao.org create-ssr-app
 npm i -g --registry=https://registry.npm.taobao.org egg-init
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org less
