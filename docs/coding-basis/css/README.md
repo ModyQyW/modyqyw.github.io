@@ -1131,6 +1131,27 @@ Normalize.css 使浏览器更一致地渲染所有元素，并符合现代标准
 
 参考 [bootstrap-grid](https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap-grid.css)。
 
+## 实现一个月牙图形
+
+```html
+<style>
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0 0 yellow;
+  }
+</style>
+<div class="center"></div>
+```
+
 ## 参考
 
 - [前端九部](https://www.yuque.com/fe9/basic)
