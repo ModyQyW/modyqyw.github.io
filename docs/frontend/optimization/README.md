@@ -703,7 +703,7 @@ TODO
 - [WindrunnerMax - Vue 常用性能优化](https://www.cnblogs.com/WindrunnerMax/p/13972793.html)
 - [Vue.js 服务端渲染指南](https://ssr.vuejs.org/zh/)
 - [LightHouse](https://github.com/GoogleChrome/lighthouse#readme)
-- [小维FE - 一文搞懂 V8 引擎的垃圾回收](https://juejin.cn/post/6844904016325902344)
+- [小维 FE - 一文搞懂 V8 引擎的垃圾回收](https://juejin.cn/post/6844904016325902344)
 
 ## 致谢
 

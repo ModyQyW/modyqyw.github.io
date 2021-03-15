@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /icons/w256.png
-# action:
+# action
 #   - text: 关于我 →
 #     link: /about/
 #     type: primary

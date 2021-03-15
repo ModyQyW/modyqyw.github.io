@@ -137,6 +137,12 @@
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
+  - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+  - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
+  - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
+  - [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
+  - [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
+  - [前端转行之路](https://mp.weixin.qq.com/s/eiCnTATNLrSnkDi25IbhnA)
   - [Hacker Laws - 对开发人员有用的定律、理论、原则和模式](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
   - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
   - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
@@ -184,14 +190,5 @@
 ## ledge
 
 - [前端技能图谱](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
-
-## 学习建议和经验之谈
-
-- [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
-- [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
-- [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
-- [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
-- [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
-- [前端转行之路](https://mp.weixin.qq.com/s/eiCnTATNLrSnkDi25IbhnA)
 
 <Vssue />
