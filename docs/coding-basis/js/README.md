@@ -361,9 +361,9 @@ function getName() {
 }
 getName.call(object); // object
 getName.apply(object); // object
-getX.call(); // window
-getX.apply(null); // window
-getX.call(undefined); // window
+getName.call(); // window
+getName.apply(null); // window
+getName.call(undefined); // window
 ```
 
 如果第一个参数不是对象，JavaScript 会自动调用构造函数将其转换成对象。
