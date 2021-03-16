@@ -708,6 +708,7 @@
 
 ## 开源
 
+- [为什么要开源](https://www.zhihu.com/question/33573424)
 - [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
 
 ## 参考
