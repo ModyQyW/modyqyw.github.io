@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "sh deploy.sh",
     "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script",
     "lint:json": "prettier ./**/*.json --write",
     "lint:markdown": "markdownlint . --fix && lint-md . --fix",
