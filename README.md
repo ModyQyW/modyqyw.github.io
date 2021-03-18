@@ -1,6 +1,6 @@
-# modyqyw.github.io
+# ModyQyW's Site
 
-modyqyw.github.io 的源码。
+ModyQyW's Site 的源码。
 
 使用 [vuepress](https://vuepress.vuejs.org/) 1.x 构建。
 
