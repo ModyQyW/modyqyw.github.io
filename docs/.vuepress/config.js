@@ -6,7 +6,7 @@ const hostname =
 const repo =
   mode === 'github'
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
-    : 'https://gitee.com/ModyQyW/modyqyw.gitee.io';
+    : 'https://gitee.com/ModyQyW/ModyQyW';
 const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
 const vssuePluginConfig =
   mode === 'github'
@@ -20,7 +20,7 @@ const vssuePluginConfig =
     : {
         platform: 'gitee',
         owner: 'ModyQyW',
-        repo: 'modyqyw.gitee.io',
+        repo: 'ModyQyW',
         clientId:
           '14b93a1f132bd0477d62e8feb82b71936926916e756d31d4476b422d6291cadb',
         clientSecret:

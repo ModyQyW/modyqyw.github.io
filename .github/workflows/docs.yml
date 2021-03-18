@@ -64,7 +64,7 @@ jobs:
           # 源仓库地址
           source-repo: git@github.com:ModyQyW/modyqyw.github.io.git
           # 目标仓库地址
-          destination-repo: git@gitee.com:ModyQyW/modyqyw.gitee.io.git
+          destination-repo: git@gitee.com:ModyQyW/ModyQyW.git
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
 
@@ -77,7 +77,7 @@ jobs:
           # 密码
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           # 仓库
-          gitee-repo: ModyQyW/modyqyw.gitee.io
+          gitee-repo: ModyQyW/ModyQyW
           # 部署 main 分支
           branch: main
 
