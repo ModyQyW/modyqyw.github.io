@@ -1,5 +1,32 @@
 const { config } = require('vuepress-theme-hope');
 
+const mode = process.env.MODE || 'github';
+const hostname =
+  mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
+const repo =
+  mode === 'github'
+    ? 'https://github.com/ModyQyW/modyqyw.github.io'
+    : 'https://gitee.com/ModyQyW/modyqyw.gitee.io';
+const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
+const vssuePluginConfig =
+  mode === 'github'
+    ? {
+        platform: 'github',
+        owner: 'ModyQyW',
+        repo: 'modyqyw.github.io',
+        clientId: 'ee62eae699b0c63fb4c2',
+        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
+      }
+    : {
+        platform: 'gitee',
+        owner: 'ModyQyW',
+        repo: 'modyqyw.gitee.io',
+        clientId:
+          '14b93a1f132bd0477d62e8feb82b71936926916e756d31d4476b422d6291cadb',
+        clientSecret:
+          '0c256d3d67fcc006911aa9619e35c83747a22fbaad6a4447dc9450fa6627d626',
+      };
+
 module.exports = config({
   title: "ModyQyW's Site",
   description:
@@ -65,10 +92,11 @@ module.exports = config({
       ],
       '/': [''],
     },
-    hostname: 'https://modyqyw.top',
+    hostname,
     // 默认主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/default/
     sidebarDepth: 3,
-    repo: 'ModyQyW/modyqyw.github.io',
+    repo,
+    repoLabel,
     docsBranch: 'origin',
     editLinks: true,
     editLinkText: '编辑此页面',
@@ -113,16 +141,7 @@ module.exports = config({
         },
       },
     ],
-    [
-      '@vssue/vuepress-plugin-vssue',
-      {
-        platform: 'github',
-        owner: 'ModyQyW',
-        repo: 'modyqyw.github.io',
-        clientId: 'ee62eae699b0c63fb4c2',
-        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
-      },
-    ],
+    ['@vssue/vuepress-plugin-vssue', vssuePluginConfig],
   ],
   markdown: {
     lineNumbers: true,
