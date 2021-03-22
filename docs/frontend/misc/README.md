@@ -655,19 +655,13 @@
   - [react-ui-mode-cc](https://github.com/shenghanqin/react-ui-mode-cc#readme) - 响应式设计与自适应设计结合的方案 react 实现
 - 进阶
   - [react 源码通关指南](https://zhuanlan.zhihu.com/p/266748892)
-  - [react 技术揭秘](https://react.iamkasong.com/)
-  - [react 源码解析](https://yuchengkai.cn/react/)
-  - [react fiber 源码分析](https://zhuanlan.zhihu.com/p/179934120)
+    - [react 技术揭秘](https://react.iamkasong.com/)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
   - [Dan Abramov's Blog](https://overreacted.io/)
-  - [build your own react](https://pomb.us/build-your-own-react/)
-  - [Re: 从零开始的 React 再造之旅](https://devrsi0n.com/articles/create-react-from-scratch)
+    - [将 React 作为 UI 运行时](https://overreacted.io/zh-hans/react-as-a-ui-runtime/)
+    - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
+    - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
   - [这可能是最通俗的 React Fiber(时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
-  - [React Fiber 架构](https://zhuanlan.zhihu.com/p/37095662)
-  - [react hooks 完全上手指南](https://zhuanlan.zhihu.com/p/92211533)
-  - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
-  - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
-  - [精读《useEffect 完整指南》](https://juejin.im/post/5c9827745188250ff85afe50)
   - [构建 react 组件库](https://zhuanlan.zhihu.com/p/196758730) - 大方向上适用于 vue
 
 ## Virtual DOM
