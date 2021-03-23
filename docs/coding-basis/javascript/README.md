@@ -1,4 +1,4 @@
-# js 基础
+# JavaScript 基础
 
 ## 类型比较
 

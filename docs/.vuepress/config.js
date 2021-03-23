@@ -31,40 +31,51 @@ module.exports = config({
   title: "ModyQyW's Site",
   description:
     '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
+  locales: {
+    '/en/': {
+      title: "ModyQyW's Site",
+      description:
+        'English version is on progress. Personal website based on vuepress and vuepress-theme-hope. Please try to force a refresh if you have any problems.',
+    },
+  },
   themeConfig: {
-    // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
+    // 主题配置 https://vuepress-theme-hope.github.io/config/theme/
     baseLang: 'zh-CN',
     author: 'ModyQyW <wurui7@mail3.sysu.edu.cn>',
     nav: [
       { text: '首页', link: '/' },
       {
         text: '代码基础',
-        prefix: '/coding-basis/',
         items: [
-          { text: '数学基础', link: 'math/' },
-          { text: '计算机组成基础', link: 'computer-organization/' },
-          { text: '网络基础', link: 'internet/' },
-          { text: 'git 基础', link: 'git/' },
-          { text: '浏览器基础', link: 'browser/' },
-          { text: 'html 基础', link: 'html/' },
-          { text: 'css 基础', link: 'css/' },
-          { text: 'js 基础', link: 'js/' },
-          { text: '数据结构和算法基础', link: 'data-structure-and-algorithm/' },
+          { text: '数学', link: '/coding-basis/math/' },
+          {
+            text: '计算机组成',
+            link: '/coding-basis/computer-organization/',
+          },
+          { text: '网络', link: '/coding-basis/internet/' },
+          { text: 'Git', link: '/coding-basis/git/' },
+          { text: '浏览器', link: '/coding-basis/browser/' },
+          { text: 'HTML', link: '/coding-basis/html/' },
+          { text: 'CSS', link: '/coding-basis/css/' },
+          { text: 'JavaScript', link: '/coding-basis/javascript/' },
+          {
+            text: '数据结构和算法',
+            link: '/coding-basis/data-structure-and-algorithm/',
+          },
         ],
       },
       {
         text: '前端',
-        prefix: '/frontend/',
         items: [
-          { text: '学习路径', link: 'roadmap/' },
-          { text: '环境配置', link: 'environment/' },
-          { text: '杂项', link: 'misc/' },
-          { text: 'vue', link: 'vue/' },
-          { text: 'react', link: 'react/' },
-          { text: '测试', link: 'test/' },
-          { text: 'webpack4', link: 'webpack4/' },
-          { text: '安全', link: 'safety/' },
-          { text: '优化', link: 'optimization/' },
+          { text: '学习路径', link: '/frontend/roadmap/' },
+          { text: '环境配置', link: '/frontend/environment/' },
+          { text: '杂项', link: '/frontend/misc/' },
+          { text: 'Vue', link: '/frontend/vue/' },
+          { text: 'React', link: '/frontend/react/' },
+          { text: '测试', link: '/frontend/test/' },
+          { text: 'Webpack4', link: '/frontend/webpack4/' },
+          { text: '安全', link: '/frontend/safety/' },
+          { text: '优化', link: '/frontend/optimization/' },
         ],
       },
       { text: '关于', link: '/about/' },
@@ -78,7 +89,7 @@ module.exports = config({
         'browser/',
         'html/',
         'css/',
-        'js/',
+        'javascript/',
         'data-structure-and-algorithm/',
       ],
       '/frontend/': [
@@ -92,18 +103,83 @@ module.exports = config({
       ],
       '/': [''],
     },
+    locales: {
+      '/en/': {
+        nav: [
+          { text: 'Index', link: '/en/' },
+          {
+            text: 'Coding Basis',
+            items: [
+              { text: 'Math', link: '/en/coding-basis/math/' },
+              {
+                text: 'Computer Organization',
+                link: '/en/coding-basis/computer-organization/',
+              },
+              { text: 'Internet', link: '/en/coding-basis/internet/' },
+              { text: 'Git', link: '/en/coding-basis/git/' },
+              { text: 'Browser', link: '/en/coding-basis/browser/' },
+              { text: 'HTML', link: '/en/coding-basis/html/' },
+              { text: 'CSS', link: '/en/coding-basis/css/' },
+              { text: 'JavaScript', link: '/en/coding-basis/javascript/' },
+              {
+                text: 'Data Structure and Algorithm',
+                link: '/en/coding-basis/data-structure-and-algorithm/',
+              },
+            ],
+          },
+          {
+            text: 'Frontend',
+            items: [
+              { text: 'Roadmap', link: '/en/frontend/roadmap/' },
+              { text: 'Environment', link: '/en/frontend/environment/' },
+              { text: 'Misc', link: '/en/frontend/misc/' },
+              { text: 'Vue', link: '/en/frontend/vue/' },
+              { text: 'React', link: '/en/frontend/react/' },
+              { text: 'Test', link: '/en/frontend/test/' },
+              { text: 'Webpack4', link: '/en/frontend/webpack4/' },
+              { text: 'Safety', link: '/en/frontend/safety/' },
+              { text: 'Optimization', link: '/en/frontend/optimization/' },
+            ],
+          },
+          { text: 'About', link: '/en/about/' },
+        ],
+        sidebar: {
+          '/en/coding-basis/': [
+            'math/',
+            'computer-organization/',
+            'internet/',
+            'git/',
+            'browser/',
+            'html/',
+            'css/',
+            'javascript/',
+            'data-structure-and-algorithm/',
+          ],
+          '/en/frontend/': [
+            'roadmap/',
+            'environment/',
+            'misc/',
+            'test/',
+            'webpack4/',
+            'safety/',
+            'optimization/',
+          ],
+          '/en/': [''],
+        },
+      },
+    },
     hostname,
-    // 默认主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/default/
+    // 默认主题配置 https://vuepress-theme-hope.github.io/config/theme/default/
     sidebarDepth: 3,
     repo,
     repoLabel,
     docsBranch: 'origin',
     editLinks: true,
     editLinkText: '编辑此页面',
-    // 主题功能配置 https://vuepress-theme-hope.github.io/zh/config/theme/feature/
+    // 主题功能配置 https://vuepress-theme-hope.github.io/config/theme/feature/
     blog: false,
     pageInfo: false,
-    // 主题插件配置 https://vuepress-theme-hope.github.io/zh/config/theme/plugin/
+    // 主题插件配置 https://vuepress-theme-hope.github.io/config/theme/plugin/
     mdEnhance: {
       lineNumbers: true,
     },
@@ -123,7 +199,6 @@ module.exports = config({
         ],
       },
     },
-    feed: false,
   },
   plugins: [
     [
