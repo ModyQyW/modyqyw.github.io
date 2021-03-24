@@ -1200,5 +1200,3 @@ Normalize.css 使浏览器更一致地渲染所有元素，并符合现代标准
 - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap/blob/master/css/index.js)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background)
 - [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-
-<Vssue />

@@ -23,5 +23,3 @@ Reminders can be made by
 |Wechat|<img :src="$withBase('/images/about/wechat.png')" width="256px" alt="Wechat">|
 |Meituan|<img :src="$withBase('/images/about/meituan.png')" width="128px" alt="Meituan"><br>[Link](https://tb.g2h3.com/5tpwc)|
 |Eleme|<img :src="$withBase('/images/about/eleme1.png')" width="128px" alt="Eleme">&emsp;<img :src="$withBase('/images/about/eleme2.jpg')" width="128px" alt="饿了么外卖红包2"><br>[Link](https://tb.v2b3.com/5tIWi)|
-
-<Vssue />

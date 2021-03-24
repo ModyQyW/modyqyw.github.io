@@ -183,7 +183,10 @@ module.exports = config({
     mdEnhance: {
       lineNumbers: true,
     },
-    comment: false,
+    comment: {
+      type: 'vssue',
+      ...vssuePluginConfig,
+    },
     copyright: false,
     pwa: {
       favicon: '/favicon.ico',
@@ -216,7 +219,7 @@ module.exports = config({
         },
       },
     ],
-    ['@vssue/vuepress-plugin-vssue', vssuePluginConfig],
+    // ['@vssue/vuepress-plugin-vssue', vssuePluginConfig],
   ],
   markdown: {
     lineNumbers: true,

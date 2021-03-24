@@ -652,6 +652,7 @@
   - [react-lifecycle-visualizer](https://github.com/Oblosys/react-lifecycle-visualizer#readme) - react 生命周期方法的实时可视化工具
   - [why-did-you-render](https://github.com/welldone-software/why-did-you-render#readme) - 展示可避免的重复渲染
   - [react-proto](https://github.com/React-Proto/react-proto#readme) - 为开发人员和设计人员提供的 react 应用原型开发工具
+  - [react-styleguidist](https://react-styleguidist.js.org/)
 - 进阶
   - [react 源码通关指南](https://zhuanlan.zhihu.com/p/266748892)
     - [react 技术揭秘](https://react.iamkasong.com/)

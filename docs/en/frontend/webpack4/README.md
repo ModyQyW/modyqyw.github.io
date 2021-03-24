@@ -2808,5 +2808,3 @@ js 里面有变量提升和函数提升的概念，也就是把变量和函数�
 ## 致谢
 
 - [XuXianTao](https://github.com/XuXianTao) - 阅读了初稿并提供了弥足珍贵的建议和意见
-
-<Vssue />

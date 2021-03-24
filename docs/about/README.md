@@ -23,5 +23,3 @@ sidebar: false
 |微信扫码转账|<img :src="$withBase('/images/about/wechat.png')" width="256px" alt="微信扫码转账">|
 |美团外卖红包|<img :src="$withBase('/images/about/meituan.png')" width="128px" alt="美团外卖红包"><br>[链接访问](https://tb.g2h3.com/5tpwc)|
 |饿了么外卖红包|<img :src="$withBase('/images/about/eleme1.png')" width="128px" alt="饿了么外卖红包1">&emsp;<img :src="$withBase('/images/about/eleme2.jpg')" width="128px" alt="饿了么外卖红包2"><br>[链接访问](https://tb.v2b3.com/5tIWi)|
-
-<Vssue />

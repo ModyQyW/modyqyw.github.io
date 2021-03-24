@@ -663,5 +663,3 @@ node 和 npm 路径不正确会导致一直编译中。
 - [jaywcjlove/awesome-mac](https://wangchujiang.com/awesome-mac/index.zh.html)
 - [sorrycc/awesome-tools](https://github.com/sorrycc/awesome-tools)
 - [VSCode Documents](https://code.visualstudio.com/docs)
-
-<Vssue />

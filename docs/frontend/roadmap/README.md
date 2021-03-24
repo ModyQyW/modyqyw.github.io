@@ -193,5 +193,3 @@
 ## ledge
 
 - [前端技能图谱](https://github.com/phodal/ledge/blob/master/src/assets/docs/skilltrees/frontend-skilltree.md)
-
-<Vssue />
