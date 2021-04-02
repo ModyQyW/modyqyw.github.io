@@ -4,7 +4,6 @@
 
 ## 通用
 
-- [520ssr](https://www.520ssr.co/auth/register?code=oiwx) - v2ray 服务商
 - Adobe Photoshop - 专业图片处理，[在线 PS](https://www.uupoop.com/)
 - Affinity Photo - 专业图片处理
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
@@ -19,7 +18,7 @@
 - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
 - [GeoGebra](https://www.geogebra.org/) - 数学工具
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，也可以考虑 [520ssr](https://www.520ssr.co/auth/register?code=oiwx)  [v2ray 路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
 - [Kite](https://www.kite.com/) - 代码自动补全工具，竞品 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)，酌情使用
 - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包
@@ -27,7 +26,7 @@
 - [Motrix](https://motrix.app/zh-CN/) - 下载
 - [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载
 - [OBS](https://obsproject.com/) - 录制
-- [Postman](https://www.getpostman.com/) - 请求
+- [Postman](https://www.getpostman.com/) - 请求，也可以考虑 [ApiPost](https://www.apipost.cn/)
 - [QQ](https://im.qq.com/download/) - 社交
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 响应式开发
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
@@ -514,8 +513,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   },
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // vscode 自带功能，修改编辑区的字体族
-  "editor.fontFamily": "-apple-system, Menlo, 'Heiti', 'Source Code Pro', 'Sarasa Mono T SC', 'Jetbrains Mono', 'Fira Code', Monaco, 'Courier New', monospace",
   // vscode 自带功能，控制输入时是否自动弹出建议
   "editor.quickSuggestions": {
     "strings": true
@@ -560,8 +557,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
   "javascript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Kite AI Code AutoComplete 使用，关闭启动时的提示
-  "kite.showWelcomeNotificationOnStartup": false,
   // vscode 自带功能，指定是否校验 less，这里设置为否
   "less.validate": false,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
@@ -613,7 +608,7 @@ npm update -g --registry=https://registry.npm.taobao.org
     }
   ],
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"

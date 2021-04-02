@@ -407,6 +407,9 @@
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
 - [qs](https://www.npmjs.com/package/qs)
 - [query-string](https://www.npmjs.com/package/query-string)
+- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
+- [qrcode](https://github.com/soldair/node-qrcode#readme)
+- [classnames](https://github.com/JedWatson/classnames#readme)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
 - [page.js](http://visionmedia.github.io/page.js/) - 路由
 - [format.js](https://formatjs.io/) - 国际化
