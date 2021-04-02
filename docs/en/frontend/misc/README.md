@@ -352,11 +352,18 @@
 
 - [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 - [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
-- [Jira](https://www.atlassian.com/zh/software/jira)
-- [Trello](https://trello.com/home)
-- [滴答清单](https://help.dida365.com/tasks)
-- [Ledge](https://devops.phodal.com/)
 - [阿里云 DevOps](https://develop.aliyun.com/devops)
+- [Trello](https://trello.com/home)
+- [OmniPlan](https://www.omnigroup.com/omniplan)
+- [滴答清单](https://dida365.com/home)
+- [Todoist](https://todoist.com/zh-CN)
+- [Microsoft To Do](https://todo.microsoft.com/)
+- [OmniFocus](https://www.omnigroup.com/omnifocus)
+- [MyLifeOrganized](https://www.mylifeorganized.net/)
+
+关于 DevOps 的实践还可以参考 [Ledge](https://devops.phodal.com/) 和 [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/download?id=205)。
+
+建议先了解 [时间管理方法论](https://help.dida365.com/tasks) 并结合实际工具应用。
 
 ## 微服务
 

@@ -17,34 +17,27 @@
 
 ## 个人
 
+所有书籍，如果有条件，务必阅读原版。
+
 - 英语
   - 新概念英语
   - 翻译工具 [deepl](https://www.deepl.com/)
 - 线性代数
-  - 向量
-  - 矩阵
+  - [线性代数及其应用](https://book.douban.com/subject/1425950/)
 - 离散数学
-  - 集合论
-  - 图论
+  - [离散数学及其应用](https://book.douban.com/subject/34866266/)
 - 计算机组成原理
   - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
-  - 浮点数
-  - 原码，补码
-  - 缓存
-  - 时序控制
-  - 流水线
+  - [计算机组成与设计](https://book.douban.com/subject/26604008/)
 - 操作系统原理
   - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
-  - 进程和线程
-  - 信号量
-  - 调度策略
-  - 锁
-  - 页表
+  - [操作系统概念](https://book.douban.com/subject/30297919/)
 - 计算机网络原理和安全
   - [图解网络硬件](https://weread.qq.com/web/reader/92e326e0718ff67892eea53)
   - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
   - [图解 HTTP](https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca)
   - [图解密码技术](https://book.douban.com/subject/26265544/)
+  - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
   - 网络基本组成
   - 五层模型
   - 七层模型
@@ -59,7 +52,6 @@
   - xss，csrf 等
   - 内存安全策略 csp
   - owasp 安全风险
-  - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 - 多媒体技术基础
   - 图像，如 bmp，jpg，jpeg，png，apng，gif，svg，webp，avif
   - 图像压缩算法
@@ -67,7 +59,10 @@
   - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
   - 视频分片
 - 程序设计入门
-  - c/c++/java 入门，了解基本的程序设计和静态语言
+  - [C++ 程序设计语言](https://book.douban.com/subject/4604591/)
+  - [C++ Primer](https://weread.qq.com/web/reader/ff732fe072021a24ff7bb24)
+  - [C++ Primer Plus](https://weread.qq.com/web/reader/a99327c071d07b0da996784)
+  - C/Java 亦可，避开谭浩强
 - 数据结构与算法
   - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
   - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
@@ -93,6 +88,7 @@
   - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
   - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
   - [es6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
+  - [Node.js 入门教程](http://nodejs.cn/learn)
   - html 基础，包括语义化，表单和验证，可访问性等
   - css 基础，包括定位，显示，盒模型，浮动，弹性布局，排版，视觉效果，响应式布局，自适应布局等
   - js es5 和 es6+
@@ -113,6 +109,7 @@
   - [ls-lint](https://ls-lint.org/)
   - [prettier](https://prettier.io/)
   - [markdownlint](https://github.com/DavidAnson/markdownlint#readme)
+  - [lint-md](https://github.com/lint-md/lint-md#readme)
   - [eslint](https://eslint.org/)
   - [stylelint](https://stylelint.io/)
   - [commitlint](https://commitlint.js.org/)
