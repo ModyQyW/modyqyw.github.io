@@ -183,10 +183,11 @@ module.exports = config({
     mdEnhance: {
       lineNumbers: true,
     },
-    comment: {
-      type: 'vssue',
-      ...vssuePluginConfig,
-    },
+    // comment: {
+    //   type: 'vssue',
+    //   ...vssuePluginConfig,
+    // },
+    comment: false,
     copyright: false,
     pwa: {
       favicon: '/favicon.ico',
