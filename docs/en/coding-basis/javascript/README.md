@@ -442,8 +442,6 @@ console.log(animal); // Animal {name: "Animal"}
 
 `null` 之外的每一个 JavaScript 对象在创建时会关联另一个对象，这个对象就是原型，每一个对象都会从原型“继承”属性。
 
-而我们平时使用的数组、对象，默认就有很多方法给我们调用，这些方法都是定义在原型链上的，这就是基于原型链的继承。
-
 ```javascript
 function Animal() {
   this.name = 'Animal';
@@ -455,7 +453,7 @@ var animal = new Animal();
 animal.eat(); // eat something
 ```
 
-继承意味着复制操作，但是 JavaScript 默认并不会复制对象的属性。JavaScript 只是在两个对象之间创建关联，一个对象就可以访问另一个对象的属性和函数了。
+“继承”意味着复制操作，但实际上，JavaScript 默认并不会复制对象的属性。JavaScript 只是在两个对象之间创建关联，一个对象就可以访问另一个对象的属性和函数了。
 
 我更推荐使用 ES6 引入的 `class` 和 `extends`，它们更好更优雅，美中不足的地方就是仍然需要转译。
 
@@ -506,7 +504,7 @@ JavaScript 主线程依次执行在执行栈 Execution Context Stack 排好队�
 
 [图源](http://www.ruanyifeng.com/blog/2014/10/event-loop.html) - 务必阅读 [朴灵评注](https://blog.csdn.net/lin_credible/article/details/40143961)
 
-JavaScript 又把异步任务分成宏任务（macro-task，task）和微任务（micro-task），放入不同的任务队列里。常见的宏任务包括 script 整体代码，`setTimeout`，`setInterval` 和 `setImmediate`，常见的微任务包括 `process.nextTick`，`Promise.then`，`Promise.catch`，`await` 后面的代码（`await` 后面的代码等同于 `Promise.then`）等。
+JavaScript 又把异步任务分成宏任务（macro-task，task）和微任务（micro-task，job），放入不同的任务队列里。常见的宏任务包括 script 整体代码，`setTimeout`，`setInterval` 和 `setImmediate`，常见的微任务包括 `process.nextTick`，`Promise.then`，`Promise.catch`，`await` 后面的代码（`await` 后面的代码等同于 `Promise.then`）等。
 
 ![任务队列示意图](https://imgedu.lagou.com/2762e21a8179488b87adc3df18fdbd71.jpg)
 
@@ -516,7 +514,7 @@ JavaScript 又把异步任务分成宏任务（macro-task，task）和微任务�
 
 <img :src="$withBase('/images/js/event-loop.svg')" width="512px" alt="原型链">
 
-有必要说明一下，因为 `async/await` 本身就是 `Promise`的语法糖，所以下面的代码是等同的。
+有必要说明一下，因为 `async/await` 本身可以视作 `Promise` 的语法糖，所以下面的代码是等同的。
 
 ```javascript
 async function async1() {
