@@ -12,16 +12,17 @@
     "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix"
   },
   "devDependencies": {
-    "@modyqyw/fabric": "~1.24.0",
-    "babel-eslint": "~10.1.0",
+    "@babel/core": "~7.13.14",
+    "@babel/eslint-parser": "~7.13.14",
+    "@modyqyw/fabric": "~1.25.4",
     "cross-env": "~7.0.3",
-    "eslint": "~7.22.0",
+    "eslint": "~7.23.0",
     "lint-md-cli": "~0.1.2",
     "markdownlint-cli": "~0.27.1",
     "prettier": "~2.2.1",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.13.1"
+    "vuepress-theme-hope": "~1.14.2"
   },
   "husky": {
     "hooks": {
