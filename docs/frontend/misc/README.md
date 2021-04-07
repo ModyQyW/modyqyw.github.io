@@ -164,34 +164,38 @@
 
 ### Vue 系
 
-- 桌面端网页，移动端网页
+- 桌面端网页
   - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [nuxt](https://nuxtjs.org/)
   - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
+  - [vue-use](https://vueuse.org/)
 - 移动端网页
   - (vue + vue-router + vuex) / nuxt
-  - vuetify / [nut-ui](https://nutui.jd.com/) / [zarm-vue](https://vue.zarm.design/) / [vant](https://vant-contrib.gitee.io/vant/)
+  - vuetify / [nut-ui](https://nutui.jd.com/) / [vant](https://vant-contrib.gitee.io/vant/)
+  - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
   - [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/) + [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui#readme) + [uview-ui](https://uviewui.com/)
 - 桌面端应用
   - (vue + vue-router + vuex) / nuxt
   - vuetify / element / element-plus / ant-design-vue-next
+  - vue-use
   - electron
 
-[vue-next](https://v3.cn.vuejs.org/) [vue-router](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/)
+[vue-next](https://v3.cn.vuejs.org/) [vue-router-next](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/)
 
 ### React 系
 
 - 桌面端网页
   - ([react](https://zh-hans.reactjs.org/) + [react-router](https://reacttraining.com/react-router/)) / [umi](https://umijs.org/zh-CN) / [next](https://nextjs.org/)
   - [constate](https://github.com/diegohaz/constate#readme) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md#readme) / [mobx](https://mobx.js.org/README.html)
-  - [zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/))
+  - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
 - 移动端网页
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
-  - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/)
+  - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/) / [antd-mobile-plus](https://ui.alitajs.com/)
+  - (react-use + swr) / ahooks
 - 移动端应用
-  - [expo](https://expo.io/) / [alita](https://alitajs.com/)
+  - [expo](https://expo.io/)
   - react-router / [react-navigation](https://reactnavigation.org/)
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
   - [react-native-elements](https://reactnativeelements.com/) / [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -202,7 +206,7 @@
 - 桌面端应用
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - zent / blueprint / material-ui / (antd + antd-pro-components)
+  - (zent / blueprint / material-ui + react-use + swr) / (antd + antd-pro-components + ahooks)
   - electron
 
 ## 规范
@@ -213,6 +217,7 @@
 - [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
 - [markdownlint](https://github.com/DavidAnson/markdownlint#readme) - markdown 格式化
+- [lint-md](https://github.com/lint-md/lint-md#readme) - markdown 格式化
 - [eslint](https://eslint.org/) - 脚本文件校验 + 格式化
 - [stylelint](https://stylelint.io/) - 样式文件呢校验 + 格式化
 - [commitlint](https://commitlint.js.org/) - 校验提交
@@ -465,12 +470,10 @@
 - ui
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
-    - [element-plus](https://element-plus.org/)
-    - [element3](https://element3-ui.com/)
+  - [element-plus](https://element-plus.org/)
   - [antd-vue-next](https://2x.antdv.com/)
   - [nut-ui](http://nutui.jd.com/)
   - [vant](https://youzan.github.io/vant/)
-  - [zarm-vue](https://vue.zarm.design/)
   - [更多](https://github.com/topics/vue)
 - cli
   - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
@@ -495,15 +498,11 @@
       - [luch-request](https://www.quanzhan.co/luch-request/)
     - 进阶
       - [uni-app 多端构建原理浅析（较旧）](https://f-loat.github.io/posts/2019/08/03/uni-app-%E5%A4%9A%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.html)
-  - chameleon
-    - [中文文档](https://cml.js.org/)
-    - 路由
-      - [自带路由](https://cml.js.org/docs/config.html#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE)
-    - 状态管理
-      - [chameleon-store](https://cml.js.org/docs/store.html)
-    - ui
-      - [cml-ui](https://cml.js.org/components/expand.html)
-      - [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss)
+  - app
+    - native-script
+      - [文档](https://nativescript.org/)
+    - capacitor
+      - [文档](https://capacitorjs.com/)
 - 衍生
   - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config#readme)
   - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
@@ -512,7 +511,6 @@
   - [swrv](https://github.com/Kong/swrv#readme) - 用于数据获取
   - [vue-dollar](https://github.com/antfu/v-dollar#readme) - 简化 vue3 的 api
   - [vue-demi](https://github.com/antfu/vue-demi#readme) - 创建跨版本的库
-  - [vue-sfc-rollup](https://github.com/team-innovation/vue-sfc-rollup#readme)
   - [vue-use](https://vueuse.js.org/) - 官方 hooks 包
   - [vue-composable](https://pikax.me/vue-composable/) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
@@ -561,11 +559,10 @@
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
   - [antd](https://ant.design/)
-  - [react-suite](https://rsuitejs.com/)
-  - [shineout](https://shine.wiki/)
   - [yep-react](https://yep-react.jd.com/)
   - [zarm](https://zarm.design/)
   - [antd-mobile-next](https://next.mobile.ant.design/)
+  - [antd-mobile-plus](https://antd-plus.alitajs.com/)
   - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
@@ -594,7 +591,6 @@
       - [teaset](https://github.com/rilyu/teaset#readme)
       - [antd-rn](https://rn.mobile.ant.design/)
       - [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn#readme)
-      - [mand-mobile-rn](https://didi.github.io/mand-mobile-rn/?path=/story/mand-mobile-rn--%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5)
       - [react-native-material-ui](https://github.com/xotahal/react-native-material-ui#readme)
       - [react-native-material-kit](https://github.com/xinthink/react-native-material-kit#readme)
       - [react-native-ui-lib](https://wix.github.io/react-native-ui-lib/)
@@ -637,7 +633,7 @@
     - 状态管理
       - [自带状态管理](https://rax.js.org/docs/guide/store)
     - ui
-      - [官方提供](https://rax.js.org/docs/components/about)一部分
+      - [官方提供](https://rax.js.org/docs/components/about) 一部分
 - 衍生
   - [preact](https://preactjs.com/) - 类 react 库
   - [fre](https://github.com/yisar/fre) - 类 react 库
@@ -671,7 +667,7 @@
     - [将 React 作为 UI 运行时](https://overreacted.io/zh-hans/react-as-a-ui-runtime/)
     - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
     - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
-  - [这可能是最通俗的 React Fiber(时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
+  - [这可能是最通俗的 React Fiber（时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
   - [构建 react 组件库](https://zhuanlan.zhihu.com/p/196758730) - 大方向上适用于 vue
 
 ## Virtual DOM

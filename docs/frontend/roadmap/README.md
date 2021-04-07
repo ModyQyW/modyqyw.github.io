@@ -26,13 +26,18 @@
   - [线性代数及其应用](https://book.douban.com/subject/1425950/)
 - 离散数学
   - [离散数学及其应用](https://book.douban.com/subject/34866266/)
+- 计算机基础
+  - [国防科技大学 - 大学计算机基础](https://www.icourse163.org/course/NUDT-1001614002)
 - 计算机组成原理
+  - [华中科技大学 - 计算机组成原理](https://www.icourse163.org/course/HUST-1003159001)
   - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
   - [计算机组成与设计](https://book.douban.com/subject/26604008/)
 - 操作系统原理
+  - [哈尔滨工业大学 - 操作系统](https://www.icourse163.org/course/HIT-1002531008)
   - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
   - [操作系统概念](https://book.douban.com/subject/30297919/)
 - 计算机网络原理和安全
+  - [哈尔滨工业大学 - 计算机网络](https://www.icourse163.org/course/HIT-154005)
   - [图解网络硬件](https://weread.qq.com/web/reader/92e326e0718ff67892eea53)
   - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
   - [图解 HTTP](https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca)
@@ -59,11 +64,13 @@
   - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
   - 视频分片
 - 程序设计入门
+  - [浙江大学 - 程序设计入门 C 语言](https://www.icourse163.org/course/0809ZJU007A-199001)
   - [C++ 程序设计语言](https://book.douban.com/subject/4604591/)
   - [C++ Primer](https://weread.qq.com/web/reader/ff732fe072021a24ff7bb24)
   - [C++ Primer Plus](https://weread.qq.com/web/reader/a99327c071d07b0da996784)
-  - C/Java 亦可，避开谭浩强
+  - C/C++/Java 亦可，避开谭浩强
 - 数据结构与算法
+  - [浙江大学 - 数据结构](https://www.icourse163.org/course/ZJU-93001)
   - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
   - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer)
   - [小浩算法](https://www.geekxh.com/)

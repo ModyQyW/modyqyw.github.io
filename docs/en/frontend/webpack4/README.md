@@ -2310,8 +2310,8 @@ module.exports = (env, argv) => {
 
 ```
 
-- `--mode=development` 指定了 `argv.mode` 为 `development`。
-- `--mode=production` 指定了 `argv.mode` 为 `production`。
+- `--mode=development` 指定了 `argv.mode` 和 `process.env.NODE_ENV` 为 `development`。
+- `--mode=production` 指定了 `argv.mode` 和 `process.env.NODE_ENV` 为 `production`。
 - 这里的 `mode` 仅用于指定模式，以读取对应的环境变量。
 
 我们再来为已有的两种模式添加环境变量。一般对于环境变量有以下的约定，内容优先级依次递增。

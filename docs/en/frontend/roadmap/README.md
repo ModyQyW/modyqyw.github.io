@@ -26,13 +26,18 @@
   - [线性代数及其应用](https://book.douban.com/subject/1425950/)
 - 离散数学
   - [离散数学及其应用](https://book.douban.com/subject/34866266/)
+- 计算机基础
+  - [国防科技大学 - 大学计算机基础](https://www.icourse163.org/course/NUDT-1001614002)
 - 计算机组成原理
+  - [华中科技大学 - 计算机组成原理](https://www.icourse163.org/course/HUST-1003159001)
   - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
   - [计算机组成与设计](https://book.douban.com/subject/26604008/)
 - 操作系统原理
+  - [哈尔滨工业大学 - 操作系统](https://www.icourse163.org/course/HIT-1002531008)
   - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
   - [操作系统概念](https://book.douban.com/subject/30297919/)
 - 计算机网络原理和安全
+  - [哈尔滨工业大学 - 计算机网络](https://www.icourse163.org/course/HIT-154005)
   - [图解网络硬件](https://weread.qq.com/web/reader/92e326e0718ff67892eea53)
   - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
   - [图解 HTTP](https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca)
