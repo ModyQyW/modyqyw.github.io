@@ -22,7 +22,7 @@
     "prettier": "~2.2.1",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.14.2"
+    "vuepress-theme-hope": "~1.14.3"
   },
   "husky": {
     "hooks": {
