@@ -4,49 +4,46 @@
 
 ## 通用
 
-- Adobe Photoshop - 专业图片处理，[在线 PS](https://www.uupoop.com/)
-- Affinity Photo - 专业图片处理
+- [360zip](https://yasuo.360.cn/)
+- Adobe Photoshop - 专业图片处理，也可以考虑 Affinity Photo，[在线 PS](https://www.uupoop.com/)
 - [Android Studio](https://developer.android.com/studio/) - 安卓开发
 - Axure RP - 原型图查看
-- [BitComet](https://www.bitcomet.com/) - 下载
 - [BitWarden](https://bitwarden.com/) - 密码管理
 - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
 - [DeepL](https://www.deepl.com/translator) - 翻译
-- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 作图
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包
+- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 作图，也可以考虑 [ProcessOn](https://www.processon.com/)
+- [Fiddler](https://www.telerik.com/fiddler) - 抓包，也可以考虑 Charles
 - [FileZilla](https://filezilla-project.org/) - ftp 连接
 - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
 - [GeoGebra](https://www.geogebra.org/) - 数学工具
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，也可以考虑 [520ssr](https://www.520ssr.co/auth/register?code=oiwx)  [v2ray 路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
+- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，可以使用 [v2ray 路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)，也可以考虑 [520ssr](https://www.520ssr.co/auth/register?code=oiwx)
 - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
-- [Kite](https://www.kite.com/) - 代码自动补全工具，竞品 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)，酌情使用
-- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 抓包
+- [Kite](https://www.kite.com/) - 代码自动补全工具，也可以考虑 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)
+- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 代理工具
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
-- [Motrix](https://motrix.app/zh-CN/) - 下载
-- [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载
 - [OBS](https://obsproject.com/) - 录制
 - [Postman](https://www.getpostman.com/) - 请求，也可以考虑 [ApiPost](https://www.apipost.cn/)
 - [QQ](https://im.qq.com/download/) - 社交
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 响应式开发
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具
+- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具，也可以考虑 [向日葵](https://sunlogin.oray.com/)
 - [uTools](https://u.tools/) - 全平台支持且体验一致的效率工具
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发
 - [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
 - [zy-player](http://zyplayer.fun/) - 资源播放
 - [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download) - 阿里小程序开发
-- [爱思助手](https://www.i4.cn/) - ios
-- [百度网盘](http://pan.baidu.com/download) - 存取资源
+- [爱思助手](https://www.i4.cn/) - ios 助手
+- [百度网盘](http://pan.baidu.com/download) - 存取资源，也可以考虑 [阿里云盘](https://www.aliyundrive.com/)，[城通网盘](https://www.ctfile.com/)
 - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
-- [城通网盘](https://www.ctfile.com/) - 存取资源
 - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
 - [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme) - 听歌
 - [片库](https://www.pianku.li/)
 - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
 - [微信](https://weixin.qq.com/) - 社交
 - [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html) - 微信小程序开发
-- [向日葵](https://sunlogin.oray.com/) - 远程工具
+- [迅雷](https://www.xunlei.com/) - 下载，也可以考虑 [Motrix](https://motrix.app/zh-CN/)，[Neat Download Manager](https://www.neatdownloadmanager.com/)，[BitComet](https://www.bitcomet.com/)，[uTorrent](https://www.utorrent.com/)
+- [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/)
 
 自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
 
@@ -63,25 +60,28 @@
 ### 浏览器插件
 
 - Allow CORS: Access-Control-Allow-Origin
+- BitWarden
 - Gitako - 便捷查看 Github
+- IE Tab
 - Lighthouse - 网页性能测试
 - React Developer Tools - react 浏览器调试工具
+- Sync Sofa
 - uBlock Origin - 广告屏蔽，配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - Vue.js devtools - vue 浏览器调试工具
+- Wappalyzer
+- Window Resizer
 - 哔哩哔哩助手
 
 ## Windows
 
-- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
-- [7zip](https://www.7-zip.org/) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
 - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
-- [PowerToys](https://github.com/microsoft/PowerToys) - 官方实用工具
 - [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
 - [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
+- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
 - [万彩办公大师](http://www.wofficebox.com/) - 小工具箱
 - [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 
@@ -89,25 +89,23 @@
 
 - [AltStore](https://altstore.io/) - iOS
 - [Bob](https://github.com/ripperhe/Bob#readme) - 翻译
-- [Charles](https://xclient.info/s/charles.html) - 抓包
-- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示当前程序的快捷键列表
-- [Days Matter](https://apps.apple.com/cn/app/%E5%80%92%E6%95%B0%E6%97%A5-days-matter/id406170251) - 记录倒数日和正数日
+- [FlyKey](https://www.better365.cn/FlyKey.html) - 显示快捷键列表，也可以考虑 [CheatSheet](https://www.mediaatelier.com/CheatSheet/)
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
-- [iShot](https://apps.apple.com/cn/app/ishot-%E6%88%AA%E5%9B%BE-%E9%95%BF%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094) - 截图、长截图、贴图、录屏工具
+- [iShot](https://www.better365.cn/ishot.html) - 截图、长截图、贴图、录屏工具
 - [itsycal](https://www.mowglii.com/itsycal/) - 日历
 - [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
 - Sketch - 设计稿查看
 - [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
-- [NTFSTool](https://github.com/ntfstool/ntfstool/blob/master/README-CN.md#ntfs-tool) - 支持读写 NTFS，不支持 Big Sur 和 M1，建议考虑[赤友 NTFS 助手](https://www.ntfsformac.com/) 和 [Mounty](https://mounty.app/)
+- [Mounty](https://mounty.app/) - 支持读写 NTFS，也可以考虑 [赤友 NTFS 助手](https://www.ntfsformac.com/)
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
 - [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
 - [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
 - [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
 - [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
 - [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
-- [超级右键](https://apps.apple.com/cn/app/%E8%B6%85%E7%BA%A7%E5%8F%B3%E9%94%AE-irightmouse/id1497428978) - 补全了 macOS 的右键菜单缺陷，适用于 Finder
-- [剪映专业版](https://apps.apple.com/cn/app/%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/id1529999940) - 视频处理
+- [超级右键](https://www.better365.cn/irightmouse.html) - 补全了 macOS 的右键菜单缺陷，适用于 Finder
+- [剪映专业版](https://lv.ulikecam.com/) - 视频处理
 - [看图](https://kantu.qq.com/)
 - [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme) - 防撤回
 
@@ -115,14 +113,14 @@
 
 ### Homebrew
 
-挂梯子，按照[官网](https://brew.sh/index_zh-cn)安装。
+挂梯子，按照 [官网](https://brew.sh/index_zh-cn) 安装。
 
 #### 配置 Homebrew 镜像源
 
 - [清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
-- [中科大镜像源](https://mirrors.ustc.edu.cn/)
+- [中国科学技术大学镜像源](https://mirrors.ustc.edu.cn/)
 
-使用 bash 就修改`~/.bash_profile`，使用 zsh 就修改`~/.zshrc`。
+使用 `bash` 就修改 `~/.bash_profile`，使用 `zsh` 就修改 `~/.zshrc`。
 
 #### 安装相关依赖
 
@@ -137,10 +135,6 @@ sudo git lfs install --system
 brew install openjdk
 brew install openssh
 brew install svn
-brew install --cask openineditor-lite
-brew install --cask openinterminal-lite
-brew install --cask responsively
-brew install --cask rectangle
 ```
 
 - [git](https://git-scm.com/)
@@ -149,12 +143,8 @@ brew install --cask rectangle
 - [openjdk](https://openjdk.java.net/)
 - [openssh](https://www.openssh.com/)
 - [svn](https://subversion.apache.org/)
-- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal)
-- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal)
-- [ResponsivelyApp](https://responsively.app/)
-- [Rectangle](https://github.com/rxhanson/Rectangle#readme)
 
-`ssh -v SERVER_IP`可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是`/etc/ssh/ssh_config`，安装 openssh 之后变成了`/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
+`ssh -v SERVER_IP` 可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是 `/etc/ssh/ssh_config`，安装 openssh 之后变成了 `/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
 ```shell
 # 软链接
@@ -169,9 +159,9 @@ brew update && brew upgrade && brew cleanup && brew doctor
 
 ### oh-my-zsh
 
-挂梯子，按照[官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki)安装。
+挂梯子，按照 [官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki) 安装。
 
-打开`~/.zshrc`进行配置，最后不要忘记执行`source ~/.zshrc`。
+打开 `~/.zshrc` 进行配置，最后不要忘记执行 `source ~/.zshrc`。
 
 ```shell
 # If you come from bash you might have to change your $PATH.
@@ -300,7 +290,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 ```
 
-另外修改`~/.oh-my-zsh/themes/robbyrussell.zsh-theme`。
+另外修改 `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`。
 
 ```shell
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
@@ -413,7 +403,7 @@ npm update -g --registry=https://registry.npm.taobao.org
 }
 ```
 
-这样做会用`dart-sass`代替`node-sass`，但可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)。
+这样做会用 `dart-sass` 代替 `node-sass`，但可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)。
 
 ## vscode
 
@@ -628,15 +618,15 @@ npm update -g --registry=https://registry.npm.taobao.org
 {
   "editor.colorScheme": "Atom One Dark",
   "editor.fontFamily": "Menlo",
-  "editor.fontFmyCHS": "Hei",
+  "editor.fontFmyCHS": "华文黑体",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/npm"
 }
 
 ```
