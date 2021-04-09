@@ -29,7 +29,7 @@
 - [hexo](https://hexo.io/)
 - [vuepress](https://vuepress.vuejs.org/)
   - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
-  - [vuepress-next](https://vuepress.github.io/)
+  - [vuepress-next](https://vuepress2.netlify.app/)
 - [nuxt](https://nuxtjs.org/)
 - [vitepress](https://vitepress.vuejs.org/)
   - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
@@ -165,23 +165,23 @@
 ### Vue 系
 
 - 桌面端网页
-  - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [nuxt](https://nuxtjs.org/)
+  - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [fes](https://winixt.gitee.io/fesjs/zh/) / [nuxt](https://nuxtjs.org/)
   - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
   - [vue-use](https://vueuse.org/)
 - 移动端网页
-  - (vue + vue-router + vuex) / nuxt
+  - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / [nut-ui](https://nutui.jd.com/) / [vant](https://vant-contrib.gitee.io/vant/)
   - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
   - [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/) + [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui#readme) + [uview-ui](https://uviewui.com/)
 - 桌面端应用
-  - (vue + vue-router + vuex) / nuxt
+  - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / element / element-plus / ant-design-vue-next
   - vue-use
   - electron
 
-[vue-next](https://v3.cn.vuejs.org/) [vue-router-next](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/)
+[vue-next](https://v3.cn.vuejs.org/) [vue-router-next](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/) [vue-cli-next](https://next.cli.vuejs.org/zh/)
 
 ### React 系
 
@@ -476,8 +476,9 @@
   - [vant](https://youzan.github.io/vant/)
   - [更多](https://github.com/topics/vue)
 - cli
-  - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
   - [nuxt](https://zh.nuxtjs.org/)
+  - [fes](https://winixt.gitee.io/fesjs/zh/)
+  - [vue-cli](https://cli.vuejs.org/) - 需要手动支持 ssr
   - [quasar](https://quasar.dev/)
   - [ream (WIP)](https://ream.dev/)
   - [ssr](https://github.com/ykfe/ssr#readme)
