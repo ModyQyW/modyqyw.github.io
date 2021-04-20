@@ -28,11 +28,15 @@ const vssuePluginConfig =
       };
 
 module.exports = config({
-  title: "ModyQyW's Site",
-  description:
-    '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
   locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: "ModyQyW's Site",
+      description:
+        '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
+    },
     '/en/': {
+      lang: 'en-US',
       title: "ModyQyW's Site",
       description:
         'English version is on progress. Personal website based on vuepress and vuepress-theme-hope. Please try to force a refresh if you have any problems.',
@@ -40,7 +44,6 @@ module.exports = config({
   },
   themeConfig: {
     // 主题配置 https://vuepress-theme-hope.github.io/config/theme/
-    baseLang: 'zh-CN',
     author: 'ModyQyW <wurui7@mail3.sysu.edu.cn>',
     nav: [
       { text: '首页', link: '/' },
