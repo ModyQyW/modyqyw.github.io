@@ -636,11 +636,15 @@
     - ui
       - [官方提供](https://rax.js.org/docs/components/about) 一部分
 - 衍生
+  - [react-typescript-cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
   - [preact](https://preactjs.com/) - 类 react 库
   - [fre](https://github.com/yisar/fre) - 类 react 库
   - [inferno](https://infernojs.org/) - 类 react 库
   - [loadable-components](https://loadable-components.com/)
   - [react-loadable](https://github.com/jamiebuilds/react-loadable#readme)
+  - [flux](https://facebook.github.io/flux/)
+  - [immutable.js](https://immutable-js.github.io/immutable-js/docs/)
+  - [immer](https://immerjs.github.io/immer/)
   - [styled-components](https://styled-components.com/) - css-in-js
   - [emotion](https://emotion.sh/) - css-in-js
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 表格解决方案，高效渲染大型列表和表格数据的 react 组件

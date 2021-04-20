@@ -141,6 +141,9 @@
   - [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
   - [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
   - [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
+  - [程序员如何优雅地赚零花钱](https://howto-make-more-money-easychen.vercel.app/)
+  - [一人公司方法论](https://github.com/easychen/one-person-businesses-methodology#readme)
+  - [生产力工具学习路径指南](https://tool.kaopubear.top/)
   - [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
   - [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
   - [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
@@ -151,10 +154,13 @@
   - [如何写前端简历](https://mp.weixin.qq.com/s/py_HLqOjNdL4l0CZHjMwqw)
   - [Hacker Laws - 对开发人员有用的定律、理论、原则和模式](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
   - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
+  - css 权威指南
   - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
   - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
+  - javascript 权威指南
   - [你不知道的 javascript](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
   - [JavaScript 语言精髓与编程实践](https://weread.qq.com/web/reader/bd73243071e43421bd7c139)
+  - [设计模式](https://refactoringguru.cn/design-patterns)
   - [javascript 设计模式](https://weread.qq.com/web/reader/9cf32ff0811e1abd8g0134b2)
   - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
   - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)

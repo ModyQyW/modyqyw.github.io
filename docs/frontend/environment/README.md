@@ -15,6 +15,7 @@
 - [Fiddler](https://www.telerik.com/fiddler) - 抓包，也可以考虑 Charles
 - [FileZilla](https://filezilla-project.org/) - ftp 连接
 - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
+- [Fliqlo](https://fliqlo.com/screensaver/) - 时钟
 - [GeoGebra](https://www.geogebra.org/) - 数学工具
 - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
 - [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，可以使用 [v2ray 路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)，也可以考虑 [520ssr](https://www.520ssr.co/auth/register?code=oiwx)
@@ -89,7 +90,7 @@
 
 - [AltStore](https://altstore.io/) - iOS
 - [Bob](https://github.com/ripperhe/Bob#readme) - 翻译
-- [FlyKey](https://www.better365.cn/FlyKey.html) - 显示快捷键列表，也可以考虑 [CheatSheet](https://www.mediaatelier.com/CheatSheet/)
+- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示快捷键列表，也可以考虑 [FlyKey](https://www.better365.cn/FlyKey.html)
 - [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
 - [IINA](https://iina.io/) - 播放器
 - [iShot](https://www.better365.cn/ishot.html) - 截图、长截图、贴图、录屏工具
@@ -284,9 +285,18 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/opt/openjdk/bin:$PATH
 
 # homebrew
+# https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
 export PATH=/usr/local/sbin:$PATH
 export HOMEBREW_CORE_GIT_REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+# v2ray
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export all_proxy=socks5://127.0.0.1:7890
+
+# qspace
+alias qs='open -a QSpace'
 
 ```
 
@@ -618,15 +628,15 @@ npm update -g --registry=https://registry.npm.taobao.org
 {
   "editor.colorScheme": "Atom One Dark",
   "editor.fontFamily": "Menlo",
-  "editor.fontFmyCHS": "Hei",
+  "editor.fontFmyCHS": "华文黑体",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.20.2/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/npm"
 }
 
 ```
