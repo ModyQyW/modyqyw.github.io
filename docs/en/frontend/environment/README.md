@@ -25,6 +25,7 @@
 - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
 - [OBS](https://obsproject.com/) - 录制
 - [Postman](https://www.getpostman.com/) - 请求，也可以考虑 [ApiPost](https://www.apipost.cn/)
+- [Prince](https://www.princexml.com/) - 把 HTML 转换成 PDF
 - [QQ](https://im.qq.com/download/) - 社交
 - [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 响应式开发
 - [SourceTree](https://www.sourcetreeapp.com/) - git gui
@@ -32,6 +33,7 @@
 - [uTools](https://u.tools/) - 全平台支持且体验一致的效率工具
 - [Visual Studio Code](https://code.visualstudio.com/) - 开发
 - [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
+- [you-get](https://github.com/soimort/you-get#readme) - 下载网络媒体资源
 - [zy-player](http://zyplayer.fun/) - 资源播放
 - [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download) - 阿里小程序开发
 - [爱思助手](https://www.i4.cn/) - ios 助手
@@ -114,18 +116,12 @@
 
 ### Homebrew
 
-挂梯子，按照 [官网](https://brew.sh/index_zh-cn) 安装。
-
-#### 配置 Homebrew 镜像源
-
-- [清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
-- [中国科学技术大学镜像源](https://mirrors.ustc.edu.cn/)
-
-使用 `bash` 就修改 `~/.bash_profile`，使用 `zsh` 就修改 `~/.zshrc`。
-
-#### 安装相关依赖
+挂梯子，按照 [官网](https://brew.sh/index_zh-cn) 安装，然后安装相关依赖。
 
 ```shell
+brew tap homebrew/cask-drivers
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 brew install git
 git config --global core.autocrlf false
 git config --global init.defaultBranch main
@@ -138,6 +134,9 @@ brew install openssh
 brew install svn
 ```
 
+- [homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers#readme)
+- [homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts#readme)
+- [homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions#readme)
 - [git](https://git-scm.com/)
 - [git-flow](https://www.gitflow.com/)
 - [git-lfs](https://git-lfs.github.com/)
@@ -356,10 +355,9 @@ selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
 
 ### 全局依赖
 
-使用以下命令安装全局依赖，包括 `vue`，`nuxt`，`react`，`next`，`taro`，`rax`，`remax`，`expo`，`egg`，`nest`，`typescript`，`less`，`sass` 等项目常用 cli。
-
 ```shell
-npm i -g --registry=https://registry.npm.taobao.org @antfu/ni
+npm i -g --registry=https://registry.npm.taobao.org @commitlint/cli
+npm i -g --registry=https://registry.npm.taobao.org @ls-lint/ls-lint
 npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
@@ -377,23 +375,23 @@ npm i -g --registry=https://registry.npm.taobao.org create-remax-app
 npm i -g --registry=https://registry.npm.taobao.org create-ssr-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org less
+npm i -g --registry=https://registry.npm.taobao.org markdownlint-cli
 npm i -g --registry=https://registry.npm.taobao.org nativefier
 npm i -g --registry=https://registry.npm.taobao.org np
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
 npm i -g --registry=https://registry.npm.taobao.org pnpm
-npm i -g --registry=https://registry.npm.taobao.org postcss
-npm i -g --registry=https://registry.npm.taobao.org postcss-cli
 npm i -g --registry=https://registry.npm.taobao.org prettier
 npm i -g --registry=https://registry.npm.taobao.org rax-cli
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
 npm i -g --registry=https://registry.npm.taobao.org sass
 npm i -g --registry=https://registry.npm.taobao.org serve
+npm i -g --registry=https://registry.npm.taobao.org stylelint
 npm i -g --registry=https://registry.npm.taobao.org ts-node
 npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
 ```
 
-使用 nvm-windows 时重新执行以上命令即可更新，否则执行下面的命令全局更新。
+使用 `nvm-windows` 时重新执行以上命令即可更新，否则执行下面的命令全局更新。
 
 ```shell
 npm update -g --registry=https://registry.npm.taobao.org
@@ -635,8 +633,8 @@ npm update -g --registry=https://registry.npm.taobao.org
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.22.0/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v12.22.1/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v12.22.1/bin/npm"
 }
 
 ```
