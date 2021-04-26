@@ -14,15 +14,15 @@
   "devDependencies": {
     "@babel/core": "~7.13.16",
     "@babel/eslint-parser": "~7.13.14",
-    "@modyqyw/fabric": "~1.27.0",
+    "@modyqyw/fabric": "~1.28.1",
     "cross-env": "~7.0.3",
-    "eslint": "~7.24.0",
+    "eslint": "~7.25.0",
     "lint-md-cli": "~0.1.2",
     "markdownlint-cli": "~0.27.1",
     "prettier": "~2.2.1",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.14.4"
+    "vuepress-theme-hope": "~1.15.0"
   },
   "husky": {
     "hooks": {
@@ -32,7 +32,7 @@
   },
   "lint-staged": {
     "*.json": "prettier --write",
-    "*.md": "markdownlint --fix && lint-md --fix",
+    "*.{md,markdown}": "markdownlint --fix && lint-md --fix",
     "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }
