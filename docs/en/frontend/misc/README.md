@@ -381,8 +381,8 @@
 
 - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
   - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
-- [css bem](http://getbem.com/)
-- [css modules](https://github.com/css-modules/css-modules#readme)
+- [css bem](http://getbem.com/) - CSS 命名方法
+- [css modules](https://github.com/css-modules/css-modules#readme) - CSS 模块化
 - [oocss](http://oocss.org/)
 - [smacss](http://smacss.com/)
 - [postcss](https://postcss.org/)
@@ -414,6 +414,8 @@
 - [query-string](https://www.npmjs.com/package/query-string)
 - [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
 - [qrcode](https://github.com/soldair/node-qrcode#readme)
+- [change-case](https://github.com/blakeembrey/change-case#readme)
+- [bowser](https://github.com/lancedikson/bowser#readme)
 - [classnames](https://github.com/JedWatson/classnames#readme)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
 - [page.js](http://visionmedia.github.io/page.js/) - 路由
@@ -555,6 +557,7 @@
     - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
   - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
   - [mobx](https://mobx.js.org/)
+  - [recoil](https://recoiljs.org/)
 - ui
   - [material-ui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
@@ -586,6 +589,7 @@
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -611,6 +615,7 @@
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
@@ -625,6 +630,7 @@
         - [unstated-next](https://github.com/jamiebuilds/unstated-next#readme)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
+      - [recoil](https://recoiljs.org/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
