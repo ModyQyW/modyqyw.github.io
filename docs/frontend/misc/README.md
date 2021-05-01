@@ -2,18 +2,72 @@
 
 ## 说明
 
-这个部分覆盖了项目开发的很多方面，我把它用作速查表。所有内容仅供参考。
+这个部分覆盖了项目开发的很多方面，我把它用作速查表。所有内容仅供参考。如果有条件，务必阅读原版书籍。
 
-## 基本概念
+## 计算机基础
 
-- [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
-
-## 基本知识查阅
-
-- [w3c](https://www.w3.org/)
-- [mdn](https://developer.mozilla.org/)
-- [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
-- [css-tricks](https://css-tricks.com/)
+- 英语
+  - 新概念英语
+  - 翻译工具 [deepl](https://www.deepl.com/)
+- 线性代数
+  - [线性代数及其应用](https://book.douban.com/subject/1425950/)
+- 离散数学
+  - [离散数学及其应用](https://book.douban.com/subject/34866266/)
+- 计算机基础
+  - [国防科技大学 - 大学计算机基础](https://www.icourse163.org/course/NUDT-1001614002)
+- 计算机组成原理
+  - [华中科技大学 - 计算机组成原理](https://www.icourse163.org/course/HUST-1003159001)
+  - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
+  - [计算机组成与设计](https://book.douban.com/subject/26604008/)
+- 操作系统原理
+  - [哈尔滨工业大学 - 操作系统](https://www.icourse163.org/course/HIT-1002531008)
+  - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
+  - [操作系统概念](https://book.douban.com/subject/30297919/)
+- 计算机网络原理和安全
+  - [哈尔滨工业大学 - 计算机网络](https://www.icourse163.org/course/HIT-154005)
+  - [图解网络硬件](https://weread.qq.com/web/reader/92e326e0718ff67892eea53)
+  - [图解 TCP/IP](https://book.douban.com/subject/24737674/)
+  - [图解 HTTP](https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca)
+  - [图解密码技术](https://book.douban.com/subject/26265544/)
+  - [cors](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+  - 网络基本组成
+  - 五层模型
+  - 七层模型
+  - 请求类型
+  - 报文
+  - 请求流程
+  - 抓包分析，如 wireshark，charles，fiddler，lightproxy
+  - 请求分析，如 postman，paw，hoppscotch
+  - https
+  - 浏览器存储，如 cookies，localStorage，sessionStorage
+  - 加解密算法，如 des，3des，dsa，rsa
+  - xss，csrf 等
+  - 内存安全策略 csp
+  - owasp 安全风险
+- 多媒体技术基础
+  - 图像，如 bmp，jpg，jpeg，png，apng，gif，svg，webp，avif
+  - 图像压缩算法
+  - 音频，如 wav，wma，mp3
+  - 视频，如 mpg，mpeg，avi，mov，asf，wmv，flv，f4v，mp4，amv，rmvb
+  - 视频分片
+- 程序设计入门 - C/C++/Java 均可，避开谭浩强
+  - [C++ 程序设计语言](https://book.douban.com/subject/4604591/)
+  - [C++ Primer](https://weread.qq.com/web/reader/ff732fe072021a24ff7bb24)
+  - [C++ Primer Plus](https://weread.qq.com/web/reader/a99327c071d07b0da996784)
+- 数据结构和算法
+  - [算法可视化工具](https://github.com/algorithm-visualizer/algorithm-visualizer#readme)
+  - [小浩算法](https://www.geekxh.com/)
+  - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
+  - [算法之道](https://book.douban.com/subject/4249686/)
+- 正则表达式
+  - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
+- 版本控制
+  - svn
+  - git
+    - [Pro Git](https://git-scm.com/book/zh/v2)
+- 设计模式
+  - [22 种设计模式](https://refactoringguru.cn/design-patterns)
+- [为什么这么设计系列文章](https://draven.co/whys-the-design/)
 
 ## 编程用字体
 
@@ -23,6 +77,77 @@
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
 - [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
+
+## 前端基础
+
+- [w3c](https://www.w3.org/)
+- [mdn](https://developer.mozilla.org/)
+- [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
+- [css-tricks](https://css-tricks.com/)
+- [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
+- 网页原生 - html + css + js
+  - [FreeCodeCamp](https://www.freecodecamp.org/learn)
+  - [前端小课](https://lefex.github.io/fe-mini-course/)
+  - [前端九部](https://www.yuque.com/fe9/basic)
+  - [学习 CSS 布局](http://zh.learnlayout.com/)
+  - [CSS 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
+  - [CSS 权威指南](https://book.douban.com/subject/33398314/)
+  - [you-need-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/)
+  - [css 晦涩难懂的点](https://juejin.im/post/6888102016007176200)
+  - [为什么很多 web 项目还是使用 px，而不是 rem](https://www.zhihu.com/question/313971223/answer/628236155)
+  - [The Modern JavaScript Tutorial](https://javascript.info/) - [中文版](https://zh.javascript.info/)
+  - [JavaScript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
+  - [ES6 入门](http://es6.ruanyifeng.com/) - [镜像](https://wangdoc.com/es6/)
+  - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
+  - [JavaScript 权威指南](https://book.douban.com/subject/35396470/)
+  - [JavaScript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+  - [你不知道的 JavaScript（上）](https://weread.qq.com/web/reader/8c632230715c01a18c683d8)
+  - [你不知道的 JavaScript（中）](https://weread.qq.com/web/reader/f5d32510715c0190f5ddc42)
+  - [你不知道的 JavaScript（下）](https://weread.qq.com/web/reader/c1232d00715c016fc1234b3)
+  - [JavaScript 语言精髓与编程实践](https://weread.qq.com/web/reader/bd73243071e43421bd7c139)
+  - [Node.js 入门教程](http://nodejs.cn/learn)
+  - html 基础，包括语义化，表单和验证，可访问性等
+  - css 基础，包括定位，显示，盒模型，浮动，弹性布局，排版，视觉效果，响应式布局，自适应布局等
+  - js es5 和 es6+
+- 包管理器
+  - [npm](https://docs.npmjs.com/)
+  - [yarn](https://classic.yarnpkg.com/)
+  - [pnpm](https://pnpm.js.org/)
+  - [@antfu/ni](https://github.com/antfu/ni#readme)
+- css 处理器
+  - [postcss](https://postcss.org/)
+  - [less](http://lesscss.org/)
+  - [sass/scss](https://sass-lang.com/)
+  - [stylus](https://stylus-lang.com/)
+- 规范
+  - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
+  - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
+  - [EditorConfig](https://editorconfig.org/)
+  - [ls-lint](https://ls-lint.org/)
+  - [prettier](https://prettier.io/)
+  - [markdownlint](https://github.com/DavidAnson/markdownlint#readme)
+  - [lint-md](https://github.com/lint-md/lint-md#readme)
+  - [eslint](https://eslint.org/)
+  - [stylelint](https://stylelint.io/)
+  - [commitlint](https://commitlint.js.org/)
+  - [commitizen](https://github.com/commitizen/cz-cli#readme)
+  - [husky](https://github.com/typicode/husky#readme)
+  - [lint-staged](https://github.com/okonet/lint-staged#readme)
+  - [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
+- [typescript](https://www.typescriptlang.org/)
+  - [入门教程](https://ts.xcatliu.com/basics)
+  - [官方教程](https://www.typescriptlang.org/docs/home.html)
+  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
+  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
+- 数据结构和算法
+  - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
+  - [IAlgorithms](https://ziyi2.github.io/algorithms/)
+  - [算法 101](https://101.zoo.team/)
+- 正则表达式
+  - [JavaScript 正则迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
+- 设计模式
+  - [javascript 设计模式](https://weread.qq.com/web/reader/9cf32ff0811e1abd8g0134b2)
+  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
 
 ## 静态网站生成
 
@@ -42,28 +167,9 @@
 - [hugo](https://gohugo.io/)
 - [jekyll](https://jekyllrb.com/)
 
-## 开发语言
-
-- css
-  - [css 世界](https://weread.qq.com/web/reader/00932ab0715a41e90093ab5)
-- javascript
-  - [现代 JavaScript 教程](https://zh.javascript.info)
-  - [javascript 编程精解](https://weread.qq.com/web/reader/14632cb071d2827314677c6kc81322c012c81e728d9d180)
-  - [JavaScript 高级程序设计](https://weread.qq.com/web/reader/fd332480811e4dd5dg011874)
-  - [javascript 设计模式](https://weread.qq.com/web/reader/9cf32ff0811e1abd8g0134b2)
-  - [javascript 设计模式与开发实践](https://weread.qq.com/web/reader/6bf3215071a123016bf0b74)
-  - [javascript 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
-- [typescript](https://www.typescriptlang.org/)
-  - [入门教程](https://ts.xcatliu.com/basics)
-  - [官方教程](https://www.typescriptlang.org/docs/home.html)
-  - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
-  - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
-- [elm](https://elm-lang.org/) - 观望
-- [rescript](https://rescript-lang.org/) - 观望
-
 ## 界面和交互设计
 
-### 书籍
+### 资料
 
 - [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
 - [Web 界面设计](https://book.douban.com/subject/3821157/)
@@ -71,6 +177,7 @@
 - [写给大家看的设计书](https://book.douban.com/subject/3323633/)
 - [设计心理学](https://book.douban.com/subject/26742341/)
 - [Web 表单设计](https://book.douban.com/subject/4886100/)
+- [图标设计类型和风格总结](https://www.uisdc.com/icon-design-style)
 
 ### 体系
 
@@ -381,6 +488,9 @@
 
 - [normalize](https://github.com/necolas/normalize.css) - 重置 css 样式
   - [ress](https://github.com/filipelinhares/ress) - 基于 normalize.css 增强，重置 css 样式
+  - [reseter.css](https://github.com/krishdevdb/reseter.css)
+  - [sanitize.css](https://csstools.github.io/sanitize.css/)
+  - [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
 - [css bem](http://getbem.com/) - CSS 命名方法
 - [css modules](https://github.com/css-modules/css-modules#readme) - CSS 模块化
 - [oocss](http://oocss.org/)
@@ -399,7 +509,6 @@
   - [primer](https://primer.style/css)
   - [umi.css](https://www.hua-mi.cn/umi-css/)
   - [aqua.css](https://aquacss.netlify.app/)
-- [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
 - [lodash](https://lodash.com/)
   - [xe-utils](https://x-extends.gitee.io/xe-utils/)
   - [futil-js](https://github.com/smartprocure/futil-js#readme)
@@ -412,10 +521,10 @@
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
 - [qs](https://www.npmjs.com/package/qs)
 - [query-string](https://www.npmjs.com/package/query-string)
-- [change-case](https://github.com/blakeembrey/change-case#readme)
-- [bowser](https://github.com/lancedikson/bowser#readme)
 - [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
 - [qrcode](https://github.com/soldair/node-qrcode#readme)
+- [change-case](https://github.com/blakeembrey/change-case#readme)
+- [bowser](https://github.com/lancedikson/bowser#readme)
 - [classnames](https://github.com/JedWatson/classnames#readme)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
 - [page.js](http://visionmedia.github.io/page.js/) - 路由
@@ -563,19 +672,23 @@
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
   - [antd](https://ant.design/)
+  - [uiw](https://uiwjs.github.io/#/)
+  - [rsuite](https://rsuitejs.com/)
   - [yep-react](https://yep-react.jd.com/)
   - [zarm](https://zarm.design/)
   - [antd-mobile-next](https://next.mobile.ant.design/)
-  - [antd-mobile-plus](https://antd-plus.alitajs.com/)
+    - [antd-mobile-plus](https://antd-plus.alitajs.com/)
   - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
-    - [blitz](https://github.com/blitz-js/blitz) - 基于 next 再封装，全栈框架
+    - [blitz](https://github.com/blitz-js/blitz#readme)
+    - [after](https://github.com/jaredpalmer/after.js#readme)
   - [umi](https://umijs.org/zh-CN) - 带微前端解决方案
   - [ice](https://ice.work/) - 带微前端解决方案
   - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
+    - [react-app-rewired](https://github.com/timarney/react-app-rewired#readme) - 不弹出地修改配置
+    - [craco](https://github.com/gsoft-inc/craco) - 不弹出地修改配置
   - [gatsby](https://www.gatsbyjs.com/)
-  - [after](https://github.com/jaredpalmer/after.js#readme)
   - [ssr](https://github.com/ykfe/ssr#readme)
 - app
   - react-native
@@ -593,13 +706,13 @@
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
-      - [teaset](https://github.com/rilyu/teaset#readme)
-      - [antd-rn](https://rn.mobile.ant.design/)
-      - [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn#readme)
-      - [react-native-material-ui](https://github.com/xotahal/react-native-material-ui#readme)
-      - [react-native-material-kit](https://github.com/xinthink/react-native-material-kit#readme)
       - [react-native-ui-lib](https://wix.github.io/react-native-ui-lib/)
+      - [uiw-react-native](https://github.com/uiwjs/react-native-uiw#readme)
+      - [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn#readme)
       - [native-base](https://nativebase.io/)
+      - [teaset](https://github.com/rilyu/teaset#readme)
+        - [teaset-pro](https://github.com/lzhd/teaset-pro#readme) - 支持 0.64
+      - [antd-rn](https://rn.mobile.ant.design/) - 等待 5.x
     - cli
       - [expo](https://docs.expo.io/)
   - alita
@@ -617,9 +730,9 @@
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
     - ui
-      - [taro-ui](https://taro-ui.jd.com/#/docs/introduction)
+      - [taro-ui](https://taro-ui.jd.com/#/docs/introduction) - taro 2
+        - [taro-ink](https://docs.vdfor.top/taro-ink/) - taro 3
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
-      - [@tarojsx/ui](https://github.com/tarojsx/ui#readme)
   - remax
     - [文档](https://remaxjs.org/)
     - 路由
@@ -693,6 +806,8 @@
   - [restful api](https://restfulapi.net/)
   - [graphql](https://graphql.org/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
+  - [Node.js 入门教程](http://nodejs.cn/learn)
+  - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
   - [使用 Node.js 构建 JavaScript 应用程序](https://docs.microsoft.com/zh-cn/learn/paths/build-javascript-applications-nodejs/)
   - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap#readme)
   - [web 全栈体系](https://hejialianghe.gitee.io/)
@@ -717,10 +832,70 @@
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
 
+## 面试
+
+- [木及简历](https://resume.mdedit.online/)
+- [如何写前端简历](https://mp.weixin.qq.com/s/py_HLqOjNdL4l0CZHjMwqw)
+- [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
+- [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
+- [前端面经总结](http://interview.poetries.top/)
+- [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
+- [前端每日一题](https://lgwebdream.github.io/FE-Interview/)
+- [前端每日一题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
+- [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+- [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+
 ## 开源
 
 - [为什么要开源](https://www.zhihu.com/question/33573424)
 - [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
+
+## CLI
+
+- [commander](https://github.com/tj/commander.js#readme)
+- [chalk](https://github.com/chalk/chalk#readme)
+- [yargs](http://yargs.js.org/)
+- [inquirer](https://github.com/SBoudrias/Inquirer.js#readme)
+- [ora](https://github.com/sindresorhus/ora#readme)
+- [@vue/cli](https://github.com/vuejs/vue-cli#readme)
+- [ncc](https://github.com/vercel/ncc#readme)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
+- [serve](https://github.com/vercel/serve#readme)
+- [ts-node](https://github.com/TypeStrong/ts-node)
+
+## 持续成长
+
+- [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
+- [免费计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+- [编程书籍](https://github.com/XiangLinPro/IT_book#readme)
+- [QSCTech - zju-icicles](https://github.com/QSCTech/zju-icicles) - 浙江大学课程攻略共享计划
+- [PKUanonym - REKCARC-TSC-UHT](https://github.com/PKUanonym/REKCARC-TSC-UHT) - 清华大学计算机系课程攻略
+- [ysyisyourbrother - SYSU_Notebook](https://github.com/ysyisyourbrother/SYSU_Notebook) - 中山大学资料分享
+- [Hacker Laws - 对开发人员有用的定律、理论、原则和模式](https://github.com/nusr/hacker-laws-zh#%E4%BB%8B%E7%BB%8D)
+- [前端工程化：体系设计与实践](https://weread.qq.com/web/reader/65832f00716ce84e658ac89)
+- [关于前端学习路线的一些建议](https://mp.weixin.qq.com/s/ikVW2kks3wS5UdrUH9vDRQ)
+- [WEB 前端菜鸟，感觉很迷茫，该怎么做？](https://mp.weixin.qq.com/s/8YQD3VlAPagMldww3e9S2A)
+- [前端如何在繁忙的业务中提升自己](https://mp.weixin.qq.com/s/7VddgPmY8bdo9uBSdH7guA)
+- [阿里巴巴前端 P6/P6+ 水平要求](https://www.zhihu.com/question/61281984/answer/1306626251)
+- [写给初中级前端的高级进阶指南](https://mp.weixin.qq.com/s/0jtVxlh-toEmNbwJpIfAuA)
+- [前端转行之路](https://mp.weixin.qq.com/s/eiCnTATNLrSnkDi25IbhnA)
+- [前端精读周刊](https://github.com/dt-fe/weekly)
+- [秋风的笔记](https://qiufeng.blue/)
+- [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
+- [前端入门到进阶图文教程](https://github.com/qianguyihao/Web#readme)
+- [前端进阶之道](https://yuchengkai.cn/home/)
+- [木易杨前端进阶](https://muyiy.cn/)
+- [前端工程化](https://github.com/fouber/blog)
+
+## 自媒体
+
+- [文章同步助手](https://www.wechatsync.com/)
+
+## 独立开发者
+
+- [生产力工具学习路径指南](https://tool.kaopubear.top/)
+- [程序员如何优雅地赚零花钱](https://howto-make-more-money-easychen.vercel.app/)
+- [一人公司方法论](https://github.com/easychen/one-person-businesses-methodology#readme)
 
 ## 参考
 
