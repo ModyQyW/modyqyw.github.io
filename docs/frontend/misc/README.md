@@ -233,12 +233,16 @@
 - [Figma](https://www.figma.com/) - 协同界面设计工具
 - [蓝湖](https://lanhuapp.com/) - 产品设计协作平台
 - [Draw.io](https://app.diagrams.net/) - 思维导图，功能结构图等相关图例
-- MS Office - 产品需求文档等相关文档
-- WPS Office - 产品需求文档等相关文档
+- [MS Office](https://www.office.com/) - 产品需求文档等相关文档
+- [WPS Office](https://www.wps.cn/) - 产品需求文档等相关文档
 - [Storybook](https://storybook.js.org/) - 组织、构建 UI 组建
+- [腾讯文档](https://docs.qq.com/)
+- [飞书文档](https://www.feishu.cn/product/docs)
+- [石墨文档](https://shimo.im/)
 
 ## 代码管理
 
+- svn
 - git
   - [pro git](https://git-scm.com/book/en/v2)
 - [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版本 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
@@ -288,7 +292,13 @@
   - vue-use
   - electron
 
-[vue-next](https://v3.cn.vuejs.org/) [vue-router-next](https://next.router.vuejs.org/zh/) [vuex-next](https://next.vuex.vuejs.org/) [vue-cli-next](https://next.cli.vuejs.org/zh/)
+[vue-next](https://v3.cn.vuejs.org/)
+
+[vue-router-next](https://next.router.vuejs.org/zh/)
+
+[vuex-next](https://next.vuex.vuejs.org/)
+
+[vue-cli-next](https://next.cli.vuejs.org/zh/)
 
 ### React 系
 
@@ -342,10 +352,6 @@
 - [jsdelivr](https://www.jsdelivr.com/)
 
 ## 构建
-
-这一部分主要想要展示 CLI 主要工作的依赖，你也可以在这部分了解 CLI 所做的一些工作。
-
-实际开发时，非常建议使用 CLI 初始化然后开发。当然，做一个自己的模板，又或者用 [yeoman](https://yeoman.io/) 或者 [oclif](https://oclif.io/) 做一个自己的脚手架，都是不错的选择，但要记得持续维护。
 
 - [cross-env](https://github.com/kentcdodds/cross-env#readme) - 设置跨平台环境变量
 - [rimraf](https://github.com/isaacs/rimraf#readme) - 跨平台删除文件
@@ -418,6 +424,8 @@
   - [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack#readme)
 - [vite](https://github.com/vitejs/vite#readme)
   - [awesome-vite](https://github.com/vitejs/awesome-vite#readme)
+
+实际开发时，非常建议使用 CLI 初始化然后开发。当然，做一个自己的模板，又或者用 [yeoman](https://yeoman.io/) 或者 [oclif](https://oclif.io/) 做一个自己的脚手架，都是不错的选择，但要记得持续维护。
 
 ## 调试
 
@@ -570,8 +578,6 @@
 - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
 - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate#readme) - 模板
 - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects#readme) - 使用 html5、css 和 js 构建的迷你项目示例
-- [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
-- [JavaScript 正则迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
 
 ## vue 及相关生态
 
@@ -802,6 +808,35 @@
 - [snabbdom](https://github.com/snabbdom/snabbdom)
 - [cito.js](https://github.com/joelrich/citojs)
 
+## 面试
+
+- [如何写前端简历](https://mp.weixin.qq.com/s/py_HLqOjNdL4l0CZHjMwqw)
+- [木及简历](https://resume.mdedit.online/)
+- [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
+- [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
+- [前端面经总结](http://interview.poetries.top/)
+- [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
+- [前端每日一题](https://lgwebdream.github.io/FE-Interview/)
+- [前端每日一题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
+- [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
+- [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
+
+## CLI
+
+- [commander](https://github.com/tj/commander.js#readme)
+- [chalk](https://github.com/chalk/chalk#readme)
+- [yargs](http://yargs.js.org/)
+- [yargs-parser](https://github.com/yargs/yargs-parser#readme)
+- [inquirer](https://github.com/SBoudrias/Inquirer.js#readme)
+- [ora](https://github.com/sindresorhus/ora#readme)
+- [rimraf](https://github.com/isaacs/rimraf#readme)
+- [cross-env](https://github.com/kentcdodds/cross-env#readme)
+- [@vue/cli](https://github.com/vuejs/vue-cli#readme)
+- [ncc](https://github.com/vercel/ncc#readme)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
+- [serve](https://github.com/vercel/serve#readme)
+- [ts-node](https://github.com/TypeStrong/ts-node)
+
 ## 服务器端
 
 - 接口规范
@@ -835,39 +870,6 @@
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
 
-## 面试
-
-- [如何写前端简历](https://mp.weixin.qq.com/s/py_HLqOjNdL4l0CZHjMwqw)
-- [木及简历](https://resume.mdedit.online/)
-- [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
-- [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
-- [前端面经总结](http://interview.poetries.top/)
-- [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
-- [前端每日一题](https://lgwebdream.github.io/FE-Interview/)
-- [前端每日一题](https://github.com/Advanced-Frontend/Daily-Interview-Question#readme)
-- [75 个 JavaScript 面试题集锦](https://mp.weixin.qq.com/s/HoltfI8MdE2DIihaWT0RCQ)
-- [前端基础拾遗 90 问](https://juejin.im/post/5e8b261ae51d4546c0382ab4)
-
-## 开源
-
-- [为什么要开源](https://www.zhihu.com/question/33573424)
-- [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
-
-## CLI
-
-- [commander](https://github.com/tj/commander.js#readme)
-- [chalk](https://github.com/chalk/chalk#readme)
-- [yargs](http://yargs.js.org/)
-- [yargs-parser](https://github.com/yargs/yargs-parser#readme)
-- [inquirer](https://github.com/SBoudrias/Inquirer.js#readme)
-- [ora](https://github.com/sindresorhus/ora#readme)
-- [rimraf](https://github.com/isaacs/rimraf#readme)
-- [@vue/cli](https://github.com/vuejs/vue-cli#readme)
-- [ncc](https://github.com/vercel/ncc#readme)
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
-- [serve](https://github.com/vercel/serve#readme)
-- [ts-node](https://github.com/TypeStrong/ts-node)
-
 ## 持续成长
 
 - [免费计算机编程类书籍](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md)
@@ -896,9 +898,13 @@
 
 - [文章同步助手](https://www.wechatsync.com/)
 
+## 开源
+
+- [为什么要开源](https://www.zhihu.com/question/33573424)
+- [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
+
 ## 独立开发者
 
-- [生产力工具学习路径指南](https://tool.kaopubear.top/)
 - [程序员如何优雅地赚零花钱](https://howto-make-more-money-easychen.vercel.app/)
 - [一人公司方法论](https://github.com/easychen/one-person-businesses-methodology#readme)
 
