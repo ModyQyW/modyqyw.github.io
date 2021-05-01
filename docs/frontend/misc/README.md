@@ -371,6 +371,7 @@
   - [webpack 教程](https://www.jiangruitao.com/webpack/)
   - [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
+  - [webpack-nano](https://github.com/shellscape/webpack-nano#readme)
   - plugins
     - [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin#readme)
     - [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer#readme)
@@ -388,6 +389,8 @@
     - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin#readme) - 代替 eslint-loader
     - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin#readme)
     - [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#readme)
+    - [webpackbar](https://github.com/unjs/webpackbar#readme)
+    - [webpack-manifest-plugin](https://github.com/shellscape/webpack-manifest-plugin#readme)
   - loaders
     - [thread-loader](https://github.com/webpack-contrib/thread-loader#readme) - 代替 happy-pack
     - [cache-loader](https://github.com/webpack-contrib/cache-loader#readme)
@@ -731,7 +734,7 @@
       - [recoil](https://recoiljs.org/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction) - taro 2
-        - [taro-ink](https://docs.vdfor.top/taro-ink/) - taro 3
+      - [taro-ink](https://docs.vdfor.top/taro-ink/) - taro 3
       - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
   - remax
     - [文档](https://remaxjs.org/)
@@ -834,8 +837,8 @@
 
 ## 面试
 
-- [木及简历](https://resume.mdedit.online/)
 - [如何写前端简历](https://mp.weixin.qq.com/s/py_HLqOjNdL4l0CZHjMwqw)
+- [木及简历](https://resume.mdedit.online/)
 - [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
 - [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
 - [前端面经总结](http://interview.poetries.top/)
@@ -855,8 +858,10 @@
 - [commander](https://github.com/tj/commander.js#readme)
 - [chalk](https://github.com/chalk/chalk#readme)
 - [yargs](http://yargs.js.org/)
+- [yargs-parser](https://github.com/yargs/yargs-parser#readme)
 - [inquirer](https://github.com/SBoudrias/Inquirer.js#readme)
 - [ora](https://github.com/sindresorhus/ora#readme)
+- [rimraf](https://github.com/isaacs/rimraf#readme)
 - [@vue/cli](https://github.com/vuejs/vue-cli#readme)
 - [ncc](https://github.com/vercel/ncc#readme)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
