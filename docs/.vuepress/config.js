@@ -8,23 +8,15 @@ const repo =
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
     : 'https://gitee.com/ModyQyW/ModyQyW';
 const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
-const vssuePluginConfig =
+const valineConfig =
   mode === 'github'
     ? {
-        platform: 'github',
-        owner: 'ModyQyW',
-        repo: 'modyqyw.github.io',
-        clientId: 'ee62eae699b0c63fb4c2',
-        clientSecret: '68b0ceecccc462ce8bdd73c2c02e261cb355506e',
+        appId: '0erqa01qQhCP7hINNvszO4uN-gzGzoHsz',
+        appKey: 'BpjqRkPYtdcSfd9HoDin3opm',
       }
     : {
-        platform: 'gitee',
-        owner: 'ModyQyW',
-        repo: 'ModyQyW',
-        clientId:
-          '14b93a1f132bd0477d62e8feb82b71936926916e756d31d4476b422d6291cadb',
-        clientSecret:
-          '0c256d3d67fcc006911aa9619e35c83747a22fbaad6a4447dc9450fa6627d626',
+        appId: 'cfEWBPi3cqTW0L7IREu7cO9W-gzGzoHsz',
+        appKey: 'FJchilHoXvSGLhY1nXL9q6qO',
       };
 
 module.exports = config({
@@ -181,16 +173,14 @@ module.exports = config({
     editLinkText: '编辑此页面',
     // 主题功能配置 https://vuepress-theme-hope.github.io/config/theme/feature/
     blog: false,
-    pageInfo: false,
     // 主题插件配置 https://vuepress-theme-hope.github.io/config/theme/plugin/
     mdEnhance: {
       lineNumbers: true,
     },
-    // comment: {
-    //   type: 'vssue',
-    //   ...vssuePluginConfig,
-    // },
-    comment: false,
+    comment: {
+      type: 'valine',
+      ...valineConfig,
+    },
     copyright: false,
     pwa: {
       favicon: '/favicon.ico',
