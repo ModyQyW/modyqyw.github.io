@@ -155,9 +155,10 @@
 - [vuepress](https://vuepress.vuejs.org/)
   - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
   - [vuepress-next](https://vuepress2.netlify.app/)
+  - [vitepress](https://vitepress.vuejs.org/)
+    - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
+- [gridsome](https://gridsome.org/)
 - [nuxt](https://nuxtjs.org/)
-- [vitepress](https://vitepress.vuejs.org/)
-  - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
 - [dumi](https://d.umijs.org/)
 - [docusaurus](https://v2.docusaurus.io/)
 - [gatsby](https://www.gatsbyjs.com/)
@@ -278,10 +279,12 @@
 - 桌面端网页
   - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [fes](https://winixt.gitee.io/fesjs/zh/) / [nuxt](https://nuxtjs.org/)
   - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
+  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/)
   - [vue-use](https://vueuse.org/)
 - 移动端网页
   - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / [nut-ui](https://nutui.jd.com/) / [vant](https://vant-contrib.gitee.io/vant/)
+  - tailwindcss / windicss
   - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
@@ -289,8 +292,9 @@
 - 桌面端应用
   - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / element / element-plus / ant-design-vue-next
+  - tailwindcss / windicss
   - vue-use
-  - electron
+  - electron，nuxt 目前没有插件
 
 [vue-next](https://v3.cn.vuejs.org/)
 
@@ -304,27 +308,36 @@
 
 - 桌面端网页
   - ([react](https://zh-hans.reactjs.org/) + [react-router](https://reacttraining.com/react-router/)) / [umi](https://umijs.org/zh-CN) / [next](https://nextjs.org/)
-  - [constate](https://github.com/diegohaz/constate#readme) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md#readme) / [mobx](https://mobx.js.org/README.html)
-  - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
+  - [constate](https://github.com/diegohaz/constate#readme) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md#readme) / [mobx](https://mobx.js.org/README.html) / [recoil](https://recoiljs.org/)
+  - [immer](https://immerjs.github.io/immer/)
+  - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/) / [react-query](https://react-query.tanstack.com/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
+  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/)
 - 移动端网页
   - (react + react-router) / umi / next
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
+  - immer
   - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/) / [antd-mobile-plus](https://ui.alitajs.com/)
-  - (react-use + swr) / ahooks
+  - tailwindcss / windicss
+  - (react-use + swr / react-query) / ahooks
 - 移动端应用
   - [expo](https://expo.io/)
   - react-router / [react-navigation](https://reactnavigation.org/)
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
+  - immer
   - [react-native-elements](https://reactnativeelements.com/) / [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
+  - [@react-native-community/hooks](https://github.com/react-native-community/hooks) / (react-use + swr / react-query) / ahooks
 - 小程序
   - [taro](https://taro.zone/) / [remax](https://remaxjs.org/) / [rax](https://rax.js.org/)
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
+  - immer
   - @modyqyw/mp-scss
 - 桌面端应用
   - (react + react-router) / umi / next
-  - constate / (redux + react-redux + redux-toolkit) / unstated-next
-  - (zent / blueprint / material-ui + react-use + swr) / (antd + antd-pro-components + ahooks)
-  - electron
+  - constate / (redux + react-redux + redux-toolkit) / unstated-next / recoil
+  - immer
+  - (zent / blueprint / material-ui + react-use + swr / react-query) / (antd + antd-pro-components + ahooks)
+  - tailwindcss / windicss
+  - electron，umi 可直接使用 [umi-plugin-electron-builder](https://github.com/BySlin/umi-plugin-electron-builder)，next 可直接使用 [nextron](https://github.com/saltyshiomix/nextron)
 
 ## 规范
 
@@ -514,7 +527,7 @@
   - [bootstrap-table](https://bootstrap-table.com/)
 - [ui-kit](https://getuikit.com/)
 - [tailwindcss](https://tailwindcss.com/)
-  - [windicss](https://windicss.netlify.app/)
+  - [windicss](https://windicss.org/)
   - [bulma](https://bulma.io/documentation/)
   - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
