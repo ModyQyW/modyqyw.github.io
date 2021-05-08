@@ -122,6 +122,7 @@
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
+brew tap buo/cask-upgrade
 brew install git
 git config --global core.autocrlf false
 git config --global init.defaultBranch main
@@ -137,6 +138,7 @@ brew install svn
 - [homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers#readme)
 - [homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts#readme)
 - [homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions#readme)
+- [buo-cask-upgrade](https://github.com/buo/homebrew-cask-upgrade#readme)
 - [git](https://git-scm.com/)
 - [git-flow](https://www.gitflow.com/)
 - [git-lfs](https://git-lfs.github.com/)
@@ -144,7 +146,11 @@ brew install svn
 - [openssh](https://www.openssh.com/)
 - [svn](https://subversion.apache.org/)
 
-`ssh -v SERVER_IP` 可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是 `/etc/ssh/ssh_config`，安装 openssh 之后变成了 `/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
+可以先去 [Homebrew Formulae](https://formulae.brew.sh/) 搜索你想要的软件包，然后和官方的说明比对，看看官方是否建议使用 `homebrew` 安装，`homebrew` 上的版本是否有及时更新等，比如 `nvm` 不建议用 `homebrew` 安装，`hbuilderx` 版本就比较落后，这些都是可以自己找到的信息。
+
+如果没有问题，就可以使用 `homebrew` 安装，然后使用 `buo-cask-upgrade` 一次性升级，非常方便。
+
+另外，`ssh -v SERVER_IP` 可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是 `/etc/ssh/ssh_config`，安装 `openssh` 之后变成了 `/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
 
 ```shell
 # 软链接
@@ -159,7 +165,14 @@ brew update && brew upgrade && brew cleanup && brew doctor
 
 ### oh-my-zsh
 
-挂梯子，按照 [官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki) 安装。
+挂梯子，按照 [官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki) 安装，出现权限问题可以考虑用 `sudo` 或者 `chmod` 处理一下。
+
+安装额外的插件，我这里安装 `zsh-syntax-highlighting` 和 `zsh-autosuggestions`。
+
+```shell
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
 打开 `~/.zshrc` 进行配置，最后不要忘记执行 `source ~/.zshrc`。
 
@@ -303,7 +316,7 @@ alias qs='open -a QSpace'
 
 ```shell
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT+=' %{$fg[cyan]%}[$PWD]%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
