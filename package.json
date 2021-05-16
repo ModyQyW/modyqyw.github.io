@@ -9,30 +9,30 @@
     "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script",
     "lint:json": "prettier ./**/*.json --write",
     "lint:markdown": "markdownlint . --fix && lint-md . --fix",
-    "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix"
+    "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
+    "commit": "cz",
+    "prepare": "is-ci || husky install"
   },
   "devDependencies": {
-    "@babel/core": "~7.13.16",
-    "@babel/eslint-parser": "~7.13.14",
-    "@modyqyw/fabric": "~1.28.1",
+    "@babel/core": "~7.14.2",
+    "@babel/eslint-parser": "~7.14.2",
+    "@commitlint/cli": "~12.1.4",
+    "@modyqyw/fabric": "~2.0.4",
     "cross-env": "~7.0.3",
-    "eslint": "~7.25.0",
+    "eslint": "~7.26.0",
+    "husky": "~6.0.0",
+    "is-ci": "~3.0.0",
     "lint-md-cli": "~0.1.2",
+    "lint-staged": "~11.0.0",
     "markdownlint-cli": "~0.27.1",
-    "prettier": "~2.2.1",
+    "prettier": "~2.3.0",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.15.3"
+    "vuepress-theme-hope": "~1.16.0"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.json": "prettier --write",
-    "*.{md,markdown}": "markdownlint --fix && lint-md --fix",
-    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }
