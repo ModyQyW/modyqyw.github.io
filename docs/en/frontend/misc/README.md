@@ -809,6 +809,7 @@
 - 进阶
   - [react 源码通关指南](https://zhuanlan.zhihu.com/p/266748892)
     - [react 技术揭秘](https://react.iamkasong.com/)
+  - [图解 react](https://github.com/7kms/react-illustration-series#readme)
   - [react 面试题](https://github.com/sudheerj/reactjs-interview-questions)
   - [Dan Abramov's Blog](https://overreacted.io/)
     - [将 React 作为 UI 运行时](https://overreacted.io/zh-hans/react-as-a-ui-runtime/)
@@ -864,9 +865,11 @@
   - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap#readme)
   - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
-  - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
-    - [express.js](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
-    - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
+  - [express.js](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
+    - [sails.js](https://sailsjs.com/)
+    - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
+  - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
+  - [loopback](https://loopback.io/)
   - [koa.js](https://koajs.com/) - node.js 框架，自由度高
     - [egg.js](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
     - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
@@ -874,15 +877,21 @@
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
 - 增强
   - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
+    - [open-resty](https://openresty.org/)
   - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
   - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
   - [mysql](https://www.mysql.com/) - 关系型数据库
     - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
+  - [postgresql](https://www.postgresql.org/) - 关系型数据库
   - [redis](https://redis.io/) - 非关系型数据库
+  - [memcached](https://www.memcached.org/)
   - [mongodb](https://www.mongodb.com/) - 非关系型数据库
   - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
+  - [pm2](https://pm2.keymetrics.io/) - 进程守护
+  - [nodemon](https://nodemon.io/) - 进程守护
+  - [forever](https://github.com/foreversd/forever#readme) - 进程守护
 
 ## 持续成长
 
