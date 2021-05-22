@@ -77,9 +77,12 @@
 
 ## Windows
 
+- [Chocolaty](https://chocolatey.org/) - 包管理器
 - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
 - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
 - [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
+- [WinGet](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) - 包管理器
+- [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) - [定制参考 1](https://sspai.com/post/62167)，[定制参考 2](https://sspai.com/post/63814)
 - [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
 - [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
 - [美图秀秀](https://mt.meipai.com/) - 简单 p 图
@@ -87,6 +90,10 @@
 - [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
 - [万彩办公大师](http://www.wofficebox.com/) - 小工具箱
 - [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
+
+## Chocolaty & WinGet
+
+TODO
 
 ## macOS
 
@@ -116,7 +123,7 @@
 
 ### Homebrew
 
-挂梯子，按照 [官网](https://brew.sh/index_zh-cn) 安装，然后安装相关依赖。
+按照 [官网](https://brew.sh/index_zh-cn) 安装，然后安装相关依赖。
 
 ```shell
 brew tap homebrew/cask-drivers
@@ -128,11 +135,16 @@ git config --global core.autocrlf false
 git config --global init.defaultBranch main
 brew install git-flow
 brew install git-lfs
-git lfs install
-sudo git lfs install --system
 brew install openjdk
 brew install openssh
 brew install svn
+brew install font-source-code-pro
+brew install font-source-code-pro-for-powerline
+brew install font-fira-code
+brew install font-roboto
+brew install font-roboto-mono
+brew install font-roboto-mono-for-powerline
+brew install font-jetbrains-mono
 ```
 
 - [homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers#readme)
@@ -173,6 +185,8 @@ brew update && brew upgrade && brew cleanup && brew doctor
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
+
+如果依然报错，可以使用 `sudo chmod` 先改一下文件夹权限。
 
 打开 `~/.zshrc` 进行配置，最后不要忘记执行 `source ~/.zshrc`。
 
@@ -387,6 +401,7 @@ npm i -g --registry=https://registry.npm.taobao.org create-react-app
 npm i -g --registry=https://registry.npm.taobao.org create-remax-app
 npm i -g --registry=https://registry.npm.taobao.org create-ssr-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
+npm i -g --registry=https://registry.npm.taobao.org express-generator
 npm i -g --registry=https://registry.npm.taobao.org less
 npm i -g --registry=https://registry.npm.taobao.org markdownlint-cli
 npm i -g --registry=https://registry.npm.taobao.org nativefier
