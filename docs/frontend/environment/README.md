@@ -1,56 +1,8 @@
 # 环境配置
 
-所有配置仅供参考。
+所有配置仅供参考，且尽可能使用统一的包管理器安装。Windows 上推荐使用 [Chocolatey](https://chocolatey.org/)，macOS 上推荐使用 [Homebrew](https://brew.sh/)，均不推荐换源。以下给出在 macOS (intel) 上的应用和配置参考，并补充说明在 Windows 上大致如何操作。
 
-## 通用
-
-- [360zip](https://yasuo.360.cn/)
-- Adobe Photoshop - 专业图片处理，也可以考虑 Affinity Photo，[在线 PS](https://www.uupoop.com/)
-- [Android Studio](https://developer.android.com/studio/) - 安卓开发
-- Axure RP - 原型图查看
-- [BitWarden](https://bitwarden.com/) - 密码管理
-- [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
-- [DeepL](https://www.deepl.com/translator) - 翻译
-- [draw.io](https://github.com/jgraph/drawio-desktop#readme) - 作图，也可以考虑 [ProcessOn](https://www.processon.com/)
-- [Fiddler](https://www.telerik.com/fiddler) - 抓包，也可以考虑 Charles
-- [FileZilla](https://filezilla-project.org/) - ftp 连接
-- [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
-- [Fliqlo](https://fliqlo.com/screensaver/) - 时钟
-- [GeoGebra](https://www.geogebra.org/) - 数学工具
-- [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
-- [holytech](https://store.holytech.tech/aff.php?aff=2849) - v2ray 服务商，可以使用 [v2ray 路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)，也可以考虑 [520ssr](https://www.520ssr.co/auth/register?code=oiwx)
-- [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app app 开发
-- [Kite](https://www.kite.com/) - 代码自动补全工具，也可以考虑 [AIXcoder](https://aixcoder.com/#/)，[TabNine](https://www.tabnine.com/)
-- [LightProxy](https://github.com/alibaba/lightproxy#readme) - 代理工具
-- [Microsoft Edge](https://www.microsoft.com/zh-cn/edge) - 浏览器
-- [OBS](https://obsproject.com/) - 录制
-- [Postman](https://www.getpostman.com/) - 请求，也可以考虑 [ApiPost](https://www.apipost.cn/)
-- [Prince](https://www.princexml.com/) - 把 HTML 转换成 PDF
-- [QQ](https://im.qq.com/download/) - 社交
-- [ResponsivelyApp](https://github.com/manojVivek/responsively-app#readme) - 响应式开发
-- [SourceTree](https://www.sourcetreeapp.com/) - git gui
-- [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程工具，也可以考虑 [向日葵](https://sunlogin.oray.com/)
-- [uTools](https://u.tools/) - 全平台支持且体验一致的效率工具
-- [Visual Studio Code](https://code.visualstudio.com/) - 开发
-- [WPS](https://www.wps.cn/) - doc/docx/xls/xlsx/ppt/pptx + pdf + 思维导图
-- [you-get](https://github.com/soimort/you-get#readme) - 下载网络媒体资源
-- [zy-player](http://zyplayer.fun/) - 资源播放
-- [阿里小程序开发者工具](https://docs.alipay.com/mini/ide/download) - 阿里小程序开发
-- [爱思助手](https://www.i4.cn/) - ios 助手
-- [百度网盘](http://pan.baidu.com/download) - 存取资源，也可以考虑 [阿里云盘](https://www.aliyundrive.com/)，[城通网盘](https://www.ctfile.com/)
-- [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
-- [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
-- [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop#readme) - 听歌
-- [片库](https://www.pianku.li/)
-- [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
-- [微信](https://weixin.qq.com/) - 社交
-- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html) - 微信小程序开发
-- [迅雷](https://www.xunlei.com/) - 下载，也可以考虑 [Motrix](https://motrix.app/zh-CN/)，[Neat Download Manager](https://www.neatdownloadmanager.com/)，[BitComet](https://www.bitcomet.com/)，[uTorrent](https://www.utorrent.com/)
-- [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/)
-
-自建网盘参考 [seafile](https://www.seafile.com/en/home/) 和 [owncloud](https://owncloud.org/)。
-
-### DNS
+## DNS
 
 - [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
 - [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
@@ -60,142 +12,100 @@
 - [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
 - [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
 
-### 浏览器插件
+## 浏览器插件
 
-- Allow CORS: Access-Control-Allow-Origin
-- BitWarden
+- BitWarden - 密码管理
 - Gitako - 便捷查看 Github
-- IE Tab
+- IE Tab - 模拟 IE 行为
 - Lighthouse - 网页性能测试
 - React Developer Tools - react 浏览器调试工具
-- Sync Sofa
+- Sync Sofa - 同步看剧
+- Tampermonkey - 插件工具
 - uBlock Origin - 广告屏蔽，配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - Vue.js devtools - vue 浏览器调试工具
-- Wappalyzer
-- Window Resizer
+- Wappalyzer - 网页依赖分析
+- Window Resizer - 便捷调试响应式网页
 - 哔哩哔哩助手
 
-## Windows
+## macOS (intel)
 
-- [Chocolaty](https://chocolatey.org/) - 包管理器
-- [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
-- [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - 管理 node 版本
-- [PotPlayer](http://potplayer.daum.net/?lang=zh_CN) - 音视频播放器
-- [WinGet](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) - 包管理器
-- [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) - [定制参考 1](https://sspai.com/post/62167)，[定制参考 2](https://sspai.com/post/63814)
-- [QQ 插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
-- [雷电模拟器](https://www.ldmnq.com/) - 安卓模拟器
-- [美图秀秀](https://mt.meipai.com/) - 简单 p 图
-- [魔影工厂](https://sm.myapp.com/original/multimedia/moying_2.1.1.4225.exe) - 视频格式转换
-- [腾讯电脑管家](https://guanjia.qq.com/) - 电脑管理，如果锁定了浏览器可能会导致浏览器无法唤起开发者工具
-- [万彩办公大师](http://www.wofficebox.com/) - 小工具箱
-- [微信插件](https://github.com/huiyadanli/RevokeMsgPatcher#readme) - 防撤回
+- 在触控板上四指捏合，或者点击底部 `程序坞` 里面的 `启动台`，然后打开 `终端`。
 
-## Chocolaty & WinGet
+- 点击左上角的 `终端` -> 偏好设置 -> 描述文件，可以选择你想要的基本效果。我这里选择了 `Pro`。
 
-TODO
-
-## macOS
-
-- [AltStore](https://altstore.io/) - iOS
-- [Bob](https://github.com/ripperhe/Bob#readme) - 翻译
-- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - 显示快捷键列表，也可以考虑 [FlyKey](https://www.better365.cn/FlyKey.html)
-- [Homebrew](https://brew.sh/index_zh-cn) - 包管理器
-- [IINA](https://iina.io/) - 播放器
-- [iShot](https://www.better365.cn/ishot.html) - 截图、长截图、贴图、录屏工具
-- [itsycal](https://www.mowglii.com/itsycal/) - 日历
-- [MacZip](https://ezip.awehunt.com) - 压缩/解压缩工具，也可以考虑 [360zip](https://yasuo.360.cn/)
-- Sketch - 设计稿查看
-- [Rectangle](https://github.com/rxhanson/Rectangle#readme) - 管理工作空间，也可以考虑 [Magnet](https://magnet.crowdcafe.com/)
-- [Mounty](https://mounty.app/) - 支持读写 NTFS，也可以考虑 [赤友 NTFS 助手](https://www.ntfsformac.com/)
-- [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
-- [oh-my-zsh](https://ohmyz.sh/) - 快速配置 zsh
-- [OpenInEditor-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开编辑器，配合 Finder 使用
-- [OpenInTerminal-Lite](https://github.com/Ji4n1ng/OpenInTerminal) - 快速打开终端，配合 Finder 使用
-- [QSpace](https://apps.apple.com/cn/app/qspace/id1469774098?mt=12) - 多视图文件管理
-- [Tencent Lemon](https://lemon.qq.com/) - 电脑管理
-- [超级右键](https://www.better365.cn/irightmouse.html) - 补全了 macOS 的右键菜单缺陷，适用于 Finder
-- [剪映专业版](https://lv.ulikecam.com/) - 视频处理
-- [看图](https://kantu.qq.com/)
-- [微信插件](https://github.com/MustangYM/WeChatExtension-ForMac#readme) - 防撤回
-
-[macWK](https://macwk.com/) - 精品 mac 资源聚合
-
-### Homebrew
-
-按照 [官网](https://brew.sh/index_zh-cn) 安装，然后安装相关依赖。
+- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续大量软件的安装和更新。
 
 ```shell
-brew tap homebrew/cask-drivers
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
-brew tap buo/cask-upgrade
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew tap buo/cask-upgrade # https://github.com/buo/homebrew-cask-upgrade
+# Update formulaes and casks
+brew upgrade && brew cu -ay && brew cleanup
+# Check problems
+brew doctor
+```
+
+- 安装 [VSCode](https://code.visualstudio.com/)，方便编辑文件。
+
+```shell
+brew install --cask visual-studio-code
+```
+
+- 安装 [Git](https://git-scm.com/)。
+
+```shell
 brew install git
-git config --global core.autocrlf false
-git config --global init.defaultBranch main
-brew install git-flow
-brew install git-lfs
-brew install openjdk
-brew install openssh
-brew install svn
-brew install font-source-code-pro
-brew install font-source-code-pro-for-powerline
-brew install font-fira-code
-brew install font-roboto
-brew install font-roboto-mono
-brew install font-roboto-mono-for-powerline
-brew install font-jetbrains-mono
 ```
 
-- [homebrew-cask-drivers](https://github.com/Homebrew/homebrew-cask-drivers#readme)
-- [homebrew-cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts#readme)
-- [homebrew-cask-versions](https://github.com/Homebrew/homebrew-cask-versions#readme)
-- [buo-cask-upgrade](https://github.com/buo/homebrew-cask-upgrade#readme)
-- [git](https://git-scm.com/)
-- [git-flow](https://www.gitflow.com/)
-- [git-lfs](https://git-lfs.github.com/)
-- [openjdk](https://openjdk.java.net/)
-- [openssh](https://www.openssh.com/)
-- [svn](https://subversion.apache.org/)
-
-可以先去 [Homebrew Formulae](https://formulae.brew.sh/) 搜索你想要的软件包，然后和官方的说明比对，看看官方是否建议使用 `homebrew` 安装，`homebrew` 上的版本是否有及时更新等，比如 `nvm` 不建议用 `homebrew` 安装，`hbuilderx` 版本就比较落后，这些都是可以自己找到的信息。
-
-如果没有问题，就可以使用 `homebrew` 安装，然后使用 `buo-cask-upgrade` 一次性升级，非常方便。
-
-另外，`ssh -v SERVER_IP` 可以看到当前使用的配置文件路径，每次更新系统都需要重新配置 ssh。默认 ssh 配置文件是 `/etc/ssh/ssh_config`，安装 `openssh` 之后变成了 `/usr/local/etc/ssh/ssh_config`，这个时候可以软链接。
+- 切换默认的 `shell` 到 `zsh`（[终端和 shell 的区别](https://www.ihewro.com/archives/933/)）。
 
 ```shell
-# 软链接
-ln -s /etc/ssh/ssh_config /usr/local/etc/ssh/ssh_config
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 ```
 
-需要升级时可以运行以下命令。
+- 安装 [oh-my-zsh](https://ohmyz.sh/)。
 
 ```shell
-brew update && brew upgrade && brew cleanup && brew doctor
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### oh-my-zsh
-
-挂梯子，按照 [官方说明](https://github.com/ohmyzsh/ohmyzsh/wiki) 安装，出现权限问题可以考虑用 `sudo` 或者 `chmod` 处理一下。
-
-安装额外的插件，我这里安装 `zsh-syntax-highlighting` 和 `zsh-autosuggestions`。
+- 安装 `oh-my-zsh` 的插件 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 和 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。
 
 ```shell
+sudo chmod 777 ～/.oh-my-zsh
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-如果依然报错，可以使用 `sudo chmod` 先改一下文件夹权限。
+- 用 `vscode` 打开默认主题 `robbyrussell` 的配置文件 `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`，简单修改一下然后保存
 
-打开 `~/.zshrc` 进行配置，最后不要忘记执行 `source ~/.zshrc`。
+```shell
+code ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+```
+
+```shell
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT+=' %{$fg[cyan]%}[$PWD]%{$reset_color%} $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
+```
+
+- 用 `vscode` 打开 `zsh` 的配置文件 `~/.zshrc`，配置 `zsh` 和环境变量。
+
+```shell
+code ~/.zshrc
+```
 
 ```shell
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/wurui/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -294,97 +204,145 @@ source $ZSH/oh-my-zsh.sh
 # show user
 export DEFAULT_USER="$(whoami)"
 
+```
+
+- 保存一下，然后在终端里指定使用 `~/.zshrc`。这一步非常重要，配置完 `~/.zshrc` 之后都要指定一下。后面不再重复这一点。
+
+```shell
+source ~/.zshrc
+```
+
+- 开始疯狂用 `homebrew` 安装和配置。
+
+```shell
+# 驱动
+brew tap homebrew/cask-drivers # https://github.com/Homebrew/homebrew-cask-drivers
+# 字体
+brew tap homebrew/cask-fonts # https://github.com/Homebrew/homebrew-cask-fonts
+brew install font-fira-code # https://github.com/tonsky/FiraCode
+brew install font-jetbrains-mono # https://github.com/JetBrains/JetBrainsMono
+brew install font-roboto # https://github.com/googlefonts/roboto
+brew install font-roboto-mono-for-powerline
+brew install font-sarasa-gothic # https://github.com/be5invis/Sarasa-Gothic
+brew install font-source-code-pro # https://github.com/adobe-fonts/source-code-pro
+brew install font-source-code-pro-for-powerline
+# 不同版本的应用
+brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
+
+# android studio，开发 Android 用
+brew install --cask android-studio # https://developer.android.com/studio/
+# baidu netdisk，百度网盘，自建网盘参考 seafile 和 owncloud
+brew install --cask baidunetdisk # https://pan.baidu.com/download
+# bitwarden，管理密码
+brew install --cask bitwarden # https://bitwarden.com/
+# cheatsheet，长按 Command 键显示当前应用的快捷键
+brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
+# clashx，v2ray 客户端
+# v2ray 服务商 holytech https://store.holytech.tech/aff.php?aff=2849
+# v2ray 服务商 520ssr https://www.520ssr.co/auth/register?code=oiwx
+# v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
+brew install --cask clashx # https://github.com/yichengchen/clashX
+brew install --cask clashx-pro
+# drawio，作图工具
+brew install --cask drawio # https://www.draw.io/
+# fliqlo，屏保时钟
+brew install --cask fliqlo # https://fliqlo.com/
+# git，代码版本管理
+brew install git # https://git-scm.com/
+brew install git-lfs # https://git-lfs.github.com/
+git config --global core.autocrlf false
+git config --global init.defaultBranch main
+git config --global user.name "YOUR_NAME_HERE"
+git config --global user.email "YOUR_EMAIL_HERE"
+# hbuilderx，uni-app、uni-cloud 开发工具
+brew install --cask hbuilderx # https://www.dcloud.io/hbuilderx.html
+# iina，音视频播放器
+brew install --cask iina # https://iina.io/
+# itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
+brew install --cask itsycal # https://www.mowglii.com/itsycal/
+# lx-music，洛雪音乐助手
+brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
+# maczip，压缩工具
+brew install --cask maczip # https://ezip.awehunt.com/
+# microsoft-edge，浏览器
+brew install --cask microsoft-edge # https://www.microsoft.com/edge
+# mini-program-studio，阿里系小程序开发者工具
+brew install --cask mini-program-studio # https://opendocs.alipay.com/mini/ide
+# mongodb，流行的文档型数据库
+brew tap mongodb/brew # https://github.com/mongodb/homebrew-brew
+brew install mongodb-community
+brew install --cask mongodb-compass # mongodb official gui
+brew services start mongodb/brew/mongodb-community # start when launched
+# motrix，下载工具
+brew install --cask motrix # https://motrix.app/
+# mounty，重新挂载受写保护的 NTFS 卷
+brew install --cask mounty # https://mounty.app/
+# obs，录屏工具
+brew install --cask obs # https://obsproject.com/
+# openineditor-lite，在编辑器快速打开当前目录
+brew install --cask openineditor-lite # https://github.com/Ji4n1ng/OpenInTerminal
+# openinterminal-lite，在终端快速打开当前目录
+brew install --cask openinterminal-lite # https://github.com/Ji4n1ng/OpenInTerminal
+# openjdk，开发 Android 用
+brew install openjdk # https://openjdk.java.net/
+# picgo，图床工具
+brew install --cask picgo # https://github.com/Molunerfinn/PicGo
+# postman，接口工具
+brew install --cask postman # https://www.postman.com/
+# prince，将 HTML 转换成 PDF
+brew install --cask prince # https://www.princexml.com/
+# qq
+brew install --cask qq # https://im.qq.com/macqq/
+# rectangle，快速移动、调整窗口大小
+brew install --cask rectangle # https://rectangleapp.com/
+# responsively，帮助响应式开发
+brew install --cask responsively # https://responsively.app/
+# snipaste，屏幕截图
+brew install --cask snipaste # https://www.snipaste.com/
+# sourcetree，git gui
+brew install --cask sourcetree # https://www.sourcetreeapp.com/
+# steam
+brew install --cask steam
+# subversion，代码版本管理
+brew install svn # https://subversion.apache.org/
+# tableplus，数据库 gui
+brew install --cask tableplus # https://tableplus.com/
+# tencent-lemon，系统清理和状态工具
+brew install --cask tencent-lemon # https://lemon.qq.com/
+# thunder，下载工具
+brew install --cask thunder # https://www.xunlei.com/
+# utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
+brew install --cask utools # https://u.tools/index.html
+# wechat
+brew install --cask wechat # https://mac.weixin.qq.com/
+# wechatwebdevtools，微信小程序开发者工具
+brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
+# yuque，语雀，知识库工具
+brew install --cask yuque # https://www.yuque.com/
+# you-get，下载网络媒体资源
+brew install you-get # https://you-get.org/
+```
+
+- 安装 `node` 相关。
+
+```shell
 # nvm
-export NVM_DIR="$HOME/.nvm"
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# openjdk
-export PATH=/usr/local/opt/openjdk/bin:$PATH
-
-# homebrew
-# https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
-export PATH=/usr/local/sbin:$PATH
-export HOMEBREW_CORE_GIT_REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-
-# v2ray
-export https_proxy=http://127.0.0.1:7890
-export http_proxy=http://127.0.0.1:7890
-export all_proxy=socks5://127.0.0.1:7890
-
-# qspace
-alias qs='open -a QSpace'
-
-```
-
-另外修改 `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`。
-
-```shell
-PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[cyan]%}[$PWD]%{$reset_color%} $(git_prompt_info)'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
-
-```
-
-## node
-
-### 镜像
-
-```shell
-# ~/.npmrc
-# registry=https://registry.npm.taobao.org // for publishing
-
-chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
-electron_builder_binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
-electron_mirror=https://npm.taobao.org/mirrors/electron/
-fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
-node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector/
-phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
-sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
-
-```
-
-```shell
-# ~/.yarnrc
-# registry "https://registry.npm.taobao.org" // for publishing
-
-chromedriver_cdnurl "https://npm.taobao.org/mirrors/chromedriver"
-electron_builder_binaries_mirror "https://npm.taobao.org/mirrors/electron-builder-binaries/"
-electron_mirror "https://npm.taobao.org/mirrors/electron/"
-fsevents_binary_host_mirror "http://npm.taobao.org/mirrors/fsevents/"
-node_inspector_cdnurl "https://npm.taobao.org/mirrors/node-inspector"
-phantomjs_cdnurl "https://npm.taobao.org/mirrors/phantomjs/"
-sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
-selenium_cdnurl "https://npm.taobao.org/mirrors/selenium"
-
-```
-
-### nvm
-
-使用 nvm 可以方便地管理 node 多版本。
-
-- [nvm for macos and linux](https://github.com/nvm-sh/nvm)
-- [nvm for windows](https://github.com/coreybutler/nvm-windows) - npm 可能不能更新，见 [nvm-windows#300](https://github.com/coreybutler/nvm-windows/issues/300)
-
-### 全局依赖
-
-```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash # https://github.com/nvm-sh/nvm
+export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist # use default origin
+# export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # use taobao origin
+# install node
+nvm install 10
+nvm install 12
+nvm install 14
+nvm install 16
+# set default
+nvm alias default 14
+# use lts (2021.05.30)
+nvm use 14
+# install global deps
 npm i -g --registry=https://registry.npm.taobao.org @commitlint/cli
 npm i -g --registry=https://registry.npm.taobao.org @ls-lint/ls-lint
+npm i -g --registry=https://registry.npm.taobao.org @modyqyw/fabric
 npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
@@ -407,7 +365,7 @@ npm i -g --registry=https://registry.npm.taobao.org markdownlint-cli
 npm i -g --registry=https://registry.npm.taobao.org nativefier
 npm i -g --registry=https://registry.npm.taobao.org np
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
-npm i -g --registry=https://registry.npm.taobao.org pnpm
+npm i -g --registry=https://registry.npm.taobao.org pm2
 npm i -g --registry=https://registry.npm.taobao.org prettier
 npm i -g --registry=https://registry.npm.taobao.org rax-cli
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
@@ -419,34 +377,105 @@ npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
 ```
 
-使用 `nvm-windows` 时重新执行以上命令即可更新，否则执行下面的命令全局更新。
+- 一些需要额外安装的应用。
+  - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
+  - [macwk updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
+  - [qspace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
+  - [wps](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求（如
+  - [xcode](https://developer.apple.com/xcode/) - 苹果应用开发
+  - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
+
+- 补充一些东西在 `~/.zshrc` 末尾。
 
 ```shell
-npm update -g --registry=https://registry.npm.taobao.org
+# nvm
+export NVM_DIR="$HOME/.nvm"
+# export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # use taobao mirror origin
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# openjdk
+export PATH=/usr/local/opt/openjdk/bin:$PATH
+
+# homebrew
+export PATH=/usr/local/sbin:$PATH
+
+# v2ray
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export all_proxy=socks5://127.0.0.1:7890
+
+# qspace
+alias qs='open -a QSpace'
+
 ```
 
-### node-sass 问题
+- 一些建议的在线网页。
+  - [DeepL](https://www.deepl.com/translator) - 翻译
+  - [阿里云盘](https://www.aliyundrive.com/)
+  - [爱思助手](https://www.i4.cn/) - ios 助手
+  - [城通网盘](https://www.ctfile.com/)
+  - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
+  - [稿定设计图片编辑器](https://www.uupoop.com/)
+  - [片库](https://www.pianku.li/)
+  - [在线工具](https://tool.lu/)
+  - [程序员工具](https://tool.p2hp.com/)
 
-```json
-{
-  ...,
-  "devDependencies": {
-    ...,
-    "node-sass": "npm:sass",
-    ...
-  },
-  ...
-}
-```
+- 一些可以考虑的应用。
+  - [360zip](https://yasuo.360.cn/)
+  - Adobe After Effects - 专业视频处理
+  - Adobe Photoshop - 专业图片处理
+  - Affinity Photo - 专业图片处理
+  - [AIXcoder](https://aixcoder.com/) - 代码自动补全工具
+  - [AltStore](https://altstore.io/) - 直接安装 ipa
+  - Axure RP - 原型图
+  - [Bob](https://github.com/ripperhe/Bob) - 翻译工具
+  - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
+  - Charles - 抓包
+  - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
+  - Fiddler - 抓包
+  - [FileZilla](https://filezilla-project.org/) - ftp 连接
+  - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
+  - [GeoGebra](https://www.geogebra.org/) - 数学工具
+  - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
+  - [Kite](https://www.kite.com/) - 代码自动补全工具
+  - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 代理调试
+  - Sketch - 设计稿
+  - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
+  - [TabNine](https://www.tabnine.com/) - 代码自动补全工具
+  - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
+  - [向日葵](https://sunlogin.oray.com/) - 远程桌面
+  - [zy-player](http://zyplayer.fun/) - 播放网络媒体
+  - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
+  - [看图](https://kantu.qq.com/)
+  - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
+  - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/)
 
-这样做会用 `dart-sass` 代替 `node-sass`，但可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)。
+## Windows 补充说明
+
+Windows 和 macOS 生态不同，有几个重要的地方需要注意。
+
+- 终端和 `shell`：Windows 上建议使用 [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) 作为终端，Git Bash 作为 `shell`，[定制参考 1](https://sspai.com/post/62167)，[定制参考 2](https://sspai.com/post/63814)。
+- 包管理器：macOS 上使用 Homebrew 作为包管理器，而 Windows 上推荐使用 [Chocolaty](https://chocolatey.org/) 作为包管理器。
+- `nvm`：Windows 上需要使用 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) 管理 node 版本，而且命令上有一些区别。
+- 其它：上面的应用在 Windows 上不一定有或者有更好的选择，比如 iina 可以换成 [PotPlayer](http://potplayer.daum.net/?lang=zh_CN)，网易 Mumu 可以换成 [雷电模拟器](https://www.ldmnq.com/)，Tencent Lemon 可以换成 [腾讯电脑管家](https://guanjia.qq.com/)，[万彩办公大师](http://www.wofficebox.com/) 可以处理大量的文档等。
 
 ## vscode
 
 ### 插件
 
+配置可以通过 Github 账号同步，你也可以使用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)。
+
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
-- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark) - 对应浅色主题 [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight)，安装并应用主题后建议重启一次
+- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark) - 深色主题，安装并应用主题后建议重启一次
+- [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight) - 浅色主题
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
@@ -461,7 +490,6 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
-- [Kite AI Code AutoComplete](https://marketplace.visualstudio.com/items?itemName=kiteco.kite) - Kite VSCode 插件
 - [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
@@ -476,7 +504,6 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
-- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - 同步配置，自行查看文档
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
@@ -484,11 +511,8 @@ npm update -g --registry=https://registry.npm.taobao.org
 - [TypeScript React Hooks Tools](https://marketplace.visualstudio.com/items?itemName=kingwl.ts-react-hooks-tools) - 用 typescript 和 react hooks 重构
 - [uni-helper](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - uni-* 开发帮助工具
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
-- [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper) - element-ui 开发帮助工具
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
-- [vuetify-vscode](https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode) - vuetify 开发帮助工具
-- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - WindiCSS / TailwindCSS 开发帮助工具
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
 ### settings.json
@@ -587,8 +611,6 @@ npm update -g --registry=https://registry.npm.taobao.org
   "less.validate": false,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
   "scss.validate": false,
-  // 插件 Setting Sync 使用，指定使用的 github gist
-  "sync.gist": "",
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -624,7 +646,7 @@ npm update -g --registry=https://registry.npm.taobao.org
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
-  // vscode 自带功能，指定颜色主题
+  // vscode 自带功能，指定颜色主题，这里指定为 Atom One Dark
   "workbench.colorTheme": "Atom One Dark",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
   "workbench.editorAssociations": [
@@ -644,39 +666,33 @@ npm update -g --registry=https://registry.npm.taobao.org
 
 ## hbuilderx
 
-用于 uni-app 开发 app 时的调试和构建，其他情况使用 vscode。
+构建使用 `uni-app` 开发的 app，用于调试运行、下载发布，其他情况使用 vscode。
 
-### 修改配置
-
-修改 hbuilderx 的配置，点击左上角 HBuilderX => 偏好设置 => 源码视图。
+点击左上角 HBuilderX => 偏好设置 => 源码视图，可以自定义配置。下面是我自己的自定义配置。`node` 和 `npm` 路径不正确会导致一直编译中。
 
 ```json
 {
   "editor.colorScheme": "Atom One Dark",
-  "editor.fontFamily": "Menlo",
-  "editor.fontFmyCHS": "华文黑体",
+  "editor.fontFamily": "Source Code Pro for Powerline",
+  "editor.fontFmyCHS": "Heiti SC",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v12.22.1/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v12.22.1/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.0/bin/npm"
 }
 
 ```
-
-node 和 npm 路径不正确会导致一直编译中。
-
-### 常见问题
 
 看起来数字天堂团队并没有完善的项目开发流程，导致某些时候 vue-cli 创建的项目依赖版本和 HBuilderX 的依赖版本不一致。
 
 - 回退版本
 - 查看 HBuilderX -> plugins -> uniapp-cli 的依赖版本
 
-另外，他们也尝试做自己的生态，比如 nvue 和 uni_modules，这些都有着不少的坑。如果不是为了跨端，没有必要使用 uni-app。如果是为了跨端，也可以尝试优秀的 React 系框架。
+另外，他们也尝试做自己的生态，比如 `nvue` 和 `uni_modules`，这些都有着不少的坑。如果不是为了跨端，没有必要使用 `uni-app`。如果是为了跨端，也可以尝试优秀的 React 系框架，如 `taro`，`remax`，`rax`，`expo`。
 
 ## 参考
 
