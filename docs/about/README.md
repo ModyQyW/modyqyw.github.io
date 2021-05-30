@@ -2,20 +2,14 @@
 sidebar: false
 ---
 
-# About
+# 关于
 
-- A frontend engineer, wanna be product manager + UI designer + frontend engineer + backend engineer + test engineer
+- 目前是一个半吊子全栈工程师
+- 想要成为 10x 程序员 + 全栈工程师 + UI 设计师 + 产品经理 + 项目经理 + 测试工程师 + 基础结构架构师 + 特定技术架构师 + 解决方案架构师
 - [wurui7@mail3.sysu.edu.cn](mailto:wurui7@mail3.sysu.edu.cn)
 - [wurui.sysu@gmail.com](mailto:wurui.sysu@gmail.com)
 - [Github](https://github.com/ModyQyW)
 - [Gitee](https://gitee.com/ModyQyW)
-
-Updates will only be done in the evenings and on weekends when time is available. There will be unavoidable delays when uncontrollable factors are encountered.
-
-Reminders can be made by
-
-- email
-- reward, note "Reminder + content"
 
 |平台|方式|
 |:-:|:-:|
