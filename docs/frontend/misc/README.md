@@ -7,6 +7,8 @@
 ## 计算机基础
 
 - 英语
+  - [程序员英语学习指南](https://a-programmers-guide-to-english.harryyu.me/)
+  - [剑桥字典](https://dictionary.cambridge.org/dictionary/english/)
   - 新概念英语
   - 翻译工具 [deepl](https://www.deepl.com/)
 - 线性代数
@@ -246,7 +248,9 @@
 - svn
 - git
   - [pro git](https://git-scm.com/book/en/v2)
-- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本，windows 版本 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme)
+- [nvm](https://github.com/nvm-sh/nvm#readme) - 管理 node 版本
+  - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - Windows 版本的 nvm，命令和配置有一些差异
+  - [nvs](https://github.com/jasongin/nvs#readme) - 管理 node 版本
 - [npm](https://github.com/npm/cli#readme)
   - [yarn](https://classic.yarnpkg.com/zh-Hans)
   - [pnpm](https://pnpm.js.org/)
@@ -279,12 +283,12 @@
 - 桌面端网页
   - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [fes](https://winixt.gitee.io/fesjs/zh/) / [nuxt](https://nuxtjs.org/)
   - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
-  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/)
+  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/) + [daisy-ui](https://daisyui.com/)
   - [vue-use](https://vueuse.org/)
 - 移动端网页
   - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / [nut-ui](https://nutui.jd.com/) / [vant](https://vant-contrib.gitee.io/vant/)
-  - tailwindcss / windicss
+  - tailwindcss / windicss + daisy-ui
   - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
@@ -292,7 +296,7 @@
 - 桌面端应用
   - (vue + vue-router + vuex) / fes / nuxt
   - vuetify / element / element-plus / ant-design-vue-next
-  - tailwindcss / windicss
+  - tailwindcss / windicss + daisy-ui
   - vue-use
   - electron，nuxt 目前没有插件
 
@@ -311,13 +315,13 @@
   - [constate](https://github.com/diegohaz/constate#readme) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md#readme) / [mobx](https://mobx.js.org/README.html) / [recoil](https://recoiljs.org/)
   - [immer](https://immerjs.github.io/immer/)
   - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/) / [react-query](https://react-query.tanstack.com/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
-  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/)
+  - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/) + [daisy-ui](https://daisyui.com/)
 - 移动端网页
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
   - immer
   - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/) / [antd-mobile-plus](https://ui.alitajs.com/)
-  - tailwindcss / windicss
+  - tailwindcss / windicss + daisy-ui
   - (react-use + swr / react-query) / ahooks
 - 移动端应用
   - [expo](https://expo.io/)
@@ -336,7 +340,7 @@
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / recoil
   - immer
   - (zent / blueprint / material-ui + react-use + swr / react-query) / (antd + antd-pro-components + ahooks)
-  - tailwindcss / windicss
+  - tailwindcss / windicss + daisy-ui
   - electron，umi 可直接使用 [umi-plugin-electron-builder](https://github.com/BySlin/umi-plugin-electron-builder)，next 可直接使用 [nextron](https://github.com/saltyshiomix/nextron)
 
 ## 规范
@@ -484,11 +488,18 @@
   - [如何进行 web 性能监控](http://www.alloyteam.com/2020/01/14184/)
   - [顶级开源项目 Sentry 20.x JS-SDK 设计艺术（理念与设计原则篇）](https://juejin.cn/post/6937664300630671390)
 
-## 任务管理和 DevOps
+## 安全
+
+- [secguide](https://github.com/Tencent/secguide) - 面向开发人员梳理的代码安全指南
+
+## 任务管理，工作协同，DevOps 等
 
 - [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 - [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
 - [阿里云 DevOps](https://develop.aliyun.com/devops)
+- [Teambition](https://www.teambition.com/)
+- [TAPD](https://www.tapd.cn/)
+- [Worktile](https://worktile.com/)
 - [Trello](https://trello.com/home)
 - [OmniPlan](https://www.omnigroup.com/omniplan)
 - [滴答清单](https://dida365.com/home)
@@ -528,6 +539,7 @@
 - [ui-kit](https://getuikit.com/)
 - [tailwindcss](https://tailwindcss.com/)
   - [windicss](https://windicss.org/)
+  - [daisy-ui](https://daisyui.com/)
   - [bulma](https://bulma.io/documentation/)
   - [tachyons](https://tachyons.io/)
   - [primer](https://primer.style/css)
@@ -604,7 +616,7 @@
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
   - [element-plus](https://element-plus.org/)
-  - [antd-vue-next](https://2x.antdv.com/)
+  - [antd-vue](https://2x.antdv.com/)
   - [nut-ui](http://nutui.jd.com/)
   - [vant](https://youzan.github.io/vant/)
   - [更多](https://github.com/topics/vue)
@@ -669,6 +681,7 @@
   - [vue 3 组合式 API 征求意见稿](https://composition-api.vuejs.org/)
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
   - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
+  - [如何打造一套 Vue 组件库](https://arronkler.top/post/build_vue_component_lib/)
 
 ## react 及相关生态
 
@@ -703,13 +716,12 @@
   - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
-    - [blitz](https://github.com/blitz-js/blitz#readme)
     - [after](https://github.com/jaredpalmer/after.js#readme)
   - [umi](https://umijs.org/zh-CN) - 带微前端解决方案
   - [ice](https://ice.work/) - 带微前端解决方案
   - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
     - [react-app-rewired](https://github.com/timarney/react-app-rewired#readme) - 不弹出地修改配置
-    - [craco](https://github.com/gsoft-inc/craco) - 不弹出地修改配置
+    - [craco](https://github.com/gsoft-inc/craco#readme) - 不弹出地修改配置
   - [gatsby](https://www.gatsbyjs.com/)
   - [ssr](https://github.com/ykfe/ssr#readme)
 - app
@@ -865,15 +877,21 @@
   - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap#readme)
   - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
-  - [express.js](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
-    - [sails.js](https://sailsjs.com/)
-    - [nest.js](https://nestjs.com/) - 渐进式 node.js 框架
+  - [express](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
+    - [sails](https://sailsjs.com/)
   - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
+  - [nest](https://nestjs.com/) - 渐进式 node.js 框架
+  - [koa](https://koajs.com/) - node.js 框架，自由度高
+    - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
+    - [think](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
+    - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
+  - [meteor](https://www.meteor.com/) - 全栈框架
+  - [blitz](https://github.com/blitz-js/blitz#readme) - 基于 next.js 的全栈框架
   - [loopback](https://loopback.io/)
-  - [koa.js](https://koajs.com/) - node.js 框架，自由度高
-    - [egg.js](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
-    - [think.js](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
-    - [daruk.js](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
+  - [hapi](https://hapi.dev/)
+  - [restify](http://restify.com/)
+  - [adonis](https://adonisjs.com/)
+  - [strapi](https://strapi.io/)
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
 - 增强
   - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
@@ -883,12 +901,14 @@
   - [mysql](https://www.mysql.com/) - 关系型数据库
     - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
   - [postgresql](https://www.postgresql.org/) - 关系型数据库
-  - [redis](https://redis.io/) - 非关系型数据库
-  - [memcached](https://www.memcached.org/)
+  - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
+  - [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
   - [mongodb](https://www.mongodb.com/) - 非关系型数据库
+  - [couchdb](https://couchdb.apache.org/) - 非关系型数据库
   - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
+  - [node-cron](https://github.com/node-cron/node-cron#readme) - 任务调度
   - [pm2](https://pm2.keymetrics.io/) - 进程守护
   - [nodemon](https://nodemon.io/) - 进程守护
   - [forever](https://github.com/foreversd/forever#readme) - 进程守护
