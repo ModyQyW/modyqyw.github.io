@@ -14,12 +14,12 @@
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
-    "@babel/core": "~7.14.2",
-    "@babel/eslint-parser": "~7.14.2",
+    "@babel/core": "~7.14.3",
+    "@babel/eslint-parser": "~7.14.4",
     "@commitlint/cli": "~12.1.4",
-    "@modyqyw/fabric": "~2.0.4",
+    "@modyqyw/fabric": "~2.1.0",
     "cross-env": "~7.0.3",
-    "eslint": "~7.26.0",
+    "eslint": "~7.27.0",
     "husky": "~6.0.0",
     "is-ci": "~3.0.0",
     "lint-md-cli": "~0.1.2",
@@ -28,7 +28,7 @@
     "prettier": "~2.3.0",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.16.0"
+    "vuepress-theme-hope": "~1.17.2"
   },
   "config": {
     "commitizen": {
