@@ -27,12 +27,6 @@ module.exports = config({
       description:
         '基于 vuepress 和 vuepress-theme-hope 打造的个人网站，如有问题请尝试强制刷新。',
     },
-    '/en/': {
-      lang: 'en-US',
-      title: "ModyQyW's Site",
-      description:
-        'English version is on progress. Personal website based on vuepress and vuepress-theme-hope. Please try to force a refresh if you have any problems.',
-    },
   },
   themeConfig: {
     // 主题配置 https://vuepress-theme-hope.github.io/config/theme/
@@ -97,71 +91,6 @@ module.exports = config({
         'optimization/',
       ],
       '/': [''],
-    },
-    locales: {
-      '/en/': {
-        nav: [
-          { text: 'Index', link: '/en/' },
-          {
-            text: 'Coding Basis',
-            items: [
-              { text: 'Math', link: '/en/coding-basis/math/' },
-              {
-                text: 'Computer Organization',
-                link: '/en/coding-basis/computer-organization/',
-              },
-              { text: 'Internet', link: '/en/coding-basis/internet/' },
-              { text: 'Git', link: '/en/coding-basis/git/' },
-              { text: 'Browser', link: '/en/coding-basis/browser/' },
-              { text: 'HTML', link: '/en/coding-basis/html/' },
-              { text: 'CSS', link: '/en/coding-basis/css/' },
-              { text: 'JavaScript', link: '/en/coding-basis/javascript/' },
-              {
-                text: 'Data Structure and Algorithm',
-                link: '/en/coding-basis/data-structure-and-algorithm/',
-              },
-            ],
-          },
-          {
-            text: 'Frontend',
-            items: [
-              { text: 'Roadmap', link: '/en/frontend/roadmap/' },
-              { text: 'Environment', link: '/en/frontend/environment/' },
-              { text: 'Misc', link: '/en/frontend/misc/' },
-              { text: 'Vue', link: '/en/frontend/vue/' },
-              { text: 'React', link: '/en/frontend/react/' },
-              { text: 'Test', link: '/en/frontend/test/' },
-              { text: 'Webpack4', link: '/en/frontend/webpack4/' },
-              { text: 'Safety', link: '/en/frontend/safety/' },
-              { text: 'Optimization', link: '/en/frontend/optimization/' },
-            ],
-          },
-          { text: 'About', link: '/en/about/' },
-        ],
-        sidebar: {
-          '/en/coding-basis/': [
-            'math/',
-            'computer-organization/',
-            'internet/',
-            'git/',
-            'browser/',
-            'html/',
-            'css/',
-            'javascript/',
-            'data-structure-and-algorithm/',
-          ],
-          '/en/frontend/': [
-            'roadmap/',
-            'environment/',
-            'misc/',
-            'test/',
-            'webpack4/',
-            'safety/',
-            'optimization/',
-          ],
-          '/en/': [''],
-        },
-      },
     },
     hostname,
     // 默认主题配置 https://vuepress-theme-hope.github.io/config/theme/default/
