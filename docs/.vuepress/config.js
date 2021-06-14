@@ -8,16 +8,6 @@ const repo =
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
     : 'https://gitee.com/ModyQyW/ModyQyW';
 const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
-const valineConfig =
-  mode === 'github'
-    ? {
-        appId: '0erqa01qQhCP7hINNvszO4uN-gzGzoHsz',
-        appKey: 'BpjqRkPYtdcSfd9HoDin3opm',
-      }
-    : {
-        appId: 'cfEWBPi3cqTW0L7IREu7cO9W-gzGzoHsz',
-        appKey: 'FJchilHoXvSGLhY1nXL9q6qO',
-      };
 
 module.exports = config({
   locales: {
@@ -106,10 +96,7 @@ module.exports = config({
     mdEnhance: {
       lineNumbers: true,
     },
-    comment: {
-      type: 'valine',
-      ...valineConfig,
-    },
+    comment: false,
     copyright: false,
     pwa: {
       favicon: '/favicon.ico',
