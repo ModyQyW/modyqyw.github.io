@@ -612,6 +612,8 @@
   - [vue-router](https://router.vuejs.org/)
 - 状态管理
   - [vuex](https://vuex.vuejs.org/)
+    - [vuex-orm](https://vuex-orm.org/)
+  - [pinia](https://pinia.esm.dev/)
 - ui
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
@@ -900,10 +902,13 @@
   - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
   - [mysql](https://www.mysql.com/) - 关系型数据库
     - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
+    - [mysql workbench](https://www.mysql.com/products/workbench/)
   - [postgresql](https://www.postgresql.org/) - 关系型数据库
   - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
+    - [another redis desktop manager](https://github.com/qishibo/AnotherRedisDesktopManager#readme)
   - [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
   - [mongodb](https://www.mongodb.com/) - 非关系型数据库
+    - [mongodb compass](https://www.mongodb.com/products/compass)
   - [couchdb](https://couchdb.apache.org/) - 非关系型数据库
   - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布

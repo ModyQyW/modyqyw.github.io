@@ -15,6 +15,7 @@
 ## 浏览器插件
 
 - BitWarden - 密码管理
+- Dark Reader - 暗黑模式
 - Gitako - 便捷查看 Github
 - IE Tab - 模拟 IE 行为
 - Lighthouse - 网页性能测试
@@ -222,6 +223,7 @@ brew tap homebrew/cask-fonts # https://github.com/Homebrew/homebrew-cask-fonts
 brew install font-fira-code # https://github.com/tonsky/FiraCode
 brew install font-jetbrains-mono # https://github.com/JetBrains/JetBrainsMono
 brew install font-roboto # https://github.com/googlefonts/roboto
+brew install font-roboto-mono
 brew install font-roboto-mono-for-powerline
 brew install font-sarasa-gothic # https://github.com/be5invis/Sarasa-Gothic
 brew install font-source-code-pro # https://github.com/adobe-fonts/source-code-pro
@@ -231,6 +233,8 @@ brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-vers
 
 # android studio，开发 Android 用
 brew install --cask android-studio # https://developer.android.com/studio/
+# another redis desktop manager，redis gui
+brew install --cask another-redis-desktop-manager # https://github.com/qishibo/AnotherRedisDesktopManager/
 # baidu netdisk，百度网盘，自建网盘参考 seafile 和 owncloud
 brew install --cask baidunetdisk # https://pan.baidu.com/download
 # bitwarden，管理密码
@@ -260,6 +264,8 @@ brew install --cask hbuilderx # https://www.dcloud.io/hbuilderx.html
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
 brew install --cask itsycal # https://www.mowglii.com/itsycal/
+# lightproxy，代理调试工具
+brew install --cask lightproxy
 # lx-music，洛雪音乐助手
 brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
 # maczip，压缩工具
@@ -275,6 +281,8 @@ brew install --cask mongodb-compass # mongodb official gui
 brew services start mongodb/brew/mongodb-community # start when launched
 # motrix，下载工具
 brew install --cask motrix # https://motrix.app/
+# mysqlworkbench，mysql gui
+brew install --cask mysqlworkbench # https://www.mysql.com/products/workbench/
 # mounty，重新挂载受写保护的 NTFS 卷
 brew install --cask mounty # https://mounty.app/
 # obs，录屏工具
@@ -480,13 +488,17 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
+- [Component Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-material-helper) - 在 JSX 中更快更好地添加组件、编写组件属性、查找组件文档
+- [create-uniapp-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) - 快速创建 uni-app 视图与组件
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
+- [Doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor) - 安全和质量审核工具
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
+- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
-- [Iceworks](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks) - 飞冰套件
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
@@ -501,17 +513,23 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
-- [React Hooks Snippets](https://marketplace.visualstudio.com/items?itemName=AlDuncanson.react-hooks-snippets) - React Hooks 代码段
+- [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native) - 针对 React Native 的调试和集成命令
+- [React Refactor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-refactor) - 帮助重构代码
+- [React Style Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-style-helper) - 在 JSX 中更快速地编写内联样式，并辅助开发 CSS、LESS、SASS 等样式文件
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
+- [Time Master](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-time-master) - 通过自动跟踪编码活动从而度量编码效率
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
-- [TypeScript React Hooks Tools](https://marketplace.visualstudio.com/items?itemName=kingwl.ts-react-hooks-tools) - 用 typescript 和 react hooks 重构
-- [uni-helper](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - uni-* 开发帮助工具
+- [uni-app-schemas](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - 校验 uni-app pages.json 和 manifest.json 格式
+- [uni-app-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-app-snippets) - uni-app 基本能力的代码片段，包括组件和 API
+- [uni-cloud-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-cloud-snippets) - uni-cloud 基本能力的代码片段，包括组件和 API
+- [uni-ui-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-ui-snippets) - uni-ui 组件代码片段
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
+- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 WindiCSS 和 TailwindCSS 体验
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
@@ -673,8 +691,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 ```json
 {
   "editor.colorScheme": "Atom One Dark",
-  "editor.fontFamily": "Source Code Pro for Powerline",
-  "editor.fontFmyCHS": "Heiti SC",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
