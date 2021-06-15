@@ -61,6 +61,7 @@
   - [小浩算法](https://www.geekxh.com/)
   - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
   - [算法之道](https://book.douban.com/subject/4249686/)
+  - [数据结构与算法](https://time.geekbang.org/column/intro/126)
 - 正则表达式
   - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
 - 版本控制
@@ -79,6 +80,12 @@
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
 - [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
+
+## 工作学习法
+
+- [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
+- [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
+- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
 
 ## 前端基础
 
@@ -141,6 +148,7 @@
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
   - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
   - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
+  - [Type Challenges](https://tsch.js.org/)
 - 数据结构和算法
   - [前端算法体系](https://github.com/sisterAn/JavaScript-Algorithms)
   - [IAlgorithms](https://ziyi2.github.io/algorithms/)
@@ -242,6 +250,7 @@
 - [腾讯文档](https://docs.qq.com/)
 - [飞书文档](https://www.feishu.cn/product/docs)
 - [石墨文档](https://shimo.im/)
+- [金山文档](https://www.kdocs.cn/)
 
 ## 代码管理
 
@@ -392,6 +401,7 @@
 - [webpack](https://webpack.js.org/)
   - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack#readme)
   - [webpack 教程](https://www.jiangruitao.com/webpack/)
+  - [一文吃透 Webpack 核心原理](https://xie.infoq.cn/article/ddca4caa394241447fa0aa3c0)
   - [webpack-merge](https://github.com/survivejs/webpack-merge#readme)
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain#readme)
   - [webpack-nano](https://github.com/shellscape/webpack-nano#readme)
@@ -450,10 +460,17 @@
 - [firefox devtools](https://developer.mozilla.org/en-US/docs/Tools)
 - [edge devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
-- [jest](https://jestjs.io/) - 单元测试，备选 [mocha](https://mochajs.org/) + [chai](https://www.chaijs.com/)
+- [jest](https://jestjs.io/) - 单元测试
   - [ts-jest](https://kulshekhar.github.io/ts-jest/)
+- [mocha](https://mochajs.org/)
+- [chai](https://www.chaijs.com/)
+- [sinon](https://sinonjs.org/)
 - [testing-library](https://testing-library.com/) - 组件测试
-- [cypress](https://docs.cypress.io/) - 端对端测试，备选 [nightwatch](https://nightwatchjs.org/) 和 [testcafe](https://devexpress.github.io/testcafe/)
+- [cypress](https://docs.cypress.io/) - 端对端测试
+- [nightwatch](https://nightwatchjs.org/)
+- [testcafe](https://devexpress.github.io/testcafe/)
+- [puppeteer](https://pptr.dev/)
+- [supertest](https://github.com/visionmedia/supertest#readme)
 - [eruda](https://github.com/liriliri/eruda/blob/master/doc/README_CN.md#readme) - 移动端网页调试面板
 - [v-console](https://github.com/Tencent/vConsole/blob/dev/README_CN.md#readme) - 移动端网页调试面板
 - [whistle](https://github.com/avwo/whistle/blob/master/README-zh_CN.md#readme) - 跨平台代理调试工具
@@ -470,12 +487,12 @@
 - [jenkins](https://www.jenkins.io/zh/)
 - [github-ci](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration)
 
-## 发布
+## 发布与部署
 
 - [np](https://github.com/sindresorhus/np#readme)
-
-## 部署
-
+- [release-it](https://github.com/release-it/release-it#readme)
+- [semantic-release](https://semantic-release.gitbook.io/semantic-release/)
+- [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog#readme)
 - [vercel](https://vercel.com/)
 - [netlify](https://www.netlify.com/)
 - [Github Pages](https://pages.github.com/)
@@ -484,7 +501,7 @@
 ## 监控
 
 - [sentry](https://sentry.io/)
-  - [谭光志 - 带你入门前端工程 - 前端监控](https://woai3c.gitee.io/introduction-to-front-end-engineering/07.html)
+  - [谭光志 - 带你入门前端工程 - 前端监控](https://woai3c.github.io/introduction-to-front-end-engineering/07.html)
   - [如何进行 web 性能监控](http://www.alloyteam.com/2020/01/14184/)
   - [顶级开源项目 Sentry 20.x JS-SDK 设计艺术（理念与设计原则篇）](https://juejin.cn/post/6937664300630671390)
 
@@ -492,7 +509,7 @@
 
 - [secguide](https://github.com/Tencent/secguide) - 面向开发人员梳理的代码安全指南
 
-## 任务管理，工作协同，DevOps 等
+## 任务，协同，DevOps 等
 
 - [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 - [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
@@ -507,6 +524,7 @@
 - [Microsoft To Do](https://todo.microsoft.com/)
 - [OmniFocus](https://www.omnigroup.com/omnifocus)
 - [MyLifeOrganized](https://www.mylifeorganized.net/)
+- [Taskade](https://www.taskade.com/)
 
 关于 DevOps 的实践还可以参考 [Ledge](https://devops.phodal.com/) 和 [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/download?id=205)。
 
@@ -557,11 +575,19 @@
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
 - [qs](https://www.npmjs.com/package/qs)
 - [query-string](https://www.npmjs.com/package/query-string)
-- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
+- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme) - 读取 UA 数据
+- [gcoord](https://github.com/hujiulong/gcoord#readme) - 地理坐标系转换
+- [convert](https://github.com/jonahsnider/convert#readme)
+- [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
+- [uuid](https://github.com/uuidjs/uuid#readme)
+  - [short-uuid](https://github.com/oculus42/short-uuid#readme)
+- [nanoid](https://github.com/ai/nanoid#readme)
+- [validator](https://github.com/validatorjs/validator.js#readme)
 - [qrcode](https://github.com/soldair/node-qrcode#readme)
 - [change-case](https://github.com/blakeembrey/change-case#readme)
 - [bowser](https://github.com/lancedikson/bowser#readme)
 - [classnames](https://github.com/JedWatson/classnames#readme)
+- [json-patch](https://github.com/Starcounter-Jack/JSON-Patch#readme)
 - [jquery](https://jquery.com/) - 要适配 ie8 需要使用 v1
 - [page.js](http://visionmedia.github.io/page.js/) - 路由
 - [format.js](https://formatjs.io/) - 国际化
@@ -584,6 +610,7 @@
 - [video.js](https://videojs.com/) - 播放器
 - [reveal.js](https://revealjs.com/) - 演讲
 - [dexie.js](https://dexie.org/) - IndexedDB
+- [idb](https://github.com/jakearchibald/idb) - IndexedDB
 - [screenfull](https://github.com/sindresorhus/screenfull.js/#readme) - 全屏
 - [file-saver](https://github.com/eligrey/FileSaver.js#readme) - 文件保存
   - [stream-saver](https://github.com/jimmywarting/StreamSaver.js#readme) - 文件保存
@@ -619,8 +646,10 @@
   - [element](https://element.eleme.cn/)
   - [element-plus](https://element-plus.org/)
   - [antd-vue](https://2x.antdv.com/)
+  - [naive-ui](https://www.naiveui.com/zh-CN/os-theme)
   - [nut-ui](http://nutui.jd.com/)
   - [vant](https://youzan.github.io/vant/)
+  - [zarm-vue](https://vue.zarm.design/)
   - [更多](https://github.com/topics/vue)
 - cli
   - [nuxt](https://zh.nuxtjs.org/)
@@ -634,6 +663,7 @@
     - [文档](https://uniapp.dcloud.io/)
     - 路由
       - [自带路由](https://uniapp.dcloud.io/frame?id=%e8%b7%af%e7%94%b1)
+      - [uni-simple-router](https://hhyang.cn/v2/)
     - 状态管理
       - [vuex](https://vuex.vuejs.org/)
     - ui
@@ -654,6 +684,8 @@
 - 衍生
   - [vue-cli 4 配置参考](https://github.com/staven630/vue-cli4-config#readme)
   - [用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架](https://github.com/yujinpan/h5-vue#readme)
+  - [@vue/composition-api](https://github.com/vuejs/composition-api#readme) - 支持在 vue 2 里使用 composition-api
+  - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api#readme) - 支持在 uni-app 里使用 composition-api
   - [genesis](https://fmfe.github.io/genesis-docs/) - 轻量的 vue ssr
   - [fes.js](https://webank.gitee.io/fes.js/) - 管理台应用解决方案
   - [swrv](https://github.com/Kong/swrv#readme) - 用于数据获取
@@ -676,14 +708,15 @@
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard#readme) - 后台管理系统
   - [vuetify-admin-dashboard](https://github.com/ClintOxx/vuetify-admin-dashboard#readme) - 后台管理系统
   - [vue2-elm](https://github.com/bailicangdu/vue2-elm#readme) - 仿饿了么
+  - [vue-styleguidist](https://vue-styleguidist.github.io/)
 - 进阶
   - [vue 渲染器设计](http://hcysun.me/vue-design/zh/)
   - [vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
   - [vue 3 生态技术内幕](https://www.yuque.com/hugsun/vue3)
-  - [vue 3 组合式 API 征求意见稿](https://composition-api.vuejs.org/)
   - [一张图理清 Vue 3.0 的响应式系统](https://juejin.im/post/5d9da45af265da5b8072de5d)
   - [vue 2.3 源码分析](https://github.com/answershuto/learnVue)
   - [如何打造一套 Vue 组件库](https://arronkler.top/post/build_vue_component_lib/)
+  - [Vue 3 Workshop Code Samples](https://codepen.io/collection/DkxpbE)
 
 ## react 及相关生态
 
@@ -708,6 +741,7 @@
   - [material-ui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
+  - [chakra-ui](https://chakra-ui.com/)
   - [antd](https://ant.design/)
   - [uiw](https://uiwjs.github.io/#/)
   - [rsuite](https://rsuitejs.com/)
@@ -857,6 +891,7 @@
 - [yargs](http://yargs.js.org/)
 - [yargs-parser](https://github.com/yargs/yargs-parser#readme)
 - [inquirer](https://github.com/SBoudrias/Inquirer.js#readme)
+- [meow](https://github.com/sindresorhus/meow#readme)
 - [ora](https://github.com/sindresorhus/ora#readme)
 - [rimraf](https://github.com/isaacs/rimraf#readme)
 - [cross-env](https://github.com/kentcdodds/cross-env#readme)
@@ -895,9 +930,11 @@
   - [adonis](https://adonisjs.com/)
   - [strapi](https://strapi.io/)
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
+  - [farrow](https://github.com/farrow-js/farrow#readme)
 - 增强
   - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
     - [open-resty](https://openresty.org/)
+    - [nginx 在线配置](https://www.digitalocean.com/community/tools/nginx)
   - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
   - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
   - [mysql](https://www.mysql.com/) - 关系型数据库
@@ -941,6 +978,10 @@
 - [前端进阶之道](https://yuchengkai.cn/home/)
 - [木易杨前端进阶](https://muyiy.cn/)
 - [前端工程化](https://github.com/fouber/blog)
+- [畅销书《深入浅出Vue.js》作者，在阿里淘系1年的收获成长](https://mp.weixin.qq.com/s/EF86vmJfZJ-hUReFHM8HDw)
+- [前端负责人需要具有的能力](https://juejin.cn/post/6946210273061502990)
+- [你认为程序员从幼稚到成熟的过程是什么？ - 姚冬的回答 - 知乎](https://www.zhihu.com/question/411824337/answer/1470856059)
+- [尤雨溪：做技术哪有什么两全之策，都是取舍和平衡](https://mp.weixin.qq.com/s/_q_SnCbGyXrNnXA876tXbA)
 
 ## 自媒体
 
@@ -950,6 +991,7 @@
 
 - [为什么要开源](https://www.zhihu.com/question/33573424)
 - [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
+- [开源社区的暗面](https://zhuanlan.zhihu.com/p/376516218)
 
 ## 独立开发者
 

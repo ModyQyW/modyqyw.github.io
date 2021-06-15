@@ -320,6 +320,7 @@ brew install --cask tencent-lemon # https://lemon.qq.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
+# 开源插件见 https://yuanliao.info/d/2168--
 brew install --cask utools # https://u.tools/index.html
 # wechat
 brew install --cask wechat # https://mac.weixin.qq.com/

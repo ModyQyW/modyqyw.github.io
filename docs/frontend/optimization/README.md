@@ -697,7 +697,7 @@ TODO
 - [chrome devtools](https://developers.google.cn/web/tools/chrome-devtools)
 - [firefox devtools](https://developer.mozilla.org/en-US/docs/Tools)
 - [edge(chromium devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
-- [谭光志 - 带你入门前端工程](https://woai3c.gitee.io/introduction-to-front-end-engineering/)
+- [谭光志 - 带你入门前端工程](https://woai3c.github.io/introduction-to-front-end-engineering/)
 - [[ JS 进阶 ] 基本类型 引用类型 简单赋值 对象引用](https://segmentfault.com/a/1190000002789651)
 - [阮一峰 - 网页性能管理详解](https://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html)
 - [WindrunnerMax - Vue 常用性能优化](https://www.cnblogs.com/WindrunnerMax/p/13972793.html)
