@@ -11,44 +11,25 @@ features:
 - title: 原则
   details: 努力遵循 vue 文档编写指南，追求与 vue 官方文档相同的阅读体验。从官网搬运过来的东西一定要加入自己的见解。
   link: https://v3.cn.vuejs.org/guide/contributing/writing-guide.html
-- title: 数学基础（未开始）
-  link: /coding-basis/math/
-- title: 计算机组成基础（未开始）
-  link: /coding-basis/computer-organization/
-- title: 网络基础（未开始）
-  link: /coding-basis/internet/
-- title: git 基础（未开始）
-  link: /coding-basis/git/
-- title: 浏览器基础（未开始）
-  link: /coding-basis/browser/
-- title: html 基础（待完善）
-  link: /coding-basis/html/
-- title: css 基础（待完善）
-  link: /coding-basis/css/
-- title: js 基础（待完善）
-  link: /coding-basis/javascript/
-- title: 数据结构和算法基础（未开始）
-  link: /coding-basis/data-structure-and-algorithm/
-- title: 前端学习路径
-  details: 包含多个版本的前端学习路径
-  link: /frontend/roadmap/
-- title: 前端环境配置
-  details: Windows 和 macOS 环境配置，支持 vue，uni-app，react，react-native，taro 等各种项目
-  link: /frontend/environment/
-- title: 前端杂项
-  details: 尽可能覆盖一个前端项目的方方面面
-  link: /frontend/misc/
-- title: 前端测试（未开始）
-  link: /frontend/test/
-- title: 前端 Webpack4
-  details: 尽可能覆盖一个前端项目的 webpack4 构建基础
-  link: /frontend/webpack4/
-- title: 前端安全
-  details: 了解常见的前端安全问题和解决方案
-  link: /frontend/safety/
-- title: 前端优化（待完善）
-  details: 了解前端优化手段，提高项目的运行效率
-  link: /frontend/optimization/
+- title: 学习路径
+  details: 包含多个版本的 JavaScript/TypeScript 学习路径。
+  link: /roadmap/
+- title: 环境配置
+  details: 环境配置，支持 JavaScript/TypeScript 生态大量项目。
+  link: /environment/
+- title: 开发
+  details: 尽可能覆盖用 JavaScript/TypeScript 开发一个完整项目的方方面面。
+  link: /development/
+- title: 优化
+  details: 了解优化手段，提高项目的运行效率。
+  link: /optimization/
+- title: 安全
+  details: 了解常见的安全问题和解决方案。
+  link: /safety/
+- title: Webpack4
+  details: 尽可能覆盖一个项目的 webpack4 构建基础。
+  link: /webpack4/
 - title: 关于
+  details: 关于我自己的一些情报。
   link: /about/
 ---
