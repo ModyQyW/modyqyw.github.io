@@ -231,6 +231,8 @@ brew install font-source-code-pro-for-powerline
 # 不同版本的应用
 brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
 
+# 阿里云盘
+brew install --cask adrive
 # android studio，开发 Android 用
 brew install --cask android-studio # https://developer.android.com/studio/
 # another redis desktop manager，redis gui
@@ -258,8 +260,6 @@ git config --global core.autocrlf false
 git config --global init.defaultBranch main
 git config --global user.name "YOUR_NAME_HERE"
 git config --global user.email "YOUR_EMAIL_HERE"
-# hbuilderx，uni-app、uni-cloud 开发工具
-brew install --cask hbuilderx # https://www.dcloud.io/hbuilderx.html
 # iina，音视频播放器
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
@@ -349,11 +349,8 @@ nvm alias default 14
 # use lts (2021.05.30)
 nvm use 14
 # install global deps
-npm i -g --registry=https://registry.npm.taobao.org @commitlint/cli
-npm i -g --registry=https://registry.npm.taobao.org @ls-lint/ls-lint
-npm i -g --registry=https://registry.npm.taobao.org @modyqyw/fabric
-npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
+npm i -g --registry=https://registry.npm.taobao.org @types/node
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
 npm i -g --registry=https://registry.npm.taobao.org @vitejs/create-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
@@ -365,20 +362,12 @@ npm i -g --registry=https://registry.npm.taobao.org create-egg
 npm i -g --registry=https://registry.npm.taobao.org create-next-app
 npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
 npm i -g --registry=https://registry.npm.taobao.org create-react-app
-npm i -g --registry=https://registry.npm.taobao.org create-remax-app
-npm i -g --registry=https://registry.npm.taobao.org create-ssr-app
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org express-generator
-npm i -g --registry=https://registry.npm.taobao.org less
-npm i -g --registry=https://registry.npm.taobao.org markdownlint-cli
 npm i -g --registry=https://registry.npm.taobao.org nativefier
-npm i -g --registry=https://registry.npm.taobao.org np
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
-npm i -g --registry=https://registry.npm.taobao.org pm2
-npm i -g --registry=https://registry.npm.taobao.org prettier
-npm i -g --registry=https://registry.npm.taobao.org rax-cli
+npm i -g --registry=https://registry.npm.taobao.org pnpm
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
-npm i -g --registry=https://registry.npm.taobao.org sass
 npm i -g --registry=https://registry.npm.taobao.org serve
 npm i -g --registry=https://registry.npm.taobao.org stylelint
 npm i -g --registry=https://registry.npm.taobao.org ts-node
@@ -388,6 +377,7 @@ npm i -g --registry=https://registry.npm.taobao.org yarn
 
 - 一些需要额外安装的应用。
   - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
+  - [hbuilderx](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [macwk updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
   - [qspace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
   - [wps](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求（如
@@ -698,8 +688,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.0/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.0/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.3/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.3/bin/npm"
 }
 
 ```
