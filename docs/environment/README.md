@@ -249,6 +249,8 @@ brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
 brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
+# 钉钉
+brew install --cask dingtalk # https://www.dingtalk.com/
 # drawio，作图工具
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
@@ -293,8 +295,6 @@ brew install --cask openineditor-lite # https://github.com/Ji4n1ng/OpenInTermina
 brew install --cask openinterminal-lite # https://github.com/Ji4n1ng/OpenInTerminal
 # openjdk，开发 Android 用
 brew install openjdk # https://openjdk.java.net/
-# picgo，图床工具
-brew install --cask picgo # https://github.com/Molunerfinn/PicGo
 # postman，接口工具
 brew install --cask postman # https://www.postman.com/
 # prince，将 HTML 转换成 PDF
@@ -313,10 +313,10 @@ brew install --cask sourcetree # https://www.sourcetreeapp.com/
 brew install --cask steam
 # subversion，代码版本管理
 brew install svn # https://subversion.apache.org/
-# tableplus，数据库 gui
-brew install --cask tableplus # https://tableplus.com/
 # tencent-lemon，系统清理和状态工具
 brew install --cask tencent-lemon # https://lemon.qq.com/
+# tencent-meeting，会议工具
+brew install --cask tencent-meeting # https://meeting.tencent.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
@@ -324,12 +324,16 @@ brew install --cask thunder # https://www.xunlei.com/
 brew install --cask utools # https://u.tools/index.html
 # wechat
 brew install --cask wechat # https://mac.weixin.qq.com/
+# wechat work
+brew install --cask wechatwork # https://work.weixin.qq.com/
 # wechatwebdevtools，微信小程序开发者工具
 brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
 # yuque，语雀，知识库工具
 brew install --cask yuque # https://www.yuque.com/
 # you-get，下载网络媒体资源
 brew install you-get # https://you-get.org/
+# zoom，会议工具
+brew install --cask zoom # https://www.zoom.us/
 ```
 
 - 安装 `node` 相关。
@@ -369,7 +373,6 @@ npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
 npm i -g --registry=https://registry.npm.taobao.org pnpm
 npm i -g --registry=https://registry.npm.taobao.org react-devtools
 npm i -g --registry=https://registry.npm.taobao.org serve
-npm i -g --registry=https://registry.npm.taobao.org stylelint
 npm i -g --registry=https://registry.npm.taobao.org ts-node
 npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
@@ -377,12 +380,15 @@ npm i -g --registry=https://registry.npm.taobao.org yarn
 
 - 一些需要额外安装的应用。
   - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
+  - [bitcomet](https://www.bitcomet.com/cn)
   - [hbuilderx](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [macwk updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
+  - [neat download manager](https://www.neatdownloadmanager.com/)
   - [qspace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
-  - [wps](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求（如
+  - [wps](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
   - [xcode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
+  - [恒星播放器](https://www.stellarplayer.com/) - 播放器
 
 - 补充一些东西在 `~/.zshrc` 末尾。
 
