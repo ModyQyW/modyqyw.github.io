@@ -182,6 +182,7 @@
 - [pagic](https://pagic.cn/)
 - [hugo](https://gohugo.io/)
 - [jekyll](https://jekyllrb.com/)
+- [slidev](https://cn.sli.dev/) - 演示文稿
 
 ## 界面和交互设计
 
@@ -240,6 +241,7 @@
 - [simple-icons](https://simpleicons.org/)
 - [icon-park](https://iconpark.bytedance.com/)
 - [iconic](https://iconic.app/)
+- [iconify](https://iconify.design/)
 
 ## 代码管理
 
@@ -939,6 +941,7 @@
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 - [serve](https://github.com/vercel/serve)
 - [ts-node](https://github.com/TypeStrong/ts-node)
+- [zx](https://github.com/google/zx)
 
 ## 服务器端
 
