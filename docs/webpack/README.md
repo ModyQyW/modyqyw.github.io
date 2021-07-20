@@ -509,7 +509,7 @@ module.exports = {
 
 🎉恭喜，一个简单的 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-demos/tree/master/demo01)。
+参考源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo01)。
 
 ## demo02 - 再看核心概念
 
@@ -1537,7 +1537,7 @@ if (process.env.NODE_ENV === 'development') {
 
 🎉恭喜，你的第二个 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-demos/tree/master/demo02)。
+参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo02)。
 
 ## demo03 - 优化
 
@@ -2527,7 +2527,7 @@ module.exports = {
  error
 
 
-.../webpack4-demos/demo03/src/App.jsx
+.../webpack4-plus-demos/demo03/src/App.jsx
   14:5  error  Do not use 'new' for side effects  no-new
   26:11  error  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
 
@@ -2707,7 +2707,7 @@ module.exports = (env, argv) => {
 
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-demos/tree/master/demo03)。
+参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
 
 ## 一些简单的拓展
 
