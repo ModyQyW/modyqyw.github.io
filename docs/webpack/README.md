@@ -7,7 +7,7 @@
 - 目标：跟着实操能入门 `webpack4+`，能解决实际开发中 50% 以上的问题，熟悉参考资料后能解决 80% 以上的问题。
 - 思路：`是什么 -> 为什么 -> 怎么做` 和 `为什么 -> 是什么 -> 怎么做`。
 - 结构：拿单页应用作示例，着重关注怎么使用，最后列出参考资料给你查阅学习。
-- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v12，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)或 [serve](https://github.com/vercel/serve#readme) 测试构建。
+- 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v14，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)或 [serve](https://github.com/vercel/serve#readme) 测试构建。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
 - 支持：支持现代浏览器和 IE 11。
 - 状态：目前处于完善中状态，可能会有遗漏、错误、不完美，但已经可以正常阅读。如果你发现了错误，请在评论里告诉我，谢谢。
@@ -262,10 +262,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 如果你已经安装了 node，你也可以考虑完全卸载 node 之后安装 nvm。如果不需要频繁更换 node 版本，可以直接安装 node。
 
-安装 nvm 之后，使用 nvm 来安装 node v12。
+安装 nvm 之后，使用 nvm 来安装 node v14。
 
 ```shell
-nvm install 12
+nvm install 14
 ```
 
 新建一个 `demo` 文件夹，进入该文件夹，用 `npm` 初始化，这会在当前目录下生成一个默认的 `package.json` 文件。
@@ -649,6 +649,7 @@ npm i @babel/preset-react@~7.14.5 -D
 npm i babel-loader@~8.2.2 -D
 npm i @types/react@~17.0.14 -D
 npm i @types/react-dom@~17.0.9 -D
+npm i @types/node@~16.3.3 -D
 ```
 
 然后修改 `webpack` 配置。不要忘记，对于 `webpack` 来说，所有文件都可以看成一个模块，所以需要在模块对应的字段下写配置。
@@ -2705,9 +2706,208 @@ module.exports = (env, argv) => {
 
 现在执行 `npm run build`，命令行里面会显示我们使用的 `plugin` 和 `loader` 的耗时。我们可以根据这些耗时来做适当的调整，缩短等待时间。
 
+### TypeScript
+
+TypeScript 为 JavaScript 引入了类型系统等特性，大量实践证明它的价值，目前在现代应用开发中非常常见。
+
+```shell
+npm i typescript@~4.3.5 -D
+npm i @babel/preset-typescript@~7.14.5 -D
+```
+
+添加依赖后，我们先创建 TypeScript 配置文件 `${PROJECT_DIR}/tsconfig.json`，内容如下所示。
+
+```json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": "."
+  },
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
+
+```
+
+再创建定义文件 `${PROJECT_DIR}/index.d.ts`，内容如下所示。
+
+```ts
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.png';
+declare module '*.gif';
+declare module '*.svg';
+declare module '*.webp';
+declare module '*.css';
+declare module '*.less';
+declare module '*.scss';
+
+```
+
+然后，更新 `${PROJECT_DIR}/babel.config.json`，让 `babel` 能够正确处理 `.js`，`.jsx`，`.ts` 和 `.tsx` 文件。
+
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": { "version": 3, "proposals": true }
+      }
+    ],
+    "@babel/preset-react",
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true,
+        "allowDeclareFields": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "zent",
+      {
+        "libraryName": "zent",
+        "noModuleRewrite": false,
+        "automaticStyleImport": true,
+        "useRawStyle": true
+      }
+    ]
+  ]
+}
+
+```
+
+我们还需要调整 `${PROJECT_DIR}/config/webpack.base.js` 里 `babel-loader` 的相关部分。
+
+```js
+/* eslint-disable import/no-extraneous-dependencies */
+const path = require('path');
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
+module.exports = {
+  entry: {
+    app: path.resolve('src', 'index.tsx'),
+  },
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.(j|t)sx?$/,
+        include: /src/,
+        use: [{ loader: 'babel-loader' }],
+      },
+      ...,
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+};
+
+```
+
+最后，我们改写所有 `.js` 和 `.jsx` 文件，然后构建查看效果。
+
+`App.tsx`：
+
+```tsx
+import React, { useEffect } from 'react';
+import {
+  LayoutRow as Row,
+  LayoutCol as Col,
+  LayoutGrid as Grid,
+  Button,
+  Icon,
+} from 'zent';
+import iconWebpack from './assets/webpack.png';
+import './App.scss';
+
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.title = 'Hello World!';
+      console.log(
+        'process.env',
+        process.env,
+        process.env.NODE_ENV,
+        process.env.APP_MODE,
+      );
+    }, 5000);
+  }, []);
+
+  return (
+    <Grid>
+      <Row>
+        <Col span={24}>
+          <img alt="webpack" className="icon" src={iconWebpack} />
+          <Button type="primary">
+            <Icon type="youzan" />
+            Hello Zent!
+          </Button>
+        </Col>
+      </Row>
+    </Grid>
+  );
+};
+
+export default App;
+
+```
+
+`index.tsx`：
+
+```tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.scss';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector('#root'),
+);
+
+```
+
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
 参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
+
+## demo04 - webpack 5
+
+TODO
 
 ## 一些简单的拓展
 
@@ -2733,15 +2933,19 @@ js 里面有变量提升和函数提升的概念，也就是把变量和函数�
 
 使用摇树优化是为了删除一些没有被使用的代码，同样，它也是依赖于 ESM 的。
 
+- Module Federation 模块联邦
+
+TODO
+
 ## 结束
 
-这篇笔记和示例到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如 CSS Modules 支持，MPA 的实践，SSR 支持，`webpack` 配置封装，使用 `webpack` 构建 `vue` 应用等等。不要忘了阅读参考部分，那里列举了大量参考资料。你也可以去查看 `create-react-app`，`@vue/cli`，`poi` 等优秀源码，学习更多的 `webpack` 配置。真正开发的时候，建议直接使用 cli。
+这篇笔记和示例到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如部署应用包时的基本 URL，CSS Modules 支持，MPA 的实践，SSR 支持，`webpack` 配置封装，使用 `webpack` 构建 `vue` 应用，更复杂的 TypeScript 实践等等。不要忘了阅读参考部分，那里列举了大量参考资料。你也可以去查看 `create-react-app`，`@vue/cli`，`poi` 等优秀源码，学习更多的 `webpack` 配置。真正开发的时候，建议直接使用 cli。
 
 如果你发现任何问题，欢迎在下面评论提意见，或者提交 issue / pr。感谢你的阅读 :D
 
 ## 参考
 
-- [nodejs 12.x - path](https://nodejs.org/dist/latest-v12.x/docs/api/path.html)
+- [nodejs 14.x - path](https://nodejs.org/dist/latest-v14.x/docs/api/path.html)
 - [CommonJS](https://en.wikipedia.org/wiki/CommonJS)
 - [webpack](https://v4.webpack.js.org)
 - [理解 webpack chunk](https://juejin.im/post/5d2b300de51d45775b419c76)
@@ -2804,6 +3008,8 @@ js 里面有变量提升和函数提升的概念，也就是把变量和函数�
 - [搞懂 webpack 热更新原理](https://juejin.cn/post/6844903933157048333)
 - [webpack - Tree Shaking](https://v4.webpack.js.org/guides/tree-shaking/)
 - [rollup - Tree Shaking](https://www.rollupjs.org/guide/en/#tree-shaking)
+- [精读《Webpack5 新特性 - 模块联邦》](https://zhuanlan.zhihu.com/p/115403616)
+- [umi - mfsu](https://umijs.org/zh-CN/docs/mfsu)
 
 ## 致谢
 
