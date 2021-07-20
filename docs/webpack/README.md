@@ -295,11 +295,11 @@ selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
 
 ```shell
 npm i clean-webpack-plugin@~3.0.0 -D
-npm i copy-webpack-plugin@~6.4.0 -D
+npm i copy-webpack-plugin@~6.4.1 -D
 npm i friendly-errors-webpack-plugin@~1.7.0 -D
-npm i html-webpack-plugin@~4.5.1 -D
+npm i html-webpack-plugin@~4.5.2 -D
 npm i webpack@~4.46.0 -D
-npm i webpack-cli@~4.5.0 -D
+npm i webpack-cli@~4.7.2 -D
 ```
 
 创建一个内容简单的 `${PROJECT_DIR}/src/index.js`。
@@ -636,19 +636,19 @@ module.exports = {
 首先还是要安装相关的依赖。
 
 ```shell
-npm i @babel/runtime@~7.12.13
-npm i core-js@~3.8.3
-npm i react@~17.0.1
-npm i react-dom@~17.0.1
+npm i @babel/runtime@~7.14.6
+npm i core-js@~3.15.2
+npm i react@~17.0.2
+npm i react-dom@~17.0.2
 npm i regenerator-runtime@~0.13.7
-npm i @babel/cli@~7.12.13 -D
-npm i @babel/core@~7.12.13 -D
-npm i @babel/plugin-transform-runtime@~7.12.15 -D
-npm i @babel/preset-env@~7.12.13 -D
-npm i @babel/preset-react@~7.12.13 -D
+npm i @babel/cli@~7.14.5 -D
+npm i @babel/core@~7.14.6 -D
+npm i @babel/plugin-transform-runtime@~7.14.5 -D
+npm i @babel/preset-env@~7.14.7 -D
+npm i @babel/preset-react@~7.14.5 -D
 npm i babel-loader@~8.2.2 -D
-npm i @types/react@~17.0.1 -D
-npm i @types/react-dom@~17.0.0 -D
+npm i @types/react@~17.0.14 -D
+npm i @types/react-dom@~17.0.9 -D
 ```
 
 然后修改 `webpack` 配置。不要忘记，对于 `webpack` 来说，所有文件都可以看成一个模块，所以需要在模块对应的字段下写配置。
@@ -870,13 +870,13 @@ export default App;
 首先还是要安装相关的依赖。
 
 ```shell
-npm i zent@~9.3.0
+npm i zent@~9.8.0
 npm i babel-plugin-zent@~2.2.2 -D
 npm i style-loader@~2.0.0 -D
-npm i css-loader@~5.0.2 -D
-npm i sass@~1.32.6 -D
-npm i sass-loader@~10.1.1 -D
-npm i resolve-url-loader@~3.1.2 -D
+npm i css-loader@~5.2.7 -D
+npm i sass@~1.35.2 -D
+npm i sass-loader@~10.2.0 -D
+npm i resolve-url-loader@~3.1.4 -D
 ```
 
 `css-loader` 能够把 `.css` 文件解析成 css 模块，而 `style-loader` 能够将 css 模块嵌入到文件中。
@@ -1128,11 +1128,11 @@ export default App;
 但仅仅是解析 `.css`，`.sass` 和 `scss` 还远远不能达到实际的需求，我们往往会需要使用 css 新特性，或者压缩 css 代码，又或者为 css 属性添加浏览器前缀。这时候我们就需要使用 `postcss` 和 `postcss-loader`，不少人把 `postcss` 叫做 css 界的 `babel`。
 
 ```shell
-npm i postcss@~8.2.5 -D
-npm i postcss-loader@~4.2.0 -D
-npm i autoprefixer@~10.2.4 -D
+npm i postcss@~8.3.5 -D
+npm i postcss-loader@~4.3.0 -D
+npm i autoprefixer@~10.3.1 -D
 npm i postcss-preset-env@~6.7.0 -D
-npm i cssnano@~4.1.10 -D
+npm i cssnano@~5.0.6 -D
 ```
 
 在 `webpack` 配置文件里使用 `postcss-loader`。
@@ -1431,7 +1431,7 @@ body {
 ```shell
 npm i cross-env@~7.0.3 -D
 npm i webpack-dev-server@~3.11.2 -D
-npm i webpack-merge@~5.7.3 -D
+npm i webpack-merge@~5.8.0 -D
 ```
 
 我们还要根据环境来使用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
@@ -1600,7 +1600,7 @@ module.exports = {
 要解决这个问题，我们要使用 `mini-css-extract-plugin`，它能分离出 `.css` 文件让我们添加文件指纹。一般只会在生产环境中使用它，在开发环境里，从效率考虑，还是会使用 `style-loader`。
 
 ```shell
-npm i mini-css-extract-plugin@~1.3.6 -D
+npm i mini-css-extract-plugin@~1.6.2 -D
 ```
 
 我们再把 `${PROJECT_DIR}/config/webpack.base.js` 里关于 css 的部分都放到 `${PROJECT_DIR}/config/webpack.dev.js` 里。
@@ -2266,7 +2266,7 @@ module.exports = {
 首先安装相关的依赖。
 
 ```shell
-npm i dotenv@~8.2.0 -D
+npm i dotenv@~10.0.0 -D
 ```
 
 接着来修改一下 `${PROJECT_DIR}/config/webpack.config.js`。
@@ -2471,9 +2471,9 @@ module.exports = (env, argv) => {
 `eslint` 是现在最热门的 js 校验工具，我们也可以在 `webpack` 中使用 `eslint`。
 
 ```shell
-npm i @modyqyw/fabric@~1.14.0 -D
-npm i eslint@~7.19.0 -D
-npm i eslint-webpack-plugin@~2.5.0 -D
+npm i @modyqyw/fabric@~2.7.0 -D
+npm i eslint@~7.31.0 -D
+npm i eslint-webpack-plugin@~2.5.4 -D
 ```
 
 `eslint-webpack-plugin` 是 `eslint-loader` 的替代品，配置相差不大，而且 `eslint-webpack-plugin` 还修复了一些问题，推荐使用。
@@ -2578,8 +2578,8 @@ export default App;
 而 `stylelint` 是 css，less，sass，scss 等样式语言的校验工具，我们也可以在 `webpack` 中使用 `stylelint`。
 
 ```shell
-npm i stylelint@~13.9.0 -D
-npm i stylelint-webpack-plugin@~2.1.1 -D
+npm i stylelint@~13.13.1 -D
+npm i stylelint-webpack-plugin@~2.2.2 -D
 ```
 
 安装完依赖之后，我们可以在根目录下建立一个新文件 `stylelint.config.js` 作为 `stylelint` 的配置文件。这里用我自己封装的 `stylelint` 规则来演示。
@@ -2645,8 +2645,8 @@ module.exports = {
 在开发大型项目的时候，往往需要根据实际情况去做特定的优化，所以我们需要一些分析工具。
 
 ```shell
-npm i webpack-bundle-analyzer@~4.4.0 -D
-npm i speed-measure-webpack-plugin@~1.4.2 -D
+npm i webpack-bundle-analyzer@~4.4.2 -D
+npm i speed-measure-webpack-plugin@~1.5.0 -D
 ```
 
 使用 `webpack-bundle-analyzer` 来确定对应 `chunk` 的大小，然后考虑是否还需要调整。
