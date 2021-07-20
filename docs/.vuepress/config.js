@@ -28,7 +28,7 @@ module.exports = config({
       { text: '开发', link: '/development/' },
       { text: '优化', link: '/optimization/' },
       { text: '安全', link: '/safety/' },
-      { text: 'Webpack4', link: '/webpack4/' },
+      { text: 'Webpack', link: '/webpack/' },
       { text: '关于', link: '/about/' },
     ],
     sidebar: 'auto',

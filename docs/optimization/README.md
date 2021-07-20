@@ -514,7 +514,7 @@ div.style.color = 'blue'; // 浏览器统一处理
 
 要进一步地压缩，不妨考虑 `compression-webpack-plugin`，它可以压缩文件得到体积更小的 gzip 文件。
 
-上面这些优化都是关于 `webpack` 的，你可以查看我的 [webpack4 示例](../webpack4/README.md) 进一步了解。
+上面这些优化都是关于 `webpack` 的，你可以查看我的 [webpack4+ 示例](../webpack/README.md) 进一步了解。
 
 除此之外，还可以使用 CDN 来访问某些包的已构建资源，CDN 往往拥有更快的请求和响应速度。问题在于 CDN 的稳定性并不由自己掌控，我自己更倾向于把 `splitChunks` 分离出的包部署在服务器上，不使用 CDN。
 

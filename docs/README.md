@@ -26,9 +26,9 @@ features:
 - title: 安全
   details: 了解常见的安全问题和解决方案。
   link: /safety/
-- title: Webpack4
-  details: 尽可能覆盖一个项目的 webpack4 构建基础。
-  link: /webpack4/
+- title: Webpack
+  details: 尽可能覆盖一个项目的 webpack4+ 构建基础。
+  link: /webpack/
 - title: 关于
   details: 关于我自己的一些情报。
   link: /about/
