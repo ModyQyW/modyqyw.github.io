@@ -34,13 +34,13 @@
 
 - 点击左上角的 `终端` -> 偏好设置 -> 描述文件，可以选择你想要的基本效果。我这里选择了 `Pro`。
 
-- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续大量软件的安装和更新。
+- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续统一安装和更新大量软件。注意：homebrew 上的软件版本往往会有一些滞后。
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew tap buo/cask-upgrade # https://github.com/buo/homebrew-cask-upgrade
 # Update formulaes and casks
-brew upgrade && brew cu -ay && brew cleanup
+brew cleanup --prune=all && brew upgrade && brew cu -ay && brew cleanup --prune=all
 # Check problems
 brew doctor
 ```
@@ -249,8 +249,6 @@ brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
 brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
-# 钉钉
-brew install --cask dingtalk # https://www.dingtalk.com/
 # drawio，作图工具
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
@@ -309,14 +307,10 @@ brew install --cask responsively # https://responsively.app/
 brew install --cask snipaste # https://www.snipaste.com/
 # sourcetree，git gui
 brew install --cask sourcetree # https://www.sourcetreeapp.com/
-# steam
-brew install --cask steam
 # subversion，代码版本管理
 brew install svn # https://subversion.apache.org/
 # tencent-lemon，系统清理和状态工具
 brew install --cask tencent-lemon # https://lemon.qq.com/
-# tencent-meeting，会议工具
-brew install --cask tencent-meeting # https://meeting.tencent.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
@@ -332,8 +326,6 @@ brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/de
 brew install --cask yuque # https://www.yuque.com/
 # you-get，下载网络媒体资源
 brew install you-get # https://you-get.org/
-# zoom，会议工具
-brew install --cask zoom # https://www.zoom.us/
 ```
 
 - 安装 `node` 相关。
@@ -354,9 +346,7 @@ nvm alias default 14
 nvm use 14
 # install global deps
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
-npm i -g --registry=https://registry.npm.taobao.org @types/node
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
-npm i -g --registry=https://registry.npm.taobao.org @vitejs/create-app
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli
 npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
 npm i -g --registry=https://registry.npm.taobao.org cgr
@@ -366,6 +356,7 @@ npm i -g --registry=https://registry.npm.taobao.org create-egg
 npm i -g --registry=https://registry.npm.taobao.org create-next-app
 npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
 npm i -g --registry=https://registry.npm.taobao.org create-react-app
+npm i -g --registry=https://registry.npm.taobao.org create-vite
 npm i -g --registry=https://registry.npm.taobao.org expo-cli
 npm i -g --registry=https://registry.npm.taobao.org express-generator
 npm i -g --registry=https://registry.npm.taobao.org nativefier
@@ -377,18 +368,6 @@ npm i -g --registry=https://registry.npm.taobao.org ts-node
 npm i -g --registry=https://registry.npm.taobao.org typescript
 npm i -g --registry=https://registry.npm.taobao.org yarn
 ```
-
-- 一些需要额外安装的应用。
-  - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
-  - [bitcomet](https://www.bitcomet.com/cn)
-  - [hbuilderx](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
-  - [macwk updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
-  - [neat download manager](https://www.neatdownloadmanager.com/)
-  - [qspace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
-  - [wps](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
-  - [xcode](https://developer.apple.com/xcode/) - 苹果应用开发
-  - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
-  - [恒星播放器](https://www.stellarplayer.com/) - 播放器
 
 - 补充一些东西在 `~/.zshrc` 末尾。
 
@@ -434,33 +413,43 @@ alias qs='open -a QSpace'
   - [程序员工具](https://tool.p2hp.com/)
 
 - 一些可以考虑的应用。
+  - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
   - [360zip](https://yasuo.360.cn/)
   - Adobe After Effects - 专业视频处理
   - Adobe Photoshop - 专业图片处理
   - Affinity Photo - 专业图片处理
   - [AIXcoder](https://aixcoder.com/) - 代码自动补全工具
   - [AltStore](https://altstore.io/) - 直接安装 ipa
+  - [ApiPost](https://www.apipost.cn/) - 类 Postman 工具
   - Axure RP - 原型图
+  - [BitComet](https://www.bitcomet.com/cn)
   - [Bob](https://github.com/ripperhe/Bob) - 翻译工具
   - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
   - Charles - 抓包
+  - [Commander One](https://mac.eltima.com/file-manager.html)
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
   - Fiddler - 抓包
   - [FileZilla](https://filezilla-project.org/) - ftp 连接
   - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
   - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
+  - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
-  - [LightProxy](https://github.com/alibaba/lightproxy#readme) - 代理调试
-  - Sketch - 设计稿
+  - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
+  - [Neat Download Manager](https://www.neatdownloadmanager.com/)
+  - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
+  - Sketch - 设计稿
   - [TabNine](https://www.tabnine.com/) - 代码自动补全工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
-  - [向日葵](https://sunlogin.oray.com/) - 远程桌面
+  - [WPS](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
+  - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
+  - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
   - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
+  - [向日葵](https://sunlogin.oray.com/) - 远程桌面
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/)
 
 ## Windows 补充说明
@@ -483,8 +472,10 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight) - 浅色主题
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
+- [Browse Lite](https://marketplace.visualstudio.com/items?itemName=antfu.browse-lite) - 嵌入浏览器
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
+- [CodeMod](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-codemod) - 协助重构大规模代码库
 - [Component Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-material-helper) - 在 JSX 中更快更好地添加组件、编写组件属性、查找组件文档
 - [create-uniapp-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) - 快速创建 uni-app 视图与组件
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
@@ -496,6 +487,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
+- [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
+- [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
@@ -525,9 +518,10 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [uni-cloud-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-cloud-snippets) - uni-cloud 基本能力的代码片段，包括组件和 API
 - [uni-ui-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-ui-snippets) - uni-ui 组件代码片段
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
+- [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - vite 支持
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
-- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 WindiCSS 和 TailwindCSS 体验
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
+- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 WindiCSS 和 TailwindCSS 体验
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
 ### settings.json
