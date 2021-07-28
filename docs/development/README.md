@@ -942,6 +942,7 @@
 - [serve](https://github.com/vercel/serve)
 - [ts-node](https://github.com/TypeStrong/ts-node)
 - [zx](https://github.com/google/zx)
+- [jscodeshift](https://github.com/facebook/jscodeshift)
 
 ## 服务器端
 

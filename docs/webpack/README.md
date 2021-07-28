@@ -2467,6 +2467,8 @@ module.exports = (env, argv) => {
 
 到这里，我们已经添加了一个新构建模式 `staging`，并且可以在 js 代码里使用 `process.env.NODE_ENV` 和 `process.env.APP_MODE` 来获取构建模式对应的环境变量了，甚至你可以在 `${PROJECT_DIR}/public/index.html` 里使用它们（[参考](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)）。
 
+`webpack.EnvironmentPlugin` 的使用方式更加简单，有兴趣可以前去了解。
+
 ### 格式化和检验代码
 
 `eslint` 是现在最热门的 js 校验工具，我们也可以在 `webpack` 中使用 `eslint`。

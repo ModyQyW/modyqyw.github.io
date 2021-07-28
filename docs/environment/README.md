@@ -249,6 +249,8 @@ brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
 brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
+# cocoapods
+brew install cocoapods
 # drawio，作图工具
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
@@ -316,6 +318,8 @@ brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
 # 开源插件见 https://yuanliao.info/d/2168--
 brew install --cask utools # https://u.tools/index.html
+# watchman
+brew install watchman
 # wechat
 brew install --cask wechat # https://mac.weixin.qq.com/
 # wechat work
