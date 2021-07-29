@@ -349,28 +349,24 @@ nvm alias default 14
 # use lts (2021.05.30)
 nvm use 14
 # install global deps
-npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli
-npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app
-npm i -g --registry=https://registry.npm.taobao.org @vue/cli
-npm i -g --registry=https://registry.npm.taobao.org @vue/devtools
-npm i -g --registry=https://registry.npm.taobao.org cgr
-npm i -g --registry=https://registry.npm.taobao.org cnpm
-npm i -g --registry=https://registry.npm.taobao.org commitizen
-npm i -g --registry=https://registry.npm.taobao.org create-egg
-npm i -g --registry=https://registry.npm.taobao.org create-next-app
-npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app
-npm i -g --registry=https://registry.npm.taobao.org create-react-app
-npm i -g --registry=https://registry.npm.taobao.org create-vite
-npm i -g --registry=https://registry.npm.taobao.org expo-cli
-npm i -g --registry=https://registry.npm.taobao.org express-generator
-npm i -g --registry=https://registry.npm.taobao.org nativefier
-npm i -g --registry=https://registry.npm.taobao.org npm-check-updates
-npm i -g --registry=https://registry.npm.taobao.org pnpm
-npm i -g --registry=https://registry.npm.taobao.org react-devtools
-npm i -g --registry=https://registry.npm.taobao.org serve
-npm i -g --registry=https://registry.npm.taobao.org ts-node
-npm i -g --registry=https://registry.npm.taobao.org typescript
-npm i -g --registry=https://registry.npm.taobao.org yarn
+npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli # https://docs.nestjs.com/
+npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli # https://docs.taro.zone/
+npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app # https://umijs.org/
+npm i -g --registry=https://registry.npm.taobao.org @vue/cli # https://next.cli.vuejs.org/
+npm i -g --registry=https://registry.npm.taobao.org @vue/devtools # https://devtools.vuejs.org/
+npm i -g --registry=https://registry.npm.taobao.org cgr # https://github.com/daysai/cgr
+npm i -g --registry=https://registry.npm.taobao.org cnpm # https://github.com/cnpm/cnpm
+npm i -g --registry=https://registry.npm.taobao.org create-next-app # https://nextjs.org/
+npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app # https://nuxtjs.org/
+npm i -g --registry=https://registry.npm.taobao.org create-vite # https://vitejs.dev/
+npm i -g --registry=https://registry.npm.taobao.org expo-cli # https://expo.dev/
+npm i -g --registry=https://registry.npm.taobao.org npm-check-updates # https://github.com/raineorshine/npm-check-updates
+npm i -g --registry=https://registry.npm.taobao.org pnpm # https://pnpm.io/
+npm i -g --registry=https://registry.npm.taobao.org react-devtools # https://github.com/facebook/react/tree/main/packages/react-devtools
+npm i -g --registry=https://registry.npm.taobao.org serve # https://github.com/vercel/serve
+npm i -g --registry=https://registry.npm.taobao.org ts-node # https://typestrong.org/ts-node/
+npm i -g --registry=https://registry.npm.taobao.org typescript # https://www.typescriptlang.org/
+npm i -g --registry=https://registry.npm.taobao.org yarn # https://classic.yarnpkg.com/
 ```
 
 - 补充一些东西在 `~/.zshrc` 末尾。
