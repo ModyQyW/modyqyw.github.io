@@ -509,7 +509,7 @@ module.exports = {
 
 🎉恭喜，一个简单的 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo01](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo01)。
+参考源代码见 [modyqyw/webpack4-plus-demos/demo01](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo01)。
 
 ## demo02 - 再看核心概念
 
@@ -973,7 +973,12 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       ...,
@@ -1011,7 +1016,12 @@ module.exports = {
               importLoaders: 1,
             },
           },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       ...,
@@ -1050,7 +1060,12 @@ module.exports = {
             },
           },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       ...,
@@ -1175,7 +1190,12 @@ module.exports = {
           },
           { loader: 'postcss-loader' },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       ...,
@@ -1538,7 +1558,7 @@ if (process.env.NODE_ENV === 'development') {
 
 🎉恭喜，你的第二个 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo02](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo02)。
+参考源代码见 [modyqyw/webpack4-plus-demos/demo02](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo02)。
 
 ## demo03 - 优化
 
@@ -1726,7 +1746,12 @@ module.exports = {
           },
           { loader: 'postcss-loader' },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
@@ -1802,7 +1827,12 @@ module.exports = {
           },
           { loader: 'postcss-loader' },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
@@ -1924,7 +1954,12 @@ module.exports = {
           },
           { loader: 'postcss-loader' },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
@@ -2905,11 +2940,19 @@ ReactDOM.render(
 
 🎉恭喜，你的第三个 webpack demo 已经完成啦～
 
-参考源代码见 [modyqyw/webpack-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
+参考源代码见 [modyqyw/webpack4-plus-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
 
-## demo04 - webpack 5
+## demo04 - webpack v5
 
-TODO
+`webpack` v5 已经发布有一段时间了，我们可以着手安排升级，以获取更好的开发者体验。
+
+身为开发者，一定要养成读官方文档的好习惯，同时能读英文就读英文。
+
+[webpack-to-v5-from-v4](https://webpack.js.org/migrate/5/) - [中文版](https://webpack.docschina.org/migrate/5/)
+
+简答的项目里往往没有使用太多高级的功能，读官方文档基本就能无痛升级。对于实际的项目，一定要先做好备份，然后再细致地升级。
+
+这里不再给出源代码，请自行尝试升级，遇到问题时，请善用搜索。
 
 ## 一些简单的拓展
 
@@ -2941,7 +2984,15 @@ TODO
 
 ## 结束
 
-这篇笔记和示例到这里就结束了。当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如部署应用包时的基本 URL，CSS Modules 支持，MPA 的实践，SSR 支持，`webpack` 配置封装，使用 `webpack` 构建 `vue` 应用，更复杂的 TypeScript 实践等等。不要忘了阅读参考部分，那里列举了大量参考资料。你也可以去查看 `create-react-app`，`@vue/cli`，`poi` 等优秀源码，学习更多的 `webpack` 配置。真正开发的时候，建议直接使用 cli。
+这篇笔记和示例到这里就结束了。
+
+当然，你的学习还没有结束，毕竟这里没有提及、深入很多东西，比如部署应用包时的基本 URL，CSS Modules 支持，MPA 的实践，SSR 支持，`webpack` 配置封装，使用 `webpack` 构建 `vue` 应用，更复杂的 TypeScript 实践等等。
+
+不要忘了阅读参考部分，那里列举了大量参考资料。你也可以去查看 `create-react-app`，`@vue/cli`，`poi` 等基于 `webpack` 封装的优秀源码，学习更多的 `webpack` 配置。
+
+真正开发的时候，建议直接使用 cli。
+
+另外，也推荐你去学习 `rollup` 和 `vite`。
 
 如果你发现任何问题，欢迎在下面评论提意见，或者提交 issue / pr。感谢你的阅读 :D
 
