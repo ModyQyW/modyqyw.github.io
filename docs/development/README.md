@@ -2,7 +2,7 @@
 
 ## 说明
 
-这个部分覆盖了项目开发的很多方面，我把它用作我自己的学习路径和速查表。所有内容仅供参考。如果有条件，务必阅读原版书籍。
+这个部分尽量精简，但覆盖了我关注的关于项目开发的很多方面，我把它用作我自己的学习路径和速查表。所有内容仅供参考。如果有条件，务必阅读原版书籍。
 
 ## 计算机基础
 
@@ -559,6 +559,7 @@
   - [qiankun](https://qiankun.umijs.org/zh)
 - [berial](https://github.com/berialjs/berial)
 - [emp](https://github.com/efoxTeam/emp/blob/main/README-zh_CN.md)
+- [micro-app](https://github.com/micro-zoe/micro-app)
 
 ## 原生及相关生态
 
@@ -958,20 +959,13 @@
   - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - [express](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
-    - [sails](https://sailsjs.com/)
-  - [fastify](https://www.fastify.io/) - 快速、低开销的 node.js 框架
-  - [nest](https://nestjs.com/) - 渐进式 node.js 框架
-  - [koa](https://koajs.com/) - node.js 框架，自由度高
+    - [koa](https://koajs.com/) - node.js 框架，自由度高
+    - [fastify](https://www.fastify.io/) - node.js 框架，快速、低开销
     - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
-    - [think](https://thinkjs.org/) - 使用完整的 ES6/7 特性开发 node.js 应用
+    - [think](https://thinkjs.org/) - 基于 koa，使用完整的 ES6/7 特性开发 node.js 应用
     - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
-  - [meteor](https://www.meteor.com/) - 全栈框架
+    - [nest](https://nestjs.com/) - 渐进式 node.js 框架，底层可使用 express 或 fastify
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
-  - [loopback](https://loopback.io/)
-  - [hapi](https://hapi.dev/)
-  - [restify](http://restify.com/)
-  - [adonis](https://adonisjs.com/)
-  - [strapi](https://strapi.io/)
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
   - [farrow](https://github.com/farrow-js/farrow)
 - 增强
@@ -983,17 +977,16 @@
   - [mysql](https://www.mysql.com/) - 关系型数据库
     - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
     - [mysql workbench](https://www.mysql.com/products/workbench/)
-  - [postgresql](https://www.postgresql.org/) - 关系型数据库
+    - [sequelize](https://sequelize.org/)
+  - [mongodb](https://www.mongodb.com/) - 非关系型数据库
+    - [mongodb compass](https://www.mongodb.com/products/compass)
+    - [mongoose](https://mongoosejs.com/)
+    - [typegoose](https://typegoose.github.io/typegoose/)
+  - [typeorm](https://typeorm.io/)
+  - [prisma](https://www.prisma.io/)
   - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
     - [another redis desktop manager](https://github.com/qishibo/AnotherRedisDesktopManager)
   - [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
-  - [mongodb](https://www.mongodb.com/) - 非关系型数据库
-    - [mongodb compass](https://www.mongodb.com/products/compass)
-  - [couchdb](https://couchdb.apache.org/) - 非关系型数据库
-  - [sequelize](https://sequelize.org/)
-  - [typeorm](https://typeorm.io/)
-  - [mongoose](https://mongoosejs.com/)
-  - [prisma](https://www.prisma.io/)
   - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
