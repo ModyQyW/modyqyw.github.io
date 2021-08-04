@@ -237,6 +237,15 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.0"
 
+"@babel/eslint-parser@~7.14.9":
+  version "7.14.9"
+  resolved "https://registry.nlark.com/@babel/eslint-parser/download/@babel/eslint-parser-7.14.9.tgz?cache=0&sync_timestamp=1627804410083&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Feslint-parser%2Fdownload%2F%40babel%2Feslint-parser-7.14.9.tgz#b2cfaf67cc7f7a9b475d3ee9b166755ffd44e086"
+  integrity sha1-ss+vZ8x/eptHXT7psWZ1X/1E4IY=
+  dependencies:
+    eslint-scope "^5.1.1"
+    eslint-visitor-keys "^2.1.0"
+    semver "^6.3.0"
+
 "@babel/generator@^7.14.2", "@babel/generator@^7.14.3":
   version "7.14.3"
   resolved "https://registry.nlark.com/@babel/generator/download/@babel/generator-7.14.3.tgz?cache=0&sync_timestamp=1621284707515&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fgenerator%2Fdownload%2F%40babel%2Fgenerator-7.14.3.tgz#0c2652d91f7bddab7cccc6ba8157e4f40dcedb91"
@@ -1638,24 +1647,25 @@
     event-target-shim "^5.0.1"
     miniprogram-api-typings "^2.10.2"
 
-"@modyqyw/fabric@~2.8.1":
-  version "2.8.1"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.8.1.tgz#33c742780ab5886213f059b4824136083a3631f8"
-  integrity sha1-M8dCeAq1iGIT8Fm0gkE2CDo2Mfg=
+"@modyqyw/fabric@~2.9.0":
+  version "2.9.0"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.9.0.tgz#8662e801524d80bb1df80a87a502a930852cebd6"
+  integrity sha1-hmLoAVJNgLsd+AqHpQKpMIUs69Y=
   dependencies:
     "@babel/core" "~7.14.8"
     "@babel/eslint-parser" "~7.14.7"
     "@commitlint/config-conventional" "~13.1.0"
-    "@typescript-eslint/eslint-plugin" "~4.28.4"
-    "@typescript-eslint/parser" "~4.28.4"
+    "@typescript-eslint/eslint-plugin" "~4.28.5"
+    "@typescript-eslint/parser" "~4.28.5"
     chalk "~4.1.1"
-    commander "~8.0.0"
+    commander "~8.1.0"
     eslint-config-airbnb "~18.2.1"
     eslint-config-airbnb-base "~14.2.1"
     eslint-config-airbnb-typescript "~12.3.1"
     eslint-config-next "~11.0.1"
     eslint-config-prettier "~8.3.0"
     eslint-import-resolver-node "~0.3.4"
+    eslint-import-resolver-typescript "~2.4.0"
     eslint-import-resolver-webpack "~0.13.1"
     eslint-plugin-import "~2.23.4"
     eslint-plugin-jsx-a11y "~6.4.1"
@@ -1672,7 +1682,7 @@
     stylelint-prettier "~1.2.0"
     typescript "~4.3.5"
     vue-class-component "~7.2.6"
-    vue-eslint-parser "~7.9.0"
+    vue-eslint-parser "~7.10.0"
     vue-property-decorator "~9.1.2"
 
 "@mr-hope/vuepress-plugin-comment@1.18.2":
@@ -2256,28 +2266,28 @@
   dependencies:
     "@types/node" "*"
 
-"@typescript-eslint/eslint-plugin@~4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-4.28.4.tgz?cache=0&sync_timestamp=1626715757255&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-4.28.4.tgz#e73c8cabbf3f08dee0e1bda65ed4e622ae8f8921"
-  integrity sha1-5zyMq78/CN7g4b2mXtTmIq6PiSE=
+"@typescript-eslint/eslint-plugin@~4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-4.28.5.tgz?cache=0&sync_timestamp=1627925276668&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Feslint-plugin%2Fdownload%2F%40typescript-eslint%2Feslint-plugin-4.28.5.tgz#8197f1473e7da8218c6a37ff308d695707835684"
+  integrity sha1-gZfxRz59qCGMajf/MI1pVweDVoQ=
   dependencies:
-    "@typescript-eslint/experimental-utils" "4.28.4"
-    "@typescript-eslint/scope-manager" "4.28.4"
+    "@typescript-eslint/experimental-utils" "4.28.5"
+    "@typescript-eslint/scope-manager" "4.28.5"
     debug "^4.3.1"
     functional-red-black-tree "^1.0.1"
     regexpp "^3.1.0"
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/experimental-utils@4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-4.28.4.tgz#9c70c35ebed087a5c70fb0ecd90979547b7fec96"
-  integrity sha1-nHDDXr7Qh6XHD7Ds2Ql5VHt/7JY=
+"@typescript-eslint/experimental-utils@4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/experimental-utils/download/@typescript-eslint/experimental-utils-4.28.5.tgz?cache=0&sync_timestamp=1627924854694&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fexperimental-utils%2Fdownload%2F%40typescript-eslint%2Fexperimental-utils-4.28.5.tgz#66c28bef115b417cf9d80812a713e0e46bb42a64"
+  integrity sha1-ZsKL7xFbQXz52AgSpxPg5Gu0KmQ=
   dependencies:
     "@types/json-schema" "^7.0.7"
-    "@typescript-eslint/scope-manager" "4.28.4"
-    "@typescript-eslint/types" "4.28.4"
-    "@typescript-eslint/typescript-estree" "4.28.4"
+    "@typescript-eslint/scope-manager" "4.28.5"
+    "@typescript-eslint/types" "4.28.5"
+    "@typescript-eslint/typescript-estree" "4.28.5"
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
@@ -2301,14 +2311,14 @@
     "@typescript-eslint/typescript-estree" "4.25.0"
     debug "^4.1.1"
 
-"@typescript-eslint/parser@~4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/parser/download/@typescript-eslint/parser-4.28.4.tgz?cache=0&sync_timestamp=1626715756323&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-4.28.4.tgz#bc462dc2779afeefdcf49082516afdc3e7b96fab"
-  integrity sha1-vEYtwnea/u/c9JCCUWr9w+e5b6s=
+"@typescript-eslint/parser@~4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/parser/download/@typescript-eslint/parser-4.28.5.tgz?cache=0&sync_timestamp=1627924723468&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fparser%2Fdownload%2F%40typescript-eslint%2Fparser-4.28.5.tgz#9c971668f86d1b5c552266c47788a87488a47d1c"
+  integrity sha1-nJcWaPhtG1xVImbEd4iodIikfRw=
   dependencies:
-    "@typescript-eslint/scope-manager" "4.28.4"
-    "@typescript-eslint/types" "4.28.4"
-    "@typescript-eslint/typescript-estree" "4.28.4"
+    "@typescript-eslint/scope-manager" "4.28.5"
+    "@typescript-eslint/types" "4.28.5"
+    "@typescript-eslint/typescript-estree" "4.28.5"
     debug "^4.3.1"
 
 "@typescript-eslint/scope-manager@4.25.0":
@@ -2327,13 +2337,13 @@
     "@typescript-eslint/types" "4.28.3"
     "@typescript-eslint/visitor-keys" "4.28.3"
 
-"@typescript-eslint/scope-manager@4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/scope-manager/download/@typescript-eslint/scope-manager-4.28.4.tgz?cache=0&sync_timestamp=1626715953543&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fscope-manager%2Fdownload%2F%40typescript-eslint%2Fscope-manager-4.28.4.tgz#bdbce9b6a644e34f767bd68bc17bb14353b9fe7f"
-  integrity sha1-vbzptqZE4092e9aLwXuxQ1O5/n8=
+"@typescript-eslint/scope-manager@4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/scope-manager/download/@typescript-eslint/scope-manager-4.28.5.tgz?cache=0&sync_timestamp=1627924719069&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fscope-manager%2Fdownload%2F%40typescript-eslint%2Fscope-manager-4.28.5.tgz#3a1b70c50c1535ac33322786ea99ebe403d3b923"
+  integrity sha1-OhtwxQwVNawzMieG6pnr5APTuSM=
   dependencies:
-    "@typescript-eslint/types" "4.28.4"
-    "@typescript-eslint/visitor-keys" "4.28.4"
+    "@typescript-eslint/types" "4.28.5"
+    "@typescript-eslint/visitor-keys" "4.28.5"
 
 "@typescript-eslint/types@4.25.0":
   version "4.25.0"
@@ -2345,10 +2355,10 @@
   resolved "https://registry.nlark.com/@typescript-eslint/types/download/@typescript-eslint/types-4.28.3.tgz?cache=0&sync_timestamp=1626110167740&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Ftypes%2Fdownload%2F%40typescript-eslint%2Ftypes-4.28.3.tgz#8fffd436a3bada422c2c1da56060a0566a9506c7"
   integrity sha1-j//UNqO62kIsLB2lYGCgVmqVBsc=
 
-"@typescript-eslint/types@4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/types/download/@typescript-eslint/types-4.28.4.tgz?cache=0&sync_timestamp=1626715941479&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Ftypes%2Fdownload%2F%40typescript-eslint%2Ftypes-4.28.4.tgz#41acbd79b5816b7c0dd7530a43d97d020d3aeb42"
-  integrity sha1-Qay9ebWBa3wN11MKQ9l9Ag0660I=
+"@typescript-eslint/types@4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/types/download/@typescript-eslint/types-4.28.5.tgz?cache=0&sync_timestamp=1627924716320&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Ftypes%2Fdownload%2F%40typescript-eslint%2Ftypes-4.28.5.tgz#d33edf8e429f0c0930a7c3d44e9b010354c422e9"
+  integrity sha1-0z7fjkKfDAkwp8PUTpsBA1TEIuk=
 
 "@typescript-eslint/typescript-estree@4.25.0":
   version "4.25.0"
@@ -2376,13 +2386,13 @@
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/typescript-estree@4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-4.28.4.tgz#252e6863278dc0727244be9e371eb35241c46d00"
-  integrity sha1-JS5oYyeNwHJyRL6eNx6zUkHEbQA=
+"@typescript-eslint/typescript-estree@4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/typescript-estree/download/@typescript-eslint/typescript-estree-4.28.5.tgz?cache=0&sync_timestamp=1627924854480&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Ftypescript-estree%2Fdownload%2F%40typescript-eslint%2Ftypescript-estree-4.28.5.tgz#4906d343de693cf3d8dcc301383ed638e0441cd1"
+  integrity sha1-SQbTQ95pPPPY3MMBOD7WOOBEHNE=
   dependencies:
-    "@typescript-eslint/types" "4.28.4"
-    "@typescript-eslint/visitor-keys" "4.28.4"
+    "@typescript-eslint/types" "4.28.5"
+    "@typescript-eslint/visitor-keys" "4.28.5"
     debug "^4.3.1"
     globby "^11.0.3"
     is-glob "^4.0.1"
@@ -2405,12 +2415,12 @@
     "@typescript-eslint/types" "4.28.3"
     eslint-visitor-keys "^2.0.0"
 
-"@typescript-eslint/visitor-keys@4.28.4":
-  version "4.28.4"
-  resolved "https://registry.nlark.com/@typescript-eslint/visitor-keys/download/@typescript-eslint/visitor-keys-4.28.4.tgz?cache=0&sync_timestamp=1626715965165&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fvisitor-keys%2Fdownload%2F%40typescript-eslint%2Fvisitor-keys-4.28.4.tgz#92dacfefccd6751cbb0a964f06683bfd72d0c4d3"
-  integrity sha1-ktrP78zWdRy7CpZPBmg7/XLQxNM=
+"@typescript-eslint/visitor-keys@4.28.5":
+  version "4.28.5"
+  resolved "https://registry.nlark.com/@typescript-eslint/visitor-keys/download/@typescript-eslint/visitor-keys-4.28.5.tgz?cache=0&sync_timestamp=1627924717405&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40typescript-eslint%2Fvisitor-keys%2Fdownload%2F%40typescript-eslint%2Fvisitor-keys-4.28.5.tgz#ffee2c602762ed6893405ee7c1144d9cc0a29675"
+  integrity sha1-/+4sYCdi7WiTQF7nwRRNnMCilnU=
   dependencies:
-    "@typescript-eslint/types" "4.28.4"
+    "@typescript-eslint/types" "4.28.5"
     eslint-visitor-keys "^2.0.0"
 
 "@vssue/api-bitbucket-v2@^1.4.7":
@@ -4272,6 +4282,11 @@ commander@~8.0.0:
   resolved "https://registry.nlark.com/commander/download/commander-8.0.0.tgz?cache=0&sync_timestamp=1624609539421&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.0.0.tgz#1da2139548caef59bd23e66d18908dfb54b02258"
   integrity sha1-HaITlUjK71m9I+ZtGJCN+1SwIlg=
 
+commander@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.nlark.com/commander/download/commander-8.1.0.tgz?cache=0&sync_timestamp=1627358203890&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.1.0.tgz#db36e3e66edf24ff591d639862c6ab2c52664362"
+  integrity sha1-2zbj5m7fJP9ZHWOYYsarLFJmQ2I=
+
 common-tags@^1.8.0:
   version "1.8.0"
   resolved "https://registry.npm.taobao.org/common-tags/download/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
@@ -5688,7 +5703,7 @@ eslint-import-resolver-node@^0.3.4, eslint-import-resolver-node@~0.3.4:
     debug "^2.6.9"
     resolve "^1.13.1"
 
-eslint-import-resolver-typescript@^2.4.0:
+eslint-import-resolver-typescript@^2.4.0, eslint-import-resolver-typescript@~2.4.0:
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/eslint-import-resolver-typescript/download/eslint-import-resolver-typescript-2.4.0.tgz#ec1e7063ebe807f0362a7320543aaed6fe1100e1"
   integrity sha1-7B5wY+voB/A2KnMgVDqu1v4RAOE=
@@ -5880,10 +5895,10 @@ eslint-visitor-keys@^2.0.0, eslint-visitor-keys@^2.1.0:
   resolved "https://registry.nlark.com/eslint-visitor-keys/download/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
   integrity sha1-9lMoJZMFknOSyTjtROsKXJsr0wM=
 
-eslint@~7.31.0:
-  version "7.31.0"
-  resolved "https://registry.nlark.com/eslint/download/eslint-7.31.0.tgz#f972b539424bf2604907a970860732c5d99d3aca"
-  integrity sha1-+XK1OUJL8mBJB6lwhgcyxdmdOso=
+eslint@~7.32.0:
+  version "7.32.0"
+  resolved "https://registry.nlark.com/eslint/download/eslint-7.32.0.tgz?cache=0&sync_timestamp=1627685236231&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint%2Fdownload%2Feslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
+  integrity sha1-xtMooUvj+wjI0dIeEsAv23oqgS0=
   dependencies:
     "@babel/code-frame" "7.12.11"
     "@eslint/eslintrc" "^0.4.3"
@@ -12522,10 +12537,23 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.4.0"
     lodash "^4.17.15"
 
-vue-eslint-parser@^7.9.0, vue-eslint-parser@~7.9.0:
+vue-eslint-parser@^7.9.0:
   version "7.9.0"
   resolved "https://registry.nlark.com/vue-eslint-parser/download/vue-eslint-parser-7.9.0.tgz#5eeedc71f22ebc7b18b957d1ab171acf29a41e64"
   integrity sha1-Xu7ccfIuvHsYuVfRqxcazymkHmQ=
+  dependencies:
+    debug "^4.1.1"
+    eslint-scope "^5.1.1"
+    eslint-visitor-keys "^1.1.0"
+    espree "^6.2.1"
+    esquery "^1.4.0"
+    lodash "^4.17.21"
+    semver "^6.3.0"
+
+vue-eslint-parser@~7.10.0:
+  version "7.10.0"
+  resolved "https://registry.nlark.com/vue-eslint-parser/download/vue-eslint-parser-7.10.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.10.0.tgz#ea4e4b10fd10aa35c8a79ac783488d8abcd29be8"
+  integrity sha1-6k5LEP0QqjXIp5rHg0iNirzSm+g=
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.1.1"
