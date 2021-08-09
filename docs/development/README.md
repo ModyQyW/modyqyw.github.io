@@ -2,7 +2,20 @@
 
 ## 说明
 
-这个部分尽量精简，但覆盖了我关注的关于项目开发的很多方面，我把它用作我自己的学习路径和速查表。所有内容仅供参考。如果有条件，务必阅读原版书籍。
+这个部分尽量精简，但覆盖了我关注的关于项目开发的很多方面，我把它用作我自己的学习路径和速查表。所有内容仅供参考。
+
+我一直认为，在学习的时候，一定要保持思考、自我发散、敢于怀疑、敢于提问、多做实践。
+
+读书时，如果有条件，一定要阅读原版书籍，而不是只阅读翻译书籍，同时也要跳出书籍自己做发散、做实践。
+
+看视频时，可以到 [中国大学 MOOC](https://www.icourse163.org/)（找国家精品课）、[尚硅谷](https://space.bilibili.com/302417610) 或 [千锋教育](https://space.bilibili.com/146668655) 搜索学习。同样地，也应该跳出视频自己实践。
+
+## 工作学习法
+
+- [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
+- [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
+- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
+- [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
 
 ## 计算机基础
 
@@ -82,13 +95,6 @@
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
 - [Fira Code](https://github.com/tonsky/FiraCode/releases)
 - [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
-
-## 工作学习法
-
-- [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
-- [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
-- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
-- [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
 
 ## 前端基础
 
