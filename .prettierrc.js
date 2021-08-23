@@ -1,10 +1,5 @@
-const config = require('@modyqyw/fabric/prettier');
+const { prettier } = require('@modyqyw/fabric');
 
 module.exports = {
-  ...config,
-  // write your own rules here
-  overrides: [
-    ...config.overrides,
-    // write your own overrides here
-  ],
+  ...prettier,
 };
