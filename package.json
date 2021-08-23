@@ -2,37 +2,44 @@
   "author": "ModyQyW",
   "license": "MIT",
   "scripts": {
-    "gitee:dev": "cross-env MODE=gitee vuepress dev docs",
+    "commit": "cz",
     "gitee:build": "cross-env MODE=gitee vuepress build docs",
-    "github:dev": "cross-env MODE=github vuepress dev docs",
+    "gitee:dev": "cross-env MODE=gitee vuepress dev docs",
     "github:build": "cross-env MODE=github vuepress build docs",
+    "github:dev": "cross-env MODE=github vuepress dev docs",
     "lint": "yarn run lint:json && yarn run lint:markdown && yarn run lint:script",
     "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
-    "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore && lint-md . --fix",
+    "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:script": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
-    "commit": "cz",
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
-    "@babel/core": "~7.14.8",
-    "@babel/eslint-parser": "~7.14.9",
+    "@babel/core": "~7.15.0",
+    "@babel/eslint-parser": "~7.15.0",
     "@commitlint/cli": "~13.1.0",
-    "@modyqyw/fabric": "~2.9.0",
+    "@modyqyw/fabric": "~3.0.3",
+    "@typescript-eslint/eslint-plugin": "~4.29.2",
+    "@typescript-eslint/parser": "~4.29.2",
     "cross-env": "~7.0.3",
     "eslint": "~7.32.0",
     "husky": "~7.0.1",
     "is-ci": "~3.0.0",
-    "lint-md-cli": "~0.1.2",
-    "lint-staged": "~11.1.1",
+    "lint-staged": "~11.1.2",
     "markdownlint-cli": "~0.28.1",
     "prettier": "~2.3.2",
+    "typescript": "~4.3.5",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.19.0"
+    "vuepress-theme-hope": "~1.19.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "engines": {
+    "node": "^12.22.5 || ^14.17.5 || ^16.6.2",
+    "npm": "^6.14.14 || ^7.20.3"
+  },
+  "dependencies": {}
 }
