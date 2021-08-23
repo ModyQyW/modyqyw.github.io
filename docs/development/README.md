@@ -288,7 +288,7 @@
 
 - 桌面端网页
   - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [fes](https://winixt.gitee.io/fesjs/zh/) / [nuxt](https://nuxtjs.org/)
-  - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antd-vue-next](https://2x.antdv.com/)
+  - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antdv-next](https://2x.antdv.com/) / [naive](https://www.naiveui.com/)
   - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/) + [daisy-ui](https://daisyui.com/)
   - [vue-use](https://vueuse.org/)
 - 移动端网页
@@ -298,10 +298,11 @@
   - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
-  - [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/) + [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui) + [uview-ui](https://uviewui.com/)
+  - [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui) + [uview-ui](https://uviewui.com/)
+  - tailwindcss / windicss + daisy-ui
 - 桌面端应用
   - (vue + vue-router + vuex) / fes / nuxt
-  - vuetify / element / element-plus / ant-design-vue-next
+  - vuetify / element / element-plus / antdv-next / naive
   - tailwindcss / windicss + daisy-ui
   - vue-use
   - electron，nuxt 目前没有插件
@@ -326,7 +327,7 @@
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
   - immer
-  - [yep-react](http://yep-react.jd.com/) / [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/) / [antd-mobile-plus](https://ui.alitajs.com/)
+  - [zarm](https://zarm.design/) / [antd-mobile-next](https://next.mobile.ant.design/) / [antd-mobile-plus](https://ui.alitajs.com/)
   - tailwindcss / windicss + daisy-ui
   - (react-use + swr / react-query) / ahooks
 - 移动端应用
@@ -340,7 +341,7 @@
   - [taro](https://taro.zone/) / [remax](https://remaxjs.org/) / [rax](https://rax.js.org/)
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
   - immer
-  - @modyqyw/mp-scss
+  - tailwindcss / windicss + daisy-ui
 - 桌面端应用
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / recoil
@@ -703,7 +704,6 @@
     - 状态管理
       - [vuex](https://vuex.vuejs.org/)
     - ui
-      - [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss)
       - [thor-ui](https://www.thorui.cn/doc/)
       - [uview-ui](https://uviewui.com/)
       - [uni-ui](https://github.com/dcloudio/uni-ui)
@@ -784,7 +784,6 @@
   - [antd](https://ant.design/)
   - [uiw](https://uiwjs.github.io/#/)
   - [rsuite](https://rsuitejs.com/)
-  - [yep-react](https://yep-react.jd.com/)
   - [zarm](https://zarm.design/)
   - [antd-mobile-next](https://next.mobile.ant.design/)
     - [antd-mobile-plus](https://antd-plus.alitajs.com/)
