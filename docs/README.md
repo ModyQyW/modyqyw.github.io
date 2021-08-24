@@ -20,9 +20,6 @@ features:
 - title: 开发
   details: 尽可能覆盖用 JavaScript/TypeScript 开发一个完整项目的方方面面。
   link: /development/
-- title: 优化
-  details: 了解优化手段，提高项目的运行效率。
-  link: /optimization/
 - title: 安全
   details: 了解常见的安全问题和解决方案。
   link: /safety/

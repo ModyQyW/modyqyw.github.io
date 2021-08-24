@@ -26,7 +26,6 @@ module.exports = config({
       { text: '学习路径', link: '/roadmap/' },
       { text: '环境配置', link: '/environment/' },
       { text: '开发', link: '/development/' },
-      { text: '优化', link: '/optimization/' },
       { text: '安全', link: '/safety/' },
       { text: 'Webpack', link: '/webpack/' },
       { text: '关于', link: '/about/' },
