@@ -346,24 +346,29 @@ nvm install 14
 nvm install 16
 # set default
 nvm alias default 14
-# use lts (2021.05.30)
+# use lts (2021.08.24)
 nvm use 14
 # install global deps
 npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli # https://docs.nestjs.com/
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli # https://docs.taro.zone/
+npm i -g --registry=https://registry.npm.taobao.org @types/node
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app # https://umijs.org/
-npm i -g --registry=https://registry.npm.taobao.org @vue/cli # https://next.cli.vuejs.org/
-npm i -g --registry=https://registry.npm.taobao.org @vue/devtools # https://devtools.vuejs.org/
+npm i -g --registry=https://registry.npm.taobao.org @vue/cli@next # https://next.cli.vuejs.org/
+npm i -g --registry=https://registry.npm.taobao.org @vue/devtools@beta # https://devtools.vuejs.org/
 npm i -g --registry=https://registry.npm.taobao.org cgr # https://github.com/daysai/cgr
 npm i -g --registry=https://registry.npm.taobao.org cnpm # https://github.com/cnpm/cnpm
+npm i -g --registry=https://registry.npm.taobao.org create-alita # https://alitajs.com/
 npm i -g --registry=https://registry.npm.taobao.org create-next-app # https://nextjs.org/
 npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app # https://nuxtjs.org/
 npm i -g --registry=https://registry.npm.taobao.org create-vite # https://vitejs.dev/
+npm i -g --registry=https://registry.npm.taobao.org eslint # https://eslint.org/
 npm i -g --registry=https://registry.npm.taobao.org expo-cli # https://expo.dev/
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates # https://github.com/raineorshine/npm-check-updates
 npm i -g --registry=https://registry.npm.taobao.org pnpm # https://pnpm.io/
+npm i -g --registry=https://registry.npm.taobao.org prettier # https://prettier.io/
 npm i -g --registry=https://registry.npm.taobao.org react-devtools # https://github.com/facebook/react/tree/main/packages/react-devtools
 npm i -g --registry=https://registry.npm.taobao.org serve # https://github.com/vercel/serve
+npm i -g --registry=https://registry.npm.taobao.org stylelint # https://stylelint.io/
 npm i -g --registry=https://registry.npm.taobao.org ts-node # https://typestrong.org/ts-node/
 npm i -g --registry=https://registry.npm.taobao.org typescript # https://www.typescriptlang.org/
 npm i -g --registry=https://registry.npm.taobao.org yarn # https://classic.yarnpkg.com/
@@ -397,7 +402,8 @@ export http_proxy=http://127.0.0.1:7890
 export all_proxy=socks5://127.0.0.1:7890
 
 # qspace
-alias qs='open -a QSpace'
+# alias qs='open -a QSpace'
+alias qs='open -a QSpace\ Pro'
 
 ```
 
@@ -472,7 +478,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight) - 浅色主题
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
-- [Browse Lite](https://marketplace.visualstudio.com/items?itemName=antfu.browse-lite) - 嵌入浏览器
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [CodeMod](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-codemod) - 协助重构大规模代码库
@@ -486,13 +491,15 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
+- [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) - 支持 go
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
-- [language-stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
+- [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 支持 typescript@next
+- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) - 支持 jupyter
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
@@ -502,6 +509,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) - pylance 支持
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - python 支持
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native) - 针对 React Native 的调试和集成命令
 - [React Refactor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-refactor) - 帮助重构代码
@@ -509,16 +518,17 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
+- [stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Time Master](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-time-master) - 通过自动跟踪编码活动从而度量编码效率
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
+- [Umi Pro](https://marketplace.visualstudio.com/items?itemName=DiamondYuan.umi-pro) - umi 支持
 - [uni-app-schemas](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - 校验 uni-app pages.json 和 manifest.json 格式
 - [uni-app-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-app-snippets) - uni-app 基本能力的代码片段，包括组件和 API
 - [uni-cloud-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-cloud-snippets) - uni-cloud 基本能力的代码片段，包括组件和 API
 - [uni-ui-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-ui-snippets) - uni-ui 组件代码片段
-- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - vue 官方插件
-- [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - vite 支持
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - vue 2 + vue 3 支持
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 WindiCSS 和 TailwindCSS 体验
@@ -665,11 +675,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     }
   ],
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
-  "workbench.iconTheme": "vscode-icons",
-  // vscode 自带功能，指定对应文件的默认格式化工具，需要安装对应的插件
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
-  }
+  "workbench.iconTheme": "vscode-icons"
 }
 ```
 
@@ -682,14 +688,13 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 ```json
 {
   "editor.colorScheme": "Atom One Dark",
-  "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.3/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.3/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.5/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.5/bin/npm"
 }
 
 ```
