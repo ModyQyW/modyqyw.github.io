@@ -877,9 +877,10 @@
   - [immutable.js](https://immutable-js.github.io/immutable-js/docs/)
   - [immer](https://immerjs.github.io/immer/)
   - [styled-components](https://styled-components.com/) - css-in-js
-  - [emotion](https://emotion.sh/) - css-in-js
-  - [linaria](https://github.com/callstack/linaria) - css-in-js
-  - [fower](https://github.com/forsigner/fower) - css-in-js
+    - [emotion](https://emotion.sh/) - css-in-js
+    - [linaria](https://github.com/callstack/linaria) - css-in-js
+    - [fower](https://github.com/forsigner/fower) - css-in-js
+    - [styled-jsx](https://github.com/vercel/styled-jsx) - css-in-js
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 表格解决方案，高效渲染大型列表和表格数据的 react 组件
     - [react-window](https://github.com/bvaughn/react-window) - 简洁的 react-virtualized
   - [formik](https://github.com/jaredpalmer/formik) - 表单解决方案
