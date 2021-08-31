@@ -463,6 +463,7 @@
   - [vite-plugin-restart](https://github.com/antfu/vite-plugin-restart)
   - [vite-ssg](https://github.com/antfu/vite-ssg)
   - [vite-ssr](https://github.com/frandiox/vite-ssr)
+  - [vite-plugin-env-compatible](https://github.com/IndexXuan/vite-plugin-env-compatible)
   - [vite-plugin-eslint](https://github.com/gxmari007/vite-plugin-eslint)
   - [vite-plugin-stylelint](https://github.com/ModyQyW/vite-plugin-stylelint)
   - [vite-plugin-compress](https://github.com/alloc/vite-plugin-compress)
