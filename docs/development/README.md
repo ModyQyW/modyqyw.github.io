@@ -232,23 +232,17 @@
 
 ### 图标
 
-- [icones](https://github.com/antfu/icones)
+- [iconify](https://iconify.design/)
+- [remixicon](https://remixicon.com/)
+- [ionicons](https://ionicons.com/)
 - [iconfont](https://www.iconfont.cn/)
 - [bootstrap-icons](https://icons.getbootstrap.com/)
 - [material-design-icons](https://materialdesignicons.com/)
 - [material-icons](https://google.github.io/material-design-icons/)
-- [remix-icons](https://remixicon.com/)
-- [ionicons](https://ionicons.com/)
 - [octicons](https://primer.style/octicons/)
-- [flaticon](https://www.flaticon.com/)
 - [fontawesome](https://fontawesome.com/)
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
-- [coreui-icons](https://icons.coreui.io/icons/)
-- [tabler-icons](https://tablericons.com/)
-- [simple-icons](https://simpleicons.org/)
 - [icon-park](https://iconpark.bytedance.com/)
-- [iconic](https://iconic.app/)
-- [iconify](https://iconify.design/)
 
 ## 代码管理
 
