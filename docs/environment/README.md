@@ -492,13 +492,14 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) - 支持 go
+- [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind) - 为 tailwindcss 类名排序
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
-- [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
 - [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 支持 typescript@next
+- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest) - jest 支持
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) - 支持 jupyter
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
@@ -506,6 +507,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
+- [Midway Serverless 研发助手](https://marketplace.visualstudio.com/items?itemName=alibaba-nodejs.midway-vscode-plugin) - midway 支持
+- [NestJS Files](https://marketplace.visualstudio.com/items?itemName=AbhijoyBasak.nestjs-files) - 快速创建 nestjs 文件
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
@@ -529,9 +532,10 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [uni-cloud-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-cloud-snippets) - uni-cloud 基本能力的代码片段，包括组件和 API
 - [uni-ui-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-ui-snippets) - uni-ui 组件代码片段
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - vue 2 + vue 3 支持
+- [Vscode Nestjs Snippets](https://marketplace.visualstudio.com/items?itemName=ashinzekene.nestjs) - nestjs 代码片段
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
-- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 WindiCSS 和 TailwindCSS 体验
+- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 windicss 和 tailwindcss 体验
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
 ### settings.json
@@ -574,12 +578,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
-  // vscode 自带功能，控制编辑区在保存文件时的行为，这里设置为 eslint 和 stylelint 自动修复
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.markdownlint": true,
-    "source.fixAll.stylelint": true
-  },
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // vscode 自带功能，控制输入时是否自动弹出建议
@@ -599,6 +597,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "json": "jsonc",
     "vue-html": "html"
   },
+  // 插件 ESLint 使用，指定是否一直显示状态，这是设置为是
+  "eslint.alwaysShowStatus": true,
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
   // vscode 自带功能，指定特定后缀的文件的解析器，这里添加四种小程序，wepy，uni-app 的支持，另外把 json 文件视为 jsonc 文件
@@ -619,9 +619,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "*.nvue": "vue",
     "*.ux": "vue"
   },
-  // 插件 iceworks 相关
-  "iceworks.materialSources": [],
-  "iceworks.packageManager": "yarn",
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
@@ -665,18 +662,70 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
+  // 插件 WindiCSS IntelliSense 使用，保存时自动排序
+  "windicss.sortOnSave": true,
   // vscode 自带功能，指定颜色主题，这里指定为 Atom One Dark
   "workbench.colorTheme": "Atom One Dark",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
-  "workbench.editorAssociations": [
-    {
-      "viewType": "default",
-      "filenamePattern": "*.md"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  // vscode 自带功能，控制编辑区在保存文件时的行为
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": true
+    }
+  },
+  "[css]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[less]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[sass]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  }
 }
+
 ```
 
 ## hbuilderx
