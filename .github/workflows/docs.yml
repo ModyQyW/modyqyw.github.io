@@ -60,7 +60,7 @@ jobs:
 
       # 部署到 Gitee Pages
       - name: Deploy to Gitee Pages
-        uses: yanglbme/gitee-pages-action@v1
+        uses: yanglbme/gitee-pages-action@main
         with:
           # 账号
           gitee-username: ModyQyW
