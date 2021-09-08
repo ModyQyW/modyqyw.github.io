@@ -277,7 +277,18 @@
 - 小程序
   - 各家小程序原生
 - 桌面端应用
-  - jquery 3 + bootstrap 4 + bootstrap-table + [electron](https://www.electronjs.org/)
+  - [electron](https://www.electronjs.org/)
+  - [neutralino](https://neutralino.js.org/)
+  - [nw](https://nwjs.io/)
+  - [tauri](https://tauri.studio/)
+  - [nodegui](https://docs.nodegui.org/)
+  - [flutter](https://flutter.dev/)
+- 数据处理
+  - [flux](https://facebook.github.io/flux/)
+  - [redux](https://redux.js.org/)
+  - [xstate](https://xstate.js.org/)
+  - [immutable.js](https://immutable-js.github.io/immutable-js/docs/)
+  - [immer](https://immerjs.github.io/immer/)
 
 ### Vue 系
 
@@ -460,6 +471,7 @@
   - [vite-plugin-env-compatible](https://github.com/IndexXuan/vite-plugin-env-compatible)
   - [vite-plugin-eslint](https://github.com/gxmari007/vite-plugin-eslint)
   - [vite-plugin-stylelint](https://github.com/ModyQyW/vite-plugin-stylelint)
+  - [vite-plugin-mkcert](https://github.com/liuweiGL/vite-plugin-mkcert)
   - [vite-plugin-compress](https://github.com/alloc/vite-plugin-compress)
 - [rollup](https://rollupjs.org/guide/zh/)
   - [awesome-rollup](https://github.com/rollup/awesome)
@@ -693,6 +705,7 @@
   - [vuex](https://vuex.vuejs.org/)
     - [vuex-orm](https://vuex-orm.org/)
   - [pinia](https://pinia.esm.dev/)
+  - [xstate](https://xstate.js.org/)
 - ui
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
@@ -727,10 +740,14 @@
       - [uni-simple-router](https://hhyang.cn/v2/)
     - 状态管理
       - [vuex](https://vuex.vuejs.org/)
+        - [vuex-orm](https://vuex-orm.org/)
+      - [pinia](https://pinia.esm.dev/)
+      - [xstate](https://xstate.js.org/)
     - ui
+      - [uni-ui](https://github.com/dcloudio/uni-ui)
+      - [cl-uni](https://docs.cool-js.com/)
       - [thor-ui](https://www.thorui.cn/doc/)
       - [uview-ui](https://uviewui.com/)
-      - [uni-ui](https://github.com/dcloudio/uni-ui)
     - 衍生
       - [uni-ajax](https://uniajax.ponjs.com/)
       - [luch-request](https://www.quanzhan.co/luch-request/)
@@ -799,6 +816,7 @@
   - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
   - [mobx](https://mobx.js.org/)
   - [recoil](https://recoiljs.org/)
+  - [xstate](https://xstate.js.org/)
   - [jotai](https://jotai.pmnd.rs/)
 - ui
   - [material-ui](https://material-ui.com/)
@@ -835,6 +853,7 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
+      - [xstate](https://xstate.js.org/)
       - [jotai](https://jotai.pmnd.rs/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
@@ -862,6 +881,7 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
+      - [xstate](https://xstate.js.org/)
       - [jotai](https://jotai.pmnd.rs/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/#/docs/introduction) - taro 2
@@ -879,6 +899,7 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
+      - [xstate](https://xstate.js.org/)
       - [jotai](https://jotai.pmnd.rs/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
@@ -897,14 +918,7 @@
   - [inferno](https://infernojs.org/) - 类 react 库
   - [loadable-components](https://loadable-components.com/)
   - [react-loadable](https://github.com/jamiebuilds/react-loadable)
-  - [flux](https://facebook.github.io/flux/)
-  - [immutable.js](https://immutable-js.github.io/immutable-js/docs/)
-  - [immer](https://immerjs.github.io/immer/)
-  - [styled-components](https://styled-components.com/) - css-in-js
-    - [emotion](https://emotion.sh/) - css-in-js
-    - [linaria](https://github.com/callstack/linaria) - css-in-js
-    - [fower](https://github.com/forsigner/fower) - css-in-js
-    - [styled-jsx](https://github.com/vercel/styled-jsx) - css-in-js
+  - [CSS in JS](https://github.com/andreipfeiffer/css-in-js)
   - [react-virtualized](https://github.com/bvaughn/react-virtualized) - 表格解决方案，高效渲染大型列表和表格数据的 react 组件
     - [react-window](https://github.com/bvaughn/react-window) - 简洁的 react-virtualized
   - [formik](https://github.com/jaredpalmer/formik) - 表单解决方案
@@ -992,13 +1006,15 @@
   - [express](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
     - [koa](https://koajs.com/) - node.js 框架，自由度高
     - [fastify](https://www.fastify.io/) - node.js 框架，快速、低开销
-    - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
-    - [think](https://thinkjs.org/) - 基于 koa，使用完整的 ES6/7 特性开发 node.js 应用
-    - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
-    - [nest](https://nestjs.com/) - 渐进式 node.js 框架，底层可使用 express 或 fastify
-    - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
+  - [egg](https://eggjs.org/zh-cn/) - 封装 koa 的 node.js 框架，约定大于配置
+  - [think](https://thinkjs.org/) - 基于 koa，使用完整的 ES6/7 特性开发 node.js 应用
+  - [daruk](https://darukjs.com/) - 基于 koa，使用 Typescript 开发的轻量级 web 框架
+  - [nest](https://nestjs.com/) - 渐进式 node.js 框架，底层可使用 express 或 fastify
+  - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
   - [farrow](https://github.com/farrow-js/farrow)
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
+  - [apollo](https://www.apollographql.com/) - graphql 支持
+  - [relay](https://relay.dev/) - graphql 支持
 - 增强
   - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
     - [open-resty](https://openresty.org/)

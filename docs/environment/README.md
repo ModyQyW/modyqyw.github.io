@@ -474,8 +474,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 配置可以通过 Github 账号同步，你也可以使用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)。
 
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
-- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark) - 深色主题，安装并应用主题后建议重启一次
-- [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight) - 浅色主题
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
@@ -490,6 +488,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
+- [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) - 支持 go
 - [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind) - 为 tailwindcss 类名排序
@@ -664,8 +663,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "vscode-office.markdownType": "vditor",
   // 插件 WindiCSS IntelliSense 使用，保存时自动排序
   "windicss.sortOnSave": true,
-  // vscode 自带功能，指定颜色主题，这里指定为 Atom One Dark
-  "workbench.colorTheme": "Atom One Dark",
+  // vscode 自带功能，指定颜色主题
+  "workbench.colorTheme": "GitHub Dark Default",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
   "workbench.editorAssociations": {
     "*.md": "default"
