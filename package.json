@@ -14,12 +14,12 @@
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
-    "@babel/core": "~7.15.0",
-    "@babel/eslint-parser": "~7.15.0",
+    "@babel/core": "~7.15.5",
+    "@babel/eslint-parser": "~7.15.4",
     "@commitlint/cli": "~13.1.0",
-    "@modyqyw/fabric": "~3.2.2",
-    "@typescript-eslint/eslint-plugin": "~4.30.0",
-    "@typescript-eslint/parser": "~4.30.0",
+    "@modyqyw/fabric": "~3.3.2",
+    "@typescript-eslint/eslint-plugin": "~4.31.0",
+    "@typescript-eslint/parser": "~4.31.0",
     "cross-env": "~7.0.3",
     "eslint": "~7.32.0",
     "husky": "~7.0.2",
