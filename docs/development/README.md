@@ -16,6 +16,8 @@
 - [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
 - [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
 - [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
+- [架构整洁之道](https://weread.qq.com/web/reader/480322f072021a3248038c8)
+- [代码整洁之道](https://weread.qq.com/web/reader/f3e322f0811e3913eg012ae9)
 
 ## 计算机基础
 
@@ -602,6 +604,7 @@
   - [reseter.css](https://github.com/krishdevdb/reseter.css)
   - [sanitize.css](https://csstools.github.io/sanitize.css/)
   - [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
+  - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 - [css bem](http://getbem.com/) - CSS 命名方法
 - [css modules](https://github.com/css-modules/css-modules) - CSS 模块化
 - [oocss](http://oocss.org/)
@@ -689,6 +692,11 @@
 - [sprite.js](https://spritejs.org/) - 跨平台高性能图形系统，支持 canvas 和 webgl
 - [d3](https://d3js.org/) - 使用 svg，canvas 和 html，基于数据操作文档的库
 - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
+- [flux](https://facebook.github.io/flux/)
+- [redux](https://redux.js.org/)
+- [xstate](https://xstate.js.org/)
+- [immutable.js](https://immutable-js.github.io/immutable-js/docs/)
+- [immer](https://immerjs.github.io/immer/)
 - [html5-boilerplate](https://github.com/h5bp/html5-boilerplate) - 模板
 - [vanilla-web-projects](https://github.com/bradtraversy/vanillawebprojects) - 使用 html5、css 和 js 构建的迷你项目示例
 - [placekitten](https://placekitten.com)
@@ -710,7 +718,7 @@
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
   - [element-plus](https://element-plus.org/)
-  - [antd-vue](https://2x.antdv.com/)
+  - [antdv](https://2x.antdv.com/)
   - [naive-ui](https://www.naiveui.com/zh-CN/os-theme)
   - [nut-ui](http://nutui.jd.com/)
   - [vant](https://youzan.github.io/vant/)
@@ -772,8 +780,7 @@
   - [vue-use](https://vueuse.js.org/) - 官方 hooks 包
   - [vue-composable](https://pikax.me/vue-composable/) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
-  - [@ant-design-vue/use](https://github.com/vueComponent/use) - hooks 包
-  - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antd-vue 和 view-ui
+  - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
   - [vue-good-table](https://xaksis.github.io/vue-good-table/) - 表格解决方案
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案
   - [vuese](https://github.com/vuese/vuese) - 快速生成 vue 组件文档
@@ -949,7 +956,7 @@
     - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
   - [这可能是最通俗的 React Fiber（时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
   - [构建 react 组件库](https://zhuanlan.zhihu.com/p/196758730) - 大方向上适用于 vue
-  - [https://www.zhihu.com/question/468249924/answer/1968728853](https://www.zhihu.com/question/468249924/answer/1968728853)
+  - [Hooks是否过誉了？前端应该跟着React走还是跟着JS、TS走？](https://www.zhihu.com/question/468249924/answer/1968728853)
 
 ## Virtual DOM
 
@@ -1062,7 +1069,6 @@
 - [前端精读周刊](https://github.com/dt-fe/weekly)
 - [秋风的笔记](https://qiufeng.blue/)
 - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web)
-- [前端入门到进阶图文教程](https://github.com/qianguyihao/Web)
 - [前端进阶之道](https://yuchengkai.cn/home/)
 - [木易杨前端进阶](https://muyiy.cn/)
 - [前端工程化](https://github.com/fouber/blog)
@@ -1089,12 +1095,13 @@
 - [为什么要开源](https://www.zhihu.com/question/33573424)
 - [github 开源指南](https://zhuanlan.zhihu.com/p/176839757)
 - [开源社区的暗面](https://zhuanlan.zhihu.com/p/376516218)
-- [开源有带给我什么](https://segmentfault.com/a/1190000040195344)
+- [开源带给我什么](https://segmentfault.com/a/1190000040195344)
 
 ## 独立开发者
 
 - [程序员如何优雅地赚零花钱](https://howto-make-more-money-easychen.vercel.app/)
 - [一人公司方法论](https://github.com/easychen/one-person-businesses-methodology)
+- [电鸭社区](https://eleduck.com/)
 
 ## 参考
 
