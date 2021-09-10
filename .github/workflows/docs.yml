@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           # 选择要使用的 node 版本
-          node-version: '14.17.5'
+          node-version: '16'
           cache: 'yarn'
           cache-dependency-path: 'yarn.lock'
 
