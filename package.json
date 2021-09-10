@@ -1,23 +1,29 @@
 {
-  "author": "ModyQyW",
+  "name": "modyqyw.github.io",
   "license": "MIT",
+  "author": "ModyQyW",
   "scripts": {
     "commit": "cz",
     "gitee:build": "cross-env MODE=gitee vuepress build docs",
     "gitee:dev": "cross-env MODE=gitee vuepress dev docs",
     "github:build": "cross-env MODE=github vuepress build docs",
     "github:dev": "cross-env MODE=github vuepress dev docs",
-    "lint": "yarn run lint:json && yarn run lint:markdown && yarn run lint:script",
-    "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
-    "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
-    "lint:script": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
+    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint",
+    "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue,.json,.jsonc,.json5 --ignore-path=.gitignore",
+    "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "prepare": "is-ci || husky install"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "~7.15.5",
     "@babel/eslint-parser": "~7.15.4",
     "@commitlint/cli": "~13.1.0",
-    "@modyqyw/fabric": "~3.3.2",
+    "@modyqyw/fabric": "~3.4.1",
     "@typescript-eslint/eslint-plugin": "~4.31.0",
     "@typescript-eslint/parser": "~4.31.0",
     "cross-env": "~7.0.3",
@@ -26,20 +32,14 @@
     "is-ci": "~3.0.0",
     "lint-staged": "~11.1.2",
     "markdownlint-cli": "~0.28.1",
-    "prettier": "~2.3.2",
+    "prettier": "~2.2.1",
     "typescript": "~4.4.2",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
     "vuepress-theme-hope": "~1.20.2"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "engines": {
-    "node": "^12.22.5 || ^14.17.5 || ^16.6.2",
-    "npm": "^6.14.14 || ^7.20.3"
-  },
-  "dependencies": {}
+    "node": "^12.22.6 || ^14.17.6 || ^16.6.2",
+    "npm": "^6.14.15 || ^7.20.3"
+  }
 }
