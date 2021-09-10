@@ -34,7 +34,7 @@
 
 - 点击左上角的 `终端` -> 偏好设置 -> 描述文件，可以选择你想要的基本效果。我这里选择了 `Pro`。
 
-- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续统一安装和更新大量软件。注意：homebrew 上的软件版本往往会有一些滞后。
+- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续统一安装和更新大量软件。**注意：homebrew 上的软件版本往往会有一些滞后。**
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -251,6 +251,8 @@ brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
 # cocoapods
 brew install cocoapods
+# dingtalk
+brew install --cask dingtalk
 # drawio，作图工具
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
@@ -262,6 +264,10 @@ git config --global core.autocrlf false
 git config --global init.defaultBranch main
 git config --global user.name "YOUR_NAME_HERE"
 git config --global user.email "YOUR_EMAIL_HERE"
+# go
+brew install go
+# gradle
+brew install gradle
 # iina，音视频播放器
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
@@ -283,12 +289,17 @@ brew install --cask mongodb-compass # mongodb official gui
 brew services start mongodb/brew/mongodb-community # start when launched
 # motrix，下载工具
 brew install --cask motrix # https://motrix.app/
-# mysqlworkbench，mysql gui
-brew install --cask mysqlworkbench # https://www.mysql.com/products/workbench/
 # mounty，重新挂载受写保护的 NTFS 卷
 brew install --cask mounty # https://mounty.app/
+# mysql，流行的关系型数据库
+brew install mysql
+brew services start mysql # start when launched
+# mysqlworkbench，mysql gui
+brew install --cask mysqlworkbench # https://www.mysql.com/products/workbench/
 # obs，录屏工具
 brew install --cask obs # https://obsproject.com/
+# openemu
+brew install --cask openemu
 # openineditor-lite，在编辑器快速打开当前目录
 brew install --cask openineditor-lite # https://github.com/Ji4n1ng/OpenInTerminal
 # openinterminal-lite，在终端快速打开当前目录
@@ -311,8 +322,12 @@ brew install --cask snipaste # https://www.snipaste.com/
 brew install --cask sourcetree # https://www.sourcetreeapp.com/
 # subversion，代码版本管理
 brew install svn # https://subversion.apache.org/
+# tableplus，数据库管理
+brew install --cask tableplus # https://tableplus.com/
 # tencent-lemon，系统清理和状态工具
 brew install --cask tencent-lemon # https://lemon.qq.com/
+# tencent-meeting，会议工具
+brew install --cask tencent-meeting # https://meeting.tencent.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
@@ -330,6 +345,8 @@ brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/de
 brew install --cask yuque # https://www.yuque.com/
 # you-get，下载网络媒体资源
 brew install you-get # https://you-get.org/
+# youtube-dl，下载网络媒体资源
+brew install youtube-dl
 ```
 
 - 安装 `node` 相关。
@@ -365,9 +382,10 @@ npm i -g --registry=https://registry.npm.taobao.org eslint # https://eslint.org/
 npm i -g --registry=https://registry.npm.taobao.org expo-cli # https://expo.dev/
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates # https://github.com/raineorshine/npm-check-updates
 npm i -g --registry=https://registry.npm.taobao.org pnpm # https://pnpm.io/
-npm i -g --registry=https://registry.npm.taobao.org prettier # https://prettier.io/
+npm i -g --registry=https://registry.npm.taobao.org prettier@2.2.1 # https://prettier.io/
 npm i -g --registry=https://registry.npm.taobao.org react-devtools # https://github.com/facebook/react/tree/main/packages/react-devtools
 npm i -g --registry=https://registry.npm.taobao.org serve # https://github.com/vercel/serve
+npm i -g --registry=https://registry.npm.taobao.org sort-package-json # https://github.com/keithamus/sort-package-json
 npm i -g --registry=https://registry.npm.taobao.org stylelint # https://stylelint.io/
 npm i -g --registry=https://registry.npm.taobao.org ts-node # https://typestrong.org/ts-node/
 npm i -g --registry=https://registry.npm.taobao.org typescript # https://www.typescriptlang.org/
@@ -382,6 +400,7 @@ export NVM_DIR="$HOME/.nvm"
 # export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # use taobao mirror origin
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -435,6 +454,7 @@ alias qs='open -a QSpace\ Pro'
   - [Commander One](https://mac.eltima.com/file-manager.html)
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
   - Fiddler - 抓包
+  - [Figma](https://www.figma.com/) - 设计工具
   - [FileZilla](https://filezilla-project.org/) - ftp 连接
   - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
@@ -462,10 +482,10 @@ alias qs='open -a QSpace\ Pro'
 
 Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
-- 终端和 `shell`：Windows 上建议使用 [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) 作为终端，Git Bash 作为 `shell`，[定制参考 1](https://sspai.com/post/62167)，[定制参考 2](https://sspai.com/post/63814)。
+- 终端和 `shell`：Windows 上建议使用 [Windows Terminal](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) 作为终端，`Git Bash` 作为 `shell`，[定制参考 1](https://sspai.com/post/62167)，[定制参考 2](https://sspai.com/post/63814)。
 - 包管理器：macOS 上使用 Homebrew 作为包管理器，而 Windows 上推荐使用 [Chocolaty](https://chocolatey.org/) 作为包管理器。
 - `nvm`：Windows 上需要使用 [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) 管理 node 版本，而且命令上有一些区别。
-- 其它：上面的应用在 Windows 上不一定有或者有更好的选择，比如 iina 可以换成 [PotPlayer](http://potplayer.daum.net/?lang=zh_CN)，网易 Mumu 可以换成 [雷电模拟器](https://www.ldmnq.com/)，Tencent Lemon 可以换成 [腾讯电脑管家](https://guanjia.qq.com/)，[万彩办公大师](http://www.wofficebox.com/) 可以处理大量的文档等。
+- 其它：上面的应用在 Windows 上可能有更好的选择，比如 iina 可以换成 [PotPlayer](http://potplayer.daum.net/?lang=zh_CN)，网易 Mumu 可以换成 [雷电模拟器](https://www.ldmnq.com/)，Tencent Lemon 可以换成 [腾讯电脑管家](https://guanjia.qq.com/)，[万彩办公大师](http://www.wofficebox.com/) 可以处理大量的文档等。
 
 ## vscode
 
@@ -480,8 +500,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [CodeMod](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-codemod) - 协助重构大规模代码库
 - [Component Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-material-helper) - 在 JSX 中更快更好地添加组件、编写组件属性、查找组件文档
-- [create-uniapp-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) - 快速创建 uni-app 视图与组件
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
+- [docs-yaml](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml)
 - [Doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor) - 安全和质量审核工具
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
@@ -741,8 +761,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.5/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.5/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/npm"
 }
 
 ```
