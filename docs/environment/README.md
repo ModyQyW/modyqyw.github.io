@@ -518,8 +518,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
 - [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 支持 typescript@next
-- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest) - jest 支持
-- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) - 支持 jupyter
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
