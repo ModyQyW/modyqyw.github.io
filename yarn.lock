@@ -1308,10 +1308,10 @@
     event-target-shim "^5.0.1"
     miniprogram-api-typings "^2.10.2"
 
-"@modyqyw/fabric@~3.4.1":
-  version "3.4.1"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.4.1.tgz#173ef32724a19868368e78f4c6fd0fc2851453cf"
-  integrity sha1-Fz7zJyShmGg2jnj0xv0PwoUUU88=
+"@modyqyw/fabric@~3.4.3":
+  version "3.4.3"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.4.3.tgz#5dee828751123183752489d6512f0794905c0d96"
+  integrity sha1-Xe6Ch1ESMYN1JInWUS8HlJBcDZY=
   dependencies:
     "@babel/core" "~7.15.5"
     "@babel/eslint-parser" "~7.15.4"
@@ -1323,7 +1323,7 @@
     "@typescript-eslint/eslint-plugin" "~4.31.0"
     "@typescript-eslint/parser" "~4.31.0"
     chalk "~4.1.2"
-    commander "~8.1.0"
+    commander "~8.2.0"
     eslint-config-airbnb "~18.2.1"
     eslint-config-airbnb-base "~14.2.1"
     eslint-config-airbnb-typescript "~14.0.0"
@@ -1334,30 +1334,24 @@
     eslint-import-resolver-webpack "~0.13.1"
     eslint-plugin-eslint-comments "~3.2.0"
     eslint-plugin-import "~2.24.2"
-    eslint-plugin-jsonc "~1.6.0"
     eslint-plugin-jsx-a11y "~6.4.1"
     eslint-plugin-prettier "~4.0.0"
     eslint-plugin-react "~7.25.1"
     eslint-plugin-react-hooks "~4.2.0"
     eslint-plugin-regexp "~1.1.0"
-    eslint-plugin-toml "~0.2.0"
     eslint-plugin-unicorn "~35.0.0"
     eslint-plugin-vue "~7.17.0"
     eslint-plugin-vuejs-accessibility "~0.7.1"
-    eslint-plugin-yml "~0.10.0"
     inquirer "~8.1.2"
-    jsonc-eslint-parser "~1.3.1"
     shelljs "~0.8.4"
     stylelint-config-prettier "~8.0.2"
     stylelint-config-recess-order "~2.5.0"
     stylelint-config-twbs-bootstrap "~2.2.3"
     stylelint-prettier "~1.2.0"
-    toml-eslint-parser "~0.2.1"
     typescript "~4.4.2"
     vue-class-component "~7.2.6"
     vue-eslint-parser "~7.11.0"
     vue-property-decorator "~9.1.2"
-    yaml-eslint-parser "~0.4.1"
 
 "@mr-hope/vuepress-plugin-comment@1.20.1":
   version "1.20.1"
@@ -3987,10 +3981,10 @@ commander@~8.0.0:
   resolved "https://registry.nlark.com/commander/download/commander-8.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.0.0.tgz#1da2139548caef59bd23e66d18908dfb54b02258"
   integrity sha1-HaITlUjK71m9I+ZtGJCN+1SwIlg=
 
-commander@~8.1.0:
-  version "8.1.0"
-  resolved "https://registry.nlark.com/commander/download/commander-8.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.1.0.tgz#db36e3e66edf24ff591d639862c6ab2c52664362"
-  integrity sha1-2zbj5m7fJP9ZHWOYYsarLFJmQ2I=
+commander@~8.2.0:
+  version "8.2.0"
+  resolved "https://registry.nlark.com/commander/download/commander-8.2.0.tgz#37fe2bde301d87d47a53adeff8b5915db1381ca8"
+  integrity sha1-N/4r3jAdh9R6U63v+LWRXbE4HKg=
 
 comment-parser@^1.1.2:
   version "1.2.4"
@@ -5510,15 +5504,6 @@ eslint-plugin-import@^2.22.1, eslint-plugin-import@~2.24.2:
     resolve "^1.20.0"
     tsconfig-paths "^3.11.0"
 
-eslint-plugin-jsonc@~1.6.0:
-  version "1.6.0"
-  resolved "https://registry.nlark.com/eslint-plugin-jsonc/download/eslint-plugin-jsonc-1.6.0.tgz#aace42803265a6c15cfc92c9bec91ac524e5bb13"
-  integrity sha1-qs5CgDJlpsFc/JLJvskaxSTluxM=
-  dependencies:
-    eslint-utils "^2.1.0 || ^3.0.0"
-    jsonc-eslint-parser "^1.2.0"
-    natural-compare "^1.4.0"
-
 eslint-plugin-jsx-a11y@^6.4.1, eslint-plugin-jsx-a11y@~6.4.1:
   version "6.4.1"
   resolved "https://registry.npm.taobao.org/eslint-plugin-jsx-a11y/download/eslint-plugin-jsx-a11y-6.4.1.tgz#a2d84caa49756942f42f1ffab9002436391718fd"
@@ -5580,15 +5565,6 @@ eslint-plugin-regexp@~1.1.0:
     regexpp "^3.2.0"
     scslre "^0.1.6"
 
-eslint-plugin-toml@~0.2.0:
-  version "0.2.0"
-  resolved "https://registry.nlark.com/eslint-plugin-toml/download/eslint-plugin-toml-0.2.0.tgz#7cd36d889465433c1bc4635bfb20d16b79ff5146"
-  integrity sha1-fNNtiJRlQzwbxGNb+yDRa3n/UUY=
-  dependencies:
-    debug "^4.1.1"
-    lodash "^4.17.19"
-    toml-eslint-parser "^0.2.1"
-
 eslint-plugin-unicorn@~35.0.0:
   version "35.0.0"
   resolved "https://registry.nlark.com/eslint-plugin-unicorn/download/eslint-plugin-unicorn-35.0.0.tgz#40797793d4f645bafaaa7a1396b8f4ca7b2a7dbd"
@@ -5626,16 +5602,6 @@ eslint-plugin-vuejs-accessibility@~0.7.1:
     emoji-regex "^9.0.0"
     vue-eslint-parser "^7.0.0"
 
-eslint-plugin-yml@~0.10.0:
-  version "0.10.0"
-  resolved "https://registry.nlark.com/eslint-plugin-yml/download/eslint-plugin-yml-0.10.0.tgz#edab6f859121fb66740a631d27bfb68d42316e1d"
-  integrity sha1-7atvhZEh+2Z0CmMdJ7+2jUIxbh0=
-  dependencies:
-    debug "^4.1.1"
-    lodash "^4.17.19"
-    natural-compare "^1.4.0"
-    yaml-eslint-parser "^0.4.0"
-
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
   version "5.1.1"
   resolved "https://registry.nlark.com/eslint-scope/download/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
@@ -5670,7 +5636,7 @@ eslint-utils@^2.1.0:
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-"eslint-utils@^2.1.0 || ^3.0.0", eslint-utils@^3.0.0:
+eslint-utils@^3.0.0:
   version "3.0.0"
   resolved "https://registry.nlark.com/eslint-utils/download/eslint-utils-3.0.0.tgz#8aebaface7345bb33559db0a1f13a1d2d48c3672"
   integrity sha1-iuuvrOc0W7M1WdsKHxOh0tSMNnI=
@@ -5733,7 +5699,7 @@ eslint@~7.32.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-espree@^6.0.0, espree@^6.2.1:
+espree@^6.2.1:
   version "6.2.1"
   resolved "https://registry.nlark.com/espree/download/espree-6.2.1.tgz#77fc72e1fd744a2052c20f38a5b575832e82734a"
   integrity sha1-d/xy4f10SiBSwg84pbV1gy6Cc0o=
@@ -7684,16 +7650,6 @@ json5@^2.1.2:
   integrity sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=
   dependencies:
     minimist "^1.2.5"
-
-jsonc-eslint-parser@^1.2.0, jsonc-eslint-parser@~1.3.1:
-  version "1.3.1"
-  resolved "https://registry.nlark.com/jsonc-eslint-parser/download/jsonc-eslint-parser-1.3.1.tgz#f9ad860f6ce90cf4dcb0582693e983babf1aa2f3"
-  integrity sha1-+a2GD2zpDPTcsFgmk+mDur8aovM=
-  dependencies:
-    eslint-utils "^2.1.0"
-    eslint-visitor-keys "^1.3.0"
-    espree "^6.0.0"
-    semver "^6.3.0"
 
 jsonc-parser@~3.0.0:
   version "3.0.0"
@@ -9802,10 +9758,10 @@ prettier@^1.18.2:
   resolved "https://registry.nlark.com/prettier/download/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha1-99f1/4qc2HKnvkyhQglZVqYHl8s=
 
-prettier@~2.2.1:
-  version "2.2.1"
-  resolved "https://registry.nlark.com/prettier/download/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha1-eVoaeN1S8HPaDNQrIfnJE4GSP/U=
+prettier@~2.4.0:
+  version "2.4.0"
+  resolved "https://registry.nlark.com/prettier/download/prettier-2.4.0.tgz#85bdfe0f70c3e777cf13a4ffff39713ca6f64cba"
+  integrity sha1-hb3+D3DD53fPE6T//zlxPKb2TLo=
 
 pretty-bytes@^5.3.0:
   version "5.6.0"
@@ -11728,13 +11684,6 @@ toidentifier@1.0.0:
   resolved "https://registry.npm.taobao.org/toidentifier/download/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM=
 
-toml-eslint-parser@^0.2.1, toml-eslint-parser@~0.2.1:
-  version "0.2.1"
-  resolved "https://registry.nlark.com/toml-eslint-parser/download/toml-eslint-parser-0.2.1.tgz#2f49e04418ff3b3e267d59251deb0c2974d469f5"
-  integrity sha1-L0ngRBj/Oz4mfVklHesMKXTUafU=
-  dependencies:
-    eslint-visitor-keys "^2.0.0"
-
 toml@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/toml/download/toml-3.0.0.tgz#342160f1af1904ec9d204d03a5d61222d762c5ee"
@@ -11881,6 +11830,11 @@ typescript@~4.4.2:
   version "4.4.2"
   resolved "https://registry.nlark.com/typescript/download/typescript-4.4.2.tgz?cache=0&sync_timestamp=1631172372097&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
   integrity sha1-bWGGQNQw41aaHftE99fmAM7T7oY=
+
+typescript@~4.4.3:
+  version "4.4.3"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  integrity sha1-vcVAfKorEJ79T4L+EwZW+XeikyQ=
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
@@ -13061,15 +13015,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/yallist/download/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha1-m7knkNnA7/7GO+c1GeEaNQGaOnI=
-
-yaml-eslint-parser@^0.4.0, yaml-eslint-parser@~0.4.1:
-  version "0.4.1"
-  resolved "https://registry.nlark.com/yaml-eslint-parser/download/yaml-eslint-parser-0.4.1.tgz#66966662010ac6ab372e61b99618e59dc903ccf1"
-  integrity sha1-ZpZmYgEKxqs3LmG5lhjlnckDzPE=
-  dependencies:
-    eslint-visitor-keys "^2.1.0"
-    lodash "^4.17.20"
-    yaml "^1.10.0"
 
 yaml@^1.10.0:
   version "1.10.2"

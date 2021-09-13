@@ -1,4 +1,4 @@
 module.exports = {
-  '*.{js,jsx,ts,tsx,vue,json,jsonc,json5}': 'eslint --fix',
+  '*.{js,jsx,ts,tsx,vue}': 'eslint --fix',
   '*.{md,markdown}': 'markdownlint --fix',
 };
