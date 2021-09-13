@@ -178,6 +178,7 @@
 - [hexo](https://hexo.io/)
 - [vuepress](https://vuepress.vuejs.org/)
   - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
+  - [vuepress-theme-vdoing](https://doc.xugaoyi.com/)
   - [vuepress-next](https://vuepress2.netlify.app/)
   - [vitepress](https://vitepress.vuejs.org/)
     - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
@@ -363,12 +364,17 @@
 - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
 - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
 - [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
+- [naming-cheatsheet](https://github.com/kettanaito/naming-cheatsheet)
 - [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
 - [markdownlint](https://github.com/DavidAnson/markdownlint) - markdown 格式化
 - [lint-md](https://github.com/lint-md/lint-md) - markdown 格式化
 - [eslint](https://eslint.org/) - 脚本文件校验 + 格式化
-- [stylelint](https://stylelint.io/) - 样式文件呢校验 + 格式化
+- [stylelint](https://stylelint.io/) - 样式文件校验 + 格式化
+- [css bem](http://getbem.com/) - CSS 命名方法
+- [css modules](https://github.com/css-modules/css-modules) - CSS 模块化
+- [oocss](http://oocss.org/)
+- [smacss](http://smacss.com/)
 - [commitlint](https://commitlint.js.org/) - 校验提交
 - [commitizen](https://github.com/commitizen/cz-cli) - 引导填写提交信息
 - [husky](https://github.com/typicode/husky) - Git 钩子处理
@@ -605,10 +611,6 @@
   - [sanitize.css](https://csstools.github.io/sanitize.css/)
   - [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
   - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
-- [css bem](http://getbem.com/) - CSS 命名方法
-- [css modules](https://github.com/css-modules/css-modules) - CSS 模块化
-- [oocss](http://oocss.org/)
-- [smacss](http://smacss.com/)
 - [postcss](https://postcss.org/)
 - [less](http://lesscss.org/)
 - [sass/scss](https://sass-lang.com/)
