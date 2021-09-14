@@ -13,11 +13,13 @@
 ## 工作学习法
 
 - [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
-- [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
-- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
 - [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
-- [架构整洁之道](https://weread.qq.com/web/reader/480322f072021a3248038c8)
+- [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
 - [代码整洁之道](https://weread.qq.com/web/reader/f3e322f0811e3913eg012ae9)
+- [架构整洁之道](https://weread.qq.com/web/reader/480322f072021a3248038c8)
+- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
+- [重构](https://weread.qq.com/web/reader/2ed32e60811e3a304g014c02)
+- [代码精进之路](https://weread.qq.com/web/reader/81132f5071cc7f7a81151c9)
 
 ## 计算机基础
 
