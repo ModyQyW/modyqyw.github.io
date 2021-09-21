@@ -460,6 +460,7 @@ alias qs='open -a QSpace\ Pro'
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
   - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
+  - [keka](https://www.keka.io/) - 压缩工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
   - [Neat Download Manager](https://www.neatdownloadmanager.com/)

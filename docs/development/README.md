@@ -181,6 +181,7 @@
 - [vuepress](https://vuepress.vuejs.org/)
   - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
   - [vuepress-theme-vdoing](https://doc.xugaoyi.com/)
+  - [vuepress-theme-ccds](https://github.com/qsyyke/vuepress-theme-ccds)
   - [vuepress-next](https://vuepress2.netlify.app/)
   - [vitepress](https://vitepress.vuejs.org/)
     - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
@@ -1051,6 +1052,7 @@
   - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
   - [node-cron](https://github.com/node-cron/node-cron) - 任务调度
+  - [winston](https://github.com/winstonjs/winston) - 日志工具
   - [nodemon](https://nodemon.io/) - 进程守护
   - [pm2](https://pm2.keymetrics.io/) - 进程守护
   - [forever](https://github.com/foreversd/forever) - 进程守护
