@@ -30,6 +30,7 @@
   - 翻译工具 [deepl](https://www.deepl.com/)
   - [grammarly](https://www.grammarly.com/)
   - [ludwig](https://ludwig.guru/)
+  - [qwerty-learner](https://qwerty.kaiyi.cool/)
 - 线性代数
   - [线性代数及其应用](https://book.douban.com/subject/1425950/)
 - 离散数学
@@ -138,7 +139,6 @@
   - [npm](https://docs.npmjs.com/)
   - [yarn](https://classic.yarnpkg.com/)
   - [pnpm](https://pnpm.js.org/)
-  - [@antfu/ni](https://github.com/antfu/ni)
 - css 处理器
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
@@ -148,7 +148,6 @@
   - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
   - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
   - [EditorConfig](https://editorconfig.org/)
-  - [ls-lint](https://ls-lint.org/)
   - [prettier](https://prettier.io/)
   - [markdownlint](https://github.com/DavidAnson/markdownlint)
   - [lint-md](https://github.com/lint-md/lint-md)
@@ -179,10 +178,10 @@
 
 - [hexo](https://hexo.io/)
 - [vuepress](https://vuepress.vuejs.org/)
+  - [vuepress-next](https://vuepress2.netlify.app/)
   - [vuepress-theme-hope](https://vuepress-theme-hope.github.io/zh/)
   - [vuepress-theme-vdoing](https://doc.xugaoyi.com/)
   - [vuepress-theme-ccds](https://github.com/qsyyke/vuepress-theme-ccds)
-  - [vuepress-next](https://vuepress2.netlify.app/)
   - [vitepress](https://vitepress.vuejs.org/)
     - [vitepress-for-components](https://github.com/dewfall123/vitepress-for-component)
 - [gridsome](https://gridsome.org/)
@@ -261,7 +260,6 @@
 - [npm](https://github.com/npm/cli)
   - [yarn](https://classic.yarnpkg.com/zh-Hans)
   - [pnpm](https://pnpm.js.org/)
-  - [@antfu/ni](https://github.com/antfu/ni) - 自动选择 npm/yarn/pnpm
 - [lerna](https://github.com/lerna/lerna) - monorepo
 - [nx](https://nx.dev/) - monorepo
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates) - 可以结合 `yarn upgrade-interactive` 使用
@@ -300,24 +298,28 @@
 
 - 桌面端网页
   - ([vue](https://cn.vuejs.org/) + [vue-router](https://router.vuejs.org/zh/) + [vuex](https://vuex.vuejs.org/zh/)) / [fes](https://winixt.gitee.io/fesjs/zh/) / [nuxt](https://nuxtjs.org/)
-  - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antdv-next](https://2x.antdv.com/) / [naive](https://www.naiveui.com/)
+  - [immer](https://immerjs.github.io/immer/)
+  - [vuetify](https://vuetifyjs.com/) / [element](https://element.eleme.cn/) / [element-plus](https://element-plus.org/) / [antdv-next](https://2x.antdv.com/) / [naive-ui](https://www.naiveui.com/)
   - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/) + [daisy-ui](https://daisyui.com/)
   - [vue-use](https://vueuse.org/)
 - 移动端网页
   - (vue + vue-router + vuex) / fes / nuxt
+  - immer
   - vuetify / [nut-ui](https://nutui.jd.com/) / [vant](https://vant-contrib.gitee.io/vant/)
   - tailwindcss / windicss + daisy-ui
   - vue-use
 - 移动端应用，小程序
   - [uni-app](https://uniapp.dcloud.io/) + vuex
-  - [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui) + [uview-ui](https://uviewui.com/)
+  - immer
+  - [thor-ui](https://www.thorui.cn/doc/) + [uni-ui](https://github.com/dcloudio/uni-ui) + [uview-ui](https://uviewui.com/) + [cl-uni](https://docs.cool-js.com/)
   - tailwindcss / windicss + daisy-ui
 - 桌面端应用
   - (vue + vue-router + vuex) / fes / nuxt
+  - immer
   - vuetify / element / element-plus / antdv-next / naive
   - tailwindcss / windicss + daisy-ui
   - vue-use
-  - electron，nuxt 目前没有插件
+  - electron
 
 [vue-next](https://v3.cn.vuejs.org/)
 
@@ -333,7 +335,7 @@
   - ([react](https://zh-hans.reactjs.org/) + [react-router](https://reacttraining.com/react-router/)) / [umi](https://umijs.org/zh-CN) / [next](https://nextjs.org/)
   - [constate](https://github.com/diegohaz/constate) / ([redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)) / [unstated-next](https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md) / [mobx](https://mobx.js.org/README.html) / [recoil](https://recoiljs.org/)
   - [immer](https://immerjs.github.io/immer/)
-  - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [material-ui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/) / [react-query](https://react-query.tanstack.com/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
+  - ([zent](https://youzan.github.io/zent/) / [blueprint](https://blueprintjs.com/) / [mui](https://material-ui.com/) + [react-use](https://streamich.github.io/react-use/) + [swr](https://swr.vercel.app/) / [react-query](https://react-query.tanstack.com/)) / ([antd](https://ant.design/) + [antd-pro-components](https://procomponents.ant.design/) + [ahooks](https://ahooks.js.org/))
   - [tailwindcss](https://tailwindcss.com/) / [windicss](https://windicss.org/) + [daisy-ui](https://daisyui.com/)
 - 移动端网页
   - (react + react-router) / umi / next
@@ -348,7 +350,7 @@
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
   - immer
   - [react-native-elements](https://reactnativeelements.com/) / [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
-  - [@react-native-community/hooks](https://github.com/react-native-community/hooks) / (react-use + swr / react-query) / ahooks
+  - [@react-native-community/hooks](https://github.com/react-native-community/hooks) + swr / react-query
 - 小程序
   - [taro](https://taro.zone/) / [remax](https://remaxjs.org/) / [rax](https://rax.js.org/)
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / mobx / recoil
@@ -358,17 +360,17 @@
   - (react + react-router) / umi / next
   - constate / (redux + react-redux + redux-toolkit) / unstated-next / recoil
   - immer
-  - (zent / blueprint / material-ui + react-use + swr / react-query) / (antd + antd-pro-components + ahooks)
+  - (zent / blueprint / mui + react-use + swr / react-query) / (antd + antd-pro-components + ahooks)
   - tailwindcss / windicss + daisy-ui
   - electron，umi 可直接使用 [umi-plugin-electron-builder](https://github.com/BySlin/umi-plugin-electron-builder)，next 可直接使用 [nextron](https://github.com/saltyshiomix/nextron)
 
 ## 规范
 
+- [中文排版需求](https://w3c.github.io/clreq/)
 - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
 - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
 - [EditorConfig](https://editorconfig.org/) - 在不同的编辑器和 IDE 保持一致的风格
 - [naming-cheatsheet](https://github.com/kettanaito/naming-cheatsheet)
-- [ls-lint](https://ls-lint.org/) - 目录校验
 - [prettier](https://prettier.io/) - 格式化
 - [markdownlint](https://github.com/DavidAnson/markdownlint) - markdown 格式化
 - [lint-md](https://github.com/lint-md/lint-md) - markdown 格式化
@@ -386,11 +388,11 @@
 
 ## CDN
 
+- [jsdelivr](https://www.jsdelivr.com/)
+- [unpkg](https://unpkg.com/)
 - [cdnjs](https://cdnjs.com/)
 - [360 前端静态资源库](https://cdn.baomitu.com/)
 - [bootcdn](https://www.bootcdn.cn/)
-- [unpkg](https://unpkg.com/)
-- [jsdelivr](https://www.jsdelivr.com/)
 
 ## 构建
 
@@ -408,6 +410,7 @@
   - [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime)
   - [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import/)
 - [swc](https://swc.rs/)
+  - [napi-rs](https://napi.rs/)
 - [esbuild](https://esbuild.github.io/)
   - [awesome-esbuild](https://github.com/egoist/awesome-esbuild)
 - [postcss](https://postcss.org/)
@@ -456,7 +459,6 @@
     - [less-loader](https://github.com/webpack-contrib/less-loader)
     - [stylus-loader](https://github.com/webpack-contrib/stylus-loader)
     - [postcss-loader](https://github.com/webpack-contrib/less-loader)
-  - [modyqyw/webpack-demos](https://github.com/modyqyw/webpack-demos) - webpack 入门示例
 - [vite](https://github.com/vitejs/vite)
   - [awesome-vite](https://github.com/vitejs/awesome-vite)
   - [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue)
@@ -494,10 +496,6 @@
   - [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts)
 - [parcel-next](https://v2.parceljs.org/)
   - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel)
-- [snowpack](https://www.snowpack.dev/)
-  - [awesome-snowpack](https://github.com/rajasegar/awesome-snowpack)
-- [@vercel/ncc](https://github.com/vercel/ncc)
-- [bunchee](https://github.com/huozhi/bunchee)
 - [unplugin](https://github.com/unjs/unplugin)
   - [unplugin-vue2-script-setup](https://github.com/antfu/unplugin-vue2-script-setup)
   - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
@@ -595,6 +593,7 @@
 - [Taskade](https://www.taskade.com/)
 - [Tita](https://www.tita.com/)
 - [明道云](https://www.mingdao.com/home)
+- [zadig](https://gitee.com/koderover/zadig)
 
 关于 DevOps 的实践还可以参考 [Ledge](https://devops.phodal.com/) 和 [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/download?id=205)。
 
@@ -785,16 +784,21 @@
   - [swrv](https://docs-swrv.netlify.app/) - 管理你的请求
   - [vue-query](https://vue-query.vercel.app/) - 管理你的请求
   - [vue-use](https://vueuse.js.org/) - 官方 hooks 包
+  - [ahooks-vue](https://dewfall123.github.io/ahooks-vue/zh/) - hooks 包
   - [vue-composable](https://pikax.me/vue-composable/) - hooks 包
   - [vue-hooks](https://vue-hooks.netlify.app/) - hooks 包
+  - [vue2-helpers](https://github.com/ambit-tsai/vue2-helpers)
   - [vxe-table](https://github.com/xuliangzhan/vxe-table) - 表格解决方案，可兼容 element，antdv 和 view-ui
   - [vue-good-table](https://xaksis.github.io/vue-good-table/) - 表格解决方案
   - [vue-formulate](https://vueformulate.com/) - 表单解决方案
   - [vuese](https://github.com/vuese/vuese) - 快速生成 vue 组件文档
+  - [vue-fragment](https://github.com/Thunberg087/vue-fragment)
+  - [fragment-for-vue](https://github.com/ambit-tsai/fragment-for-vue)
   - [portal-vue](https://portal-vue.linusb.org/) - 用于在 DOM 中的任何地方渲染组件模板，vue 3 不再需要
   - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) - 后台管理系统
   - [d2-admin](https://github.com/d2-projects/d2-admin) - 后台管理系统
   - [vue-vben-admin](https://github.com/anncwb/vue-vben-admin) - 后台管理系统
+  - [naive-ui-admin](https://github.com/jekip/naive-ui-admin)
   - [vue-antd-admin](https://github.com/iczer/vue-antd-admin) - 后台管理系统
   - [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro) - 后台管理系统
   - [vuetify-material-dashboard](https://github.com/creativetimofficial/vuetify-material-dashboard) - 后台管理系统
@@ -833,7 +837,7 @@
   - [xstate](https://xstate.js.org/)
   - [jotai](https://jotai.pmnd.rs/)
 - ui
-  - [material-ui](https://material-ui.com/)
+  - [mui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
   - [chakra-ui](https://chakra-ui.com/)
