@@ -17,7 +17,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   head: [['link', { rel: 'manifest', href: '/manifest.webmanifest' }]],
   themeConfig: {
     navbar: [
-      { text: '首页', link: '/' },
       { text: '学习路径', link: '/roadmap/' },
       { text: '环境配置', link: '/environment/' },
       { text: '开发', link: '/development/' },
@@ -56,7 +55,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         backgroundTransition: false,
       },
     ],
-    ['vuepress-plugin-seo2'],
     ['vuepress-plugin-sitemap2'],
   ],
 });
