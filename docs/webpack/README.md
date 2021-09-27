@@ -1,5 +1,11 @@
 # Webpack
 
+::: danger
+
+该部分不会持续维护。
+
+:::
+
 ## 说明
 
 - 形式：尽量口语化的笔记和示例。
@@ -10,7 +16,6 @@
 - 环境：macOS，zsh，[oh-my-zsh](https://ohmyz.sh/)，[node](https://nodejs.org/en/) v14，[vscode](https://code.visualstudio.com/) 和 [chrome](https://www.google.com/chrome/browser/index.html)。另外用 vscode 的 [live server 插件](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)或 [serve](https://github.com/vercel/serve#readme) 测试构建。
 - 约定：使用`${PROJECT_DIR}`表示项目根目录，一般认为`package.json`所处目录就是项目根目录。
 - 支持：支持现代浏览器和 IE 11。
-- 状态：目前处于完善中状态，可能会有遗漏、错误、不完美，但已经可以正常阅读。如果你发现了错误，请在评论里告诉我，谢谢。
 
 ## 为什么要使用构建工具
 

@@ -4,16 +4,15 @@ sidebar: false
 
 # 关于
 
-- 目前是一个半吊子全栈工程师
-- 想要成为 10x 程序员 + 全栈工程师 + UI 设计师 + 产品经理 + 项目经理 + 测试工程师 + 基础结构架构师 + 特定技术架构师 + 解决方案架构师
 - [wurui7@mail3.sysu.edu.cn](mailto:wurui7@mail3.sysu.edu.cn)
 - [wurui.sysu@gmail.com](mailto:wurui.sysu@gmail.com)
 - [Github](https://github.com/ModyQyW)
 - [Gitee](https://gitee.com/ModyQyW)
+- 打赏
 
 |平台|方式|
 |:-:|:-:|
-|Alipay|<img :src="$withBase('/images/about/alipay.jpeg')" width="256px" alt="Alipay">|
-|Wechat|<img :src="$withBase('/images/about/wechat.png')" width="256px" alt="Wechat">|
-|Meituan|<img :src="$withBase('/images/about/meituan1.jpeg')" width="128px" alt="美团外卖红包1">&emsp;<img :src="$withBase('/images/about/meituan2.jpg')" width="128px" alt="美团外卖红包2"><br>[Link](https://tb.v2b3.com/6miQa)|
-|Eleme|<img :src="$withBase('/images/about/eleme1.jpeg')" width="128px" alt="饿了么外卖红包1">&emsp;<img :src="$withBase('/images/about/eleme2.jpg')" width="128px" alt="饿了么外卖红包2"><br>[Link](https://tb.v2b3.com/6mxsJ)|
+|支付宝|<img src="./alipay.jpeg" style="width: 256px" alt="Alipay">|
+|微信|<img src="./wechat.png" style="width: 256px" alt="Wechat">|
+|美团|<img src="./meituan1.jpeg" style="width: 128px" alt="美团外卖红包1">&emsp;<img src="./meituan2.jpg" style="width: 128px" alt="美团外卖红包2"><br>[链接](https://tb.v2b3.com/6miQa)|
+|饿了么|<img src="./eleme1.jpeg" style="width: 128px" alt="饿了么外卖红包1">&emsp;<img src="./eleme2.jpg" style="width: 128px" alt="饿了么外卖红包2"><br>[链接](https://tb.v2b3.com/6mxsJ)|
