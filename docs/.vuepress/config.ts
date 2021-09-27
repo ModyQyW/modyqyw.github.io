@@ -30,7 +30,6 @@ export default defineUserConfig<DefaultThemeOptions>({
     repoLabel,
     sidebar: 'auto',
     sidebarDepth: 3,
-    docsBranch: 'origin',
   },
   markdown: {
     toc: {
