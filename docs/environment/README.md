@@ -17,7 +17,6 @@
 - BitWarden - 密码管理
 - Dark Reader - 暗黑模式
 - Gitako - 便捷查看 Github
-- IE Tab - 模拟 IE 行为
 - Lighthouse - 网页性能测试
 - React Developer Tools - react 浏览器调试工具
 - Sync Sofa - 同步看剧
@@ -496,6 +495,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
+- [Auto NPX](https://marketplace.visualstudio.com/items?itemName=antfu.auto-npx) - vscode 终端自动解析本地 node 命令
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误

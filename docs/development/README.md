@@ -514,7 +514,7 @@
   - [reseter.css](https://github.com/krishdevdb/reseter.css)
   - [sanitize.css](https://csstools.github.io/sanitize.css/)
   - [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
-  - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
+  - [modern-normalize](https://github.com/sindresorhus/modern-normalize) - 面向现代浏览器的 css 样式重置
 - [postcss](https://postcss.org/)
 - [less](http://lesscss.org/)
 - [sass/scss](https://sass-lang.com/)
