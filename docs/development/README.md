@@ -633,6 +633,7 @@
 - 状态管理
   - [vuex](https://vuex.vuejs.org/)
     - [vuex-orm](https://vuex-orm.org/)
+    - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
   - [pinia](https://pinia.esm.dev/)
   - [xstate](https://xstate.js.org/)
 - ui
