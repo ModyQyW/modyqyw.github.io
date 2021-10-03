@@ -571,6 +571,8 @@
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
   - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
   - [mirage.js](https://miragejs.com/)
+- [local-forage](https://github.com/localForage/localForage)
+- [unstorage](https://github.com/unjs/unstorage)
 - [math.js](https://mathjs.org/) - 数学库
 - [async-validator](https://github.com/yiminghe/async-validator) - 异步校验
 - [lazyload](https://github.com/verlok/vanilla-lazyload) - 懒加载
