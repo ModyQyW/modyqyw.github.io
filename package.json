@@ -23,7 +23,7 @@
     "@babel/core": "~7.15.5",
     "@babel/eslint-parser": "~7.15.7",
     "@commitlint/cli": "~13.2.0",
-    "@modyqyw/fabric": "~3.7.0",
+    "@modyqyw/fabric": "~3.8.0",
     "@snippetors/vuepress-plugin-code-copy": "~1.1.0",
     "@typescript-eslint/eslint-plugin": "~4.32.0",
     "@typescript-eslint/parser": "~4.32.0",
