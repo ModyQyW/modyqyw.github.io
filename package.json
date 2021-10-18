@@ -8,7 +8,7 @@
     "gitee:dev": "cross-env MODE=gitee vuepress dev docs",
     "github:build": "cross-env MODE=github vuepress build docs",
     "github:dev": "cross-env MODE=github vuepress dev docs",
-    "lint": "yarn run lint:eslint && yarn run lint:markdownlint",
+    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint",
     "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "prepare": "is-ci || husky install"
@@ -18,15 +18,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "~7.15.5",
-    "@babel/eslint-parser": "~7.15.7",
-    "@commitlint/cli": "~13.2.0",
-    "@modyqyw/fabric": "~3.8.0",
+    "@babel/core": "~7.15.8",
+    "@babel/eslint-parser": "~7.15.8",
+    "@commitlint/cli": "~13.2.1",
+    "@modyqyw/fabric": "~3.9.0",
     "@snippetors/vuepress-plugin-code-copy": "~1.1.0",
-    "@typescript-eslint/eslint-plugin": "~4.32.0",
-    "@typescript-eslint/parser": "~4.32.0",
+    "@typescript-eslint/eslint-plugin": "~5.0.0",
+    "@typescript-eslint/parser": "~5.0.0",
     "@vuepress/plugin-debug": "~2.0.0-beta.26",
     "@vuepress/plugin-pwa": "~2.0.0-beta.26",
     "@vuepress/plugin-pwa-popup": "~2.0.0-beta.26",
@@ -36,15 +35,11 @@
     "eslint": "~7.32.0",
     "husky": "~7.0.2",
     "is-ci": "~3.0.0",
-    "lint-staged": "~11.1.2",
-    "markdownlint-cli": "~0.28.1",
+    "lint-staged": "~11.2.3",
+    "markdownlint-cli": "~0.29.0",
     "prettier": "~2.4.1",
-    "typescript": "~4.4.3",
+    "typescript": "~4.4.4",
     "vuepress": "~2.0.0-beta.26",
     "vuepress-plugin-sitemap2": "~2.0.0-alpha.0"
-  },
-  "engines": {
-    "node": "^12.22.6 || ^14.17.6 || ^16.8.0",
-    "npm": "^6.14.15 || ^7.21.0"
   }
 }
