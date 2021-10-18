@@ -13,26 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 'latest'
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           # 选择要使用的 node 版本
           node-version: '16'
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+          cache: 'pnpm'
 
       # 如果缓存没有命中，安装依赖
       - name: Install Dependencies
-        run: yarn install
+        run: pnpm install
 
       # 运行 Gitee 构建脚本
       - name: Build Gitee VuePress Site
-        run: yarn gitee:build
+        run: pnpm run gitee:build
 
       # 部署到 Github Pages
       # 查看 workflow 的文档来获取更多信息
@@ -73,7 +78,7 @@ jobs:
 
       # 运行 Github 构建脚本
       - name: Build Github VuePress Site
-        run: yarn github:build
+        run: pnpm run github:build
 
       # 重新部署到 Github Pages
       # 查看 workflow 的文档来获取更多信息
