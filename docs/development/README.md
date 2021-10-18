@@ -261,7 +261,7 @@
   - [yarn](https://classic.yarnpkg.com/zh-Hans)
   - [pnpm](https://pnpm.js.org/)
 - [lerna](https://github.com/lerna/lerna) - monorepo
-- [nx](https://nx.dev/) - monorepo
+- [changesets](https://github.com/atlassian/changesets) - monorepo
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates) - 可以结合 `yarn upgrade-interactive` 使用
 
 ## 规范
