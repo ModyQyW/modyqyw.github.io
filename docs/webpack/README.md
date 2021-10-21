@@ -2,7 +2,7 @@
 
 ::: danger
 
-该部分不会持续维护。
+该部分不会持续维护。webpack 5 示例见开源项目 [webpack-boilerplate](https://github.com/taniarascia/webpack-boilerplate)。
 
 :::
 

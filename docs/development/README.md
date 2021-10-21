@@ -323,6 +323,7 @@
   - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [webpack 教程](https://www.jiangruitao.com/webpack/)
   - [一文吃透 Webpack 核心原理](https://xie.infoq.cn/article/ddca4caa394241447fa0aa3c0)
+  - [webpack5-boilerplate](https://github.com/taniarascia/webpack-boilerplate)
   - [webpack-merge](https://github.com/survivejs/webpack-merge)
   - [webpack-chain](https://github.com/neutrinojs/webpack-chain)
   - [webpack-nano](https://github.com/shellscape/webpack-nano)
@@ -877,7 +878,7 @@
     - [使用 React Hooks 声明 setInterval](https://overreacted.io/zh-hans/making-setinterval-declarative-with-react-hooks/)
   - [这可能是最通俗的 React Fiber（时间分片) 打开方式](https://juejin.im/post/5dadc6045188255a270a0f85)
   - [构建 react 组件库](https://zhuanlan.zhihu.com/p/196758730) - 大方向上适用于 vue
-  - [Hooks是否过誉了？前端应该跟着React走还是跟着JS、TS走？](https://www.zhihu.com/question/468249924/answer/1968728853)
+  - [Hooks 是否过誉了？前端应该跟着 React 走还是跟着 JS、TS 走？](https://www.zhihu.com/question/468249924/answer/1968728853)
 
 ## Virtual DOM
 
@@ -994,9 +995,10 @@
 - [秋风的笔记](https://qiufeng.blue/)
 - [前端入门到进阶图文教程](https://github.com/qianguyihao/Web)
 - [前端进阶之道](https://yuchengkai.cn/home/)
+- [all-of-frontend](https://github.com/KieSun/all-of-frontend)
 - [木易杨前端进阶](https://muyiy.cn/)
 - [前端工程化](https://github.com/fouber/blog)
-- [畅销书《深入浅出Vue.js》作者，在阿里淘系1年的收获成长](https://mp.weixin.qq.com/s/EF86vmJfZJ-hUReFHM8HDw)
+- [畅销书《深入浅出 Vue.js》作者，在阿里淘系 1 年的收获成长](https://mp.weixin.qq.com/s/EF86vmJfZJ-hUReFHM8HDw)
 - [我在阿里是怎么工作的——写在阿里入职一周年](https://segmentfault.com/a/1190000022602612)
 - [我在阿里是怎么工作的——写在阿里入职两周年](https://juejin.cn/post/6973483540906246152)
 - [前端负责人需要具有的能力](https://juejin.cn/post/6946210273061502990)

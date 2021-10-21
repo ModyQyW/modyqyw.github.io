@@ -230,13 +230,13 @@ brew install font-source-code-pro-for-powerline
 # 不同版本的应用
 brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
 
-# 阿里云盘
+# 阿里云盘，可替代百度网盘
 brew install --cask adrive
 # android studio，开发 Android 用
 brew install --cask android-studio # https://developer.android.com/studio/
 # another redis desktop manager，redis gui
 brew install --cask another-redis-desktop-manager # https://github.com/qishibo/AnotherRedisDesktopManager/
-# baidu netdisk，百度网盘，自建网盘参考 seafile 和 owncloud
+# baidu netdisk，百度网盘，自建网盘参考 seafile，owncloud 和 nextcloud
 brew install --cask baidunetdisk # https://pan.baidu.com/download
 # bitwarden，管理密码
 brew install --cask bitwarden # https://bitwarden.com/
@@ -426,6 +426,7 @@ alias qs='open -a QSpace\ Pro'
 ```
 
 - 一些建议的在线网页。
+
   - [DeepL](https://www.deepl.com/translator) - 翻译
   - [阿里云盘](https://www.aliyundrive.com/)
   - [爱思助手](https://www.i4.cn/) - ios 助手
@@ -743,7 +744,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     }
   }
 }
-
 ```
 
 ## hbuilderx
@@ -763,7 +763,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "node.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/node",
   "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/npm"
 }
-
 ```
 
 看起来数字天堂团队并没有完善的项目开发流程，导致某些时候 vue-cli 创建的项目依赖版本和 HBuilderX 的依赖版本不一致。
