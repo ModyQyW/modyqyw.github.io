@@ -1,5 +1,5 @@
-import { defineUserConfig } from 'vuepress';
-import type { DefaultThemeOptions } from 'vuepress';
+import { defineUserConfig } from 'vuepress-vite';
+import type { DefaultThemeOptions } from 'vuepress-vite';
 
 const mode = process.env.MODE || 'github';
 const hostname =
@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
   head: [['link', { rel: 'manifest', href: '/manifest.webmanifest' }]],
   themeConfig: {
+    hostname,
     navbar: [
       { text: '学习路径', link: '/roadmap/' },
       { text: '环境配置', link: '/environment/' },
