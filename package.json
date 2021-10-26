@@ -22,10 +22,10 @@
     "@babel/core": "~7.15.8",
     "@babel/eslint-parser": "~7.15.8",
     "@commitlint/cli": "~13.2.1",
-    "@modyqyw/fabric": "~3.9.0",
+    "@modyqyw/fabric": "~4.0.0-5",
     "@snippetors/vuepress-plugin-code-copy": "~1.1.0",
-    "@typescript-eslint/eslint-plugin": "~5.1.0",
-    "@typescript-eslint/parser": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "~5.2.0",
+    "@typescript-eslint/parser": "~5.2.0",
     "@vuepress/plugin-debug": "~2.0.0-beta.26",
     "@vuepress/plugin-pwa": "~2.0.0-beta.26",
     "@vuepress/plugin-pwa-popup": "~2.0.0-beta.26",
@@ -34,12 +34,12 @@
     "cross-env": "~7.0.3",
     "eslint": "~7.32.0",
     "husky": "~7.0.4",
-    "is-ci": "~3.0.0",
-    "lint-staged": "~11.2.3",
+    "is-ci": "~3.0.1",
+    "lint-staged": "~11.2.4",
     "markdownlint-cli": "~0.29.0",
     "prettier": "~2.4.1",
     "typescript": "~4.4.4",
     "vuepress": "~2.0.0-beta.26",
-    "vuepress-plugin-sitemap2": "~2.0.0-alpha.0"
+    "vuepress-plugin-sitemap2": "~2.0.0-alpha.7"
   }
 }
