@@ -14,7 +14,17 @@
     "sourceMap": false,
     "strict": true,
     "strictNullChecks": true,
-    "target": "ES2018"
+    "target": "ES2018",
+    "baseUrl": "."
   },
-  "include": ["docs"]
+  "include": [
+    "./**/.*.js",
+    "./**/*.js",
+    "./**/*.jsx",
+    "./**/.*.ts",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue"
+  ],
+  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
 }
