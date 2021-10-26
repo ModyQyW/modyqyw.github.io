@@ -17,9 +17,14 @@
 - [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
 - [代码整洁之道](https://weread.qq.com/web/reader/f3e322f0811e3913eg012ae9)
 - [架构整洁之道](https://weread.qq.com/web/reader/480322f072021a3248038c8)
-- [程序员修炼之道：通向务实的最高境界](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
+- [程序员修炼之道](https://weread.qq.com/web/reader/2cf32ec0811e3ac71g017571)
 - [重构](https://weread.qq.com/web/reader/2ed32e60811e3a304g014c02)
 - [代码精进之路](https://weread.qq.com/web/reader/81132f5071cc7f7a81151c9)
+- [敏捷软件开发](https://book.douban.com/subject/1140457/)
+- [持续交付](https://weread.qq.com/web/reader/44232e40717db787442af8a)
+- [领域驱动设计](https://weread.qq.com/web/reader/44f32bb071e1265344f0481)
+- [领域驱动设计精粹](https://weread.qq.com/web/reader/e963250072021a5ce9608a6)
+- [实现领域驱动设计](https://weread.qq.com/web/reader/f5032ce071fd5a64f50b0f6)
 
 ## 计算机基础
 
@@ -94,7 +99,6 @@
 
 ## 编程用字体
 
-- [Menlo](https://www.cufonfonts.com/font/menlo)
 - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
 - [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
 - [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
@@ -143,21 +147,6 @@
   - [postcss](https://postcss.org/)
   - [less](http://lesscss.org/)
   - [sass/scss](https://sass-lang.com/)
-  - [stylus](https://stylus-lang.com/)
-- 规范
-  - [中文技术文档写作规范](https://github.com/ruanyf/document-style-guide)
-  - [Vue 文档编写指南](https://v3.cn.vuejs.org/guide/contributing/writing-guide.html)
-  - [EditorConfig](https://editorconfig.org/)
-  - [prettier](https://prettier.io/)
-  - [markdownlint](https://github.com/DavidAnson/markdownlint)
-  - [lint-md](https://github.com/lint-md/lint-md)
-  - [eslint](https://eslint.org/)
-  - [stylelint](https://stylelint.io/)
-  - [commitlint](https://commitlint.js.org/)
-  - [commitizen](https://github.com/commitizen/cz-cli)
-  - [husky](https://github.com/typicode/husky)
-  - [lint-staged](https://github.com/okonet/lint-staged)
-  - [@modyqyw/fabric](https://github.com/MillCloud/fabric)
 - [typescript](https://www.typescriptlang.org/)
   - [入门教程](https://ts.xcatliu.com/basics)
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
@@ -194,7 +183,7 @@
 - [pagic](https://pagic.cn/)
 - [hugo](https://gohugo.io/)
 - [jekyll](https://jekyllrb.com/)
-- [slidev](https://cn.sli.dev/) - 演示文稿
+- [slidev](https://sli.dev/)
 
 ## 界面和交互设计
 
@@ -222,15 +211,14 @@
 - [Primer Design](https://primer.style/)
 - [Eva Design](https://eva.design/)
 - [Zan Design](https://design.youzan.com/)
+- [Semi Design](https://semi.design/)
 
 ### 字体
 
-- [70+ Best Free Fonts for Designers – Free for Commercial Use in 2021](https://www.websiteplanet.com/blog/best-free-fonts/)
-- [免费可商用字体指南](https://zhuanlan.zhihu.com/p/69175576)
-- [免费可商用中文字体合集（较新）](https://www.uisdc.com/2020-free-font)
+- [70+ Best Free Fonts for Designers](https://www.websiteplanet.com/blog/best-free-fonts/)
+- [免费可商用中文字体合集](https://www.uisdc.com/2020-free-font)
 - [100font](https://www.100font.com)
 - [猫啃网](https://www.maoken.com)
-- [找字体](https://www.zfont.cn)
 - [字魂](https://izihun.com)
 - [阿里巴巴普惠体](https://aifont.alicdn.com/AlibabaPuHuiTi/AlibabaPuHuiTiAll.zip)
 - [未来荧黑](https://github.com/welai/glow-sans/releases)
@@ -258,11 +246,10 @@
   - [nvm-windows](https://github.com/coreybutler/nvm-windows) - Windows 版本的 nvm，命令和配置有一些差异
   - [nvs](https://github.com/jasongin/nvs) - 管理 node 版本
 - [npm](https://github.com/npm/cli)
-  - [yarn](https://classic.yarnpkg.com/zh-Hans)
-  - [pnpm](https://pnpm.js.org/)
-- [lerna](https://github.com/lerna/lerna) - monorepo
-- [changesets](https://github.com/atlassian/changesets) - monorepo
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates) - 可以结合 `yarn upgrade-interactive` 使用
+- [yarn](https://yarnpkg.com/)
+- [pnpm](https://pnpm.js.org/)
+- [changesets](https://github.com/atlassian/changesets)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
 ## 规范
 
@@ -273,7 +260,6 @@
 - [naming-cheatsheet](https://github.com/kettanaito/naming-cheatsheet)
 - [prettier](https://prettier.io/) - 格式化
 - [markdownlint](https://github.com/DavidAnson/markdownlint) - markdown 格式化
-- [lint-md](https://github.com/lint-md/lint-md) - markdown 格式化
 - [eslint](https://eslint.org/) - 脚本文件校验 + 格式化
 - [stylelint](https://stylelint.io/) - 样式文件校验 + 格式化
 - [css bem](http://getbem.com/) - CSS 命名方法
@@ -358,7 +344,6 @@
     - [css-loader](https://github.com/webpack-contrib/css-loader)
     - [sass-loader](https://github.com/webpack-contrib/sass-loader)
     - [less-loader](https://github.com/webpack-contrib/less-loader)
-    - [stylus-loader](https://github.com/webpack-contrib/stylus-loader)
     - [postcss-loader](https://github.com/webpack-contrib/less-loader)
 - [vite](https://github.com/vitejs/vite)
   - [awesome-vite](https://github.com/vitejs/awesome-vite)
@@ -444,6 +429,8 @@
 - [release-it](https://github.com/release-it/release-it)
 - [semantic-release](https://semantic-release.gitbook.io/semantic-release/)
 - [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
+- [git-cliff](https://github.com/orhun/git-cliff)
+- [git-journal](https://github.com/saschagrunert/git-journal)
 - [vercel](https://vercel.com/)
 - [netlify](https://www.netlify.com/)
 - [Github Pages](https://pages.github.com/)
@@ -519,7 +506,6 @@
 - [postcss](https://postcss.org/)
 - [less](http://lesscss.org/)
 - [sass/scss](https://sass-lang.com/)
-- [stylus](https://stylus-lang.com/)
 - [jquery](https://jquery.com/)
   - [jquery-ui](https://jqueryui.com/)
   - [jquery-mobile](https://jquerymobile.com/)
