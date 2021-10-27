@@ -1,5 +1,5 @@
-import { defineUserConfig } from 'vuepress-vite';
-import type { DefaultThemeOptions } from 'vuepress-vite';
+import { defineUserConfig } from 'vuepress';
+import type { DefaultThemeOptions } from 'vuepress';
 
 const mode = process.env.MODE || 'github';
 const hostname =
@@ -56,6 +56,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         backgroundTransition: false,
       },
     ],
-    ['vuepress-plugin-sitemap2'],
+    // ['vuepress-plugin-sitemap2'],
   ],
 });
