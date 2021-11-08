@@ -46,6 +46,7 @@
   - [华中科技大学 - 计算机组成原理](https://www.icourse163.org/course/HUST-1003159001)
   - [深入浅出计算机组成原理](https://time.geekbang.org/column/intro/100026001)
   - [计算机组成与设计](https://book.douban.com/subject/26604008/)
+  - [计算机体系结构基础](https://github.com/foxsen/archbase)
 - 操作系统原理
   - [哈尔滨工业大学 - 操作系统](https://www.icourse163.org/course/HIT-1002531008)
   - [操作系统导论](https://weread.qq.com/web/reader/db8329d071cc7f70db8a479)
