@@ -88,6 +88,7 @@
   - [数据结构和算法必知必会的 50 个代码实现](https://github.com/wangzheng0822/algo)
   - [算法之道](https://book.douban.com/subject/4249686/)
   - [数据结构与算法](https://time.geekbang.org/column/intro/126)
+  - [The Algorithms](https://github.com/TheAlgorithms)
 - 正则表达式
   - [正则表达式入门](http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html)
 - 版本控制
