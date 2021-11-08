@@ -246,6 +246,7 @@ brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # v2ray 服务商 holytech https://store.holytech.tech/aff.php?aff=2849
 # v2ray 服务商 520ssr https://www.520ssr.co/auth/register?code=oiwx
 # v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
+# https://github.com/freefq/free
 brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
 # cocoapods
@@ -760,8 +761,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v14.17.6/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.0/bin/npm"
 }
 ```
 
