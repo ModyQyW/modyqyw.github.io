@@ -230,7 +230,7 @@ brew install font-source-code-pro-for-powerline
 # 不同版本的应用
 brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
 
-# 阿里云盘，可替代百度网盘
+# 阿里云盘，可替代百度网盘，自建网盘参考 seafile，owncloud 和 nextcloud
 brew install --cask adrive
 # android studio，开发 Android 用
 brew install --cask android-studio # https://developer.android.com/studio/
@@ -251,8 +251,6 @@ brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
 # cocoapods
 brew install cocoapods
-# dingtalk
-brew install --cask dingtalk
 # drawio，作图工具
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
@@ -272,12 +270,12 @@ brew install gradle
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
 brew install --cask itsycal # https://www.mowglii.com/itsycal/
+# keka，压缩工具
+brew install --cask keka # https://www.keka.io/
 # lightproxy，代理调试工具
 brew install --cask lightproxy
 # lx-music，洛雪音乐助手
 brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
-# maczip，压缩工具
-brew install --cask maczip # https://ezip.awehunt.com/
 # microsoft-edge，浏览器
 brew install --cask microsoft-edge # https://www.microsoft.com/edge
 # mini-program-studio，阿里系小程序开发者工具
@@ -322,12 +320,8 @@ brew install --cask snipaste # https://www.snipaste.com/
 brew install --cask sourcetree # https://www.sourcetreeapp.com/
 # subversion，代码版本管理
 brew install svn # https://subversion.apache.org/
-# tableplus，数据库管理
-brew install --cask tableplus # https://tableplus.com/
 # tencent-lemon，系统清理和状态工具
 brew install --cask tencent-lemon # https://lemon.qq.com/
-# tencent-meeting，会议工具
-brew install --cask tencent-meeting # https://meeting.tencent.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
@@ -337,12 +331,8 @@ brew install --cask utools # https://u.tools/index.html
 brew install watchman
 # wechat
 brew install --cask wechat # https://mac.weixin.qq.com/
-# wechat work
-brew install --cask wechatwork # https://work.weixin.qq.com/
 # wechatwebdevtools，微信小程序开发者工具
 brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
-# yuque，语雀，知识库工具
-brew install --cask yuque # https://www.yuque.com/
 # you-get，下载网络媒体资源
 brew install you-get # https://you-get.org/
 # youtube-dl，下载网络媒体资源
@@ -362,17 +352,15 @@ nvm install 12
 nvm install 14
 nvm install 16
 # set default
-nvm alias default 14
-# use lts (2021.08.24)
-nvm use 14
+nvm alias default 16
+# use lts (2021.11.09)
+nvm use 16
 # install global deps
 npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli # https://docs.nestjs.com/
 npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli # https://docs.taro.zone/
 npm i -g --registry=https://registry.npm.taobao.org @types/node
 npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app # https://umijs.org/
 npm i -g --registry=https://registry.npm.taobao.org @vue/cli@next # https://next.cli.vuejs.org/
-npm i -g --registry=https://registry.npm.taobao.org @vue/devtools@beta # https://devtools.vuejs.org/
-npm i -g --registry=https://registry.npm.taobao.org cgr # https://github.com/daysai/cgr
 npm i -g --registry=https://registry.npm.taobao.org cnpm # https://github.com/cnpm/cnpm
 npm i -g --registry=https://registry.npm.taobao.org create-alita # https://alitajs.com/
 npm i -g --registry=https://registry.npm.taobao.org create-next-app # https://nextjs.org/
@@ -380,10 +368,11 @@ npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app # https://nu
 npm i -g --registry=https://registry.npm.taobao.org create-vite # https://vitejs.dev/
 npm i -g --registry=https://registry.npm.taobao.org eslint # https://eslint.org/
 npm i -g --registry=https://registry.npm.taobao.org expo-cli # https://expo.dev/
+npm i -g --registry=https://registry.npm.taobao.org nodemon # https://nodemon.io/
 npm i -g --registry=https://registry.npm.taobao.org npm-check-updates # https://github.com/raineorshine/npm-check-updates
+npm i -g --registry=https://registry.npm.taobao.org nrm # https://github.com/Pana/nrm
 npm i -g --registry=https://registry.npm.taobao.org pnpm # https://pnpm.io/
-npm i -g --registry=https://registry.npm.taobao.org prettier@2.2.1 # https://prettier.io/
-npm i -g --registry=https://registry.npm.taobao.org react-devtools # https://github.com/facebook/react/tree/main/packages/react-devtools
+npm i -g --registry=https://registry.npm.taobao.org prettier # https://prettier.io/
 npm i -g --registry=https://registry.npm.taobao.org serve # https://github.com/vercel/serve
 npm i -g --registry=https://registry.npm.taobao.org sort-package-json # https://github.com/keithamus/sort-package-json
 npm i -g --registry=https://registry.npm.taobao.org stylelint # https://stylelint.io/
@@ -427,7 +416,6 @@ alias qs='open -a QSpace\ Pro'
 ```
 
 - 一些建议的在线网页。
-
   - [DeepL](https://www.deepl.com/translator) - 翻译
   - [阿里云盘](https://www.aliyundrive.com/)
   - [爱思助手](https://www.i4.cn/) - ios 助手
@@ -437,7 +425,6 @@ alias qs='open -a QSpace\ Pro'
   - [片库](https://www.pianku.li/)
   - [在线工具](https://tool.lu/)
   - [程序员工具](https://tool.p2hp.com/)
-
 - 一些可以考虑的应用。
   - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
   - [360zip](https://yasuo.360.cn/)
@@ -446,14 +433,16 @@ alias qs='open -a QSpace\ Pro'
   - Affinity Photo - 专业图片处理
   - [AIXcoder](https://aixcoder.com/) - 代码自动补全工具
   - [AltStore](https://altstore.io/) - 直接安装 ipa
+  - [Apifox](https://www.apifox.cn/) - 类 Postman 工具
   - [ApiPost](https://www.apipost.cn/) - 类 Postman 工具
   - Axure RP - 原型图
   - [BitComet](https://www.bitcomet.com/cn)
   - [Bob](https://github.com/ripperhe/Bob) - 翻译工具
-  - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具，效果不是很明显
+  - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具
   - Charles - 抓包
   - [Commander One](https://mac.eltima.com/file-manager.html)
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
+  - [DBeaver](https://dbeaver.io/) - 数据库工具
   - Fiddler - 抓包
   - [Figma](https://www.figma.com/) - 设计工具
   - [FileZilla](https://filezilla-project.org/) - ftp 连接
@@ -463,22 +452,30 @@ alias qs='open -a QSpace\ Pro'
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [keka](https://www.keka.io/) - 压缩工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
-  - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新，需要注意下正版问题
+  - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
+  - [MacZip](https://ezip.awehunt.com/) - 压缩工具
   - [Neat Download Manager](https://www.neatdownloadmanager.com/)
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
+  - [Table Plus](https://tableplus.com/) - 数据库工具
   - [TabNine](https://www.tabnine.com/) - 代码自动补全工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
   - [WPS](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
   - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
   - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
+  - [钉钉](https://www.dingtalk.com/)
+  - [飞书](https://www.feishu.cn/)
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
+  - [企业微信](https://work.weixin.qq.com/)
+  - [腾讯会议](https://meeting.tencent.com/)
+  - [腾讯文档](https://docs.qq.com/)
   - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
-  - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/)
+  - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
+  - [语雀](https://www.yuque.com/) - 知识库工具
 
 ## Windows 补充说明
 
@@ -584,10 +581,10 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "javascriptreact",
     "json",
     "jsonc",
+    "json5",
     "less",
     "markdown",
     "plaintext",
-    "sass",
     "scss",
     "text",
     "typescript",
@@ -605,7 +602,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "strings": true
   },
   // vscode 自带功能，控制是否渲染垂直标尺
-  "editor.rulers": [{ "column": 80 }],
+  "editor.rulers": [{ "column": 100 }],
   // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
   "editor.suggestSelection": "first",
   // vscode 自带功能，控制编辑区 1 个 tab 等于多少个空格，这里设置为 2 个
@@ -617,11 +614,13 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "json": "jsonc",
     "vue-html": "html"
   },
+  // 插件 ESLint 使用，指定需要 ESLint 校验的语言
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
   // 插件 ESLint 使用，指定是否一直显示状态，这是设置为是
   "eslint.alwaysShowStatus": true,
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
   "files.eol": "\n",
-  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加四种小程序，wepy，uni-app 的支持，另外把 json 文件视为 jsonc 文件
+  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加四种小程序，wepy，uni-app 的支持，另外把 json、json5 文件视为 jsonc 文件
   "files.associations": {
     "*.wxml": "html",
     "*.wxs": "javascript",
@@ -636,6 +635,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "*.jxss": "css",
     "*.wpy": "vue",
     "*.json": "jsonc",
+    "*.json5": "jsonc",
     "*.nvue": "vue",
     "*.ux": "vue"
   },
@@ -647,6 +647,10 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "less.validate": false,
   // vscode 自带功能，指定是否校验 scss，这里设置为否
   "scss.validate": false,
+  // 插件 stylelint 使用，指定需要提示的文件
+  "stylelint.snippet": ["css", "less", "scss", "vue"],
+  // 插件 stylelint 使用，指定需要校验的文件
+  "stylelint.validate": ["css", "less", "scss", "vue"],
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
@@ -682,8 +686,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
-  // 插件 WindiCSS IntelliSense 使用，保存时自动排序
-  "windicss.sortOnSave": true,
   // vscode 自带功能，指定颜色主题
   "workbench.colorTheme": "GitHub Dark Default",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
@@ -693,6 +695,9 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
   "workbench.iconTheme": "vscode-icons",
   // vscode 自带功能，控制编辑区在保存文件时的行为
+  "[html]": {
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -713,17 +718,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
       "source.fixAll.eslint": true
     }
   },
-  "[vue]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
-    }
-  },
-  "[markdown]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true
-    }
-  },
   "[css]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
@@ -734,15 +728,31 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
       "source.fixAll.stylelint": true
     }
   },
-  "[sass]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": true
-    }
-  },
   "[scss]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
     }
+  },
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": true
+    }
+  },
+  "[yaml]": {
+    "editor.formatOnSave": true
   }
 }
 ```
