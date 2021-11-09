@@ -345,7 +345,7 @@ brew install youtube-dl
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash # https://github.com/nvm-sh/nvm
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist # use default origin
-# export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # use taobao origin
+# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node # use taobao origin
 # install node
 nvm install 10
 nvm install 12
@@ -356,29 +356,29 @@ nvm alias default 16
 # use lts (2021.11.09)
 nvm use 16
 # install global deps
-npm i -g --registry=https://registry.npm.taobao.org @nestjs/cli # https://docs.nestjs.com/
-npm i -g --registry=https://registry.npm.taobao.org @tarojs/cli # https://docs.taro.zone/
-npm i -g --registry=https://registry.npm.taobao.org @types/node
-npm i -g --registry=https://registry.npm.taobao.org @umijs/create-umi-app # https://umijs.org/
-npm i -g --registry=https://registry.npm.taobao.org @vue/cli@next # https://next.cli.vuejs.org/
-npm i -g --registry=https://registry.npm.taobao.org cnpm # https://github.com/cnpm/cnpm
-npm i -g --registry=https://registry.npm.taobao.org create-alita # https://alitajs.com/
-npm i -g --registry=https://registry.npm.taobao.org create-next-app # https://nextjs.org/
-npm i -g --registry=https://registry.npm.taobao.org create-nuxt-app # https://nuxtjs.org/
-npm i -g --registry=https://registry.npm.taobao.org create-vite # https://vitejs.dev/
-npm i -g --registry=https://registry.npm.taobao.org eslint # https://eslint.org/
-npm i -g --registry=https://registry.npm.taobao.org expo-cli # https://expo.dev/
-npm i -g --registry=https://registry.npm.taobao.org nodemon # https://nodemon.io/
-npm i -g --registry=https://registry.npm.taobao.org npm-check-updates # https://github.com/raineorshine/npm-check-updates
-npm i -g --registry=https://registry.npm.taobao.org nrm # https://github.com/Pana/nrm
-npm i -g --registry=https://registry.npm.taobao.org pnpm # https://pnpm.io/
-npm i -g --registry=https://registry.npm.taobao.org prettier # https://prettier.io/
-npm i -g --registry=https://registry.npm.taobao.org serve # https://github.com/vercel/serve
-npm i -g --registry=https://registry.npm.taobao.org sort-package-json # https://github.com/keithamus/sort-package-json
-npm i -g --registry=https://registry.npm.taobao.org stylelint # https://stylelint.io/
-npm i -g --registry=https://registry.npm.taobao.org ts-node # https://typestrong.org/ts-node/
-npm i -g --registry=https://registry.npm.taobao.org typescript # https://www.typescriptlang.org/
-npm i -g --registry=https://registry.npm.taobao.org yarn # https://classic.yarnpkg.com/
+npm i -g --registry=https://registry.npmmirror.com @nestjs/cli # https://docs.nestjs.com/
+npm i -g --registry=https://registry.npmmirror.com @tarojs/cli # https://docs.taro.zone/
+npm i -g --registry=https://registry.npmmirror.com @types/node
+npm i -g --registry=https://registry.npmmirror.com @umijs/create-umi-app # https://umijs.org/
+npm i -g --registry=https://registry.npmmirror.com @vue/cli@next # https://next.cli.vuejs.org/
+npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
+npm i -g --registry=https://registry.npmmirror.com create-alita # https://alitajs.com/
+npm i -g --registry=https://registry.npmmirror.com create-next-app # https://nextjs.org/
+npm i -g --registry=https://registry.npmmirror.com create-nuxt-app # https://nuxtjs.org/
+npm i -g --registry=https://registry.npmmirror.com create-vite # https://vitejs.dev/
+npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
+npm i -g --registry=https://registry.npmmirror.com expo-cli # https://expo.dev/
+npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
+npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
+npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
+npm i -g --registry=https://registry.npmmirror.com pnpm # https://pnpm.io/
+npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.io/
+npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
+npm i -g --registry=https://registry.npmmirror.com sort-package-json # https://github.com/keithamus/sort-package-json
+npm i -g --registry=https://registry.npmmirror.com stylelint # https://stylelint.io/
+npm i -g --registry=https://registry.npmmirror.com ts-node # https://typestrong.org/ts-node/
+npm i -g --registry=https://registry.npmmirror.com typescript # https://www.typescriptlang.org/
+npm i -g --registry=https://registry.npmmirror.com yarn # https://classic.yarnpkg.com/
 ```
 
 - 补充一些东西在 `~/.zshrc` 末尾。
@@ -386,10 +386,9 @@ npm i -g --registry=https://registry.npm.taobao.org yarn # https://classic.yarnp
 ```shell
 # nvm
 export NVM_DIR="$HOME/.nvm"
-# export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node # use taobao mirror origin
+# export NVM_NODEJS_ORG_MIRROR=hhttps://npmmirror.com/mirrors/node # use taobao mirror origin
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk

@@ -77,7 +77,6 @@ module.exports = {
   // 指定 entry 为 ${PROJECT_DIR}/src/app.js
   entry: path.resolve('src', 'app.js'),
 };
-
 ```
 
 - `path` 是 node 的内置模块，我们可以在 `webpack` 的配置文件里使用 `require` 语句引用这个模块。
@@ -92,8 +91,8 @@ module.exports = {
 path.join('/a', '/b'); // string /a/b
 path.resolve('/a', '/b'); // string /b
 
-path.join("a", "b1", "..", "b2"); // string a/b2
-path.resolve("a", "b1", "..", "b2"); // string ${PROJECT_DIR}/a/b2
+path.join('a', 'b1', '..', 'b2'); // string a/b2
+path.resolve('a', 'b1', '..', 'b2'); // string ${PROJECT_DIR}/a/b2
 ```
 
 ### 输出 output
@@ -116,7 +115,6 @@ module.exports = {
     filename: 'bundle.js',
   },
 };
-
 ```
 
 如果指定 `output.filename = 'js/bundle.js'`，那么 `entry` 对应的输出文件是 `${PROJECT_DIR}/dist/js/bundle.js`。
@@ -149,7 +147,6 @@ module.exports = {
     ],
   },
 };
-
 ```
 
 - `module.rules` 数组里面的每一个元素都是处理模块的规则。
@@ -196,7 +193,6 @@ module.exports = {
     }),
   ],
 };
-
 ```
 
 ### 模式 mode
@@ -242,7 +238,6 @@ module.exports = {
     }),
   ],
 };
-
 ```
 
 ### module，chunk，bundle
@@ -284,15 +279,15 @@ npm init -y # npm 初始化
 根目录下新建一个 `.npmrc` 文件用来配置 `npm`，这里我们指定依赖源是国内的淘宝源，这样安装依赖的速度会更快一点。
 
 ```shell
-registry=https://registry.npm.taobao.org/
-chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
-electron_builder_binaries_mirror=https://npm.taobao.org/mirrors/electron-builder-binaries/
-electron_mirror=https://npm.taobao.org/mirrors/electron/
-fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
-node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector/
-phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
-sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
+registry=https://registry.npmmirror.com/
+chromedriver_cdnurl=https://npmmirror.com/mirrors/chromedriver/
+electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
+electron_mirror=https://npmmirror.com/mirrors/electron/
+fsevents_binary_host_mirror=http://npmmirror.com/mirrors/fsevents/
+node_inspector_cdnurl=https://npmmirror.com/mirrors/node-inspector/
+phantomjs_cdnurl=https://npmmirror.com/mirrors/phantomjs/
+sass_binary_site=https://npmmirror.com/mirrors/node-sass/
+selenium_cdnurl=https://npmmirror.com/mirrors/selenium/
 
 ```
 
@@ -311,7 +306,6 @@ npm i webpack-cli@~4.7.2 -D
 
 ```javascript
 document.write('Hello webpack!');
-
 ```
 
 创建一个 `webpack` 配置文件 `${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件的时候，`webpack` 会默认使用这个文件作为配置文件。
@@ -331,7 +325,6 @@ module.exports = {
     filename: 'bundle.js',
   },
 };
-
 ```
 
 我们再来修改 `package.json` 里面的 `scripts` 字段。这样，我们就能通过 `webpack-cli` 提供的命令调用 `webpack` 构建。
@@ -366,13 +359,12 @@ npm run build
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link href="favicon.ico" type="image/x-icon" />
     <title>demo01</title>
   </head>
   <body></body>
 </html>
-
 ```
 
 接着，我们在 `${PROJECT_DIR}/webpack.config.js` 里配置，让 `copy-webpack-plugin` 来处理网站图标，让 `html-webpack-plugin` 处理 `.html` 文件里的引用。
@@ -512,7 +504,7 @@ module.exports = {
 
 使用 `live server` 或 `serve` 来查看效果，可以看到 `Hello webpack!`。
 
-🎉恭喜，一个简单的 webpack demo 已经完成啦～
+🎉 恭喜，一个简单的 webpack demo 已经完成啦～
 
 参考源代码见 [modyqyw/webpack4-plus-demos/demo01](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo01)。
 
@@ -694,7 +686,6 @@ module.exports = {
 {
   "presets": ["@babel/preset-env"]
 }
-
 ```
 
 但 `@babel/preset-env` 默认的配置往往不能准确满足项目需求。一个比较常见的项目需求是支持特定的浏览器和特定的浏览器版本，比如支持 IE 11。
@@ -746,7 +737,6 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
     ]
   ]
 }
-
 ```
 
 - `useBuiltIns` 指定 `@babel/preset-env` 怎么处理 polyfill。
@@ -777,7 +767,6 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
   ],
   "plugins": ["@babel/plugin-transform-runtime"]
 }
-
 ```
 
 除了 es6+ 的语法，我们还想支持 `react` 语法。我们也可以用 `babel` 来解析 `react` 代码，只需要根据 `@babel/preset-react` 的文档配置就可以了。
@@ -801,7 +790,6 @@ polyfill 指的是能够提供一些浏览器本身没有的新特性的 js 代�
   },
   "plugins": ["@babel/plugin-transform-runtime"]
 }
-
 ```
 
 之后可以修改 `${PROJECT_DIR}/src/index.js`。
@@ -818,7 +806,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
 ```
 
 如果不想写 `.jsx` 等后缀，我们可以手动设置 `resolve.extensions`。
@@ -860,7 +847,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 之后构建并运行测试。如果一切正常，可以看到页面上会出现 `Hello Webpack!` 的文字，5 秒左右标签页的标题被修改成 `Hello World!`。ie 11 本身不支持 `Promise`，但在 ie 11 上测试也能有这样的效果，说明 `Promise` 已经被加入进去了。
@@ -902,7 +888,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
 ```
 
 然后创建 `${PROJECT_DIR}/src/index.css`，设置一些样式。
@@ -921,11 +906,12 @@ html,
 body {
   min-width: 1280px;
   min-height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 ```
 
 最后，我们修改一下 `webpack` 配置，增加对 `.css` 文件的解析。
@@ -1087,13 +1073,7 @@ module.exports = {
 ```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
-import {
-  LayoutRow as Row,
-  LayoutCol as Col,
-  LayoutGrid as Grid,
-  Button,
-  Icon,
-} from 'zent';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
 
 const App = () => {
   useEffect(() => {
@@ -1120,7 +1100,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 然后修改 `${PROJECT_DIR}/babel.config.json`，根据 `babel-plugin-zent` 说明加入按需加载的优化。
@@ -1217,7 +1196,6 @@ module.exports = {
 ```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {};
-
 ```
 
 空文件等同于没有配置 `postcss`。要让 `postcss` 处理 css，就需要使用插件。
@@ -1231,11 +1209,8 @@ module.exports = {};
 ```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-  ],
+  plugins: [require('autoprefixer')],
 };
-
 ```
 
 无需额外的配置，`autoprefixer` 会自动寻找目标浏览器的说明，也就是 `${PROJECT_DIR}/.browserslistrc`，并且根据目标浏览器自动地添加前缀。
@@ -1247,11 +1222,8 @@ module.exports = {
 ```javascript
 // ${PROJECT_DIR}/postcss.config.js
 module.exports = {
-  plugins: [
-    require('postcss-preset-env'),
-  ],
+  plugins: [require('postcss-preset-env')],
 };
-
 ```
 
 默认地，`postcss-preset-env` 会自动处理 stage 2+ 的新语法和新特性，你可以在它的官方网站中查看。
@@ -1271,7 +1243,6 @@ module.exports = {
       }),
   ],
 };
-
 ```
 
 如果你在加入 `cssnano` 前查看过生产环境下构建出来的 `.css` 文件，你会发现文件已经被压缩过了，只是注释没有被去掉。这是因为目前我们所有的 `.css` 文件都是由 `.scss` 编译而来，而在生产环境下，`sass` 依赖会给 `sass-loader` 指定 `outputStyle: 'compressed'`，这就导致了我们得到的 `.css` 文件已经被压缩过一次，但注释仍然还在。
@@ -1361,13 +1332,7 @@ module.exports = {
 ```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
-import {
-  LayoutRow as Row,
-  LayoutCol as Col,
-  LayoutGrid as Grid,
-  Button,
-  Icon,
-} from 'zent';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
 import iconWebpack from './assets/webpack.png';
 import './App.scss';
 
@@ -1397,7 +1362,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 ```scss
@@ -1409,7 +1373,6 @@ export default App;
   margin-right: 8px;
   vertical-align: middle;
 }
-
 ```
 
 放一个字体文件在 `${PROJECT_DIR}/src/assets` 里面（我这里放入了阿里普惠体的字体文件 `Alibaba-PuHuiTi-Regular.ttf`），然后在 `${PROJECT_DIR}/src/index.scss` 里引入、使用它。
@@ -1417,8 +1380,8 @@ export default App;
 ```scss
 // ${PROJECT_DIR}/src/index.scss
 @font-face {
-  font-family: "Alibaba PuHuiTi";
-  src: url("./assets/Alibaba-PuHuiTi-Regular.ttf") format("ttf");
+  font-family: 'Alibaba PuHuiTi';
+  src: url('./assets/Alibaba-PuHuiTi-Regular.ttf') format('ttf');
 }
 
 *,
@@ -1433,11 +1396,12 @@ html,
 body {
   min-width: 1280px;
   min-height: 100%;
-  font-family: "Alibaba PuHuiTi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Alibaba PuHuiTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 ```
 
 重新构建，可以看到 `${PROJECT_DIR}/dist` 目录下多出了一个文件夹 `fonts`，里面是一个字体文件，名字被修改成一串字符串（也就是文件指纹，后面会做进一步解释），而图片文件被硬编码进代码里。测试一切正常。
@@ -1493,7 +1457,6 @@ module.exports = {
   },
   devtool: 'eval-cheap-source-map',
 };
-
 ```
 
 - `devServer.hot = true` 表示开启 `webpack-dev-server` 的热更新。
@@ -1506,7 +1469,6 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
 };
-
 ```
 
 最后修改 `${PROJECT_DIR}/config/webpack.config.js`，让它在不同环境暴露不同的构建配置。
@@ -1523,7 +1485,6 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   module.exports = merge(baseConfig, prodConfig);
 }
-
 ```
 
 - 使用 `webpack-merge` 组合基本配置和特定环境配置。
@@ -1561,7 +1522,7 @@ if (process.env.NODE_ENV === 'development') {
 
 对于`react`，还可以加入`react-hot-loader`进一步提升使用体验。有兴趣可以查阅相关资料学习。
 
-🎉恭喜，你的第二个 webpack demo 已经完成啦～
+🎉 恭喜，你的第二个 webpack demo 已经完成啦～
 
 参考源代码见 [modyqyw/webpack4-plus-demos/demo02](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo02)。
 
@@ -1696,7 +1657,6 @@ module.exports = {
     ],
   },
 };
-
 ```
 
 完整的 `${PROJECT_DIR}/config/webpack.dev.js` 内容也放在下面。除去基本的配置外，还声明了 `mode`，`webpack-dev-server`，`devtool` 和 `loader`。在这里，我们使用了 `style-loader`。
@@ -1762,7 +1722,6 @@ module.exports = {
     ],
   },
 };
-
 ```
 
 我们再来修改 `${PROJECT_DIR}/config/webpack.prod.js`，不使用 `style-loader` 而是使用 `mini-css-extract-plugin`。
@@ -1970,7 +1929,6 @@ module.exports = {
     ],
   },
 };
-
 ```
 
 其他文件的处理也可以参考以上做法。
@@ -2094,7 +2052,7 @@ module.exports = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link href="favicon.ico" type="image/x-icon" />
     <title>demo03</title>
   </head>
@@ -2104,7 +2062,6 @@ module.exports = {
     <script src="https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"></script>
   </body>
 </html>
-
 ```
 
 - 公共 cdn 链接指定的依赖版本，要和项目内使用的依赖版本一致，不然可能导致开发和生产环境的表现不一致。
@@ -2329,7 +2286,6 @@ module.exports = (env, argv) => {
       return prodConfig;
   }
 };
-
 ```
 
 - 把 `module.exports` 改写成函数形式，第一个参数 `env` 是 `webpack` 命令里使用 `--env` 设置的值组成的对象，第二个参数是所有命令参数组成的对象。
@@ -2357,12 +2313,12 @@ module.exports = (env, argv) => {
 
 我们再来为已有的两种模式添加环境变量。一般对于环境变量有以下的约定，内容优先级依次递增。
 
-|文件|说明|
-|---|---|
-|`${PROJECT_DIR}/.env`|所有模式的环境变量|
-|`${PROJECT_DIR}/.env.local`|所有模式的环境变量，本地使用|
-|`${PROJECT_DIR}/.env.[mode]`|特定模式的环境变量|
-|`${PROJECT_DIR}/.env.[mode].local`|特定模式的环境变量，本地使用|
+| 文件                               | 说明                         |
+| ---------------------------------- | ---------------------------- |
+| `${PROJECT_DIR}/.env`              | 所有模式的环境变量           |
+| `${PROJECT_DIR}/.env.local`        | 所有模式的环境变量，本地使用 |
+| `${PROJECT_DIR}/.env.[mode]`       | 特定模式的环境变量           |
+| `${PROJECT_DIR}/.env.[mode].local` | 特定模式的环境变量，本地使用 |
 
 而环境变量文件只会包含环境变量的键值对，下面是我们将要使用的三个文件。
 
@@ -2429,7 +2385,6 @@ module.exports = (env, argv) => {
       return merge(baseConfig, prodConfig);
   }
 };
-
 ```
 
 - `dotenv` 是一个用于处理环境变量文件的库，使用 `dotenv.parse` 可以解析环境变量文件的内容，得到一个对象。
@@ -2502,7 +2457,6 @@ module.exports = (env, argv) => {
       });
   }
 };
-
 ```
 
 到这里，我们已经添加了一个新构建模式 `staging`，并且可以在 js 代码里使用 `process.env.NODE_ENV` 和 `process.env.APP_MODE` 来获取构建模式对应的环境变量了，甚至你可以在 `${PROJECT_DIR}/public/index.html` 里使用它们（[参考](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)）。
@@ -2531,7 +2485,6 @@ const config = require('@modyqyw/fabric/eslint/react');
 module.exports = {
   ...config,
 };
-
 ```
 
 无论是开发环境还是生产环境都需要使用到 `eslint` 在构建过程中校验，所以我们需要在公共的配置文件里加入 `eslint-webpack-plugin`。
@@ -2582,13 +2535,7 @@ module.exports = {
 ```javascript
 // ${PROJECT_DIR}/src/App.jsx
 import React, { useEffect } from 'react';
-import {
-  LayoutRow as Row,
-  LayoutCol as Col,
-  LayoutGrid as Grid,
-  Button,
-  Icon,
-} from 'zent';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
 import iconWebpack from './assets/webpack.png';
 import './App.scss';
 
@@ -2615,7 +2562,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 而 `stylelint` 是 css，less，sass，scss 等样式语言的校验工具，我们也可以在 `webpack` 中使用 `stylelint`。
@@ -2635,7 +2581,6 @@ const config = require('@modyqyw/fabric/stylelint/scss');
 module.exports = {
   ...config,
 };
-
 ```
 
 无论是开发环境还是生产环境都需要使用到 `stylelint`，所以我们需要在公共的配置文件里加入 `stylelint-webpack-plugin`。
@@ -2783,7 +2728,6 @@ npm i @babel/preset-typescript@~7.14.5 -D
   "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
-
 ```
 
 再创建定义文件 `${PROJECT_DIR}/index.d.ts`，内容如下所示。
@@ -2798,7 +2742,6 @@ declare module '*.webp';
 declare module '*.css';
 declare module '*.less';
 declare module '*.scss';
-
 ```
 
 然后，更新 `${PROJECT_DIR}/babel.config.json`，让 `babel` 能够正确处理 `.js`，`.jsx`，`.ts` 和 `.tsx` 文件。
@@ -2841,7 +2784,6 @@ declare module '*.scss';
     ]
   ]
 }
-
 ```
 
 我们还需要调整 `${PROJECT_DIR}/config/webpack.base.js` 里 `babel-loader` 的相关部分。
@@ -2884,13 +2826,7 @@ module.exports = {
 
 ```tsx
 import React, { useEffect } from 'react';
-import {
-  LayoutRow as Row,
-  LayoutCol as Col,
-  LayoutGrid as Grid,
-  Button,
-  Icon,
-} from 'zent';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
 import iconWebpack from './assets/webpack.png';
 import './App.scss';
 
@@ -2898,12 +2834,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       document.title = 'Hello World!';
-      console.log(
-        'process.env',
-        process.env,
-        process.env.NODE_ENV,
-        process.env.APP_MODE,
-      );
+      console.log('process.env', process.env, process.env.NODE_ENV, process.env.APP_MODE);
     }, 5000);
   }, []);
 
@@ -2923,7 +2854,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 `index.tsx`：
@@ -2940,10 +2870,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.querySelector('#root'),
 );
-
 ```
 
-🎉恭喜，你的第三个 webpack demo 已经完成啦～
+🎉 恭喜，你的第三个 webpack demo 已经完成啦～
 
 参考源代码见 [modyqyw/webpack4-plus-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
 
