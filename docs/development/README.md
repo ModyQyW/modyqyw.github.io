@@ -664,7 +664,6 @@
       - [thor-ui](https://www.thorui.cn/doc/)
       - [uview-ui](https://uviewui.com/)
     - 衍生
-      - [uni-ajax](https://uniajax.ponjs.com/)
       - [luch-request](https://www.quanzhan.co/luch-request/)
       - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api) - 支持在 uni-app 里使用 composition-api
     - 进阶
