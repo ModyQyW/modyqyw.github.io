@@ -285,6 +285,8 @@
 
 - [cross-env](https://github.com/kentcdodds/cross-env) - 设置跨平台环境变量
 - [rimraf](https://github.com/isaacs/rimraf) - 跨平台删除文件
+- [browserslist](https://github.com/browserslist/browserslist)
+  - [browserslist-rs](https://github.com/g-plane/browserslist-rs)
 - [babel](https://babeljs.io/)
   - [awesome-babel](https://github.com/babel/awesome-babel)
   - [babel 教程](https://www.jiangruitao.com/docs/babel/)
