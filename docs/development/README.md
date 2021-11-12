@@ -101,10 +101,7 @@
 
 ## 编程用字体
 
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro/releases)
-- [Jetbrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Sarasa Mono T SC](https://github.com/be5invis/Sarasa-Gothic/releases)
-- [Fira Code](https://github.com/tonsky/FiraCode/releases)
+- [css-tricks - coding fonts](https://coding-fonts.css-tricks.com)
 - [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
 
 ## 前端基础
@@ -309,6 +306,7 @@
   - [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
   - [cssnano](https://cssnano.co/)
   - [purgecss](https://purgecss.com/)
+  - [postcss-rs](https://github.com/justjavac/postcss-rs)
 - [webpack](https://webpack.js.org/)
   - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
   - [webpack 教程](https://www.jiangruitao.com/webpack/)
@@ -935,9 +933,12 @@
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
   - [apollo](https://www.apollographql.com/) - graphql 支持
   - [relay](https://relay.dev/) - graphql 支持
+- [apache](https://tomcat.apache.org/) - 服务器
+- [lighthttpd](https://www.lighttpd.net/) - 服务器
 - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
   - [open-resty](https://openresty.org/)
   - [nginx 在线配置](https://www.digitalocean.com/community/tools/nginx)
+- [OneInStack](https://oneinstack.com/) - 环境配置工具
 - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
 - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
 - [mysql](https://www.mysql.com/) - 关系型数据库
