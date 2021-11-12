@@ -112,6 +112,7 @@
 - [w3c](https://www.w3.org/)
 - [mdn](https://developer.mozilla.org/)
 - [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
+- [Digital Ocean Community](https://www.digitalocean.com/community)
 - [css-tricks](https://css-tricks.com/)
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 - 网页原生 - html + css + js
@@ -437,6 +438,8 @@
 - [netlify](https://www.netlify.com/)
 - [Github Pages](https://pages.github.com/)
 - [Gitee Pages](https://gitee.com/help/articles/4136)
+- [大公司里怎样开发和部署前端代码](https://www.zhihu.com/question/20790576/answer/32602154)
+- [2021 年当我们聊前端部署时，我们在聊什么](https://juejin.cn/post/7017710911443959839)
 
 ## 监控
 
@@ -631,11 +634,13 @@
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
   - [element-plus](https://element-plus.org/)
-  - [antdv](https://next.antdv.com/)
+  - [ant-design-vue](https://antdv.com/)
   - [naive-ui](https://www.naiveui.com/zh-CN/os-theme)
+  - [chakra-ui](https://vue.chakra-ui.com/)
   - [nut-ui](http://nutui.jd.com/)
   - [vant](https://youzan.github.io/vant/)
   - [zarm-vue](https://vue.zarm.design/)
+  - [varlet](https://varlet.gitee.io/varlet-ui/)
   - [更多](https://github.com/topics/vue)
 - cli
   - [nuxt](https://zh.nuxtjs.org/)
@@ -734,18 +739,17 @@
   - [mobx](https://mobx.js.org/)
   - [recoil](https://recoiljs.org/)
   - [xstate](https://xstate.js.org/)
-  - [jotai](https://jotai.pmnd.rs/)
 - ui
   - [mui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
   - [blueprint](https://blueprintjs.com/)
   - [chakra-ui](https://chakra-ui.com/)
-  - [antd](https://ant.design/)
+  - [ant-design](https://ant.design/)
   - [uiw](https://uiwjs.github.io/#/)
   - [rsuite](https://rsuitejs.com/)
   - [zarm](https://zarm.design/)
-  - [antd-mobile-next](https://next.mobile.ant.design/)
-    - [antd-mobile-plus](https://antd-plus.alitajs.com/)
+  - [antd-mobile](https://mobile.ant.design/)
+  - [react-vant](https://3lang3.github.io/react-vant/)
   - [更多](https://github.com/topics/react)
 - cli
   - [next](https://nextjs.org/docs/getting-started)
@@ -770,7 +774,6 @@
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
       - [xstate](https://xstate.js.org/)
-      - [jotai](https://jotai.pmnd.rs/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -798,12 +801,11 @@
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
       - [xstate](https://xstate.js.org/)
-      - [jotai](https://jotai.pmnd.rs/)
     - ui
-      - [taro-ui](https://taro-ui.jd.com/#/docs/introduction) - taro 2
-      - [taro-ink](https://docs.vdfor.top/taro-ink/) - taro 3
-      - [taroify](https://taroify.gitee.io/taroify.com/introduce/) - taro 3
-      - [color-ui](https://yinliangdream.github.io/mp-colorui-doc/home/introduce.html#taro)
+      - [taro-ui](https://taro-ui.jd.com/) - taro 2
+      - [taroify](https://taroify.gitee.io/taroify.com/) - taro 3
+      - [@antmjs/vantui](https://antm-js.gitee.io/vantui/)
+    - [taro-hooks](https://taro-hooks-innocces.vercel.app/)
   - remax
     - [文档](https://remaxjs.org/)
     - 路由
@@ -816,7 +818,6 @@
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
       - [xstate](https://xstate.js.org/)
-      - [jotai](https://jotai.pmnd.rs/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
@@ -841,6 +842,7 @@
   - [create-react-library](https://github.com/transitive-bullshit/create-react-library) - 用于创建可重用的 react 库的 cli
   - [swr](https://swr.vercel.app/) - 管理你的请求
   - [react-query](https://react-query.tanstack.com/) - 管理你的请求
+    - [react-query tutorials](https://tkdodo.eu/blog/practical-react-query)
   - [react-use](https://github.com/streamich/react-use) - hooks 包
   - [ahooks](https://ahooks.js.org/zh-CN) - hooks 包
   - [usehooks](https://usehooks.com/)
@@ -891,7 +893,7 @@
 
 - [commander](https://github.com/tj/commander.js)
 - [chalk](https://github.com/chalk/chalk)
-- [nanocolors](https://github.com/ai/nanocolors)
+- [picocolors](https://github.com/alexeyraspopov/picocolors)
 - [yargs](http://yargs.js.org/)
 - [yargs-parser](https://github.com/yargs/yargs-parser)
 - [inquirer](https://github.com/SBoudrias/Inquirer.js)
@@ -933,34 +935,34 @@
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
   - [apollo](https://www.apollographql.com/) - graphql 支持
   - [relay](https://relay.dev/) - graphql 支持
-- 增强
-  - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
-    - [open-resty](https://openresty.org/)
-    - [nginx 在线配置](https://www.digitalocean.com/community/tools/nginx)
-  - [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
-  - [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
-  - [mysql](https://www.mysql.com/) - 关系型数据库
-    - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
-    - [mysql workbench](https://www.mysql.com/products/workbench/)
-    - [sequelize](https://sequelize.org/)
-  - [mongodb](https://www.mongodb.com/) - 非关系型数据库
-    - [mongodb compass](https://www.mongodb.com/products/compass)
-    - [mongoose](https://mongoosejs.com/)
-    - [typegoose](https://typegoose.github.io/typegoose/)
-  - [typeorm](https://typeorm.io/)
-  - [prisma](https://www.prisma.io/)
-  - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
-    - [another redis desktop manager](https://github.com/qishibo/AnotherRedisDesktopManager)
-  - [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
-  - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
-  - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
-  - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
-  - [node-cron](https://github.com/node-cron/node-cron) - 任务调度
-  - [winston](https://github.com/winstonjs/winston) - 日志工具
-  - [nodemon](https://nodemon.io/) - 进程守护
-  - [pm2](https://pm2.keymetrics.io/) - 进程守护
-  - [forever](https://github.com/foreversd/forever) - 进程守护
-  - [你的登录接口真的安全吗](https://juejin.cn/post/6859214952704999438)
+- [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
+  - [open-resty](https://openresty.org/)
+  - [nginx 在线配置](https://www.digitalocean.com/community/tools/nginx)
+- [swagger](https://swagger.io/) - 团队的 api 文档和设计工具
+- [SQL 必知必会](https://weread.qq.com/web/reader/95232130715c01b39521460)
+- [mysql](https://www.mysql.com/) - 关系型数据库
+  - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
+  - [mysql workbench](https://www.mysql.com/products/workbench/)
+  - [sequelize](https://sequelize.org/)
+- [mongodb](https://www.mongodb.com/) - 非关系型数据库
+  - [mongodb compass](https://www.mongodb.com/products/compass)
+  - [mongoose](https://mongoosejs.com/)
+  - [typegoose](https://typegoose.github.io/typegoose/)
+- [typeorm](https://typeorm.io/)
+- [prisma](https://www.prisma.io/)
+- [redis](https://redis.io/) - 非关系型数据库，多用于缓存
+  - [another redis desktop manager](https://github.com/qishibo/AnotherRedisDesktopManager)
+- [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
+- [rabbitmq](https://www.rabbitmq.com/) - 消息队列
+- [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
+  - [教你用 docker 搞个网站](https://mp.weixin.qq.com/s/k6SUYpBvQSE8WZ0PeD4Slg)
+- [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
+- [node-cron](https://github.com/node-cron/node-cron) - 任务调度
+- [winston](https://github.com/winstonjs/winston) - 日志工具
+- [nodemon](https://nodemon.io/) - 进程守护
+- [pm2](https://pm2.keymetrics.io/) - 进程守护
+- [forever](https://github.com/foreversd/forever) - 进程守护
+- [你的登录接口真的安全吗](https://juejin.cn/post/6859214952704999438)
 
 ## 持续成长
 
