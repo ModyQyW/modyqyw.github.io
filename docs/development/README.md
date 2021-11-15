@@ -376,7 +376,9 @@
   - [vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker)
   - [vite-plugin-mkcert](https://github.com/liuweiGL/vite-plugin-mkcert)
   - [vite-plugin-compress](https://github.com/alloc/vite-plugin-compress)
+  - [vite-plugin-compression](https://github.com/anncwb/vite-plugin-compression)
   - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist)
+  - [vite-plugin-type-imports](https://github.com/wheatjs/vite-plugin-vue-type-imports)
 - [rollup](https://rollupjs.org/guide/zh/)
   - [awesome-rollup](https://github.com/rollup/awesome)
   - [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve)
@@ -390,6 +392,7 @@
   - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
   - [unplugin-icons](https://github.com/antfu/unplugin-icons)
   - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+  - [unplugin-swc](https://github.com/egoist/unplugin-swc)
 
 实际开发时，非常建议使用 CLI 初始化然后开发。当然，做一个自己的模板，又或者用 [yeoman](https://yeoman.io/) 或者 [oclif](https://oclif.io/) 做一个自己的脚手架，都是不错的选择，但要记得持续维护。
 
@@ -946,11 +949,13 @@
 - [mysql](https://www.mysql.com/) - 关系型数据库
   - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
   - [mysql workbench](https://www.mysql.com/products/workbench/)
-  - [sequelize](https://sequelize.org/)
+  - [mysql2](https://www.npmjs.com/package/mysql2)
 - [mongodb](https://www.mongodb.com/) - 非关系型数据库
   - [mongodb compass](https://www.mongodb.com/products/compass)
   - [mongoose](https://mongoosejs.com/)
   - [typegoose](https://typegoose.github.io/typegoose/)
+- [sequelize](https://sequelize.org/)
+- [knex](https://knexjs.org/)
 - [typeorm](https://typeorm.io/)
 - [prisma](https://www.prisma.io/)
 - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
