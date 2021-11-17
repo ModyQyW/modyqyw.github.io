@@ -569,6 +569,7 @@
 - [local-forage](https://github.com/localForage/localForage)
 - [unstorage](https://github.com/unjs/unstorage)
 - [math.js](https://mathjs.org/) - 数学库
+- [big.js](https://mikemcl.github.io/big.js/) - 算术库
 - [async-validator](https://github.com/yiminghe/async-validator) - 异步校验
 - [lazyload](https://github.com/verlok/vanilla-lazyload) - 懒加载
 - [echarts](https://www.echartsjs.com/zh/index.html) - 图表库
@@ -967,6 +968,7 @@
   - [教你用 docker 搞个网站](https://mp.weixin.qq.com/s/k6SUYpBvQSE8WZ0PeD4Slg)
 - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
 - [node-cron](https://github.com/node-cron/node-cron) - 任务调度
+- [bree](https://github.com/breejs/bree) - 任务调度
 - [winston](https://github.com/winstonjs/winston) - 日志工具
 - [nodemon](https://nodemon.io/) - 进程守护
 - [pm2](https://pm2.keymetrics.io/) - 进程守护
