@@ -40,6 +40,7 @@
   - [线性代数及其应用](https://book.douban.com/subject/1425950/)
 - 离散数学
   - [离散数学及其应用](https://book.douban.com/subject/34866266/)
+- [teach yourself computer science](https://teachyourselfcs.com/)
 - 计算机基础
   - [国防科技大学 - 大学计算机基础](https://www.icourse163.org/course/NUDT-1001614002)
 - 计算机组成原理
@@ -150,6 +151,7 @@
 - [typescript](https://www.typescriptlang.org/)
   - [入门教程](https://ts.xcatliu.com/basics)
   - [官方教程](https://www.typescriptlang.org/docs/home.html)
+  - [深入理解 typescript](https://weread.qq.com/web/reader/6393276071bc6e966392234)
   - [深入理解 typescript](https://jkchao.github.io/typescript-book-chinese/)
   - [从零开始配置 TypeScript 项目](https://juejin.im/post/6856410900577026061)
   - [Type Challenges](https://tsch.js.org/)
@@ -236,6 +238,20 @@
 - [fontawesome](https://fontawesome.com/)
 - [ant-design-icons](https://github.com/ant-design/ant-design-icons)
 - [icon-park](https://iconpark.bytedance.com/)
+- [noun project](https://thenounproject.com/)
+
+### 图片
+
+- [placekitten](https://placekitten.com/)
+- [lorem picsum](https://picsum.photos/)
+- [noun project](https://thenounproject.com/)
+- [pexels](https://www.pexels.com/)
+- [500px](https://500px.com/)
+- [unsplash](https://unsplash.com/)
+- [pinterest](https://www.pinterest.com/)
+- [pixabay](https://pixabay.com/)
+- [foter](https://foter.com/)
+- [ssyer](https://www.ssyer.com/)
 
 ## 代码管理
 
@@ -1027,6 +1043,7 @@
 
 - [程序员如何优雅地赚零花钱](https://howto-make-more-money-easychen.vercel.app/)
 - [一人公司方法论](https://github.com/easychen/one-person-businesses-methodology)
+- [如何从精益开发到精益副业](https://mp.weixin.qq.com/s/RCepcnE6Te9EbHKYJiWNYg)
 - [电鸭社区](https://eleduck.com/)
 
 ## 参考
