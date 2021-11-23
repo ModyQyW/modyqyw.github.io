@@ -532,7 +532,7 @@
 - [sass/scss](https://sass-lang.com/)
 - [jquery](https://jquery.com/)
   - [jquery-ui](https://jqueryui.com/)
-  - [jquery-mobile](https://jquerymobile.com/)
+- [fastcilck](https://github.com/ftlabs/fastclick)
 - [bootstrap](https://getbootstrap.com/)
   - [bootstrap-table](https://bootstrap-table.com/)
 - [tailwindcss](https://tailwindcss.com/)
@@ -546,6 +546,7 @@
 - [lodash](https://lodash.com/)
   - [xe-utils](https://x-extends.gitee.io/xe-utils/)
   - [futil-js](https://github.com/smartprocure/futil-js)
+- [ramda](https://ramdajs.com/)
 - [moment](https://momentjs.com/)
   - [dayjs](https://dayjs.gitee.io/zh-CN/)
   - [luxon](https://moment.github.io/luxon/)
@@ -615,6 +616,9 @@
 - [sprite.js](https://spritejs.org/) - 跨平台高性能图形系统，支持 canvas 和 webgl
 - [d3](https://d3js.org/) - 使用 svg，canvas 和 html，基于数据操作文档的库
 - [three.js](https://threejs.org/) - 便于使用的轻量的 3d 库，支持 webgl，canvas，svg，css
+- [fullpage](https://alvarotrigo.com/fullPage/) - 全屏滚动
+- [animate.css](https://animate.style/) - 动画
+- [sortable](https://github.com/SortableJS/Sortable) - 拖拽
 - [flux](https://facebook.github.io/flux/) - 状态管理
 - [redux](https://redux.js.org/) - 状态管理
 - [xstate](https://xstate.js.org/) - 状态管理
@@ -937,6 +941,7 @@
   - [json-rpc](https://www.jsonrpc.org/)
   - [restful api](https://restfulapi.net/)
   - [graphql](https://graphql.org/)
+- [public-apis](https://github.com/public-apis/public-apis)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [Node.js 入门教程](http://nodejs.cn/learn)
   - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
