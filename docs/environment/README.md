@@ -58,10 +58,9 @@ brew install --cask visual-studio-code
 brew install git
 ```
 
-- 切换默认的 `shell` 到 `zsh`（[终端和 shell 的区别](https://www.ihewro.com/archives/933/)）。
+- 切换默认的 `shell` 到 `zsh`（[终端和 shell 的区别](https://www.ihewro.com/archives/933/)）。切换好之后可能需要重启一下。
 
 ```shell
-chsh -s /bin/zsh
 sudo chsh -s /bin/zsh
 ```
 
@@ -74,7 +73,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 - 安装 `oh-my-zsh` 的插件 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 和 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。
 
 ```shell
-sudo chmod 777 ~/.oh-my-zsh
+sudo chown -R $USER:$USER ~/.oh-my-zsh
+# sudo chown -R 755 ~/.oh-my-zsh
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
@@ -221,14 +221,11 @@ source ~/.zshrc
 brew tap homebrew/cask-drivers # https://github.com/Homebrew/homebrew-cask-drivers
 # 字体
 brew tap homebrew/cask-fonts # https://github.com/Homebrew/homebrew-cask-fonts
-brew install font-fira-code # https://github.com/tonsky/FiraCode
-brew install font-jetbrains-mono # https://github.com/JetBrains/JetBrainsMono
-brew install font-roboto # https://github.com/googlefonts/roboto
-brew install font-roboto-mono
-brew install font-roboto-mono-for-powerline
-brew install font-sarasa-gothic # https://github.com/be5invis/Sarasa-Gothic
-brew install font-source-code-pro # https://github.com/adobe-fonts/source-code-pro
-brew install font-source-code-pro-for-powerline
+brew install --cask font-fira-code # https://github.com/tonsky/FiraCode
+brew install --cask font-jetbrains-mono # https://github.com/JetBrains/JetBrainsMono
+brew install --cask font-roboto # https://github.com/googlefonts/roboto
+brew install --cask font-roboto-mono
+brew install --cask font-source-code-pro # https://github.com/adobe-fonts/source-code-pro
 # 不同版本的应用
 brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
 
