@@ -423,6 +423,9 @@
 - [mocha](https://mochajs.org/)
 - [chai](https://www.chaijs.com/)
 - [sinon](https://sinonjs.org/)
+- [ava](https://github.com/avajs/ava)
+- [tape](https://github.com/substack/tape)
+- [uvu](https://github.com/lukeed/uvu)
 - [testing-library](https://testing-library.com/) - 组件测试
 - [cypress](https://docs.cypress.io/) - 端对端测试
 - [nightwatch](https://nightwatchjs.org/)
@@ -942,6 +945,7 @@
   - [restful api](https://restfulapi.net/)
   - [graphql](https://graphql.org/)
 - [public-apis](https://github.com/public-apis/public-apis)
+- [free-api](https://github.com/fangzesheng/free-api)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [Node.js 入门教程](http://nodejs.cn/learn)
   - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
