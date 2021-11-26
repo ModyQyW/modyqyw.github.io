@@ -629,6 +629,7 @@
 - [immutable.js](https://immutable-js.github.io/immutable-js/docs/) - 数据处理
 - [immer](https://immerjs.github.io/immer/) - 数据处理
 - [electron](https://www.electronjs.org/) - 桌面端应用
+  - [electron-util](https://github.com/sindresorhus/electron-util)
 - [neutralino](https://neutralino.js.org/) - 桌面端应用
 - [nw](https://nwjs.io/) - 桌面端应用
 - [tauri](https://tauri.studio/) - 桌面端应用
