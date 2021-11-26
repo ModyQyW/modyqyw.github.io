@@ -222,6 +222,8 @@ sudo vim /etc/ssl/certs/cloudflare.crt
 
 ![create cert 3](./create-cert-3.png)
 
+![create cert 4](./create-cert-4.png)
+
 在服务器上创建相应的证书文件，保存 Cloudflare 返回的数据。注意，不能存在空行。
 
 ```sh
@@ -250,7 +252,12 @@ sudo vim /etc/nginx/sites-available/bt.modyqyw.top
 server {
     listen 80;
     listen [::]:80;
+
+    access_log  /var/log/nginx/[网站域名].access.log;
+    error_log  /var/log/nginx/[网站域名].error.log debug; # debug 用于测试，后续测试没有错误后可以移除 debug
+
     server_name [网站域名];
+
     return 302 https://$server_name$request_uri;
 }
 
@@ -258,12 +265,15 @@ server {
 
     # SSL configuration
 
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
     ssl_certificate         /etc/ssl/certs/[网站域名].pem;
     ssl_certificate_key     /etc/ssl/private/[网站域名].pem;
     ssl_client_certificate /etc/ssl/certs/cloudflare.crt;
     ssl_verify_client on;
+
+    access_log  /var/log/nginx/[网站域名].access.log;
+    error_log  /var/log/nginx/[网站域名].error.log debug; # debug 用于测试，后续测试没有错误后可以移除
 
     server_name [网站域名];
 
@@ -292,6 +302,8 @@ sudo systemctl restart nginx
 ```
 
 最后添加 Cloudflare 解析，等待一小段时间后访问 `https://[网站域名]` 测试即可。
+
+如果有错误，可以检查对应的 `error.log`。如果没有错误，记得要去掉 `debug`，否则日志文件会非常大。
 
 ![dns 1](./dns-1.png)
 
