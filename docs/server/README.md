@@ -12,7 +12,7 @@
 
 另外，还需要配置 Github Pages。
 
-![github pages](./github-pages.png)
+![github-pages](./github-pages.png)
 
 HTTPS 可以在 Cloudflare 里直接启用。
 
@@ -21,6 +21,8 @@ HTTPS 可以在 Cloudflare 里直接启用。
 ## 自己的服务器使用子域名和 HTTPS
 
 双十一在 [腾讯云](https://cloud.tencent.com/act/cps/redirect?redirect=30206&cps_key=64b3890e1990670c5c6a30b97a4243e4) 买了轻量应用服务器，尝试自己配一下环境，为以后的全栈目标做准备。
+
+注意：内地服务器建站需备案，所以我还要把阿里云买的域名备案过来。卡了我两天，💩。不买内地服务器应该不用备案，推荐 Vultr 和搬瓦工。
 
 我使用了 [Debian](https://www.debian.org/)，可能会有人更倾向于使用 [CentOS](https://www.centos.org/) 或者 [Ubuntu](https://ubuntu.com/)，没有高低之分。建议优先挑选公司内较多使用的，其次挑选个人喜欢的。
 
@@ -65,19 +67,19 @@ sudo apt update
 配置 `ntp`，用于同步时间。
 
 ```sh
-sudo install ntp
+sudo apt install ntp
 ```
 
 配置 `curl`。
 
 ```sh
-sudo install curl
+sudo apt install curl
 ```
 
 配置 `git`。
 
 ```sh
-sudo install git
+sudo apt install git
 ```
 
 配置 `zsh`、`oh-my-zsh` 和 `nvm`。基本和 [环境配置](../environment/README.md#macos-intel) 里的描述一致，可能需要手动安装 `zsh` 并切换，看 `oh-my-zsh` 里的教程即可。
@@ -212,32 +214,19 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 sudo vim /etc/ssl/certs/cloudflare.crt
 ```
 
-然后到 Cloudflare 上申请服务器端证书，找到响应的页面点击 `创建证书` 即可。
+然后到 Cloudflare 上申请服务器端证书，找到相应的页面点击 `创建证书` 然后创建即可。
 
-![create cert](./create-cert.png)
+![create-cert](./create-cert.png)
 
-![create cert 1](./create-cert-1.png)
+![create-cert-1](./create-cert-1.png)
 
-![create cert 2](./create-cert-2.png)
-
-![create cert 3](./create-cert-3.png)
-
-![create cert 4](./create-cert-4.png)
+![create-cert-2](./create-cert-2.png)
 
 在服务器上创建相应的证书文件，保存 Cloudflare 返回的数据。注意，不能存在空行。
 
 ```sh
-sudo vim /etc/ssl/certs/common.pem # 保存证书部分的数据
-sudo vim /etc/ssl/private/common.pem # 保存私钥部分的数据
-```
-
-把证书链接到对应的域名。
-
-```sh
-sudo ln -s /etc/ssl/certs/common.pem /etc/ssl/certs/test.modyqyw.top.pem
-sudo ln -s /etc/ssl/private/common.pem /etc/ssl/private/test.modyqyw.top.pem
-sudo ln -s /etc/ssl/certs/common.pem /etc/ssl/certs/bt.modyqyw.top.pem
-sudo ln -s /etc/ssl/private/common.pem /etc/ssl/private/bt.modyqyw.top.pem
+sudo vim /etc/ssl/certs/cert.pem # 保存证书部分的数据
+sudo vim /etc/ssl/private/key.pem # 保存私钥部分的数据
 ```
 
 添加相应的域名配置。
@@ -265,10 +254,10 @@ server {
 
     # SSL configuration
 
-    listen 443 ssl;
-    listen [::]:443 ssl;
-    ssl_certificate         /etc/ssl/certs/[网站域名].pem;
-    ssl_certificate_key     /etc/ssl/private/[网站域名].pem;
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    ssl_certificate         /etc/ssl/certs/cert.pem;
+    ssl_certificate_key     /etc/ssl/private/key.pem;
     ssl_client_certificate /etc/ssl/certs/cloudflare.crt;
     ssl_verify_client on;
 
@@ -303,9 +292,9 @@ sudo systemctl restart nginx
 
 最后添加 Cloudflare 解析，等待一小段时间后访问 `https://[网站域名]` 测试即可。
 
-如果有错误，可以检查对应的 `error.log`。如果没有错误，记得要去掉 `debug`，否则日志文件会非常大。
+![dns-1](./dns-1.png)
 
-![dns 1](./dns-1.png)
+如果有错误，可以检查对应的 `error.log`。如果没有错误，记得要去掉 `debug`，否则日志文件会非常大。
 
 ## 宝塔面板
 
