@@ -11,6 +11,7 @@
 - [运维工程师](https://time.geekbang.org/learning/path-detail/9)
 - [架构师](https://time.geekbang.org/learning/path-detail/5)
 - [产品经理](https://time.geekbang.org/learning/path-detail/8)
+- [神秘](https://d.shikey.com/jike)
 
 ## 方糖气球
 
@@ -27,7 +28,3 @@
 ## 素燕
 
 - [前端小课](https://github.com/lefex/FE#readme)
-
-## 神秘
-
-- [神秘](https://d.shikey.com/jike)

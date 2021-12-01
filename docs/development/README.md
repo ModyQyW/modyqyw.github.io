@@ -965,6 +965,7 @@
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
   - [farrow](https://github.com/farrow-js/farrow)
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
+  - [remix](https://remix.run/) - 全栈框架
   - [apollo](https://www.apollographql.com/) - graphql 支持
   - [relay](https://relay.dev/) - graphql 支持
 - [apache](https://tomcat.apache.org/) - 服务器
@@ -1029,6 +1030,7 @@
 - [我在阿里是怎么工作的——写在阿里入职一周年](https://segmentfault.com/a/1190000022602612)
 - [我在阿里是怎么工作的——写在阿里入职两周年](https://juejin.cn/post/6973483540906246152)
 - [前端负责人需要具有的能力](https://juejin.cn/post/6946210273061502990)
+- [15+人团队的前端体系架构应该如何管理？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247507147&idx=2&sn=bf3f9939b7b3bb9fcaab22ea838d5556&chksm=f9526988ce25e09e80fa4a401cf1346b55be6f59f9a7f5cde17a336c3ce481ada4f7b08a8eaa&scene=27#wechat_redirect)
 - [你认为程序员从幼稚到成熟的过程是什么？ - 姚冬的回答 - 知乎](https://www.zhihu.com/question/411824337/answer/1470856059)
 - [尤雨溪：做技术哪有什么两全之策，都是取舍和平衡](https://mp.weixin.qq.com/s/_q_SnCbGyXrNnXA876tXbA)
 - [初创公司的前端团队如何突围](https://mp.weixin.qq.com/s/qO2AKK4p1-JXIDApVG08Bw)
@@ -1061,7 +1063,6 @@
 ## 参考
 
 - [sorrycc/awesome-f2e-libs](https://github.com/sorrycc/awesome-f2e-libs)
-- [15+人团队的前端体系架构应该如何管理？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247507147&idx=2&sn=bf3f9939b7b3bb9fcaab22ea838d5556&chksm=f9526988ce25e09e80fa4a401cf1346b55be6f59f9a7f5cde17a336c3ce481ada4f7b08a8eaa&scene=27#wechat_redirect)
 
 ## 致谢
 
