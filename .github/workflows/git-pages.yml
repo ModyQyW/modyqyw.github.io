@@ -1,12 +1,10 @@
 # https://vuepress.github.io/zh/guide/deployment.html#github-pages
-name: docs
+name: git-pages
 
 on:
-  # 每当 push 到 vuepress 分支时触发部署
+  # 每当 push 到 release 分支时触发部署
   push:
-    branches: [vuepress]
-  # 手动触发部署
-  workflow_dispatch:
+    branches: ['release']
 
 jobs:
   docs:
@@ -36,8 +34,8 @@ jobs:
         run: pnpm install
 
       # 运行 Gitee 构建脚本
-      - name: Build Gitee VuePress Site
-        run: pnpm run gitee:build
+      - name: Build Gitee Pages
+        run: pnpm run build:gitee
 
       # 部署到 Github Pages
       # 查看 workflow 的文档来获取更多信息
@@ -45,9 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          # 部署到 main 分支
-          target_branch: main
-          # 部署目录为 VuePress 的默认输出目录
+          target_branch: git-pages
           build_dir: docs/.vuepress/dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -73,12 +69,12 @@ jobs:
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           # 仓库
           gitee-repo: ModyQyW/ModyQyW
-          # 部署 main 分支
-          branch: main
+          # 部署 git-pages 分支
+          branch: git-pages
 
       # 运行 Github 构建脚本
-      - name: Build Github VuePress Site
-        run: pnpm run github:build
+      - name: Build Github Pages
+        run: pnpm run build:github
 
       # 重新部署到 Github Pages
       # 查看 workflow 的文档来获取更多信息
@@ -86,8 +82,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          # 部署到 main 分支
-          target_branch: main
+          # 部署到 git-pages 分支
+          target_branch: git-pages
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
         env:
