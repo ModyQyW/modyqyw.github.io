@@ -4,6 +4,8 @@
 
 安装系统可以考虑 [WinPE](https://www.wepe.com.cn/) 和 [Ventoy](https://www.ventoy.net/)。
 
+![just pirate it](./just-pirate-it.png)
+
 ## DNS
 
 - [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
@@ -354,19 +356,10 @@ nvm install 16
 nvm alias default 16
 # use lts (2021.11.09)
 nvm use 16
-# install global deps
-npm i -g --registry=https://registry.npmmirror.com @nestjs/cli # https://docs.nestjs.com/
-npm i -g --registry=https://registry.npmmirror.com @tarojs/cli # https://docs.taro.zone/
+# install global deps, --legacy-peer-deps is required if using npm@7 or above
 npm i -g --registry=https://registry.npmmirror.com @types/node
-npm i -g --registry=https://registry.npmmirror.com @umijs/create-umi-app # https://umijs.org/
-npm i -g --registry=https://registry.npmmirror.com @vue/cli@next # https://next.cli.vuejs.org/
 npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
-npm i -g --registry=https://registry.npmmirror.com create-alita # https://alitajs.com/
-npm i -g --registry=https://registry.npmmirror.com create-next-app # https://nextjs.org/
-npm i -g --registry=https://registry.npmmirror.com create-nuxt-app # https://nuxtjs.org/
-npm i -g --registry=https://registry.npmmirror.com create-vite # https://vitejs.dev/
 npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
-npm i -g --registry=https://registry.npmmirror.com expo-cli # https://expo.dev/
 npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
 npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
 npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
