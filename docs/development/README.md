@@ -71,6 +71,7 @@
   - 浏览器存储，如 cookies，localStorage，sessionStorage
   - 加解密算法，如 des，3des，dsa，rsa
   - xss，csrf 等
+  - 访问控制 access control
   - 内存安全策略 csp
   - owasp 安全风险
 - 多媒体技术基础
@@ -402,6 +403,7 @@
   - [rollup-plugin-typescript2](https://github.com/ezolenko/rollup-plugin-typescript2)
   - [rollup-plugin-terser](https://github.com/TrySound/rollup-plugin-terser)
   - [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts)
+  - [rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer)
 - [parcel-next](https://v2.parceljs.org/)
   - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel)
 - [unplugin](https://github.com/unjs/unplugin)
@@ -945,6 +947,7 @@
 - 接口规范
   - [json-rpc](https://www.jsonrpc.org/)
   - [restful api](https://restfulapi.net/)
+  - [openapi specification](https://swagger.io/resources/open-api/)
   - [graphql](https://graphql.org/)
 - [public-apis](https://github.com/public-apis/public-apis)
 - [free-api](https://github.com/fangzesheng/free-api)

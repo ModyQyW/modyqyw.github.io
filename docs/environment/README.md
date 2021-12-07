@@ -417,6 +417,7 @@ alias qs='open -a QSpace\ Pro'
   - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具
   - Charles - 抓包
   - [Commander One](https://mac.eltima.com/file-manager.html)
+  - [convertio](https://convertio.co/) - 在线格式转换
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
   - [DBeaver](https://dbeaver.io/) - 数据库工具
   - [DeepL](https://www.deepl.com/translator) - 翻译
@@ -426,7 +427,9 @@ alias qs='open -a QSpace\ Pro'
   - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
   - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
+  - [handbrake](https://handbrake.fr/) - 格式转换
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
+  - [hoppscotch](https://hoppscotch.io/) - 在线类 postman 工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
   - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
@@ -436,9 +439,12 @@ alias qs='open -a QSpace\ Pro'
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
+  - [squoosh](https://squoosh.app/) - 图片处理
   - [Table Plus](https://tableplus.com/) - 数据库工具
   - [TabNine](https://www.tabnine.com/) - 代码自动补全工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
+  - [tinypng](https://tinypng.com/) - 在线图片压缩
+  - [ToDesk](https://www.todesk.com/) - 远程桌面
   - [WPS](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
   - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
