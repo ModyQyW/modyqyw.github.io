@@ -824,6 +824,7 @@
     - [文档](https://taro-docs.jd.com/taro/docs/README.html)
     - 路由
       - [自带路由](https://taro-docs.jd.com/taro/docs/router/)
+      - [tarojs-router-next](https://github.com/lblblong/tarojs-router-next)
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate)
