@@ -660,7 +660,6 @@
     - [vuex-orm](https://vuex-orm.org/)
     - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
   - [pinia](https://pinia.esm.dev/)
-  - [xstate](https://xstate.js.org/)
 - ui
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
@@ -693,7 +692,6 @@
       - [vuex](https://vuex.vuejs.org/)
         - [vuex-orm](https://vuex-orm.org/)
       - [pinia](https://pinia.esm.dev/)
-      - [xstate](https://xstate.js.org/)
     - ui
       - [uni-ui](https://github.com/dcloudio/uni-ui)
       - [cl-uni](https://docs.cool-js.com/)
@@ -769,7 +767,6 @@
   - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
   - [mobx](https://mobx.js.org/)
   - [recoil](https://recoiljs.org/)
-  - [xstate](https://xstate.js.org/)
 - ui
   - [mui](https://material-ui.com/)
   - [zent](https://youzan.github.io/zent/)
@@ -804,7 +801,6 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
-      - [xstate](https://xstate.js.org/)
     - ui
       - [react-native-elements](https://react-native-elements.github.io/react-native-elements/docs/overview.html)
       - [react-native-ui-kitten](https://akveo.github.io/react-native-ui-kitten/)
@@ -832,7 +828,6 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
-      - [xstate](https://xstate.js.org/)
     - ui
       - [taro-ui](https://taro-ui.jd.com/) - taro 2
       - [taroify](https://taroify.gitee.io/taroify.com/) - taro 3
@@ -849,7 +844,6 @@
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
-      - [xstate](https://xstate.js.org/)
     - ui
       - [anna](https://annasearl.github.io/anna-remax-ui/#/)
   - rax
