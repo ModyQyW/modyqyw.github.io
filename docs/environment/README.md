@@ -223,11 +223,7 @@ source ~/.zshrc
 brew tap homebrew/cask-drivers # https://github.com/Homebrew/homebrew-cask-drivers
 # 字体
 brew tap homebrew/cask-fonts # https://github.com/Homebrew/homebrew-cask-fonts
-brew install --cask font-fira-code # https://github.com/tonsky/FiraCode
-brew install --cask font-jetbrains-mono # https://github.com/JetBrains/JetBrainsMono
-brew install --cask font-roboto # https://github.com/googlefonts/roboto
-brew install --cask font-roboto-mono
-brew install --cask font-source-code-pro # https://github.com/adobe-fonts/source-code-pro
+brew install --cask font-ubuntu-mono # https://design.ubuntu.com/font/
 # 不同版本的应用
 brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-versions
 
@@ -244,9 +240,9 @@ brew install --cask bitwarden # https://bitwarden.com/
 # cheatsheet，长按 Command 键显示当前应用的快捷键
 brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # clashx，v2ray 客户端
-# v2ray 服务商 holytech https://store.holytech.tech/aff.php?aff=2849
-# v2ray 服务商 520ssr https://www.520ssr.co/auth/register?code=oiwx
-# v2ray 服务商 iplc.vip https://portal.uuks.club/clientarea.php
+# holytech https://store.holytech.tech/aff.php?aff=2849
+# 520ssr https://www.520ssr.co/auth/register?code=oiwx
+# iplc.vip https://portal.uuks.club/clientarea.php
 # https://github.com/freefq/free
 brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
@@ -256,6 +252,8 @@ brew install cocoapods
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
 brew install --cask fliqlo # https://fliqlo.com/
+# flutter
+brew install --cask flutter
 # git，代码版本管理
 brew install git # https://git-scm.com/
 brew install git-lfs # https://git-lfs.github.com/
@@ -271,17 +269,15 @@ brew install gradle
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
 brew install --cask itsycal # https://www.mowglii.com/itsycal/
-# keka，压缩工具
+# keka，压缩解压缩工具
 brew install --cask keka # https://www.keka.io/
-# lightproxy，代理调试工具
-brew install --cask lightproxy
 # lx-music，洛雪音乐助手
 brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
 # microsoft-edge，浏览器
 brew install --cask microsoft-edge # https://www.microsoft.com/edge
 # mini-program-studio，阿里系小程序开发者工具
 brew install --cask mini-program-studio # https://opendocs.alipay.com/mini/ide
-# mongodb，流行的文档型数据库
+# mongodb，文档型数据库
 brew tap mongodb/brew # https://github.com/mongodb/homebrew-brew
 brew install mongodb-community
 brew install --cask mongodb-compass # mongodb official gui
@@ -290,15 +286,13 @@ brew services start mongodb/brew/mongodb-community # start when launched
 brew install --cask motrix # https://motrix.app/
 # mounty，重新挂载受写保护的 NTFS 卷
 brew install --cask mounty # https://mounty.app/
-# mysql，流行的关系型数据库
+# mysql，关系型数据库
 brew install mysql
 brew services start mysql # start when launched
 # mysqlworkbench，mysql gui
 brew install --cask mysqlworkbench # https://www.mysql.com/products/workbench/
 # obs，录屏工具
 brew install --cask obs # https://obsproject.com/
-# openemu
-brew install --cask openemu
 # openineditor-lite，在编辑器快速打开当前目录
 brew install --cask openineditor-lite # https://github.com/Ji4n1ng/OpenInTerminal
 # openinterminal-lite，在终端快速打开当前目录
@@ -315,6 +309,8 @@ brew install --cask qq # https://im.qq.com/macqq/
 brew install --cask rectangle # https://rectangleapp.com/
 # responsively，帮助响应式开发
 brew install --cask responsively # https://responsively.app/
+# rust
+brew install rust
 # snipaste，屏幕截图
 brew install --cask snipaste # https://www.snipaste.com/
 # sourcetree，git gui
@@ -343,19 +339,18 @@ brew install youtube-dl
 - 安装 `node` 相关。
 
 ```shell
-# nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash # https://github.com/nvm-sh/nvm
+# nvm https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# nvs https://github.com/jasongin/nvs
+# fnm https://github.com/Schniz/fnm
 export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist # use default origin
-# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node # use taobao origin
+# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node # use china mirror
 # install node
-nvm install 10
-nvm install 12
-nvm install 14
-nvm install 16
+nvm install --lts
 # set default
-nvm alias default 16
-# use lts (2021.11.09)
-nvm use 16
+nvm alias default node
+# use lts
+nvm use --lts
 # install global deps, --legacy-peer-deps is required if using npm@7 or above
 npm i -g --registry=https://registry.npmmirror.com @types/node
 npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
@@ -406,17 +401,7 @@ alias qs='open -a QSpace\ Pro'
 
 ```
 
-- 一些建议的在线网页。
-  - [DeepL](https://www.deepl.com/translator) - 翻译
-  - [阿里云盘](https://www.aliyundrive.com/)
-  - [爱思助手](https://www.i4.cn/) - ios 助手
-  - [城通网盘](https://www.ctfile.com/)
-  - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
-  - [稿定设计图片编辑器](https://www.uupoop.com/)
-  - [片库](https://www.pianku.li/)
-  - [在线工具](https://tool.lu/)
-  - [程序员工具](https://tool.p2hp.com/)
-- 一些可以考虑的应用。
+- 一些额外推荐的东西。
   - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
   - [360zip](https://yasuo.360.cn/)
   - Adobe After Effects - 专业视频处理
@@ -434,6 +419,7 @@ alias qs='open -a QSpace\ Pro'
   - [Commander One](https://mac.eltima.com/file-manager.html)
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
   - [DBeaver](https://dbeaver.io/) - 数据库工具
+  - [DeepL](https://www.deepl.com/translator) - 翻译
   - Fiddler - 抓包
   - [Figma](https://www.figma.com/) - 设计工具
   - [FileZilla](https://filezilla-project.org/) - ftp 连接
@@ -441,12 +427,13 @@ alias qs='open -a QSpace\ Pro'
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
   - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
-  - [keka](https://www.keka.io/) - 压缩工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
+  - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
   - [MacZip](https://ezip.awehunt.com/) - 压缩工具
-  - [Neat Download Manager](https://www.neatdownloadmanager.com/)
-  - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器，需付费
+  - [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载工具
+  - [OpenEmu](https://openemu.org/)
+  - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
   - [Table Plus](https://tableplus.com/) - 数据库工具
@@ -455,11 +442,17 @@ alias qs='open -a QSpace\ Pro'
   - [WPS](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
   - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
+  - [爱思助手](https://www.i4.cn/) - ios 助手
   - [彩虹工具箱](https://rainbowbyte.com/app/rainbowtoolbox.html) - 小工具箱
+  - [城通网盘](https://www.ctfile.com/)
+  - [程序员工具](https://tool.p2hp.com/)
+  - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
   - [钉钉](https://www.dingtalk.com/)
   - [飞书](https://www.feishu.cn/)
+  - [稿定设计图片编辑器](https://www.uupoop.com/)
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
+  - [片库](https://www.pianku.li/)
   - [企业微信](https://work.weixin.qq.com/)
   - [腾讯会议](https://meeting.tencent.com/)
   - [腾讯文档](https://docs.qq.com/)
@@ -467,6 +460,7 @@ alias qs='open -a QSpace\ Pro'
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
   - [语雀](https://www.yuque.com/) - 知识库工具
+  - [在线工具](https://tool.lu/)
 
 ## Windows 补充说明
 
@@ -495,7 +489,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [docs-yaml](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml)
 - [Doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor) - 安全和质量审核工具
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
-- [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - 在 js/ts 中支持 es7 语法下的 react，redux，graphql 和 rn
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
@@ -507,44 +500,37 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
-- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - es6+ 语法的 js 代码段
-- [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next) - 支持 typescript@next
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
-- [Midway Serverless 研发助手](https://marketplace.visualstudio.com/items?itemName=alibaba-nodejs.midway-vscode-plugin) - midway 支持
-- [NestJS Files](https://marketplace.visualstudio.com/items?itemName=AbhijoyBasak.nestjs-files) - 快速创建 nestjs 文件
+- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - 支持 mdx
+- [Midway Serverless 研发助手](https://marketplace.visualstudio.com/items?itemName=alibaba-nodejs.midway-vscode-plugin) - 支持 midway
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
-- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) - pylance 支持
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - python 支持
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - 支持 python
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native) - 针对 React Native 的调试和集成命令
 - [React Refactor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-refactor) - 帮助重构代码
 - [React Style Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-style-helper) - 在 JSX 中更快速地编写内联样式，并辅助开发 CSS、LESS、SASS 等样式文件
+- [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) - 支持 rust
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
-- [Time Master](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-time-master) - 通过自动跟踪编码活动从而度量编码效率
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
-- [Umi Pro](https://marketplace.visualstudio.com/items?itemName=DiamondYuan.umi-pro) - umi 支持
-- [uni-app-schemas](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper) - 校验 uni-app pages.json 和 manifest.json 格式
-- [uni-app-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-app-snippets) - uni-app 基本能力的代码片段，包括组件和 API
-- [uni-cloud-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-cloud-snippets) - uni-cloud 基本能力的代码片段，包括组件和 API
-- [uni-ui-snippets](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-ui-snippets) - uni-ui 组件代码片段
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - vue 2 + vue 3 支持
-- [Vscode Nestjs Snippets](https://marketplace.visualstudio.com/items?itemName=ashinzekene.nestjs) - nestjs 代码片段
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 windicss 和 tailwindcss 体验
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
+
+`uni-*` 可以考虑 [uni-helper](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper)。
 
 ### settings.json
 
@@ -677,7 +663,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "typescript.updateImportsOnFileMove.enabled": "always",
   // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
   "vscode-office.markdownType": "vditor",
-  // vscode 自带功能，指定颜色主题
+  // vscode 自带功能，指定默认主题
   "workbench.colorTheme": "GitHub Dark Default",
   // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
   "workbench.editorAssociations": {
@@ -762,8 +748,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.0/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.0/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.1/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.1/bin/npm"
 }
 ```
 
@@ -772,7 +758,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - 回退版本
 - 查看 HBuilderX -> plugins -> uniapp-cli 的依赖版本
 
-另外，他们也尝试做自己的生态，比如 `nvue` 和 `uni_modules`，这些都有着不少的坑。如果不是为了跨端，没有必要使用 `uni-app`。如果是为了跨端，也可以尝试优秀的 React 系框架，如 `taro`，`remax`，`rax`，`expo`。
+另外，他们也尝试做自己的生态，比如 `nvue` 和 `uni_modules`，这些都有着不少的坑。如果不是为了跨端，没有必要使用 `uni-app`。如果是为了跨端，也可以尝试优秀的 React 系框架，如 `taro`、`remax`、`rax`、`expo`，也可以考虑 [cordova](https://cordova.apache.org/)、[electron](https://www.electronjs.org/)、[ionic](https://ionicframework.com/)、[capacitor](https://capacitorjs.com/)、[native-script](https://nativescript.org/)、[flutter](https://flutter.dev/)。
 
 ## 参考
 

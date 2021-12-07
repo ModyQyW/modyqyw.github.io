@@ -13,6 +13,10 @@
 - [产品经理](https://time.geekbang.org/learning/path-detail/8)
 - [神秘](https://d.shikey.com/jike)
 
+## 大圣
+
+- [大圣](https://github.com/shengxinjing/it-roadmap)
+
 ## 方糖气球
 
 - [方糖气球](https://ftqq.com/fangtang-fullstack/)
