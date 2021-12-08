@@ -12,7 +12,7 @@
     "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "prepare": "is-ci || husky install",
-    "release": "git push origin main:release -f"
+    "release": "git push && git push origin main:release -f"
   },
   "config": {
     "commitizen": {
