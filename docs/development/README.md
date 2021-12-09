@@ -978,6 +978,8 @@
   - [MySQL 必知必会](https://weread.qq.com/web/reader/929321f0715c01b5929bd3f)
   - [mysql workbench](https://www.mysql.com/products/workbench/)
   - [mysql2](https://www.npmjs.com/package/mysql2)
+  - [mariadb](https://mariadb.org/)
+- [postgresql](https://www.postgresql.org/)
 - [mongodb](https://www.mongodb.com/) - 非关系型数据库
   - [mongodb compass](https://www.mongodb.com/products/compass)
   - [mongoose](https://mongoosejs.com/)
