@@ -413,6 +413,7 @@
   - [unplugin-icons](https://github.com/antfu/unplugin-icons)
   - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
   - [unplugin-swc](https://github.com/egoist/unplugin-swc)
+- [tsup](https://github.com/egoist/tsup)
 
 实际开发时，非常建议使用 CLI 初始化然后开发。当然，做一个自己的模板，又或者用 [yeoman](https://yeoman.io/) 或者 [oclif](https://oclif.io/) 做一个自己的脚手架，都是不错的选择，但要记得持续维护。
 
@@ -900,6 +901,8 @@
 
 - [snabbdom](https://github.com/snabbdom/snabbdom)
 - [cito.js](https://github.com/joelrich/citojs)
+- [jsdom](https://github.com/jsdom/jsdom)
+- [happydom](https://github.com/capricorn86/happy-dom)
 
 ## 面试
 
@@ -946,6 +949,7 @@
   - [graphql](https://graphql.org/)
 - [public-apis](https://github.com/public-apis/public-apis)
 - [free-api](https://github.com/fangzesheng/free-api)
+- [serverless glossary](https://serverlessfirst.com/serverless-glossary/)
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [Node.js 入门教程](http://nodejs.cn/learn)
   - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
@@ -966,7 +970,7 @@
   - [remix](https://remix.run/) - 全栈框架
   - [apollo](https://www.apollographql.com/) - graphql 支持
   - [relay](https://relay.dev/) - graphql 支持
-- [apache](https://tomcat.apache.org/) - 服务器
+- [tomcat](https://tomcat.apache.org/) - 服务器
 - [lighthttpd](https://www.lighttpd.net/) - 服务器
 - [nginx](https://www.nginx.com/) - 高性能的 web 和反向代理服务器
   - [open-resty](https://openresty.org/)
