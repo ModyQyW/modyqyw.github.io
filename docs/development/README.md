@@ -112,7 +112,8 @@
 - [w3c](https://www.w3.org/)
 - [mdn](https://developer.mozilla.org/)
 - [ibm developer](https://www.ibm.com/developerworks/cn/index.html)
-- [Digital Ocean Community](https://www.digitalocean.com/community)
+- [red hat topics](https://www.redhat.com/zh/topics)
+- [digital ocean community](https://www.digitalocean.com/community)
 - [css-tricks](https://css-tricks.com/)
 - [六个基本概念](https://www.zhihu.com/question/304757674/answer/546374749)
 - 网页原生 - html + css + js
