@@ -22,9 +22,9 @@ HTTPS 可以在 Cloudflare 里直接启用。
 
 双十一在 [腾讯云](https://cloud.tencent.com/act/cps/redirect?redirect=30206&cps_key=64b3890e1990670c5c6a30b97a4243e4) 买了轻量应用服务器，尝试自己配一下环境，为以后的全栈目标做准备。
 
-注意：内地服务器建站需备案，所以我还要把阿里云买的域名备案过来。卡了我两天，💩。不买内地服务器应该不用备案，推荐找一下国外服务器商。
+~~内地服务器建站需备案，不买内地服务器应该不用备案，推荐买中国香港、新加坡等非内地服务器。被这个卡了我两天，💩。最后退钱，去阿里云买新加坡服务器了。~~
 
-我使用了 [Debian](https://www.debian.org/)，可能会有人更倾向于使用 [CentOS](https://www.centos.org/) 或者 [Ubuntu](https://ubuntu.com/)，没有高低之分。建议优先挑选公司内较多使用的，其次挑选个人喜欢的。
+我使用了 [Ubuntu](https://ubuntu.com/)，可能会有人更倾向于使用 [CentOS](https://www.centos.org/) 或者 [Debian](https://www.debian.org/index.zh-cn.html)，没有高低之分。建议优先挑选公司内较多使用的，其次挑选个人喜欢的。
 
 ![server](./server.png)
 
