@@ -486,7 +486,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Auto NPX](https://marketplace.visualstudio.com/items?itemName=antfu.auto-npx) - vscode 终端自动解析本地 node 命令
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) - 匹配括号颜色
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
@@ -573,8 +572,12 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
+  // vscode 自带功能，控制编辑区成对括号着色
+  "editor.bracketPairColorization.enabled": true,
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // vscode 自带功能，控制编辑区成对括号指引线着色
+  "editor.guides.bracketPairs": "active",
   // vscode 自带功能，控制输入时是否自动弹出建议
   "editor.quickSuggestions": {
     "strings": true
