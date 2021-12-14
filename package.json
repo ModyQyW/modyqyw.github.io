@@ -3,9 +3,11 @@
   "license": "MIT",
   "author": "ModyQyW",
   "scripts": {
+    "build": "pnpm run build:github",
     "build:gitee": "cross-env MODE=gitee vuepress build docs",
     "build:github": "cross-env MODE=github vuepress build docs",
     "commit": "cz",
+    "dev": "pnpm run dev:github",
     "dev:gitee": "cross-env MODE=gitee vuepress dev docs",
     "dev:github": "cross-env MODE=github vuepress dev docs",
     "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint",
