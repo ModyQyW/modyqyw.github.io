@@ -562,6 +562,7 @@
   - [luxon](https://moment.github.io/luxon/)
   - [date-fns](https://date-fns.org/)
   - [js-joda](https://js-joda.github.io/js-joda/)
+- [@modyqyw/utils](https://github.com/ModyQyW/utils)
 - [history](https://github.com/ReactTraining/history)
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
 - [qs](https://www.npmjs.com/package/qs)
