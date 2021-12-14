@@ -263,9 +263,9 @@
   - [pro git](https://git-scm.com/book/en/v2)
 - [nvm](https://github.com/nvm-sh/nvm) - 管理 node 版本
   - [nvm-windows](https://github.com/coreybutler/nvm-windows) - Windows 版本的 nvm，命令和配置有一些差异
-  - [nvs](https://github.com/jasongin/nvs) - 管理 node 版本
-  - [fnm](https://github.com/Schniz/fnm) - 管理 node 版本
-  - [volta](https://volta.sh/) - 管理 node 版本
+  - [nvs](https://github.com/jasongin/nvs)
+  - [fnm](https://github.com/Schniz/fnm)
+  - [volta](https://volta.sh/)
 - [npm](https://github.com/npm/cli)
 - [yarn](https://yarnpkg.com/)
 - [pnpm](https://pnpm.js.org/)
