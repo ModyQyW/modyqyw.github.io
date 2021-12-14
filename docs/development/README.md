@@ -914,7 +914,7 @@
 - [前端面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet)
 - [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/)
 - [前端面经总结](http://interview.poetries.top/)
-- [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/)
+- [前端内参](https://coffe1891.gitbook.io/frontend-hard-mode-interview/) <span style="color: #fff;">poetry001</span>
 - [剑指前端 offer](https://febook.hzfe.org/)
 - [前端每日一题](https://lgwebdream.github.io/FE-Interview/)
 - [前端每日一题](https://github.com/Advanced-Frontend/Daily-Interview-Question)
@@ -1009,6 +1009,7 @@
 - [pm2](https://pm2.keymetrics.io/) - 进程守护
 - [forever](https://github.com/foreversd/forever) - 进程守护
 - [你的登录接口真的安全吗](https://juejin.cn/post/6859214952704999438)
+- [spider-flow](https://www.spiderflow.org/) - 爬虫平台
 
 ## 持续成长
 
