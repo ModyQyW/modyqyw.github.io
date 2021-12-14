@@ -2,8 +2,7 @@ import { defineUserConfig } from 'vuepress';
 import type { DefaultThemeOptions } from 'vuepress';
 
 const mode = process.env.MODE || 'github';
-const hostname =
-  mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
+const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
 const repo =
   mode === 'github'
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
@@ -14,7 +13,10 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
-  head: [['link', { rel: 'manifest', href: '/manifest.webmanifest' }]],
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['script', { src: 'https://cdn.tailwindcss.com' }],
+  ],
   themeConfig: {
     hostname,
     navbar: [
