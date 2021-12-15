@@ -572,6 +572,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
+  // vscode 自带功能，指定比较差异时的视图，这里设置为内联视图
+  "diffEditor.renderSideBySide": false,
   // vscode 自带功能，控制编辑区成对括号着色
   "editor.bracketPairColorization.enabled": true,
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
