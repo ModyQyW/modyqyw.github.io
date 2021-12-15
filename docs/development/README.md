@@ -958,6 +958,7 @@
   - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
   - [使用 Node.js 构建 JavaScript 应用程序](https://docs.microsoft.com/zh-cn/learn/paths/build-javascript-applications-nodejs/)
   - [node.js 技术栈](https://github.com/qufei1993/Nodejs-Roadmap)
+  - [Web 全栈技术指南](https://getfullstack.com/)
   - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
   - [express](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
