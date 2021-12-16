@@ -352,6 +352,7 @@ nvm alias default node
 # use lts
 nvm use --lts
 # install global deps, --legacy-peer-deps is required if using npm@7 or above
+npm uninstall -g corepack
 npm i -g --registry=https://registry.npmmirror.com @types/node
 npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
 npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/

@@ -607,6 +607,8 @@
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
   - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
   - [mirage.js](https://miragejs.com/)
+- [fastmock](https://www.fastmock.site/) - 在线接口 mock
+- [anymock](https://anymock.alipay.com/) - 在线接口 mock
 - [local-forage](https://github.com/localForage/localForage)
 - [unstorage](https://github.com/unjs/unstorage)
 - [math.js](https://mathjs.org/) - 数学库
@@ -1062,6 +1064,7 @@
 - [美团外卖美食知识图谱的迭代及应用](https://mp.weixin.qq.com/s/LgxxIEMaiaMtc0GIDXGG9g)
 - [外卖商品的标准化建设与应用](https://mp.weixin.qq.com/s/qxbU92Z_70Z9T-XQLFyt4w)
 - [外卖套餐搭配的探索和应用](https://mp.weixin.qq.com/s/F9ptjT4bjc85E5_MpyF4Xw)
+- [什么是堡垒机？为什么需要堡垒机？](https://juejin.cn/post/6925212420067557390)
 
 ## 自媒体
 
