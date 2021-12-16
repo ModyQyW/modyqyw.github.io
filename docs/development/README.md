@@ -271,6 +271,7 @@
 - [pnpm](https://pnpm.js.org/)
 - [changesets](https://github.com/atlassian/changesets)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
+- [renovate](https://github.com/renovatebot/renovate)
 
 ## 规范
 
