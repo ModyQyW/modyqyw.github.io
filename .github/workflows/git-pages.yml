@@ -2,9 +2,8 @@
 name: git-pages
 
 on:
-  # 每当 push 到 release 分支时触发部署
-  push:
-    branches: ['release']
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   git-pages:
