@@ -13,8 +13,7 @@
     "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint",
     "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
-    "prepare": "is-ci || husky install",
-    "release": "git push && git push origin main:release -f"
+    "prepare": "is-ci || husky install"
   },
   "config": {
     "commitizen": {
