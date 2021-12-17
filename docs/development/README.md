@@ -611,6 +611,7 @@
   - [mirage.js](https://miragejs.com/)
 - [fastmock](https://www.fastmock.site/) - 在线接口 mock
 - [anymock](https://anymock.alipay.com/) - 在线接口 mock
+- [msw](https://mswjs.io/) - mock
 - [local-forage](https://github.com/localForage/localForage)
 - [unstorage](https://github.com/unjs/unstorage)
 - [math.js](https://mathjs.org/) - 数学库
