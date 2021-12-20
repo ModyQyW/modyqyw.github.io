@@ -1,5 +1,5 @@
-import { defineUserConfig } from 'vuepress';
-import type { DefaultThemeOptions } from 'vuepress';
+import { defineUserConfig } from 'vuepress-vite';
+import type { DefaultThemeOptions } from 'vuepress-vite';
 
 const mode = process.env.MODE || 'github';
 const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
@@ -13,10 +13,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
-  head: [
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
-    ['script', { src: 'https://cdn.tailwindcss.com' }],
-  ],
+  head: [['link', { rel: 'manifest', href: '/manifest.webmanifest' }]],
   themeConfig: {
     hostname,
     navbar: [
@@ -52,12 +49,8 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
     ['@vuepress/plugin-debug'],
-    [
-      '@snippetors/vuepress-plugin-code-copy',
-      {
-        backgroundTransition: false,
-      },
-    ],
-    // ['vuepress-plugin-sitemap2'],
+    // ['vuepress-plugin-copy-code2'],
+    ['vuepress-plugin-seo2'],
+    ['vuepress-plugin-sitemap2'],
   ],
 });
