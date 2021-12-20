@@ -979,6 +979,7 @@
   - [Web 全栈技术指南](https://getfullstack.com/)
   - [web 全栈体系](https://hejialianghe.gitee.io/)
   - [node-best-practices](https://github.com/goldbergyoni/nodebestpractices)
+  - [understand-nodejs](https://theanarkh.github.io/understand-nodejs/)
   - [express](https://expressjs.com/) - 快速、开放、极简的 node.js 框架
     - [koa](https://koajs.com/) - node.js 框架，自由度高
     - [fastify](https://www.fastify.io/) - node.js 框架，快速、低开销
@@ -1006,6 +1007,7 @@
   - [mysql2](https://www.npmjs.com/package/mysql2)
   - [mariadb](https://mariadb.org/)
 - [postgresql](https://www.postgresql.org/)
+  - [node-postgres](https://github.com/brianc/node-postgres)
 - [mongodb](https://www.mongodb.com/) - 非关系型数据库
   - [mongodb compass](https://www.mongodb.com/products/compass)
   - [mongoose](https://mongoosejs.com/)
