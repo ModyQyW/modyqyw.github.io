@@ -412,6 +412,7 @@
   - [vite-plugin-compression](https://github.com/anncwb/vite-plugin-compression)
   - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist)
   - [vite-plugin-type-imports](https://github.com/wheatjs/vite-plugin-vue-type-imports)
+  - [vitest](https://github.com/vitest-dev/vitest)
 - [rollup](https://rollupjs.org/guide/zh/)
   - [awesome-rollup](https://github.com/rollup/awesome)
   - [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve)
@@ -562,6 +563,7 @@
   - [bootstrap-table](https://bootstrap-table.com/)
 - [tailwindcss](https://tailwindcss.com/)
   - [windicss](https://windicss.org/)
+  - [konsta](https://konstaui.com/)
   - [daisy-ui](https://daisyui.com/)
   - [bulma](https://bulma.io/documentation/)
   - [tachyons](https://tachyons.io/)
@@ -807,6 +809,7 @@
     - [after](https://github.com/jaredpalmer/after.js)
   - [umi](https://umijs.org/zh-CN) - 带微前端解决方案
   - [ice](https://ice.work/) - 带微前端解决方案
+  - [rakkas](https://github.com/rakkasjs/rakkasjs)
   - [create-react-app](https://create-react-app.dev/) - 无 ssr 相关说明
     - [react-app-rewired](https://github.com/timarney/react-app-rewired) - 不弹出地修改配置
     - [craco](https://github.com/gsoft-inc/craco) - 不弹出地修改配置
