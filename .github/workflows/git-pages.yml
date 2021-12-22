@@ -32,10 +32,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      # 清理临时文件和缓存
-      - name: Clear temp and cache
-        run: rm -rf ./docs/.vuepress/.temp ./docs/.vuepress/dist ./node_modules/.vite
-
       # 运行 Gitee 构建脚本
       - name: Build Gitee Pages
         run: pnpm run build:gitee
@@ -74,10 +70,6 @@ jobs:
           gitee-repo: ModyQyW/ModyQyW
           # 部署 git-pages 分支
           branch: git-pages
-
-      # 清理临时文件和缓存
-      - name: Clear temp and cache
-        run: rm -rf ./docs/.vuepress/.temp ./docs/.vuepress/dist ./node_modules/.vite
 
       # 运行 Github 构建脚本
       - name: Build Github Pages
