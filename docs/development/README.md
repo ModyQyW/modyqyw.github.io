@@ -448,6 +448,7 @@
 - [ava](https://github.com/avajs/ava)
 - [tape](https://github.com/substack/tape)
 - [uvu](https://github.com/lukeed/uvu)
+- [xv](https://github.com/typicode/xv)
 - [testing-library](https://testing-library.com/) - 组件测试
 - [cypress](https://docs.cypress.io/) - 端对端测试
 - [nightwatch](https://nightwatchjs.org/)
@@ -611,8 +612,9 @@
   - [retry-axios](https://github.com/JustinBeckwith/retry-axios)
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
   - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
-  - [mirage.js](https://miragejs.com/) - 生成数据，拦截 ajax 请求
 - [superagent](https://github.com/visionmedia/superagent) - 请求库
+- [mirage.js](https://miragejs.com/) - 接口 mock
+- [json-server](https://github.com/typicode/json-server)
 - [fastmock](https://www.fastmock.site/) - 在线接口 mock
 - [anymock](https://anymock.alipay.com/) - 在线接口 mock
 - [msw](https://mswjs.io/) - mock
