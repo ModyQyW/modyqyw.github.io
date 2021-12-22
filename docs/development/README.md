@@ -603,14 +603,16 @@
 - [format.js](https://formatjs.io/) - 国际化
 - [i18next](https://www.i18next.com/) - 国际化
 - [statuses](https://github.com/jshttp/statuses)
-- [axios](https://github.com/axios/axios) - 请求库，用到了 promise
+- [node-fetch](https://github.com/node-fetch/node-fetch) - 请求库
+- [ky](https://github.com/sindresorhus/ky) - 请求库
+- [axios](https://github.com/axios/axios) - 请求库
   - [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter) - 拦截请求
   - [axios-retry](https://github.com/softonic/axios-retry)
   - [retry-axios](https://github.com/JustinBeckwith/retry-axios)
-  - [superagent](https://github.com/visionmedia/superagent) - 请求库
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
   - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
-  - [mirage.js](https://miragejs.com/)
+  - [mirage.js](https://miragejs.com/) - 生成数据，拦截 ajax 请求
+- [superagent](https://github.com/visionmedia/superagent) - 请求库
 - [fastmock](https://www.fastmock.site/) - 在线接口 mock
 - [anymock](https://anymock.alipay.com/) - 在线接口 mock
 - [msw](https://mswjs.io/) - mock
@@ -974,6 +976,17 @@
 - [public-apis](https://github.com/public-apis/public-apis)
 - [free-api](https://github.com/fangzesheng/free-api)
 - [serverless glossary](https://serverlessfirst.com/serverless-glossary/)
+- [got](https://github.com/sindresorhus/got) - 请求库
+- [node-fetch](https://github.com/node-fetch/node-fetch) - 请求库
+- [ky](https://github.com/sindresorhus/ky) - 请求库
+- [axios](https://github.com/axios/axios) - 请求库
+  - [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter) - 拦截请求
+  - [axios-retry](https://github.com/softonic/axios-retry)
+  - [retry-axios](https://github.com/JustinBeckwith/retry-axios)
+  - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
+  - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
+  - [mirage.js](https://miragejs.com/) - 生成数据，拦截 ajax 请求
+- [superagent](https://github.com/visionmedia/superagent) - 请求库
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
   - [Node.js 入门教程](http://nodejs.cn/learn)
   - [深入浅出 Node.js](https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc)
