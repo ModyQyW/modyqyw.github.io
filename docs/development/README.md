@@ -1034,6 +1034,7 @@
 - [knex](https://knexjs.org/)
 - [typeorm](https://typeorm.io/)
 - [prisma](https://www.prisma.io/)
+- [flyway](https://flywaydb.org/) - 数据库迁移
 - [redis](https://redis.io/) - 非关系型数据库，多用于缓存
   - [another redis desktop manager](https://github.com/qishibo/AnotherRedisDesktopManager)
 - [memcached](https://www.memcached.org/) - 非关系型数据库，多用于缓存
