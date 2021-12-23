@@ -13,7 +13,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
-  head: [['link', { rel: 'manifest', href: '/manifest.webmanifest' }]],
+  head: [['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: "use-credentials" }]],
   themeConfig: {
     hostname,
     navbar: [
