@@ -100,6 +100,7 @@
     - [Pro Git](https://git-scm.com/book/zh/v2)
 - 设计模式
   - [22 种设计模式](https://refactoringguru.cn/design-patterns)
+  - [patterns](https://www.patterns.dev/)
 - [为什么这么设计系列文章](https://draven.co/whys-the-design/)
 
 ## 编程用字体
@@ -192,16 +193,6 @@
 
 ## 界面和交互设计
 
-### 资料
-
-- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
-- [Web 界面设计](https://book.douban.com/subject/3821157/)
-- [界面设计模式](https://book.douban.com/subject/25716088/)
-- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
-- [设计心理学](https://book.douban.com/subject/26742341/)
-- [Web 表单设计](https://book.douban.com/subject/4886100/)
-- [图标设计类型和风格总结](https://www.uisdc.com/icon-design-style)
-
 ### 体系
 
 - [Fiori Design](https://experience.sap.com/fiori-design-web/)
@@ -255,6 +246,38 @@
 - [pixabay](https://pixabay.com/)
 - [foter](https://foter.com/)
 - [ssyer](https://www.ssyer.com/)
+
+### 工具
+
+- [Axure RP](https://www.axure.com/) - 交互原型设计软件
+- [Sketch](https://www.sketch.com/) - 矢量设计工具
+- [Figma](https://www.figma.com/) - 协同界面设计工具
+
+### 资料
+
+- [About Face 4: 交互设计精髓](https://book.douban.com/subject/26642302/)
+- [Web 界面设计](https://book.douban.com/subject/3821157/)
+- [界面设计模式](https://book.douban.com/subject/25716088/)
+- [写给大家看的设计书](https://book.douban.com/subject/3323633/)
+- [设计心理学](https://book.douban.com/subject/26742341/)
+- [Web 表单设计](https://book.douban.com/subject/4886100/)
+- [图标设计类型和风格总结](https://www.uisdc.com/icon-design-style)
+
+## 项目组协同
+
+开发者和非开发者之间的协同。
+
+- [墨刀](https://modao.cc/) - 在线原型设计和远程协作平台
+- [xiaopiu](https://www.xiaopiu.com/) - 产品原型设计工具与团队实时协作平台
+- [蓝湖](https://lanhuapp.com/) - 产品设计协作平台
+- [Storybook](https://storybook.js.org/) - 组织、构建 UI 组建
+- [Draw.io](https://app.diagrams.net/) - 思维导图，功能结构图等相关图例
+- [MS Office](https://www.office.com/) - 产品需求文档等相关文档
+- [WPS Office](https://www.wps.cn/) - 产品需求文档等相关文档
+- [腾讯文档](https://docs.qq.com/)
+- [飞书文档](https://www.feishu.cn/product/docs)
+- [石墨文档](https://shimo.im/)
+- [金山文档](https://www.kdocs.cn/)
 
 ## 代码管理
 
@@ -497,45 +520,34 @@
 
 - [secguide](https://github.com/Tencent/secguide) - 面向开发人员梳理的代码安全指南
 
-## 敏捷开发和 DevOps
+## 自我管理
 
-- [Axure RP](https://www.axure.com/) - 交互原型设计软件
-- [墨刀](https://modao.cc/) - 在线原型设计和远程协作平台
-- [xiaopiu](https://www.xiaopiu.com/) - 产品原型设计工具与团队实时协作平台
-- [Sketch](https://www.sketch.com/) - 矢量设计工具
-- [Figma](https://www.figma.com/) - 协同界面设计工具
-- [蓝湖](https://lanhuapp.com/) - 产品设计协作平台
-- [Draw.io](https://app.diagrams.net/) - 思维导图，功能结构图等相关图例
-- [MS Office](https://www.office.com/) - 产品需求文档等相关文档
-- [WPS Office](https://www.wps.cn/) - 产品需求文档等相关文档
-- [Storybook](https://storybook.js.org/) - 组织、构建 UI 组建
-- [腾讯文档](https://docs.qq.com/)
-- [飞书文档](https://www.feishu.cn/product/docs)
-- [石墨文档](https://shimo.im/)
-- [金山文档](https://www.kdocs.cn/)
-- [Airtable](https://airtable.com/)
-- [Notion](https://www.notion.so/)
-- [Microsoft Azure DevOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
-- [AWS DevOps](https://aws.amazon.com/cn/devops/what-is-devops/)
-- [阿里云 DevOps](https://develop.aliyun.com/devops)
-- [Teambition](https://www.teambition.com/)
-- [TAPD](https://www.tapd.cn/)
-- [Worktile](https://worktile.com/)
-- [Trello](https://trello.com/home)
-- [OmniPlan](https://www.omnigroup.com/omniplan)
 - [滴答清单](https://dida365.com/home)
 - [Todoist](https://todoist.com/zh-CN)
 - [Microsoft To Do](https://todo.microsoft.com/)
 - [OmniFocus](https://www.omnigroup.com/omnifocus)
 - [MyLifeOrganized](https://www.mylifeorganized.net/)
 - [Taskade](https://www.taskade.com/)
-- [Tita](https://www.tita.com/)
+- [Airtable](https://airtable.com/)
+- [Notion](https://www.notion.so/)
+- [appflowy](https://www.appflowy.io/)
+
+## 敏捷开发和 DevOps
+
+开发者和开发者之间的协同。务必学习 [Ledge](https://devops.phodal.com/) 和 [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/devops)。
+
+- [Trello](https://trello.com/home)
+- [OmniPlan](https://www.omnigroup.com/omniplan)
+- [Worktile](https://worktile.com/)
+- [TAPD](https://www.tapd.cn/)
 - [明道云](https://www.mingdao.com/home)
-- [zadig](https://gitee.com/koderover/zadig)
-
-关于 DevOps 的实践还可以参考 [Ledge](https://devops.phodal.com/) 和 [阿里巴巴 DevOps 实践手册](https://developer.aliyun.com/topic/download?id=205)。
-
-建议先了解 [时间管理方法论](https://help.dida365.com/tasks) 并结合实际工具应用。
+- [aws devops](https://aws.amazon.com/cn/devops/what-is-devops/)
+- [Teambition](https://www.teambition.com/)
+- [gitlab](https://about.gitlab.com/)
+- [github](https://github.com/)
+- [阿里云云效](https://www.aliyun.com/product/yunxiao)
+- [coding](https://coding.net/)
+- [azure devOps](https://azure.microsoft.com/zh-cn/overview/what-is-devops/)
 
 ## 微服务
 
