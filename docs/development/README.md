@@ -586,6 +586,8 @@
 - [lodash](https://lodash.com/)
   - [xe-utils](https://x-extends.gitee.io/xe-utils/)
   - [futil-js](https://github.com/smartprocure/futil-js)
+  - [fp-ts](https://gcanti.github.io/fp-ts/)
+  - [remeda](https://remedajs.com/)
 - [ramda](https://ramdajs.com/)
 - [moment](https://momentjs.com/)
   - [dayjs](https://dayjs.gitee.io/zh-CN/)
