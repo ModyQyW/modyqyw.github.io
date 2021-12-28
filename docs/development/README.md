@@ -735,13 +735,13 @@
       - [pinia](https://pinia.esm.dev/)
       - [vuex](https://vuex.vuejs.org/)
         - [vuex-orm](https://vuex-orm.org/)
+        - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
     - ui
       - [uni-ui](https://github.com/dcloudio/uni-ui)
-      - [cl-uni](https://docs.cool-js.com/)
-      - [thor-ui](https://www.thorui.cn/doc/)
       - [uview-ui](https://uviewui.com/)
+      - [thor-ui](https://www.thorui.cn/doc/)
     - 衍生
-      - [luch-request](https://www.quanzhan.co/luch-request/)
+      - [luch-request](https://www.quanzhan.co/luch-request/) - 请求库
       - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api) - 支持在 uni-app 里使用 composition-api
     - 进阶
       - [uni-app 多端构建原理浅析（较旧）](https://f-loat.github.io/posts/2019/08/03/uni-app-%E5%A4%9A%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90.html)
