@@ -699,10 +699,10 @@
 - 路由
   - [vue-router](https://router.vuejs.org/)
 - 状态管理
+  - [pinia](https://pinia.esm.dev/)
   - [vuex](https://vuex.vuejs.org/)
     - [vuex-orm](https://vuex-orm.org/)
     - [vuex-persistedstate](https://github.com/robinvdvleuten/vuex-persistedstate)
-  - [pinia](https://pinia.esm.dev/)
 - ui
   - [vuetify](https://vuetifyjs.com/)
   - [element](https://element.eleme.cn/)
@@ -732,9 +732,9 @@
       - [自带路由](https://uniapp.dcloud.io/frame?id=%e8%b7%af%e7%94%b1)
       - [uni-simple-router](https://hhyang.cn/v2/)
     - 状态管理
+      - [pinia](https://pinia.esm.dev/)
       - [vuex](https://vuex.vuejs.org/)
         - [vuex-orm](https://vuex-orm.org/)
-      - [pinia](https://pinia.esm.dev/)
     - ui
       - [uni-ui](https://github.com/dcloudio/uni-ui)
       - [cl-uni](https://docs.cool-js.com/)
@@ -757,6 +757,7 @@
   - [vue2-helpers](https://github.com/ambit-tsai/vue2-helpers) - 增强在 vue 2 使用 composition-api 的体验
   - [genesis](https://fmfe.github.io/genesis-docs/) - 轻量的 vue ssr
   - [vue-demi](https://github.com/antfu/vue-demi) - 创建跨版本的库
+  - [vue-promised](https://github.com/posva/vue-promised) - 组合式 Promise 和 Promise 组件
   - [swrv](https://docs-swrv.netlify.app/) - 管理你的请求
   - [vue-query](https://vue-query.vercel.app/) - 管理你的请求
   - [vue-use](https://vueuse.js.org/) - 官方 hooks 包
