@@ -1041,6 +1041,8 @@
     - [koa-bodyparser](https://github.com/koajs/bodyparser) - 解析请求体
     - [@koa/cors](https://github.com/koajs/cors)
     - [koa-csrf](https://github.com/koajs/csrf)
+    - [koa-conditional-get](https://github.com/koajs/conditional-get)
+    - [koa-etag](https://github.com/koajs/etag) - [etag](https://github.com/jshttp/etag) 支持
     - [koa-logger](https://github.com/koajs/logger)
     - [cabin](https://github.com/cabinjs/cabin) - 日志
     - [koa-404-handler](https://github.com/ladjs/koa-404-handler)
