@@ -432,6 +432,7 @@ alias qs='open -a QSpace\ Pro'
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [hoppscotch](https://hoppscotch.io/) - 在线类 postman 工具
   - [Kite](https://www.kite.com/) - 代码自动补全工具
+  - [krita](https://krita.org/) - 专业图片处理
   - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
   - [MacZip](https://ezip.awehunt.com/) - 压缩工具
