@@ -1093,6 +1093,7 @@
 - [rabbitmq](https://www.rabbitmq.com/) - 消息队列
 - [docker](https://www.docker.com/) - 应用容器引擎，打包应用和依赖包到一个可移植的镜像中然后发布
   - [教你用 docker 搞个网站](https://mp.weixin.qq.com/s/k6SUYpBvQSE8WZ0PeD4Slg)
+  - [docker 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
 - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
 - [node-cron](https://github.com/node-cron/node-cron) - 任务调度
 - [bree](https://github.com/breejs/bree) - 任务调度
