@@ -27,7 +27,7 @@
     "@babel/core": "~7.16.5",
     "@babel/eslint-parser": "~7.16.5",
     "@commitlint/cli": "~16.0.0",
-    "@modyqyw/fabric": "~4.6.0",
+    "@modyqyw/fabric": "~4.7.0",
     "@typescript-eslint/eslint-plugin": "~5.8.0",
     "@typescript-eslint/parser": "~5.8.0",
     "@vuepress/plugin-debug": "~2.0.0-beta.29",
