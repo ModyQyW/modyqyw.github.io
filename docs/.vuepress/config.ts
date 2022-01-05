@@ -38,11 +38,14 @@ export default defineUserConfig<DefaultThemeOptions>({
               '/organize-and-summarize/safety.md',
               '/organize-and-summarize/webpack.md',
               '/organize-and-summarize/server.md',
+              {
+                text: 'leetcode',
+                link: '/organize-and-summarize/leetcode/0001.two-sum.md',
+              },
             ],
           },
         ],
       },
-      { text: 'leetcde', link: '/leetcode/0001.two-sum.md' },
       { text: '关于', link: '/about/' },
     ],
     logo: '/images/w256.png',
@@ -64,13 +67,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/organize-and-summarize/safety.md',
             '/organize-and-summarize/webpack.md',
             '/organize-and-summarize/server.md',
+            {
+              text: 'leetcode',
+              children: fs.readdirSync(path.resolve('docs', 'organize-and-summarize', 'leetcode')),
+            },
           ],
-        },
-      ],
-      '/leetcode/': [
-        {
-          text: 'leetcode',
-          children: fs.readdirSync(path.resolve('docs', 'leetcode')),
         },
       ],
     },
