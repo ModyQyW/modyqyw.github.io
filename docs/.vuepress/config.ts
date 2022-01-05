@@ -1,5 +1,7 @@
 import { defineUserConfig } from 'vuepress-vite';
 import type { DefaultThemeOptions } from 'vuepress-vite';
+import fs from 'fs';
+import path from 'path';
 
 const mode = process.env.MODE || 'github';
 const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
@@ -13,21 +15,65 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
-  head: [['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: "use-credentials" }]],
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' }],
+  ],
   themeConfig: {
     hostname,
     navbar: [
-      { text: '学习路径', link: '/roadmap/' },
-      { text: '环境配置', link: '/environment/' },
-      { text: '开发', link: '/development/' },
-      { text: '安全', link: '/safety/' },
-      { text: 'Webpack', link: '/webpack/' },
+      {
+        text: '整理归纳',
+        children: [
+          {
+            text: '收集整理',
+            children: [
+              '/organize-and-summarize/roadmap.md',
+              '/organize-and-summarize/development.md',
+            ],
+          },
+          {
+            text: '归纳输出',
+            children: [
+              '/organize-and-summarize/environment.md',
+              '/organize-and-summarize/safety.md',
+              '/organize-and-summarize/webpack.md',
+              '/organize-and-summarize/server.md',
+            ],
+          },
+        ],
+      },
+      { text: 'leetcde', link: '/leetcode/0001.two-sum.md' },
       { text: '关于', link: '/about/' },
     ],
     logo: '/images/w256.png',
     repo,
     repoLabel,
-    sidebar: 'auto',
+    sidebar: {
+      '/organize-and-summarize/': [
+        {
+          text: '收集整理',
+          children: [
+            '/organize-and-summarize/roadmap.md',
+            '/organize-and-summarize/development.md',
+          ],
+        },
+        {
+          text: '归纳输出',
+          children: [
+            '/organize-and-summarize/environment.md',
+            '/organize-and-summarize/safety.md',
+            '/organize-and-summarize/webpack.md',
+            '/organize-and-summarize/server.md',
+          ],
+        },
+      ],
+      '/leetcode/': [
+        {
+          text: 'leetcode',
+          children: fs.readdirSync(path.resolve('docs', 'leetcode')),
+        },
+      ],
+    },
     sidebarDepth: 3,
   },
   markdown: {

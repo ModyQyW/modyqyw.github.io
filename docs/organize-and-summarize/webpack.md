@@ -1,4 +1,4 @@
-# Webpack
+# webpack (无持续维护)
 
 ::: danger
 

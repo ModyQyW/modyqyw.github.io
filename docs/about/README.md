@@ -1,7 +1,3 @@
----
-sidebar: false
----
-
 # 关于
 
 - [wurui7@mail3.sysu.edu.cn](mailto:wurui7@mail3.sysu.edu.cn)
