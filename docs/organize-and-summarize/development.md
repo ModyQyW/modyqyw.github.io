@@ -462,6 +462,7 @@
 - [chrome devtools](https://developers.google.cn/web/tools/chrome-devtools)
 - [firefox devtools](https://developer.mozilla.org/en-US/docs/Tools)
 - [edge devtools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium)
+- [前端工程师生产环境 debugger 技巧](https://www.zoo.team/article/prod-debugger)
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
 - [jest](https://jestjs.io/) - 单元测试
   - [ts-jest](https://kulshekhar.github.io/ts-jest/)
