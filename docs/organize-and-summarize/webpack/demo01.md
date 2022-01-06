@@ -1,0 +1,259 @@
+# demo01 - 一个简单的 demo
+
+前面简单地讲述了 `webpack` 的几个基本概念，下面开始实战来强化这些概念。
+
+这里再强调一次，笔记和示例是用 macOS 做示例的，请不要无脑跟做。
+
+首先安装 [nvm](https://github.com/nvm-sh/nvm)。nvm 是一个用于管理 node 版本的工具。
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
+
+如果你已经安装了 node，你也可以考虑完全卸载 node 之后安装 nvm。如果不需要频繁更换 node 版本，可以直接安装 node。
+
+安装 nvm 之后，使用 nvm 来安装 node v14。
+
+```shell
+nvm install 14
+```
+
+新建一个 `demo` 文件夹，进入该文件夹，用 `npm` 初始化，这会在当前目录下生成一个默认的 `package.json` 文件。
+
+```shell
+mkdir demo # 新建一个 demo 文件夹
+cd demo # 进入该文件夹
+npm init -y # npm 初始化
+```
+
+根目录下新建一个 `.npmrc` 文件用来配置 `npm`，这里我们指定依赖源是国内的淘宝源，这样安装依赖的速度会更快一点。
+
+```shell
+registry=https://registry.npmmirror.com/
+chromedriver_cdnurl=https://npmmirror.com/mirrors/chromedriver/
+electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
+electron_mirror=https://npmmirror.com/mirrors/electron/
+fsevents_binary_host_mirror=http://npmmirror.com/mirrors/fsevents/
+node_inspector_cdnurl=https://npmmirror.com/mirrors/node-inspector/
+phantomjs_cdnurl=https://npmmirror.com/mirrors/phantomjs/
+sass_binary_site=https://npmmirror.com/mirrors/node-sass/
+selenium_cdnurl=https://npmmirror.com/mirrors/selenium/
+
+```
+
+然后安装相关依赖。
+
+```shell
+npm i clean-webpack-plugin@~3.0.0 -D
+npm i copy-webpack-plugin@~6.4.1 -D
+npm i friendly-errors-webpack-plugin@~1.7.0 -D
+npm i html-webpack-plugin@~4.5.2 -D
+npm i webpack@~4.46.0 -D
+npm i webpack-cli@~4.7.2 -D
+```
+
+创建一个内容简单的 `${PROJECT_DIR}/src/index.js`。
+
+```javascript
+document.write('Hello webpack!');
+```
+
+创建一个 `webpack` 配置文件 `${PROJECT_DIR}/webpack.config.js`。不特意指定配置文件的时候，`webpack` 会默认使用这个文件作为配置文件。
+
+```javascript
+// 使用 path 模块来指定路径
+const path = require('path');
+
+module.exports = {
+  // 指定 mode
+  mode: 'production',
+  // 指定 entry
+  entry: path.resolve('src', 'index.js'),
+  // 指定 output
+  output: {
+    path: path.resolve('dist'),
+    filename: 'bundle.js',
+  },
+};
+```
+
+我们再来修改 `package.json` 里面的 `scripts` 字段。这样，我们就能通过 `webpack-cli` 提供的命令调用 `webpack` 构建。
+
+```json
+{
+  ...,
+  "scripts": {
+    "build": "webpack"
+  },
+  ...
+}
+```
+
+接着，就执行命令开始构建吧。
+
+```shell
+npm run build
+```
+
+构建结束后，我们可以看到，在 `dist` 文件夹里面会出现一个 `bundle.js` 文件。但是我们还需要手动创建一个 `.html` 文件然后引用它，才能正常使用。
+
+实际开发的时候，每次构建之后都耗费时间去做这样的重复工作是难以忍受的。我们需要一些自动处理的手段，来帮我们自动生成 `.html` 文件并引用这个 `bundle.js` 文件。
+
+项目根目录新建一个 `public` 文件夹，里面放 `favicon.ico`（可以自己随便找一个，或者把你现在有的图片转成 ico 格式）和 `index.html`。
+
+`index.html` 里面的内容列出在下面。我们在 L7 引用了 `favicon.ico` 作为网站图标。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="favicon.ico" type="image/x-icon" />
+    <title>demo01</title>
+  </head>
+  <body></body>
+</html>
+```
+
+接着，我们在 `${PROJECT_DIR}/webpack.config.js` 里配置，让 `copy-webpack-plugin` 来处理网站图标，让 `html-webpack-plugin` 处理 `.html` 文件里的引用。
+
+```javascript
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  ...
+  // 指定 entry
+  entry: path.resolve('src', 'index.js'),
+  // 指定 output
+  output: {
+    path: path.resolve('dist'),
+    filename: 'bundle.js',
+  },
+  plugins: [
+    // 复制 ${PROJECT_DIR}/public/favicon.ico
+    // 最终生成 ${PROJECT_DIR}/dist/favicon.ico
+    new CopyPlugin({
+      patterns: [{ from: path.resolve('public', 'favicon.ico') }],
+    }),
+    // 使用 ${PROJECT_DIR}/public/index.html 作为模板
+    // 最终生成 ${PROJECT_DIR}/dist/index.html
+    new HtmlPlugin({
+      title: 'demo01',
+      template: path.resolve('public', 'index.html'),
+    }),
+  ],
+  ...
+};
+
+```
+
+- `copy-webpack-plugin` 会把 `favicon.ico` 复制到输出目录下（在这个例子里面，输出目录就是 `${PROJECT_DIR}/dist`）作为网站图标。
+- `html-webpack-plugin` 会使用 `${PROJECT_DIR}/public/index.html` 作为承载 `bundle.js` 和 `favicon.ico` 的模板，最终会生成 `${PROJECT_DIR}/dist/index.html`，这个文件会自动引用相关的 `.js` 文件。
+
+重新构建，构建结束之后，我们会发现 `${PROJECT_DIR}/dist` 里面出现了三个文件：`favicon.ico`，`index.html` 和 `bundle.js`，而 `index.html` 中还自动引用了 `bundle.js`。
+
+一切都很完美，但不能忽视的是，每次构建之前都应该删除上一次的构建包，也就是删除 `${PROJECT_DIR}/dist`。目前不删除不会有什么影响，但以后构建出来的文件越来越多，不删除可能会导致新旧构建冲突、`${PROJECT_DIR}/dist` 越来越大、`${PROJECT_DIR}/dist` 里面的文件越来越多等问题。
+
+我们可以使用 `clean-webpack-plugin` 来解决这个问题，默认地，`clean-webpack-plugin` 会根据 `output.path` 自动确认、删除上一次构建的结果。
+
+```javascript
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
+
+module.exports = {
+  ...
+  plugins: [
+    // 移除上一次的构建文件
+    new CleanPlugin(),
+    ...
+  ],
+  ...
+};
+
+```
+
+如果构建出现了问题，`webpack` 会输出一长串错误信息，使用 `friendly-errors-webpack-plugin` 可以让输出的错误信息更加友好。
+
+```javascript
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
+module.exports = {
+  ...
+  plugins: [
+    // 显示友好的错误信息
+    new FriendlyErrorsPlugin(),
+    ...
+  ],
+  ...
+};
+
+```
+
+完整的 `webpack.config.js` 代码列写在下面。
+
+```javascript
+// 使用 path 模块来指定路径
+const path = require('path');
+// 使用 plugin
+const { CleanWebpackPlugin: CleanPlugin } = require("clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
+module.exports = {
+  // 指定 mode
+  mode: 'production',
+  // 指定 entry
+  entry: path.resolve('src', 'index.js'),
+  // 指定 output
+  output: {
+    path: path.resolve('dist'),
+    filename: 'bundle.js',
+  },
+  // 指定 plugin
+  plugins: [
+    // 显示友好的错误信息
+    new FriendlyErrorsPlugin(),
+    // 移除上一次的构建文件
+    new CleanPlugin(),
+    // 复制 ${PROJECT_DIR}/public/favicon.ico
+    // 最终生成 ${PROJECT_DIR}/dist/favicon.ico
+    new CopyPlugin({
+      patterns: [{ from: path.resolve('public', 'favicon.ico') }],
+    }),
+    // 使用 ${PROJECT_DIR}/public/index.html 作为模板
+    // 最终生成 ${PROJECT_DIR}/dist/index.html
+    new HtmlPlugin({
+      title: 'demo01',
+      template: path.resolve('public', 'index.html'),
+    }),
+  ],
+};
+
+```
+
+重新开始构建，之后可以看到简短的提示信息。下面是最终的目录结构（省略了`node_modules`）。
+
+```shell
+.
+├── dist
+│   ├── bundle.js
+│   ├── favicon.ico
+│   └── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   └── index.js
+└── webpack.config.js
+```
+
+使用 `live server` 或 `serve` 来查看效果，可以看到 `Hello webpack!`。
+
+🎉 恭喜，一个简单的 webpack demo 已经完成啦～
+
+参考源代码见 [modyqyw/webpack4-plus-demos/demo01](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo01)。

@@ -33,7 +33,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             children: [
               '/organize-and-summarize/environment/',
               '/organize-and-summarize/safety/',
-              '/organize-and-summarize/webpack/',
+              {
+                text: 'webpack',
+                link: '/organize-and-summarize/webpack/introduction.md',
+              },
               '/organize-and-summarize/server/',
               {
                 text: 'leetcode',
@@ -59,7 +62,23 @@ export default defineUserConfig<DefaultThemeOptions>({
           children: [
             '/organize-and-summarize/environment/',
             '/organize-and-summarize/safety/',
-            '/organize-and-summarize/webpack/',
+            {
+              text: 'webpack',
+              children: [
+                '/organize-and-summarize/webpack/introduction.md',
+                '/organize-and-summarize/webpack/why.md',
+                '/organize-and-summarize/webpack/what.md',
+                '/organize-and-summarize/webpack/basic-concepts.md',
+                '/organize-and-summarize/webpack/demo01.md',
+                '/organize-and-summarize/webpack/demo02.md',
+                '/organize-and-summarize/webpack/demo03.md',
+                '/organize-and-summarize/webpack/demo04.md',
+                '/organize-and-summarize/webpack/expansion.md',
+                '/organize-and-summarize/webpack/end.md',
+                '/organize-and-summarize/webpack/reference.md',
+                '/organize-and-summarize/webpack/acknowledgement.md',
+              ],
+            },
             '/organize-and-summarize/server/',
             {
               text: 'leetcode',

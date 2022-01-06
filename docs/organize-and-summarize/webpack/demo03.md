@@ -1,0 +1,1349 @@
+# demo03 - 优化
+
+## 使用文件指纹做版本管理
+
+人的指纹是特殊的，不存在完全相同的人的指纹，所以依靠人的指纹可以确定唯一的人。文件指纹的用途和人的指纹相近，可以用来确定文件有没有改变，方便做版本管理。
+
+常用的文件指纹有三类。
+
+- `hash` - 和整个项目的构建有关，只要项目里有文件被修改，值就会有变化。特别地，对于图片、字体这些资产文件，`hash` 和整个项目的构建无关，而是和文件内容相关。一般只会在资产文件上使用。
+- `chunkhash` - 根据不同的 `chunk` 生成 `hash`。通常会把依赖库和业务代码分别抽离出对应的 `chunk`，然后使用 `chunkhash`。也就是说，一般对 `.js` 文件使用 `chunkhash`。
+- `contenthash` - 根据文件内容生成 `hash`。`.js` 文件常常会引用 `.css` 文件，如果使用 `chunkhash`，就会导致修改 `.js` 文件、没有修改 `.css` 文件的情况下，`.css` 文件的 `hash` 也变化了，这不太符合工程要求，所以 `.css` 文件一般使用 `contenthash`。资产文件也可以使用 `contenthash`。
+
+我们先来修改 `${PROJECT_DIR}/config/webpack.base.js`，为图片和字体添加文件指纹。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.base.js
+module.exports = {
+  ...,
+  module: {
+    rules: [
+      ...,
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              ...,
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              ...,
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      ...,
+    ],
+  },
+};
+
+```
+
+- `[name]` 表示使用文件本身的命名。
+- `[contenthash:8]` 表示使用 `contenthash` 的前 8 位，也可以写成 `[hash:8]`，结果会是一样的，这是因为 `url-loader` 和 `file-loader` 将会以同样的方式处理 `contenthash` 和 `hash`，这是文件指纹的特例。
+- `[ext]` 表示使用文件本身的后缀。
+
+而要在生产模式下为 `.css` 文件添加文件指纹，就不能使用 `style-loader`。`style-loader` 会把 `.css` 文件嵌入到 `.js` 文件中，我们无法得到单独的 `.css` 文件，自然也就无法添加文件指纹了。
+
+要解决这个问题，我们要使用 `mini-css-extract-plugin`，它能分离出 `.css` 文件让我们添加文件指纹。一般只会在生产环境中使用它，在开发环境里，从效率考虑，还是会使用 `style-loader`。
+
+```shell
+npm i mini-css-extract-plugin@~1.6.2 -D
+```
+
+我们再把 `${PROJECT_DIR}/config/webpack.base.js` 里关于 css 的部分都放到 `${PROJECT_DIR}/config/webpack.dev.js` 里。
+
+现在，完整的 `${PROJECT_DIR}/config/webpack.base.js` 包含了 `entry`，`plugin` 和 `loader`。其中，图片文件和字体文件的处理都使用了 `contenthash` 的前 8 位。
+
+我们只是移除了其中关于 css 的部分，下面给出完整的文件内容供参考。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.base.js
+const path = require('path');
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+
+module.exports = {
+  entry: {
+    app: path.resolve('src', 'index.js'),
+  },
+  plugins: [
+    new FriendlyErrorsPlugin(),
+    new CleanPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: path.resolve('public', 'favicon.ico') }],
+    }),
+    new HtmlPlugin({
+      title: 'demo03',
+      template: path.resolve('public', 'index.html'),
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [{ loader: 'babel-loader' }],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'img',
+              publicPath: 'img',
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: 'fonts',
+              publicPath: 'fonts',
+              name: '[name].[contenthash:8].[ext]',
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+完整的 `${PROJECT_DIR}/config/webpack.dev.js` 内容也放在下面。除去基本的配置外，还声明了 `mode`，`webpack-dev-server`，`devtool` 和 `loader`。在这里，我们使用了 `style-loader`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.dev.js
+module.exports = {
+  mode: 'development',
+  devServer: {
+    hot: true,
+    open: true,
+  },
+  devtool: 'eval-cheap-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+我们再来修改 `${PROJECT_DIR}/config/webpack.prod.js`，不使用 `style-loader` 而是使用 `mini-css-extract-plugin`。
+
+首先用 `mini-css-extract-plugin` 附带的 `loader` 替换掉原本使用的 `style-loader`。我们还要指定 `publicPath`，也就是指定代码使用的 `.css` 文件所在的相对于 `output.path` 的文件夹。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+...
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+
+```
+
+- `publicPath: 'css'` 表示要使用 `${output.path}/css` 里的 `.css` 文件。
+
+接着，把 `mini-css-extract-plugin` 加到 `plugins` 里，指定输出文件名。在前面我们已经指定要使用 `${output.path}/css` 文件夹里的 `.css` 文件，在这里我们需要把文件夹名也添加上去，让 `.css` 文件输出到 `${output.path}/css` 目录下。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+...
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+    }),
+    ...,
+  ],
+  ...,
+};
+
+```
+
+而要为 `entry` 对应的输出文件添加文件指纹非常简单，只需要直接使用 `chunkhash`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].[chunkhash:8].js',
+  },
+  ...,
+};
+
+```
+
+完整的 `${PROJECT_DIR}/config/webpack.prod.js` 如下所示。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  mode: 'production',
+  devtool: 'source-map',
+  output: {
+    path: path.resolve('dist'),
+    filename: '[name].[chunkhash:8].js',
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: 'postcss-loader' },
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: 'css',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+其他文件的处理也可以参考以上做法。
+
+## 移除 js 中的注释以压缩 js
+
+如果我们完成之后打开 `${PROJECT_DIR}/dist/js/app.[chunkhash:8].js`，就会发现大量 js 代码堆叠到一起，这是正常的压缩现象。但是，文件里还有一些注释，这是生产环境不需要的，我们可以手动配置来去除这些注释，进一步地压缩 `.js` 文件。
+
+`webpack` 默认在生产环境下使用 `terser-webpack-plugin` 来压缩 `.js` 文件，我们只需要做进一步的配置即可。
+
+虽然安装 `webpack` 依赖的时候会自动安装该依赖，但是我们通常会显式安装我们所需要的依赖并指定版本，避免版本不一致的问题。
+
+```shell
+npm i terser-webpack-plugin@~4.2.3 -D
+```
+
+我们不是从头配置 `terser-webpack-plugin`，而是修改 `webpack` 原本的 `terser-webpack-plugin` 配置，所以我们是在 `optimization` 字段中（而不是在 `plugins` 字段中）使用 `terser-webpack-plugin`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+const TerserPlugin = require('terser-webpack-plugin');
+
+module.exports = {
+  ...,
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+  },
+  ...,
+};
+
+```
+
+- `extractComments: false` 表示不需要把注释分离到单独的文件里。
+- `terserOptions.output.comments: false` 表示最终输出省略注释。
+
+这个配置也是 `terser-webpack-plugin` 文档中提供的例子。
+
+## 压缩 html
+
+要压缩 `.html` 文件，我们可以使用之前用到的 `html-webpack-plugin`。除了我们之前用到的指定模板的功能，它还有压缩 html 的功能，而且是默认开启的。
+
+如果我们需要修改 `html-webpack-plugin` 的压缩选项，我们只需要为 `${PROJECT_DIR}/config/webpack.base.js` 中的 `html-webpack-plugin` 的配置添加一个 `minify` 字段，然后写入自己的配置即可。
+
+下面是默认的 `html-webpack-plugin` 的压缩选项。
+
+```javascript
+const HtmlPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new HtmlPlugin({
+      title: 'demo03',
+      template: path.resolve('public', 'index.html'),
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
+    }),
+    ...,
+  ],
+  ...,
+};
+
+```
+
+- `collapseWhitespace: true` 表示减少 html 中不必要的空白。
+- `removeComments: true` 表示移除 html 中的注释。
+- `removeRedundantAttributes: true` 表示移除标签上使用了默认值的属性，比如 `<input type="text" />`，可以移除 `type="text"`。
+- `removeScriptTypeAttributes: true` 表示移除 `<script>` 标签上的 `type="text/javascript"`。
+- `removeStyleLinkTypeAttributes: true` 表示移除 `<style>` 和 `<link>` 标签上的 `type="text/css"`。
+- `useShortDoctype: true` 表示使用较短的 html 格式声明。
+
+一般不需要手动配置，如果有这方面需求，可以翻看文档再做修改。写入的自己的配置不会和默认配置组合使用（默认配置会被覆盖），所以必须确保写入的自己的配置是完整的。
+
+## 基础依赖的处理
+
+项目内往往有一些比较基础的依赖，比如 `react` 和 `react-dom`。默认地，`webpack` 会把这些基础依赖放入 `entry` 对应的输出文件中。
+
+这些基础依赖往往比较稳定，不会经常更新，如果打包进 `entry` 对应的输出文件，就会出现业务代码变化、基础依赖没有变化、但用户需要重新拉取包含了基础依赖的代码的情况，这相当不合理。
+
+我们可以使用公共 cdn 来加载这些依赖，解决这个问题。首先要在 `${PROJECT_DIR}/config/webpack.prod.js` 配置 `externals`，向 `webpack` 说明无需添加到构建包中的依赖。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  ...,
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
+  ...,
+};
+
+```
+
+`externals` 是一个对象 object，它的键就是 `webpack` 需要排除的依赖名，稍后我们再说明对应的值。上面的配置会让 `webpack` 构建时排除 `react` 和 `react-dom` 两个依赖，不把它们加入到最终构建包中。
+
+之后，还需要手动加入 `react` 和 `react-dom` 的公共 cdn 链接，使得项目能够使用 `react` 和 `react-dom` 这两个依赖，否则构建包没办法正常运行。
+
+这里使用了 [jsdelivr](https://www.jsdelivr.com/) 这个公共 cdn，你也可以使用 [unpkg](https://unpkg.com/)。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="favicon.ico" type="image/x-icon" />
+    <title>demo03</title>
+  </head>
+  <body>
+    <div id="root" />
+    <script src="https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"></script>
+  </body>
+</html>
+```
+
+- 公共 cdn 链接指定的依赖版本，要和项目内使用的依赖版本一致，不然可能导致开发和生产环境的表现不一致。
+- `react` 的 cdn 链接中暴露了 `React` 这个变量，而 `react-dom` 的 cdn 链接中暴露了 `ReactDOM` 这个变量，对应地，我们要把这两个变量指定为对应键的值。
+
+我们尝试构建一下。最终构建的文件中，没有 `react` 和 `react-dom` 的存在。运行测试正常。我们也可以借助 `html-webpack-externals-plugin` 来实现类似的功能，这里不再做相应的演示，感兴趣的可以自行查看资料。
+
+但是更多时候，比起相信公共 cdn，相信自己更好。不使用公共 cdn，我们可以自行把这些基础依赖抽离出来统一放置。这么做要比使用公共 cdn 更好，无需手动指定、更新公共 cdn 的依赖版本，也无需考虑公共 cdn 的稳定性。
+
+`webpack` 已经内置了这部分优化，但还需要进一步配置。我们要做的就是配置 `optimization.splitChunks`，让这部分内置的优化更紧贴我们的项目。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+    },
+    ...,
+  },
+  ...,
+};
+
+```
+
+- 使用 `optimization.splitChunks`，表示我们想要手动配置地分离 `chunk`，而路径和名称会跟随 `output.path`。
+- 指定 `chunks: 'all'`，表示我们想要把所有引入的库从已有的业务代码中分离出来。
+
+具体需要怎么分离呢？一个常见的配置是，项目内的组件库单独成一个 `chunk`，然后 `node_modules` 文件夹内同步引入的其他依赖单独成一个 `chunk`，最后是项目内封装的自定义组件（也就是页面公共组件）单独成一个 `chunk`。
+
+我们通过 `optimization.cacheGroups` 来配置。首先是项目内的组件库 `zent` 单独成一个 `chunk`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        zent: {
+          name: 'chunk-zent',
+          priority: 30,
+          test: /[\\/]node_modules[\\/]_?zent(.*)/,
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+};
+
+```
+
+接着是 `node_modules` 文件夹内同步引入的其他依赖。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        ...,
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 20,
+          chunks: 'initial',
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+};
+
+```
+
+- `vendors` 的 `priority` 设置得比 `zent` 的 `priority` 低，因此，`zent` 会优先生成一个 `chunk`，而 `vendors` 对应的 `chunk` 不会再包含 `zent`。
+- 设置 `vendors.chunks` 为 `initial`，意味着 `chunk-vendors` 只会包含代码中同步引入的部分，异步引入的部分会加入到 `${PROJECT_DIR}/dist/app.[chunkhash:8].js` 中。
+
+最后则是页面公共组件。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  mode: 'production',
+  ...,
+  optimization: {
+    ...,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        ...,
+        components: {
+          name: 'chunk-components',
+          test: path.resolve('src', 'components'),
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+    ...,
+  },
+  ...,
+};
+
+```
+
+- `minChunks` 表示最小引用次数，这里设置为 2，即 `chunk-components` 内的代码都被其他 `.js` 中的代码引用过 2 次或以上。
+- `reuseExistingChunk: true` 表示如果 `chunk-components` 包含了已经被分离出来的部分（某些代码已经被分进了自定义 `chunk` 中），这些部分会被复用而不再打包进 `chunk-components` 中。
+
+我们可以构建一下，看看效果。查看构建文件可以发现，`html-webpack-plugin` 已经自动引入了各个 `chunk`，无需我们操心。
+
+下面是我在构建后的截图（并非最新版本，仅供参考）。
+
+![有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/U9cbdde6f3a1f4b728dcb3f9902ac9300C.jpg)
+
+- 列 `Asset` 给出了打包出来的各个文件的位置和名称。
+- 列 `Size` 给出了打包出来的各个文件的大小。
+- 列 `Chunks` 和 `Chunk Names` 是我们所要关注的重点。
+  - `Chunk Names` 一共三个：`app`，`chunk-zent` 和 `chunk-vendors`。
+  - `app` 就是我们设置的 `entry` 键值，也就是说，`entry` 本身就会生成一个 `chunk`。
+  - `chunk-zent` 和 `chunk-vendors` 是我们配置后从 `chunk app` 中分离出来的 `chunk`，位置和命名会跟随 `output.filename`（也就是 `${PROJECT_DIR}/dist/[name]:[chunkhash:8].js`）。
+  - `react` 和 `react-dom` 已经被加入到 `chunk-vendors` 中。
+  - 我们如果修改 `${PROJECT_DIR}/src/index.js`，就会发现只有 `app` 对应的文件指纹发生了变化，而 `chunk-zent` 和 `chunk-vendors` 的文件指纹没有发生变化。这样就使得这两个部分能有效地缓存，减少请求时间。
+  - 没有 `chunk-components`，这是因为我们目前没有使用任何的页面公共组件。
+
+没有 `splitChunks` 的构建后的截图如下所示。
+
+![没有 splitChunks 构建效果图](https://ae01.alicdn.com/kf/Uabea4a17c0224557bf1213cd32339ea01.jpg)
+
+可以看到，如果不使用 `splitChunks`，几乎所有的代码都会挤到 `app.[chunkhash:8].js` 里，在比较大的项目中，文件就会变得非常大。如果不更新基础库，用户就要耗费大量时间在获取包含了基础库代码的文件上。而使用了 `splitChunks`，在不更新基础库的前提下，用户只需要获取包含了最新业务代码的相关文件（也就是 `app` 相关的文件），缩短了获取的时间。
+
+但使用了 `splitChunks` 后，另一个问题也暴露出来了，那就是所有 `.js` 文件都放到了 `${PROJECT_DIR}/dist` 目录下，这并不利于管理。
+
+和前面对字体、图片、`.css` 文件的配置类似，我们可以让 `.js` 文件都放入特定的文件夹中。我们修改 `output.filename`，使得所有的 `.js` 文件都会放入 `${PROJECT_DIR}/dist/js` 文件夹里。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+module.exports = {
+  ...,
+  output: {
+    path: path.resolve('dist'),
+    filename: 'js/[name].[chunkhash:8].js',
+  },
+  ...,
+};
+
+```
+
+## 使用 gzip 文件
+
+gzip 是一种数据压缩格式，或者说是一种文件格式。在生产环境打包的最后阶段，为生成的文件生成对应的 `.gz` 文件，可以有效地减小文件体积，让支持 gzip 的浏览器更快地加载页面。
+
+```shell
+npm i compression-webpack-plugin@~6.1.1 -D
+```
+
+然后我们在 `${PROJECT_DIR}/config/webpack.prod.js` 里配置它。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+...
+const CompressionPlugin = require('compression-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new CompressionPlugin({
+      test: /\.(html|css|js|png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/,
+    }),
+  ],
+  ...,
+};
+
+```
+
+在上面，我们配置了 `compression-webpack-plugin` 去处理生成的 `.html`，`.css`，`.js`，`.png` 等文件。默认地，它会使用 gzip 算法去压缩处理。
+
+但 `compression-webpack-plugin` 还有一个默认的限制，那就是如果生成的 `.gz` 文件的大小不能达到原文件的 80% 或以下，就不会去生成`.gz`文件。这是为了减少不必要的压缩，提高处理速度，在大型项目里提高的速度尤为明显。
+
+我们可以构建一下，看看效果。查看构建文件可以发现，文件基本都出现了对应的 `.gz` 文件。
+
+## 环境变量和模式
+
+在实际开发的时候，`development` 和 `production` 两个模式还不够，我们往往还需要第三个甚至第四个模式，每个模式可能还会有不同的环境变量，但配置基本都是使用 `development` 模式或 `production` 模式的配置。
+
+首先安装相关的依赖。
+
+```shell
+npm i dotenv@~10.0.0 -D
+```
+
+接着来修改一下 `${PROJECT_DIR}/config/webpack.config.js`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.config.js
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
+
+module.exports = (env, argv) => {
+  const mode = argv.mode || 'production';
+
+  process.env.NODE_ENV = process.env.NODE_ENV || 'production';
+
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return devConfig;
+    default:
+      return prodConfig;
+  }
+};
+```
+
+- 把 `module.exports` 改写成函数形式，第一个参数 `env` 是 `webpack` 命令里使用 `--env` 设置的值组成的对象，第二个参数是所有命令参数组成的对象。
+- 为 `NODE_ENV` 设置一个默认值 `production`。
+- `env` 和 `process.env` 是两个不同的对象，`env` 是 `webpack` 生成的，而 `process.env` 是由 node 生成的，可以在 `webpack` 配置文件中直接使用。
+- 一般地，我们用 `NODE_ENV` 来指定构建模式，一般只有 `development` 和 `production` 两种取值。
+
+然后修改 `${PROJECT_DIR}/package.json` 里面的 `scripts`。非复杂情况下，`cross-env` 可以不再使用，复杂情况可以参考 uni-app 官方模板，为了在统一模式下构建不同端的代码，需要用到 `cross-env` 来指定不同端的 `process.env.UNI_PLATFORM`。
+
+```json
+{
+  ...,
+  "scripts": {
+    "dev": "webpack serve --config ./config/webpack.config.js --progress --mode=development",
+    "build": "webpack --config ./config/webpack.config.js --mode=production"
+  },
+  ...
+}
+
+```
+
+- `--mode=development` 指定了 `argv.mode` 和 `NODE_ENV` 为 `development`。
+- `--mode=production` 指定了 `argv.mode` 和 `NODE_ENV` 为 `production`。
+- 这里的 `mode` 仅用于指定模式，以读取对应的环境变量。
+
+我们再来为已有的两种模式添加环境变量。一般对于环境变量有以下的约定，内容优先级依次递增。
+
+| 文件                               | 说明                         |
+| ---------------------------------- | ---------------------------- |
+| `${PROJECT_DIR}/.env`              | 所有模式的环境变量           |
+| `${PROJECT_DIR}/.env.local`        | 所有模式的环境变量，本地使用 |
+| `${PROJECT_DIR}/.env.[mode]`       | 特定模式的环境变量           |
+| `${PROJECT_DIR}/.env.[mode].local` | 特定模式的环境变量，本地使用 |
+
+而环境变量文件只会包含环境变量的键值对，下面是我们将要使用的三个文件。
+
+```shell
+# env.development
+NODE_ENV=development
+APP_MODE=development
+
+```
+
+```shell
+# env.staging
+NODE_ENV=production
+APP_MODE=staging
+
+```
+
+```shell
+# env.production
+NODE_ENV=production
+APP_MODE=production
+
+```
+
+之后，我们在 `${PROJECT_DIR}/config/webpack.config.js` 里根据 `mode` 读取对应的环境变量文件并添加到 `process.env` 里。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.config.js
+const dotenv = require('dotenv');
+const fs = require('fs');
+const path = require('path');
+const { merge } = require('webpack-merge');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const baseConfig = require('./webpack.base.js');
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
+
+module.exports = (env, argv) => {
+  const mode = argv.mode || 'production';
+
+  const envConfig = {};
+  let tmpEnvConfig = {};
+  const envFiles = ['.env', '.env.local', `.env.${mode}`, `.env.${mode}.local`];
+  envFiles.forEach((envFile) => {
+    const envFilePath = path.resolve(envFile);
+    if (fs.existsSync(envFilePath)) {
+      tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
+      const keys = Object.keys(tmpEnvConfig);
+      keys.forEach((k) => {
+        envConfig[k] = tmpEnvConfig[k];
+      });
+    }
+  });
+  envConfig.NODE_ENV = envConfig.NODE_ENV || 'production';
+  const keys = Object.keys(envConfig);
+  keys.forEach((k) => {
+    process.env[k] = envConfig[k];
+  });
+
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return merge(baseConfig, devConfig);
+    default:
+      return merge(baseConfig, prodConfig);
+  }
+};
+```
+
+- `dotenv` 是一个用于处理环境变量文件的库，使用 `dotenv.parse` 可以解析环境变量文件的内容，得到一个对象。
+- `fs` 是 node 的内置库，`fs.existsSync` 可以检查对应路径的文件是否存在，如果存在就调用 `fs.readFileSync` 来读取文件内容，并传递给 `dotenv.parse` 做解析。
+
+另外修改 `package.json` 里面的 `scripts` 字段。
+
+```json
+{
+  ...,
+  "scripts": {
+    "dev": "webpack serve --config ./config/webpack.config.js --progress --mode=development",
+    "staging-build": "webpack serve --config ./config/webpack.config.js --mode=staging",
+    "build": "webpack --config ./config/webpack.config.js --mode=production"
+  },
+  ...
+}
+
+```
+
+现在，我们就已经添加了一个 `staging` 环境，它会使用 `production` 模式的构建配置。
+
+为了在 js 里也能直接使用环境变量，我们还需要使用 `webpack.DefinePlugin` 指定对应的值。下面是完整的配置文件。
+
+```javascript
+const dotenv = require('dotenv');
+const fs = require('fs');
+const path = require('path');
+const { merge } = require('webpack-merge');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const webpack = require('webpack');
+const baseConfig = require('./webpack.base.js');
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
+
+module.exports = (env, argv) => {
+  const mode = argv.mode || 'production';
+
+  const envConfig = {};
+  let tmpEnvConfig = {};
+  const envFiles = ['.env', '.env.local', `.env.${mode}`, `.env.${mode}.local`];
+  envFiles.forEach((envFile) => {
+    const envFilePath = path.resolve(envFile);
+    if (fs.existsSync(envFilePath)) {
+      tmpEnvConfig = dotenv.parse(fs.readFileSync(envFilePath));
+      const keys = Object.keys(tmpEnvConfig);
+      keys.forEach((k) => {
+        envConfig[k] = tmpEnvConfig[k];
+      });
+    }
+  });
+  envConfig.NODE_ENV = envConfig.NODE_ENV || 'production';
+
+  const definePluginOptions = {};
+  const keys = Object.keys(envConfig);
+  keys.forEach((k) => {
+    process.env[k] = envConfig[k];
+    definePluginOptions[`process.env.${k}`] = JSON.stringify(envConfig[k]);
+  });
+  const plugins = [new webpack.DefinePlugin(definePluginOptions)];
+
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return merge(baseConfig, devConfig, {
+        plugins,
+      });
+    default:
+      return merge(baseConfig, prodConfig, {
+        plugins,
+      });
+  }
+};
+```
+
+到这里，我们已经添加了一个新构建模式 `staging`，并且可以在 js 代码里使用 `NODE_ENV` 和 `APP_MODE` 来获取构建模式对应的环境变量了，甚至你可以在 `${PROJECT_DIR}/public/index.html` 里使用它们（[参考](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)）。
+
+`webpack.EnvironmentPlugin` 的使用方式更加简单，有兴趣可以前去了解。
+
+## 格式化和检验代码
+
+`eslint` 是现在最热门的 js 校验工具，我们也可以在 `webpack` 中使用 `eslint`。
+
+```shell
+npm i @modyqyw/fabric@~2.7.0 -D
+npm i eslint@~7.31.0 -D
+npm i eslint-webpack-plugin@~2.5.4 -D
+```
+
+`eslint-webpack-plugin` 是 `eslint-loader` 的替代品，配置相差不大，而且 `eslint-webpack-plugin` 还修复了一些问题，推荐使用。
+
+安装完依赖之后，我们可以在根目录下建立一个新文件 `.eslintrc.js` 作为 `eslint` 的配置文件。这里用我自己封装的 `eslint` 规则来演示。
+
+```javascript
+// ${PROJECT_DIR}/.eslintrc.js
+/* eslint-disable import/no-extraneous-dependencies */
+const config = require('@modyqyw/fabric/eslint/react');
+
+module.exports = {
+  ...config,
+};
+```
+
+无论是开发环境还是生产环境都需要使用到 `eslint` 在构建过程中校验，所以我们需要在公共的配置文件里加入 `eslint-webpack-plugin`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.base.js
+/* eslint-disable import/no-extraneous-dependencies */
+...
+const ESLintPlugin = require('eslint-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new ESLintPlugin({
+      files: 'src',
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+      fix: true,
+    }),
+  ],
+  ...,
+};
+
+```
+
+- `/* eslint-disable import/no-extraneous-dependencies */` 表示让 `eslint` 在这个文件内忽略 `eslint-plugin-import` 里面的 `no-extraneous-dependencies` 规则，减少不必要的麻烦。
+- `files: src` 表示需要校验 `src` 目录，默认地，等同于 `${PROJECT_DIR}/src`。
+- `extensions: ['js', 'jsx', 'ts', 'tsx']` 表示需要校验 `.js`，`.jsx`，`.ts`，`.tsx`。
+- `fix: true`表示开启自动修复功能。
+
+现在，我们执行命令 `npm run dev` 和 `npm run build`，`eslint` 会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
+
+```shell
+ ERROR  Failed to compile with 1 errors
+
+ error
+
+
+.../webpack4-plus-demos/demo03/src/App.jsx
+  14:5  error  Do not use 'new' for side effects  no-new
+  26:11  error  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+
+✖ 2 problem (2 errors, 0 warnings)
+```
+
+我们只需要提示对应地改一下就可以了。前面加入 `Promise` 只是为了验证我们的配置，现在可以直接去掉。
+
+```javascript
+// ${PROJECT_DIR}/src/App.jsx
+import React, { useEffect } from 'react';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
+import iconWebpack from './assets/webpack.png';
+import './App.scss';
+
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.title = 'Hello World!';
+    }, 5000);
+  }, []);
+
+  return (
+    <Grid>
+      <Row>
+        <Col span={24}>
+          <img alt="webpack" className="icon" src={iconWebpack} />
+          <Button type="primary">
+            <Icon type="youzan" />
+            Hello Zent!
+          </Button>
+        </Col>
+      </Row>
+    </Grid>
+  );
+};
+
+export default App;
+```
+
+而 `stylelint` 是 css，less，sass，scss 等样式语言的校验工具，我们也可以在 `webpack` 中使用 `stylelint`。
+
+```shell
+npm i stylelint@~13.13.1 -D
+npm i stylelint-webpack-plugin@~2.2.2 -D
+```
+
+安装完依赖之后，我们可以在根目录下建立一个新文件 `stylelint.config.js` 作为 `stylelint` 的配置文件。这里用我自己封装的 `stylelint` 规则来演示。
+
+```javascript
+// ${PROJECT_DIR}/stylelint.config.js
+/* eslint-disable import/no-extraneous-dependencies */
+const config = require('@modyqyw/fabric/stylelint/scss');
+
+module.exports = {
+  ...config,
+};
+```
+
+无论是开发环境还是生产环境都需要使用到 `stylelint`，所以我们需要在公共的配置文件里加入 `stylelint-webpack-plugin`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.config.js
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
+module.exports = {
+  ...,
+  plugins: [
+    ...,
+    new StylelintPlugin({
+      files: 'src/**/*.scss',
+      fix: true,
+    }),
+  ],
+  ...,
+};
+
+```
+
+- `files: 'src/**/*.scss'` 表示让 `stylelint` 校验 `src` 目录下所有的 `.scss` 文件。
+- `fix: true` 表示开启自动修复功能。
+
+现在，我们执行命令 `npm run dev` 和 `npm run build`，`stylelint` 会自动执行。如果出现了不能自动修复的错误，会在命令行里面提示错误。
+
+考虑到我们的代码仓库大部分都是需要协作的 git 仓库，还有必要考虑使用 `editorconfig`，`prettier`，`commitizen`, `commitlint`，`husky`，`lint-staged` 等工具。因为和 `webpack` 关系不大，所以这里不做展开，但源代码中有给出示例配置。
+
+## 优化日志显示
+
+你可能会注意到，运行 `npm run build` 输出的信息，要比 `npm run dev` 输出的信息多得多。这是因为我们控制了 `webpack-dev-server` 输出的信息，类似地我们也可以控制 `webpack` 输出的信息。
+
+要控制 `webpack` 输出的信息很简单，只需要在 `${PROJECT_DIR}/config/webpack.prod.js` 中设置 `stats` 字段。
+
+```javascript
+// ${PROJECT_DIR}/webpack.prod.js
+module.exports = {
+  ...,
+  stats: 'minimal',
+  ...,
+};
+
+```
+
+`stats` 用于控制显示哪些信息，默认为 `normal`。修改成 `minimal`，就可以达到和 `webpack-dev-server` 的配置一样的效果。但在需要分析时，我更建议使用 `normal`。
+
+## 构建分析
+
+在开发大型项目的时候，往往需要根据实际情况去做特定的优化，所以我们需要一些分析工具。
+
+```shell
+npm i webpack-bundle-analyzer@~4.4.2 -D
+npm i speed-measure-webpack-plugin@~1.5.0 -D
+```
+
+使用 `webpack-bundle-analyzer` 来确定对应 `chunk` 的大小，然后考虑是否还需要调整。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.prod.js
+const { merge } = require('webpack-merge');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+module.exports = {
+  ...,
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      defaultSizes: 'stat',
+      openAnalyzer: false,
+    }),
+    ...,
+  ],
+  ...,
+};
+
+```
+
+现在执行 `npm run build`，会生成一个分析文件 `${PROJECT_DIR}/dist/report.html`，它里面的内容就是各个 `chunk` 的大小，可以据此来做适当的调整，具体调整方案和实际情况相关。
+
+而考量不同阶段打包的时间，就需要使用 `speed-measure-webpack-plugin`。
+
+```javascript
+// ${PROJECT_DIR}/config/webpack.config.js
+const { merge } = require('webpack-merge');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const webpack = require('webpack');
+const baseConfig = require('./webpack.base.js');
+const devConfig = require('./webpack.dev.js');
+const prodConfig = require('./webpack.prod.js');
+
+module.exports = (env, argv) => {
+  ...
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return merge(baseConfig, devConfig, {
+        plugins,
+      });
+    default:
+      return new SpeedMeasurePlugin().wrap(
+        merge(baseConfig, prodConfig, {
+          plugins,
+        }),
+      );
+  }
+};
+
+
+```
+
+现在执行 `npm run build`，命令行里面会显示我们使用的 `plugin` 和 `loader` 的耗时。我们可以根据这些耗时来做适当的调整，缩短等待时间。
+
+## TypeScript
+
+TypeScript 为 JavaScript 引入了类型系统等特性，大量实践证明它的价值，目前在现代应用开发中非常常见。
+
+```shell
+npm i typescript@~4.3.5 -D
+npm i @babel/preset-typescript@~7.14.5 -D
+```
+
+添加依赖后，我们先创建 TypeScript 配置文件 `${PROJECT_DIR}/tsconfig.json`，内容如下所示。
+
+```json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": "."
+  },
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
+```
+
+再创建定义文件 `${PROJECT_DIR}/index.d.ts`，内容如下所示。
+
+```ts
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.png';
+declare module '*.gif';
+declare module '*.svg';
+declare module '*.webp';
+declare module '*.css';
+declare module '*.less';
+declare module '*.scss';
+```
+
+然后，更新 `${PROJECT_DIR}/babel.config.json`，让 `babel` 能够正确处理 `.js`，`.jsx`，`.ts` 和 `.tsx` 文件。
+
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": { "version": 3, "proposals": true }
+      }
+    ],
+    "@babel/preset-react",
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true,
+        "allowDeclareFields": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "zent",
+      {
+        "libraryName": "zent",
+        "noModuleRewrite": false,
+        "automaticStyleImport": true,
+        "useRawStyle": true
+      }
+    ]
+  ]
+}
+```
+
+我们还需要调整 `${PROJECT_DIR}/config/webpack.base.js` 里 `babel-loader` 的相关部分。
+
+```js
+/* eslint-disable import/no-extraneous-dependencies */
+const path = require('path');
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
+module.exports = {
+  entry: {
+    app: path.resolve('src', 'index.tsx'),
+  },
+  ...,
+  module: {
+    rules: [
+      {
+        test: /\.(j|t)sx?$/,
+        include: /src/,
+        use: [{ loader: 'babel-loader' }],
+      },
+      ...,
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+};
+
+```
+
+最后，我们改写所有 `.js` 和 `.jsx` 文件，然后构建查看效果。
+
+`App.tsx`：
+
+```tsx
+import React, { useEffect } from 'react';
+import { LayoutRow as Row, LayoutCol as Col, LayoutGrid as Grid, Button, Icon } from 'zent';
+import iconWebpack from './assets/webpack.png';
+import './App.scss';
+
+const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.title = 'Hello World!';
+      console.log('process.env', process.env, process.env.NODE_ENV, process.env.APP_MODE);
+    }, 5000);
+  }, []);
+
+  return (
+    <Grid>
+      <Row>
+        <Col span={24}>
+          <img alt="webpack" className="icon" src={iconWebpack} />
+          <Button type="primary">
+            <Icon type="youzan" />
+            Hello Zent!
+          </Button>
+        </Col>
+      </Row>
+    </Grid>
+  );
+};
+
+export default App;
+```
+
+`index.tsx`：
+
+```tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.scss';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector('#root'),
+);
+```
+
+🎉 恭喜，你的第三个 webpack demo 已经完成啦～
+
+参考源代码见 [modyqyw/webpack4-plus-demos/demo03](https://github.com/ModyQyW/webpack4-plus-demos/tree/master/demo03)。
