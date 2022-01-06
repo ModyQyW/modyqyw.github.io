@@ -1,4 +1,4 @@
-# webpack (无持续维护)
+# webpack
 
 ::: danger
 
@@ -489,16 +489,16 @@ module.exports = {
 ```shell
 .
 ├── dist
-│   ├── bundle.js
-│   ├── favicon.ico
-│   └── index.html
+│   ├── bundle.js
+│   ├── favicon.ico
+│   └── index.html
 ├── package-lock.json
 ├── package.json
 ├── public
-│   ├── favicon.ico
-│   └── index.html
+│   ├── favicon.ico
+│   └── index.html
 ├── src
-│   └── index.js
+│   └── index.js
 └── webpack.config.js
 ```
 
@@ -1426,7 +1426,7 @@ npm i webpack-merge@~5.8.0 -D
 
 我们还要根据环境来使用不同的构建配置。基于可维护性考虑，我们应该拆分出不同环境的构建配置文件，最终根据环境暴露出对应环境的构建配置。
 
-首先修改`package.json`。
+首先修改 `package.json`。
 
 ```json
 {
@@ -1495,23 +1495,23 @@ if (process.env.NODE_ENV === 'development') {
 .
 ├── babel.config.json
 ├── config
-│   ├── webpack.base.js
-│   ├── webpack.config.js
-│   ├── webpack.dev.js
-│   └── webpack.prod.js
+│   ├── webpack.base.js
+│   ├── webpack.config.js
+│   ├── webpack.dev.js
+│   └── webpack.prod.js
 ├── dist
-│   ├── app.js
-│   ├── app.js.map
-│   ├── favicon.ico
-│   ├── fonts
-│   ├── index.html
-│   └── report.html
+│   ├── app.js
+│   ├── app.js.map
+│   ├── favicon.ico
+│   ├── fonts
+│   ├── index.html
+│   └── report.html
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
 ├── public
-│   ├── favicon.ico
-│   └── index.html
+│   ├── favicon.ico
+│   └── index.html
 └── src
     ├── assets
     ├── App.jsx

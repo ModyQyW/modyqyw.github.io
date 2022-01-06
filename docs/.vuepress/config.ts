@@ -26,18 +26,15 @@ export default defineUserConfig<DefaultThemeOptions>({
         children: [
           {
             text: '收集整理',
-            children: [
-              '/organize-and-summarize/roadmap.md',
-              '/organize-and-summarize/development.md',
-            ],
+            children: ['/organize-and-summarize/roadmap/', '/organize-and-summarize/development/'],
           },
           {
             text: '归纳输出',
             children: [
-              '/organize-and-summarize/environment.md',
-              '/organize-and-summarize/safety.md',
-              '/organize-and-summarize/webpack.md',
-              '/organize-and-summarize/server.md',
+              '/organize-and-summarize/environment/',
+              '/organize-and-summarize/safety/',
+              '/organize-and-summarize/webpack/',
+              '/organize-and-summarize/server/',
               {
                 text: 'leetcode',
                 link: '/organize-and-summarize/leetcode/0001.two-sum.md',
@@ -55,18 +52,15 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/organize-and-summarize/': [
         {
           text: '收集整理',
-          children: [
-            '/organize-and-summarize/roadmap.md',
-            '/organize-and-summarize/development.md',
-          ],
+          children: ['/organize-and-summarize/roadmap/', '/organize-and-summarize/development/'],
         },
         {
           text: '归纳输出',
           children: [
-            '/organize-and-summarize/environment.md',
-            '/organize-and-summarize/safety.md',
-            '/organize-and-summarize/webpack.md',
-            '/organize-and-summarize/server.md',
+            '/organize-and-summarize/environment/',
+            '/organize-and-summarize/safety/',
+            '/organize-and-summarize/webpack/',
+            '/organize-and-summarize/server/',
             {
               text: 'leetcode',
               children: fs.readdirSync(path.resolve('docs', 'organize-and-summarize', 'leetcode')),
