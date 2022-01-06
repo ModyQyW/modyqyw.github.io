@@ -1136,6 +1136,7 @@
 - [all-of-frontend](https://github.com/KieSun/all-of-frontend)
 - [木易杨前端进阶](https://muyiy.cn/)
 - [前端工程化](https://github.com/fouber/blog)
+- [浏览器和 Node.js 的 EventLoop 为什么这么设计？](https://mp.weixin.qq.com/s/gWeWV8VSRc-_NuYRCM-kTQ)
 - [畅销书《深入浅出 Vue.js》作者，在阿里淘系 1 年的收获成长](https://mp.weixin.qq.com/s/EF86vmJfZJ-hUReFHM8HDw)
 - [我在阿里是怎么工作的——写在阿里入职一周年](https://segmentfault.com/a/1190000022602612)
 - [我在阿里是怎么工作的——写在阿里入职两周年](https://juejin.cn/post/6973483540906246152)
