@@ -465,6 +465,7 @@
 - [LambdaTest](https://www.lambdatest.com/) - 在线执行实时互动和自动的跨浏览器测试
 - [jest](https://jestjs.io/) - 单元测试
   - [ts-jest](https://kulshekhar.github.io/ts-jest/)
+  - [esbuild-jest](https://github.com/aelbore/esbuild-jest)
 - [mocha](https://mochajs.org/)
 - [chai](https://www.chaijs.com/)
 - [sinon](https://sinonjs.org/)
@@ -982,6 +983,7 @@
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 - [serve](https://github.com/vercel/serve)
 - [ts-node](https://github.com/TypeStrong/ts-node)
+- [esno](https://github.com/antfu/esno)
 - [zx](https://github.com/google/zx)
 - [clipanion](https://mael.dev/clipanion/)
 - [jscodeshift](https://github.com/facebook/jscodeshift)
