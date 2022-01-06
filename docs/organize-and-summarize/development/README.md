@@ -568,6 +568,7 @@
   - [water.css](https://watercss.kognise.dev/) - 简单的样式集合，美化默认样式
   - [modern-normalize](https://github.com/sindresorhus/modern-normalize) - 面向现代浏览器的 css 样式重置
   - [pico.css](https://picocss.com/)
+- [heti](https://github.com/sivan/heti) - 专为中文内容展示设计的排版样式增强
 - [postcss](https://postcss.org/)
 - [less](http://lesscss.org/)
 - [sass/scss](https://sass-lang.com/)
