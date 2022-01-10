@@ -1064,6 +1064,7 @@
   - [nest](https://nestjs.com/) - 渐进式 node.js 框架，底层可使用 express 或 fastify
   - [midway.js](https://midwayjs.org/) - 适用于构建 Serverless 服务，传统应用、微服务，小程序后端的 node.js 框架
   - [farrow](https://github.com/farrow-js/farrow)
+  - [strapi](https://strapi.io/) - headless cms
   - [blitz](https://github.com/blitz-js/blitz) - 基于 next.js 的全栈框架
   - [remix](https://remix.run/) - 全栈框架
   - [apollo](https://www.apollographql.com/) - graphql 支持
