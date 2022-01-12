@@ -993,6 +993,12 @@
 
 ## 服务器端
 
+- 系统
+  - [rocky linux](https://rockylinux.org/)
+  - [alma linux](https://almalinux.org/)
+  - [debian](https://www.debian.org/)
+  - [ubuntu](https://ubuntu.com/)
+  - [fedora](https://getfedora.org/)
 - 接口规范
   - [json-rpc](https://www.jsonrpc.org/)
   - [restful api](https://restfulapi.net/)
