@@ -438,6 +438,7 @@ alias qs='open -a QSpace\ Pro'
   - [MacZip](https://ezip.awehunt.com/) - 压缩工具
   - [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载工具
   - [OpenEmu](https://openemu.org/)
+  - [pdf 补丁丁](https://github.com/wmjordan/PDFPatcher)
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
