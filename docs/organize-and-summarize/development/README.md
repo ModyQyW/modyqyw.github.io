@@ -631,7 +631,7 @@
   - [axios-retry](https://github.com/softonic/axios-retry)
   - [retry-axios](https://github.com/JustinBeckwith/retry-axios)
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
-  - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
+  - [faker.js](https://github.com/faker-js/faker) - 生成随机数据
 - [superagent](https://github.com/visionmedia/superagent) - 请求库
 - [mirage.js](https://miragejs.com/) - 接口 mock
 - [json-server](https://github.com/typicode/json-server)
@@ -1015,7 +1015,7 @@
   - [axios-retry](https://github.com/softonic/axios-retry)
   - [retry-axios](https://github.com/JustinBeckwith/retry-axios)
   - [mock.js](http://mockjs.com/) - 生成随机数据，拦截 ajax 请求
-  - [faker.js](https://github.com/Marak/faker.js) - 生成随机数据
+  - [faker.js](https://github.com/faker-js/faker) - 生成随机数据
   - [mirage.js](https://miragejs.com/) - 生成数据，拦截 ajax 请求
 - [superagent](https://github.com/visionmedia/superagent) - 请求库
 - [node.js](https://nodejs.org/en/) - 用 js 构建后端服务
