@@ -13,6 +13,7 @@
 ## 工作学习法
 
 - [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
+- [关于时间管理的底层逻辑与工具](https://mp.weixin.qq.com/s/eOYQ0nVYHKJ3MDskX7uk_A)
 - [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
 - [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
 - [代码整洁之道](https://weread.qq.com/web/reader/f3e322f0811e3913eg012ae9)
