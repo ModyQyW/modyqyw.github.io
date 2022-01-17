@@ -190,7 +190,7 @@
 - [pagic](https://pagic.cn/)
 - [hugo](https://gohugo.io/)
 - [jekyll](https://jekyllrb.com/)
-- [slidev](https://sli.dev/)
+- [slidev](https://sli.dev/) - 把 markdown 渲染成 PPT
 
 ## 界面和交互设计
 
@@ -297,6 +297,7 @@
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 - [renovate](https://github.com/renovatebot/renovate)
 - [turborepo](https://turborepo.org/)
+- [nx](https://nx.dev/)
 
 ## 规范
 
@@ -477,7 +478,8 @@
 - [uvu](https://github.com/lukeed/uvu)
 - [xv](https://github.com/typicode/xv)
 - [testing-library](https://testing-library.com/) - 组件测试
-- [cypress](https://docs.cypress.io/) - 端对端测试
+- [playwright](https://playwright.dev/) - 端对端测试
+- [cypress](https://docs.cypress.io/)
 - [nightwatch](https://nightwatchjs.org/)
 - [testcafe](https://devexpress.github.io/testcafe/)
 - [puppeteer](https://pptr.dev/)
@@ -583,6 +585,7 @@
 - [tinycolor2](https://github.com/bgrins/TinyColor) - 颜色处理
 - [@ctrl/tinycolor](https://github.com/scttcper/tinycolor) - 颜色处理
 - [tailwindcss](https://tailwindcss.com/) - 原子化 css
+  - [headless-ui](https://headlessui.dev/)
   - [windicss](https://windicss.org/)
   - [konsta](https://konstaui.com/)
   - [daisy-ui](https://daisyui.com/)
@@ -815,7 +818,6 @@
 - 状态管理
   - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
     - [constate](https://github.com/diegohaz/constate)
-    - [unstated-next](https://github.com/jamiebuilds/unstated-next)
   - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
   - [mobx](https://mobx.js.org/)
   - [recoil](https://recoiljs.org/)
@@ -850,7 +852,6 @@
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate)
-        - [unstated-next](https://github.com/jamiebuilds/unstated-next)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
@@ -877,7 +878,6 @@
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate)
-        - [unstated-next](https://github.com/jamiebuilds/unstated-next)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
@@ -893,7 +893,6 @@
     - 状态管理
       - [context](https://reactjs.org/docs/context.html) + [hooks](https://reactjs.org/docs/hooks-intro.html)
         - [constate](https://github.com/diegohaz/constate)
-        - [unstated-next](https://github.com/jamiebuilds/unstated-next)
       - [redux](https://redux.js.org/) + [react-redux](https://react-redux.js.org/) + [redux-toolkit](https://redux-toolkit.js.org/)
       - [mobx](https://mobx.js.org/)
       - [recoil](https://recoiljs.org/)
@@ -972,26 +971,27 @@
 
 ## CLI
 
+- [yeoman](https://yeoman.io/) - 构建 CLI
+- [oclif](https://oclif.io/) - 构建 CLI
+- [clipanion](https://mael.dev/clipanion/) - 构建 CLI
 - [commander](https://github.com/tj/commander.js)
-- [chalk](https://github.com/chalk/chalk)
-- [picocolors](https://github.com/alexeyraspopov/picocolors)
+- [chalk](https://github.com/chalk/chalk) - 命令行颜色
+- [picocolors](https://github.com/alexeyraspopov/picocolors) - 命令行颜色
 - [yargs](http://yargs.js.org/)
 - [yargs-parser](https://github.com/yargs/yargs-parser)
 - [inquirer](https://github.com/SBoudrias/Inquirer.js)
 - [meow](https://github.com/sindresorhus/meow)
 - [ora](https://github.com/sindresorhus/ora)
-- [rimraf](https://github.com/isaacs/rimraf)
-- [cross-env](https://github.com/kentcdodds/cross-env)
-- [@vue/cli](https://github.com/vuejs/vue-cli)
+- [rimraf](https://github.com/isaacs/rimraf) - 跨平台删除文件
+- [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台设置环境变量
 - [ncc](https://github.com/vercel/ncc)
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
-- [serve](https://github.com/vercel/serve)
-- [ts-node](https://github.com/TypeStrong/ts-node)
-- [esno](https://github.com/antfu/esno)
-- [zx](https://github.com/google/zx)
-- [clipanion](https://mael.dev/clipanion/)
-- [jscodeshift](https://github.com/facebook/jscodeshift)
-- [gogocode](https://gogocode.io/zh)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates) - 检查依赖更新
+- [serve](https://github.com/vercel/serve) - 本地托管文件
+- [ts-node](https://github.com/TypeStrong/ts-node) - 直接运行 ts 文件
+- [esno](https://github.com/antfu/esno) - esbuild 驱动的 ts 和 node 运行时
+- [zx](https://github.com/google/zx) - 基于 Node 拓展了 Bash 支持
+- [jscodeshift](https://github.com/facebook/jscodeshift) - 代码转换
+- [gogocode](https://gogocode.io/zh) - 代码转换
 
 ## 服务器端
 
