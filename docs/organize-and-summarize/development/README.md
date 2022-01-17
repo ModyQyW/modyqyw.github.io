@@ -982,6 +982,8 @@
 - [inquirer](https://github.com/SBoudrias/Inquirer.js)
 - [meow](https://github.com/sindresorhus/meow)
 - [ora](https://github.com/sindresorhus/ora)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [dotenv-expand](https://github.com/motdotla/dotenv-expand)
 - [rimraf](https://github.com/isaacs/rimraf) - 跨平台删除文件
 - [cross-env](https://github.com/kentcdodds/cross-env) - 跨平台设置环境变量
 - [ncc](https://github.com/vercel/ncc)
