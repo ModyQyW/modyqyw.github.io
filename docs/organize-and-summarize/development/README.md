@@ -450,6 +450,7 @@
   - [rolldown](https://github.com/Brooooooklyn/rolldown)
 - [parcel-next](https://v2.parceljs.org/)
   - [awesome-parcel](https://github.com/parcel-bundler/awesome-parcel)
+  - [parcel-css](https://github.com/parcel-bundler/parcel-css)
 - [unplugin](https://github.com/unjs/unplugin)
   - [unplugin-vue2-script-setup](https://github.com/antfu/unplugin-vue2-script-setup)
   - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
@@ -1126,6 +1127,10 @@
 - [forever](https://github.com/foreversd/forever) - 进程守护
 - [你的登录接口真的安全吗](https://juejin.cn/post/6859214952704999438)
 - [spider-flow](https://www.spiderflow.org/) - 爬虫平台
+
+## rust
+
+- [rust 语言圣经](https://github.com/sunface/rust-course)
 
 ## 持续成长
 
