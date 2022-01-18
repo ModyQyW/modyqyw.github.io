@@ -551,6 +551,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "html",
     "javascript",
     "javascriptreact",
+    "svelte",
     "typescript",
     "typescriptreact",
     "markdown",
@@ -573,6 +574,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "markdown",
     "plaintext",
     "scss",
+    "svelte",
     "text",
     "typescript",
     "typescriptreact",
@@ -582,18 +584,16 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   ],
   // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
   "css.validate": false,
-  // vscode 自带功能，指定比较差异时的视图，这里设置为内联视图
-  "diffEditor.renderSideBySide": false,
   // vscode 自带功能，控制编辑区成对括号着色
   "editor.bracketPairColorization.enabled": true,
   // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // vscode 自带功能，控制编辑区字体大小
+  "editor.fontSize": 14,
+  // vscode 自带功能，控制编辑区字体族
+  "editor.fontFamily": "'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace",
   // vscode 自带功能，控制编辑区成对括号指引线着色
   "editor.guides.bracketPairs": "active",
-  // vscode 自带功能，控制输入时是否自动弹出建议
-  "editor.quickSuggestions": {
-    "strings": true
-  },
   // vscode 自带功能，控制是否渲染垂直标尺
   "editor.rulers": [{ "column": 100 }],
   // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
@@ -602,11 +602,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.tabSize": 2,
   // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
   "editor.wordWrap": "on",
-  // vscode 自带功能，emmet 辅助编写代码
-  "emmet.includeLanguages": {
-    "json": "jsonc",
-    "vue-html": "html"
-  },
   // 插件 ESLint 使用，指定需要 ESLint 校验的语言
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
   // 插件 ESLint 使用，指定是否一直显示状态，这是设置为是
@@ -641,9 +636,9 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   // vscode 自带功能，指定是否校验 scss，这里设置为否
   "scss.validate": false,
   // 插件 stylelint 使用，指定需要提示的文件
-  "stylelint.snippet": ["css", "less", "scss", "vue"],
+  "stylelint.snippet": ["css", "less", "scss", "vue", "svelte"],
   // 插件 stylelint 使用，指定需要校验的文件
-  "stylelint.validate": ["css", "less", "scss", "vue"],
+  "stylelint.validate": ["css", "less", "scss", "vue", "svelte"],
   // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
   "todo-tree.highlights.enabled": true,
   // 插件 Todo Tree 使用，指定特定高亮格式
