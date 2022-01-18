@@ -356,6 +356,7 @@ npm uninstall -g corepack
 npm i -g --registry=https://registry.npmmirror.com @types/node
 npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
 npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
+npm i -g --registry=https://registry.npmmirror.com esno # https://github.com/antfu/esno
 npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
 npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
 npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
@@ -364,7 +365,6 @@ npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.i
 npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
 npm i -g --registry=https://registry.npmmirror.com sort-package-json # https://github.com/keithamus/sort-package-json
 npm i -g --registry=https://registry.npmmirror.com stylelint # https://stylelint.io/
-npm i -g --registry=https://registry.npmmirror.com ts-node # https://typestrong.org/ts-node/
 npm i -g --registry=https://registry.npmmirror.com typescript # https://www.typescriptlang.org/
 npm i -g --registry=https://registry.npmmirror.com yarn # https://classic.yarnpkg.com/
 ```
@@ -486,25 +486,29 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
 配置可以通过 Github 账号同步，你也可以使用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)。
 
+- [小霸王](https://marketplace.visualstudio.com/items?itemName=gamedilong.anes)
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Auto NPX](https://marketplace.visualstudio.com/items?itemName=antfu.auto-npx) - vscode 终端自动解析本地 node 命令
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
+- [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf) - 变量命名参考
+- [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor) - 可视化提交信息编辑
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
 - [docs-yaml](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml)
 - [Doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor) - 安全和质量审核工具
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - 支持 .editorconfig 文件
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
-- [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+- [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - 样式主题
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
-- [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) - 支持 go
 - [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind) - 为 tailwindcss 类名排序
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
+- [Impost Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) - 显示导入的包体积
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
@@ -515,20 +519,23 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - 支持 mdx
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - 支持 python
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Style Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-style-helper) - 在 JSX 中更快速地编写内联样式，并辅助开发 CSS、LESS、SASS 等样式文件
+- [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex) - 正则匹配预览
 - [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) - 支持 rust
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
 - [stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - 增强 tailwindcss 体验
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
 - [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 处理尾部多余空格
+- [vscode-faker]](<https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker>) - 生成假数据
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - vue 2 + vue 3 支持
-- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题，也可以考虑 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)，[Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
+- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
 - [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 windicss 和 tailwindcss 体验
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
