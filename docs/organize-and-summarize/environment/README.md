@@ -239,7 +239,9 @@ brew install --cask baidunetdisk # https://pan.baidu.com/download
 brew install --cask bitwarden # https://bitwarden.com/
 # cheatsheet，长按 Command 键显示当前应用的快捷键
 brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
-# clashx，v2ray 客户端
+# clashx 客户端
+# 机场测试和简介 https://www.duyaoss.com/archives/3/
+# 海豚湾 https://cdn99.manage.hitun.io/auth/register?affid=217911
 # holytech https://store.holytech.tech/aff.php?aff=2849
 # 520ssr https://www.520ssr.co/auth/register?code=oiwx
 # iplc.vip https://portal.uuks.club/clientarea.php
@@ -391,7 +393,7 @@ export PATH=/usr/local/opt/openjdk/bin:$PATH
 # homebrew
 export PATH=/usr/local/sbin:$PATH
 
-# v2ray
+# 代理
 export https_proxy=http://127.0.0.1:7890
 export http_proxy=http://127.0.0.1:7890
 export all_proxy=socks5://127.0.0.1:7890
@@ -400,6 +402,30 @@ export all_proxy=socks5://127.0.0.1:7890
 # alias qs='open -a QSpace'
 alias qs='open -a QSpace\ Pro'
 
+```
+
+- 设置 `npm`、`yarn` 和 `git` 的代理。
+
+```sh
+npm config set proxy http://127.0.0.1:7890
+npm config set https-proxy http://127.0.0.1:7890
+yarn config set proxy http://127.0.0.1:7890
+yarn config set https-proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+git config --global http.proxy http://127.0.0.1:7890
+```
+
+- 设置 `npm` 和 `yarn` 源。
+
+```sh
+npm config set registry https://registry.npmjs.org/
+yarn config set registry https://registry.yarnpkg.com/
+```
+
+- 清一次 `npm` 和 `yarn` 的缓存。
+
+```sh
+npm cache clear --force -g && yarn cache clean -g
 ```
 
 - 一些额外推荐的东西。
