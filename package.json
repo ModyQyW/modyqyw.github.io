@@ -26,7 +26,7 @@
   "devDependencies": {
     "@babel/core": "~7.16.7",
     "@babel/eslint-parser": "~7.16.5",
-    "@commitlint/cli": "~16.0.1",
+    "@commitlint/cli": "~16.1.0",
     "@modyqyw/fabric": "~4.7.3",
     "@typescript-eslint/eslint-plugin": "~5.8.0",
     "@typescript-eslint/parser": "~5.8.0",
