@@ -434,7 +434,6 @@ npm cache clear --force -g && yarn cache clean -g
   - Adobe After Effects - 专业视频处理
   - Adobe Photoshop - 专业图片处理
   - Affinity Photo - 专业图片处理
-  - [AIXcoder](https://aixcoder.com/) - 代码自动补全工具
   - [AltStore](https://altstore.io/) - 直接安装 ipa
   - [Apifox](https://www.apifox.cn/) - 类 Postman 工具
   - [ApiPost](https://www.apipost.cn/) - 类 Postman 工具
@@ -457,7 +456,6 @@ npm cache clear --force -g && yarn cache clean -g
   - [handbrake](https://handbrake.fr/) - 格式转换
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [hoppscotch](https://hoppscotch.io/) - 在线类 postman 工具
-  - [Kite](https://www.kite.com/) - 代码自动补全工具
   - [krita](https://krita.org/) - 专业图片处理
   - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
@@ -469,9 +467,8 @@ npm cache clear --force -g && yarn cache clean -g
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
-  - [squoosh](https://squoosh.app/) - 图片处理
+  - [squoosh](https://squoosh.app/) - 在线图片压缩
   - [Table Plus](https://tableplus.com/) - 数据库工具
-  - [TabNine](https://www.tabnine.com/) - 代码自动补全工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
   - [tinypng](https://tinypng.com/) - 在线图片压缩
   - [ToDesk](https://www.todesk.com/) - 远程桌面
@@ -485,6 +482,7 @@ npm cache clear --force -g && yarn cache clean -g
   - [滴答清单](https://dida365.com/) - 高效完成任务和规划时间
   - [钉钉](https://www.dingtalk.com/)
   - [飞书](https://www.feishu.cn/)
+  - [改图鸭](https://www.gaituya.com/) - 图片处理
   - [稿定设计图片编辑器](https://www.uupoop.com/)
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
@@ -517,7 +515,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Auto NPX](https://marketplace.visualstudio.com/items?itemName=antfu.auto-npx) - vscode 终端自动解析本地 node 命令
-- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - 运行代码，跑 ts 需要全局安装 ts-node
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf) - 变量命名参考
 - [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor) - 可视化提交信息编辑
@@ -529,29 +526,25 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
+- [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI 代码补全
 - [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - 样式主题
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
-- [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind) - 为 tailwindcss 类名排序
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [Impost Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) - 显示导入的包体积
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
-- [Less IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-less) - 支持 less
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
 - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
-- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx) - 支持 mdx
 - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) - 支持在 vscode 中直接查看大量格式
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff) - 比较文本
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 支持 prettier
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - 支持 python
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - 快速测试 js 和 ts
 - [React Style Helper](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-style-helper) - 在 JSX 中更快速地编写内联样式，并辅助开发 CSS、LESS、SASS 等样式文件
 - [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex) - 正则匹配预览
-- [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) - 支持 rust
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
@@ -564,7 +557,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - vue 2 + vue 3 支持
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) - 图标主题
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek) - 允许对 vue 单文件组件 peek 和 goto definition
-- [WindiCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - 增强 windicss 和 tailwindcss 体验
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - 支持 yaml
 
 `uni-*` 可以考虑 [uni-helper](https://marketplace.visualstudio.com/items?itemName=ModyQyW.vscode-uni-helper)。
@@ -619,8 +611,12 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.fontSize": 14,
   // vscode 自带功能，控制编辑区字体族
   "editor.fontFamily": "'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace",
+  // vscode 自带功能，保存时自动格式化
+  "editor.formatOnSave": true,
   // vscode 自带功能，控制编辑区成对括号指引线着色
   "editor.guides.bracketPairs": "active",
+  // vscode 自带功能，控制是否显示行内建议，Copilot 插件使用
+  "editor.inlineSuggest.enabled": true,
   // vscode 自带功能，控制是否渲染垂直标尺
   "editor.rulers": [{ "column": 100 }],
   // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
@@ -630,7 +626,14 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
   "editor.wordWrap": "on",
   // 插件 ESLint 使用，指定需要 ESLint 校验的语言
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "svelte",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
   // 插件 ESLint 使用，指定是否一直显示状态，这是设置为是
   "eslint.alwaysShowStatus": true,
   // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
@@ -654,6 +657,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "*.nvue": "vue",
     "*.ux": "vue"
   },
+  // 指定是否自动 fetch
+  "git.autofetch": true,
   // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
@@ -710,9 +715,6 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
   "workbench.iconTheme": "vscode-icons",
   // vscode 自带功能，控制编辑区在保存文件时的行为
-  "[html]": {
-    "editor.formatOnSave": true
-  },
   "[javascript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -748,26 +750,22 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
       "source.fixAll.stylelint": true
     }
   },
+  "[svelte]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    }
+  },
   "[vue]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
     }
   },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.formatOnSave": true
-  },
   "[markdown]": {
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": true
     }
-  },
-  "[yaml]": {
-    "editor.formatOnSave": true
   }
 }
 ```
@@ -786,8 +784,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.1/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.1/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.2/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.2/bin/npm"
 }
 ```
 
