@@ -251,8 +251,6 @@ brew install cocoapods
 brew install --cask drawio # https://www.draw.io/
 # fliqlo，屏保时钟
 brew install --cask fliqlo # https://fliqlo.com/
-# flutter
-brew install --cask flutter
 # git，代码版本管理
 brew install git # https://git-scm.com/
 brew install git-lfs # https://git-lfs.github.com/
@@ -260,8 +258,6 @@ git config --global core.autocrlf false
 git config --global init.defaultBranch main
 git config --global user.name "YOUR_NAME_HERE"
 git config --global user.email "YOUR_EMAIL_HERE"
-# go
-brew install go
 # gradle
 brew install gradle
 # iina，音视频播放器
@@ -303,8 +299,6 @@ brew install --cask qq # https://im.qq.com/macqq/
 brew install --cask rectangle # https://rectangleapp.com/
 # responsively，帮助响应式开发
 brew install --cask responsively # https://responsively.app/
-# rust
-brew install rust
 # snipaste，屏幕截图
 brew install --cask snipaste # https://www.snipaste.com/
 # sourcetree，git gui
