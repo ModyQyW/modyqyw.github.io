@@ -463,6 +463,7 @@ npm cache clear --force -g && yarn cache clean -g
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
   - [MacZip](https://ezip.awehunt.com/) - 压缩工具
   - [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载工具
+  - [OpenBoard](https://openboard.ch/) - 白板工具
   - [OpenEmu](https://openemu.org/)
   - [pdf 补丁丁](https://github.com/wmjordan/PDFPatcher)
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
