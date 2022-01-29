@@ -231,8 +231,6 @@ brew tap homebrew/cask-versions # https://github.com/Homebrew/homebrew-cask-vers
 brew install --cask adrive
 # android studio，开发 Android 用
 brew install --cask android-studio # https://developer.android.com/studio/
-# another redis desktop manager，redis gui
-brew install --cask another-redis-desktop-manager # https://github.com/qishibo/AnotherRedisDesktopManager/
 # baidu netdisk，百度网盘，自建网盘参考 seafile，owncloud 和 nextcloud
 brew install --cask baidunetdisk # https://pan.baidu.com/download
 # bitwarden，管理密码
@@ -287,11 +285,6 @@ brew services start mongodb/brew/mongodb-community # start when launched
 brew install --cask motrix # https://motrix.app/
 # mounty，重新挂载受写保护的 NTFS 卷
 brew install --cask mounty # https://mounty.app/
-# mysql，关系型数据库
-brew install mysql
-brew services start mysql # start when launched
-# mysqlworkbench，mysql gui
-brew install --cask mysqlworkbench # https://www.mysql.com/products/workbench/
 # obs，录屏工具
 brew install --cask obs # https://obsproject.com/
 # openineditor-lite，在编辑器快速打开当前目录
