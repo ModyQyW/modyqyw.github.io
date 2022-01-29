@@ -10,6 +10,8 @@ const repo =
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
     : 'https://gitee.com/ModyQyW/ModyQyW';
 const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
+const apiKey = mode === 'github' ? 'githubApiKey' : 'giteeApiKey';
+const indexName = mode === 'github' ? 'githubIndexName' : 'giteeIndexName';
 
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
@@ -99,8 +101,15 @@ export default defineUserConfig<DefaultThemeOptions>({
     },
   },
   plugins: [
+    // [
+    //   '@vuepress/plugin-docsearch',
+    //   {
+    //     apiKey,
+    //     indexName,
+    //   },
+    // ],
     ['@vuepress/plugin-search'],
-    ['@vuepress/pwa'],
+    ['@vuepress/plugin-pwa'],
     ['@vuepress/plugin-pwa-popup'],
     [
       '@vuepress/plugin-shiki',
