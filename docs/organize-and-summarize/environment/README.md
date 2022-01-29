@@ -246,7 +246,6 @@ brew install --cask cheatsheet # https://www.cheatsheetapp.com/CheatSheet/
 # 520ssr https://www.520ssr.co/auth/register?code=oiwx
 # iplc.vip https://portal.uuks.club/clientarea.php
 # https://github.com/freefq/free
-brew install --cask clashx # https://github.com/yichengchen/clashX
 brew install --cask clashx-pro
 # cocoapods
 brew install cocoapods
