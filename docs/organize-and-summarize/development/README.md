@@ -290,14 +290,15 @@
   - [nvs](https://github.com/jasongin/nvs)
   - [fnm](https://github.com/Schniz/fnm)
   - [volta](https://volta.sh/)
-- [npm](https://github.com/npm/cli)
-- [yarn](https://yarnpkg.com/)
-- [pnpm](https://pnpm.js.org/)
-- [changesets](https://github.com/atlassian/changesets)
+- 包管理
+  - [npm](https://github.com/npm/cli)
+  - [yarn](https://yarnpkg.com/)
+  - [pnpm](https://pnpm.js.org/)
+- monorepo
+  - [monorepo.tools](https://monorepo.tools/)
+  - [changesets](https://github.com/atlassian/changesets)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 - [renovate](https://github.com/renovatebot/renovate)
-- [turborepo](https://turborepo.org/)
-- [nx](https://nx.dev/)
 
 ## 规范
 
