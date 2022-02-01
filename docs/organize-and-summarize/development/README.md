@@ -1120,8 +1120,11 @@
 - [podman](https://podman.io/) - docker 替代品
 - [kubernetes](https://kubernetes.io/) - 容器编排引擎，支持自动化部署、大规模可伸缩、应用容器化管理
   - [knative](https://knative.dev/)
-- [tasuku](https://github.com/privatenumber/tasuku) - 任务
+- [tasuku](https://github.com/privatenumber/tasuku) - 任务调度
+- [cron](https://github.com/kelektiv/node-cron) - 任务调度
 - [node-cron](https://github.com/node-cron/node-cron) - 任务调度
+- [node-schedule](https://github.com/node-schedule/node-schedule) - 任务调度
+- [agenda](https://github.com/agenda/agenda) - 任务调度
 - [bree](https://github.com/breejs/bree) - 任务调度
 - [winston](https://github.com/winstonjs/winston) - 日志工具
 - [nodemon](https://nodemon.io/) - 进程守护
