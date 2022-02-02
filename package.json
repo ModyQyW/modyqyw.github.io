@@ -24,8 +24,8 @@
     "vue": "~3.2.29"
   },
   "devDependencies": {
-    "@babel/core": "~7.16.12",
-    "@babel/eslint-parser": "~7.16.5",
+    "@babel/core": "~7.17.0",
+    "@babel/eslint-parser": "~7.17.0",
     "@commitlint/cli": "~16.1.0",
     "@modyqyw/fabric": "~4.10.1",
     "@typescript-eslint/eslint-plugin": "~5.10.1",
