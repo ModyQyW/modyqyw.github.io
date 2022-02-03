@@ -10,9 +10,10 @@
     "dev": "pnpm run dev:github",
     "dev:gitee": "cross-env MODE=gitee vuepress dev docs",
     "dev:github": "cross-env MODE=github vuepress dev docs",
-    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint",
-    "lint:eslint": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
+    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint && pnpm run lint:stylelint",
+    "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
+    "lint:stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,svelte}\" --fix --allow-empty-input --ignore-path=.gitignore",
     "prepare": "is-ci || husky install"
   },
   "config": {
@@ -20,16 +21,13 @@
       "path": "./node_modules/@commitlint/cz-commitlint"
     }
   },
-  "dependencies": {
-    "vue": "~3.2.29"
-  },
   "devDependencies": {
-    "@babel/core": "~7.16.12",
-    "@babel/eslint-parser": "~7.16.5",
+    "@babel/core": "~7.17.0",
+    "@babel/eslint-parser": "~7.17.0",
     "@commitlint/cli": "~16.1.0",
-    "@modyqyw/fabric": "~4.10.1",
-    "@typescript-eslint/eslint-plugin": "~5.10.1",
-    "@typescript-eslint/parser": "~5.10.1",
+    "@modyqyw/fabric": "~4.11.0",
+    "@typescript-eslint/eslint-plugin": "~5.10.2",
+    "@typescript-eslint/parser": "~5.10.2",
     "@vuepress/plugin-debug": "~2.0.0-beta.33",
     "@vuepress/plugin-docsearch": "~2.0.0-beta.35",
     "@vuepress/plugin-pwa": "~2.0.0-beta.35",
@@ -41,9 +39,10 @@
     "eslint": "~8.8.0",
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
-    "lint-staged": "~12.3.2",
+    "lint-staged": "~12.3.3",
     "markdownlint-cli": "~0.30.0",
     "prettier": "~2.5.1",
+    "stylelint": "~14.3.0",
     "typescript": "~4.5.5",
     "vuepress-plugin-copy-code2": "~2.0.0-alpha.9",
     "vuepress-plugin-seo2": "~2.0.0-alpha.9",
