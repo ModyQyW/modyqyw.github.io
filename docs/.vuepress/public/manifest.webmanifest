@@ -1,7 +1,7 @@
 {
   "name": "ModyQyW's Site",
   "short_name": "ModyQyW's Site",
-  "description": "基于 vuepress 建设的个人站，如有问题请尝试强制刷新。",
+  "description": "基于 vuepress 建设的个人站，如有问题请尝试强制刷新或邮件联系。",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",

@@ -16,7 +16,7 @@ const indexName = mode === 'github' ? 'githubIndexName' : 'giteeIndexName';
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
-  description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新。',
+  description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新或邮件联系。',
   head: [
     ['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' }],
   ],
@@ -28,42 +28,91 @@ export default defineUserConfig<DefaultThemeOptions>({
         children: [
           {
             text: '收集整理',
-            children: ['/organize-and-summarize/roadmap/', '/organize-and-summarize/development/'],
+            children: [
+              '/organize-and-summarize/conduct/',
+              '/organize-and-summarize/roadmap/',
+              '/organize-and-summarize/development/',
+            ],
           },
           {
             text: '归纳输出',
             children: [
               '/organize-and-summarize/environment/',
-              '/organize-and-summarize/safety/',
+              '/organize-and-summarize/server/',
               {
                 text: 'webpack',
                 link: '/organize-and-summarize/webpack/introduction.md',
               },
-              '/organize-and-summarize/server/',
-              {
-                text: 'leetcode',
-                link: '/organize-and-summarize/leetcode/0001.two-sum.md',
-              },
+              '/organize-and-summarize/safety/',
             ],
           },
         ],
       },
+      { text: 'leetcode', link: '/leetcode/0001.two-sum.md' },
       { text: '关于', link: '/about/' },
     ],
     logo: '/images/w256.png',
     repo,
     repoLabel,
     sidebar: {
-      '/organize-and-summarize/': [
+      '/organize-and-summarize/conduct/': [
         {
           text: '收集整理',
-          children: ['/organize-and-summarize/roadmap/', '/organize-and-summarize/development/'],
+          children: [
+            '/organize-and-summarize/conduct/',
+            '/organize-and-summarize/roadmap/',
+            '/organize-and-summarize/development/',
+          ],
         },
+      ],
+      '/organize-and-summarize/roadmap/': [
+        {
+          text: '收集整理',
+          children: [
+            '/organize-and-summarize/conduct/',
+            '/organize-and-summarize/roadmap/',
+            '/organize-and-summarize/development/',
+          ],
+        },
+      ],
+      '/organize-and-summarize/development/': [
+        {
+          text: '收集整理',
+          children: [
+            '/organize-and-summarize/conduct/',
+            '/organize-and-summarize/roadmap/',
+            '/organize-and-summarize/development/',
+          ],
+        },
+      ],
+      '/organize-and-summarize/environment/': [
         {
           text: '归纳输出',
           children: [
             '/organize-and-summarize/environment/',
+            '/organize-and-summarize/server/',
+            { text: 'webpack', link: '/organize-and-summarize/webpack/introduction.md' },
             '/organize-and-summarize/safety/',
+          ],
+        },
+      ],
+      '/organize-and-summarize/server/': [
+        {
+          text: '归纳输出',
+          children: [
+            '/organize-and-summarize/environment/',
+            '/organize-and-summarize/server/',
+            { text: 'webpack', link: '/organize-and-summarize/webpack/introduction.md' },
+            '/organize-and-summarize/safety/',
+          ],
+        },
+      ],
+      '/organize-and-summarize/webpack/': [
+        {
+          text: '归纳输出',
+          children: [
+            '/organize-and-summarize/environment/',
+            '/organize-and-summarize/server/',
             {
               text: 'webpack',
               children: [
@@ -81,12 +130,27 @@ export default defineUserConfig<DefaultThemeOptions>({
                 '/organize-and-summarize/webpack/acknowledgement.md',
               ],
             },
-            '/organize-and-summarize/server/',
-            {
-              text: 'leetcode',
-              children: fs.readdirSync(path.resolve('docs', 'organize-and-summarize', 'leetcode')),
-            },
+            '/organize-and-summarize/safety/',
           ],
+        },
+      ],
+      '/organize-and-summarize/safety/': [
+        {
+          text: '归纳输出',
+          children: [
+            '/organize-and-summarize/environment/',
+            '/organize-and-summarize/server/',
+            { text: 'webpack', link: '/organize-and-summarize/webpack/introduction.md' },
+            '/organize-and-summarize/safety/',
+          ],
+        },
+      ],
+      '/leetcode/': [
+        {
+          text: 'leetcode',
+          children: fs
+            .readdirSync(path.resolve('docs', 'leetcode'))
+            .map((item) => `/leetcode/${item}`),
         },
       ],
     },
@@ -117,9 +181,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         theme: 'github-dark',
       },
     ],
-    ['@vuepress/plugin-debug'],
     // ['vuepress-plugin-copy-code2'],
-    ['vuepress-plugin-seo2'],
-    ['vuepress-plugin-sitemap2'],
+    ['vuepress-plugin-seo2', { hostname }],
+    ['vuepress-plugin-sitemap2', { hostname }],
   ],
 });
