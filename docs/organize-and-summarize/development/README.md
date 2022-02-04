@@ -13,6 +13,7 @@
 ## 工作学习法
 
 - [滴答清单时间管理方法论和实践](https://help.dida365.com/tasks)
+- [基于开源工具的人生管理](https://mp.weixin.qq.com/s/Qo3nktgRU2M8SMxzGBD0vg)
 - [关于时间管理的底层逻辑与工具](https://mp.weixin.qq.com/s/eOYQ0nVYHKJ3MDskX7uk_A)
 - [搭建知识框架](https://mp.weixin.qq.com/s/YzImrD4dmNe1SjBHztOofg)
 - [10x 程序员工作法](https://time.geekbang.org/column/intro/148)
@@ -26,6 +27,9 @@
 - [领域驱动设计](https://weread.qq.com/web/reader/44f32bb071e1265344f0481)
 - [领域驱动设计精粹](https://weread.qq.com/web/reader/e963250072021a5ce9608a6)
 - [实现领域驱动设计](https://weread.qq.com/web/reader/f5032ce071fd5a64f50b0f6)
+- [为什么我学一门语言就已耗尽所有，而有些人还能同时学习多门语言？](https://mp.weixin.qq.com/s/QWQbTfbxupFf2v0hhpyWbQ)
+- [想明白这些以后，我没那么害怕工作了](https://mp.weixin.qq.com/s/DF3yhoUigAcpRcIPMuXyLQ)
+- [工作中的话术](https://mp.weixin.qq.com/s/TUBpoeK1pj5-vsBhVChu2g)
 
 ## 计算机基础
 
