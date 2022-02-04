@@ -7,7 +7,6 @@ specifiers:
   '@modyqyw/fabric': ~4.11.0
   '@typescript-eslint/eslint-plugin': ~5.10.2
   '@typescript-eslint/parser': ~5.10.2
-  '@vuepress/plugin-debug': ~2.0.0-beta.33
   '@vuepress/plugin-docsearch': ~2.0.0-beta.35
   '@vuepress/plugin-pwa': ~2.0.0-beta.35
   '@vuepress/plugin-pwa-popup': ~2.0.0-beta.35
@@ -23,19 +22,19 @@ specifiers:
   prettier: ~2.5.1
   stylelint: ~14.3.0
   typescript: ~4.5.5
+  vue: ~3.2.9
+  vuepress: ~2.0.0-beta.35
   vuepress-plugin-copy-code2: ~2.0.0-alpha.9
   vuepress-plugin-seo2: ~2.0.0-alpha.9
   vuepress-plugin-sitemap2: ~2.0.0-alpha.9
-  vuepress-vite: ~2.0.0-beta.35
 
 devDependencies:
   '@babel/core': 7.17.0
   '@babel/eslint-parser': 7.17.0_@babel+core@7.17.0+eslint@8.8.0
   '@commitlint/cli': 16.1.0
-  '@modyqyw/fabric': 4.11.0_30e33746a06995496cafe6d35b684fea
+  '@modyqyw/fabric': 4.11.0_6b5880aa148027a89b8bd83d34ef5750
   '@typescript-eslint/eslint-plugin': 5.10.2_2595c2126aec4d4b6e944b931dabb4c2
   '@typescript-eslint/parser': 5.10.2_eslint@8.8.0+typescript@4.5.5
-  '@vuepress/plugin-debug': 2.0.0-beta.33
   '@vuepress/plugin-docsearch': 2.0.0-beta.35
   '@vuepress/plugin-pwa': 2.0.0-beta.35
   '@vuepress/plugin-pwa-popup': 2.0.0-beta.35
@@ -51,10 +50,11 @@ devDependencies:
   prettier: 2.5.1
   stylelint: 14.3.0
   typescript: 4.5.5
+  vue: 3.2.29
+  vuepress: 2.0.0-beta.35
   vuepress-plugin-copy-code2: 2.0.0-alpha.9
   vuepress-plugin-seo2: 2.0.0-alpha.9
   vuepress-plugin-sitemap2: 2.0.0-alpha.9
-  vuepress-vite: 2.0.0-beta.35
 
 packages:
 
@@ -274,8 +274,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /@babel/helper-create-class-features-plugin/7.17.0_@babel+core@7.17.0:
-    resolution: {integrity: sha512-S3+IHG72pJFb0RmJgeXg/TjVKt641ZsLla028haXJjdqCf9eccE5r1JsdO//L7nzTDzXjtC+hwV/lrkEb2+t0Q==}
+  /@babel/helper-create-class-features-plugin/7.17.1_@babel+core@7.17.0:
+    resolution: {integrity: sha512-JBdSr/LtyYIno/pNnJ75lBcqc3Z1XXujzPanHqjvvrhOA+DTceTFuJi8XjmWTZh4r3fsdfqaCMN0iZemdkxZHQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -536,7 +536,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.17.0
-      '@babel/helper-create-class-features-plugin': 7.17.0_@babel+core@7.17.0
+      '@babel/helper-create-class-features-plugin': 7.17.1_@babel+core@7.17.0
       '@babel/helper-plugin-utils': 7.16.7
     transitivePeerDependencies:
       - supports-color
@@ -549,7 +549,7 @@ packages:
       '@babel/core': ^7.12.0
     dependencies:
       '@babel/core': 7.17.0
-      '@babel/helper-create-class-features-plugin': 7.17.0_@babel+core@7.17.0
+      '@babel/helper-create-class-features-plugin': 7.17.1_@babel+core@7.17.0
       '@babel/helper-plugin-utils': 7.16.7
       '@babel/plugin-syntax-class-static-block': 7.14.5_@babel+core@7.17.0
     transitivePeerDependencies:
@@ -666,7 +666,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.17.0
-      '@babel/helper-create-class-features-plugin': 7.17.0_@babel+core@7.17.0
+      '@babel/helper-create-class-features-plugin': 7.17.1_@babel+core@7.17.0
       '@babel/helper-plugin-utils': 7.16.7
     transitivePeerDependencies:
       - supports-color
@@ -680,7 +680,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.0
       '@babel/helper-annotate-as-pure': 7.16.7
-      '@babel/helper-create-class-features-plugin': 7.17.0_@babel+core@7.17.0
+      '@babel/helper-create-class-features-plugin': 7.17.1_@babel+core@7.17.0
       '@babel/helper-plugin-utils': 7.16.7
       '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.17.0
     transitivePeerDependencies:
@@ -1624,7 +1624,7 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /@modyqyw/fabric/4.11.0_30e33746a06995496cafe6d35b684fea:
+  /@modyqyw/fabric/4.11.0_6b5880aa148027a89b8bd83d34ef5750:
     resolution: {integrity: sha512-14D7nRpOT1yp0IgR3StTH+l2jzdHIEDojLF1FfhBlLa6LFF8q5sjtzYxEgMyHHqihBkpxoKJLOtZ1wacseeZmg==}
     engines: {node: ^12.22.6 || ^14.17.6 || ^16.8.0}
     hasBin: true
@@ -1680,9 +1680,9 @@ packages:
       tsutils: 3.21.0_typescript@4.5.5
       typescript: 4.5.5
       update-notifier: 5.1.0
-      vue-class-component: 7.2.6
+      vue-class-component: 7.2.6_vue@3.2.29
       vue-eslint-parser: 8.2.0_eslint@8.8.0
-      vue-property-decorator: 9.1.2_vue-class-component@7.2.6
+      vue-property-decorator: 9.1.2_9381735f4e93070737cb1871246dd3f0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -2357,14 +2357,6 @@ packages:
       - supports-color
     dev: true
 
-  /@vuepress/client/2.0.0-beta.33:
-    resolution: {integrity: sha512-uTCJ1oA+qHWPNqVt4lz2zdrSVBMN+gZ3zND2Lf2zwUCf1SOjsz3FHICESKWx9CX58BxnEiqdU3ic2NoeGhCSOw==}
-    dependencies:
-      '@vuepress/shared': 2.0.0-beta.33
-      vue: 3.2.29
-      vue-router: 4.0.12_vue@3.2.29
-    dev: true
-
   /@vuepress/client/2.0.0-beta.35:
     resolution: {integrity: sha512-oQj+fDvfDDJ+fPpcVVRJLeVX1QmnLCcpLBxPBVhqMD0WAFkj+sCBaeq0sQc5CwDaNysDcN71ACeuEpLDOEtCgQ==}
     dependencies:
@@ -2372,19 +2364,6 @@ packages:
       '@vuepress/shared': 2.0.0-beta.35
       vue: 3.2.29
       vue-router: 4.0.12_vue@3.2.29
-    dev: true
-
-  /@vuepress/core/2.0.0-beta.33:
-    resolution: {integrity: sha512-ZOZ6Vc8lmA+qSof3l8By7ogu1qdGdI3OweZHzbP7FkGC1Dd0gL5aCqmkZQqdhBCOv/iPo5jmDaXpI1Vvoj4VUg==}
-    dependencies:
-      '@vuepress/client': 2.0.0-beta.33
-      '@vuepress/markdown': 2.0.0-beta.33
-      '@vuepress/shared': 2.0.0-beta.33
-      '@vuepress/utils': 2.0.0-beta.33
-      gray-matter: 4.0.3
-      toml: 3.0.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@vuepress/core/2.0.0-beta.35:
@@ -2396,20 +2375,6 @@ packages:
       '@vuepress/utils': 2.0.0-beta.35
       gray-matter: 4.0.3
       toml: 3.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@vuepress/markdown/2.0.0-beta.33:
-    resolution: {integrity: sha512-/xgnH+7C1rnHL4RBQHDc1IpMryoj2ML6isxfYXlXmzFMR4d28YP63iTVytElMXB7RM1rIiz+a4zDnL1mcaXAmg==}
-    dependencies:
-      '@types/markdown-it': 12.2.3
-      '@vuepress/shared': 2.0.0-beta.33
-      '@vuepress/utils': 2.0.0-beta.33
-      markdown-it: 12.3.2
-      markdown-it-anchor: 8.4.1_d643ca6eb40ae68ab966a77bead78073
-      markdown-it-emoji: 2.0.0
-      mdurl: 1.0.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2462,18 +2427,6 @@ packages:
       '@vuepress/utils': 2.0.0-beta.35
       markdown-it: 12.3.2
       markdown-it-container: 3.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@vuepress/plugin-debug/2.0.0-beta.33:
-    resolution: {integrity: sha512-pk5y05fL18dnJKX4jPvL2ZVB/ekdeEUZicexoToBA52IMLQ6TnaSfY0p36o20BY3ajMj/JSz9krKb641G1Kc3Q==}
-    dependencies:
-      '@vuepress/client': 2.0.0-beta.33
-      '@vuepress/core': 2.0.0-beta.33
-      '@vuepress/utils': 2.0.0-beta.33
-      vue: 3.2.29
-      vue-router: 4.0.12_vue@3.2.29
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2631,12 +2584,6 @@ packages:
       - supports-color
     dev: true
 
-  /@vuepress/shared/2.0.0-beta.33:
-    resolution: {integrity: sha512-9xCLpqYV5nBy8U/HlDXtBdMuC+DvQearJyHSvnBS7vBBlTMP89cWe4s4M4meNW0OZ5vltaaeMOL2oMIwCMjVrA==}
-    dependencies:
-      '@vue/shared': 3.2.29
-    dev: true
-
   /@vuepress/shared/2.0.0-beta.35:
     resolution: {integrity: sha512-sU+ekNDv22YG16B1XmZyMD+A94QbAUgTp5FTs+X2POU9UQCIZCuFhgTM9TfAnSgD/6lnbp2Aljwg5fJAidPQmw==}
     dependencies:
@@ -2671,24 +2618,6 @@ packages:
       - node-sass
       - supports-color
       - webpack
-    dev: true
-
-  /@vuepress/utils/2.0.0-beta.33:
-    resolution: {integrity: sha512-as1LEvIR6cLjsrcvPTqxhKb6peWKZ+AsBTC0ksnpemM+SSlOr5pBU3rDQEfhXzEvEKrTR4HHevDRndBc5P0LRw==}
-    dependencies:
-      '@types/debug': 4.1.7
-      '@types/fs-extra': 9.0.13
-      '@types/hash-sum': 1.0.0
-      '@vuepress/shared': 2.0.0-beta.33
-      chalk: 4.1.2
-      debug: 4.3.3
-      fs-extra: 10.0.0
-      globby: 11.1.0
-      hash-sum: 2.0.0
-      ora: 5.4.1
-      upath: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@vuepress/utils/2.0.0-beta.35:
@@ -3027,7 +2956,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001306
+      caniuse-lite: 1.0.30001307
       fraction.js: 4.1.2
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3183,8 +3112,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001306
-      electron-to-chromium: 1.4.63
+      caniuse-lite: 1.0.30001307
+      electron-to-chromium: 1.4.64
       escalade: 3.1.1
       node-releases: 2.0.1
       picocolors: 1.0.0
@@ -3274,8 +3203,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001306:
-    resolution: {integrity: sha512-Wd1OuggRzg1rbnM5hv1wXs2VkxJH/AA+LuudlIqvZiCvivF+wJJe2mgBZC8gPMgI7D76PP5CTx8Luvaqc1V6OQ==}
+  /caniuse-lite/1.0.30001307:
+    resolution: {integrity: sha512-+MXEMczJ4FuxJAUp0jvAl6Df0NI/OfW1RWEE61eSmzS7hw6lz4IKutbhbXendwq8BljfFuHtu26VWsg4afQ7Ng==}
     dev: true
 
   /chalk/2.4.2:
@@ -4015,8 +3944,8 @@ packages:
       jake: 10.8.2
     dev: true
 
-  /electron-to-chromium/1.4.63:
-    resolution: {integrity: sha512-e0PX/LRJPFRU4kzJKLvTobxyFdnANCvcoDCe8XcyTqP58nTWIwdsHvXLIl1RkB39X5yaosLaroMASWB0oIsgCA==}
+  /electron-to-chromium/1.4.64:
+    resolution: {integrity: sha512-8mec/99xgLUZCIZZq3wt61Tpxg55jnOSpxGYapE/1Ma9MpFEYYaz4QNYm0CM1rrnCo7i3FRHhbaWjeCLsveGjQ==}
     dev: true
 
   /emoji-regex/10.0.0:
@@ -4762,7 +4691,7 @@ packages:
       merge-stream: 2.0.0
       npm-run-path: 4.0.1
       onetime: 5.1.2
-      signal-exit: 3.0.6
+      signal-exit: 3.0.7
       strip-final-newline: 2.0.0
     dev: true
 
@@ -7457,7 +7386,7 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       onetime: 2.0.1
-      signal-exit: 3.0.6
+      signal-exit: 3.0.7
     dev: true
 
   /restore-cursor/3.1.0:
@@ -7465,7 +7394,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       onetime: 5.1.2
-      signal-exit: 3.0.6
+      signal-exit: 3.0.7
     dev: true
 
   /retry/0.13.1:
@@ -7759,8 +7688,8 @@ packages:
       object-inspect: 1.12.0
     dev: true
 
-  /signal-exit/3.0.6:
-    resolution: {integrity: sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==}
+  /signal-exit/3.0.7:
+    resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
   /sitemap/7.1.1:
@@ -8723,10 +8652,12 @@ packages:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
     dev: true
 
-  /vue-class-component/7.2.6:
+  /vue-class-component/7.2.6_vue@3.2.29:
     resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==}
     peerDependencies:
       vue: ^2.0.0
+    dependencies:
+      vue: 3.2.29
     dev: true
 
   /vue-demi/0.12.1_vue@3.2.29:
@@ -8762,13 +8693,14 @@ packages:
       - supports-color
     dev: true
 
-  /vue-property-decorator/9.1.2_vue-class-component@7.2.6:
+  /vue-property-decorator/9.1.2_9381735f4e93070737cb1871246dd3f0:
     resolution: {integrity: sha512-xYA8MkZynPBGd/w5QFJ2d/NM0z/YeegMqYTphy7NJQXbZcuU6FC6AOdUAcy4SXP+YnkerC6AfH+ldg7PDk9ESQ==}
     peerDependencies:
       vue: '*'
       vue-class-component: '*'
     dependencies:
-      vue-class-component: 7.2.6
+      vue: 3.2.29
+      vue-class-component: 7.2.6_vue@3.2.29
     dev: true
 
   /vue-router/4.0.12_vue@3.2.29:
@@ -8868,6 +8800,22 @@ packages:
       '@vuepress/cli': 2.0.0-beta.35
       '@vuepress/core': 2.0.0-beta.35
       '@vuepress/theme-default': 2.0.0-beta.35
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - fibers
+      - less
+      - node-sass
+      - sass
+      - stylus
+      - supports-color
+      - webpack
+    dev: true
+
+  /vuepress/2.0.0-beta.35:
+    resolution: {integrity: sha512-WMuL1s7DeyWRBFaByYMDSF4n9K/asLQXW1OJL9yxyTFmTl/VGs3llEjBqwbLhSmktz2lBlq67RtDLjVTE8PJPA==}
+    hasBin: true
+    dependencies:
+      vuepress-vite: 2.0.0-beta.35
     transitivePeerDependencies:
       - '@vue/composition-api'
       - fibers
@@ -9190,7 +9138,7 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       is-typedarray: 1.0.0
-      signal-exit: 3.0.6
+      signal-exit: 3.0.7
       typedarray-to-buffer: 3.1.5
     dev: true
 
@@ -9200,7 +9148,7 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       is-typedarray: 1.0.0
-      signal-exit: 3.0.6
+      signal-exit: 3.0.7
       typedarray-to-buffer: 4.0.0
     dev: true
 
