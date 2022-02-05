@@ -39,7 +39,7 @@
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
     "lint-staged": "~12.3.3",
-    "markdownlint-cli": "~0.30.0",
+    "markdownlint-cli": "~0.31.0",
     "prettier": "~2.5.1",
     "stylelint": "~14.3.0",
     "typescript": "~4.5.5",
