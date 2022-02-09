@@ -22,12 +22,12 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "~7.17.0",
+    "@babel/core": "~7.17.2",
     "@babel/eslint-parser": "~7.17.0",
     "@commitlint/cli": "~16.1.0",
-    "@modyqyw/fabric": "~4.11.0",
-    "@typescript-eslint/eslint-plugin": "~5.10.2",
-    "@typescript-eslint/parser": "~5.10.2",
+    "@modyqyw/fabric": "~4.11.2",
+    "@typescript-eslint/eslint-plugin": "~5.11.0",
+    "@typescript-eslint/parser": "~5.11.0",
     "@vuepress/plugin-docsearch": "~2.0.0-beta.35",
     "@vuepress/plugin-pwa": "~2.0.0-beta.35",
     "@vuepress/plugin-pwa-popup": "~2.0.0-beta.35",
@@ -39,14 +39,14 @@
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
     "lint-staged": "~12.3.3",
-    "markdownlint-cli": "~0.30.0",
+    "markdownlint-cli": "~0.31.0",
     "prettier": "~2.5.1",
-    "stylelint": "~14.3.0",
+    "stylelint": "~14.4.0",
     "typescript": "~4.5.5",
-    "vue": "~3.2.9",
+    "vue": "~3.2.30",
     "vuepress": "~2.0.0-beta.35",
-    "vuepress-plugin-copy-code2": "~2.0.0-alpha.9",
-    "vuepress-plugin-seo2": "~2.0.0-alpha.9",
-    "vuepress-plugin-sitemap2": "~2.0.0-alpha.9"
+    "vuepress-plugin-copy-code2": "~2.0.0-alpha.15",
+    "vuepress-plugin-seo2": "~2.0.0-alpha.15",
+    "vuepress-plugin-sitemap2": "~2.0.0-alpha.15"
   }
 }
