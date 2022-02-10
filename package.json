@@ -41,7 +41,7 @@
     "lint-staged": "~12.3.3",
     "markdownlint-cli": "~0.31.0",
     "prettier": "~2.5.1",
-    "stylelint": "~14.4.0",
+    "stylelint": "~14.5.0",
     "typescript": "~4.5.5",
     "vue": "~3.2.30",
     "vuepress": "~2.0.0-beta.35",
