@@ -18,6 +18,7 @@
 
 ## 浏览器插件
 
+- AdGuard - 广告屏蔽
 - BitWarden - 密码管理
 - Dark Reader - 暗黑模式
 - Gitako - 便捷查看 Github
@@ -25,7 +26,6 @@
 - React Developer Tools - react 浏览器调试工具
 - Sync Sofa - 同步看剧
 - Tampermonkey - 插件工具
-- uBlock Origin - 广告屏蔽，配置参考 [cjxlist](https://github.com/cjx82630/cjxlist)
 - Vue.js devtools - vue 浏览器调试工具
 - Wappalyzer - 网页依赖分析
 - Window Resizer - 便捷调试响应式网页
