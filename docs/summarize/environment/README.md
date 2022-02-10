@@ -2,7 +2,7 @@
 
 所有配置仅供参考，且尽可能使用统一的包管理器安装。Windows 上推荐使用 [Chocolatey](https://chocolatey.org/)，macOS 上推荐使用 [Homebrew](https://brew.sh/)，均不推荐换源。以下给出在 macOS (intel) 上的应用和配置参考，并补充说明在 Windows 上大致如何操作。
 
-安装系统可以考虑 [WinPE](https://www.wepe.com.cn/) 和 [Ventoy](https://www.ventoy.net/)。
+安装系统可以考虑 [FirPE](https://firpe.cn/)、[WinPE](https://www.wepe.com.cn/) 和 [Ventoy](https://www.ventoy.net/)。
 
 ![just pirate it](./just-pirate-it.png)
 
