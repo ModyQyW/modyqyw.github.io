@@ -32,20 +32,20 @@ HTTPS 可以在 Cloudflare 里直接启用。
 
 生成自己的 RSA 密钥，可以参考 [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)，注意命令应该使用 `-t rsa`。
 
-```sh
+```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" # 生成 RSA 密钥，注意替换邮箱，一直回车即可，默认生成在 ~/.ssh 下
 cat ~/.ssh/id_rsa.pub # 显示自己的 RSA 公钥
 ```
 
 在页面上一键登录，修改 ssh，避免 ssh 频繁断开。这里使用了 `vim`，`nano` 也是一个不错的选择，可以自行了解。
 
-```sh
+```shell
 sudo vim /etc/ssh/sshd_config
 ```
 
 修改以下三行并保存。
 
-```sh
+```shell
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 
 ClientAliveInterval 120
@@ -54,31 +54,31 @@ ClientAliveCountMax 720
 
 然后使用终端登录，把自己的 RSA 公钥添加到 `~/.ssh/authorized_keys` 和 `~/.ssh/authorized_keys2`，之后就可以免密登录了。
 
-```sh
+```shell
 ssh root@[公网IP] # root 是默认账号，添加完公钥之后就可以一句命令免密登录了
 ```
 
 升级一下依赖。
 
-```sh
+```shell
 sudo apt update
 ```
 
 配置 `ntp`，用于同步时间。
 
-```sh
+```shell
 sudo apt install ntp
 ```
 
 配置 `curl`。
 
-```sh
+```shell
 sudo apt install curl
 ```
 
 配置 `git`。
 
-```sh
+```shell
 sudo apt install git
 ```
 
@@ -86,7 +86,7 @@ sudo apt install git
 
 接着安装 [nginx](https://www.nginx.com/)，用于提供网站访问。
 
-```sh
+```shell
 sudo apt install nginx # 安装 nginx
 sudo ufw app list # 查看防火墙可选配置
 sudo ufw allow 'Nginx Full' # 放行 nginx
@@ -96,7 +96,7 @@ sudo ufw status # 确认防火墙状态
 sudo systemctl status nginx # 检查 nginx 状态
 ```
 
-```sh
+```shell
 # 正确的防火墙状态示例
 Status: active
 
@@ -109,7 +109,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 
 ```
 
-```sh
+```shell
 # 正确的 nginx 状态示例
 ● nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
@@ -127,7 +127,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 
 一些相关的命令另外列写在下面。
 
-```sh
+```shell
 sudo systemctl stop nginx # 停止 nginx 服务
 sudo systemctl start nginx # 启动 nginx 服务
 sudo systemctl restart nginx # 重启 nginx 服务
@@ -138,7 +138,7 @@ sudo systemctl enable nginx # 允许 nginx 随系统启动
 
 默认地，`nginx` 会使用 `/var/www/html` 作为网站目录，但是对于一个服务器托管多个网站的情况，这相当不方便。所以，我使用 `/var/www/[网站域名]/html` 来托管我不同的网站，域名就使用 `modyqyw.top` 的二级域名，全部交给 Cloudflare 解析。
 
-```sh
+```shell
 sudo mkdir -p /var/www/test.modyqyw.top/html # 测试网站用，bt.modyqyw.top
 sudo mkdir -p /var/www/bt.modyqyw.top/html # 宝塔面板用，bt.modyqyw.top
 sudo chown -R $USER:$USER /var/www/test.modyqyw.top/html # 修改权限
@@ -149,7 +149,7 @@ sudo chown -R $USER:$USER /var/www/bt.modyqyw.top/html
 
 然后在两个目录下都创建一个 `.html` 文件，用于之后检查效果。
 
-```sh
+```shell
 sudo vim /var/www/test.modyqyw.top/html/index.html
 sudo vim /var/www/bt.modyqyw.top/html/index.html
 ```
@@ -180,11 +180,11 @@ sudo vim /var/www/bt.modyqyw.top/html/index.html
 
 为了避免可能的哈希桶内存问题，需要修改一下 `nginx` 配置。
 
-```sh
+```shell
 sudo vim /etc/nginx/nginx.conf
 ```
 
-```sh
+```shell
 ...
 http {
     ...
@@ -196,11 +196,11 @@ http {
 
 检查一下 `nginx` 配置。
 
-```sh
+```shell
 sudo nginx -t
 ```
 
-```sh
+```shell
 # 没有问题的提示示例
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
@@ -210,7 +210,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 首先在 `/etc/ssl/certs/cloudflare.crt` [保存 Cloudflare 根证书](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca#4-required-for-some-add-cloudflare-origin-ca-root-certificates)。注意，不能存在空行。
 
-```sh
+```shell
 sudo vim /etc/ssl/certs/cloudflare.crt
 ```
 
@@ -224,20 +224,20 @@ sudo vim /etc/ssl/certs/cloudflare.crt
 
 在服务器上创建相应的证书文件，保存 Cloudflare 返回的数据。注意，不能存在空行。
 
-```sh
+```shell
 sudo vim /etc/ssl/certs/cert.pem # 保存证书部分的数据
 sudo vim /etc/ssl/private/key.pem # 保存私钥部分的数据
 ```
 
 添加相应的域名配置。
 
-```sh
+```shell
 sudo rm /etc/nginx/sites-enabled/default # 已经有域名配置了，移除默认的 html 文件
 sudo vim /etc/nginx/sites-available/test.modyqyw.top
 sudo vim /etc/nginx/sites-available/bt.modyqyw.top
 ```
 
-```sh
+```shell
 server {
     listen 80;
     listen [::]:80;
@@ -278,14 +278,14 @@ server {
 
 把域名配置链接到 `nginx` 读取的位置。
 
-```sh
+```shell
 sudo ln -s /etc/nginx/sites-available/test.modyqyw.top /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/bt.modyqyw.top /etc/nginx/sites-enabled/
 ```
 
 再次检查 `nginx` 配置，没问题的话重启 `nginx` 服务。
 
-```sh
+```shell
 sudo nginx -t
 sudo systemctl restart nginx
 ```
