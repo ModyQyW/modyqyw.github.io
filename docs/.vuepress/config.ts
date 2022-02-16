@@ -140,7 +140,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         theme: 'github-dark',
       },
     ],
-    // ['vuepress-plugin-copy-code2'],
+    ['vuepress-plugin-copy-code2'],
     ['vuepress-plugin-seo2', { hostname }],
     ['vuepress-plugin-sitemap2', { hostname }],
   ],
