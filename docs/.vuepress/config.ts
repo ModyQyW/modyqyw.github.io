@@ -51,7 +51,8 @@ export default defineUserConfig<DefaultThemeOptions>({
           '/summarize/what',
           '/summarize/environment/',
           '/summarize/server/',
-          { text: 'webpack', link: '/summarize/webpack/01.introduction.md' },
+          { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
+          { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
           '/summarize/safety/',
         ],
       },
@@ -96,22 +97,41 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/summarize/what',
             '/summarize/environment/',
             '/summarize/server/',
-            { text: 'webpack', link: '/summarize/webpack/01.introduction.md' },
+            { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
+            { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
             '/summarize/safety/',
           ],
         },
       ],
-      '/summarize/webpack/': [
+      '/summarize/webpack5/': [
         {
           text: '归纳输出',
           children: [
             '/summarize/environment/',
             '/summarize/server/',
             {
-              text: 'webpack',
+              text: 'webpack5',
               children: fs
-                .readdirSync(path.resolve('docs', 'summarize', 'webpack'))
-                .map((item) => `/summarize/webpack/${item}`),
+                .readdirSync(path.resolve('docs', 'summarize', 'webpack5'))
+                .map((item) => `/summarize/webpack5/${item}`),
+            },
+            { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
+            '/summarize/safety/',
+          ],
+        },
+      ],
+      '/summarize/webpack4/': [
+        {
+          text: '归纳输出',
+          children: [
+            '/summarize/environment/',
+            '/summarize/server/',
+            { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
+            {
+              text: 'webpack4',
+              children: fs
+                .readdirSync(path.resolve('docs', 'summarize', 'webpack4'))
+                .map((item) => `/summarize/webpack4/${item}`),
             },
             '/summarize/safety/',
           ],
