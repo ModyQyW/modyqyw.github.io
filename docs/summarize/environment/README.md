@@ -348,6 +348,7 @@ npm i -g --registry=https://registry.npmmirror.com esno # https://github.com/ant
 npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
 npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
 npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
+npm i -g --registry=https://registry.npmmirror.com pm2 # https://pm2.keymetrics.io/
 npm i -g --registry=https://registry.npmmirror.com pnpm # https://pnpm.io/
 npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.io/
 npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
