@@ -24,13 +24,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          # 选择要使用的 node 版本
           node-version: '16'
           cache: 'pnpm'
 
-      # 如果缓存没有命中，安装依赖
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       # 运行 Gitee 构建脚本
       - name: Build Gitee Pages
