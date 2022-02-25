@@ -451,7 +451,6 @@ alias qs='open -a QSpace\ Pro'
   - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
-  - [语雀](https://www.yuque.com/) - 知识库工具
   - [在线工具](https://tool.lu/)
 
 ## Windows 补充说明
