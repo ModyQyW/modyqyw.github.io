@@ -13,6 +13,19 @@ const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
 const apiKey = mode === 'github' ? 'githubApiKey' : 'giteeApiKey';
 const indexName = mode === 'github' ? 'githubIndexName' : 'giteeIndexName';
 
+const getFiles = (dirs: string[]) =>
+  fs.readdirSync(path.resolve('docs', ...dirs)).map((item) => `/${dirs.concat(item).join('/')}`);
+
+const getOrganizeFiles = (dirs: string[]) => getFiles(['organize', ...dirs]);
+
+const getSummarizeFiles = (dirs: string[]) => getFiles(['summarize', ...dirs]);
+
+const organizeDevelopmentFiles = getOrganizeFiles(['development']);
+const summarizeWebpack5Files = getSummarizeFiles(['webpack5']);
+const summarizeWebpack4Files = getSummarizeFiles(['webpack4']);
+const summarizeLeetcodeFiles = getSummarizeFiles(['leetcode']);
+const summarizeVue3Files = getSummarizeFiles(['vue3']);
+
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
@@ -42,7 +55,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           '/organize/what',
           '/organize/conduct/',
           '/organize/roadmap/',
-          { text: '开发相关', link: '/organize/development/01.introduction.md' },
+          { text: '开发相关', link: organizeDevelopmentFiles[0] },
         ],
       },
       {
@@ -51,10 +64,11 @@ export default defineUserConfig<DefaultThemeOptions>({
           '/summarize/what',
           '/summarize/environment/',
           '/summarize/server/',
-          { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
-          { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
+          { text: 'webpack5', link: summarizeWebpack5Files[0] },
+          { text: 'webpack4', link: summarizeWebpack4Files[0] },
           '/summarize/safety/',
-          { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
+          { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
+          { text: 'vue3', link: summarizeVue3Files[0] },
         ],
       },
       { text: '关于', link: '/about/' },
@@ -70,7 +84,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/organize/what',
             '/organize/conduct/',
             '/organize/roadmap/',
-            { text: '开发相关', link: '/organize/development/01.introduction.md' },
+            { text: '开发相关', link: organizeDevelopmentFiles[0] },
           ],
         },
       ],
@@ -81,12 +95,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/organize/what',
             '/organize/conduct/',
             '/organize/roadmap/',
-            {
-              text: '开发相关',
-              children: fs
-                .readdirSync(path.resolve('docs', 'organize', 'development'))
-                .map((item) => `/organize/development/${item}`),
-            },
+            { text: '开发相关', children: organizeDevelopmentFiles },
           ],
         },
       ],
@@ -97,10 +106,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             '/summarize/what',
             '/summarize/environment/',
             '/summarize/server/',
-            { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
-            { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
+            { text: 'webpack5', link: summarizeWebpack5Files[0] },
+            { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
-            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
+            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
+            { text: 'vue3', link: summarizeVue3Files[0] },
           ],
         },
       ],
@@ -108,17 +118,14 @@ export default defineUserConfig<DefaultThemeOptions>({
         {
           text: '归纳输出',
           children: [
+            '/summarize/what',
             '/summarize/environment/',
             '/summarize/server/',
-            {
-              text: 'webpack5',
-              children: fs
-                .readdirSync(path.resolve('docs', 'summarize', 'webpack5'))
-                .map((item) => `/summarize/webpack5/${item}`),
-            },
-            { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
+            { text: 'webpack5', children: summarizeWebpack5Files },
+            { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
-            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
+            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
+            { text: 'vue3', link: summarizeVue3Files[0] },
           ],
         },
       ],
@@ -126,31 +133,45 @@ export default defineUserConfig<DefaultThemeOptions>({
         {
           text: '归纳输出',
           children: [
+            '/summarize/what',
             '/summarize/environment/',
             '/summarize/server/',
-            { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
-            {
-              text: 'webpack4',
-              children: fs
-                .readdirSync(path.resolve('docs', 'summarize', 'webpack4'))
-                .map((item) => `/summarize/webpack4/${item}`),
-            },
+            { text: 'webpack5', link: summarizeWebpack5Files[0] },
+            { text: 'webpack4', children: summarizeWebpack4Files },
             '/summarize/safety/',
-            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
+            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
+            { text: 'vue3', link: summarizeVue3Files[0] },
           ],
         },
       ],
       '/summarize/leetcode/': [
-        '/summarize/environment/',
-        '/summarize/server/',
-        { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
-        { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
-        '/summarize/safety/',
         {
-          text: 'leetcode',
-          children: fs
-            .readdirSync(path.resolve('docs', 'summarize', 'leetcode'))
-            .map((item) => `/summarize/leetcode/${item}`),
+          text: '归纳输出',
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { text: 'webpack5', link: summarizeWebpack5Files[0] },
+            { text: 'webpack4', link: summarizeWebpack4Files[0] },
+            '/summarize/safety/',
+            { text: 'leetcode', children: summarizeLeetcodeFiles },
+            { text: 'vue3', link: summarizeVue3Files[0] },
+          ],
+        },
+      ],
+      '/summarize/vue3': [
+        {
+          text: '归纳输出',
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { text: 'webpack5', link: summarizeWebpack5Files[0] },
+            { text: 'webpack4', link: summarizeWebpack4Files[0] },
+            '/summarize/safety/',
+            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
+            { text: 'vue3', children: summarizeVue3Files },
+          ],
         },
       ],
     },
