@@ -54,9 +54,9 @@ export default defineUserConfig<DefaultThemeOptions>({
           { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
           { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
           '/summarize/safety/',
+          { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
         ],
       },
-      { text: 'leetcode', link: '/leetcode/0001.two-sum.md' },
       { text: '关于', link: '/about/' },
     ],
     logo: '/images/w256.png',
@@ -100,6 +100,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
             { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
             '/summarize/safety/',
+            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
           ],
         },
       ],
@@ -117,6 +118,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
             { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
             '/summarize/safety/',
+            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
           ],
         },
       ],
@@ -134,15 +136,21 @@ export default defineUserConfig<DefaultThemeOptions>({
                 .map((item) => `/summarize/webpack4/${item}`),
             },
             '/summarize/safety/',
+            { text: 'leetcode', link: '/summarize/leetcode/0001.two-sum.md' },
           ],
         },
       ],
-      '/leetcode/': [
+      '/summarize/leetcode/': [
+        '/summarize/environment/',
+        '/summarize/server/',
+        { text: 'webpack5', link: '/summarize/webpack5/01.introduction.md' },
+        { text: 'webpack4', link: '/summarize/webpack4/01.introduction.md' },
+        '/summarize/safety/',
         {
           text: 'leetcode',
           children: fs
-            .readdirSync(path.resolve('docs', 'leetcode'))
-            .map((item) => `/leetcode/${item}`),
+            .readdirSync(path.resolve('docs', 'summarize', 'leetcode'))
+            .map((item) => `/summarize/leetcode/${item}`),
         },
       ],
     },
