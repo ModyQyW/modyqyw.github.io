@@ -11,7 +11,6 @@
 - [运维工程师](https://time.geekbang.org/learning/path-detail/9)
 - [架构师](https://time.geekbang.org/learning/path-detail/5)
 - [产品经理](https://time.geekbang.org/learning/path-detail/8)
-- [神秘](https://d.shikey.com/jike)
 
 ## 大圣
 
