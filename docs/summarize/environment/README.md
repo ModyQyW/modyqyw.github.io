@@ -216,6 +216,40 @@ export DEFAULT_USER="$(whoami)"
 source ~/.zshrc
 ```
 
+- 安装 `node` 相关。
+
+```shell
+# nvm https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# nvs https://github.com/jasongin/nvs
+# fnm https://github.com/Schniz/fnm
+export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist # use default origin
+# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node # use china mirror
+# install node
+nvm install --lts
+# set default
+nvm alias default node
+# use lts
+nvm use --lts
+# install global deps, --legacy-peer-deps is required if using npm@7 or above
+npm uninstall -g corepack
+npm i -g --registry=https://registry.npmmirror.com @types/node
+npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
+npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
+npm i -g --registry=https://registry.npmmirror.com esno # https://github.com/antfu/esno
+npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
+npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
+npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
+npm i -g --registry=https://registry.npmmirror.com pm2 # https://pm2.keymetrics.io/
+npm i -g --registry=https://registry.npmmirror.com pnpm # https://pnpm.io/
+npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.io/
+npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
+npm i -g --registry=https://registry.npmmirror.com sort-package-json # https://github.com/keithamus/sort-package-json
+npm i -g --registry=https://registry.npmmirror.com stylelint # https://stylelint.io/
+npm i -g --registry=https://registry.npmmirror.com typescript # https://www.typescriptlang.org/
+npm i -g --registry=https://registry.npmmirror.com yarn # https://classic.yarnpkg.com/
+```
+
 - 开始疯狂用 `homebrew` 安装和配置。
 
 ```shell
@@ -322,40 +356,6 @@ brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/de
 brew install you-get # https://you-get.org/
 # youtube-dl，下载网络媒体资源
 brew install youtube-dl
-```
-
-- 安装 `node` 相关。
-
-```shell
-# nvm https://github.com/nvm-sh/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-# nvs https://github.com/jasongin/nvs
-# fnm https://github.com/Schniz/fnm
-export NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist # use default origin
-# export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node # use china mirror
-# install node
-nvm install --lts
-# set default
-nvm alias default node
-# use lts
-nvm use --lts
-# install global deps, --legacy-peer-deps is required if using npm@7 or above
-npm uninstall -g corepack
-npm i -g --registry=https://registry.npmmirror.com @types/node
-npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
-npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
-npm i -g --registry=https://registry.npmmirror.com esno # https://github.com/antfu/esno
-npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
-npm i -g --registry=https://registry.npmmirror.com npm-check-updates # https://github.com/raineorshine/npm-check-updates
-npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana/nrm
-npm i -g --registry=https://registry.npmmirror.com pm2 # https://pm2.keymetrics.io/
-npm i -g --registry=https://registry.npmmirror.com pnpm # https://pnpm.io/
-npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.io/
-npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
-npm i -g --registry=https://registry.npmmirror.com sort-package-json # https://github.com/keithamus/sort-package-json
-npm i -g --registry=https://registry.npmmirror.com stylelint # https://stylelint.io/
-npm i -g --registry=https://registry.npmmirror.com typescript # https://www.typescriptlang.org/
-npm i -g --registry=https://registry.npmmirror.com yarn # https://classic.yarnpkg.com/
 ```
 
 - 补充一些东西在 `~/.zshrc` 末尾。
