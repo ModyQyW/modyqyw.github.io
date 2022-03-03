@@ -741,8 +741,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "editor.wordWrap": true,
   "eslint-js.validateOnDocumentChanged": true,
   "eslint-vue.validateOnDocumentChanged": true,
-  "node.path": "/Users/wurui/.nvm/versions/node/v16.13.2/bin/node",
-  "npm.path": "/Users/wurui/.nvm/versions/node/v16.13.2/bin/npm"
+  "node.path": "/Users/wurui/.nvm/versions/node/v16.14.0/bin/node",
+  "npm.path": "/Users/wurui/.nvm/versions/node/v16.14.0/bin/npm"
 }
 ```
 
