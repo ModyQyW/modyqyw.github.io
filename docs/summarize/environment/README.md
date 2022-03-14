@@ -1,6 +1,6 @@
 # 环境配置
 
-所有配置仅供参考，且尽可能使用统一的包管理器安装。Windows 上推荐使用 [Chocolatey](https://chocolatey.org/)，macOS 上推荐使用 [Homebrew](https://brew.sh/)，均不推荐换源。以下给出在 macOS (intel) 上的应用和配置参考，并补充说明在 Windows 上大致如何操作。
+所有配置仅供参考，且尽可能使用统一的包管理器安装。以下给出在 macOS (intel) 上的应用和配置参考，并补充说明 Windows 的思路。
 
 安装系统可以考虑 [FirPE](https://firpe.cn/)、[WinPE](https://www.wepe.com.cn/) 和 [Ventoy](https://www.ventoy.net/)。
 
@@ -28,7 +28,7 @@
 - Tampermonkey - 插件工具
 - Vue.js devtools - vue 浏览器调试工具
 - Wappalyzer - 网页依赖分析
-- Window Resizer - 便捷调试响应式网页
+- Window Resizer - 便捷调整网页视窗
 - 哔哩哔哩助手
 
 ## macOS (intel)
@@ -387,6 +387,7 @@ alias qs='open -a QSpace\ Pro'
 ```
 
 - 一些额外推荐的东西。
+  - [awesome-mac](https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md)
   - [360 极速浏览器](https://browser.360.cn/ee/mac/index.html) - 支持 flash
   - [360zip](https://yasuo.360.cn/)
   - Adobe After Effects - 专业视频处理
@@ -400,6 +401,7 @@ alias qs='open -a QSpace\ Pro'
   - [Bob](https://github.com/ripperhe/Bob) - 翻译工具
   - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具
   - Charles - 抓包
+  - [CodeFever](https://codefever.pgyer.com/) - DevOps 平台
   - [Commander One](https://mac.eltima.com/file-manager.html)
   - [convertio](https://convertio.co/) - 在线格式转换
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
@@ -410,6 +412,8 @@ alias qs='open -a QSpace\ Pro'
   - [FileZilla](https://filezilla-project.org/) - ftp 连接
   - [Firefox](https://www.mozilla.org/en-US/firefox/browsers/) - 浏览器
   - [GeoGebra](https://www.geogebra.org/) - 数学工具
+  - [Gitee](https://gitee.com/) - DevOps 平台
+  - [Gitlab](https://about.gitlab.com/) - DevOps 平台
   - [Google Chrome](https://www.google.cn/chrome/index.html) - 浏览器
   - [handbrake](https://handbrake.fr/) - 格式转换
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
@@ -426,6 +430,7 @@ alias qs='open -a QSpace\ Pro'
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
   - [squoosh](https://squoosh.app/) - 在线图片压缩
+  - [sublime text](https://www.sublimetext.com/) - 编辑工具
   - [Table Plus](https://tableplus.com/) - 数据库工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
   - [tinypng](https://tinypng.com/) - 在线图片压缩
@@ -442,12 +447,16 @@ alias qs='open -a QSpace\ Pro'
   - [飞书](https://www.feishu.cn/)
   - [改图鸭](https://www.gaituya.com/) - 图片处理
   - [稿定设计图片编辑器](https://www.uupoop.com/)
+  - [极狐 Gitlab](https://gitlab.cn/)
+  - [即时设计](https://js.design/)
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
+  - [蓝湖](https://lanhuapp.com/)
   - [片库](https://www.pianku.li/)
   - [企业微信](https://work.weixin.qq.com/)
   - [腾讯会议](https://meeting.tencent.com/)
   - [腾讯文档](https://docs.qq.com/)
+  - [万彩信息](https://www.wancaiinfo.com/)
   - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
