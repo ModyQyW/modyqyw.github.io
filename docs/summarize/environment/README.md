@@ -479,13 +479,11 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
 - [小霸王](https://marketplace.visualstudio.com/items?itemName=gamedilong.anes)
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
-- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - 自动闭合标签
 - [Auto NPX](https://marketplace.visualstudio.com/items?itemName=antfu.auto-npx) - vscode 终端自动解析本地 node 命令
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - 检查拼写，减少写代码时潜在的错误
 - [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf) - 变量命名参考
 - [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor) - 可视化提交信息编辑
 - [CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek) - 查找 html 文件中的 css id 和 class，并将其作为 css 的定义，可以跳转
-- [docs-yaml](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml)
 - [Doctor](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-doctor) - 安全和质量审核工具
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - 支持 .env 文件
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - 支持 .editorconfig 文件
@@ -495,13 +493,11 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI 代码补全
 - [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - 样式主题
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
-- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - 高亮选中的标签及其匹配标签
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片
 - [Impost Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) - 显示导入的包体积
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - 缩进用彩虹色分级显示
 - [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) - 实时协作
-- [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) - 生成并插入乱数假文
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) - 增强 Markdown 功能，包括键盘快捷键，目录等
 - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) - 增强 Markdown 预览
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) - 校验 Markdown 语法
@@ -513,8 +509,8 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [Regex Previewer](https://marketplace.visualstudio.com/items?itemName=chrmarti.regex) - 正则匹配预览
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - sass 工具，支持突出显示，自动完成和格式化
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) - 支持 scss 智能提示
+- [Sort JSON objects](https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json) - 为 JSON 里的对象排序
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - 支持 stylelint
-- [stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) - 支持 stylus
 - [SVG](https://marketplace.visualstudio.com/items?itemName=jock.svg) - SVG 编码，压缩，美化，预览多合一
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - 增强 tailwindcss 体验
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) - 高亮提示特定文本
@@ -531,24 +527,11 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
 ```json
 {
-  // 插件 Auto Close Tag 使用，指定插件在什么语言时激活
-  "auto-close-tag.activationOnLanguage": [
-    "html",
-    "javascript",
-    "javascriptreact",
-    "svelte",
-    "typescript",
-    "typescriptreact",
-    "markdown",
-    "vue"
-  ],
-  // 插件 Code Spell Checker 使用，指定字典，使得编辑文件时减少额外的拼写错误负担
-  "cSpell.userWords": [],
-  // 插件 Code Spell Checker 使用，指定要检查的文件
+  // 插件 Code Spell Checker 使用，指定语言
+  "cSpell.language": "en,en-US",
+  // 插件 Code Spell Checker 使用，指定要检查的语言
   "cSpell.enabledLanguageIds": [
     "css",
-    "git-commit",
-    "graphql",
     "html",
     "javascript",
     "javascriptreact",
@@ -558,6 +541,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "less",
     "markdown",
     "plaintext",
+    "sass",
     "scss",
     "svelte",
     "text",
@@ -567,29 +551,25 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "yaml",
     "yml"
   ],
-  // vscode 自带功能，指定是否校验 css，这里设置为否，配合插件 stylelint 使用
+  // vscode 自带功能，不校验 css，需要和插件 stylelint 配合使用
   "css.validate": false,
-  // vscode 自带功能，控制编辑区成对括号着色
+  // vscode 自带功能，允许编辑区成对括号着色
   "editor.bracketPairColorization.enabled": true,
-  // vscode 自带功能，控制编辑区默认使用的格式化工具，这里设置为 prettier，需要安装插件 prettier
+  // vscode 自带功能，编辑区默认使用 prettier 格式化，需要安装插件 prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // vscode 自带功能，控制编辑区字体大小
+  // vscode 自带功能，指定编辑区字体大小为 14
   "editor.fontSize": 14,
-  // vscode 自带功能，控制编辑区字体族
+  // vscode 自带功能，指定编辑区字体族
   "editor.fontFamily": "'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace",
   // vscode 自带功能，保存时自动格式化
   "editor.formatOnSave": true,
-  // vscode 自带功能，控制编辑区成对括号指引线着色
-  "editor.guides.bracketPairs": "active",
-  // vscode 自带功能，控制是否显示行内建议，Copilot 插件使用
+  // vscode 自带功能，允许编辑区成对括号指引线着色
+  "editor.guides.bracketPairs": true,
+  // vscode 自带功能，允许显示行内建议
   "editor.inlineSuggest.enabled": true,
-  // vscode 自带功能，控制是否渲染垂直标尺
-  "editor.rulers": [{ "column": 100 }],
-  // vscode 自带功能，显示建议列表时如何预选建议，这里设置为预选第一条
-  "editor.suggestSelection": "first",
-  // vscode 自带功能，控制编辑区 1 个 tab 等于多少个空格，这里设置为 2 个
+  // vscode 自带功能，编辑区 1 个 tab 等于 2 个空格
   "editor.tabSize": 2,
-  // vscode 自带功能，控制编辑区行太长时是否自动换行，这里设置为是
+  // vscode 自带功能，编辑区行太长时自动换行
   "editor.wordWrap": "on",
   // 插件 ESLint 使用，指定需要 ESLint 校验的语言
   "eslint.validate": [
@@ -600,11 +580,11 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "typescriptreact",
     "vue"
   ],
-  // 插件 ESLint 使用，指定是否一直显示状态，这是设置为是
+  // 插件 ESLint 使用，一直显示状态
   "eslint.alwaysShowStatus": true,
-  // vscode 自带功能，设置文件换行，这里设置为 \n 即 LF
+  // vscode 自带功能，设置文件换行为 \n (LF)
   "files.eol": "\n",
-  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加四种小程序，wepy，uni-app 的支持，另外把 json、json5 文件视为 jsonc 文件
+  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加微信小程序、支付宝小程序、百度小程序、头条小程序、wepy 和 uni-app 的支持，另外把 json、json5 文件视为 jsonc 文件
   "files.associations": {
     "*.wxml": "html",
     "*.wxs": "javascript",
@@ -623,22 +603,30 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "*.nvue": "vue",
     "*.ux": "vue"
   },
-  // 指定是否自动 fetch
+  // vscode 自带功能，git 自动 fetch
   "git.autofetch": true,
-  // vscode 自带功能，指定是否允许使用修饰器，这里设置为是
+  // vscode 自带功能，允许使用修饰器
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  // vscode 自带功能，指定 js 文件移动时是否自动更新引入，这里设置为是
+  // vscode 自带功能，js 文件移动时自动更新引入
   "javascript.updateImportsOnFileMove.enabled": "always",
-  // vscode 自带功能，指定是否校验 less，这里设置为否
+  // 插件 leetcode 使用，指定文件存放的文件夹
+  "leetcode.workspaceFolder": "/Users/wurui/Documents/leetcode",
+  // 插件 leetcode 使用，指定文件默认语言
+  "leetcode.defaultLanguage": "typescript",
+  // vscode 自带功能，不校验 less，需要和插件 stylelint 配合使用
   "less.validate": false,
-  // vscode 自带功能，指定是否校验 scss，这里设置为否
+  // vscode 自带功能，不校验 scss，需要和插件 stylelint 配合使用
   "scss.validate": false,
-  // 插件 stylelint 使用，指定需要提示的文件
-  "stylelint.snippet": ["css", "less", "scss", "vue", "svelte"],
-  // 插件 stylelint 使用，指定需要校验的文件
-  "stylelint.validate": ["css", "less", "scss", "vue", "svelte"],
-  // 插件 Todo Tree 使用，指定是否开启高亮，这里设置为是
-  "todo-tree.highlights.enabled": true,
+  // vscode 自带功能，搜索时忽略部分文件
+  "search.exclude": {
+    "**/dist/**": true,
+    "**/out/**": true,
+    "**/*lock*": true
+  },
+  // 插件 stylelint 使用，指定需要提示的语言
+  "stylelint.snippet": ["css", "less", "sass", "scss", "vue", "svelte"],
+  // 插件 stylelint 使用，指定需要校验的语言
+  "stylelint.validate": ["css", "less", "sass", "scss", "vue", "svelte"],
   // 插件 Todo Tree 使用，指定特定高亮格式
   "todo-tree.highlights.customHighlight": {
     "FIX": {
@@ -658,27 +646,35 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
       "foreground": "#fff",
       "icon": "alert",
       "iconColour": "#d89614"
+    },
+    "[ ]": {
+      "icon": "circle"
+    },
+    "[x]": {
+      "icon": "check"
     }
   },
   // 插件 Todo Tree 使用，指定通用高亮格式
   "todo-tree.highlights.defaultHighlight": {
     "gutterIcon": true
   },
+  // 插件 Todo Tree 使用，指定标签组
+  "todo-tree.general.tagGroups": {
+    "FIX": ["FIXME", "FIXIT", "FIX", "BUG"]
+  },
   // 插件 Todo Tree 使用，指定匹配的文本
-  "todo-tree.general.tags": ["FIX", "PERF", "TODO", "[ ]", "[x]"],
+  "todo-tree.general.tags": ["FIX", "FIXME", "FITIT", "BUG", "PERF", "TODO", "[ ]", "[x]"],
   // 插件 Todo Tree 使用，指定匹配的正则表达式
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  // vscode 自带功能，指定 ts 文件移动时是否自动更新引入，这里设置为是
+  // vscode 自带功能，ts 文件移动时自动更新引入
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // 插件 Office Viewer 使用，指定 markdown 预览模式，这里指定为 vditor
-  "vscode-office.markdownType": "vditor",
-  // vscode 自带功能，指定默认主题
+  // vscode 自带功能，指定默认主题为 Github Dark Default
   "workbench.colorTheme": "GitHub Dark Default",
-  // vscode 自带功能，指定 md 文件的预览模式，这里指定为默认，抹除 Office Viewer 的影响
+  // vscode 自带功能，指定 md 文件的预览模式为默认
   "workbench.editorAssociations": {
     "*.md": "default"
   },
-  // vscode 自带功能，指定图标主题，这里设置为 Material Icon Theme，需要安装对应的插件
+  // vscode 自带功能，指定图标主题为 vscode-icons，需要安装插件 vscode-icons
   "workbench.iconTheme": "vscode-icons",
   // vscode 自带功能，控制编辑区在保存文件时的行为
   "[javascript]": {
@@ -707,6 +703,11 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     }
   },
   "[less]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[sass]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
     }
