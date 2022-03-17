@@ -462,6 +462,8 @@ alias qs='open -a QSpace\ Pro'
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
   - [在线工具](https://tool.lu/)
 
+[Github 仓库同步到 Gitee](https://mp.weixin.qq.com/s/E6G_plczOeCNLDMWCAQKog)
+
 ## Windows 补充说明
 
 Windows 和 macOS 生态不同，有几个重要的地方需要注意。
