@@ -327,6 +327,13 @@ brew install openjdk # https://openjdk.java.net/
 brew install --cask postman # https://www.postman.com/
 # prince，将 HTML 转换成 PDF
 brew install --cask prince # https://www.princexml.com/
+# c0re100-qbittorrent，下载工具
+# tracker 服务器 https://github.com/XIU2/TrackersListCollection
+# tracker 服务器 https://github.com/ngosang/trackerslist
+# https://mp.weixin.qq.com/s/YHbqfnXdhju6CXA4epNkVQ
+brew install --cask c0re100-qbittorrent
+# 也可以安装原版 qbittorrent
+brew install --cask qbittorrent
 # qq
 brew install --cask qq # https://im.qq.com/macqq/
 # rectangle，快速移动、调整窗口大小
