@@ -2,6 +2,8 @@ import { defineUserConfig } from 'vuepress-vite';
 import type { DefaultThemeOptions } from 'vuepress-vite';
 import fs from 'fs';
 import path from 'path';
+import compression from 'vite-plugin-compression';
+import inspect from 'vite-plugin-inspect';
 
 const mode = process.env.MODE || 'github';
 const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
@@ -177,6 +179,12 @@ export default defineUserConfig<DefaultThemeOptions>({
     },
     sidebarDepth: 3,
   },
+  bundlerConfig: {
+    viteOptions: {
+      plugins: [compression(), inspect()],
+    },
+  },
+  // debug: process.env.NODE_ENV === 'development',
   markdown: {
     toc: {
       level: [2, 3, 4],
@@ -202,7 +210,17 @@ export default defineUserConfig<DefaultThemeOptions>({
         theme: 'github-dark',
       },
     ],
-    ['vuepress-plugin-copy-code2'],
+    [
+      'vuepress-plugin-copy-code2',
+      {
+        locales: {
+          '/': {
+            copy: '复制成功',
+            hint: '复制',
+          },
+        },
+      },
+    ],
     ['vuepress-plugin-seo2', { hostname }],
     ['vuepress-plugin-sitemap2', { hostname }],
   ],
