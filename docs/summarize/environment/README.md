@@ -8,36 +8,52 @@
 
 ## DNS
 
-- [阿里 DNS](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
-- [百度 DNS](https://dudns.baidu.com/intro/publicdns/) - `180.76.76.76`，`2400:da00::6666`
-- [114 DNS](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
-- [DNSPOS DNS](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`
+国内优先选择国内的 DNS 解析服务，相对较快。
+
+- [阿里](http://alidns.com/) - `223.5.5.5`，`223.6.6.6`，`2400:3200::1`，`2400:3200:baba::1`
+- [百度](https://dudns.baidu.com/) - `180.76.76.76`，`2400:da00::6666`
+- [腾讯 DNSPod](https://www.dnspod.cn/Products/Public.DNS) - `119.29.29.29`，`2402:4e00::`
+- [114](https://www.114dns.com/) - `114.114.114.114`，`114.114.115.115`
+
+国外的 DNS 解析服务相对较慢，但有时有奇效，酌情使用。
+
+- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
 - [Google DNS](https://developers.google.cn/speed/public-dns/docs/using?hl=zh-CN) - `8.8.8.8`，`8.8.4.4`，`2001:4860:4860::8888`，`2001:4860:4860::8844`
-- [Cloudflare DNS](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/) - `1.1.1.1`，`1.0.0.1`，`2606:4700:4700::1111`，`2606:4700:4700::1001`
-- [Open DNS](https://www.opendns.com/) - `208.67.222.222`，`208.67.220.220`
+
+## 浏览器
+
+推荐使用 [Chrome](https://www.google.com/intl/en_us/chrome/) 或者 [Edge](https://www.microsoft.com/en-us/edge)。
+
+[360 极速浏览器](https://browser.360.cn/ee/) 自带 flash 支持。
+
+测试可能还需要 [Firefox](https://www.mozilla.org/en-US/firefox/)、[Safari](https://www.apple.com/safari/)。
 
 ## 浏览器插件
 
-- AdGuard - 广告屏蔽
-- BitWarden - 密码管理
-- Dark Reader - 暗黑模式
-- Gitako - 便捷查看 Github
-- Lighthouse - 网页性能测试
-- React Developer Tools - react 浏览器调试工具
-- Sync Sofa - 同步看剧
-- Tampermonkey - 插件工具
-- Vue.js devtools - vue 浏览器调试工具
-- Wappalyzer - 网页依赖分析
-- Window Resizer - 便捷调整网页视窗
-- 哔哩哔哩助手
+- [AdGuard](https://adguard.com/zh_cn/adguard-browser-extension/overview.html) - 广告屏蔽
+- [BitWarden](https://bitwarden.com/) - 密码管理
+- [Dark Reader](https://darkreader.org/) - 暗黑模式
+- [Gitako](https://github.com/EnixCoda/Gitako) - 便捷查看 Github
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - 网页性能测试
+- [React Developer Tools](https://github.com/facebook/react/tree/main/packages/react-devtools) - react 浏览器调试工具
+- [Sync Sofa](https://github.com/LouisYLWang/Sync-Sofa) - 同步看剧
+- [Tampermonkey](https://www.tampermonkey.net/) - 插件工具
+- [Vue.js devtools](https://devtools.vuejs.org/) - vue 浏览器调试工具
+- [Wappalyzer](https://www.wappalyzer.com/) - 网页依赖分析
+- [Window Resizer](https://coolx10.com/window-resizer/) - 便捷调整网页视窗
+- [哔哩哔哩助手](https://bilibilihelper.com/)
 
-## macOS (intel)
+## macOS 官网为主 Homebrew 为辅管理应用
+
+## 【不再推荐】macOS (intel) Homebrew 为主官网为辅管理应用
+
+使用 [Homebrew](https://brew.sh/) 统一安装和更新大量软件非常方便。但是软件版本往往会有一些滞后，加之现在软件往往都有自动更新，不再推荐使用 Homebrew 来安装和更新软件。
 
 - 在触控板上四指捏合，或者点击底部 `程序坞` 里面的 `启动台`，然后打开 `终端`。
 
 - 点击左上角的 `终端` -> 偏好设置 -> 描述文件，可以选择你想要的基本效果。我这里选择了 `Pro`。
 
-- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源，方便后续统一安装和更新大量软件。**注意：homebrew 上的软件版本往往会有一些滞后。**
+- 安装 [Homebrew](https://brew.sh/) 并链接不同的软件源。
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
