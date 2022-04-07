@@ -26,7 +26,7 @@ const organizeDevelopmentFiles = getOrganizeFiles(['development']);
 const summarizeWebpack5Files = getSummarizeFiles(['webpack5']);
 const summarizeWebpack4Files = getSummarizeFiles(['webpack4']);
 const summarizeLeetcodeFiles = getSummarizeFiles(['leetcode']);
-const summarizeVue3Files = getSummarizeFiles(['vue3']);
+const summarizeInActionFiles = getSummarizeFiles(['in-action']);
 
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
@@ -70,7 +70,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           { text: 'webpack4', link: summarizeWebpack4Files[0] },
           '/summarize/safety/',
           { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-          { text: 'vue3', link: summarizeVue3Files[0] },
+          { text: '实际开发', link: summarizeInActionFiles[0] },
         ],
       },
       { text: '关于', link: '/about/' },
@@ -112,7 +112,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
             { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-            { text: 'vue3', link: summarizeVue3Files[0] },
+            { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
       ],
@@ -127,7 +127,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
             { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-            { text: 'vue3', link: summarizeVue3Files[0] },
+            { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
       ],
@@ -142,7 +142,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack4', children: summarizeWebpack4Files },
             '/summarize/safety/',
             { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-            { text: 'vue3', link: summarizeVue3Files[0] },
+            { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
       ],
@@ -157,11 +157,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
             { text: 'leetcode', children: summarizeLeetcodeFiles },
-            { text: 'vue3', link: summarizeVue3Files[0] },
+            { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
       ],
-      '/summarize/vue3': [
+      '/summarize/in-action/': [
         {
           text: '归纳输出',
           children: [
@@ -172,7 +172,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
             { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-            { text: 'vue3', children: summarizeVue3Files },
+            { text: '实际开发', children: summarizeInActionFiles },
           ],
         },
       ],
@@ -182,6 +182,11 @@ export default defineUserConfig<DefaultThemeOptions>({
   bundlerConfig: {
     viteOptions: {
       plugins: [compression(), inspect()],
+      server: {
+        fs: {
+          strict: false,
+        },
+      },
     },
   },
   // debug: process.env.NODE_ENV === 'development',

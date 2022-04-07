@@ -40,7 +40,7 @@ console.log(count.value); // 1
 
 我觉得这实际上是一种分裂，要么都要 `.value`，要么都不要 `.value`。在组件场景里这个问题可能更严重，我想传递的是一个 `ref`，但由于自动解包，实际传递的是 `ref.value`。
 
-vue3 提出了响应式语法糖 `reactivity transform`，想要解决这个问题。
+vue3 提出了响应式语法糖 `reactivity transform`，完美地解决这个问题。
 
 ```vue
 <script setup lang="ts">
@@ -57,8 +57,8 @@ const increase = () => {
 </template>
 ```
 
-现在看着统一多了。额外还有一个 `$()`，可以配合相关库使用。如果这个特性在 3.3 稳定了下来，开发时的心智负担应该会小一些。
+现在看着统一多了。额外还有一个 `$()`，可以配合相关库使用。
 
-参考链接：
+参考链接如下：
 
-- <https://vuejs.org/guide/essentials/reactivity-fundamentals.html>
+- [Reactivity Fundamentals](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)
