@@ -12,8 +12,9 @@ const repo =
     ? 'https://github.com/ModyQyW/modyqyw.github.io'
     : 'https://gitee.com/ModyQyW/ModyQyW';
 const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
-const apiKey = mode === 'github' ? 'githubApiKey' : 'giteeApiKey';
-const indexName = mode === 'github' ? 'githubIndexName' : 'giteeIndexName';
+const docSearchApiKey = mode === 'github' ? 'bc7c3bfb65339c025cdced95c50cb051' : 'giteeApiKey';
+const docSearchIndexName = mode === 'github' ? 'modyqyw' : 'giteeIndexName';
+const docSearchAppId = mode === 'github' ? 'Z14RO4ODPO' : 'giteeAppId';
 
 const getFiles = (dirs: string[]) =>
   fs.readdirSync(path.resolve('docs', ...dirs)).map((item) => `/${dirs.concat(item).join('/')}`);
@@ -199,14 +200,26 @@ export default defineUserConfig<DefaultThemeOptions>({
     },
   },
   plugins: [
-    // [
-    //   '@vuepress/plugin-docsearch',
-    //   {
-    //     apiKey,
-    //     indexName,
-    //   },
-    // ],
-    ['@vuepress/plugin-search'],
+    mode === 'github'
+      ? [
+          '@vuepress/plugin-docsearch',
+          {
+            apiKey: docSearchApiKey,
+            indexName: docSearchIndexName,
+            appId: docSearchAppId,
+            locales: {
+              '/': {
+                placeholder: '搜索文档',
+                translations: {
+                  button: {
+                    buttonText: '搜索文档',
+                  },
+                },
+              },
+            },
+          },
+        ]
+      : ['@vuepress/plugin-search'],
     ['@vuepress/plugin-pwa'],
     ['@vuepress/plugin-pwa-popup'],
     [
