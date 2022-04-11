@@ -220,8 +220,8 @@ export default defineUserConfig<DefaultThemeOptions>({
           },
         ]
       : ['@vuepress/plugin-search'],
-    ['@vuepress/plugin-pwa'],
-    ['@vuepress/plugin-pwa-popup'],
+    // ['@vuepress/plugin-pwa'],
+    // ['@vuepress/plugin-pwa-popup'],
     [
       '@vuepress/plugin-shiki',
       {
