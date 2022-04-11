@@ -26,7 +26,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/prompt": "^16.2.3",
-    "@modyqyw/fabric": "^4.19.1",
+    "@modyqyw/fabric": "^4.20.1",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
@@ -36,7 +36,7 @@
     "@vuepress/plugin-shiki": "^2.0.0-beta.38",
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
-    "eslint": "^8.12.0",
+    "eslint": "^8.13.0",
     "husky": "^7.0.4",
     "is-ci": "^3.0.1",
     "lint-staged": "^12.3.7",
@@ -47,9 +47,9 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-inspect": "^0.4.3",
     "vue": "^3.2.31",
-    "vuepress": "^2.0.0-beta.38",
-    "vuepress-plugin-copy-code2": "^2.0.0-beta.36",
-    "vuepress-plugin-seo2": "^2.0.0-beta.36",
-    "vuepress-plugin-sitemap2": "^2.0.0-beta.36"
+    "vuepress": "^2.0.0-beta.39",
+    "vuepress-plugin-copy-code2": "^2.0.0-beta.37",
+    "vuepress-plugin-seo2": "^2.0.0-beta.37",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.37"
   }
 }
