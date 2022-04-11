@@ -32,7 +32,8 @@ const summarizeInActionFiles = getSummarizeFiles(['in-action']);
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
-  description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新或邮件联系。',
+  description:
+    '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
   head: [
     ['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' }],
   ],
@@ -40,7 +41,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     '/': {
       lang: 'zh-Hans',
       title: "ModyQyW's Site",
-      description: '基于 vuepress 建设的个人站，如有问题请尝试强制刷新或邮件联系。',
+      description:
+        '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
       head: [
         [
           'link',
