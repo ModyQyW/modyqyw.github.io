@@ -4,7 +4,6 @@
 
 - 排队取号系统
 - days，结合 days-matter、滴答清单和 pixiu，考虑个人和团队
-- leetcode 解题记录
 - 版本更新系统
 - 大文件分片上传、[下载](https://mp.weixin.qq.com/s/2tRkcwOQCE8pX8byt7HWiQ)
 - [SKU](https://mp.weixin.qq.com/s/A2BLVnhas49Z1pj6OubymA)

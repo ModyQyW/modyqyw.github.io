@@ -26,7 +26,6 @@ const getSummarizeFiles = (dirs: string[]) => getFiles(['summarize', ...dirs]);
 const organizeDevelopmentFiles = getOrganizeFiles(['development']);
 const summarizeWebpack5Files = getSummarizeFiles(['webpack5']);
 const summarizeWebpack4Files = getSummarizeFiles(['webpack4']);
-const summarizeLeetcodeFiles = getSummarizeFiles(['leetcode']);
 const summarizeInActionFiles = getSummarizeFiles(['in-action']);
 
 export default defineUserConfig<DefaultThemeOptions>({
@@ -72,7 +71,6 @@ export default defineUserConfig<DefaultThemeOptions>({
           { text: 'webpack5', link: summarizeWebpack5Files[0] },
           { text: 'webpack4', link: summarizeWebpack4Files[0] },
           '/summarize/safety/',
-          { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
           { text: '实际开发', link: summarizeInActionFiles[0] },
         ],
       },
@@ -114,7 +112,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack5', link: summarizeWebpack5Files[0] },
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
-            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
             { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
@@ -129,7 +126,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack5', children: summarizeWebpack5Files },
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
-            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
             { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
@@ -144,22 +140,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack5', link: summarizeWebpack5Files[0] },
             { text: 'webpack4', children: summarizeWebpack4Files },
             '/summarize/safety/',
-            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
-            { text: '实际开发', link: summarizeInActionFiles[0] },
-          ],
-        },
-      ],
-      '/summarize/leetcode/': [
-        {
-          text: '归纳输出',
-          children: [
-            '/summarize/what',
-            '/summarize/environment/',
-            '/summarize/server/',
-            { text: 'webpack5', link: summarizeWebpack5Files[0] },
-            { text: 'webpack4', link: summarizeWebpack4Files[0] },
-            '/summarize/safety/',
-            { text: 'leetcode', children: summarizeLeetcodeFiles },
             { text: '实际开发', link: summarizeInActionFiles[0] },
           ],
         },
@@ -174,7 +154,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             { text: 'webpack5', link: summarizeWebpack5Files[0] },
             { text: 'webpack4', link: summarizeWebpack4Files[0] },
             '/summarize/safety/',
-            { text: 'leetcode', link: summarizeLeetcodeFiles[0] },
             { text: '实际开发', children: summarizeInActionFiles },
           ],
         },
