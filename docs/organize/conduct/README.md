@@ -14,6 +14,8 @@ Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l
 - [每天盯电子屏，做些什么才真正对眼睛好](https://mp.weixin.qq.com/s/sj5Ji5nDXYxvka9eIgqqZA)
 - [9 个情绪耐受技巧](https://mp.weixin.qq.com/s/-U3gcGV_PSlDmAtGjhmmlQ)
 - [摆脱疲劳感的 6 条建议](https://mp.weixin.qq.com/s/2T0Hr-VaES4s0YUMAocxoQ)
+- [如何毁掉一个有主见的孩子？从要求TA有想法，又否定TA开始](https://mp.weixin.qq.com/s/xNT2HVoNZgWk1sMTI-vHjA)
+- [越说越崩溃，安慰人千万别用这 10 句话！](https://mp.weixin.qq.com/s/FWh9KRM5U9L8RmsSObYdHQ)
 
 ## 思维和能力
 
@@ -36,3 +38,5 @@ Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l
 - [当我哭的时候，最怕你说“至于吗”](https://mp.weixin.qq.com/s/pKFf9DU1l7_ugBnb7vO9tw)
 - [哪一刻你觉得自己被生活磨平了棱角](https://mp.weixin.qq.com/s/ysTM7GS-_qZFeVtaLgA0Zw)
 - [越早明白越好的道理](https://mp.weixin.qq.com/s/8JMsZaLo3QYh9XHGE19YZg)
+- [人生快乐法则：贪心算法](https://mp.weixin.qq.com/s/8uKCu5Opbda0KPYlIkrljQ)
+- [不被谣言带节奏：学会这几招，你也能做「谣言粉碎机」](https://mp.weixin.qq.com/s/5P7oWqWQh701e4efIKOxYg)
