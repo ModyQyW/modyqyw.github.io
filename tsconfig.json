@@ -17,22 +17,5 @@
     "target": "ES2018",
     "baseUrl": "."
   },
-  "include": [
-    "./**/.*.js",
-    "./**/.*.cjs",
-    "./**/.*.mjs",
-    "./**/*.js",
-    "./**/*.cjs",
-    "./**/*.mjs",
-    "./**/*.jsx",
-    "./**/.*.ts",
-    "./**/.*.cts",
-    "./**/.*.mts",
-    "./**/*.ts",
-    "./**/*.cts",
-    "./**/*.mts",
-    "./**/*.tsx",
-    "./**/*.vue"
-  ],
-  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
+  "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
 }

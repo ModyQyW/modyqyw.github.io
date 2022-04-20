@@ -1,5 +1,7 @@
-const { eslint } = require('@modyqyw/fabric');
-
 module.exports = {
-  ...eslint.vue3TypescriptPrettier,
+  extends: [
+    require.resolve('@modyqyw/fabric/eslint/vanilla'),
+    require.resolve('@modyqyw/fabric/eslint/typescript'),
+    require.resolve('@modyqyw/fabric/eslint/vue'),
+  ],
 };
