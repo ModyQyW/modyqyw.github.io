@@ -6,7 +6,7 @@ specifiers:
   '@commitlint/cli': ^16.2.3
   '@commitlint/config-conventional': ^16.2.1
   '@commitlint/prompt': ^16.2.3
-  '@modyqyw/fabric': ^5.0.1
+  '@modyqyw/fabric': ^5.0.6
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
   '@vuepress/plugin-docsearch': ^2.0.0-beta.38
@@ -19,7 +19,7 @@ specifiers:
   eslint: ^8.13.0
   husky: ^7.0.4
   is-ci: ^3.0.1
-  lint-staged: ^12.3.8
+  lint-staged: ^12.4.0
   markdownlint-cli: ^0.31.1
   prettier: ^2.6.2
   stylelint: ^14.7.1
@@ -38,7 +38,7 @@ devDependencies:
   '@commitlint/cli': 16.2.3
   '@commitlint/config-conventional': 16.2.1
   '@commitlint/prompt': 16.2.3
-  '@modyqyw/fabric': 5.0.1_2154a79f7d4c073c1470afa315fca903
+  '@modyqyw/fabric': 5.0.6_2154a79f7d4c073c1470afa315fca903
   '@typescript-eslint/eslint-plugin': 5.20.0_b9ac9b5656ce5dffade639fcf5e491bf
   '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.3
   '@vuepress/plugin-docsearch': 2.0.0-beta.38
@@ -51,7 +51,7 @@ devDependencies:
   eslint: 8.13.0
   husky: 7.0.4
   is-ci: 3.0.1
-  lint-staged: 12.3.8
+  lint-staged: 12.4.0
   markdownlint-cli: 0.31.1
   prettier: 2.6.2
   stylelint: 14.7.1
@@ -1682,8 +1682,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: true
 
-  /@modyqyw/fabric/5.0.1_2154a79f7d4c073c1470afa315fca903:
-    resolution: {integrity: sha512-r7KsqUp6WYaMqj5WclN9L68JoXMTFMJzuOfOLOFMwAsLxfQkDrQ8ml76L+0WMqIF3dTP+WmUdsqvFxd6yPiIpw==}
+  /@modyqyw/fabric/5.0.6_2154a79f7d4c073c1470afa315fca903:
+    resolution: {integrity: sha512-l3ViiCOfMpENhxINJeI32O3ApFH7hjpUTfZ/Xb+/XakvFvnQ53fKQwswKwXuer9padHM3BlRCqyi6inDZCEOEg==}
     dependencies:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.9+eslint@8.13.0
@@ -1712,7 +1712,6 @@ packages:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.13.0
       eslint-plugin-nuxt: 3.2.0_eslint@8.13.0
       eslint-plugin-prettier: 4.0.0_1815ac95b7fb26c13c7d48a8eef62d0f
-      eslint-plugin-promise: 6.0.0_eslint@8.13.0
       eslint-plugin-react: 7.29.4_eslint@8.13.0
       eslint-plugin-react-hooks: 4.4.0_eslint@8.13.0
       eslint-plugin-regexp: 1.6.0_eslint@8.13.0
@@ -1730,7 +1729,7 @@ packages:
       postcss-scss: 4.0.3_postcss@8.4.12
       prettier-plugin-jsdoc: 0.3.38_prettier@2.6.2
       prettier-plugin-packagejson: 2.2.17_prettier@2.6.2
-      prettier-plugin-tailwindcss: 0.1.9_prettier@2.6.2
+      prettier-plugin-tailwindcss: 0.1.10_prettier@2.6.2
       stylelint-config-prettier: 9.0.3_stylelint@14.7.1
       stylelint-config-prettier-scss: 0.0.1_stylelint@14.7.1
       stylelint-config-recess-order: 3.0.0_stylelint@14.7.1
@@ -4364,15 +4363,6 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-promise/6.0.0_eslint@8.13.0:
-    resolution: {integrity: sha512-7GPezalm5Bfi/E22PnQxDWH2iW9GTvAlUNTztemeHb6c1BniSyoeTrM87JkC0wYdi6aQrZX9p2qEiAno8aTcbw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      eslint: 8.13.0
-    dev: true
-
   /eslint-plugin-react-hooks/4.3.0_eslint@8.13.0:
     resolution: {integrity: sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==}
     engines: {node: '>=10'}
@@ -5714,8 +5704,8 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /lint-staged/12.3.8:
-    resolution: {integrity: sha512-0+UpNaqIwKRSGAFOCcpuYNIv/j5QGVC+xUVvmSdxHO+IfIGoHbFLo3XcPmV/LLnsVj5EAncNHVtlITSoY5qWGQ==}
+  /lint-staged/12.4.0:
+    resolution: {integrity: sha512-3X7MR0h9b7qf4iXf/1n7RlVAx+EzpAZXoCEMhVSpaBlgKDfH2ewf+QUm7BddFyq29v4dgPP+8+uYpWuSWx035A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -6721,8 +6711,8 @@ packages:
       sort-package-json: 1.55.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.9_prettier@2.6.2:
-    resolution: {integrity: sha512-xqoDNnFfYhz3PxaptKO5lXwVU/MAfT6PTZPxiKKutKTgaLeQBjxts6j7BLbkI0FezDrGDUZQjDZpmnF9dv2hdg==}
+  /prettier-plugin-tailwindcss/0.1.10_prettier@2.6.2:
+    resolution: {integrity: sha512-ooDGNuXUjgCXfShliVYQ6+0iXqUFXn+zdNInPe0WZN9qINt9srbLGFGY5jeVL4MXtY20/4S8JaBcd8l6N6NfCQ==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
