@@ -15,7 +15,26 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ES2018",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "allowJs": true
   },
+  "include": [
+    "**/.*.js",
+    "**/.*.cjs",
+    "**/.*.mjs",
+    "**/.*.ts",
+    "**/.*.cts",
+    "**/.*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.cts",
+    "**/*.mts",
+    "**/*.tsx",
+    "**/*.vue",
+    "**/*.svelte"
+  ],
   "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
 }
