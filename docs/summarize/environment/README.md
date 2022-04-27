@@ -251,6 +251,7 @@ nvm use --lts
 npm uninstall -g corepack
 npm i -g --registry=https://registry.npmmirror.com @types/node
 npm i -g --registry=https://registry.npmmirror.com cnpm # https://github.com/cnpm/cnpm
+npm i -g --registry=https://registry.npmmirror.com conventional-changelog-cli # https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli
 npm i -g --registry=https://registry.npmmirror.com eslint # https://eslint.org/
 npm i -g --registry=https://registry.npmmirror.com esno # https://github.com/antfu/esno
 npm i -g --registry=https://registry.npmmirror.com nodemon # https://nodemon.io/
@@ -259,6 +260,7 @@ npm i -g --registry=https://registry.npmmirror.com nrm # https://github.com/Pana
 npm i -g --registry=https://registry.npmmirror.com pm2 # https://pm2.keymetrics.io/
 npm i -g --registry=https://registry.npmmirror.com pnpm # https://pnpm.io/
 npm i -g --registry=https://registry.npmmirror.com prettier # https://prettier.io/
+npm i -g --registry=https://registry.npmmirror.com release-it # https://github.com/release-it/release-it
 npm i -g --registry=https://registry.npmmirror.com serve # https://github.com/vercel/serve
 npm i -g --registry=https://registry.npmmirror.com sort-package-json # https://github.com/keithamus/sort-package-json
 npm i -g --registry=https://registry.npmmirror.com stylelint # https://stylelint.io/
