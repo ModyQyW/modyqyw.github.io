@@ -1,9 +1,13 @@
-import { defineUserConfig } from 'vuepress-vite';
-import type { DefaultThemeOptions } from 'vuepress-vite';
+import { defineUserConfig, viteBundler } from 'vuepress';
+import { defaultTheme } from '@vuepress/theme-default';
+import { docsearchPlugin } from '@vuepress/plugin-docsearch';
+import { searchPlugin } from '@vuepress/plugin-search';
+import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
+import { seoPlugin } from 'vuepress-plugin-seo2';
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import fs from 'fs';
 import path from 'path';
-import compression from 'vite-plugin-compression';
-import inspect from 'vite-plugin-inspect';
 
 const mode = process.env.MODE || 'github';
 const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
@@ -28,7 +32,7 @@ const summarizeWebpack5Files = getSummarizeFiles(['webpack5']);
 const summarizeWebpack4Files = getSummarizeFiles(['webpack4']);
 const summarizeInActionFiles = getSummarizeFiles(['in-action']);
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description:
@@ -50,7 +54,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       ],
     },
   },
-  themeConfig: {
+  theme: defaultTheme({
     hostname,
     navbar: [
       {
@@ -160,17 +164,16 @@ export default defineUserConfig<DefaultThemeOptions>({
       ],
     },
     sidebarDepth: 3,
-  },
-  bundlerConfig: {
+  }),
+  bundler: viteBundler({
     viteOptions: {
-      plugins: [compression(), inspect()],
       server: {
         fs: {
           strict: false,
         },
       },
     },
-  },
+  }),
   // debug: process.env.NODE_ENV === 'development',
   markdown: {
     toc: {
@@ -182,45 +185,38 @@ export default defineUserConfig<DefaultThemeOptions>({
   },
   plugins: [
     mode === 'github'
-      ? [
-          '@vuepress/plugin-docsearch',
-          {
-            apiKey: docSearchApiKey,
-            indexName: docSearchIndexName,
-            appId: docSearchAppId,
-            locales: {
-              '/': {
-                placeholder: '搜索文档',
-                translations: {
-                  button: {
-                    buttonText: '搜索文档',
-                  },
+      ? docsearchPlugin({
+          apiKey: docSearchApiKey,
+          indexName: docSearchIndexName,
+          appId: docSearchAppId,
+          locales: {
+            '/': {
+              placeholder: '搜索文档',
+              translations: {
+                button: {
+                  buttonText: '搜索文档',
                 },
               },
             },
           },
-        ]
-      : ['@vuepress/plugin-search'],
-    // ['@vuepress/plugin-pwa'],
-    // ['@vuepress/plugin-pwa-popup'],
-    [
-      '@vuepress/plugin-shiki',
-      {
-        theme: 'github-dark',
-      },
-    ],
-    [
-      'vuepress-plugin-copy-code2',
-      {
-        locales: {
-          '/': {
-            copy: '复制成功',
-            hint: '复制',
-          },
+        })
+      : searchPlugin({}),
+    shikiPlugin({
+      theme: 'github-dark',
+    }),
+    copyCodePlugin({
+      locales: {
+        '/': {
+          copy: '复制成功',
+          hint: '复制',
         },
       },
-    ],
-    ['vuepress-plugin-seo2', { hostname }],
-    ['vuepress-plugin-sitemap2', { hostname }],
+    }),
+    seoPlugin({
+      hostname,
+    }),
+    sitemapPlugin({
+      hostname,
+    }),
   ],
 });
