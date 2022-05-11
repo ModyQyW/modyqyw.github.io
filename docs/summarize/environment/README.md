@@ -43,9 +43,7 @@
 - [Window Resizer](https://coolx10.com/window-resizer/) - 便捷调整网页视窗
 - [哔哩哔哩助手](https://bilibilihelper.com/)
 
-## macOS 官网为主 Homebrew 为辅管理应用
-
-## 【不再推荐】macOS (intel) Homebrew 为主官网为辅管理应用
+## macOS (intel) Homebrew 为主官网为辅管理应用
 
 使用 [Homebrew](https://brew.sh/) 统一安装和更新大量软件非常方便。但是软件版本往往会有一些滞后，加之现在软件往往都有自动更新，不再推荐使用 Homebrew 来安装和更新软件。
 
