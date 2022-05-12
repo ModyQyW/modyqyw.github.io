@@ -314,10 +314,10 @@ brew install gradle
 brew install --cask iina # https://iina.io/
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
 brew install --cask itsycal # https://www.mowglii.com/itsycal/
-# keka，压缩解压缩工具
-brew install --cask keka # https://www.keka.io/
 # lx-music，洛雪音乐助手
 brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
+# maczip，压缩解压缩工具
+brew install --cask maczip
 # microsoft-edge，浏览器
 brew install --cask microsoft-edge # https://www.microsoft.com/edge
 # mini-program-studio，阿里系小程序开发者工具
@@ -349,21 +349,21 @@ brew install --cask prince # https://www.princexml.com/
 # https://mp.weixin.qq.com/s/YHbqfnXdhju6CXA4epNkVQ
 brew install --cask c0re100-qbittorrent
 # 也可以安装原版 qbittorrent
-brew install --cask qbittorrent
+# brew install --cask qbittorrent
 # qq
 brew install --cask qq # https://im.qq.com/macqq/
 # rectangle，快速移动、调整窗口大小
 brew install --cask rectangle # https://rectangleapp.com/
-# responsively，帮助响应式开发
-brew install --cask responsively # https://responsively.app/
 # snipaste，屏幕截图
 brew install --cask snipaste # https://www.snipaste.com/
-# sourcetree，git gui
-brew install --cask sourcetree # https://www.sourcetreeapp.com/
 # subversion，代码版本管理
 brew install svn # https://subversion.apache.org/
-# tencent-lemon，系统清理和状态工具
+# tencent-docs，腾讯文档
+brew install --cask tencent-docs # https://docs.qq.com/
+# tencent-lemon，腾讯柠檬，系统清理和状态工具
 brew install --cask tencent-lemon # https://lemon.qq.com/
+# tencent-meeting，腾讯会议
+brew install --cask tencent-meeting # https://meeting.tencent.com/
 # thunder，下载工具
 brew install --cask thunder # https://www.xunlei.com/
 # utools，效率工具，包括翻译、剪切板、网页快搜的功能的插件支持
@@ -375,6 +375,10 @@ brew install watchman
 brew install --cask wechat # https://mac.weixin.qq.com/
 # wechatwebdevtools，微信小程序开发者工具
 brew install --cask wechatwebdevtools # https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
+# wechatwork
+brew install --cask wechatwork # https://work.weixin.qq.com/
+# wps，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
+brew install --cask wpsoffice-cn # https://mac.wps.cn/
 # you-get，下载网络媒体资源
 brew install you-get # https://you-get.org/
 # youtube-dl，下载网络媒体资源
@@ -424,7 +428,6 @@ alias qs='open -a QSpace\ Pro'
   - [Bob](https://github.com/ripperhe/Bob) - 翻译工具
   - [cFosSpeed](https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm) - 网络加速工具
   - Charles - 抓包
-  - [CodeFever](https://codefever.pgyer.com/) - DevOps 平台
   - [Commander One](https://mac.eltima.com/file-manager.html)
   - [convertio](https://convertio.co/) - 在线格式转换
   - [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) - 专业视频处理
@@ -441,6 +444,7 @@ alias qs='open -a QSpace\ Pro'
   - [handbrake](https://handbrake.fr/) - 格式转换
   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) - uni-app 和 uni-cloud 开发工具
   - [hoppscotch](https://hoppscotch.io/) - 在线类 postman 工具
+  - [keka](https://www.keka.io/) - 压缩解压缩工具
   - [krita](https://krita.org/) - 专业图片处理
   - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
   - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
@@ -450,15 +454,16 @@ alias qs='open -a QSpace\ Pro'
   - [OpenEmu](https://openemu.org/)
   - [pdf 补丁丁](https://github.com/wmjordan/PDFPatcher)
   - [QSpace](https://qspace.awehunt.com/zh-cn/index.html) - 多视图文件管理器
+  - [responsively](https://responsively.app/) - 响应式开发
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
+  - [sourcetree](sourcetree) - git gui
   - [squoosh](https://squoosh.app/) - 在线图片压缩
   - [sublime text](https://www.sublimetext.com/) - 编辑工具
   - [Table Plus](https://tableplus.com/) - 数据库工具
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
   - [tinypng](https://tinypng.com/) - 在线图片压缩
   - [ToDesk](https://www.todesk.com/) - 远程桌面
-  - [WPS](https://platform.wps.cn/) - brew 安装的是国际版，支持 doc/docx/xls/xlsx/ppt/pptx/pdf 等多种格式和思维导图，完全满足程序员日常需求
   - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
   - [爱思助手](https://www.i4.cn/) - ios 助手
@@ -470,15 +475,12 @@ alias qs='open -a QSpace\ Pro'
   - [飞书](https://www.feishu.cn/)
   - [改图鸭](https://www.gaituya.com/) - 图片处理
   - [稿定设计图片编辑器](https://www.uupoop.com/)
-  - [极狐 Gitlab](https://gitlab.cn/)
+  - [极狐 Gitlab](https://gitlab.cn/) - DevOps 平台
   - [即时设计](https://js.design/)
   - [剪映专业版](https://lv.ulikecam.com/) - 视频处理
   - [看图](https://kantu.qq.com/)
   - [蓝湖](https://lanhuapp.com/)
-  - [片库](https://www.pianku.li/)
-  - [企业微信](https://work.weixin.qq.com/)
-  - [腾讯会议](https://meeting.tencent.com/)
-  - [腾讯文档](https://docs.qq.com/)
+  - [片库](https://www.btnull.org)
   - [万彩信息](https://www.wancaiinfo.com/)
   - [网易 Mumu](http://mumu.163.com/) - 安卓模拟器
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
