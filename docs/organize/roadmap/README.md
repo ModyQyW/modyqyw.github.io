@@ -4,6 +4,8 @@
 
 ## 极客时间
 
+极客时间的课质量参差不齐，建议在购买前看看评价。
+
 - [计算机基础](https://time.geekbang.org/learning/path-detail/3)
 - [前端工程师](https://time.geekbang.org/learning/path-detail/2)
 - [后端工程师](https://time.geekbang.org/learning/path-detail/16)
