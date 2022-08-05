@@ -336,6 +336,8 @@ brew install --cask itsycal # https://www.mowglii.com/itsycal/
 brew install --cask lx-music # https://github.com/lyswhut/lx-music-desktop/
 # maczip，压缩解压缩工具
 brew install --cask maczip
+# masscode，代码片段工具
+brew install --cask masscode # https://masscode.io/
 # microsoft-edge，浏览器
 brew install --cask microsoft-edge # https://www.microsoft.com/edge
 # mini-program-studio，阿里系小程序开发者工具
@@ -504,6 +506,8 @@ alias qs='open -a QSpace\ Pro'
   - [向日葵](https://sunlogin.oray.com/) - 远程桌面
   - [洋芋田图像工具箱](https://imagetoolkit.potatofield.cn/) - 图像处理
   - [在线工具](https://tool.lu/)
+  - [OpenSource Builders](https://opensource.builders/) - 找到一个应用的替代
+  - [AlternativeTo](https://alternativeto.net/) - 找到一个应用的替代
 
 [Github 仓库同步到 Gitee](https://mp.weixin.qq.com/s/E6G_plczOeCNLDMWCAQKog)
 
