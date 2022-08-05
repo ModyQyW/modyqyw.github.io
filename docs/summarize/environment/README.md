@@ -330,6 +330,8 @@ git config --global user.email "YOUR_EMAIL_HERE"
 brew install gradle
 # iina，音视频播放器
 brew install --cask iina # https://iina.io/
+# insomnia，接口工具
+brew install --cask insomnia # https://github.com/Kong/insomnia
 # itsycal，日历工具，可以将 macOS 的时间调成 HH:mm:ss 形式，将 itsycal 调成 YYYY-MM-DD 形式
 brew install --cask itsycal # https://www.mowglii.com/itsycal/
 # lx-music，洛雪音乐助手
