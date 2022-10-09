@@ -2,9 +2,9 @@
 
 目前想试着对以下东西特别感兴趣。
 
-- 排队取号系统
+- 仿佛山复星禅诚医院排队取号系统
 - days，结合 days-matter、滴答清单和 pixiu，考虑个人和团队
-- 版本更新系统
+- 仿 Jetbrains 家版本更新系统
 - 大文件分片上传、[下载](https://mp.weixin.qq.com/s/2tRkcwOQCE8pX8byt7HWiQ)
 - [SKU](https://mp.weixin.qq.com/s/A2BLVnhas49Z1pj6OubymA)
 - [Node.js 动态表格大文件下载实践](https://mp.weixin.qq.com/s/4q3R4Cz-rYzNdGYrKjudQA)
