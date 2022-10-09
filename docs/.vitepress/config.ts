@@ -18,12 +18,22 @@ export default defineConfig({
   // theme configs
   themeConfig: {
     nav: [
-      // { text: '生活', link: '/life', activeMatch: '/life/' },
-      // { text: '工作', link: '/work', activeMatch: '/work/' },
+      { text: '生活', link: '/life/health', activeMatch: '/life/' },
+      { text: '工作', link: '/work/', activeMatch: '/work/' },
       { text: '关于', link: '/about/' },
     ],
     sidebar: {
-      '/about': [],
+      '/life': [
+        {
+          text: '生活',
+          items: [
+            { text: '健康', link: '/life/health' },
+            { text: '规划', link: '/life/plan' },
+            { text: '沟通', link: '/life/communication' },
+          ],
+        },
+      ],
+      '/work': [],
     },
     socialLinks: [
       {
