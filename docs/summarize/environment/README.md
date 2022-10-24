@@ -602,22 +602,18 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "yaml",
     "yml"
   ],
-  // vscode 自带功能，不校验 css，需要和插件 stylelint 配合使用
+  // vscode 自带功能，不校验 css，需要和插件 Stylelint 配合使用
   "css.validate": false,
-  // vscode 自带功能，允许编辑区成对括号着色
-  "editor.bracketPairColorization.enabled": true,
-  // vscode 自带功能，编辑区默认使用 prettier 格式化，需要安装插件 prettier
+  // vscode 自带功能，编辑区默认使用 prettier 格式化，需要安装插件 Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // vscode 自带功能，指定编辑区字体大小为 14
-  "editor.fontSize": 14,
-  // vscode 自带功能，指定编辑区字体族
-  "editor.fontFamily": "'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace",
+  // vscode 自带功能，指定字体族
+  "editor.fontFamily": "'Jetbrains Mono', Menlo, Monaco, 'Courier New', monospace",
   // vscode 自带功能，保存时自动格式化
   "editor.formatOnSave": true,
-  // vscode 自带功能，允许编辑区成对括号指引线着色
+  // vscode 自带功能，允许编辑区成对括号指引线着色，不再需要 Bracket Pair Colorizer
   "editor.guides.bracketPairs": true,
-  // vscode 自带功能，允许显示行内建议
-  "editor.inlineSuggest.enabled": true,
+  // vscode 自带功能，自动修改对应的标签名称，不再需要 Auto Rename Tag
+  "editor.linkedEditing": true,
   // vscode 自带功能，编辑区 1 个 tab 等于 2 个空格
   "editor.tabSize": 2,
   // vscode 自带功能，编辑区行太长时自动换行
@@ -635,7 +631,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "eslint.alwaysShowStatus": true,
   // vscode 自带功能，设置文件换行为 \n (LF)
   "files.eol": "\n",
-  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加微信小程序、支付宝小程序、百度小程序、头条小程序、wepy 和 uni-app 的支持，另外把 json、json5 文件视为 jsonc 文件
+  // vscode 自带功能，指定特定后缀的文件的解析器，这里添加微信小程序、支付宝小程序、百度小程序、头条小程序、wepy 和 uni-app 的支持，另外把一些 json 文件视为 jsonc 文件
   "files.associations": {
     "*.wxml": "html",
     "*.wxs": "javascript",
@@ -649,84 +645,50 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     "*.jxml": "html",
     "*.jxss": "css",
     "*.wpy": "vue",
-    "*.json": "jsonc",
-    "*.json5": "jsonc",
     "*.nvue": "vue",
-    "*.ux": "vue"
+    "*.ux": "vue",
+    "manifest.json": "jsonc",
+    "pages.json": "jsonc",
+    "tsconfig.json": "jsonc",
+    "settings.json": "jsonc"
   },
+  // vscode 自带功能，允许 git 提交不检验
+  "git.allowNoVerifyCommit": true,
   // vscode 自带功能，git 自动 fetch
   "git.autofetch": true,
-  // vscode 自带功能，允许使用修饰器
-  "js/ts.implicitProjectConfig.experimentalDecorators": true,
   // vscode 自带功能，js 文件移动时自动更新引入
   "javascript.updateImportsOnFileMove.enabled": "always",
+  // 插件 leetcode 使用，编辑器中的快捷操作显示
+  "leetcode.editor.shortcuts": ["submit", "test", "star", "solution", "description"],
+  // 插件 leetcode 使用，指定使用 leetcode-cn
+  "leetcode.endpoint": "leetcode-cn",
   // 插件 leetcode 使用，指定文件存放的文件夹
   "leetcode.workspaceFolder": "/Users/wurui/Documents/leetcode",
   // 插件 leetcode 使用，指定文件默认语言
   "leetcode.defaultLanguage": "typescript",
-  // vscode 自带功能，不校验 less，需要和插件 stylelint 配合使用
+  // vscode 自带功能，不校验 less，需要和插件 Stylelint 配合使用
   "less.validate": false,
-  // vscode 自带功能，不校验 scss，需要和插件 stylelint 配合使用
+  // vscode 自带功能，不校验 scss，需要和插件 Stylelint 配合使用
   "scss.validate": false,
-  // vscode 自带功能，搜索时忽略部分文件
-  "search.exclude": {
-    "**/dist/**": true,
-    "**/out/**": true,
-    "**/*lock*": true
-  },
-  // 插件 stylelint 使用，指定需要提示的语言
+  // 插件 Stylelint 使用，指定需要提示的语言
   "stylelint.snippet": ["css", "less", "sass", "scss", "vue", "svelte"],
-  // 插件 stylelint 使用，指定需要校验的语言
+  // 插件 Stylelint 使用，指定需要校验的语言
   "stylelint.validate": ["css", "less", "sass", "scss", "vue", "svelte"],
-  // 插件 Todo Tree 使用，指定特定高亮格式
-  "todo-tree.highlights.customHighlight": {
-    "FIX": {
-      "background": "#d32029",
-      "foreground": "#fff",
-      "icon": "bug",
-      "iconColour": "#d32029"
-    },
-    "PERF": {
-      "background": "#2b4acb",
-      "foreground": "#fff",
-      "icon": "flame",
-      "iconColour": "#2b4acb"
-    },
-    "TODO": {
-      "background": "#d89614",
-      "foreground": "#fff",
-      "icon": "alert",
-      "iconColour": "#d89614"
-    },
-    "[ ]": {
-      "icon": "circle"
-    },
-    "[x]": {
-      "icon": "check"
-    }
-  },
-  // 插件 Todo Tree 使用，指定通用高亮格式
-  "todo-tree.highlights.defaultHighlight": {
-    "gutterIcon": true
-  },
-  // 插件 Todo Tree 使用，指定标签组
-  "todo-tree.general.tagGroups": {
-    "FIX": ["FIXME", "FIXIT", "FIX", "BUG"]
-  },
-  // 插件 Todo Tree 使用，指定匹配的文本
-  "todo-tree.general.tags": ["FIX", "FIXME", "FITIT", "BUG", "PERF", "TODO", "[ ]", "[x]"],
-  // 插件 Todo Tree 使用，指定匹配的正则表达式
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   // vscode 自带功能，ts 文件移动时自动更新引入
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // vscode 自带功能，指定默认主题为 Github Dark Default
-  "workbench.colorTheme": "GitHub Dark Default",
+  // vscode 自带功能，自动切换主题
+  "window.autoDetectColorScheme": true,
+  // vscode 自带功能，当前主题
+  "workbench.colorTheme": "GitHub Light Default",
   // vscode 自带功能，指定 md 文件的预览模式为默认
   "workbench.editorAssociations": {
     "*.md": "default"
   },
   // vscode 自带功能，指定图标主题为 vscode-icons，需要安装插件 vscode-icons
   "workbench.iconTheme": "vscode-icons",
+  // vscode 自带功能，自动切换主题的偏好
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
   // vscode 自带功能，控制编辑区在保存文件时的行为
   "[javascript]": {
     "editor.codeActionsOnSave": {
@@ -781,10 +743,41 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
     }
   },
   "[markdown]": {
+    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": true
     }
-  }
+  },
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "redhat.telemetry.enabled": false
 }
 ```
 
