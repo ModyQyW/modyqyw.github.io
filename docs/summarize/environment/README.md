@@ -469,7 +469,6 @@ alias qs='open -a QSpace\ Pro'
   - [keka](https://www.keka.io/) - 压缩解压缩工具
   - [krita](https://krita.org/) - 专业图片处理
   - [Light Proxy](https://lightproxy.org/) - 跨平台 Web 代理调试工具
-  - [Macwk Updater](https://macwk.com/soft/macwk-updater) - 检查更新
   - [MacZip](https://ezip.awehunt.com/) - 压缩工具
   - [Neat Download Manager](https://www.neatdownloadmanager.com/) - 下载工具
   - [OpenBoard](https://openboard.ch/) - 白板工具
@@ -510,6 +509,8 @@ alias qs='open -a QSpace\ Pro'
   - [在线工具](https://tool.lu/)
   - [OpenSource Builders](https://opensource.builders/) - 找到一个应用的替代
   - [AlternativeTo](https://alternativeto.net/) - 找到一个应用的替代
+
+[更多资源](https://t.me/geekshare/435)
 
 [Github 仓库同步到 Gitee](https://mp.weixin.qq.com/s/E6G_plczOeCNLDMWCAQKog)
 
