@@ -55,6 +55,7 @@ export default defineUserConfig({
     },
   },
   theme: defaultTheme({
+    // @ts-ignore
     hostname,
     navbar: [
       {
@@ -179,7 +180,7 @@ export default defineUserConfig({
     toc: {
       level: [2, 3, 4],
     },
-    extractHeaders: {
+    headers: {
       level: [2, 3, 4],
     },
   },
