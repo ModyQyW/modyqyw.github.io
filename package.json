@@ -33,7 +33,7 @@
     "@vuepress/theme-default": "^2.0.0-beta.53",
     "commitizen": "^4.2.5",
     "cross-env": "^7.0.3",
-    "eslint": "^8.27.0",
+    "eslint": "^8.28.0",
     "husky": "^8.0.2",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.0.3",
@@ -46,8 +46,8 @@
     "vitepress": "^1.0.0-alpha.29",
     "vue": "^3.2.45",
     "vuepress": "^2.0.0-beta.53",
-    "vuepress-plugin-copy-code2": "^2.0.0-beta.122",
-    "vuepress-plugin-seo2": "^2.0.0-beta.122",
-    "vuepress-plugin-sitemap2": "^2.0.0-beta.122"
+    "vuepress-plugin-copy-code2": "^2.0.0-beta.125",
+    "vuepress-plugin-seo2": "^2.0.0-beta.125",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.125"
   }
 }
