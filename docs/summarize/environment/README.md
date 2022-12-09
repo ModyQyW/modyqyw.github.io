@@ -485,6 +485,7 @@ alias qs='open -a QSpace\ Pro'
   - [TeamViewer](https://www.teamviewer.cn/cn/products/teamviewer/) - 远程桌面
   - [tinypng](https://tinypng.com/) - 在线图片压缩
   - [ToDesk](https://www.todesk.com/) - 远程桌面
+  - [WebsitePlanet - Image Compressor](https://www.websiteplanet.com/webtools/imagecompressor/) - 在线图片压缩，由 Cristy 来邮推荐，非常感谢 ❤
   - [XCode](https://developer.apple.com/xcode/) - 苹果应用开发
   - [zy-player](http://zyplayer.fun/) - 播放网络媒体
   - [爱思助手](https://www.i4.cn/) - ios 助手
