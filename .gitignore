@@ -119,7 +119,13 @@ dist
 .rax
 
 # Vuepress build output
-.vuepress/dist
+**/.vuepress/dist
+**/.vuepress/.cache
+**/.vuepress/.temp
+
+# Vitepress build output
+**/.vitepress/dist
+**/.vitepress/cache
 
 # SSR
 dist-ssr
