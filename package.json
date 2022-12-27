@@ -12,9 +12,9 @@
     "dev:gitee": "cross-env MODE=gitee vuepress dev docs",
     "dev:github": "cross-env MODE=github vuepress dev docs",
     "lint": "run-p lint:eslint lint:markdownlint lint:stylelint",
-    "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore",
+    "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore --cache",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
-    "lint:stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,svelte}\" --fix --allow-empty-input --ignore-path=.gitignore",
+    "lint:stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,svelte}\" --fix --allow-empty-input --ignore-path=.gitignore --cache",
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
