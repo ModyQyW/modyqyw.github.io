@@ -9,7 +9,7 @@ specifiers:
   '@modyqyw/fabric': ^5.14.0
   '@typescript-eslint/eslint-plugin': ^5.47.1
   '@typescript-eslint/parser': ^5.47.1
-  '@vuepress/client': 2.0.0-beta.59
+  '@vuepress/client': 2.0.0-beta.50-pre.1
   '@vuepress/plugin-docsearch': 2.0.0-beta.59
   '@vuepress/plugin-search': 2.0.0-beta.59
   '@vuepress/plugin-shiki': 2.0.0-beta.59
@@ -42,7 +42,7 @@ devDependencies:
   '@modyqyw/fabric': registry.npmjs.org/@modyqyw/fabric/5.14.0_3gqbce624o7pzzgdwziqctl2im
   '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/5.47.1_txmweb6yn7coi7nfrp22gpyqmy
   '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser/5.47.1_lzzuuodtsqwxnvqeq4g4likcqa
-  '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.59
+  '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.50-pre.1
   '@vuepress/plugin-docsearch': registry.npmjs.org/@vuepress/plugin-docsearch/2.0.0-beta.59
   '@vuepress/plugin-search': registry.npmjs.org/@vuepress/plugin-search/2.0.0-beta.59
   '@vuepress/plugin-shiki': registry.npmjs.org/@vuepress/plugin-shiki/2.0.0-beta.59
@@ -61,7 +61,7 @@ devDependencies:
   typescript: registry.npmjs.org/typescript/4.9.4
   vitepress: registry.npmjs.org/vitepress/1.0.0-alpha.33
   vitepress-plugin-mermaid: registry.npmjs.org/vitepress-plugin-mermaid/2.0.8_n6xgoa4445us3yczu6vtf27lna
-  vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+  vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
   vuepress-plugin-copy-code2: registry.npmjs.org/vuepress-plugin-copy-code2/2.0.0-beta.145_vuepress@2.0.0-beta.59
   vuepress-plugin-seo2: registry.npmjs.org/vuepress-plugin-seo2/2.0.0-beta.145_vuepress@2.0.0-beta.59
   vuepress-plugin-sitemap2: registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.145_vuepress@2.0.0-beta.59
@@ -2089,6 +2089,17 @@ packages:
       - supports-color
     dev: true
 
+  registry.npmjs.org/@vuepress/client/2.0.0-beta.50-pre.1:
+    resolution: {integrity: sha512-uhN/LTwCcVLnQjDnrEDMaiPT2bi4mQrvwdtwURnrSZ7dCIgXQ+DMKP1v6+f2vgAlrw3FLnPd97yd3V7lrQs8Ow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/client/-/client-2.0.0-beta.50-pre.1.tgz}
+    name: '@vuepress/client'
+    version: 2.0.0-beta.50-pre.1
+    dependencies:
+      '@vue/devtools-api': registry.npmjs.org/@vue/devtools-api/6.4.5
+      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.50-pre.1
+      vue: registry.npmjs.org/vue/3.2.45
+      vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.45
+    dev: true
+
   registry.npmjs.org/@vuepress/client/2.0.0-beta.59:
     resolution: {integrity: sha512-Bnq3vMsinQi8reerqcJkOLs7kPL61qnb1sBkPhvKMJhHWb7xxMA4DXd08AbA3MGjXNWUyXgq7iEuhxC28GQSSA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/client/-/client-2.0.0-beta.59.tgz}
     name: '@vuepress/client'
@@ -2325,6 +2336,14 @@ packages:
       vue: registry.npmjs.org/vue/3.2.45
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  registry.npmjs.org/@vuepress/shared/2.0.0-beta.50-pre.1:
+    resolution: {integrity: sha512-Gk6ikIV2V8LMokc+H/juH+kBOigo38Woup42Q2pmmWqmlwdLqbUcCYZSt/z+opeOUAqC9s3CZnKR8xCw+qo8BQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/shared/-/shared-2.0.0-beta.50-pre.1.tgz}
+    name: '@vuepress/shared'
+    version: 2.0.0-beta.50-pre.1
+    dependencies:
+      '@vue/shared': registry.npmjs.org/@vue/shared/3.2.45
     dev: true
 
   registry.npmjs.org/@vuepress/shared/2.0.0-beta.59:
@@ -9798,7 +9817,7 @@ packages:
       balloon-css: registry.npmjs.org/balloon-css/1.2.0
       vue: registry.npmjs.org/vue/3.2.45
       vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.45
-      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
       vuepress-plugin-sass-palette: registry.npmjs.org/vuepress-plugin-sass-palette/2.0.0-beta.145_vuepress@2.0.0-beta.59
       vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.145
     transitivePeerDependencies:
@@ -9829,7 +9848,7 @@ packages:
       '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.59
       chokidar: registry.npmjs.org/chokidar/3.5.3
       sass: registry.npmjs.org/sass/1.57.1
-      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
       vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.145
     transitivePeerDependencies:
       - supports-color
@@ -9855,7 +9874,7 @@ packages:
     dependencies:
       '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.59
       '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.59
-      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
       vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.145
     transitivePeerDependencies:
       - supports-color
@@ -9882,7 +9901,7 @@ packages:
       '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.59
       '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.59
       sitemap: registry.npmjs.org/sitemap/7.1.1
-      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+      vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
       vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.145
     transitivePeerDependencies:
       - supports-color
@@ -9908,7 +9927,7 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmjs.org/vuepress-vite/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm:
+  registry.npmjs.org/vuepress-vite/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u:
     resolution: {integrity: sha512-DyUsTkixrvUQjfxUdRv/uNotrQeOxVQisk6Szo0ukvZQGpet9/aMqAmYFwJy8Xd1od30f+h4M9KNhBM8N9sm1g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vuepress-vite/-/vuepress-vite-2.0.0-beta.59.tgz}
     id: registry.npmjs.org/vuepress-vite/2.0.0-beta.59
     name: vuepress-vite
@@ -9920,7 +9939,7 @@ packages:
     dependencies:
       '@vuepress/bundler-vite': registry.npmjs.org/@vuepress/bundler-vite/2.0.0-beta.59
       '@vuepress/cli': registry.npmjs.org/@vuepress/cli/2.0.0-beta.59
-      '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.59
+      '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.50-pre.1
       '@vuepress/core': registry.npmjs.org/@vuepress/core/2.0.0-beta.59
       '@vuepress/theme-default': registry.npmjs.org/@vuepress/theme-default/2.0.0-beta.59
     transitivePeerDependencies:
@@ -9936,14 +9955,14 @@ packages:
       - ts-node
     dev: true
 
-  registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm:
+  registry.npmjs.org/vuepress/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u:
     resolution: {integrity: sha512-ggFuq1jKVwF1f0PK5SR3mAi34PHDLvNDiNbC1Qw5XZR7qs9ryutsbFUkfpa9R4rnGnw0uoohiyE4itANWVcvtw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vuepress/-/vuepress-2.0.0-beta.59.tgz}
     id: registry.npmjs.org/vuepress/2.0.0-beta.59
     name: vuepress
     version: 2.0.0-beta.59
     hasBin: true
     dependencies:
-      vuepress-vite: registry.npmjs.org/vuepress-vite/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
+      vuepress-vite: registry.npmjs.org/vuepress-vite/2.0.0-beta.59_4ye37pwpysohwx2ay3tqxhdp2u
     transitivePeerDependencies:
       - '@types/node'
       - '@vue/composition-api'
