@@ -29,7 +29,7 @@
     "@vuepress/client": "2.0.0-beta.59",
     "@vuepress/plugin-docsearch": "2.0.0-beta.59",
     "@vuepress/plugin-search": "2.0.0-beta.59",
-    "@vuepress/plugin-shiki": "2.0.0-beta.59",
+    "@vuepress/plugin-shiki": "2.0.0-beta.50-pre.1",
     "@vuepress/theme-default": "2.0.0-beta.59",
     "commitizen": "^4.2.6",
     "cross-env": "^7.0.3",
