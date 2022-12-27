@@ -9,16 +9,7 @@ import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import fs from 'fs';
 import path from 'path';
 
-const mode = process.env.MODE || 'github';
-const hostname = mode === 'github' ? 'https://modyqyw.top' : 'https://modyqyw.gitee.io';
-const repo =
-  mode === 'github'
-    ? 'https://github.com/ModyQyW/modyqyw.github.io'
-    : 'https://gitee.com/ModyQyW/ModyQyW';
-const repoLabel = mode === 'github' ? 'Github' : 'Gitee';
-const docSearchApiKey = mode === 'github' ? 'bc7c3bfb65339c025cdced95c50cb051' : 'giteeApiKey';
-const docSearchIndexName = mode === 'github' ? 'modyqyw' : 'giteeIndexName';
-const docSearchAppId = mode === 'github' ? 'Z14RO4ODPO' : 'giteeAppId';
+const hostname = 'https://modyqyw.top';
 
 const getFiles = (dirs: string[]) =>
   fs.readdirSync(path.resolve('docs', ...dirs)).map((item) => `/${dirs.concat(item).join('/')}`);
@@ -82,8 +73,8 @@ export default defineUserConfig({
       { text: '关于', link: '/about/' },
     ],
     logo: '/images/w256.png',
-    repo,
-    repoLabel,
+    repo: 'https://github.com/ModyQyW/modyqyw.github.io',
+    repoLabel: 'GitHub',
     sidebar: {
       '/organize/': [
         {
@@ -185,23 +176,21 @@ export default defineUserConfig({
     },
   },
   plugins: [
-    mode === 'github'
-      ? docsearchPlugin({
-          apiKey: docSearchApiKey,
-          indexName: docSearchIndexName,
-          appId: docSearchAppId,
-          locales: {
-            '/': {
-              placeholder: '搜索文档',
-              translations: {
-                button: {
-                  buttonText: '搜索文档',
-                },
-              },
+    docsearchPlugin({
+      apiKey: 'bc7c3bfb65339c025cdced95c50cb051',
+      indexName: 'modyqyw',
+      appId: 'Z14RO4ODPO',
+      locales: {
+        '/': {
+          placeholder: '搜索文档',
+          translations: {
+            button: {
+              buttonText: '搜索文档',
             },
           },
-        })
-      : searchPlugin({}),
+        },
+      },
+    }),
     shikiPlugin({
       theme: 'github-dark',
     }),
