@@ -1,5 +1,13 @@
+import { createWriteStream } from 'node:fs';
+import { resolve } from 'node:path';
+import { SitemapStream } from 'sitemap';
 import { defineConfig } from 'vitepress';
 import { withMermaid } from 'vitepress-plugin-mermaid';
+
+// for sitemap
+// see https://github.com/vuejs/vitepress/issues/520
+const links: { url: string; lastmod?: number }[] = [];
+const hostname = 'https://modyqyw.top';
 
 export default withMermaid(
   defineConfig({
@@ -39,6 +47,30 @@ export default withMermaid(
         apiKey: 'bc7c3bfb65339c025cdced95c50cb051',
         indexName: 'modyqyw',
       },
+    },
+    transformHtml: (_, id, { pageData }) => {
+      // clean urls mode
+      // if (!/[\\/]404\.html$/.test(id)) {
+      //   links.push({
+      //     url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+      //     lastmod: pageData.lastUpdated,
+      //   });
+      // }
+      // not clean urls mode
+      if (!/[\\/]404\.html$/.test(id)) {
+        links.push({
+          url: pageData.relativePath.replace(/\.md$/, '.html'),
+          lastmod: pageData.lastUpdated,
+        });
+      }
+    },
+    buildEnd: async ({ outDir }) => {
+      const sitemap = new SitemapStream({ hostname });
+      const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
+      sitemap.pipe(writeStream);
+      links.forEach((link) => sitemap.write(link));
+      sitemap.end();
+      await new Promise((r) => writeStream.on('finish', r));
     },
   }),
 );
