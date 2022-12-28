@@ -31,7 +31,7 @@ specifiers:
   vuepress: 2.0.0-beta.59
   vuepress-plugin-copy-code2: 2.0.0-beta.145
   vuepress-plugin-seo2: 2.0.0-beta.145
-  vuepress-plugin-sitemap2: 2.0.0-beta.145
+  vuepress-plugin-sitemap2: 2.0.0-beta.146
 
 devDependencies:
   '@babel/core': registry.npmjs.org/@babel/core/7.20.7
@@ -64,7 +64,7 @@ devDependencies:
   vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
   vuepress-plugin-copy-code2: registry.npmjs.org/vuepress-plugin-copy-code2/2.0.0-beta.145_vuepress@2.0.0-beta.59
   vuepress-plugin-seo2: registry.npmjs.org/vuepress-plugin-seo2/2.0.0-beta.145_vuepress@2.0.0-beta.59
-  vuepress-plugin-sitemap2: registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.145_vuepress@2.0.0-beta.59
+  vuepress-plugin-sitemap2: registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.146_vuepress@2.0.0-beta.59
 
 packages:
 
@@ -2100,6 +2100,17 @@ packages:
       vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.45
     dev: true
 
+  registry.npmjs.org/@vuepress/client/2.0.0-beta.60:
+    resolution: {integrity: sha512-WU5VGeDp41A2dVXqp18YBggflIjTq68mA+s5TCz93wk+7elAmPAkWKcobQBYQgvsuwHyg9nWulZAfMN6OEygKQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/client/-/client-2.0.0-beta.60.tgz}
+    name: '@vuepress/client'
+    version: 2.0.0-beta.60
+    dependencies:
+      '@vue/devtools-api': registry.npmjs.org/@vue/devtools-api/6.4.5
+      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.60
+      vue: registry.npmjs.org/vue/3.2.45
+      vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.45
+    dev: true
+
   registry.npmjs.org/@vuepress/core/2.0.0-beta.59:
     resolution: {integrity: sha512-EulUBBZ3+ATJoM01/zAqFPiR22r1NqixWOQaByhjO4nqCjfWmMmm0KpLpcsvMBmQvwjhrdHmlnWEj6Snej/Tjg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/core/-/core-2.0.0-beta.59.tgz}
     name: '@vuepress/core'
@@ -2336,6 +2347,15 @@ packages:
       '@vue/shared': registry.npmjs.org/@vue/shared/3.2.45
     dev: true
 
+  registry.npmjs.org/@vuepress/shared/2.0.0-beta.60:
+    resolution: {integrity: sha512-bwFksEtSQpbyAGJZkvRK9Z2zGmS144nv759vOzbRUZPPlGffeauzrPw9w7wxqp3gTJvIE/4Ufqt0AZTuSP/F/g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/shared/-/shared-2.0.0-beta.60.tgz}
+    name: '@vuepress/shared'
+    version: 2.0.0-beta.60
+    dependencies:
+      '@mdit-vue/types': registry.npmjs.org/@mdit-vue/types/0.11.0
+      '@vue/shared': registry.npmjs.org/@vue/shared/3.2.45
+    dev: true
+
   registry.npmjs.org/@vuepress/theme-default/2.0.0-beta.59:
     resolution: {integrity: sha512-r+rhmGFsKtQ6QmihnqC5rgS4VcPsxDSCRf5BpHJfafLBFyy18Zdg3PdWSf4f3IwrlezB/HZo1SOLQGcV1Ta8VA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/theme-default/-/theme-default-2.0.0-beta.59.tgz}
     name: '@vuepress/theme-default'
@@ -2378,6 +2398,26 @@ packages:
       '@types/fs-extra': registry.npmjs.org/@types/fs-extra/9.0.13
       '@types/hash-sum': registry.npmjs.org/@types/hash-sum/1.0.0
       '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.59
+      debug: registry.npmjs.org/debug/4.3.4
+      fs-extra: registry.npmjs.org/fs-extra/11.1.0
+      globby: registry.npmjs.org/globby/13.1.3
+      hash-sum: registry.npmjs.org/hash-sum/2.0.0
+      ora: registry.npmjs.org/ora/6.1.2
+      picocolors: registry.npmjs.org/picocolors/1.0.0
+      upath: registry.npmjs.org/upath/2.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmjs.org/@vuepress/utils/2.0.0-beta.60:
+    resolution: {integrity: sha512-R5m5/AtKWAnlH+Su2yxoHQNp2JdJZ7gHV5531RbFySq9FTlKHtvE5RFceeppc0/UpzPE6KggRdaRqyjc77vg4g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vuepress/utils/-/utils-2.0.0-beta.60.tgz}
+    name: '@vuepress/utils'
+    version: 2.0.0-beta.60
+    dependencies:
+      '@types/debug': registry.npmjs.org/@types/debug/4.1.7
+      '@types/fs-extra': registry.npmjs.org/@types/fs-extra/9.0.13
+      '@types/hash-sum': registry.npmjs.org/@types/hash-sum/1.0.0
+      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.60
       debug: registry.npmjs.org/debug/4.3.4
       fs-extra: registry.npmjs.org/fs-extra/11.1.0
       globby: registry.npmjs.org/globby/13.1.3
@@ -9861,16 +9901,16 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.145_vuepress@2.0.0-beta.59:
-    resolution: {integrity: sha512-nKCx/xxTiHfQfr1T1atufXiax+Y6ArsGdyyp1+8bmxiKDTGFNxNLB2MHC+7crsV76gsDl3ENv3z2a9Au7tuhBw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vuepress-plugin-sitemap2/-/vuepress-plugin-sitemap2-2.0.0-beta.145.tgz}
-    id: registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.145
+  registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.146_vuepress@2.0.0-beta.59:
+    resolution: {integrity: sha512-sbdo5MsYcQ+rQiZbjuJDOX4Kn4oYd6TC8+e0MpSssowC2rVXNg2z+Fu/bmNbCEIifB+iST7qaxwpLtZlSZSFuA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vuepress-plugin-sitemap2/-/vuepress-plugin-sitemap2-2.0.0-beta.146.tgz}
+    id: registry.npmjs.org/vuepress-plugin-sitemap2/2.0.0-beta.146
     name: vuepress-plugin-sitemap2
-    version: 2.0.0-beta.145
+    version: 2.0.0-beta.146
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
-      vuepress: 2.0.0-beta.59
-      vuepress-vite: 2.0.0-beta.59
-      vuepress-webpack: 2.0.0-beta.59
+      vuepress: 2.0.0-beta.60
+      vuepress-vite: 2.0.0-beta.60
+      vuepress-webpack: 2.0.0-beta.60
     peerDependenciesMeta:
       vuepress:
         optional: true
@@ -9879,11 +9919,11 @@ packages:
       vuepress-webpack:
         optional: true
     dependencies:
-      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.59
-      '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.59
+      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.60
+      '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.60
       sitemap: registry.npmjs.org/sitemap/7.1.1
       vuepress: registry.npmjs.org/vuepress/2.0.0-beta.59_ma4yakrobmjrwhoqqdvlr7rprm
-      vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.145
+      vuepress-shared: registry.npmjs.org/vuepress-shared/2.0.0-beta.146
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9896,6 +9936,26 @@ packages:
       '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.59
       '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.59
       '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.59
+      cheerio: registry.npmjs.org/cheerio/1.0.0-rc.12
+      dayjs: registry.npmjs.org/dayjs/1.11.7
+      execa: registry.npmjs.org/execa/6.1.0
+      fflate: registry.npmjs.org/fflate/0.7.4
+      gray-matter: registry.npmjs.org/gray-matter/4.0.3
+      striptags: registry.npmjs.org/striptags/3.2.0
+      vue: registry.npmjs.org/vue/3.2.45
+      vue-router: registry.npmjs.org/vue-router/4.1.6_vue@3.2.45
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmjs.org/vuepress-shared/2.0.0-beta.146:
+    resolution: {integrity: sha512-yCv4qe2gv6p0mYGyXENJWjaWmOXZ1Dn/UeGcosIxqP53xf7hMGvNJgPnhdykiWjs6Cba9vM/bHR1R9aae1BVVg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vuepress-shared/-/vuepress-shared-2.0.0-beta.146.tgz}
+    name: vuepress-shared
+    version: 2.0.0-beta.146
+    dependencies:
+      '@vuepress/client': registry.npmjs.org/@vuepress/client/2.0.0-beta.60
+      '@vuepress/shared': registry.npmjs.org/@vuepress/shared/2.0.0-beta.60
+      '@vuepress/utils': registry.npmjs.org/@vuepress/utils/2.0.0-beta.60
       cheerio: registry.npmjs.org/cheerio/1.0.0-rc.12
       dayjs: registry.npmjs.org/dayjs/1.11.7
       execa: registry.npmjs.org/execa/6.1.0
