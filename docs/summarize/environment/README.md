@@ -478,7 +478,7 @@ alias qs='open -a QSpace\ Pro'
   - [responsively](https://responsively.app/) - 响应式开发
   - [RustDesk](https://rustdesk.com/zh/) - 远程桌面
   - Sketch - 设计稿
-  - [sourcetree](sourcetree) - git gui
+  - [sourcetree](https://www.sourcetreeapp.com/) - git gui
   - [squoosh](https://squoosh.app/) - 在线图片压缩
   - [sublime text](https://www.sublimetext.com/) - 编辑工具
   - [Table Plus](https://tableplus.com/) - 数据库工具
