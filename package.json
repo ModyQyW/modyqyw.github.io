@@ -6,6 +6,7 @@
     "build": "vitepress build docs",
     "commit": "cz",
     "dev": "vitepress dev docs",
+    "preview": "vitepress preview docs",
     "lint": "run-p lint:eslint lint:markdownlint lint:stylelint",
     "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore --cache",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
