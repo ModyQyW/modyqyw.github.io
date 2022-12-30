@@ -2,6 +2,6 @@
 
 ## TODO
 
-- migrate to vitepress
-- i18n support
+- sync content
 - content updates
+- i18n support (wait for vitepress update)
