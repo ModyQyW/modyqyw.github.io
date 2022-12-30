@@ -78,6 +78,8 @@ export default defineConfig({
 });
 ```
 
+请注意，这种方法可能不支持类浏览器环境。
+
 也有一个 [esbuild 插件](https://github.com/hyrious/esbuild-plugin-commonjs) 试着解决这个问题，我还没有尝试过，感兴趣可以试试。
 
 ### Named Export & Default Export
@@ -136,6 +138,8 @@ export default defineConfig({
 
 ## 总结
 
-我认为当下，`tsup` 是打包库的最优选择，它足够简单，对用户友好。
+`tsup` 足够简单，对用户友好。如果只需要考虑 `node` 环境，我认为它是打包库的最优选择。
 
-如果 `tsup` 不能满足你的需求，你可以尝试使用 `rollup`。为了提升构建速度，你可以加入 [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild)、[rollup-plugin-swc3](https://github.com/SukkaW/rollup-plugin-swc) 或 [unplugin-swc](https://github.com/egoist/unplugin-swc)。值得一提的是，`tsup` 的作者也是 `rollup-plugin-esbuild` 和 `unplugin-swc` 的作者。
+如果 `tsup` 不能满足需求，我建议尝试 `rollup`。为了提升构建速度，你可以加入 [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild)、[rollup-plugin-swc3](https://github.com/SukkaW/rollup-plugin-swc) 或 [unplugin-swc](https://github.com/egoist/unplugin-swc)。值得一提的是，`tsup` 的作者也是 `rollup-plugin-esbuild` 和 `unplugin-swc` 的作者。
+
+如果你觉得 `rollup` 也过于复杂，我建议尝试 `unbuild`。你可以从 `unbuild` 不同用例中了解一些用法。
