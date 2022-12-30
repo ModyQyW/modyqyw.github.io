@@ -56,6 +56,18 @@ const getBlogsNav = () => {
 export default withMermaid(
   defineConfig({
     // app configs
+    head: [
+      [
+        'script',
+        {},
+        `
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          for (let r of registrations)
+            r.unregister()
+        })
+        `,
+      ],
+    ],
     lang: 'zh-Hans',
     lastUpdated: true,
     markdown: {
