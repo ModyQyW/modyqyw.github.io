@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync, lstatSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import type { SidebarGroup, NavItem } from './types';
 
@@ -10,11 +10,14 @@ const getMarkdownTitle = (filePath: string) => {
   return titles?.[0]?.slice(2);
 };
 
-const getFileBirthtime = (file: string) => statSync(file).birthtimeMs;
+const getFileBirthtime = (path: string) => statSync(path).birthtimeMs;
+
+const dirFilter = (path: string) => lstatSync(path).isDirectory();
 
 const numberFilter = (item: string | number) => !Number.isNaN(Number.parseInt(item.toString(), 10));
 
-const markdownFilter = (item: string) => item.endsWith('.md');
+const releasedMarkdownFilter = (item: string) =>
+  item.endsWith('.md') && !item.endsWith('.draft.md');
 
 const descSorter = (a: string | number, b: string | number) => {
   const na = Number.parseInt(a.toString(), 10);
@@ -25,11 +28,17 @@ const descSorter = (a: string | number, b: string | number) => {
 export const getBlogsSidebar = () => {
   const docsDirPath = resolve(cwd, 'docs');
   const blogsDirPath = resolve(docsDirPath, 'blogs');
-  const yearDirs = readdirSync(blogsDirPath).filter(numberFilter).sort(descSorter);
+  const yearDirs = readdirSync(blogsDirPath)
+    .filter(numberFilter)
+    .filter((yearDir) => dirFilter(resolve(blogsDirPath, yearDir)))
+    .sort(descSorter);
   return yearDirs
     .map((yearDir) => {
       const yearDirPath = resolve(blogsDirPath, yearDir);
-      const monthDirs = readdirSync(yearDirPath).filter(numberFilter).sort(descSorter);
+      const monthDirs = readdirSync(yearDirPath)
+        .filter(numberFilter)
+        .filter((monthDir) => dirFilter(resolve(yearDirPath, monthDir)))
+        .sort(descSorter);
       return {
         text: `Y ${yearDir}`,
         collapsible: true,
@@ -39,7 +48,7 @@ export const getBlogsSidebar = () => {
             return {
               text: `M ${monthDir}`,
               items: readdirSync(monthDirPath)
-                .filter(markdownFilter)
+                .filter(releasedMarkdownFilter)
                 .map((fileName) => {
                   const filePath = resolve(monthDirPath, fileName);
                   const title = getMarkdownTitle(filePath);
