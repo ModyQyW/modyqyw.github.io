@@ -34,7 +34,6 @@
     "**/*.mts",
     "**/*.tsx",
     "**/*.vue",
-    "**/*.svelte",
     "**/.vitepress/config.ts"
   ],
   "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
