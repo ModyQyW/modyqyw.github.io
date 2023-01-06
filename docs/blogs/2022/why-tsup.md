@@ -78,7 +78,7 @@ export default defineConfig({
 });
 ```
 
-请注意，这种方法可能不支持类浏览器环境。
+请注意，这种方法不支持类浏览器环境。这是极其致命的缺点。如果你要构建一个用于类浏览器环境的包，可以看看别的工具。
 
 也有一个 [esbuild 插件](https://github.com/hyrious/esbuild-plugin-commonjs) 试着解决这个问题，我还没有尝试过，感兴趣可以试试。
 
@@ -126,11 +126,15 @@ export default defineConfig({
 
 ### [rollup](https://rollupjs.org/)
 
-`rollup` 在各方面几近完美，概念比 `webpack` 少，配置也比 `webpack` 简单。但它过于偏向底层，我会优先考虑比 `rollup` 层级更高一些的工具，比如 `tsup` 和 `unbuild`。
+`rollup` 在各方面几近完美，概念比 `webpack` 少，配置也比 `webpack` 简单。但它过于偏向底层，我会优先考虑比 `rollup` 层级更高一些的工具，比如 `tsup`、`unbuild` 和 `bunchee`。
 
 ### [unbuild](https://github.com/unjs/unbuild)
 
-`unbuild` 是基于 `rollup` 的构建工具，由 `nuxt` 团队推出。它会先使用 `@rollup/plugin-commonjs` 处理依赖，这一点要比 `tsup` 更好。但它的文档非常简略，远远比不上 `tsup`。
+`unbuild` 是基于 `rollup` 和 `esbuild` 的构建工具，由 `nuxt` 团队推出。它会使用 `@rollup/plugin-commonjs` 处理 `commonjs` 语法，这一点要比 `tsup` 更好。但它的文档非常简略，远远比不上 `tsup`。
+
+### [bunchee](https://github.com/huozhi/bunchee)
+
+`bunchee` 是基于 `rollup` 和 `swc` 的构建工具，由 `next` 团队成员推出。类似地，它会使用 `@rollup/plugin-commonjs` 处理 `commonjs` 语法。它的文档比 `unbuild` 详细，而且也不需要额外的配置文件。
 
 ### [vite](https://cn.vitejs.dev/)
 
@@ -140,6 +144,6 @@ export default defineConfig({
 
 `tsup` 足够简单，对用户友好。如果只需要考虑 `node` 环境，我认为它是打包库的最优选择。
 
-如果 `tsup` 不能满足需求，我建议尝试 `rollup`。为了提升构建速度，你可以加入 [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild)、[rollup-plugin-swc3](https://github.com/SukkaW/rollup-plugin-swc) 或 [unplugin-swc](https://github.com/egoist/unplugin-swc)。值得一提的是，`tsup` 的作者也是 `rollup-plugin-esbuild` 和 `unplugin-swc` 的作者。
+如果 `tsup` 不能满足需求，我建议尝试 `rollup`，我也正准备把我负责的几个项目迁移到 `rollup`。为了提升构建速度，你可以加入 [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild)、[rollup-plugin-swc3](https://github.com/SukkaW/rollup-plugin-swc) 或 [unplugin-swc](https://github.com/egoist/unplugin-swc)。值得一提的是，`tsup` 的作者也是 `rollup-plugin-esbuild` 和 `unplugin-swc` 的作者。
 
-如果你觉得 `rollup` 也过于复杂，我建议尝试 `unbuild`。你可以从 `unbuild` 不同用例中了解一些用法。
+如果你觉得 `rollup` 也过于复杂，我建议尝试 `unbuild` 或者 `bunchee`。你可以从 `unbuild` 和 `bunchee` 不同用例中了解一些用法。
