@@ -34,7 +34,7 @@
     "**/*.mts",
     "**/*.tsx",
     "**/*.vue",
-    "**/.vitepress/config.ts"
+    "**/.vitepress/*.ts"
   ],
   "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
 }

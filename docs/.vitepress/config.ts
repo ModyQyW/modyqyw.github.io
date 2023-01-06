@@ -1,56 +1,13 @@
-import { createWriteStream, readdirSync, readFileSync, statSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { createWriteStream } from 'node:fs';
+import { resolve } from 'node:path';
 import { SitemapStream } from 'sitemap';
 import { defineConfig } from 'vitepress';
-import type { DefaultTheme } from 'vitepress';
-
-const cwd = process.cwd();
+import { getBlogsNav, getBlogsSidebar } from './helpers';
 
 // for sitemap
 // see https://github.com/vuejs/vitepress/issues/520
 const links: { url: string; lastmod?: number }[] = [];
 const hostname = 'https://modyqyw.top';
-
-const getMarkdownTitle = (filePath: string) => {
-  const content = readFileSync(filePath, 'utf-8');
-  const titles = content.match(/^\# .+/g);
-  return titles?.[0]?.slice(2);
-};
-
-const getBlogsSidebar = () => {
-  const docsDirPath = resolve(cwd, 'docs');
-  const blogsDirPath = resolve(docsDirPath, 'blogs');
-  const yearDirs = readdirSync(blogsDirPath).sort((a, b) => parseInt(b) - parseInt(a));
-  return yearDirs
-    .map((yearDir) => {
-      const yearDirPath = resolve(blogsDirPath, yearDir);
-      return {
-        text: yearDir,
-        items: readdirSync(yearDirPath)
-          .map((fileName) => {
-            const filePath = resolve(yearDirPath, fileName);
-            const title = getMarkdownTitle(filePath);
-            return {
-              text: title,
-              link: filePath.slice(docsDirPath.length),
-            };
-          })
-          .sort((fileA, fileB) => {
-            const fileACreatedAt = statSync(join(docsDirPath, fileA.link)).birthtimeMs;
-            const fileBCreatedAt = statSync(join(docsDirPath, fileB.link)).birthtimeMs;
-            return fileBCreatedAt - fileACreatedAt;
-          }),
-      };
-    })
-    .filter((yearDir) => (yearDir.items?.length ?? 0) !== 0) as DefaultTheme.SidebarGroup[];
-};
-const getBlogsNav = () => {
-  const blogsSidebar = getBlogsSidebar();
-  return {
-    text: '博客',
-    link: blogsSidebar[0].items[0].link,
-  } as DefaultTheme.NavItem;
-};
 
 export default defineConfig({
   // app configs
