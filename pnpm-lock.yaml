@@ -15,7 +15,7 @@ specifiers:
   husky: ^8.0.3
   is-ci: ^3.0.1
   lint-staged: ^13.1.0
-  markdownlint-cli: ^0.32.2
+  markdownlint-cli: ^0.33.0
   npm-run-all: ^4.1.5
   prettier: ^2.8.1
   sitemap: ^7.1.1
@@ -38,7 +38,7 @@ devDependencies:
   husky: registry.npmjs.org/husky/8.0.3
   is-ci: registry.npmjs.org/is-ci/3.0.1
   lint-staged: registry.npmjs.org/lint-staged/13.1.0
-  markdownlint-cli: registry.npmjs.org/markdownlint-cli/0.32.2
+  markdownlint-cli: registry.npmjs.org/markdownlint-cli/0.33.0
   npm-run-all: registry.npmjs.org/npm-run-all/4.1.5
   prettier: registry.npmjs.org/prettier/2.8.1
   sitemap: registry.npmjs.org/sitemap/7.1.1
@@ -4355,7 +4355,7 @@ packages:
       fs.realpath: registry.npmjs.org/fs.realpath/1.0.0
       inflight: registry.npmjs.org/inflight/1.0.6
       inherits: registry.npmjs.org/inherits/2.0.4
-      minimatch: registry.npmjs.org/minimatch/5.1.1
+      minimatch: registry.npmjs.org/minimatch/5.1.2
       once: registry.npmjs.org/once/1.4.0
     dev: true
 
@@ -5243,12 +5243,6 @@ packages:
       semver: registry.npmjs.org/semver/7.3.8
     dev: true
 
-  registry.npmjs.org/jsonc-parser/3.1.0:
-    resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.1.0.tgz}
-    name: jsonc-parser
-    version: 3.1.0
-    dev: true
-
   registry.npmjs.org/jsonc-parser/3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.2.0.tgz}
     name: jsonc-parser
@@ -5615,10 +5609,10 @@ packages:
       uc.micro: registry.npmjs.org/uc.micro/1.0.6
     dev: true
 
-  registry.npmjs.org/markdownlint-cli/0.32.2:
-    resolution: {integrity: sha512-xmJT1rGueUgT4yGNwk6D0oqQr90UJ7nMyakXtqjgswAkEhYYqjHew9RY8wDbOmh2R270IWjuKSeZzHDEGPAUkQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/markdownlint-cli/-/markdownlint-cli-0.32.2.tgz}
+  registry.npmjs.org/markdownlint-cli/0.33.0:
+    resolution: {integrity: sha512-zMK1oHpjYkhjO+94+ngARiBBrRDEUMzooDHBAHtmEIJ9oYddd9l3chCReY2mPlecwH7gflQp1ApilTo+o0zopQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/markdownlint-cli/-/markdownlint-cli-0.33.0.tgz}
     name: markdownlint-cli
-    version: 0.32.2
+    version: 0.33.0
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
@@ -5627,25 +5621,17 @@ packages:
       glob: registry.npmjs.org/glob/8.0.3
       ignore: registry.npmjs.org/ignore/5.2.4
       js-yaml: registry.npmjs.org/js-yaml/4.1.0
-      jsonc-parser: registry.npmjs.org/jsonc-parser/3.1.0
-      markdownlint: registry.npmjs.org/markdownlint/0.26.2
-      markdownlint-rule-helpers: registry.npmjs.org/markdownlint-rule-helpers/0.17.2
-      minimatch: registry.npmjs.org/minimatch/5.1.1
+      jsonc-parser: registry.npmjs.org/jsonc-parser/3.2.0
+      markdownlint: registry.npmjs.org/markdownlint/0.27.0
+      minimatch: registry.npmjs.org/minimatch/5.1.2
       run-con: registry.npmjs.org/run-con/1.2.11
     dev: true
 
-  registry.npmjs.org/markdownlint-rule-helpers/0.17.2:
-    resolution: {integrity: sha512-XaeoW2NYSlWxMCZM2B3H7YTG6nlaLfkEZWMBhr4hSPlq9MuY2sy83+Xr89jXOqZMZYjvi5nBCGoFh7hHoPKZmA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/markdownlint-rule-helpers/-/markdownlint-rule-helpers-0.17.2.tgz}
-    name: markdownlint-rule-helpers
-    version: 0.17.2
-    engines: {node: '>=12'}
-    dev: true
-
-  registry.npmjs.org/markdownlint/0.26.2:
-    resolution: {integrity: sha512-2Am42YX2Ex5SQhRq35HxYWDfz1NLEOZWWN25nqd2h3AHRKsGRE+Qg1gt1++exW792eXTrR4jCNHfShfWk9Nz8w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/markdownlint/-/markdownlint-0.26.2.tgz}
+  registry.npmjs.org/markdownlint/0.27.0:
+    resolution: {integrity: sha512-HtfVr/hzJJmE0C198F99JLaeada+646B5SaG2pVoEakLFI6iRGsvMqrnnrflq8hm1zQgwskEgqSnhDW11JBp0w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/markdownlint/-/markdownlint-0.27.0.tgz}
     name: markdownlint
-    version: 0.26.2
-    engines: {node: '>=14'}
+    version: 0.27.0
+    engines: {node: '>=14.18.0'}
     dependencies:
       markdown-it: registry.npmjs.org/markdown-it/13.0.1
     dev: true
@@ -6018,10 +6004,10 @@ packages:
       brace-expansion: registry.npmjs.org/brace-expansion/1.1.11
     dev: true
 
-  registry.npmjs.org/minimatch/5.1.1:
-    resolution: {integrity: sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/minimatch/-/minimatch-5.1.1.tgz}
+  registry.npmjs.org/minimatch/5.1.2:
+    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/minimatch/-/minimatch-5.1.2.tgz}
     name: minimatch
-    version: 5.1.1
+    version: 5.1.2
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: registry.npmjs.org/brace-expansion/2.0.1
