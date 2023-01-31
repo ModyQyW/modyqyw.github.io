@@ -668,14 +668,12 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
   "leetcode.workspaceFolder": "/Users/wurui/Documents/leetcode",
   // 插件 leetcode 使用，指定文件默认语言
   "leetcode.defaultLanguage": "typescript",
-  // vscode 自带功能，不校验 less，需要和插件 Stylelint 配合使用
-  "less.validate": false,
   // vscode 自带功能，不校验 scss，需要和插件 Stylelint 配合使用
   "scss.validate": false,
   // 插件 Stylelint 使用，指定需要提示的语言
-  "stylelint.snippet": ["css", "less", "sass", "scss", "vue", "svelte"],
+  "stylelint.snippet": ["css", "scss", "vue"],
   // 插件 Stylelint 使用，指定需要校验的语言
-  "stylelint.validate": ["css", "less", "sass", "scss", "vue", "svelte"],
+  "stylelint.validate": ["css", "scss", "vue"],
   // vscode 自带功能，ts 文件移动时自动更新引入
   "typescript.updateImportsOnFileMove.enabled": "always",
   // vscode 自带功能，自动切换主题
