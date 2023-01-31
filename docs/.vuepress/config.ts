@@ -72,7 +72,7 @@ export default defineUserConfig({
       },
       { text: '关于', link: '/about/' },
     ],
-    logo: '/images/w256.png',
+    logo: '/images/w.svg',
     repo: 'https://github.com/ModyQyW/modyqyw.github.io',
     repoLabel: 'GitHub',
     sidebar: {
