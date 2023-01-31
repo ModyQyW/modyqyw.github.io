@@ -75,5 +75,6 @@ export const getBlogsNav = () => {
   return {
     text: '博客',
     link: blogsSidebar[0].items[0].items[0].link,
+    activeMatch: 'blogs/',
   };
 };
