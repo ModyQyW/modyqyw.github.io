@@ -17,9 +17,12 @@ export default defineConfig({
       {},
       `
         navigator.serviceWorker.getRegistrations().then((registrations) => {
-          for (let r of registrations)
-            r.unregister()
-        })
+  for (const r of registrations) {
+    if (r.scope.includes('modyqyw.top') || r.scope.includes('modyqyw.github.io')) {
+      r.unregister();
+    }
+  }
+});
         `,
     ],
   ],
