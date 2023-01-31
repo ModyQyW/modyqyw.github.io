@@ -19,12 +19,6 @@
     "allowJs": true
   },
   "include": [
-    "**/.*.js",
-    "**/.*.cjs",
-    "**/.*.mjs",
-    "**/.*.ts",
-    "**/.*.cts",
-    "**/.*.mts",
     "**/*.js",
     "**/*.cjs",
     "**/*.mjs",
@@ -34,7 +28,16 @@
     "**/*.mts",
     "**/*.tsx",
     "**/*.vue",
-    "**/.vitepress/*.ts"
+    "docs/.vitepress/**/*.ts"
   ],
-  "exclude": [".cache", ".temp", ".tmp", "cache", "temp", "tmp", "dist*", "node_modules"]
+  "exclude": [
+    "**/.cache",
+    "**/.temp",
+    "**/.tmp",
+    "**/cache",
+    "**/temp",
+    "**/tmp",
+    "**/dist",
+    "**/node_modules"
+  ]
 }
