@@ -10,7 +10,6 @@ const links: { url: string; lastmod?: number }[] = [];
 const hostname = 'https://modyqyw.top';
 
 export default defineConfig({
-  // app configs
   head: [
     // remove serviceWorker
     [
@@ -46,14 +45,13 @@ navigator.serviceWorker.getRegistrations().then((registrations) => {
       `,
     ],
   ],
-  lang: 'zh-Hans',
+  lang: 'zh-CN',
   lastUpdated: true,
   markdown: {
     lineNumbers: true,
     theme: 'github-dark',
   },
   title: "ModyQyW's Site",
-  // theme configs
   themeConfig: {
     nav: [
       { text: '速查表', link: '/cheat-sheets/' },
