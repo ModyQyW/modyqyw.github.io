@@ -12,11 +12,12 @@ const hostname = 'https://modyqyw.top';
 export default defineConfig({
   // app configs
   head: [
+    // remove serviceWorker
     [
       'script',
       {},
       `
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
+navigator.serviceWorker.getRegistrations().then((registrations) => {
   for (const r of registrations) {
     if (r.scope.includes('modyqyw.top') || r.scope.includes('modyqyw.github.io')) {
       r.unregister();
@@ -24,6 +25,25 @@ export default defineConfig({
   }
 });
         `,
+    ],
+    // add LXGW Wenkai font
+    [
+      'link',
+      {
+        href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont/style.min.css',
+        rel: 'stylesheet',
+      },
+    ],
+    // set LXGW Wenkai font
+    [
+      'style',
+      {},
+      `
+:root {
+  --vp-font-family-base: 'LXGW Wenkai', 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --vp-font-family-mono: 'LXGW WenKai Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+      `,
     ],
   ],
   lang: 'zh-Hans',
@@ -58,9 +78,9 @@ export default defineConfig({
       copyright: 'Copyright © 2020-present ModyQyW',
     },
     algolia: {
-      appId: process.env.ALGOLIA_APP_ID!,
-      apiKey: process.env.ALGOLIA_API_KEY!,
-      indexName: process.env.ALGOLIA_INDEX_NAME!,
+      appId: process.env.ALGOLIA_APP_ID || '',
+      apiKey: process.env.ALGOLIA_API_KEY || '',
+      indexName: process.env.ALGOLIA_INDEX_NAME || '',
     },
   },
   transformHtml: (_, id, { pageData }) => {
@@ -72,7 +92,7 @@ export default defineConfig({
     //   });
     // }
     // not clean urls mode
-    if (!/[\\/]404\.html$/.test(id)) {
+    if (!/[/\\]404\.html$/.test(id)) {
       links.push({
         url: pageData.relativePath.replace(/\.md$/, '.html'),
         lastmod: pageData.lastUpdated,
@@ -83,8 +103,8 @@ export default defineConfig({
     const sitemap = new SitemapStream({ hostname });
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
     sitemap.pipe(writeStream);
-    links.forEach((link) => sitemap.write(link));
+    for (const link of links) sitemap.write(link);
     sitemap.end();
-    await new Promise((r) => writeStream.on('finish', r));
+    await new Promise((resolve) => writeStream.on('finish', resolve));
   },
 });

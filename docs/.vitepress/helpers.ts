@@ -1,12 +1,11 @@
 import { readdirSync, readFileSync, statSync, lstatSync } from 'node:fs';
 import { resolve, join } from 'node:path';
-import type { SidebarGroup, NavItem } from './types';
 
 const cwd = process.cwd();
 
 const getMarkdownTitle = (filePath: string) => {
-  const content = readFileSync(filePath, 'utf-8');
-  const titles = content.match(/^\# .+/g);
+  const content = readFileSync(filePath, 'utf8');
+  const titles = content.match(/^# .+/g);
   return titles?.[0]?.slice(2);
 };
 
@@ -29,14 +28,14 @@ export const getBlogsSidebar = () => {
   const docsDirPath = resolve(cwd, 'docs');
   const blogsDirPath = resolve(docsDirPath, 'blogs');
   const yearDirs = readdirSync(blogsDirPath)
-    .filter(numberFilter)
+    .filter((year) => numberFilter(year))
     .filter((yearDir) => dirFilter(resolve(blogsDirPath, yearDir)))
     .sort(descSorter);
   return yearDirs
     .map((yearDir) => {
       const yearDirPath = resolve(blogsDirPath, yearDir);
       const monthDirs = readdirSync(yearDirPath)
-        .filter(numberFilter)
+        .filter((month) => numberFilter(month))
         .filter((monthDir) => dirFilter(resolve(yearDirPath, monthDir)))
         .sort(descSorter);
       return {
@@ -48,7 +47,7 @@ export const getBlogsSidebar = () => {
             return {
               text: `M ${monthDir}`,
               items: readdirSync(monthDirPath)
-                .filter(releasedMarkdownFilter)
+                .filter((fileName) => releasedMarkdownFilter(fileName))
                 .map((fileName) => {
                   const filePath = resolve(monthDirPath, fileName);
                   const title = getMarkdownTitle(filePath);
@@ -68,13 +67,13 @@ export const getBlogsSidebar = () => {
           .filter(({ items }) => items.length > 0),
       };
     })
-    .filter(({ items }) => items.length > 0) as SidebarGroup[];
+    .filter(({ items }) => items.length > 0);
 };
 
 export const getBlogsNav = () => {
   const blogsSidebar = getBlogsSidebar();
   return {
     text: '博客',
-    link: blogsSidebar[0].items[0].items[0].link ?? blogsSidebar[0].items[0].link,
-  } as NavItem;
+    link: blogsSidebar[0].items[0].items[0].link,
+  };
 };
