@@ -19,7 +19,7 @@ specifiers:
   sitemap: ^7.1.1
   stylelint: ^14.16.1
   typescript: ^4.9.5
-  vitepress: 1.0.0-alpha.43
+  vitepress: 1.0.0-alpha.45
 
 devDependencies:
   '@commitlint/cli': registry.npmjs.org/@commitlint/cli/17.4.2
@@ -40,7 +40,7 @@ devDependencies:
   sitemap: registry.npmjs.org/sitemap/7.1.1
   stylelint: registry.npmjs.org/stylelint/14.16.1
   typescript: registry.npmjs.org/typescript/4.9.5
-  vitepress: registry.npmjs.org/vitepress/1.0.0-alpha.43
+  vitepress: registry.npmjs.org/vitepress/1.0.0-alpha.45
 
 packages:
 
@@ -1780,6 +1780,12 @@ packages:
     name: ansi-regex
     version: 6.0.1
     engines: {node: '>=12'}
+    dev: true
+
+  registry.npmjs.org/ansi-sequence-parser/1.1.0:
+    resolution: {integrity: sha512-lEm8mt52to2fT8GhciPCGeCXACSz2UwIN4X2e2LJSnZ5uAbn2/dsYdOmUXq0AtWS5cpAupysIneExOgH0Vd2TQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ansi-sequence-parser/-/ansi-sequence-parser-1.1.0.tgz}
+    name: ansi-sequence-parser
+    version: 1.1.0
     dev: true
 
   registry.npmjs.org/ansi-styles/3.2.1:
@@ -6801,11 +6807,12 @@ packages:
     version: 1.7.4
     dev: true
 
-  registry.npmjs.org/shiki/0.13.0:
-    resolution: {integrity: sha512-QucKtRFyoHgivnde/6tXu+7ZfUhcg02qiFlUSa4X0jQvHVKdtrimWPlbg+q06H2EeNSuj9DcMhtB18GgtDLsmw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/shiki/-/shiki-0.13.0.tgz}
+  registry.npmjs.org/shiki/0.14.0:
+    resolution: {integrity: sha512-fb9Fg1Yx/ElVJcTqPQIEOSfn7mSZlrT1W3CkymY08lL2Jsi+t7jPcZzKO1lCsQwlSDuyNhHvolnyA2OI4EgJNg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/shiki/-/shiki-0.14.0.tgz}
     name: shiki
-    version: 0.13.0
+    version: 0.14.0
     dependencies:
+      ansi-sequence-parser: registry.npmjs.org/ansi-sequence-parser/1.1.0
       jsonc-parser: registry.npmjs.org/jsonc-parser/3.2.0
       vscode-oniguruma: registry.npmjs.org/vscode-oniguruma/1.7.0
       vscode-textmate: registry.npmjs.org/vscode-textmate/8.0.0
@@ -7744,10 +7751,10 @@ packages:
       fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
 
-  registry.npmjs.org/vitepress/1.0.0-alpha.43:
-    resolution: {integrity: sha512-bguPWYojF371vIfTY8jGmKeFroRe6UVGmDp3+PjTnVq57wTlz9x88OKm6KKF4l/1D7GugkHex5X9wNcOdCmCiQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-alpha.43.tgz}
+  registry.npmjs.org/vitepress/1.0.0-alpha.45:
+    resolution: {integrity: sha512-8AVWdymQqBUPmXmAbpapDDg18iDmkNJ47l5eOklBlAjj3n8P3zDAsBhOWSQ6+Nvm6+/GaZATyAvsrg47JD5Idw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-alpha.45.tgz}
     name: vitepress
-    version: 1.0.0-alpha.43
+    version: 1.0.0-alpha.45
     hasBin: true
     dependencies:
       '@docsearch/css': registry.npmjs.org/@docsearch/css/3.3.2
@@ -7756,7 +7763,7 @@ packages:
       '@vue/devtools-api': registry.npmjs.org/@vue/devtools-api/6.5.0
       '@vueuse/core': registry.npmjs.org/@vueuse/core/9.12.0_vue@3.2.45
       body-scroll-lock: registry.npmjs.org/body-scroll-lock/4.0.0-beta.0
-      shiki: registry.npmjs.org/shiki/0.13.0
+      shiki: registry.npmjs.org/shiki/0.14.0
       vite: registry.npmjs.org/vite/4.0.4
       vue: registry.npmjs.org/vue/3.2.45
     transitivePeerDependencies:
