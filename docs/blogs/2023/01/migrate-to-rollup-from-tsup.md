@@ -19,7 +19,7 @@
 
 ## 例子
 
-我首先在 [vite-plugin-stylelint](https://github.com/ModyQyW/vite-plugin-stylelint) 上操作。
+我在这里用 [vite-plugin-stylelint](https://github.com/ModyQyW/vite-plugin-stylelint) 做例子。
 
 ### tsup 配置文件
 
