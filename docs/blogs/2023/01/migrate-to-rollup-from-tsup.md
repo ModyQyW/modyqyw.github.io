@@ -10,9 +10,10 @@
 
 - `unbuild` 文档非常简略，我不太想使用它。
 - `bunchee` 使用了 [swc](https://swc.rs/)，我更倾向于使用 [esbuild](https://esbuild.github.io/)。
-- `webpack` 和 `tsc` 都太慢了。
+- `webpack` 太复杂了。
+- `tsc` 太慢了。
 
-`vite` 本身基于 `rollup`，但它的库模式是一个黑盒，而且需要使用 [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts) 来生成类型文件。
+`vite` 本身基于 `rollup`，但它的库模式是一个黑盒，文档很少，而且需要使用 [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts) 来生成类型文件。
 
 本着学习 `rollup` 的想法，我将所有我维护的库的打包工具迁移到了 `rollup`。
 
