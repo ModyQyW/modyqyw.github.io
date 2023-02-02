@@ -5,12 +5,14 @@ specifiers:
   '@commitlint/config-conventional': ^17.4.2
   '@commitlint/prompt': ^17.4.2
   '@modyqyw/fabric': ^6.0.3
+  '@types/detect-node': ^2.0.0
   '@types/shelljs': ^0.8.11
   '@typescript-eslint/eslint-plugin': ^5.50.0
   '@typescript-eslint/parser': ^5.50.0
   commitizen: ^4.3.0
   cross-env: ^7.0.3
   dayjs: ^1.11.7
+  detect-node: ^2.1.0
   eslint: ^8.33.0
   husky: ^8.0.3
   is-ci: ^3.0.1
@@ -31,12 +33,14 @@ devDependencies:
   '@commitlint/config-conventional': registry.npmjs.org/@commitlint/config-conventional/17.4.2
   '@commitlint/prompt': registry.npmjs.org/@commitlint/prompt/17.4.2
   '@modyqyw/fabric': registry.npmjs.org/@modyqyw/fabric/6.0.3_ubnrpdybrzusr3n32h5kh3asqa
+  '@types/detect-node': registry.npmjs.org/@types/detect-node/2.0.0
   '@types/shelljs': registry.npmjs.org/@types/shelljs/0.8.11
   '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/5.50.0_go4drrxstycfikanvu45pi4vgq
   '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser/5.50.0_4vsywjlpuriuw3tl5oq6zy5a64
   commitizen: registry.npmjs.org/commitizen/4.3.0
   cross-env: registry.npmjs.org/cross-env/7.0.3
   dayjs: registry.npmjs.org/dayjs/1.11.7
+  detect-node: registry.npmjs.org/detect-node/2.1.0
   eslint: registry.npmjs.org/eslint/8.33.0
   husky: registry.npmjs.org/husky/8.0.3
   is-ci: registry.npmjs.org/is-ci/3.0.1
@@ -1322,6 +1326,12 @@ packages:
     version: 4.1.7
     dependencies:
       '@types/ms': registry.npmjs.org/@types/ms/0.7.31
+    dev: true
+
+  registry.npmjs.org/@types/detect-node/2.0.0:
+    resolution: {integrity: sha512-+BozjlbPTACYITf1PWf62HLtDV79HbmZosUN1mv1gGrnjDCRwBXkDKka1sf6YQJvspmfPXVcy+X6tFW62KteeQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/detect-node/-/detect-node-2.0.0.tgz}
+    name: '@types/detect-node'
+    version: 2.0.0
     dev: true
 
   registry.npmjs.org/@types/eslint/8.4.10:
@@ -3063,6 +3073,12 @@ packages:
     name: detect-newline
     version: 4.0.0
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
+  registry.npmjs.org/detect-node/2.1.0:
+    resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz}
+    name: detect-node
+    version: 2.1.0
     dev: true
 
   registry.npmjs.org/diff/4.0.2:
