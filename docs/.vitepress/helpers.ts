@@ -1,5 +1,7 @@
 import { readdirSync, readFileSync, statSync, lstatSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { exec } from 'shelljs';
+import dayjs from 'dayjs';
 
 const cwd = process.cwd();
 
@@ -9,7 +11,16 @@ const getMarkdownTitle = (filePath: string) => {
   return titles?.[0]?.slice(2);
 };
 
-const getFileBirthtime = (path: string) => statSync(path).birthtimeMs;
+const getFileBirthtime = (path: string) => {
+  const { code, stdout } = exec(
+    `git log --follow --format=%ad --date iso-strict ${path} | tail -1`,
+    { silent: true },
+  );
+  const iso = stdout.trim();
+  const localBirthtimeMs = statSync(path).birthtimeMs;
+  const result = code === 0 ? dayjs(iso).valueOf() : localBirthtimeMs;
+  return Number.isNaN(result) ? localBirthtimeMs : result;
+};
 
 const dirFilter = (path: string) => lstatSync(path).isDirectory();
 
@@ -18,11 +29,13 @@ const numberFilter = (item: string | number) => !Number.isNaN(Number.parseInt(it
 const releasedMarkdownFilter = (item: string) =>
   item.endsWith('.md') && !item.endsWith('.draft.md');
 
-const descSorter = (a: string | number, b: string | number) => {
+const ascSorter = (a: string | number, b: string | number) => {
   const na = Number.parseInt(a.toString(), 10);
   const nb = Number.parseInt(b.toString(), 10);
-  return nb - na;
+  return na - nb;
 };
+
+const descSorter = (a: string | number, b: string | number) => -ascSorter(a, b);
 
 export const getBlogsSidebar = () => {
   const docsDirPath = resolve(cwd, 'docs');
