@@ -11,42 +11,6 @@ const links: { url: string; lastmod?: number }[] = [];
 const hostname = 'https://modyqyw.top';
 
 export default defineConfig({
-  // https://vitepress.vuejs.org/config/app-configs#head
-  head: [
-    // remove serviceWorker
-    [
-      'script',
-      {},
-      `
-navigator.serviceWorker.getRegistrations().then((registrations) => {
-  for (const r of registrations) {
-    if (r.scope.includes('modyqyw.top') || r.scope.includes('modyqyw.github.io')) {
-      r.unregister();
-    }
-  }
-});
-        `,
-    ],
-    // add LXGW Wenkai font
-    [
-      'link',
-      {
-        href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont/style.min.css',
-        rel: 'stylesheet',
-      },
-    ],
-    // set LXGW Wenkai font
-    [
-      'style',
-      {},
-      `
-:root {
-  --vp-font-family-base: 'LXGW Wenkai', 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --vp-font-family-mono: 'LXGW WenKai Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-}
-      `,
-    ],
-  ],
   // https://vitepress.vuejs.org/config/app-configs#lang
   lang: 'zh-CN',
   // https://vitepress.vuejs.org/config/app-configs#lastupdated
