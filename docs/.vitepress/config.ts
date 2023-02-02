@@ -2,6 +2,7 @@ import { createWriteStream } from 'node:fs';
 import { resolve } from 'node:path';
 import { SitemapStream } from 'sitemap';
 import { defineConfig } from 'vitepress';
+import unocss from 'unocss/vite';
 import { getBlogsNav, getBlogsSidebar } from './helpers';
 
 // for sitemap
@@ -60,6 +61,10 @@ navigator.serviceWorker.getRegistrations().then((registrations) => {
   },
   // https://vitepress.vuejs.org/config/app-configs#title
   title: "ModyQyW's Site",
+  // vite config
+  vite: {
+    plugins: [unocss()],
+  },
   // https://vitepress.vuejs.org/config/app-configs#transformhtml
   transformHtml: (_, id, { pageData }) => {
     // clean urls mode
