@@ -30,15 +30,21 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig([
   {
+    // 入口是 src/index.ts 和 src/worker.ts
     entry: ['src/index.ts', 'src/worker.ts'],
+    // 生成 esm 和 cjs 两种格式
     format: ['esm', 'cjs'],
+    // 只为 src/index.ts 生成类型文件
     dts: {
       entry: 'src/index.ts',
     },
-    minify: true,
+    // 自动生成 shims
+    // 为 cjs 生成 import.meta.url shims
+    // 为 esm 生成 __dirname 和 __filename
     shims: true,
-    splitting: false,
+    // 打包目标
     target: 'node14.18',
+    // 为 esm 文件补充文件头
     banner: ({ format }) => {
       if (format === 'esm') {
         return {
@@ -46,6 +52,7 @@ export default defineConfig([
         };
       }
     },
+    // 为 cjs 文件补充文件尾
     footer: ({ format }) => {
       if (format === 'cjs') {
         return {
@@ -57,16 +64,7 @@ export default defineConfig([
 ]);
 ```
 
-如果你还不了解 `tsup`，没有关系，我来解释一下这个配置想做什么。
-
-- 打包目标是 `node >= 14.18`
-- 从 `src/index.ts` 文件生成基于 ESM 的压缩的 `dist/index.js`，自动补充 `__filename` 和 `__dirname` shims，在文件头增加 `import {createRequire as __createRequire} from 'module';var require=__createRequire(import.meta.url);`
-- 从 `src/index.ts` 文件生成基于 CJS 的压缩的 `dist/index.cjs`，自动补充 `import.meta.url` shims，在文件尾增加 `if (module.exports.default) module.exports = module.exports.default;`
-- 从 `src/index.ts` 文件生成类型文件 `dist/index.d.ts`
-- 从 `src/worker.ts` 文件生成基于 ESM 的压缩的 `dist/worker.js`，自动补充 `__filename` 和 `__dirname` shims，在文件头增加 `import {createRequire as __createRequire} from 'module';var require=__createRequire(import.meta.url);`
-- 从 `src/worker.ts` 文件生成基于 CJS 的压缩的 `dist/worker.cjs`，自动补充 `import.meta.url` shims，在文件尾增加 `if (module.exports.default) module.exports = module.exports.default;`
-
-在文件头增加 `import {createRequire as __createRequire} from 'module';var require=__createRequire(import.meta.url);` 是为了解决 `Dynamic Require` 问题，在文件尾增加 `if (module.exports.default) module.exports = module.exports.default;` 是为了解决生成的文件不够符合 CJS 规范的问题。更详细的解释可以看 [我之前的博客](../../2022/12/why-tsup.md)。
+在 esm 文件头增加 `import {createRequire as __createRequire} from 'module';var require=__createRequire(import.meta.url);` 是为了解决 `Dynamic Require` 问题，在 cjs 文件尾增加 `if (module.exports.default) module.exports = module.exports.default;` 是为了解决生成的文件不够符合 CJS 规范的问题。更详细的解释可以看 [我之前的博客](../../2022/12/why-tsup.md)。
 
 ### 安装相关依赖
 
@@ -107,29 +105,36 @@ import commonjs from '@rollup/plugin-commonjs';
 
 export default defineConfig([
   {
-    input: './src/index.ts',
+    input: {
+      index: 'src/index.ts',
+      worker: 'src/worker.ts'
+    },
     output: [
+      // 多个入口时不能使用 file 指定文件
+      // 需要使用 dir 和 entryFileNames
       {
-        file: './dist/index.cjs',
+        dir: 'dist',
+        entryFileNames: '[name].cjs',
         format: 'cjs',
       },
       {
-        file: './dist/index.mjs',
+        dir: 'dist',
+        entryFileNames: '[name].mjs',
         format: 'esm',
       },
     ],
     plugins: [
       // 对于 fs、path 等内置模块不再搜索 node_modules
       nodeResolve({ preferBuiltins: true }),
-      // 设置目标为 node >=  14.18
+      // 设置目标为 node >= 14.18
       esbuild({ target: 'node14.18' }),
       commonjs(),
     ],
   },
   {
-    input: './src/index.ts',
+    input: 'src/index.ts',
     output: {
-      file: './dist/index.d.ts',
+      file: 'dist/index.d.ts',
       format: 'esm',
     },
     plugins: [
@@ -140,23 +145,12 @@ export default defineConfig([
       }),
     ],
   },
-  {
-    input: './src/worker.ts',
-    output: [
-      { file: './dist/worker.cjs', format: 'cjs' },
-      { file: './dist/worker.mjs', format: 'esm' },
-    ],
-    plugins: [
-      // 和上面类似
-      nodeResolve({ preferBuiltins: true }),
-      esbuild({ target: 'node14.18' }),
-      commonjs(),
-    ],
-  },
 ]);
 ```
 
-### 自动除外
+这时我们还不能用 `rollup -c rollup.config.ts --configPlugin esbuild` 来构建文件，因为 `rollup` 会把所有依赖都打包进去，这会导致一些错误。
+
+### 避免打包所有依赖
 
 `tsup` 会自动除外 `dependencies` 和 `peerDependencies` 下的依赖，还会除外 `node:fs` 等带 `node:` 前缀的内置模块。
 
@@ -184,32 +178,40 @@ const external = [ // [!code ++]
   // ...Object.keys(peerDependencies).map((item) => new RegExp(`^${item}`)), // [!code ++]
 ]; // [!code ++]
  // [!code ++]
+
 export default defineConfig([
   {
-    input: './src/index.ts',
+    input: {
+      index: 'src/index.ts',
+      worker: 'src/worker.ts'
+    },
     output: [
+      // 多个入口时不能使用 file 指定文件
+      // 需要使用 dir 和 entryFileNames
       {
-        file: './dist/index.cjs',
+        dir: 'dist',
+        entryFileNames: '[name].cjs',
         format: 'cjs',
       },
       {
-        file: './dist/index.mjs',
+        dir: 'dist',
+        entryFileNames: '[name].mjs',
         format: 'esm',
       },
     ],
     plugins: [
       // 对于 fs、path 等内置模块不再搜索 node_modules
       nodeResolve({ preferBuiltins: true }),
-      // 设置目标为 node >=  14.18
+      // 设置目标为 node >= 14.18
       esbuild({ target: 'node14.18' }),
       commonjs(),
     ],
     external, // [!code ++]
   },
   {
-    input: './src/index.ts',
+    input: 'src/index.ts',
     output: {
-      file: './dist/index.d.ts',
+      file: 'dist/index.d.ts',
       format: 'esm',
     },
     plugins: [
@@ -221,22 +223,10 @@ export default defineConfig([
     ],
     external, // [!code ++]
   },
-  {
-    input: './src/worker.ts',
-    output: [
-      { file: './dist/worker.cjs', format: 'cjs' },
-      { file: './dist/worker.mjs', format: 'esm' },
-    ],
-    plugins: [
-      // 和上面类似
-      nodeResolve({ preferBuiltins: true }),
-      esbuild({ target: 'node14.18' }),
-      commonjs(),
-    ],
-    external, // [!code ++]
-  },
 ]);
 ```
+
+现在我们可以用 `rollup -c rollup.config.ts --configPlugin esbuild` 来打包了！
 
 ### CJS 导出
 
@@ -270,23 +260,32 @@ const external = [
 
 export default defineConfig([
   {
-    input: './src/index.ts',
+    input: {
+      index: './src/index.ts',
+      worker: './src/worker.ts'
+    },
     output: [
       {
-        file: './dist/index.cjs',
+        dir: 'dist',
+        entryFileNames: '[name].cjs',
         format: 'cjs',
         exports: 'named', // [!code ++]
-        footer: 'module.exports = Object.assign(exports.default || {}, exports)', // [!code ++]
+        // 如果有 exports 就补充文件尾 // [!code ++]
+        footer: ({ exports }) => // [!code ++]
+          exports.length > 0  // [!code ++]
+            ? 'module.exports = Object.assign(exports.default || {}, exports)' // [!code ++]
+            : '', // [!code ++]
       },
       {
-        file: './dist/index.mjs',
+        dir: 'dist',
+        entryFileNames: '[name].mjs',
         format: 'esm',
       },
     ],
     plugins: [
       // 对于 fs、path 等内置模块不再搜索 node_modules
       nodeResolve({ preferBuiltins: true }),
-      // 设置目标为 node >=  14.18
+      // 设置目标为 node >= 14.18
       esbuild({ target: 'node14.18' }),
       commonjs(),
     ],
@@ -307,25 +306,11 @@ export default defineConfig([
     ],
     external,
   },
-  {
-    input: './src/worker.ts',
-    output: [
-      { file: './dist/worker.cjs', format: 'cjs' },
-      { file: './dist/worker.mjs', format: 'esm' },
-    ],
-    plugins: [
-      // 和上面类似
-      nodeResolve({ preferBuiltins: true }),
-      esbuild({ target: 'node14.18' }),
-      commonjs(),
-    ],
-    external,
-  },
 ]);
 ```
 
 ## 总结
 
-我在 `vite-plugin-stylelint` 中使用的 `rollup` 配置还要复杂得多，这里已经做了适当的简化。可以看到，尽管 `rollup` 可以处理 `Dynamic Require` 问题，但它仍有一些别的问题，比如不够开箱即用（自动除外 `dependencies` 和 `peerDependencies` 等）、CJS 混用导出等。要实现同样的功能，`rollup` 需要的配置也要比 `tsup` 多得多。
+我在 `vite-plugin-stylelint` 中使用的 `rollup` 配置还要复杂得多，这里已经做了适当的简化。可以看到，尽管 `rollup` 可以处理 `Dynamic Require` 问题，但它仍有一些别的问题，比如不够开箱即用、CJS 混用导出等。要实现同样的功能，`rollup` 需要的配置也要比 `tsup` 多得多。
 
-`rollup` 给我更多的掌控感，我喜欢 `rollup` 更多一些。`rollup` 真香 😋
+为了再简化一些，可以封装常用的 `rollup` 配置，或者直接使用 `unbuild`。
