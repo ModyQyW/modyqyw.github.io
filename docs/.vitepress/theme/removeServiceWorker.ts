@@ -1,6 +1,5 @@
 import isNode from 'detect-node';
 
-// eslint-disable-next-line unicorn/prefer-top-level-await
 (async () => {
   if (isNode) return;
   const registrations = await navigator.serviceWorker.getRegistrations();
