@@ -324,6 +324,7 @@ brew install git # https://git-scm.com/
 brew install git-lfs # https://git-lfs.github.com/
 git config --global core.autocrlf false
 git config --global init.defaultBranch main
+git config --global remote.origin.prune true
 git config --global user.name "YOUR_NAME_HERE"
 git config --global user.email "YOUR_EMAIL_HERE"
 # gradle
