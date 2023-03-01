@@ -1,0 +1,1 @@
+import{_ as e,c,o,a}from"./app.2fa9f9f8.js";const h=JSON.parse('{"title":"结束","description":"","frontmatter":{},"headers":[],"relativePath":"summarize/webpack4/08.end.md","lastUpdated":1645146678000}'),d={name:"summarize/webpack4/08.end.md"},t=a("",7),p=[t];function r(s,_,i,n,l,u){return o(),c("div",null,p)}const S=e(d,[["render",r]]);export{h as __pageData,S as default};
