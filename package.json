@@ -17,7 +17,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/prompt": "^17.4.4",
-    "@modyqyw/fabric": "^7.1.2",
+    "@modyqyw/fabric": "^7.3.2",
     "@types/detect-node": "^2.0.0",
     "@types/shelljs": "^0.8.11",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
@@ -38,7 +38,7 @@
     "sitemap": "^7.1.1",
     "stylelint": "^15.2.0",
     "typescript": "^4.9.5",
-    "unocss": "^0.50.2",
+    "unocss": "^0.50.3",
     "vite": "^4.1.4",
     "vitepress": "1.0.0-alpha.49"
   },
