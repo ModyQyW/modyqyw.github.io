@@ -230,6 +230,8 @@ export default defineConfig([
 
 ### CJS 导出
 
+该部分存在认知误解，请直接阅读 [ESM 和 CJS 互相转换](https://zhuanlan.zhihu.com/p/610878001) 了解。
+
 混用默认导出 Default Export 和具名导出 Named Export 并产出 CJS 文件时，`rollup` 会输出警告。
 
 这是因为在 ESM 下默认导出实际上就是具名导出，但 CJS 不是。这个时候你需要使用 `const xxx = require('xxx').default` 而不是 `const xxx = require('xxx')` 来获取到原本的默认导出。

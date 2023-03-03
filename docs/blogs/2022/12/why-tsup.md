@@ -84,6 +84,8 @@ export default defineConfig({
 
 ### Named Export & Default Export
 
+该部分存在认知误解，请直接阅读 [ESM 和 CJS 互相转换](https://zhuanlan.zhihu.com/p/610878001) 了解。
+
 如何把 ESM 正确地转换成 CommonJS 一直是令人头痛的问题。我们往往期望有如下的表现。
 
 | ESM              | CommonJS             | CommonJS Usage                 |
