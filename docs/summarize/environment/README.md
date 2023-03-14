@@ -33,7 +33,7 @@
 - [AdGuard](https://adguard.com/zh_cn/adguard-browser-extension/overview.html) - 广告屏蔽
 - [BitWarden](https://bitwarden.com/) - 密码管理
 - [Dark Reader](https://darkreader.org/) - 暗黑模式
-- [Gitako](https://github.com/EnixCoda/Gitako) - 便捷查看 Github
+- [Gitako](https://github.com/EnixCoda/Gitako) - 便捷查看 GitHub
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - 网页性能测试
 - [React Developer Tools](https://github.com/facebook/react/tree/main/packages/react-devtools) - react 浏览器调试工具
 - [Sync Sofa](https://github.com/LouisYLWang/Sync-Sofa) - 同步看剧
@@ -514,7 +514,7 @@ alias qs='open -a QSpace\ Pro'
 
 [更多资源](https://t.me/geekshare/435)
 
-[Github 仓库同步到 Gitee](https://mp.weixin.qq.com/s/E6G_plczOeCNLDMWCAQKog)
+[GitHub 仓库同步到 Gitee](https://mp.weixin.qq.com/s/E6G_plczOeCNLDMWCAQKog)
 
 ## Windows 补充说明
 
@@ -529,7 +529,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 
 ### 插件
 
-配置可以通过 Github 账号同步，你也可以使用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)。
+配置可以通过 GitHub 账号同步，你也可以使用 [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)。
 
 - [小霸王](https://marketplace.visualstudio.com/items?itemName=gamedilong.anes)
 - [any-rule](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) - 常用正则集合
@@ -544,8 +544,7 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 支持 eslint
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - 增强 git 功能
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - 增强 git 功能
-- [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI 代码补全
-- [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - 样式主题
+- [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - 样式主题
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - 增强 git 功能
 - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - 国际化支持
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - 预览图片

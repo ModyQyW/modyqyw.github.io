@@ -17,5 +17,5 @@
 ## 联系
 
 - [wurui-dev@foxmail.com](mailto:wurui-dev@foxmail.com)
-- [Github](https://github.com/ModyQyW)
+- [GitHub](https://github.com/ModyQyW)
 - [Gitee](https://gitee.com/ModyQyW)

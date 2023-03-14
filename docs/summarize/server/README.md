@@ -2,15 +2,15 @@
 
 记录我自己的单服务器配置。
 
-## Github Pages 自定义域名和 HTTPS
+## GitHub Pages 自定义域名和 HTTPS
 
 我在 [阿里云](https://www.aliyun.com/product/list?source=5176.11533457&userCode=2ln7eli6) 买了域名 `modyqyw.top`，然后交给了 [Cloudflare](https://www.cloudflare.com/zh-cn/) 做解析。
 
-为了让 Cloudflare 接管 [Github Pages](https://pages.github.com/)，我还修改了 DNS。其中，`185.199.108.153` 是 `ping modyqyw.github.io` 得到的结果；在 `modyqyw/modyqyw.github.io` 部署的目录下保存一个 [`CNAME` 文件](https://github.com/ModyQyW/modyqyw.github.io/blob/main/CNAME)，内容直接填写 `modyqyw.top`。
+为了让 Cloudflare 接管 [GitHub Pages](https://pages.github.com/)，我还修改了 DNS。其中，`185.199.108.153` 是 `ping modyqyw.github.io` 得到的结果；在 `modyqyw/modyqyw.github.io` 部署的目录下保存一个 [`CNAME` 文件](https://github.com/ModyQyW/modyqyw.github.io/blob/main/CNAME)，内容直接填写 `modyqyw.top`。
 
 ![dns](./dns.png)
 
-另外，还需要配置 Github Pages。
+另外，还需要配置 GitHub Pages。
 
 ![github-pages](./github-pages.png)
 
