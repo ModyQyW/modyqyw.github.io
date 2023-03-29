@@ -1,5 +1,9 @@
 # 语义化版本
 
+- 语义化版本 - 本篇
+- [约定式提交](./conventional-commits.md)
+- [改动日志](./changelog.md)
+
 [语义化版本](https://semver.org/lang/zh-CN/) 是一个常见的术语，相信大部分人都或多或少听过。可能与大部分人不同，我在了解语义化版本后，摆脱了刀耕火种的道路，走上了遵循规范、约定式优先的开发道路。因此，语义化版本对我有着特殊的意义。
 
 ## 什么是语义化版本
@@ -58,4 +62,6 @@ Jetbrains 家的产品使用年份、月份和编译信息作为版本号。
 
 在社区切换到 `pnpm` 的风潮之下，我也尝试了一下 `pnpm`，发现 `pnpm` 用起来非常舒服，打算切换到 `pnpm`。遗憾的是，我发现 `np` 对 `pnpm` 支持不是太好。所以，我转向使用另一个包 [release-it](https://github.com/release-it/release-it)。
 
-在我尝试 `monorepo` 的时候，发现 `release-it` 也不太够用了。现在我转向使用 [bumpp](https://github.com/antfu/bumpp)。截至目前，它满足了我一切的需求，也推荐你尝试一下！ :D
+在我尝试 `monorepo` 的时候，发现 `release-it` 也不太够用了。现在我转向使用 [bumpp](https://github.com/antfu/bumpp)。截至目前，它满足了我一切的需求。
+
+本篇是系列的第一篇，我建议你阅读完语义化版本（就是本篇）、[约定式提交](./conventional-commits.md) 和 [改动日志](./changelog.md) 再开始实践！:D

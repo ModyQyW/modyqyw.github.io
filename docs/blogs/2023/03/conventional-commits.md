@@ -1,5 +1,9 @@
 # 约定式提交
 
+- [语义化版本](./semver.md)
+- 约定式提交 - 本篇
+- [改动日志](./changelog.md)
+
 和语义化版本类似，[约定式提交](https://www.conventionalcommits.org/zh-hans/) 对我也有着特别的意义。
 
 ## 什么是约定式提交
@@ -41,9 +45,13 @@
 
 我个人认为，约定式提交有两个缺陷。
 
-第一个缺陷是，类型对新手来说很难确定，需要一些额外的工具来辅助确定，在初期略微增加了复杂度。
+第一个缺陷是，类型对新手来说很难确定，可能会出现不够 **整洁** 的提交。
 
-第二个缺陷是，描述带有主观认识，可能不够准确。
+第二个缺陷是，描述带有主观认识，可能不够 **准确**。
+
+## 和语义化版本的关联
+
+一旦你在使用约定式提交，你不再需要自行翻看提交历史来确认你的下一个版本。很多语义化版本工具可以自动确定下一个版本，一般也允许你手动确定下一个版本。但既然你已经选择了语义化版本和约定式提交，为什么不投入自动化的怀抱，让自己的生活更轻松一些呢？
 
 ## 实践
 
@@ -54,3 +62,5 @@
 而要在命令行中使用，则需要 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)。你可以配合 [husky](https://github.com/typicode/husky) 或者 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 来调用它。
 
 对于新手，你可以尝试使用 [commitizen](https://www.npmjs.com/package/commitizen)。它带有一些额外的提示，方便新手使用。你可以搭配 [@commitlint/cz-commitlint](https://www.npmjs.com/package/@commitlint/cz-commitlint) 或 [@commitlint/prompt](https://www.npmjs.com/package/@commitlint/prompt) 来使用。
+
+本篇是系列的第二篇，我建议你阅读完 [语义化版本](./semver.md)、约定式提交（就是本篇）和 [改动日志](./changelog.md) 再开始实践！:D
