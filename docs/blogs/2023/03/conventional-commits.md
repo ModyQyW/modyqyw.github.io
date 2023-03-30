@@ -14,7 +14,7 @@
 
 最基本的约定式提交格式如下：
 
-```text
+```txt
 <type>[optional scope]: <description>
 
 [optional body]
