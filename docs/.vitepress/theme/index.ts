@@ -1,9 +1,9 @@
 import DefaultTheme from 'vitepress/theme';
 import 'lxgw-wenkai-webfont/style.css';
-import './font.css';
+import './custom.css';
 import './removeServiceWorker';
 import 'uno.css';
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
 };
