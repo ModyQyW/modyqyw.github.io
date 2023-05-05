@@ -32,10 +32,10 @@
 
 ## 实践
 
-有非常多工具支持自动生成改动日志，而且这些工具大部分都依赖于约定式提交。就我个人而言，我正在使用 [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)。`tailwindcss` 应该是在使用 [keep-a-changelog](https://github.com/oscarotero/keep-a-changelog)。
+有非常多工具支持自动生成改动日志，而且这些工具大部分都依赖于约定式提交。比较老牌的是 [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli) 和 [keep-a-changelog](https://github.com/oscarotero/keep-a-changelog)，它们都很不错。
 
-[changesets](https://github.com/changesets/changesets) 和 [changelogen](https://github.com/unjs/changelogen) 是最近开始流行的选择，前者更适用于 monorepo，后者我认为还需要一点时间发展。
+[changesets](https://github.com/changesets/changesets) 和 [changelogen](https://github.com/unjs/changelogen) 是近几年开始流行的选择，前者更适用于 monorepo，后者我认为还需要一点时间发展。
 
-如果你想要更一体化的解决方案，包括自动更新版本和自动生成改动日志，你应该查看一下 [conventional-changelog](https://github.com/conventional-changelog/) 和 [semantic-release](https://github.com/semantic-release/semantic-release)，前者也是 `commitlint` 和 `conventional-changelog-cli` 的发布者。
+如果你想要更一体化的解决方案，包括自动更新版本和自动生成改动日志，你应该查看一下 [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) 和 [semantic-release](https://github.com/semantic-release/semantic-release)。我就在使用前者。
 
 本篇是系列的最后一篇，我建议你阅读完 [语义化版本](./semver.md)、[约定式提交](./conventional-commits.md) 和 改动日志（就是本篇）再开始实践！:D

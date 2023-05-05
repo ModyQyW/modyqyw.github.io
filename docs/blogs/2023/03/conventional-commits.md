@@ -59,7 +59,7 @@
 
 我建议使用 [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional) 获取和约定式提交一致的体验，如果你倾向于 angular 风格，可以使用 [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular)。
 
-而要在命令行中使用，则需要 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)。你可以配合 [husky](https://github.com/typicode/husky) 或者 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 来调用它。
+而要在命令行中使用，则需要 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)。你可以配合 [husky](https://github.com/typicode/husky) 或者 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 来调用它，我更喜欢轻量的后者。
 
 对于新手，你可以尝试使用 [commitizen](https://www.npmjs.com/package/commitizen)。它带有一些额外的提示，方便新手使用。你可以搭配 [@commitlint/cz-commitlint](https://www.npmjs.com/package/@commitlint/cz-commitlint) 或 [@commitlint/prompt](https://www.npmjs.com/package/@commitlint/prompt) 来使用。
 

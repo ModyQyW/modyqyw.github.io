@@ -62,6 +62,8 @@ Jetbrains 家的产品使用年份、月份和编译信息作为版本号。
 
 在社区切换到 `pnpm` 的风潮之下，我也尝试了一下 `pnpm`，发现 `pnpm` 用起来非常舒服，打算切换到 `pnpm`。遗憾的是，我发现 `np` 对 `pnpm` 支持不是太好。所以，我转向使用另一个包 [release-it](https://github.com/release-it/release-it)。
 
-在我尝试 `monorepo` 的时候，发现 `release-it` 也不太够用了。现在我转向使用 [bumpp](https://github.com/antfu/bumpp)。截至目前，它满足了我一切的需求。
+`release-it` 在大部分时间工作得很好，它也能支持 `monorepo`，就是需要手动配置一下。但我不是太喜欢它先 `publish` 到 `npm` 仓库再 `push` 到 `git` 仓库的行为，所以我转向使用 [bumpp](https://github.com/antfu/bumpp)。
+
+`bumpp` 非常轻量，只负责更新版本，不负责推测下一个语义化版本应该是什么，也不负责生成改动日志。我更喜欢使用一体化的方案，所以我后续又转向使用 [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version)。
 
 本篇是系列的第一篇，我建议你阅读完语义化版本（就是本篇）、[约定式提交](./conventional-commits.md) 和 [改动日志](./changelog.md) 再开始实践！:D
