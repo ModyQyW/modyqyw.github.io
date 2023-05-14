@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { SitemapStream } from 'sitemap';
 import { defineConfig } from 'vitepress';
 import unocss from 'unocss/vite';
-import { getBlogsNav, getBlogsSidebar } from './helpers';
+import { getTutorialsNav, getBlogsNav, getTutorialsSidebar, getBlogsSidebar } from './helpers';
 
 // for sitemap
 // see https://github.com/vuejs/vitepress/issues/520
@@ -18,7 +18,10 @@ export default defineConfig({
   // https://vitepress.vuejs.org/config/app-configs#markdown
   markdown: {
     lineNumbers: true,
-    theme: 'github-dark',
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark',
+    },
     toc: {
       level: [1, 2, 3],
     },
@@ -62,7 +65,7 @@ export default defineConfig({
     // https://vitepress.vuejs.org/config/theme-configs#nav
     nav: [
       { text: '速查表', link: '/cheat-sheets/' },
-      { text: '教程', link: '/tutorials/' },
+      getTutorialsNav(),
       getBlogsNav(),
       { text: '关于', link: '/about/' },
       { text: '赞赏', link: 'https://github.com/ModyQyW/sponsors' },
@@ -70,7 +73,7 @@ export default defineConfig({
     // https://vitepress.vuejs.org/config/theme-configs#sidebar
     sidebar: {
       '/cheat-sheet': [],
-      '/tutorials': [],
+      '/tutorials': getTutorialsSidebar(),
       '/blogs': getBlogsSidebar(),
     },
     // https://vitepress.vuejs.org/config/theme-configs#outline
