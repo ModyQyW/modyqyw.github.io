@@ -45,7 +45,7 @@ export const getBlogsSidebar = () => {
     })
     .filter(({ items }) => items.length > 0);
 };
-console.log('getBlogsSidebar', getBlogsSidebar());
+// console.log('getBlogsSidebar()', getBlogsSidebar());
 
 export const getBlogsNav = (): NavItem => {
   const blogsSidebar = getBlogsSidebar();
@@ -55,4 +55,4 @@ export const getBlogsNav = (): NavItem => {
     activeMatch: 'blogs/',
   };
 };
-console.log('getBlogsNav', getBlogsNav());
+// console.log('getBlogsNav()', getBlogsNav());

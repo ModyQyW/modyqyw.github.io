@@ -3,7 +3,7 @@ import { docsDirFullPath, type NavItem, generateSidebarItems, type SidebarItem }
 
 export const getTutorialsSidebar = () =>
   generateSidebarItems(resolve(docsDirFullPath, 'tutorials')) as SidebarItem[];
-console.log('getTutorialsSidebar', getTutorialsSidebar());
+// console.log('getTutorialsSidebar()', getTutorialsSidebar());
 
 export const getTutorialsNav = (): NavItem => {
   const tutorialsSidebar = getTutorialsSidebar();
@@ -13,4 +13,4 @@ export const getTutorialsNav = (): NavItem => {
     activeMatch: 'tutorials/',
   };
 };
-console.log('getTutorialsNav', getTutorialsNav());
+// console.log('getTutorialsNav()', getTutorialsNav());

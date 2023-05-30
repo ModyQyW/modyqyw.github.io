@@ -45,38 +45,39 @@ export type NavItem = DefaultTheme.NavItem;
 
 export type SidebarItem = DefaultTheme.SidebarItem;
 
-export const generateSidebarItem = (dirFullPath: string, sorter?: Sorter) => {
-  const dirContents = readdirSync(dirFullPath).sort(sorter ?? ascSorter);
+export const generateSidebarItem = (dirFullPath: string) => {
+  const dirContents = readdirSync(dirFullPath).sort(ascSorter);
   const sidebarItem: SidebarItem = {};
   if (dirContents.includes('index.md')) {
     sidebarItem.text = getMarkdownTitle(resolve(dirFullPath, 'index.md'));
+    sidebarItem.link = resolve(dirFullPath, 'index.md').slice(docsDirFullPath.length);
   }
-  if (dirContents.length === 1) {
-    sidebarItem.link = resolve(dirFullPath, dirContents[0]).slice(docsDirFullPath.length);
-  } else {
-    sidebarItem.collapsed = false;
-    sidebarItem.items = [
-      ...dirContents
-        .filter(
-          (content) =>
-            content !== 'index.md' &&
-            content.endsWith('.md') &&
-            fileFilter(resolve(dirFullPath, content)),
-        )
-        .map((filePath) => {
-          const fileFullPath = resolve(dirFullPath, filePath);
-          return {
-            text: getMarkdownTitle(fileFullPath),
-            link: fileFullPath.slice(docsDirFullPath.length),
-          };
-        }),
-      ...dirContents
-        .filter((content) => dirFilter(resolve(dirFullPath, content)))
-        .map((dirPath) => generateSidebarItem(resolve(dirFullPath, dirPath))),
-    ];
+  sidebarItem.collapsed = true;
+  sidebarItem.items = [
+    ...dirContents
+      .filter(
+        (content) =>
+          content !== 'index.md' &&
+          content.endsWith('.md') &&
+          fileFilter(resolve(dirFullPath, content)),
+      )
+      .map((filePath) => {
+        const fileFullPath = resolve(dirFullPath, filePath);
+        return {
+          text: getMarkdownTitle(fileFullPath),
+          link: fileFullPath.slice(docsDirFullPath.length),
+        };
+      }),
+    ...dirContents
+      .filter((content) => dirFilter(resolve(dirFullPath, content)))
+      .map((dirPath) => generateSidebarItem(resolve(dirFullPath, dirPath))),
+  ];
+  if (sidebarItem.items?.length === 0) {
+    sidebarItem.items = undefined;
+    sidebarItem.collapsed = undefined;
   }
   return sidebarItem;
 };
 
-export const generateSidebarItems = (docsDirFullPath: string, sorter?: Sorter) =>
-  generateSidebarItem(docsDirFullPath, sorter).items;
+export const generateSidebarItems = (docsDirFullPath: string) =>
+  generateSidebarItem(docsDirFullPath).items;
