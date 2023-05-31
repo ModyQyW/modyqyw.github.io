@@ -77,7 +77,7 @@ export default defineConfig({
       '/blogs': getBlogsSidebar(),
     },
     // https://vitepress.vuejs.org/config/theme-configs#outline
-    outline: 3,
+    outline: 'deep',
     // https://vitepress.vuejs.org/config/theme-configs#sociallinks
     socialLinks: [
       {
