@@ -26,6 +26,8 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
+      - run: corepack enable
+
       - run: pnpm install --no-frozen-lockfile
 
       - run: pnpm run build
