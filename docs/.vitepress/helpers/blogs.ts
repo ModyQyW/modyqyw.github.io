@@ -16,14 +16,14 @@ export const getBlogsSidebar = () => {
       const yearDirFullPath = resolve(blogsDirFullPath, yearDir);
       return {
         text: yearDir,
-        collapsed: false,
+        collapsed: true,
         items: readdirSync(yearDirFullPath)
           .sort(descSorter)
           .map((monthDir) => {
             const monthDirFullPath = resolve(yearDirFullPath, monthDir);
             return {
               text: monthDir,
-              collapsed: false,
+              collapsed: true,
               items: readdirSync(monthDirFullPath)
                 .map((blogPath) => {
                   const blogFullPath = resolve(monthDirFullPath, blogPath);
