@@ -814,4 +814,4 @@ Windows 和 macOS 生态不同，有几个重要的地方需要注意。
 - [VSCode Documents](https://code.visualstudio.com/docs)
 - [生产力工具学习路径指南](https://tool.kaopubear.top/)
 - [绝妙的个人生产力](https://github.com/eastlakeside/awesome-productivity-cn)
-- [Mac Setup for Web Development [2022]](https://www.robinwieruch.de/mac-setup-web-development/)
+- [Mac Setup for Web Development [2022](https://www.robinwieruch.de/mac-setup-web-development/)
