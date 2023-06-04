@@ -6,7 +6,7 @@ import imageViewer from 'vitepress-plugin-image-viewer';
 
 import 'lxgw-wenkai-webfont/style.css';
 import './custom.css';
-import './removeServiceWorker';
+import './remove-service-worker';
 import 'uno.css';
 
 export default {
