@@ -41,19 +41,32 @@ export const ascSorter: Sorter = (a, b) => {
 
 export const descSorter: Sorter = (a, b) => -ascSorter(a, b);
 
+export const sorterMapping = {
+  asc: ascSorter,
+  desc: descSorter,
+};
+
 export type NavItem = DefaultTheme.NavItem;
 
 export type SidebarItem = DefaultTheme.SidebarItem;
 
-export const generateSidebarItem = (dirFullPath: string) => {
-  const dirContents = readdirSync(dirFullPath).sort(ascSorter);
+export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' = 'asc') => {
+  // 读取目录下内容并排序，默认为升序排列
+  const dirContents = readdirSync(dirFullPath).sort(sorterMapping[sorter]);
   const sidebarItem: SidebarItem = {};
+  // 如果有 index.md，使用 index.md 作为 text 和 link
+  // 否则使用文件夹名称
   if (dirContents.includes('index.md')) {
     sidebarItem.text = getMarkdownTitle(resolve(dirFullPath, 'index.md'));
     sidebarItem.link = resolve(dirFullPath, 'index.md').slice(docsDirFullPath.length);
+  } else {
+    sidebarItem.text = dirFullPath.split('/').at(-1);
   }
+  // 默认折叠
   sidebarItem.collapsed = true;
+  // 设置子项
   sidebarItem.items = [
+    // 非 index.md 的 md 文件
     ...dirContents
       .filter(
         (content) =>
@@ -61,6 +74,17 @@ export const generateSidebarItem = (dirFullPath: string) => {
           content.endsWith('.md') &&
           fileFilter(resolve(dirFullPath, content)),
       )
+      // 数字开头，本身有序
+      // 非数字开头，根据文件时间降序排列
+      .sort((filePathA, filePathB) => {
+        const regexp = /^\d/;
+        if (regexp.test(filePathA) || regexp.test(filePathB)) return 0;
+        return descSorter(
+          getFileBirthtime(resolve(dirFullPath, filePathA)),
+          getFileBirthtime(resolve(dirFullPath, filePathB)),
+        );
+      })
+      // 映射成对应的数据格式
       .map((filePath) => {
         const fileFullPath = resolve(dirFullPath, filePath);
         return {
@@ -68,9 +92,10 @@ export const generateSidebarItem = (dirFullPath: string) => {
           link: fileFullPath.slice(docsDirFullPath.length),
         };
       }),
+    // 递归处理文件夹
     ...dirContents
       .filter((content) => dirFilter(resolve(dirFullPath, content)))
-      .map((dirPath) => generateSidebarItem(resolve(dirFullPath, dirPath))),
+      .map((dirPath) => generateSidebarItem(resolve(dirFullPath, dirPath), sorter)),
   ];
   if (sidebarItem.items?.length === 0) {
     sidebarItem.items = undefined;
@@ -79,5 +104,5 @@ export const generateSidebarItem = (dirFullPath: string) => {
   return sidebarItem;
 };
 
-export const generateSidebarItems = (docsDirFullPath: string) =>
-  generateSidebarItem(docsDirFullPath).items;
+export const generateSidebarItems = (docsDirFullPath: string, sorter: 'asc' | 'desc' = 'asc') =>
+  generateSidebarItem(docsDirFullPath, sorter).items;

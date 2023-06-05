@@ -9,7 +9,11 @@ export const getTutorialsNav = (): NavItem => {
   const tutorialsSidebar = getTutorialsSidebar();
   return {
     text: '教程',
-    link: tutorialsSidebar[0]?.link ?? tutorialsSidebar?.[0]?.items?.[0]?.link ?? '',
+    link:
+      tutorialsSidebar[0]?.link ??
+      tutorialsSidebar?.[0]?.items?.[0]?.link ??
+      tutorialsSidebar?.[0]?.items?.[0]?.items?.[0]?.link ??
+      '',
     activeMatch: 'tutorials/',
   };
 };
