@@ -76,7 +76,7 @@ export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' 
           fileFilter(resolve(dirFullPath, content)),
       )
       // 以数字和 . 开头，本身有序
-      // 非数字开头，根据文件时间降序排列
+      // 否则根据文件时间降序排列
       .sort((filePathA, filePathB) => {
         const regexp = /^\d+\./;
         if (regexp.test(filePathA) && regexp.test(filePathB)) return 0;
