@@ -24,6 +24,7 @@ export const getFileBirthtime = (fileFullPath: string) => {
   const result = code === 0 ? dayjs(iso).valueOf() : localBirthtimeMs;
   return Number.isNaN(result) ? localBirthtimeMs : result;
 };
+
 export const fileFilter = (fullPath: string) => lstatSync(fullPath).isFile();
 
 export const dirFilter = (fullPath: string) => lstatSync(fullPath).isDirectory();
@@ -78,7 +79,7 @@ export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' 
       // 非数字开头，根据文件时间降序排列
       .sort((filePathA, filePathB) => {
         const regexp = /^\d/;
-        if (regexp.test(filePathA) || regexp.test(filePathB)) return 0;
+        if (regexp.test(filePathA) && regexp.test(filePathB)) return 0;
         return descSorter(
           getFileBirthtime(resolve(dirFullPath, filePathA)),
           getFileBirthtime(resolve(dirFullPath, filePathB)),
