@@ -4,8 +4,6 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
 
-import 'lxgw-wenkai-webfont/style.css';
-import './custom.css';
 import './remove-service-worker';
 import 'uno.css';
 
