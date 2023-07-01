@@ -78,8 +78,8 @@ devDependencies:
     specifier: ^15.9.0
     version: registry.npmjs.org/stylelint@15.9.0
   taze:
-    specifier: ^0.10.3
-    version: registry.npmjs.org/taze@0.10.3
+    specifier: ^0.11.0
+    version: registry.npmjs.org/taze@0.11.0
   typescript:
     specifier: ^5.1.6
     version: registry.npmjs.org/typescript@5.1.6
@@ -6454,14 +6454,6 @@ packages:
       ci-info: registry.npmjs.org/ci-info@3.8.0
     dev: true
 
-  registry.npmjs.org/is-core-module@2.12.0:
-    resolution: {integrity: sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/is-core-module/-/is-core-module-2.12.0.tgz}
-    name: is-core-module
-    version: 2.12.0
-    dependencies:
-      has: registry.npmjs.org/has@1.0.3
-    dev: true
-
   registry.npmjs.org/is-core-module@2.12.1:
     resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/is-core-module/-/is-core-module-2.12.1.tgz}
     name: is-core-module
@@ -8261,7 +8253,7 @@ packages:
     dependencies:
       hosted-git-info: registry.npmjs.org/hosted-git-info@4.1.0
       is-core-module: registry.npmjs.org/is-core-module@2.12.1
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.3
       validate-npm-package-license: registry.npmjs.org/validate-npm-package-license@3.0.4
     dev: true
 
@@ -9341,7 +9333,7 @@ packages:
     version: 1.22.2
     hasBin: true
     dependencies:
-      is-core-module: registry.npmjs.org/is-core-module@2.12.0
+      is-core-module: registry.npmjs.org/is-core-module@2.12.1
       path-parse: registry.npmjs.org/path-parse@1.0.7
       supports-preserve-symlinks-flag: registry.npmjs.org/supports-preserve-symlinks-flag@1.0.0
     dev: true
@@ -10411,15 +10403,16 @@ packages:
       yallist: registry.npmjs.org/yallist@4.0.0
     dev: true
 
-  registry.npmjs.org/taze@0.10.3:
-    resolution: {integrity: sha512-ALm7ke40VfyKaYRcbZKM7cih78SzqtBQck8Pgw2A1Z2DhaVNJg0fefB2AFUgqt91g2R+4aXIzTJ+cEV8UKPQ9A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/taze/-/taze-0.10.3.tgz}
+  registry.npmjs.org/taze@0.11.0:
+    resolution: {integrity: sha512-+YLdW1oe4ii8iRenbWJVd2o1pBcdDDjIxfhv8OmUcWLW14X88BMfvG7g3Rw+Bg3/QYdE/+Qyx/AbDnnVNUNSnA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/taze/-/taze-0.11.0.tgz}
     name: taze
-    version: 0.10.3
+    version: 0.11.0
     hasBin: true
     dependencies:
       '@antfu/ni': registry.npmjs.org/@antfu/ni@0.21.4
       '@npmcli/config': registry.npmjs.org/@npmcli/config@6.2.1
       detect-indent: registry.npmjs.org/detect-indent@7.0.1
+      execa: registry.npmjs.org/execa@7.1.1
       pacote: registry.npmjs.org/pacote@15.2.0
       prompts: registry.npmjs.org/prompts@2.4.2
       semver: registry.npmjs.org/semver@7.5.3

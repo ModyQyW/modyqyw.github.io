@@ -39,7 +39,7 @@
     "simple-git-hooks": "^2.8.1",
     "sitemap": "^7.1.1",
     "stylelint": "^15.9.0",
-    "taze": "^0.10.3",
+    "taze": "^0.11.0",
     "typescript": "^5.1.6",
     "unocss": "^0.52.7",
     "viewerjs": "^1.11.3",
