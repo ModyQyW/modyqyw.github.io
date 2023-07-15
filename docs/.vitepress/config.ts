@@ -11,11 +11,24 @@ const links: { url: string; lastmod?: number }[] = [];
 const hostname = 'https://modyqyw.top';
 
 export default defineConfig({
-  // https://vitepress.vuejs.org/config/app-configs#lang
+  // https://vitepress.dev/reference/site-config#title
+  title: "ModyQyW's Site",
+  // https://vitepress.dev/reference/site-config#head
+  head: [
+    [
+      'script',
+      {
+        async: 'true',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3102250747488251',
+        crossorigin: 'anonymous',
+      },
+    ],
+  ],
+  // https://vitepress.dev/reference/site-config#lang
   lang: 'zh-CN',
-  // https://vitepress.vuejs.org/config/app-configs#lastupdated
+  // https://vitepress.dev/reference/site-config#lastupdated
   lastUpdated: true,
-  // https://vitepress.vuejs.org/config/app-configs#markdown
+  // https://vitepress.dev/reference/site-config#markdown
   markdown: {
     lineNumbers: true,
     theme: {
@@ -26,13 +39,12 @@ export default defineConfig({
       level: [1, 2, 3],
     },
   },
-  // https://vitepress.vuejs.org/config/app-configs#title
-  title: "ModyQyW's Site",
-  // vite config
+  // https://vitepress.dev/reference/site-config#vite
   vite: {
+    // @ts-expect-error type error
     plugins: [unocss()],
   },
-  // https://vitepress.vuejs.org/config/app-configs#transformhtml
+  // https://vitepress.dev/reference/site-config#transformhtml
   transformHtml: (_, id, { pageData }) => {
     // clean urls mode
     // if (!/[\\/]404\.html$/.test(id)) {
@@ -49,7 +61,7 @@ export default defineConfig({
       });
     }
   },
-  // https://vitepress.vuejs.org/config/app-configs#buildend
+  // https://vitepress.dev/reference/site-config#buildend
   buildEnd: async ({ outDir }) => {
     const sitemap = new SitemapStream({ hostname });
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
@@ -58,11 +70,11 @@ export default defineConfig({
     sitemap.end();
     await new Promise((resolve) => writeStream.on('finish', resolve));
   },
-  // https://vitepress.vuejs.org/config/theme-configs
+  // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
-    // https://vitepress.vuejs.org/config/theme-configs#logo
+    // https://vitepress.dev/reference/default-theme-config#logo
     logo: '/images/w.svg',
-    // https://vitepress.vuejs.org/config/theme-configs#nav
+    // https://vitepress.dev/reference/default-theme-config#nav
     nav: [
       { text: '速查表', link: '/cheat-sheets/' },
       getTutorialsNav(),
@@ -70,34 +82,40 @@ export default defineConfig({
       { text: '关于', link: '/about/' },
       { text: '赞赏', link: 'https://github.com/ModyQyW/sponsors' },
     ],
-    // https://vitepress.vuejs.org/config/theme-configs#sidebar
+    // https://vitepress.dev/reference/default-theme-config#sidebar
     sidebar: {
       '/cheat-sheet': [],
       '/tutorials': getTutorialsSidebar(),
       '/blogs': getBlogsSidebar(),
     },
-    // https://vitepress.vuejs.org/config/theme-configs#outline
+    // https://vitepress.dev/reference/default-theme-config#outline
     outline: 'deep',
-    // https://vitepress.vuejs.org/config/theme-configs#sociallinks
+    // https://vitepress.dev/reference/default-theme-config#sociallinks
     socialLinks: [
       {
         icon: 'github',
         link: 'https://github.com/ModyQyW/modyqyw.github.io',
       },
     ],
-    // https://vitepress.vuejs.org/config/theme-configs#footer
+    // https://vitepress.dev/reference/default-theme-config#footer
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2020-present ModyQyW',
     },
-    // https://vitepress.vuejs.org/config/theme-configs#editlink
+    // https://vitepress.dev/reference/default-theme-config#editlink
     editLink: {
       pattern: 'https://github.com/ModyQyW/modyqyw.github.io/edit/main/docs/:path',
       text: '编辑页面',
     },
-    // https://vitepress.vuejs.org/config/theme-configs#lastupdatedtext
-    lastUpdatedText: '最后更新于',
-    // https://vitepress.vuejs.org/config/theme-configs#algolia
+    // https://vitepress.dev/reference/default-theme-config#lastupdated
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'full',
+      },
+    },
+    // https://vitepress.dev/reference/default-theme-config#algolia
     algolia: {
       appId: process.env.ALGOLIA_APP_ID || '',
       apiKey: process.env.ALGOLIA_API_KEY || '',
@@ -146,11 +164,11 @@ export default defineConfig({
         },
       },
     },
-    // https://vitepress.vuejs.org/config/theme-configs#darkmodeswitchlabel
+    // https://vitepress.dev/reference/default-theme-config#darkmodeswitchlabel
     darkModeSwitchLabel: '外观',
-    // https://vitepress.vuejs.org/config/theme-configs#sidebarmenulabel
+    // https://vitepress.dev/reference/default-theme-config#sidebarmenulabel
     sidebarMenuLabel: '菜单',
-    // https://vitepress.vuejs.org/config/theme-configs#returntotoplabel
+    // https://vitepress.dev/reference/default-theme-config#returntotoplabel
     returnToTopLabel: '回到顶部',
   },
 });
