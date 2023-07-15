@@ -38,6 +38,8 @@ Vue 3 中响应性系统做了不少的权衡才最终落地，但我个人不�
 
 `props` 也是类似的，你不能直接解构赋值，否则就会影响响应性。更多的细节你可以查看 [这里](https://cn.vuejs.org/guide/extras/reactivity-transform.html)。
 
+哦对了，Vue 3 还提供了 `watchEffect`，有好几次我自己因为使用它时没有分析清楚依赖项而陷入了死循环，而在写 React `useEffect` 时候，由于需要明确提供依赖项，我几乎没有陷入过死循环。这也是一个恼人的地方。
+
 ## 不稳定的 Vue Language Tools
 
 为了提供更好的开发者体验，Vue 团队推出了新的 VSCode 插件 [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)。它的确提供了更强大的功能，包括类型推导等，但是它的性能不算太好，你可以在 [这里](https://github.com/vuejs/language-tools/issues?q=performance) 看到大量性能相关的 ISSUE。
