@@ -41,7 +41,7 @@ export default defineConfig({
   },
   // https://vitepress.dev/reference/site-config#vite
   vite: {
-    // @ts-expect-error type error
+    // unocss 0.53 & 0.54 hangs build
     plugins: [unocss()],
   },
   // https://vitepress.dev/reference/site-config#transformhtml
