@@ -93,8 +93,8 @@ devDependencies:
     specifier: ^4.4.8
     version: registry.npmjs.org/vite@4.4.8(@types/node@20.1.4)
   vitepress:
-    specifier: 1.0.0-beta.7
-    version: registry.npmjs.org/vitepress@1.0.0-beta.7(@algolia/client-search@4.17.0)(@types/node@20.1.4)(search-insights@2.6.0)
+    specifier: 1.0.0-rc.4
+    version: registry.npmjs.org/vitepress@1.0.0-rc.4(@algolia/client-search@4.17.0)(@types/node@20.1.4)(search-insights@2.6.0)
   vitepress-plugin-comment-with-giscus:
     specifier: ^1.1.7
     version: registry.npmjs.org/vitepress-plugin-comment-with-giscus@1.1.7(vue@3.3.4)
@@ -2554,7 +2554,7 @@ packages:
       - rollup
     dev: true
 
-  registry.npmjs.org/@vitejs/plugin-vue@4.2.3(vite@4.4.8)(vue@3.3.4):
+  registry.npmjs.org/@vitejs/plugin-vue@4.2.3(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-4.2.3.tgz}
     id: registry.npmjs.org/@vitejs/plugin-vue/4.2.3
     name: '@vitejs/plugin-vue'
@@ -2564,7 +2564,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmjs.org/vite@4.4.8(@types/node@20.1.4)
+      vite: registry.npmjs.org/vite@4.4.9(@types/node@20.1.4)
       vue: registry.npmjs.org/vue@3.3.4
     dev: true
 
@@ -2736,26 +2736,26 @@ packages:
       - typescript
     dev: true
 
-  registry.npmjs.org/@vueuse/core@10.2.1(vue@3.3.4):
-    resolution: {integrity: sha512-c441bfMbkAwTNwVRHQ0zdYZNETK//P84rC01aP2Uy/aRFCiie9NE/k9KdIXbno0eDYP5NPUuWv0aA/I4Unr/7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/core/-/core-10.2.1.tgz}
-    id: registry.npmjs.org/@vueuse/core/10.2.1
+  registry.npmjs.org/@vueuse/core@10.3.0(vue@3.3.4):
+    resolution: {integrity: sha512-BEM5yxcFKb5btFjTSAFjTu5jmwoW66fyV9uJIP4wUXXU8aR5Hl44gndaaXp7dC5HSObmgbnR2RN+Un1p68Mf5Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/core/-/core-10.3.0.tgz}
+    id: registry.npmjs.org/@vueuse/core/10.3.0
     name: '@vueuse/core'
-    version: 10.2.1
+    version: 10.3.0
     dependencies:
       '@types/web-bluetooth': registry.npmjs.org/@types/web-bluetooth@0.0.17
-      '@vueuse/metadata': registry.npmjs.org/@vueuse/metadata@10.2.1
-      '@vueuse/shared': registry.npmjs.org/@vueuse/shared@10.2.1(vue@3.3.4)
+      '@vueuse/metadata': registry.npmjs.org/@vueuse/metadata@10.3.0
+      '@vueuse/shared': registry.npmjs.org/@vueuse/shared@10.3.0(vue@3.3.4)
       vue-demi: registry.npmjs.org/vue-demi@0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
     dev: true
 
-  registry.npmjs.org/@vueuse/integrations@10.2.1(focus-trap@7.5.2)(vue@3.3.4):
-    resolution: {integrity: sha512-FDP5lni+z9FjHE9H3xuvwSjoRV9U8jmDvJpmHPCBjUgPGYRynwb60eHWXCFJXLUtb4gSIHy0e+iaEbrKdalCkQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/integrations/-/integrations-10.2.1.tgz}
-    id: registry.npmjs.org/@vueuse/integrations/10.2.1
+  registry.npmjs.org/@vueuse/integrations@10.3.0(focus-trap@7.5.2)(vue@3.3.4):
+    resolution: {integrity: sha512-Jgiv7oFyIgC6BxmDtiyG/fxyGysIds00YaY7sefwbhCZ2/tjEx1W/1WcsISSJPNI30in28+HC2J4uuU8184ekg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/integrations/-/integrations-10.3.0.tgz}
+    id: registry.npmjs.org/@vueuse/integrations/10.3.0
     name: '@vueuse/integrations'
-    version: 10.2.1
+    version: 10.3.0
     peerDependencies:
       async-validator: '*'
       axios: '*'
@@ -2795,8 +2795,8 @@ packages:
       universal-cookie:
         optional: true
     dependencies:
-      '@vueuse/core': registry.npmjs.org/@vueuse/core@10.2.1(vue@3.3.4)
-      '@vueuse/shared': registry.npmjs.org/@vueuse/shared@10.2.1(vue@3.3.4)
+      '@vueuse/core': registry.npmjs.org/@vueuse/core@10.3.0(vue@3.3.4)
+      '@vueuse/shared': registry.npmjs.org/@vueuse/shared@10.3.0(vue@3.3.4)
       focus-trap: registry.npmjs.org/focus-trap@7.5.2
       vue-demi: registry.npmjs.org/vue-demi@0.14.5(vue@3.3.4)
     transitivePeerDependencies:
@@ -2804,17 +2804,17 @@ packages:
       - vue
     dev: true
 
-  registry.npmjs.org/@vueuse/metadata@10.2.1:
-    resolution: {integrity: sha512-3Gt68mY/i6bQvFqx7cuGBzrCCQu17OBaGWS5JdwISpMsHnMKKjC2FeB5OAfMcCQ0oINfADP3i9A4PPRo0peHdQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/metadata/-/metadata-10.2.1.tgz}
+  registry.npmjs.org/@vueuse/metadata@10.3.0:
+    resolution: {integrity: sha512-Ema3YhNOa4swDsV0V7CEY5JXvK19JI/o1szFO1iWxdFg3vhdFtCtSTP26PCvbUpnUtNHBY2wx5y3WDXND5Pvnw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/metadata/-/metadata-10.3.0.tgz}
     name: '@vueuse/metadata'
-    version: 10.2.1
+    version: 10.3.0
     dev: true
 
-  registry.npmjs.org/@vueuse/shared@10.2.1(vue@3.3.4):
-    resolution: {integrity: sha512-QWHq2bSuGptkcxx4f4M/fBYC3Y8d3M2UYyLsyzoPgEoVzJURQ0oJeWXu79OiLlBb8gTKkqe4mO85T/sf39mmiw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/shared/-/shared-10.2.1.tgz}
-    id: registry.npmjs.org/@vueuse/shared/10.2.1
+  registry.npmjs.org/@vueuse/shared@10.3.0(vue@3.3.4):
+    resolution: {integrity: sha512-kGqCTEuFPMK4+fNWy6dUOiYmxGcUbtznMwBZLC1PubidF4VZY05B+Oht7Jh7/6x4VOWGpvu3R37WHi81cKpiqg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vueuse/shared/-/shared-10.3.0.tgz}
+    id: registry.npmjs.org/@vueuse/shared/10.3.0
     name: '@vueuse/shared'
-    version: 10.2.1
+    version: 10.3.0
     dependencies:
       vue-demi: registry.npmjs.org/vue-demi@0.14.5(vue@3.3.4)
     transitivePeerDependencies:
@@ -9211,6 +9211,17 @@ packages:
       source-map-js: registry.npmjs.org/source-map-js@1.0.2
     dev: true
 
+  registry.npmjs.org/postcss@8.4.27:
+    resolution: {integrity: sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postcss/-/postcss-8.4.27.tgz}
+    name: postcss
+    version: 8.4.27
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: registry.npmjs.org/nanoid@3.3.6
+      picocolors: registry.npmjs.org/picocolors@1.0.0
+      source-map-js: registry.npmjs.org/source-map-js@1.0.2
+    dev: true
+
   registry.npmjs.org/preact@10.13.2:
     resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/preact/-/preact-10.13.2.tgz}
     name: preact
@@ -9693,6 +9704,16 @@ packages:
     resolution: {integrity: sha512-6umBIGVz93er97pMgQO08LuH3m6PUb3jlDUUGFsNJB6VgTCUaDFpupf5JfU30529m/UKOgmiX+uY6Sx8cOYpLA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/rollup/-/rollup-3.26.2.tgz}
     name: rollup
     version: 3.26.2
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: registry.npmjs.org/fsevents@2.3.2
+    dev: true
+
+  registry.npmjs.org/rollup@3.28.0:
+    resolution: {integrity: sha512-d7zhvo1OUY2SXSM6pfNjgD5+d0Nz87CUp4mt8l/GgVP3oBsPwzNvSzyu1me6BSG9JIgWNTVcafIXBIyM8yQ3yw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/rollup/-/rollup-3.28.0.tgz}
+    name: rollup
+    version: 3.28.0
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -11268,6 +11289,45 @@ packages:
       fsevents: registry.npmjs.org/fsevents@2.3.2
     dev: true
 
+  registry.npmjs.org/vite@4.4.9(@types/node@20.1.4):
+    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vite/-/vite-4.4.9.tgz}
+    id: registry.npmjs.org/vite/4.4.9
+    name: vite
+    version: 4.4.9
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      '@types/node': registry.npmjs.org/@types/node@20.1.4
+      esbuild: registry.npmjs.org/esbuild@0.18.13
+      postcss: registry.npmjs.org/postcss@8.4.27
+      rollup: registry.npmjs.org/rollup@3.28.0
+    optionalDependencies:
+      fsevents: registry.npmjs.org/fsevents@2.3.2
+    dev: true
+
   registry.npmjs.org/vitepress-plugin-comment-with-giscus@1.1.7(vue@3.3.4):
     resolution: {integrity: sha512-GA+GTVRAG3Li1Rmuqhd0sqZ7RFZTn5eGNcZcs89sI1Z15EK0EGeJ+i4Fz+cszSRqJE79QsKrGky5VJAgsiAIiw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vitepress-plugin-comment-with-giscus/-/vitepress-plugin-comment-with-giscus-1.1.7.tgz}
     id: registry.npmjs.org/vitepress-plugin-comment-with-giscus/1.1.7
@@ -11287,25 +11347,25 @@ packages:
       viewerjs: registry.npmjs.org/viewerjs@1.11.4
     dev: true
 
-  registry.npmjs.org/vitepress@1.0.0-beta.7(@algolia/client-search@4.17.0)(@types/node@20.1.4)(search-insights@2.6.0):
-    resolution: {integrity: sha512-P9Rw+FXatKIU4fVdtKxqwHl6fby8E/8zE3FIfep6meNgN4BxbWqoKJ6yfuuQQR9IrpQqwnyaBh4LSabyll6tWg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-beta.7.tgz}
-    id: registry.npmjs.org/vitepress/1.0.0-beta.7
+  registry.npmjs.org/vitepress@1.0.0-rc.4(@algolia/client-search@4.17.0)(@types/node@20.1.4)(search-insights@2.6.0):
+    resolution: {integrity: sha512-JCQ89Bm6ECUTnyzyas3JENo00UDJeK8q1SUQyJYou+4Yz5BKEc/F3O21cu++DnUT2zXc0kvQ2Aj4BZCc/nioXQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-rc.4.tgz}
+    id: registry.npmjs.org/vitepress/1.0.0-rc.4
     name: vitepress
-    version: 1.0.0-beta.7
+    version: 1.0.0-rc.4
     hasBin: true
     dependencies:
       '@docsearch/css': registry.npmjs.org/@docsearch/css@3.5.1
       '@docsearch/js': registry.npmjs.org/@docsearch/js@3.5.1(@algolia/client-search@4.17.0)(search-insights@2.6.0)
-      '@vitejs/plugin-vue': registry.npmjs.org/@vitejs/plugin-vue@4.2.3(vite@4.4.8)(vue@3.3.4)
+      '@vitejs/plugin-vue': registry.npmjs.org/@vitejs/plugin-vue@4.2.3(vite@4.4.9)(vue@3.3.4)
       '@vue/devtools-api': registry.npmjs.org/@vue/devtools-api@6.5.0
-      '@vueuse/core': registry.npmjs.org/@vueuse/core@10.2.1(vue@3.3.4)
-      '@vueuse/integrations': registry.npmjs.org/@vueuse/integrations@10.2.1(focus-trap@7.5.2)(vue@3.3.4)
+      '@vueuse/core': registry.npmjs.org/@vueuse/core@10.3.0(vue@3.3.4)
+      '@vueuse/integrations': registry.npmjs.org/@vueuse/integrations@10.3.0(focus-trap@7.5.2)(vue@3.3.4)
       body-scroll-lock: registry.npmjs.org/body-scroll-lock@4.0.0-beta.0
       focus-trap: registry.npmjs.org/focus-trap@7.5.2
       mark.js: registry.npmjs.org/mark.js@8.11.1
       minisearch: registry.npmjs.org/minisearch@6.1.0
       shiki: registry.npmjs.org/shiki@0.14.3
-      vite: registry.npmjs.org/vite@4.4.8(@types/node@20.1.4)
+      vite: registry.npmjs.org/vite@4.4.9(@types/node@20.1.4)
       vue: registry.npmjs.org/vue@3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
