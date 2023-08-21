@@ -1,8 +1,11 @@
 import { readdirSync, readFileSync, statSync, lstatSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { exec } from 'shelljs';
+import * as shelljs from 'shelljs';
 import dayjs from 'dayjs';
 import type { DefaultTheme } from 'vitepress';
+
+// @ts-expect-error Property 'default' does not exist on type 'shelljs'
+const exec: shelljs.ExecFunction = shelljs?.default?.exec ?? shelljs?.exec;
 
 export const cwd = process.cwd();
 
