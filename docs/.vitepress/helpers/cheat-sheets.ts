@@ -8,7 +8,7 @@ export const getCheatSheetsSidebar = () =>
 export const getCheatSheetsNav = (): NavItem => {
   const cheatSheetsSidebar = getCheatSheetsSidebar();
   return {
-    text: '速查表',
+    text: '速查',
     link:
       cheatSheetsSidebar[0]?.link ??
       cheatSheetsSidebar?.[0]?.items?.[0]?.link ??
