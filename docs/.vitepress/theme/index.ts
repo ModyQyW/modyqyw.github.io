@@ -1,15 +1,17 @@
 import DefaultTheme from 'vitepress/theme';
-import { useData, useRoute } from 'vitepress';
+import { type EnhanceAppContext, useData, useRoute } from 'vitepress';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
+import VEmbed from './VEmbed.vue';
 
 import './remove-service-worker';
 import 'uno.css';
 
 export default {
   ...DefaultTheme,
-  enhanceApp(ctx) {
+  enhanceApp(ctx: EnhanceAppContext) {
+    ctx.app.component('VEmbed', VEmbed);
     DefaultTheme.enhanceApp(ctx);
   },
   setup() {

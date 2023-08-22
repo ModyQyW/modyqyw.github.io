@@ -4,6 +4,7 @@ import { SitemapStream } from 'sitemap';
 import { defineConfig } from 'vitepress';
 import unocss from 'unocss/vite';
 import { getTutorialsNav, getBlogsNav, getTutorialsSidebar, getBlogsSidebar } from './helpers';
+import { getCheatSheetsNav, getCheatSheetsSidebar } from './helpers/cheat-sheets';
 
 // for sitemap
 // see https://github.com/vuejs/vitepress/issues/520
@@ -41,7 +42,6 @@ export default defineConfig({
   },
   // https://vitepress.dev/reference/site-config#vite
   vite: {
-    // unocss 0.53 & 0.54 hangs build
     plugins: [unocss()],
   },
   // https://vitepress.dev/reference/site-config#transformhtml
@@ -76,7 +76,7 @@ export default defineConfig({
     logo: '/images/w.svg',
     // https://vitepress.dev/reference/default-theme-config#nav
     nav: [
-      { text: '速查表', link: '/cheat-sheets/' },
+      getCheatSheetsNav(),
       getTutorialsNav(),
       getBlogsNav(),
       { text: '关于', link: '/about/' },
@@ -84,7 +84,7 @@ export default defineConfig({
     ],
     // https://vitepress.dev/reference/default-theme-config#sidebar
     sidebar: {
-      '/cheat-sheet': [],
+      '/cheat-sheet': getCheatSheetsSidebar(),
       '/tutorials': getTutorialsSidebar(),
       '/blogs': getBlogsSidebar(),
     },
