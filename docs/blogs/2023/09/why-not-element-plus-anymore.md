@@ -80,7 +80,7 @@ const value = ref<number>();
 
 和 `el-checkbox` 类似，`label` 也被用来作为值，这同样给我造成了认知混乱。
 
-在选项数量较多时，我可以使用 [select](https://element-plus.org/zh-CN/component/select.html) 来做单选或者多选，下面是一个单选的例子，多选也相差不大。
+在选项数量较多时，我可以使用 [el-select](https://element-plus.org/zh-CN/component/select.html) 来做单选或者多选，下面是一个单选的例子，多选也相差不大。
 
 ```vue
 <script setup lang="ts">
@@ -107,7 +107,7 @@ const value = ref<number>();
 </template>
 ```
 
-和上面两个例子不同，`label` 作为文本，`value` 作为值，我认为这清晰明确得多。如果都采取 `select` 的 API 设计，对于我来说真的太好了。
+和上面两个例子不同，`label` 作为文本，`value` 作为值，我认为这清晰明确得多。如果都采取 `el-select` 的 API 设计，对于我来说真的太好了。
 
 我翻查过 `element-ui` 的文档，发现 `element-plus` API 设计大部分都跟随前者的 API 设计，我不太确定这里面是否带有历史包袱的因素。
 
