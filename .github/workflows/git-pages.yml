@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - release
   schedule:
     - cron: '0 0 * * 0'
 
@@ -13,29 +12,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version-file: ".nvmrc"
           cache: pnpm
-
+          registry-url: https://registry.npmjs.org
       - run: corepack enable
-
       - run: pnpm install
-
       - run: pnpm run build
         env:
           ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
           ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
-
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
