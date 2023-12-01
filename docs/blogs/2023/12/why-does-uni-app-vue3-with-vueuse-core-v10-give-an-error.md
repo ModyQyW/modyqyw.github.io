@@ -147,13 +147,13 @@ export default defineConfig({
 
 正如我在开头提到的，降级到 v9 是一个解决方案，因为 @vueuse/core v9 还没有用到 `TransitionGroup`。
 
-但是停留在 v9 就没有办法使用各种修复和新特性了，有没有什么办法可以处理这个问题呢？
+但是停留在 v9 就没有办法使用各种修复和新特性了，有没有什么办法可以快乐地用上 v10 呢？
 
-答案还是出自于 vue-demi。vue v2 没有 `TransitionGroup`，vue-demi 为它模拟了一个 `TransitionGroup`，使得 @vueuse/core v10 可以在 vue v2 上正常使用。
+这个问题的答案还得去翻 vue-demi 的源码。vue v2 没有导出 `TransitionGroup`，而 vue-demi 又提供了同时支持 vue v2 和 v3 的能力，那 vue-demi 是怎么处理这部分逻辑的呢？翻看源码可以得知，vue-demi 模拟并导出了 `TransitionGroup`。
 
 ![uni-app-vue3-vueuse-core-error-6](uni-app-vue3-vueuse-core-error-6.png)
 
-我们可以参考这种做法，为修改过的 vue 库补充 `TransitionGroup` 的模拟。
+这样导出的 `TransitionGroup` 没有实际作用，但仍然可以为我们解决这个报错。我们可以参考这种做法，为修改过的 vue 库补充 `TransitionGroup` 的模拟。
 
 ![uni-app-vue3-vueuse-core-error-7](uni-app-vue3-vueuse-core-error-7.png)
 
