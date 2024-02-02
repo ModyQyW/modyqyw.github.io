@@ -51,7 +51,8 @@ function request(type, message) {
   return Promise.reject(new Error('Socket unavailable'));
 }
 socket.on('response', (response) => {
-  if (response.status === 200) resolve(response); // 在这里使用 resolve
+  if (response.status === 200)
+    resolve(response); // 在这里使用 resolve
   else reject(new Error(response)); // 在这里使用 reject
 });
 socket.on('error', (err) => reject(err)); // 在这里使用 reject
@@ -71,7 +72,7 @@ function cancelableTimeout(ms) {
       reject(new Error('The timeout was canceled.')); // 在这里使用 reject
     };
   });
-  return { promise, cancel };
+  return { cancel, promise };
 }
 ```
 
@@ -84,7 +85,7 @@ function cancelableTimeout(ms) {
 `Promise.withResolvers` 提案试图为 `Promise` 添加一个静态方法 `withResolvers`，返回一个 `Promise` 实例和相关的 `resolve` 和 `reject`。
 
 ```js
-const { promise, resolve, reject } = Promise.withResolvers();
+const { promise, reject, resolve } = Promise.withResolvers();
 ```
 
 借助这个提案，上面三个例子可以进一步简化。
@@ -95,7 +96,8 @@ const { promise, resolve, reject } = Promise.withResolvers();
 function myRequest(config) {
   let resolve; // [!code --]
   let reject; // [!code --]
-  const promise = new Promise((_resolve, _reject) => { // [!code --]
+  const promise = new Promise((_resolve, _reject) => {
+    // [!code --]
     resolve = _resolve; // [!code --]
     reject = _reject; // [!code --]
   }); // [!code --]
@@ -118,7 +120,8 @@ let reject; // [!code --]
 const { promise, resolve, reject } = Promise.withResolvers(); // [!code ++]
 function request(type, message) {
   if (socket) {
-    const promise = new Promise((_resolve, _reject) => { // [!code --]
+    const promise = new Promise((_resolve, _reject) => {
+      // [!code --]
       resolve = _resolve; // [!code --]
       reject = _reject; // [!code --]
     }); // [!code --]

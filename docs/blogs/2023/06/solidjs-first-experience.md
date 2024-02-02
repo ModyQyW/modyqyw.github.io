@@ -43,12 +43,12 @@ Solid 提供的 createEffect 用起来一时爽，但是不爽的时候就火葬
 ```tsx
 import { ofetch } from 'ofetch';
 import {
-  createSignal,
-  createEffect,
-  Switch,
-  Match,
-  For,
   type Component,
+  For,
+  Match,
+  Switch,
+  createEffect,
+  createSignal,
 } from 'solid-js';
 
 type AnyRecord = Record<string, any>;
@@ -61,7 +61,9 @@ const Demo: Component<Props> = (props) => {
   const [data, setData] = createSignal<AnyRecord[]>([]);
   const [error, setError] = createSignal<string>('');
   const [isLoading, setIsLoading] = createSignal(false);
-  const [abortController, setAbortController] = createSignal(new AbortController());
+  const [abortController, setAbortController] = createSignal(
+    new AbortController(),
+  );
   const handleRequest = async () => {
     abortController().abort();
     setAbortController(new AbortController());
@@ -69,7 +71,7 @@ const Demo: Component<Props> = (props) => {
     await ofetch('https://fake/url', {
       // ...
       signal: abortController().signal,
-    })
+    });
   };
 
   createEffect(() => {
@@ -85,21 +87,20 @@ const Demo: Component<Props> = (props) => {
           </div>
         </Match>
         <Match when={!isLoading() && !!error()}>
-          <div class="mt-4 w-full leading-loose text-red-500">{error()}</div>
+          <div class="mt-4 w-full text-red-500 leading-loose">{error()}</div>
         </Match>
         <Match when={!isLoading() && !error() && data().length === 0}>
-          <div class="mt-4 w-full text-center leading-loose text-gray-500">暂无结果</div>
+          <div class="mt-4 w-full text-center text-gray-500 leading-loose">
+            暂无结果
+          </div>
         </Match>
-        <Match when={!isLoading() && !error() && data().length > 0}>
-          ...
-        </Match>
+        <Match when={!isLoading() && !error() && data().length > 0}>...</Match>
       </Switch>
     </div>
   );
 };
 
 export default Demo;
-
 ```
 
 这个组件还算简洁。我使用了 createEffect，当传入的 text 是非空字符串时触发 handleRequest 方法。而 handleRequest 方法中会尝试使用 abortController 取消前一次请求，设置新的 abortController 后调用 ofetch 发起请求。
@@ -111,7 +112,6 @@ export default Demo;
 > watch 和 watchEffect 都能响应式地执行有副作用的回调。它们之间的主要区别是追踪响应式依赖的方式：
 >
 > - watch 只追踪明确侦听的数据源。它不会追踪任何在回调中访问到的东西。另外，仅在数据源确实改变时才会触发回调。watch 会避免在发生副作用时追踪依赖，因此，我们能更加精确地控制回调函数的触发时机。
->
 > - watchEffect，则会在副作用发生期间追踪依赖。它会在同步执行过程中，自动追踪所有能访问到的响应式属性。这更方便，而且代码往往更简洁，但有时其响应性依赖关系会不那么明确。
 
 和 Vue 的 watchEffect 类似，Solid 的 createEffect 也会自动追踪所有能访问到的响应式属性。在这里，我使用了 createSignal 来创建 abortController，这意味着 abortController 就是一个可访问到的响应式属性。设置新的 abortController 会重新触发 createEffect，而触发 createEffect 又会设置新的 abortController，所以最后出现了死循环。

@@ -50,16 +50,18 @@ npm install @vueuse/core
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { createGlobalState } from '@vueuse/core' // [!code ++]
+import { createGlobalState } from '@vueuse/core';
+import { ref } from 'vue'; // [!code ++]
 
-const useGlobalState = createGlobalState( // [!code ++]
-  () => { // [!code ++]
-    const count = ref(0) // [!code ++]
-    return { count } // [!code ++]
-  } // [!code ++]
-) // [!code ++]
-const title = ref('Hello')
+const useGlobalState = createGlobalState(
+  // [!code ++]
+  () => {
+    // [!code ++]
+    const count = ref(0); // [!code ++]
+    return { count }; // [!code ++]
+  }, // [!code ++]
+); // [!code ++]
+const title = ref('Hello');
 </script>
 
 <style>
@@ -89,7 +91,6 @@ const title = ref('Hello')
   color: #8f8f94;
 }
 </style>
-
 ```
 
 运行到微信小程序，就会报错。
@@ -113,22 +114,23 @@ npm run dev:mp-weixin
 我们可以在 vite 配置文件内增加一个插件来验证这一点是否正确。
 
 ```typescript
-import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
+import { defineConfig } from 'vite';
+import uni from '@dcloudio/vite-plugin-uni';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     uni(),
-    {// [!code ++]
-      name: "test",// [!code ++]
-      configResolved(config) {// [!code ++]
-        console.log("config.resolve.alias", config.resolve.alias);// [!code ++]
-      },// [!code ++]
-    },// [!code ++]
+    {
+      // [!code ++]
+      name: 'test', // [!code ++]
+      configResolved(config) {
+        // [!code ++]
+        console.log('config.resolve.alias', config.resolve.alias); // [!code ++]
+      }, // [!code ++]
+    }, // [!code ++]
   ],
 });
-
 ```
 
 再次运行到微信小程序，查看输出。可以看到确实设置了 `resolve.alias`，将 vue 指向了 @dcloudio/uni-mp-vue 内的文件。

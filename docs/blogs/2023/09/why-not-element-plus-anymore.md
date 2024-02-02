@@ -24,8 +24,8 @@ const data = [
 
 ```vue
 <script setup lang="ts">
+import { ElCheckbox, ElCheckboxGroup } from 'element-plus';
 import { ref } from 'vue';
-import { ElCheckboxGroup, ElCheckbox } from 'element-plus';
 
 const data = [
   { name: 'A', value: 1 },
@@ -37,11 +37,7 @@ const value = ref<number[]>([]);
 
 <template>
   <el-checkbox-group v-model="value">
-    <el-checkbox
-      v-for="item of data"
-      :key="item.value"
-      :label="item.value"
-    >
+    <el-checkbox v-for="item of data" :key="item.value" :label="item.value">
       {{ item.name }}
     </el-checkbox>
   </el-checkbox-group>
@@ -54,8 +50,8 @@ const value = ref<number[]>([]);
 
 ```vue
 <script setup lang="ts">
+import { ElRadio, ElRadioGroup } from 'element-plus';
 import { ref } from 'vue';
-import { ElRadioGroup, ElRadio } from 'element-plus';
 
 const data = [
   { name: 'A', value: 1 },
@@ -67,11 +63,7 @@ const value = ref<number>();
 
 <template>
   <el-radio-group v-model="value">
-    <el-radio
-      v-for="item of data"
-      :key="item.value"
-      :label="item.value"
-    >
+    <el-radio v-for="item of data" :key="item.value" :label="item.value">
       {{ item.name }}
     </el-radio>
   </el-radio-group>
@@ -84,8 +76,8 @@ const value = ref<number>();
 
 ```vue
 <script setup lang="ts">
+import { ElOption, ElSelect } from 'element-plus';
 import { ref } from 'vue';
-import { ElSelect, ElOption } from 'element-plus';
 
 const data = [
   { name: 'A', value: 1 },
@@ -123,12 +115,12 @@ const value = ref<number>();
 
 ```vue
 <script setup lang="ts">
+import { ElButton, ElOption, ElSelect } from 'element-plus';
 import { ref } from 'vue';
-import { ElSelect, ElOption, ElButton } from 'element-plus';
 
 const data = Array.from({ length: 100 }).map((_, index) => ({
-  value: index,
   label: index,
+  value: index,
 }));
 const value = ref<number>();
 </script>
@@ -138,10 +130,10 @@ const value = ref<number>();
     <el-col>
       <el-select
         v-model="value"
-        multiple
-        filterable
         collapse-tags
         collapse-tags-tooltip
+        filterable
+        multiple
       >
         <el-option
           v-for="item of data"
