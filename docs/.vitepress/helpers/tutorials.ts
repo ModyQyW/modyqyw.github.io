@@ -1,5 +1,10 @@
 import { resolve } from 'node:path';
-import { docsDirFullPath, type NavItem, generateSidebarItems, type SidebarItem } from './common';
+import {
+  type NavItem,
+  type SidebarItem,
+  docsDirFullPath,
+  generateSidebarItems,
+} from './common';
 
 export const getTutorialsSidebar = () =>
   generateSidebarItems(resolve(docsDirFullPath, 'tutorials')) as SidebarItem[];
@@ -8,13 +13,13 @@ export const getTutorialsSidebar = () =>
 export const getTutorialsNav = (): NavItem => {
   const tutorialsSidebar = getTutorialsSidebar();
   return {
-    text: '教程',
+    activeMatch: 'tutorials/',
     link:
       tutorialsSidebar[0]?.link ??
       tutorialsSidebar?.[0]?.items?.[0]?.link ??
       tutorialsSidebar?.[0]?.items?.[0]?.items?.[0]?.link ??
       '',
-    activeMatch: 'tutorials/',
+    text: '教程',
   };
 };
 // console.log('getTutorialsNav()', getTutorialsNav());

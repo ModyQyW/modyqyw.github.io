@@ -18,19 +18,14 @@
     "baseUrl": ".",
     "allowJs": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.mjs",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.cts",
-    "**/*.mts",
-    "**/*.tsx",
-    "**/*.vue",
-    "docs/.vitepress/**/*.ts"
+    "docs/.vitepress/**/*.js",
+    "docs/.vitepress/**/*.jsx",
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.tsx",
+    "docs/.vitepress/**/*.vue",
   ],
   "exclude": [
     "**/.cache",
@@ -40,6 +35,6 @@
     "**/temp",
     "**/tmp",
     "**/dist",
-    "**/node_modules"
-  ]
+    "**/node_modules",
+  ],
 }

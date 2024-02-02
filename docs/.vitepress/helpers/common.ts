@@ -1,7 +1,7 @@
-import { readdirSync, readFileSync, statSync, lstatSync } from 'node:fs';
+import { lstatSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
-import * as shelljs from 'shelljs';
 import dayjs from 'dayjs';
+import * as shelljs from 'shelljs';
 import type { DefaultTheme } from 'vitepress';
 
 // @ts-expect-error Property 'default' does not exist on type 'shelljs'
@@ -30,12 +30,13 @@ export const getFileBirthtime = (fileFullPath: string) => {
 
 export const fileFilter = (fullPath: string) => lstatSync(fullPath).isFile();
 
-export const dirFilter = (fullPath: string) => lstatSync(fullPath).isDirectory();
+export const dirFilter = (fullPath: string) =>
+  lstatSync(fullPath).isDirectory();
 
-export const numberFilter = (item: string | number) =>
+export const numberFilter = (item: number | string) =>
   !Number.isNaN(Number.parseFloat(item.toString()));
 
-export type Sorter = (a: string | number, b: string | number) => number;
+export type Sorter = (a: number | string, b: number | string) => number;
 
 export const ascSorter: Sorter = (a, b) => {
   const na = Number.parseFloat(a.toString());
@@ -54,7 +55,10 @@ export type NavItem = DefaultTheme.NavItem;
 
 export type SidebarItem = DefaultTheme.SidebarItem;
 
-export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' = 'asc') => {
+export const generateSidebarItem = (
+  dirFullPath: string,
+  sorter: 'asc' | 'desc' = 'asc',
+) => {
   // 读取目录下内容并排序，默认为升序排列
   const dirContents = readdirSync(dirFullPath).sort(sorterMapping[sorter]);
   const sidebarItem: SidebarItem = {};
@@ -62,7 +66,9 @@ export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' 
   // 否则使用文件夹名称
   if (dirContents.includes('index.md')) {
     sidebarItem.text = getMarkdownTitle(resolve(dirFullPath, 'index.md'));
-    sidebarItem.link = resolve(dirFullPath, 'index.md').slice(docsDirFullPath.length);
+    sidebarItem.link = resolve(dirFullPath, 'index.md').slice(
+      docsDirFullPath.length,
+    );
   } else {
     sidebarItem.text = dirFullPath.split('/').at(-1);
   }
@@ -92,14 +98,16 @@ export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' 
       .map((filePath) => {
         const fileFullPath = resolve(dirFullPath, filePath);
         return {
-          text: getMarkdownTitle(fileFullPath),
           link: fileFullPath.slice(docsDirFullPath.length),
+          text: getMarkdownTitle(fileFullPath),
         };
       }),
     // 递归处理文件夹
     ...dirContents
       .filter((content) => dirFilter(resolve(dirFullPath, content)))
-      .map((dirPath) => generateSidebarItem(resolve(dirFullPath, dirPath), sorter)),
+      .map((dirPath) =>
+        generateSidebarItem(resolve(dirFullPath, dirPath), sorter),
+      ),
   ];
   if (sidebarItem.items?.length === 0) {
     sidebarItem.items = undefined;
@@ -108,5 +116,7 @@ export const generateSidebarItem = (dirFullPath: string, sorter: 'asc' | 'desc' 
   return sidebarItem;
 };
 
-export const generateSidebarItems = (docsDirFullPath: string, sorter: 'asc' | 'desc' = 'asc') =>
-  generateSidebarItem(docsDirFullPath, sorter).items;
+export const generateSidebarItems = (
+  docsDirFullPath: string,
+  sorter: 'asc' | 'desc' = 'asc',
+) => generateSidebarItem(docsDirFullPath, sorter).items;

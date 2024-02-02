@@ -1,18 +1,20 @@
-import { defineUserConfig, viteBundler } from 'vuepress';
-import { defaultTheme } from '@vuepress/theme-default';
+import fs from 'node:fs';
+import path from 'node:path';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { searchPlugin } from '@vuepress/plugin-search';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { defaultTheme } from '@vuepress/theme-default';
+import { defineUserConfig, viteBundler } from 'vuepress';
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
 import { seoPlugin } from 'vuepress-plugin-seo2';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import fs from 'fs';
-import path from 'path';
 
 const hostname = 'https://modyqyw.top';
 
 const getFiles = (dirs: string[]) =>
-  fs.readdirSync(path.resolve('docs', ...dirs)).map((item) => `/${dirs.concat(item).join('/')}`);
+  fs
+    .readdirSync(path.resolve('docs', ...dirs))
+    .map((item) => `/${[...dirs, ...item].join('/')}`);
 
 const getOrganizeFiles = (dirs: string[]) => getFiles(['organize', ...dirs]);
 
@@ -24,139 +26,6 @@ const summarizeWebpack4Files = getSummarizeFiles(['webpack4']);
 const summarizeInActionFiles = getSummarizeFiles(['in-action']);
 
 export default defineUserConfig({
-  lang: 'zh-Hans',
-  title: "ModyQyW's Site",
-  description:
-    '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新，也欢迎邮件联系。最近正在筹划改版。',
-  head: [
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' }],
-  ],
-  locales: {
-    '/': {
-      lang: 'zh-Hans',
-      title: "ModyQyW's Site",
-      description:
-        '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
-      head: [
-        [
-          'link',
-          { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' },
-        ],
-      ],
-    },
-  },
-  theme: defaultTheme({
-    // @ts-ignore
-    hostname,
-    navbar: [
-      {
-        text: '收集整理',
-        children: [
-          '/organize/what',
-          '/organize/conduct/',
-          '/organize/roadmap/',
-          { text: '开发相关', link: organizeDevelopmentFiles[0] },
-        ],
-      },
-      {
-        text: '归纳输出',
-        children: [
-          '/summarize/what',
-          '/summarize/environment/',
-          '/summarize/server/',
-          { text: 'webpack5', link: summarizeWebpack5Files[0] },
-          { text: 'webpack4', link: summarizeWebpack4Files[0] },
-          '/summarize/safety/',
-          { text: '实际开发', link: summarizeInActionFiles[0] },
-        ],
-      },
-      { text: '关于', link: '/about/' },
-    ],
-    logo: '/images/w.svg',
-    repo: 'https://github.com/ModyQyW/modyqyw.github.io',
-    repoLabel: 'GitHub',
-    sidebar: {
-      '/organize/': [
-        {
-          text: '收集整理',
-          children: [
-            '/organize/what',
-            '/organize/conduct/',
-            '/organize/roadmap/',
-            { text: '开发相关', link: organizeDevelopmentFiles[0] },
-          ],
-        },
-      ],
-      '/organize/development/': [
-        {
-          text: '收集整理',
-          children: [
-            '/organize/what',
-            '/organize/conduct/',
-            '/organize/roadmap/',
-            { text: '开发相关', children: organizeDevelopmentFiles },
-          ],
-        },
-      ],
-      '/summarize/': [
-        {
-          text: '归纳输出',
-          children: [
-            '/summarize/what',
-            '/summarize/environment/',
-            '/summarize/server/',
-            { text: 'webpack5', link: summarizeWebpack5Files[0] },
-            { text: 'webpack4', link: summarizeWebpack4Files[0] },
-            '/summarize/safety/',
-            { text: '实际开发', link: summarizeInActionFiles[0] },
-          ],
-        },
-      ],
-      '/summarize/webpack5/': [
-        {
-          text: '归纳输出',
-          children: [
-            '/summarize/what',
-            '/summarize/environment/',
-            '/summarize/server/',
-            { text: 'webpack5', children: summarizeWebpack5Files },
-            { text: 'webpack4', link: summarizeWebpack4Files[0] },
-            '/summarize/safety/',
-            { text: '实际开发', link: summarizeInActionFiles[0] },
-          ],
-        },
-      ],
-      '/summarize/webpack4/': [
-        {
-          text: '归纳输出',
-          children: [
-            '/summarize/what',
-            '/summarize/environment/',
-            '/summarize/server/',
-            { text: 'webpack5', link: summarizeWebpack5Files[0] },
-            { text: 'webpack4', children: summarizeWebpack4Files },
-            '/summarize/safety/',
-            { text: '实际开发', link: summarizeInActionFiles[0] },
-          ],
-        },
-      ],
-      '/summarize/in-action/': [
-        {
-          text: '归纳输出',
-          children: [
-            '/summarize/what',
-            '/summarize/environment/',
-            '/summarize/server/',
-            { text: 'webpack5', link: summarizeWebpack5Files[0] },
-            { text: 'webpack4', link: summarizeWebpack4Files[0] },
-            '/summarize/safety/',
-            { text: '实际开发', children: summarizeInActionFiles },
-          ],
-        },
-      ],
-    },
-    sidebarDepth: 3,
-  }),
   bundler: viteBundler({
     viteOptions: {
       server: {
@@ -166,20 +35,163 @@ export default defineUserConfig({
       },
     },
   }),
+  description:
+    '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新，也欢迎邮件联系。最近正在筹划改版。',
+  head: [
+    [
+      'link',
+      {
+        crossorigin: 'use-credentials',
+        href: '/manifest.webmanifest',
+        rel: 'manifest',
+      },
+    ],
+  ],
+  lang: 'zh-Hans',
+  locales: {
+    '/': {
+      description:
+        '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
+      head: [
+        [
+          'link',
+          {
+            crossorigin: 'use-credentials',
+            href: '/manifest.webmanifest',
+            rel: 'manifest',
+          },
+        ],
+      ],
+      lang: 'zh-Hans',
+      title: "ModyQyW's Site",
+    },
+  },
+  theme: defaultTheme({
+    hostname,
+    logo: '/images/w.svg',
+    navbar: [
+      {
+        children: [
+          '/organize/what',
+          '/organize/conduct/',
+          '/organize/roadmap/',
+          { link: organizeDevelopmentFiles[0], text: '开发相关' },
+        ],
+        text: '收集整理',
+      },
+      {
+        children: [
+          '/summarize/what',
+          '/summarize/environment/',
+          '/summarize/server/',
+          { link: summarizeWebpack5Files[0], text: 'webpack5' },
+          { link: summarizeWebpack4Files[0], text: 'webpack4' },
+          '/summarize/safety/',
+          { link: summarizeInActionFiles[0], text: '实际开发' },
+        ],
+        text: '归纳输出',
+      },
+      { link: '/about/', text: '关于' },
+    ],
+    repo: 'https://github.com/ModyQyW/modyqyw.github.io',
+    repoLabel: 'GitHub',
+    sidebar: {
+      '/organize/': [
+        {
+          children: [
+            '/organize/what',
+            '/organize/conduct/',
+            '/organize/roadmap/',
+            { link: organizeDevelopmentFiles[0], text: '开发相关' },
+          ],
+          text: '收集整理',
+        },
+      ],
+      '/organize/development/': [
+        {
+          children: [
+            '/organize/what',
+            '/organize/conduct/',
+            '/organize/roadmap/',
+            { children: organizeDevelopmentFiles, text: '开发相关' },
+          ],
+          text: '收集整理',
+        },
+      ],
+      '/summarize/': [
+        {
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { link: summarizeWebpack5Files[0], text: 'webpack5' },
+            { link: summarizeWebpack4Files[0], text: 'webpack4' },
+            '/summarize/safety/',
+            { link: summarizeInActionFiles[0], text: '实际开发' },
+          ],
+          text: '归纳输出',
+        },
+      ],
+      '/summarize/in-action/': [
+        {
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { link: summarizeWebpack5Files[0], text: 'webpack5' },
+            { link: summarizeWebpack4Files[0], text: 'webpack4' },
+            '/summarize/safety/',
+            { children: summarizeInActionFiles, text: '实际开发' },
+          ],
+          text: '归纳输出',
+        },
+      ],
+      '/summarize/webpack4/': [
+        {
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { link: summarizeWebpack5Files[0], text: 'webpack5' },
+            { children: summarizeWebpack4Files, text: 'webpack4' },
+            '/summarize/safety/',
+            { link: summarizeInActionFiles[0], text: '实际开发' },
+          ],
+          text: '归纳输出',
+        },
+      ],
+      '/summarize/webpack5/': [
+        {
+          children: [
+            '/summarize/what',
+            '/summarize/environment/',
+            '/summarize/server/',
+            { children: summarizeWebpack5Files, text: 'webpack5' },
+            { link: summarizeWebpack4Files[0], text: 'webpack4' },
+            '/summarize/safety/',
+            { link: summarizeInActionFiles[0], text: '实际开发' },
+          ],
+          text: '归纳输出',
+        },
+      ],
+    },
+    sidebarDepth: 3,
+  }),
+  title: "ModyQyW's Site",
   // debug: process.env.NODE_ENV === 'development',
   markdown: {
-    toc: {
+    headers: {
       level: [2, 3, 4],
     },
-    headers: {
+    toc: {
       level: [2, 3, 4],
     },
   },
   plugins: [
     docsearchPlugin({
       apiKey: 'bc7c3bfb65339c025cdced95c50cb051',
-      indexName: 'modyqyw',
       appId: 'Z14RO4ODPO',
+      indexName: 'modyqyw',
       locales: {
         '/': {
           placeholder: '搜索文档',

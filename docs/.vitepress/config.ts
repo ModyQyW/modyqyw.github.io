@@ -1,14 +1,22 @@
 import { createWriteStream } from 'node:fs';
 import { resolve } from 'node:path';
 import { SitemapStream } from 'sitemap';
-import { defineConfig } from 'vitepress';
 import unocss from 'unocss/vite';
-import { getTutorialsNav, getBlogsNav, getTutorialsSidebar, getBlogsSidebar } from './helpers';
-import { getCheatSheetsNav, getCheatSheetsSidebar } from './helpers/cheat-sheets';
+import { defineConfig } from 'vitepress';
+import {
+  getBlogsNav,
+  getBlogsSidebar,
+  getTutorialsNav,
+  getTutorialsSidebar,
+} from './helpers';
+import {
+  getCheatSheetsNav,
+  getCheatSheetsSidebar,
+} from './helpers/cheat-sheets';
 
 // for sitemap
 // see https://github.com/vuejs/vitepress/issues/520
-const links: { url: string; lastmod?: number }[] = [];
+const links: { lastmod?: number; url: string }[] = [];
 const hostname = 'https://modyqyw.top';
 
 // https://vitepress.dev/reference/site-config
@@ -21,8 +29,8 @@ export default defineConfig({
       'script',
       {
         async: 'true',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3102250747488251',
         crossorigin: 'anonymous',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3102250747488251',
       },
     ],
   ],
@@ -62,8 +70,8 @@ export default defineConfig({
     // not clean urls mode
     if (!/[/\\]404\.html$/.test(id)) {
       links.push({
-        url: pageData.relativePath.replace(/\.md$/, '.html'),
         lastmod: pageData.lastUpdated,
+        url: pageData.relativePath.replace(/\.md$/, '.html'),
       });
     }
   },
@@ -76,14 +84,14 @@ export default defineConfig({
       getCheatSheetsNav(),
       getTutorialsNav(),
       getBlogsNav(),
-      { text: '关于', link: '/about/' },
-      { text: '赞赏', link: 'https://github.com/ModyQyW/sponsors' },
+      { link: '/about/', text: '关于' },
+      { link: 'https://github.com/ModyQyW/sponsors', text: '赞赏' },
     ],
     // https://vitepress.dev/reference/default-theme-config#sidebar
     sidebar: {
+      '/blogs': getBlogsSidebar(),
       '/cheat-sheet': getCheatSheetsSidebar(),
       '/tutorials': getTutorialsSidebar(),
-      '/blogs': getBlogsSidebar(),
     },
     // https://vitepress.dev/reference/default-theme-config#outline
     outline: 'deep',
@@ -100,63 +108,64 @@ export default defineConfig({
     ],
     // https://vitepress.dev/reference/default-theme-config#footer
     footer: {
-      message: 'Released under the MIT License.',
       copyright: 'Copyright © 2020-present ModyQyW',
+      message: 'Released under the MIT License.',
     },
     // https://vitepress.dev/reference/default-theme-config#editlink
     editLink: {
-      pattern: 'https://github.com/ModyQyW/modyqyw.github.io/edit/main/docs/:path',
+      pattern:
+        'https://github.com/ModyQyW/modyqyw.github.io/edit/main/docs/:path',
       text: '编辑页面',
     },
     // https://vitepress.dev/reference/default-theme-config#lastupdated
     lastUpdated: {
-      text: '最后更新于',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'full',
       },
+      text: '最后更新于',
     },
     // https://vitepress.dev/reference/default-theme-config#algolia
     algolia: {
-      appId: process.env.ALGOLIA_APP_ID || '',
       apiKey: process.env.ALGOLIA_API_KEY || '',
+      appId: process.env.ALGOLIA_APP_ID || '',
       indexName: process.env.ALGOLIA_INDEX_NAME || '',
       placeholder: '搜索文档',
       translations: {
         button: {
-          buttonText: '搜索文档',
           buttonAriaLabel: '搜索文档',
+          buttonText: '搜索文档',
         },
         modal: {
-          searchBox: {
-            resetButtonTitle: '清除查询条件',
-            resetButtonAriaLabel: '清除查询条件',
-            cancelButtonText: '取消',
-            cancelButtonAriaLabel: '取消',
-          },
-          startScreen: {
-            recentSearchesTitle: '搜索历史',
-            noRecentSearchesText: '没有搜索历史',
-            saveRecentSearchButtonTitle: '保存至搜索历史',
-            removeRecentSearchButtonTitle: '从搜索历史中移除',
-            favoriteSearchesTitle: '收藏',
-            removeFavoriteSearchButtonTitle: '从收藏中移除',
-          },
           errorScreen: {
-            titleText: '无法获取结果',
             helpText: '你可能需要检查你的网络连接',
+            titleText: '无法获取结果',
           },
           footer: {
-            selectText: '选择',
-            navigateText: '切换',
             closeText: '关闭',
+            navigateText: '切换',
             searchByText: '搜索提供者',
+            selectText: '选择',
           },
           noResultsScreen: {
             noResultsText: '无法找到相关结果',
-            suggestedQueryText: '你可以尝试查询',
-            reportMissingResultsText: '你认为该查询应该有结果？',
             reportMissingResultsLinkText: '点击反馈',
+            reportMissingResultsText: '你认为该查询应该有结果？',
+            suggestedQueryText: '你可以尝试查询',
+          },
+          searchBox: {
+            cancelButtonAriaLabel: '取消',
+            cancelButtonText: '取消',
+            resetButtonAriaLabel: '清除查询条件',
+            resetButtonTitle: '清除查询条件',
+          },
+          startScreen: {
+            favoriteSearchesTitle: '收藏',
+            noRecentSearchesText: '没有搜索历史',
+            recentSearchesTitle: '搜索历史',
+            removeFavoriteSearchButtonTitle: '从收藏中移除',
+            removeRecentSearchButtonTitle: '从搜索历史中移除',
+            saveRecentSearchButtonTitle: '保存至搜索历史',
           },
         },
       },

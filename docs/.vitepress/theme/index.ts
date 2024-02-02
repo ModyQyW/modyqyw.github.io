@@ -1,12 +1,12 @@
-import DefaultTheme from 'vitepress/theme';
 import { type EnhanceAppContext, useData, useRoute } from 'vitepress';
+import DefaultTheme from 'vitepress/theme';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
 import VEmbed from './VEmbed.vue';
-
 import './remove-service-worker';
+
 import 'uno.css';
+import 'viewerjs/dist/viewer.min.css';
 
 export default {
   ...DefaultTheme,
@@ -20,18 +20,18 @@ export default {
 
     giscusTalk(
       {
-        repo: 'ModyQyW/modyqyw.github.io',
-        repoId: 'MDEwOlJlcG9zaXRvcnkxMzczNTk4MDk=',
         category: 'General',
         categoryId: 'DIC_kwDOCC_xwc4CAj2Q',
-        mapping: 'pathname',
-        strict: '1',
-        reactionsEnabled: '1',
         emitMetadata: '1',
         inputPosition: 'top',
-        theme: 'preferred_color_scheme',
         lang: 'zh-CN',
         loading: 'lazy',
+        mapping: 'pathname',
+        reactionsEnabled: '1',
+        repo: 'ModyQyW/modyqyw.github.io',
+        repoId: 'MDEwOlJlcG9zaXRvcnkxMzczNTk4MDk=',
+        strict: '1',
+        theme: 'preferred_color_scheme',
       },
       {
         frontmatter,

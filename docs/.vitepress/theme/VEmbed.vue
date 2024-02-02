@@ -16,16 +16,16 @@ withDefaults(
 
 <template>
   <iframe
-    title="embed"
     class="w-full"
     :class="{
       'aspect-video': aspect === 'video',
       'aspect-square': aspect === 'square',
       'aspect-auto': aspect === 'auto',
     }"
+    :src="src"
     :style="{
       aspectRatio: aspect,
     }"
-    :src="src"
+    title="embed"
   ></iframe>
 </template>
