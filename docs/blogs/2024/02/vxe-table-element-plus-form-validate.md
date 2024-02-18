@@ -198,7 +198,7 @@ Template 部分：
 
 开启虚拟滚动导致一次只渲染了部分数据，为什么就导致了 ElForm 校验不正常呢？难道说 ElForm 校验只针对渲染出来的数据吗？我们去扒一扒 ElementPlus 源码。
 
-我们在 [element-plus/packages/components/form/src/form.vue](element-plus/blob/2.5.5/packages/components/form/src/form.vue) 中找到 ElForm 实例上的 `validate` 方法。
+我们在 [element-plus/packages/components/form/src/form.vue](https://github.com/element-plus/element-plus/blob/2.5.5/packages/components/form/src/form.vue) 中找到 ElForm 实例上的 `validate` 方法。
 
 ![vxe-table-element-plus-form-validate-7](./vxe-table-element-plus-form-validate-7.png)
 
@@ -216,7 +216,7 @@ Template 部分：
 
 ![vxe-table-element-plus-form-validate-11](./vxe-table-element-plus-form-validate-11.png)
 
-`obtainValidateFields` 方法里面调用了 `filterFields` 方法来过滤掉不需要校验的字段。我们可以在 [element-plus/packages/components/form/src/utils.vue](element-plus/blob/2.5.5/packages/components/form/src/utils.vue) 中找到这个方法。
+`obtainValidateFields` 方法里面调用了 `filterFields` 方法来过滤掉不需要校验的字段。我们可以在 [element-plus/packages/components/form/src/utils.ts](https://github.com/element-plus/element-plus/blob/2.5.5/packages/components/form/src/utils.ts) 中找到这个方法。
 
 ![vxe-table-element-plus-form-validate-12](./vxe-table-element-plus-form-validate-12.png)
 
@@ -230,7 +230,7 @@ props 这个参数是从 `validate` 方法传递下来的，`validate` 将 undef
 
 ![vxe-table-element-plus-form-validate-14](./vxe-table-element-plus-form-validate-14.png)
 
-顺着这个思路，我们在 [element-plus/packages/components/form/src/form-item.vue](element-plus/blob/2.5.5/packages/components/form/src/form.vue) 中找到了相关逻辑。
+顺着这个思路，我们在 [element-plus/packages/components/form/src/form-item.vue](https://github.com/element-plus/element-plus/blob/2.5.5/packages/components/form/src/form-item.vue) 中找到了相关逻辑。
 
 ![vxe-table-element-plus-form-validate-15](./vxe-table-element-plus-form-validate-15.png)
 
