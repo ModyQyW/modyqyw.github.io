@@ -37,6 +37,8 @@ export default defineConfig({
   ],
   // https://vitepress.dev/reference/site-config#lang
   lang: 'zh-CN',
+  // https://vitepress.dev/reference/site-config#cleanurls
+  cleanUrls: true,
   // https://vitepress.dev/reference/site-config#lastupdated
   lastUpdated: true,
   // https://vitepress.dev/reference/site-config#markdown
