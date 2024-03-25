@@ -22,10 +22,17 @@ export default defineConfig({
     [
       'script',
       {
-        async: 'true',
-        crossorigin: 'anonymous',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3102250747488251',
+        async: '',
+        src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID || ''}`,
       },
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${process.env.GOOGLE_ANALYTICS_ID || ''}');`,
     ],
   ],
   // https://vitepress.dev/reference/site-config#lang
