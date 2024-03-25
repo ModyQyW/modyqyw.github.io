@@ -1,6 +1,3 @@
-import { createWriteStream } from 'node:fs';
-import { resolve } from 'node:path';
-import { SitemapStream } from 'sitemap';
 import unocss from 'unocss/vite';
 import { defineConfig } from 'vitepress';
 import {
@@ -14,9 +11,6 @@ import {
   getCheatSheetsSidebar,
 } from './helpers/cheat-sheets';
 
-// for sitemap
-// see https://github.com/vuejs/vitepress/issues/520
-const links: { lastmod?: number; url: string }[] = [];
 const hostname = 'https://modyqyw.top';
 
 // https://vitepress.dev/reference/site-config
@@ -49,31 +43,9 @@ export default defineConfig({
   vite: {
     plugins: [unocss()],
   },
-  // https://vitepress.dev/reference/site-config#buildend
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname });
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
-    sitemap.pipe(writeStream);
-    for (const link of links) sitemap.write(link);
-    sitemap.end();
-    await new Promise((resolve) => writeStream.on('finish', resolve));
-  },
-  // https://vitepress.dev/reference/site-config#transformhtml
-  transformHtml: (_, id, { pageData }) => {
-    // clean urls mode
-    // if (!/[\\/]404\.html$/.test(id)) {
-    //   links.push({
-    //     url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-    //     lastmod: pageData.lastUpdated,
-    //   });
-    // }
-    // not clean urls mode
-    if (!/[/\\]404\.html$/.test(id)) {
-      links.push({
-        lastmod: pageData.lastUpdated,
-        url: pageData.relativePath.replace(/\.md$/, '.html'),
-      });
-    }
+  // https://vitepress.dev/guide/sitemap-generation
+  sitemap: {
+    hostname,
   },
   // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
