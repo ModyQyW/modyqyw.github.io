@@ -23,7 +23,7 @@ export default defineConfig({
       'script',
       {
         async: '',
-        src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID || ''}`,
+        src: `https://www.googletagmanager.com/gtag/js?id=G-8TCYQ7S61C`,
       },
     ],
     [
@@ -32,7 +32,15 @@ export default defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '${process.env.GOOGLE_ANALYTICS_ID || ''}');`,
+      gtag('config', 'G-8TCYQ7S61C');`,
+    ],
+    [
+      'script',
+      {
+        async: '',
+        crossorigin: 'anonymous',
+        src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3102250747488251`,
+      },
     ],
   ],
   // https://vitepress.dev/reference/site-config#lang
