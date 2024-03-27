@@ -6,9 +6,6 @@ hero:
   tagline: 思考，写作，分享
   actions:
     - theme: alt
-      text: 关于
-      link: /about/
-    - theme: alt
       text: 赞赏
       link: https://github.com/ModyQyW/sponsors
 ---

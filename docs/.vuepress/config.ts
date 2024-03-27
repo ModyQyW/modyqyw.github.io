@@ -91,7 +91,6 @@ export default defineUserConfig({
         ],
         text: '归纳输出',
       },
-      { link: '/about/', text: '关于' },
     ],
     repo: 'https://github.com/ModyQyW/modyqyw.github.io',
     repoLabel: 'GitHub',

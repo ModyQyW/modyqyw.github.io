@@ -22,7 +22,6 @@ export const zhHans: LocaleSpecificConfig<DefaultTheme.Config> & {
       getCheatSheetsNav(),
       getTutorialsNav(),
       getBlogsNav(),
-      { link: '/about/', text: '关于' },
       { link: 'https://github.com/ModyQyW/sponsors', text: '赞赏' },
     ],
     // https://vitepress.dev/reference/default-theme-config#sidebar

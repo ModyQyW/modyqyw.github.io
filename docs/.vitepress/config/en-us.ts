@@ -24,7 +24,6 @@ export const enUS: LocaleSpecificConfig<DefaultTheme.Config> & {
       getCheatSheetsNav('en-US'),
       getTutorialsNav('en-US'),
       getBlogsNav('en-US'),
-      { link: '/en-US/about/', text: 'About' },
       { link: 'https://github.com/ModyQyW/sponsors', text: 'Sponsor' },
     ],
     // https://vitepress.dev/reference/default-theme-config#sidebar
