@@ -15,7 +15,7 @@ export default {
     DefaultTheme.enhanceApp(ctx);
   },
   setup() {
-    const { frontmatter } = useData();
+    const { frontmatter, lang } = useData();
     const route = useRoute();
 
     giscusTalk(
@@ -24,7 +24,7 @@ export default {
         categoryId: 'DIC_kwDOCC_xwc4CAj2Q',
         emitMetadata: '1',
         inputPosition: 'top',
-        lang: 'zh-CN',
+        lang: 'en',
         loading: 'lazy',
         mapping: 'pathname',
         reactionsEnabled: '1',

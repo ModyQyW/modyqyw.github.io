@@ -1,27 +1,30 @@
-import { resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 import {
   type NavItem,
   type SidebarItem,
   docsDirFullPath,
   generateSidebarItems,
+  langDirPathMapping,
 } from './common';
 
-export const getCheatSheetsSidebar = () =>
+export const getCheatSheetsSidebar = (lang: 'en-US' | 'zh-Hans' = 'zh-Hans') =>
   generateSidebarItems(
-    resolve(docsDirFullPath, 'cheat-sheets'),
+    resolve(docsDirFullPath, langDirPathMapping[lang], 'cheat-sheets'),
   ) as SidebarItem[];
 // console.log('getCheatSheetsSidebar()', getCheatSheetsSidebar());
 
-export const getCheatSheetsNav = (): NavItem => {
-  const cheatSheetsSidebar = getCheatSheetsSidebar();
+export const getCheatSheetsNav = (
+  lang: 'en-US' | 'zh-Hans' = 'zh-Hans',
+): NavItem => {
+  const cheatSheetsSidebar = getCheatSheetsSidebar(lang);
   return {
-    activeMatch: 'cheat-sheets/',
+    activeMatch: join(langDirPathMapping[lang], 'cheat-sheets/'),
     link:
       cheatSheetsSidebar[0]?.link ??
       cheatSheetsSidebar?.[0]?.items?.[0]?.link ??
       cheatSheetsSidebar?.[0]?.items?.[0]?.items?.[0]?.link ??
       '',
-    text: '速查',
+    text: lang === 'zh-Hans' ? '速查' : 'Cheat Sheets',
   };
 };
 // console.log('getCheatSheetsNav()', getCheatSheetsNav());

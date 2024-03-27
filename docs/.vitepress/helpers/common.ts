@@ -9,6 +9,11 @@ const exec: shelljs.ExecFunction = shelljs?.default?.exec ?? shelljs?.exec;
 
 export const cwd = process.cwd();
 
+export const langDirPathMapping: Record<'en-US' | 'zh-Hans', string> = {
+  'en-US': 'en-US',
+  'zh-Hans': '.',
+};
+
 export const docsDirFullPath = resolve(cwd, 'docs');
 
 export const getMarkdownTitle = (fileFullPath: string) => {
