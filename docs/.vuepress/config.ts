@@ -27,7 +27,7 @@ export default defineUserConfig({
   lang: 'zh-Hans',
   title: "ModyQyW's Site",
   description:
-    '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新，也欢迎邮件联系。最近正在筹划改版。',
+    '该站点不再维护，请访问 https://modyqyw.top。基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新，也欢迎邮件联系。',
   head: [
     ['link', { rel: 'manifest', href: '/manifest.webmanifest', crossorigin: 'use-credentials' }],
   ],
@@ -36,7 +36,7 @@ export default defineUserConfig({
       lang: 'zh-Hans',
       title: "ModyQyW's Site",
       description:
-        '基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
+        '该站点不再维护，请访问 https://modyqyw.top。基于 vuepress 建设的个人站，如有问题请尝试清理 Service Worker 并强制刷新。也欢迎邮件联系。',
       head: [
         [
           'link',
